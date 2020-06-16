@@ -1,0 +1,19 @@
+{
+  "name": "simonyates",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheftechnical/simonyates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheftechnical/simonyates/issues"
+  },
+  "homepage": "https://github.com/cheftechnical/simonyates#readme"
+}

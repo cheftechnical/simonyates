@@ -1,0 +1,5 @@
+# IDE files
+/.idea
+
+# Test files
+/public/my-app/public/fonts/bimbo
