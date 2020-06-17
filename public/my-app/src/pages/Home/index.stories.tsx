@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './index';
 
-export default {title: 'Homepage'};
+export default {title: 'Pages/Homepage'};
 
-export const simon = () => <Home/>;
+export const _default = () => <Home/>;
