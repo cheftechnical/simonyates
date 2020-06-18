@@ -5,6 +5,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import NoMatch from "./pages/NoMatch";
+import Featured from "./pages/Featured";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 // function App() {
 //     return (
@@ -34,6 +37,9 @@ function App() {
         <Router>
             <Switch>
                 <Route exact path="/work" component={Work}/>
+                <Route exact path="/featured" component={Featured}/>
+                <Route exact path="/contact" component={Contact}/>
+                <Route exact path="/about" component={About}/>
                 <Route exact path="/" component={Home}/>
                 <Route component={NoMatch}/>
             </Switch>
