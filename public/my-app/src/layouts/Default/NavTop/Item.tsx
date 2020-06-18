@@ -1,12 +1,15 @@
 import * as React from 'react';
+import {Link} from "@material-ui/core";
+import {Link as ReactRouterDom} from 'react-router-dom';
 
 interface Props {
+    href: string;
     selected: boolean;
     title: string;
 }
 
 export default function Item(props: Props) {
-    const {selected, title} = props;
+    const {href, selected, title} = props;
 
     if (selected) {
         return (
@@ -15,6 +18,6 @@ export default function Item(props: Props) {
     }
 
     return (
-        <div>{title}</div>
+        <Link component={ReactRouterDom} to={href}>{title}</Link>
     );
 }

@@ -16,10 +16,10 @@ export default function NavTop(props: Props) {
             <Box flexGrow={1}><Logo/></Box>
 
             {/* Right align */}
-            <Box><Item selected={selected === 'work'} title="Work"/></Box>
-            <Box><Item selected={selected === 'featured'} title="Featured"/></Box>
-            <Box><Item selected={selected === 'about'} title="About"/></Box>
-            <Box><Item selected={selected === 'contact'} title="Contact"/></Box>
+            <Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>
+            <Box><Item href="/featured" selected={selected === 'featured'} title="Featured"/></Box>
+            <Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>
+            <Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>
         </Box>
     );
 };
