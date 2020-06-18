@@ -1,10 +1,10 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 
-export default function Featured() {
+export default function About() {
     return (
-        <DefaultLayout top="featured">
-            [featured placeholder]
+        <DefaultLayout top="about">
+            [placeholder]
         </DefaultLayout>
     );
 };

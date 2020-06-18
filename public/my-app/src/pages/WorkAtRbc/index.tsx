@@ -22,7 +22,7 @@ export default function WorkAtRbc() {
     const classes = useStyles();
 
     return (
-        <DefaultLayout selectedNavTop="work">
+        <DefaultLayout top="work">
             <Grid container>
                 <Grid item xs={1}>[logo]</Grid>
                 <Grid item xs={6}>

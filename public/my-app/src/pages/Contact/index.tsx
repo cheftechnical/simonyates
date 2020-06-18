@@ -1,10 +1,10 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 
-export default function Featured() {
+export default function Contact() {
     return (
-        <DefaultLayout top="featured">
-            [featured placeholder]
+        <DefaultLayout top="contact">
+            [contact placeholder]
         </DefaultLayout>
     );
 };

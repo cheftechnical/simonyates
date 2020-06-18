@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import NavTop from './index';
 
 export default {title: 'Components/NavTop'};

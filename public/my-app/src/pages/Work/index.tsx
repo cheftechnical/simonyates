@@ -1,11 +1,11 @@
 import * as React from 'react';
-import DefaultLayout from "../../layouts/Default";
-import Experience from "./Experience";
-import Highlight from "./Highlight";
+import DefaultLayout from '../../layouts/Default';
+import Experience from './Experience';
+import Highlight from './Highlight';
 
 export default function Work() {
     return (
-        <DefaultLayout selectedNavTop="work">
+        <DefaultLayout top="work">
             Here is a glimpse of my life,<br/>
             mostly as a programmer.
 
