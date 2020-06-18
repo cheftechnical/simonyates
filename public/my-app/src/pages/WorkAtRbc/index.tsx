@@ -8,6 +8,8 @@ import Section from "../../components/Section";
 import NavRight from "../../components/NavRight";
 import NavRightItem from "../../components/NavRightItem";
 import {makeStyles} from "@material-ui/core/styles";
+import Callout from "../../components/Callout";
+import WorkAtProject from "../../components/workAt/WorkAtProject";
 
 const useStyles = makeStyles((theme) => ({
     isCurrent: {
@@ -35,7 +37,15 @@ export default function WorkAtRbc() {
                         employees
                         worldwide.
                     </WorkAtDescription>
-                    <Section id="section-2" name="Application Development & Custom Tooling"/>
+                    <Section id="section-2" name="Application Development & Custom Tooling">
+                        <WorkAtProject name="SRE Global Dashboard" when="2019–Present"/>
+                        <Callout>
+                            Node.js + Express &bull;
+                            React + Typescript &bull;
+                            Elasticsearch &bull;
+                            PostgreSQL &bull;
+                        </Callout>
+                    </Section>
                     <Section id="section-3" name="Machine Learning / Artificial Intelligence"/>
                     <Section id="section-4" name="Budgeting"/>
                     <Section id="section-5" name="Events"/>

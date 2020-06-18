@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 interface Props {
+    children?: any | any[];
     id?: string;
     name: string;
 }
 
 export default function Section(props: Props) {
-    const {id, name} = props;
+    const {children, id, name} = props;
 
     return (
         <section id={id}>
@@ -17,6 +18,7 @@ export default function Section(props: Props) {
             {/*<p>Proin ac eros at sem finibus pellentesque. Nam rhoncus accumsan ante sit amet semper. Aliquam a porttitor dolor. Cras sit amet sollicitudin purus. Nunc viverra nibh arcu, quis condimentum purus facilisis ac. Vivamus eleifend mollis lorem, at aliquam metus rutrum vel. In a mi elementum, suscipit elit id, bibendum ante. Nullam a dignissim nibh. Nulla rhoncus porta elit ac dictum. Proin laoreet justo odio, a porttitor est fermentum eget.</p>*/}
             {/*<p>Ut eget dolor nec est tempus accumsan quis nec ante. Fusce ut mauris a arcu facilisis molestie. Vestibulum auctor cursus felis, ac tempor ex egestas a. Cras non quam sit amet tellus tincidunt porta vitae in eros. Sed scelerisque ipsum nibh, et ultrices lacus finibus molestie. Fusce a purus urna. Maecenas facilisis pretium diam, ac egestas dolor viverra vitae. Aliquam enim arcu, vulputate vitae ultrices sit amet, porta a urna. Etiam semper commodo euismod. Phasellus consequat dictum nisi vitae mollis. Curabitur ac tincidunt diam. Proin mauris ante, euismod id tincidunt in, faucibus at magna. Praesent dignissim placerat dolor, sed gravida felis aliquam in. Morbi laoreet metus sed dolor bibendum, ut luctus ante hendrerit. Mauris quis magna sed nibh vehicula blandit id vitae lorem.</p>*/}
             {/*<p>Nunc tristique diam sem, et sodales nibh molestie sit amet. Pellentesque quis ultricies diam. Aenean non porttitor leo, sed placerat sapien. Nulla facilisi. Vestibulum a erat id purus ullamcorper mattis nec quis dui. Nulla facilisi. Integer pharetra quam quis erat iaculis faucibus. Quisque eget consectetur est, et venenatis ante. Sed ut sapien auctor, venenatis lectus nec, elementum est. Morbi vitae accumsan felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis viverra eget est vel sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut urna varius, vehicula massa vitae, condimentum mauris.</p>*/}
+            {children}
         </section>
     );
 };
