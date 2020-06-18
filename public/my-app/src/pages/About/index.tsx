@@ -4,7 +4,7 @@ import DefaultLayout from '../../layouts/Default';
 export default function About() {
     return (
         <DefaultLayout top="about">
-            [placeholder]
+            [about placeholder]
         </DefaultLayout>
     );
 };
