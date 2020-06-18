@@ -8,6 +8,7 @@ import NoMatch from "./pages/NoMatch";
 import Featured from "./pages/Featured";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import WorkAtRbc from "./pages/WorkAtRbc";
 
 // function App() {
 //     return (
@@ -36,6 +37,7 @@ function App() {
     return (
         <Router>
             <Switch>
+                <Route exact path="/work/rbc" component={WorkAtRbc}/>
                 <Route exact path="/work" component={Work}/>
                 <Route exact path="/featured" component={Featured}/>
                 <Route exact path="/contact" component={Contact}/>

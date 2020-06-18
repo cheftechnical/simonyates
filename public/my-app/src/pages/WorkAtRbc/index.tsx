@@ -5,7 +5,6 @@ import WorkAtDescription from "../../components/workAt/WorkAtDescription";
 import {Box, Grid} from "@material-ui/core";
 import Scrollspy from 'react-scrollspy';
 import Section from "../../components/Section";
-import NavRight from "../../components/NavRight";
 import NavRightItem from "../../components/NavRightItem";
 import {makeStyles} from "@material-ui/core/styles";
 import Callout from "../../components/Callout";
@@ -61,13 +60,13 @@ export default function WorkAtRbc() {
                         >
                             {/*<NavRight>*/}
                             {/*    <NavRightItem id="section-1" name="Intro"/>*/}
-                                <NavRightItem id="section-2" name="Application Development & Custom Tooling"/>
-                                <NavRightItem id="section-3" name="Machine Learning / Artificial Intelligence"/>
-                                <NavRightItem id="section-4" name="Budgeting"/>
-                                <NavRightItem id="section-5" name="Events"/>
-                                <NavRightItem id="section-6" name="Publications"/>
-                                <NavRightItem id="section-7" name="Active Research"/>
-                                <NavRightItem id="section-8" name="Other Activities"/>
+                            <NavRightItem id="section-2" name="Application Development & Custom Tooling"/>
+                            <NavRightItem id="section-3" name="Machine Learning / Artificial Intelligence"/>
+                            <NavRightItem id="section-4" name="Budgeting"/>
+                            <NavRightItem id="section-5" name="Events"/>
+                            <NavRightItem id="section-6" name="Publications"/>
+                            <NavRightItem id="section-7" name="Active Research"/>
+                            <NavRightItem id="section-8" name="Other Activities"/>
                             {/*</NavRight>*/}
                         </Scrollspy>
                     </Box>
