@@ -59,10 +59,6 @@ export default function WorkAtRbc() {
                             items={['section-2', 'section-3', 'section-4', 'section-5', 'section-6', 'section-7', 'section-8']}
                             currentClassName={classes.isCurrent}
                         >
-                            {/*<li><a href="#section-2">section 1</a></li>*/}
-                            {/*<li><a href="#section-3">section 2</a></li>*/}
-                            {/*<li><a href="#section-4">section 3</a></li>*/}
-
                             {/*<NavRight>*/}
                             {/*    <NavRightItem id="section-1" name="Intro"/>*/}
                                 <NavRightItem id="section-2" name="Application Development & Custom Tooling"/>
