@@ -12,7 +12,16 @@ export default function Footer() {
 					<div><Link component={ReactRouterDom} to="/privacy-and-terms">Privacy &amp; Terms</Link></div>
 				</Grid>
 				<Grid item xs={3}>
-					[linkedIn] [twitter]
+					<Link
+						title="View my LinkedIn"
+						target="_blank"
+						href="https://www.linkedin.com/in/simonyates/"
+					>[linkedIn]</Link>
+					<Link
+						title="View my Twitter"
+						target="_blank"
+						href="https://twitter.com/cheftechnical"
+					>[twitter]</Link>
 				</Grid>
 			</Grid>
 		</footer>
