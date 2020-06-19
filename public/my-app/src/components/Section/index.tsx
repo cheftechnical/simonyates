@@ -11,7 +11,7 @@ export default function Section(props: Props) {
 
     return (
         <section id={id}>
-            <a id={name}/>
+            {/*<a aria-hidden="true" id={name}/>*/}
             <h2>{name}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo ornare sapien at tristique. Aliquam non elit ut mi elementum pretium. Curabitur porta mauris vitae nisi bibendum, ut lacinia lectus congue. Nam quam libero, luctus et semper at, mollis sed est. Aliquam porttitor tortor nisl, pulvinar porttitor felis varius mattis. Sed congue elementum leo, porta aliquam quam gravida a. Praesent a ante eu diam placerat faucibus eu id elit. Maecenas imperdiet nunc ac nisl interdum, nec laoreet purus tempor. Sed tristique sapien eu orci vehicula dictum. Integer malesuada, ipsum et egestas blandit, odio diam elementum sapien, a rutrum ex dui vitae eros.</p>
             {/*<p>Mauris ac ante dolor. Nam tristique massa in tempus commodo. Curabitur dapibus magna tellus, in viverra mi porttitor vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. In venenatis nibh et elit facilisis, in commodo erat dignissim. Maecenas non erat ultrices, accumsan mauris non, pharetra orci. Mauris nec volutpat quam. Nullam posuere sollicitudin mi eget imperdiet. Donec ut augue non est efficitur pellentesque. Morbi pellentesque, felis vitae fringilla tincidunt, diam justo tristique libero, in fringilla tortor metus vel sem. Quisque ac semper purus. Nam vehicula justo eu luctus finibus. Aliquam tempor erat id malesuada blandit.</p>*/}

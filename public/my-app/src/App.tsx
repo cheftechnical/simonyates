@@ -2,13 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from "./pages/Home";
-import Work from "./pages/Work";
-import NoMatch from "./pages/NoMatch";
-import Featured from "./pages/Featured";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import WorkAtRbc from "./pages/WorkAtRbc";
+import Contact from './pages/Contact';
+import Featured from './pages/Featured';
+import Home from './pages/Home';
+import NoMatch from './pages/NoMatch';
+import About from './pages/About';
+import Work from './pages/Work';
+import WorkAtRbc from './pages/WorkAt/WorkAtRbc';
+import WorkAtUnchartedSoftware from './pages/WorkAt/WorkAtUnchartedSoftware';
 
 // function App() {
 //     return (
@@ -37,6 +38,7 @@ function App() {
     return (
         <Router>
             <Switch>
+                <Route exact path="/work/uncharted-software" component={WorkAtUnchartedSoftware}/>
                 <Route exact path="/work/rbc" component={WorkAtRbc}/>
                 <Route exact path="/work" component={Work}/>
                 <Route exact path="/featured" component={Featured}/>
