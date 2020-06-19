@@ -1,5 +1,6 @@
 import React from 'react';
 import NavTop from './NavTop';
+import Footer from './Footer';
 
 interface Props {
     children: any;
@@ -13,6 +14,7 @@ export default function DefaultLayout(props: Props) {
         <div>
             <NavTop selected={top}/>
             {children}
+            <Footer/>
         </div>
     );
 }
