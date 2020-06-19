@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import Callout from '../../../components/Callout';
 import DefaultLayout from '../../../layouts/Default';
 import Section from '../../../components/Section';
