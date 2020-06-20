@@ -10,6 +10,7 @@ import About from './pages/About';
 import Work from './pages/Work';
 import WorkAtRbc from './pages/WorkAt/WorkAtRbc';
 import WorkAtUnchartedSoftware from './pages/WorkAt/WorkAtUnchartedSoftware';
+import Legal from './pages/Legal';
 
 // function App() {
 //     return (
@@ -41,6 +42,7 @@ function App() {
                 <Route exact path="/work/uncharted-software" component={WorkAtUnchartedSoftware}/>
                 <Route exact path="/work/rbc" component={WorkAtRbc}/>
                 <Route exact path="/work" component={Work}/>
+                <Route exact path="/legal" component={Legal}/>
                 <Route exact path="/featured" component={Featured}/>
                 <Route exact path="/contact" component={Contact}/>
                 <Route exact path="/about" component={About}/>
