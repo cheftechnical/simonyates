@@ -1,87 +1,82 @@
 import * as React from 'react';
 import {Button, TextField} from '@material-ui/core';
-import {useForm} from 'react-hook-form';
+import {Controller, useForm} from 'react-hook-form';
+import SendIcon from '@material-ui/icons/Send';
 
-type Inputs = {
+type Message = {
 	name: string,
 	emailAddress: string,
 	subject: string,
 	body: string,
 };
 
-interface Message {
-	name: string;
-	emailAddress: string;
-	subject: string;
-	body: string;
+interface Props {
+	onSubmit: (data: Message) => void;
 }
 
-const defaultMessage: Message = {
-	name: '',
-	emailAddress: '',
-	subject: '',
-	body: '',
-};
+export default function ContactForm(props: Props) {
 
-export default function ContactForm() {
-
-	const {register, handleSubmit, watch, errors} = useForm<Inputs>();
-	const onSubmit = (data: Inputs) => console.log(data);
-
-	const [message, setMessage] = React.useState(defaultMessage);
-	const [isSending, setIsSending] = React.useState(false);
-
-	console.log(watch('name'));
-	console.log(errors);
+	const {onSubmit} = props;
+	const {control, handleSubmit, errors} = useForm<Message>();
 
 	return (
 		<div>
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<input name="name" defaultValue="my name goes here" ref={register({ required: true })} />
-				<input name="emailAddress" defaultValue="my email address goes here" type="email" ref={register({ required: true })} />
+				<Controller
+					as={<TextField
+						fullWidth
+						required
+						placeholder="Name"
+					/>}
+					name="name"
+					control={control}
+					rules={{required: true}}
+				/>
+				<Controller
+					as={<TextField
+						fullWidth
+						required
+						helperText="hola"
+						placeholder="Email"
+					/>}
+					name="emailAddress"
+					control={control}
+					type="email"
+					rules={{required: true}}
+				/>
+				<Controller
+					as={<TextField
+						fullWidth
+						required
+						placeholder="Subject"
+					/>}
+					name="subject"
+					control={control}
+					rules={{required: true}}
+				/>
+				<Controller
+					as={<TextField
+						fullWidth
+						multiline
+						required
+						placeholder="Message"
+						rows={5}
+					/>}
+					name="body"
+					control={control}
+					rules={{required: true}}
+				/>
 
-				{/*<TextField*/}
-				{/*	fullWidth*/}
-				{/*	required*/}
-				{/*	label="Name"*/}
-				{/*	name="name"*/}
-				{/*	// ref={register({required: true})}*/}
-				{/*	ref={register}*/}
-				{/*	// onChange={handleChange}*/}
-				{/*	// value={message.name}*/}
-				{/*/>*/}
-				{/*<TextField*/}
-				{/*	fullWidth*/}
-				{/*	required*/}
-				{/*	label="Email"*/}
-				{/*	name="emailAddress"*/}
-				{/*	onChange={handleChange}*/}
-				{/*	// ref={register({required: true})}*/}
-				{/*	type="email"*/}
-				{/*	value={message.emailAddress}*/}
-				{/*/>*/}
-				{/*<TextField*/}
-				{/*	fullWidth*/}
-				{/*	required*/}
-				{/*	label="Subject"*/}
-				{/*	name="subject"*/}
-				{/*	onChange={handleChange}*/}
-				{/*	// ref={register({required: true})}*/}
-				{/*	value={message.subject}*/}
-				{/*/>*/}
-				{/*<TextField*/}
-				{/*	fullWidth*/}
-				{/*	multiline*/}
-				{/*	required*/}
-				{/*	label="Message"*/}
-				{/*	name="body"*/}
-				{/*	onChange={handleChange}*/}
-				{/*	// ref={register({required: true})}*/}
-				{/*	value={message.body}*/}
-				{/*/>*/}
-				<Button type="submit" variant="contained">Send</Button>
+				<Button
+					endIcon={<SendIcon/>}
+					type="submit"
+					variant="contained"
+				>
+					Send
+				</Button>
 
-				{errors.name && <span>This field is required</span>}
+				{errors.name && <span>This name field is required</span>}
+				{errors.emailAddress && <span>This email address is required</span>}
 			</form>
 		</div>
 	);
