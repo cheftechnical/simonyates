@@ -1,0 +1,51 @@
+import * as React from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import {Button, Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
+import {Message} from '../Message';
+import axios from 'axios';
+
+interface Props {
+	isOpen: boolean;
+	message: Message | undefined;
+}
+
+export default function SendingMessageDialog(props: Props) {
+
+	const {isOpen, message} = props;
+
+	const handleClose = React.useCallback(() => {
+		console.log('handleClose');
+	}, []);
+
+	const handleReCaptchaChange = React.useCallback((value) => {
+		console.log('value', value);
+
+		axios.post('/', message)
+			.then((response) => {
+				console.log('response', response);
+			})
+			.catch((error) => {
+				console.log('error', error);
+			})
+			.finally(() => {
+				// setIsSending(false);
+			});
+	}, []);
+
+	return (
+		<Dialog aria-labelledby="sending-message-dialog-title" onClose={handleClose} open={isOpen} >
+			<DialogTitle id="sending-message-dialog-title">Are you a human?</DialogTitle>
+			<DialogContent>
+				<ReCAPTCHA
+					onChange={handleReCaptchaChange}
+					sitekey="6LfQSKcZAAAAAJCXPWH7aGFHCbUFrapdklKV9JQc"
+				/>
+			</DialogContent>
+			<DialogActions>
+				<Button color="primary" onClick={handleClose}>
+					Cancel
+				</Button>
+			</DialogActions>
+		</Dialog>
+	)
+};

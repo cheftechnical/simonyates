@@ -2,13 +2,7 @@ import * as React from 'react';
 import {Button, TextField} from '@material-ui/core';
 import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@material-ui/icons/Send';
-
-type Message = {
-	name: string,
-	emailAddress: string,
-	subject: string,
-	body: string,
-};
+import {Message} from './Message';
 
 interface Props {
 	onSubmit: (data: Message) => void;
