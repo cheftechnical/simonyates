@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Scrollspy from 'react-scrollspy';
 import {makeStyles} from '@material-ui/core/styles';
-import NavRightItem from '../NavRightItem';
+import NavRightItem from './NavRightItem';
 
 type SectionItem = {
 	id: string,
@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
 	isCurrent: {
 		color: 'lime',
 		backgroundColor: 'cyan'
+	},
+	root: {
+		position: 'fixed'
 	}
 }));
 
@@ -30,10 +33,12 @@ export default function NavRight(props: Props) {
 	});
 
 	return (
-		<Scrollspy currentClassName={classes.isCurrent} items={items}>
-			{sections.map((item, index) => (
-				<NavRightItem id={item.id} key={index} name={item.name}/>
-			))}
-		</Scrollspy>
+		<div className={classes.root}>
+			<Scrollspy currentClassName={classes.isCurrent} items={items}>
+				{sections.map((item, index) => (
+					<NavRightItem id={item.id} key={index} name={item.name}/>
+				))}
+			</Scrollspy>
+		</div>
 	);
 };
