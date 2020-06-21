@@ -8,11 +8,7 @@ import WorkAtHeader from '../../../components/workAt/WorkAtHeader';
 import WorkAtProject from '../../../components/workAt/WorkAtProject';
 import Sections from '../../../components/Sections';
 import NavRight from '../../../components/NavRight';
-
-type SectionItem = {
-	id: string,
-	name: string
-}
+import {SectionItem} from '../../../components/Section/SectionItem';
 
 export default function WorkAtRbc() {
 	const [sections, setSections] = React.useState();
