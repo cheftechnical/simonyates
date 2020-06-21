@@ -6,7 +6,7 @@ import axios from 'axios';
 
 interface Props {
 	isOpen: boolean;
-	message: Message | undefined;
+	message?: Message;
 }
 
 export default function SendingMessageDialog(props: Props) {
@@ -17,10 +17,16 @@ export default function SendingMessageDialog(props: Props) {
 		console.log('handleClose');
 	}, []);
 
-	const handleReCaptchaChange = React.useCallback((value) => {
-		console.log('value', value);
+	const send = React.useCallback(() => {
+		// Serialize the message
+		const payload = {
+			from: message?.emailAddress,
+			name: message?.name,
+			subject: message?.subject,
+			body: message?.body,
+		};
 
-		axios.post('/', message)
+		axios.post('https://5rygt2fs51.execute-api.us-east-1.amazonaws.com/default/simonyates-send-email', payload)
 			.then((response) => {
 				console.log('response', response);
 			})
@@ -30,7 +36,13 @@ export default function SendingMessageDialog(props: Props) {
 			.finally(() => {
 				// setIsSending(false);
 			});
-	}, []);
+	}, [message]);
+
+	const handleReCaptchaChange = React.useCallback((value) => {
+		console.log('value', value);
+		send();
+
+	}, [send]);
 
 	return (
 		<Dialog aria-labelledby="sending-message-dialog-title" onClose={handleClose} open={isOpen} >
@@ -42,6 +54,9 @@ export default function SendingMessageDialog(props: Props) {
 				/>
 			</DialogContent>
 			<DialogActions>
+				<Button color="primary" onClick={send}>
+					Test Send
+				</Button>
 				<Button color="primary" onClick={handleClose}>
 					Cancel
 				</Button>
