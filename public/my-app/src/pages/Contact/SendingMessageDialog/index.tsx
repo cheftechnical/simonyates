@@ -7,15 +7,12 @@ import axios from 'axios';
 interface Props {
 	isOpen: boolean;
 	message?: Message;
+	onClose: () => void;
 }
 
 export default function SendingMessageDialog(props: Props) {
 
-	const {isOpen, message} = props;
-
-	const handleClose = React.useCallback(() => {
-		console.log('handleClose');
-	}, []);
+	const {isOpen, message, onClose} = props;
 
 	const send = React.useCallback(() => {
 		// Serialize the message
@@ -45,7 +42,7 @@ export default function SendingMessageDialog(props: Props) {
 	}, [send]);
 
 	return (
-		<Dialog aria-labelledby="sending-message-dialog-title" onClose={handleClose} open={isOpen} >
+		<Dialog aria-labelledby="sending-message-dialog-title" onClose={onClose} open={isOpen} >
 			<DialogTitle id="sending-message-dialog-title">Are you a human?</DialogTitle>
 			<DialogContent>
 				<ReCAPTCHA
@@ -57,7 +54,7 @@ export default function SendingMessageDialog(props: Props) {
 				<Button color="primary" onClick={send}>
 					Test Send
 				</Button>
-				<Button color="primary" onClick={handleClose}>
+				<Button color="primary" onClick={onClose}>
 					Cancel
 				</Button>
 			</DialogActions>

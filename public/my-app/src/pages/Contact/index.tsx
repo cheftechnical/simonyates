@@ -10,6 +10,10 @@ export default function Contact() {
 	const [isSending, setIsSending] = React.useState();
 	const [message, setMessage] = React.useState<Message>();
 
+	const handleSendingDialogClose = React.useCallback(() => {
+		setIsSending(false);
+	}, []);
+
 	const handleSubmit = React.useCallback((value: Message) => {
 		console.log('sending message...', value);
 		setIsSending(true);
@@ -28,7 +32,11 @@ export default function Contact() {
 				</Grid>
 			</Grid>
 
-			<SendingMessageDialog isOpen={isSending} message={message}/>
+			<SendingMessageDialog
+				isOpen={isSending}
+				message={message}
+				onClose={handleSendingDialogClose}
+			/>
 		</DefaultLayout>
 	);
 };
