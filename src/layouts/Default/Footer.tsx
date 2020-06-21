@@ -9,7 +9,7 @@ export default function Footer() {
 				<Grid item xs={9}>
 					<div><Link component={ReactRouterDom} to="/">Simon Yates</Link></div>
 					<div>&copy; 2020 Sybaris Analytics Corporation</div>
-					<div><Link component={ReactRouterDom} to="/privacy-and-terms">Privacy &amp; Terms</Link></div>
+					<div><Link component={ReactRouterDom} to="/legal">Legal</Link></div>
 				</Grid>
 				<Grid item xs={3}>
 					<Link

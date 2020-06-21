@@ -15,7 +15,7 @@ export default function Featured() {
 	}, []);
 
 	return (
-		<DefaultLayout top="featured">
+		<DefaultLayout title="Featured" top="featured">
 			<Grid container>
 				<Grid item xs={6}>
 					<Sections onChange={handleChange}>

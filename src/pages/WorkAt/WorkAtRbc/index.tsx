@@ -18,7 +18,7 @@ export default function WorkAtRbc() {
 	}, []);
 
 	return (
-		<DefaultLayout top="work">
+		<DefaultLayout title="Work at RBC" top="work">
 			<Grid container>
 				<Grid item xs={1}>[logo]</Grid>
 				<Grid item xs={6}>

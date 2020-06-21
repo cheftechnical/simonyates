@@ -9,7 +9,7 @@ import PhotoGallery from './PhotoGallery';
 
 export default function About() {
     return (
-        <DefaultLayout top="about">
+        <DefaultLayout title="About" top="about">
             <Hero/>
             <Stats/>
             <LifeAsAMaker/>

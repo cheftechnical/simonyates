@@ -21,7 +21,7 @@ export default function Contact() {
 	}, []);
 
 	return (
-		<DefaultLayout top="contact">
+		<DefaultLayout title="Contact" top="contact">
 			<Grid container>
 				<Grid item xs={6}>
 					<h1>Pleasure to meet you.</h1>

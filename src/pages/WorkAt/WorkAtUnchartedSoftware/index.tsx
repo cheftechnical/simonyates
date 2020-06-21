@@ -8,7 +8,7 @@ import WorkAtProject from '../../../components/workAt/WorkAtProject';
 
 export default function WorkAtUnchartedSoftware() {
 	return (
-		<DefaultLayout top="work">
+		<DefaultLayout title="Work at Uncharted Software" top="work">
 			<Grid container>
 				<Grid item xs={1}>[logo]</Grid>
 				<Grid item xs={6}>

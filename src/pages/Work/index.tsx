@@ -5,7 +5,7 @@ import Highlight from './Highlight';
 
 export default function Work() {
     return (
-        <DefaultLayout top="work">
+        <DefaultLayout title="Work" top="work">
             Here is a glimpse of my life,<br/>
             mostly as a programmer.
 
