@@ -7,7 +7,7 @@ import {Message} from './Message';
 
 export default function Contact() {
 
-	const [isSending, setIsSending] = React.useState();
+	const [isSending, setIsSending] = React.useState(false);
 	const [message, setMessage] = React.useState<Message>();
 
 	const handleSendingDialogClose = React.useCallback(() => {
