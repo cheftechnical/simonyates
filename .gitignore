@@ -1,5 +1,8 @@
 # IDE files
 /.idea
 
+# Application dependencies
+/node_modules/
+
 # Test files
 /public/my-app/public/fonts/bimbo
