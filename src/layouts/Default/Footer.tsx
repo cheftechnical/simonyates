@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Grid, Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
+import Logo from '../../components/Logo';
 
 export default function Footer() {
 	return (
@@ -13,15 +14,16 @@ export default function Footer() {
 				</Grid>
 				<Grid item xs={3}>
 					<Link
-						title="View me on LinkedIn"
+						title="Find me on LinkedIn"
 						target="_blank"
 						href="https://www.linkedin.com/in/simonyates/"
-					>[linkedIn]</Link>
+					><Logo brand="linkedin" variant="grey-300"/></Link>
+
 					<Link
 						title="Follow me on Twitter"
 						target="_blank"
 						href="https://twitter.com/cheftechnical"
-					>[twitter]</Link>
+					><Logo brand="twitter" variant="grey-300"/></Link>
 				</Grid>
 			</Grid>
 		</footer>
