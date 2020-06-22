@@ -13,12 +13,12 @@ export default function Footer() {
 				</Grid>
 				<Grid item xs={3}>
 					<Link
-						title="View my LinkedIn"
+						title="View me on LinkedIn"
 						target="_blank"
 						href="https://www.linkedin.com/in/simonyates/"
 					>[linkedIn]</Link>
 					<Link
-						title="View my Twitter"
+						title="Follow me on Twitter"
 						target="_blank"
 						href="https://twitter.com/cheftechnical"
 					>[twitter]</Link>
