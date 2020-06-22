@@ -10,7 +10,7 @@ import Sections from '../../../components/Sections';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
 
-export default function WorkAtRbc() {
+export default function Rbc() {
 	const [sections, setSections] = React.useState();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {

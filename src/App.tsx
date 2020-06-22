@@ -8,9 +8,13 @@ import Home from './pages/Home';
 import NoMatch from './pages/NoMatch';
 import About from './pages/About';
 import Work from './pages/Work';
-import WorkAtRbc from './pages/WorkAt/WorkAtRbc';
-import WorkAtUnchartedSoftware from './pages/WorkAt/WorkAtUnchartedSoftware';
+import Rbc from './pages/WorkAt/Rbc';
+import UnchartedSoftware from './pages/WorkAt/UnchartedSoftware';
 import Legal from './pages/Legal';
+import MayoClinic from './pages/WorkAt/MayoClinic';
+import GenworthCanada from './pages/WorkAt/GenworthCanada';
+import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
+import Infomart from './pages/WorkAt/Infomart';
 
 // function App() {
 //     return (
@@ -39,8 +43,12 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/work/uncharted-software" component={WorkAtUnchartedSoftware}/>
-                <Route exact path="/work/rbc" component={WorkAtRbc}/>
+                <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
+                <Route exact path="/work/rbc" component={Rbc}/>
+                <Route exact path="/work/mayo-clinic" component={MayoClinic}/>
+                <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
+                <Route exact path="/work/infomart" component={Infomart}/>
+                <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
                 <Route exact path="/work" component={Work}/>
                 <Route exact path="/legal" component={Legal}/>
                 <Route exact path="/featured" component={Featured}/>

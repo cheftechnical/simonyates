@@ -1,6 +1,6 @@
 import * as React from 'react';
-import WorkAtRbc from './index';
+import Rbc from './index';
 
 export default {title: 'Pages/WorkAt/RBC'};
 
-export const _default = () => <WorkAtRbc/>;
+export const _default = () => <Rbc/>;

@@ -6,7 +6,7 @@ import WorkAtDescription from '../../../components/workAt/WorkAtDescription';
 import Section from '../../../components/Section';
 import WorkAtProject from '../../../components/workAt/WorkAtProject';
 
-export default function WorkAtUnchartedSoftware() {
+export default function UnchartedSoftware() {
 	return (
 		<DefaultLayout title="Work at Uncharted Software" top="work">
 			<Grid container>
