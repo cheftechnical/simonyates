@@ -1,4 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Website of Simon Yates
+
+This is the persona website of Simon Yates (aka @ChefTechnical).
+
+I chose to open-source the website for anyone curious to see how I built it.
+
+The website was built using React + Typescript, is hosted on an AWS S3 bucket, and is proxied through Cloudflare; design follows the Google Material design system. Although most of the design elements rely on components from the React Material-UI framework, I had to write my own `Typography` component as the one bundled with the framework was far too limiting.
+
+Component prototyping is handled with Storybook, and is divided into three parts: 
+
+1. Components — which represent common components used throughout the site
+2. Pages — which allow me to test each page of the site without directly navigating to the page. Typically this might be a little excessive, but this site is very text-heavy, and managing the pages this way is just easier for me.
+3. Style Guide — is a collection of core design elements that may be inherited by other components or pages—think colors, logos and stuff.
+
+## Requirements
+
+If you want to run a copy of this site, you'll require the following:
+
+- Node.js, v12.18.0 LTS
+
+This project was bootstrapped with 
 
 ## Available Scripts
 
@@ -27,18 +47,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
