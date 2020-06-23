@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'bimboregular';
-  src: url('http://localhost:3000/fonts/bimbo/bimbo-regular-trial-webfont.woff2') format('woff2'),
-  url('http://localhost:3000/fonts/bimbo/bimbo-regular-trial-webfont.woff') format('woff');
+  src:
+          url('http://localhost:3000/fonts/bimbo/bimbo-regular-trial-webfont.woff2') format('woff2'),
+          url('http://localhost:3000/fonts/bimbo/bimbo-regular-trial-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
