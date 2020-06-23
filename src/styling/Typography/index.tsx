@@ -16,27 +16,47 @@ const defaultProps = {
 }
 
 const useStyles = makeStyles((theme) => ({
+	// ---[ primary ]---
 	primary_medium: {
 		fontFamily: '"Tiempos Text Medium"'
 	},
 	primary_semibold: {
 		fontFamily: '"Tiempos Text Semibold"'
 	},
+
+	// ---[ secondary ]---
+	secondary_light: {
+		fontFamily: '"Apercu Light", "Comic Sans Ms"'
+	},
+	secondary_regular: {
+		fontFamily: '"Apercu Regular", "Comic Sans Ms"'
+	}
 }));
 
 export default function Typography(props: Props = defaultProps) {
 	const classes = useStyles();
-	const {children, element, weight} = props;
+	const {children, element, weight, variant} = props;
 
 	const result = React.useMemo(() => {
 		const className = (() => {
-			switch (weight) {
-				case 'semibold':
-					return classes.primary_semibold;
-				case 'medium':
-					return classes.primary_medium;
+			switch (variant) {
+				case 'secondary':
+					switch (weight) {
+						case 'light':
+							return classes.secondary_light;
+						case 'regular':
+						default:
+							return classes.secondary_regular;
+					}
+				case 'primary':
 				default:
-					return undefined;
+					switch (weight) {
+						case 'semibold':
+							return classes.primary_semibold;
+						case 'medium':
+						default:
+							return classes.primary_medium;
+					}
 			}
 		})();
 
@@ -52,7 +72,7 @@ export default function Typography(props: Props = defaultProps) {
 			default:
 				return <p className={className}>{children}</p>
 		}
-	}, [children, element, weight]);
+	}, [children, element, weight, variant]);
 
 	return (
 		<React.Fragment>

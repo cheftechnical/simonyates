@@ -84,7 +84,7 @@ export const _default = () => (
 			<tbody>
 				<tr>
 					<td>Heading 3</td>
-					<td><Typography element="h3" variant="secondary">H3 &ndash; Light 24</Typography></td>
+					<td><Typography element="h3" variant="secondary" weight="light">H3 &ndash; Light 24</Typography></td>
 					<td/>
 					<td/>
 				</tr>
