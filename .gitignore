@@ -4,6 +4,3 @@
 # Application dependencies
 /node_modules/
 /src/styling/fonts/
-
-# Test files
-/public/my-app/public/fonts/bimbo
