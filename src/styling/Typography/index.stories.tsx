@@ -7,7 +7,7 @@ export default {title: 'Style Guide/Typography'};
 export const _default = () => (
 	<DefaultTheme>
 		Primary &mdash; Tiempo
-		<table>
+		<table width="100%">
 			<thead>
 				<tr>
 					<td width="25%">Name</td>
@@ -72,7 +72,7 @@ export const _default = () => (
 		</table>
 
 		Secondary &mdash; Apercu
-		<table>
+		<table width="100%">
 			<thead>
 				<tr>
 					<td width="25%">Name</td>
