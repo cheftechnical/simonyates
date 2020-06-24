@@ -100,6 +100,7 @@ const theme = createMuiTheme({
 				}
 			},
 			text: {
+				padding: 0,
 				fontFamily: '"Tiempos Text"',
 				fontStyle: 'normal',
 				fontWeight: 'normal',
@@ -110,19 +111,28 @@ const theme = createMuiTheme({
 
 				color: color.grey[900],
 
+				'& .MuiButton-label': {
+					paddingBottom: rem(6),
+					borderBottom: `2px solid ${color.grey['50']}`
+				},
+
 				'&:hover': {
 					backgroundColor: 'inherit',
 
 					'& .MuiButton-label': {
-						borderBottom: `2px solid ${color.grey[900]}`
-						// boxShadow: `inset 0px -8px 0px -6px ${color.grey[900]}`
-						// transition:
+						borderBottom: `2px solid ${color.grey[900]}`,
 					},
+
+					'& .MuiButton-label .MuiButton-endIcon': {
+						paddingBottom: rem(6),
+						marginBottom: '-8px',
+						borderBottom: `2px solid ${color.grey['50']}`
+					}
 				},
 
 				'&$disabled': {
 					color: color.grey[300],
-				}
+				},
 			}
 		},
 		MuiChip: {
@@ -150,6 +160,11 @@ const theme = createMuiTheme({
 					tiemposTextMedium,
 					tiemposTextSemibold,
 				]
+			}
+		},
+		MuiLink: {
+			root: {
+
 			}
 		}
 	},
