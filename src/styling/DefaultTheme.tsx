@@ -100,6 +100,14 @@ const theme = createMuiTheme({
 				}
 			},
 			text: {
+				fontFamily: '"Tiempos Text"',
+				fontStyle: 'normal',
+				fontWeight: 'normal',
+				fontSize: rem(14),
+				lineHeight: rem(16),
+				letterSpacing: rem(1.25),
+				textTransform: 'uppercase',
+
 				color: color.grey[900],
 
 				'&:hover': {
@@ -113,7 +121,7 @@ const theme = createMuiTheme({
 				},
 
 				'&$disabled': {
-
+					color: color.grey[300],
 				}
 			}
 		},
