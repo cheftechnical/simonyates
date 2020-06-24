@@ -4,7 +4,8 @@ import {color} from '../Color';
 import rem from '../rem';
 
 interface Props {
-	children: string | undefined;
+	children: any | any[] | undefined;
+	className?: string;
 	element: string;
 	variant: string;
 	weight: string;
@@ -12,6 +13,7 @@ interface Props {
 
 const defaultProps = {
 	children: undefined,
+	className: undefined,
 	element: 'p',
 	variant: 'primary',
 	weight: 'regular'
@@ -147,6 +149,7 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	secondary_caption_regular: {
+		margin: 0,
 		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
@@ -171,7 +174,7 @@ interface ClassMap {
 
 export default function Typography(props: Props = defaultProps) {
 	const classes = useStyles();
-	const {children, element, weight, variant} = props;
+	const {children, className, element, weight, variant} = props;
 
 	const result = React.useMemo(() => {
 		const classMap: ClassMap = {
@@ -218,21 +221,21 @@ export default function Typography(props: Props = defaultProps) {
 			}
 		};
 
-		const className = classMap[variant][element][weight];
+		const themeClass = classMap[variant][element][weight];
 
 		switch (element) {
 			case 'h1':
-				return <h1 className={className}>{children}</h1>
+				return <h1 className={`${themeClass} ${className}`}>{children}</h1>
 			case 'h2':
-				return <h2 className={className}>{children}</h2>
+				return <h2 className={themeClass}>{children}</h2>
 			case 'h3':
-				return <h3 className={className}>{children}</h3>
+				return <h3 className={themeClass}>{children}</h3>
 			case 'h4':
-				return <h4 className={className}>{children}</h4>
+				return <h4 className={themeClass}>{children}</h4>
 			default:
-				return <p className={className}>{children}</p>
+				return <p className={`${themeClass} ${className}`}>{children}</p>
 		}
-	}, [children, element, weight, variant]);
+	}, [children, classes, className, element, weight, variant]);
 
 	return (
 		<React.Fragment>

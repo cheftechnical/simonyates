@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {Link} from '@material-ui/core';
+import {Button, Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
+import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
 	href: string;
@@ -8,7 +9,14 @@ interface Props {
 	title: string;
 }
 
+const useStyles = makeStyles((theme) => ({
+	link: {
+
+	}
+}));
+
 export default function Item(props: Props) {
+	const classes = useStyles();
 	const {href, selected, title} = props;
 
 	if (selected) {
@@ -18,6 +26,10 @@ export default function Item(props: Props) {
 	}
 
 	return (
-		<Link component={ReactRouterDom} to={href}>{title}</Link>
+		<Button href={href}>{title}</Button>
 	);
+
+	// return (
+	// 	<Link className={classes.link} component={ReactRouterDom} to={href}>{title}</Link>
+	// );
 };

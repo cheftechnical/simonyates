@@ -15,6 +15,7 @@ import MayoClinic from './pages/WorkAt/MayoClinic';
 import GenworthCanada from './pages/WorkAt/GenworthCanada';
 import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
 import Infomart from './pages/WorkAt/Infomart';
+import DefaultTheme from './styling/DefaultTheme';
 
 // function App() {
 //     return (
@@ -41,23 +42,25 @@ import Infomart from './pages/WorkAt/Infomart';
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
-                <Route exact path="/work/rbc" component={Rbc}/>
-                <Route exact path="/work/mayo-clinic" component={MayoClinic}/>
-                <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
-                <Route exact path="/work/infomart" component={Infomart}/>
-                <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
-                <Route exact path="/work" component={Work}/>
-                <Route exact path="/legal" component={Legal}/>
-                <Route exact path="/featured" component={Featured}/>
-                <Route exact path="/contact" component={Contact}/>
-                <Route exact path="/about" component={About}/>
-                <Route exact path="/" component={Home}/>
-                <Route component={NoMatch}/>
-            </Switch>
-        </Router>
+        <DefaultTheme>
+            <Router>
+                <Switch>
+                    <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
+                    <Route exact path="/work/rbc" component={Rbc}/>
+                    <Route exact path="/work/mayo-clinic" component={MayoClinic}/>
+                    <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
+                    <Route exact path="/work/infomart" component={Infomart}/>
+                    <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
+                    <Route exact path="/work" component={Work}/>
+                    <Route exact path="/legal" component={Legal}/>
+                    <Route exact path="/featured" component={Featured}/>
+                    <Route exact path="/contact" component={Contact}/>
+                    <Route exact path="/about" component={About}/>
+                    <Route exact path="/" component={Home}/>
+                    <Route component={NoMatch}/>
+                </Switch>
+            </Router>
+        </DefaultTheme>
     );
 }
 

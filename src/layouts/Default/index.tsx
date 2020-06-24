@@ -18,11 +18,17 @@ export default function DefaultLayout(props: Props) {
                 <title>{title}</title>
             </Helmet>
 
-            <NavTop selected={top}/>
+            <header>
+                <NavTop selected={top}/>
+            </header>
 
-            {children}
+            <main>
+                {children}
+            </main>
 
-            <Footer/>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     );
 };
