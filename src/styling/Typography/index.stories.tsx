@@ -19,36 +19,36 @@ export const _default = () => (
 			<tbody>
 				<tr>
 					<td>Headline 1</td>
-					<td><Typography element="h1" variant="primary" weight="regular">H1 &ndash; Regular 54</Typography></td>
+					<td><Typography group="primary" variant="h1" weight="regular">H1 &ndash; Regular 54</Typography></td>
 					<td/>
 					<td/>
 				</tr>
 				<tr>
 					<td>Headline 2</td>
-					<td><Typography element="h2" variant="primary" weight="regular">H2 &ndash; Regular 34</Typography></td>
+					<td><Typography group="primary" variant="h2" weight="regular">H2 &ndash; Regular 34</Typography></td>
 					<td/>
 					<td/>
 				</tr>
 				<tr>
 					<td>Headline 3</td>
-					<td><Typography element="h3" variant="primary" weight="regular">H3 &ndash; Regular 24</Typography></td>
-					<td><Typography element="h3" variant="primary" weight="medium">H3 &ndash; Medium 24</Typography></td>
-					<td><Typography element="h3" variant="primary" weight="semibold">H3 &ndash; Semibold 24</Typography></td>
+					<td><Typography group="primary" variant="h3" weight="regular">H3 &ndash; Regular 24</Typography></td>
+					<td><Typography group="primary" variant="h3" weight="medium">H3 &ndash; Medium 24</Typography></td>
+					<td><Typography group="primary" variant="h3" weight="semibold">H3 &ndash; Semibold 24</Typography></td>
 				</tr>
 				<tr>
 					<td>Headline 4</td>
-					<td><Typography element="h4" variant="primary" weight="medium">H4 &ndash; Medium 16</Typography></td>
-					<td><Typography element="h4" variant="primary" weight="semibold">H4 &ndash; Semibold</Typography></td>
+					<td><Typography group="primary" variant="h4" weight="medium">H4 &ndash; Medium 16</Typography></td>
+					<td><Typography group="primary" variant="h4" weight="semibold">H4 &ndash; Semibold</Typography></td>
 					<td>Tiempo Bold?</td>
 				</tr>
 				<tr>
 					<td>Body</td>
-					<td><Typography element="body" variant="primary" weight="regular">Body &ndash; Regular 16</Typography></td>
-					<td><Typography element="body" variant="primary" weight="semibold">Body &ndash; Semibold 16</Typography></td>
+					<td><Typography group="primary" variant="body" weight="regular">Body &ndash; Regular 16</Typography></td>
+					<td><Typography group="primary" variant="body" weight="semibold">Body &ndash; Semibold 16</Typography></td>
 				</tr>
 				<tr>
 					<td>Subtitle</td>
-					<td><Typography element="subtitle" variant="primary" weight="regular">Subtitle &ndash; Regular 14</Typography></td>
+					<td><Typography group="primary" variant="subtitle" weight="regular">Subtitle &ndash; Regular 14</Typography></td>
 					<td/>
 					<td/>
 				</tr>
@@ -66,7 +66,7 @@ export const _default = () => (
 				{/*</tr>*/}
 				<tr>
 					<td>Caption</td>
-					<td><Typography element="caption" variant="primary" weight="regular">Caption &ndash; Regular 12</Typography></td>
+					<td><Typography group="primary" variant="caption" weight="regular">Caption &ndash; Regular 12</Typography></td>
 				</tr>
 			</tbody>
 		</table>
@@ -84,25 +84,25 @@ export const _default = () => (
 			<tbody>
 				<tr>
 					<td>Heading 3</td>
-					<td><Typography element="h3" variant="secondary" weight="light">H3 &ndash; Light 24</Typography></td>
+					<td><Typography group="secondary" variant="h3" weight="light">H3 &ndash; Light 24</Typography></td>
 					<td/>
 					<td/>
 				</tr>
 				<tr>
 					<td>Body</td>
-					<td><Typography element="body" variant="secondary" weight="regular">Body &ndash; Regular 16</Typography></td>
+					<td><Typography group="secondary" variant="body" weight="regular">Body &ndash; Regular 16</Typography></td>
 					<td/>
 					<td/>
 				</tr>
 				<tr>
 					<td>Subtitle</td>
-					<td><Typography element="subtitle" variant="secondary" weight="regular">Subtitle &ndash; Regular 14</Typography></td>
+					<td><Typography group="secondary" variant="subtitle" weight="regular">Subtitle &ndash; Regular 14</Typography></td>
 					<td/>
 					<td/>
 				</tr>
 				<tr>
 					<td>Caption</td>
-					<td><Typography element="caption" variant="secondary" weight="regular">Caption &ndash; Regular 12</Typography></td>
+					<td><Typography group="secondary" variant="caption" weight="regular">Caption &ndash; Regular 12</Typography></td>
 					<td/>
 					<td/>
 				</tr>

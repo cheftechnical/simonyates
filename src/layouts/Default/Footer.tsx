@@ -36,7 +36,7 @@ export default function Footer() {
 				<Grid container>
 					<Grid item xs={9}>
 						<div><Link component={ReactRouterDom} to="/">Simon Yates</Link></div>
-						<Typography className={classes.text} element="caption" variant="secondary" weight="regular">
+						<Typography className={classes.text} variant="caption" group="secondary" weight="regular">
 							&copy; 2020 Sybaris Analytics Corporation<br/>
 							<Link className={classes.text} component={ReactRouterDom} to="/legal">Legal</Link>
 						</Typography>

@@ -3,21 +3,30 @@ import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../Color';
 import rem from '../rem';
 
+// type primary = 'primary';
+// type secondary = 'secondary';
+
+export enum Groups {
+	primary = 'primary',
+	secondary = 'secondary'
+}
+
+
 interface Props {
 	children: any | any[] | undefined;
 	className?: string;
-	element: string;
-	variant: string;
-	weight: string;
+	group: 'primary' | 'secondary' | undefined;
+	variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'subtitle' | 'caption' | undefined;
+	weight: 'light' | 'regular' | 'medium' | 'semibold' | undefined;
 }
 
-const defaultProps = {
-	children: undefined,
-	className: undefined,
-	element: 'p',
-	variant: 'primary',
-	weight: 'regular'
-}
+// const defaultProps = {
+// 	children: undefined,
+// 	className: undefined,
+// 	group: 'primary',
+// 	variant: '"body"',
+// 	weight: '"regular"'
+// }
 
 const useStyles = makeStyles((theme) => ({
 	// ---[ primary ]---
@@ -172,9 +181,9 @@ interface ClassMap {
 	[key: string]: ElementMap;
 }
 
-export default function Typography(props: Props = defaultProps) {
+export default function Typography(props: Props) {
 	const classes = useStyles();
-	const {children, className, element, weight, variant} = props;
+	const {children, className, group, variant, weight} = props;
 
 	const result = React.useMemo(() => {
 		const classMap: ClassMap = {
@@ -221,9 +230,9 @@ export default function Typography(props: Props = defaultProps) {
 			}
 		};
 
-		const themeClass = classMap[variant][element][weight];
+		const themeClass = classMap[group || 'primary'][variant || 'body'][weight || 'regular'];
 
-		switch (element) {
+		switch (variant) {
 			case 'h1':
 				return <h1 className={`${themeClass} ${className}`}>{children}</h1>
 			case 'h2':
@@ -235,7 +244,7 @@ export default function Typography(props: Props = defaultProps) {
 			default:
 				return <p className={`${themeClass} ${className}`}>{children}</p>
 		}
-	}, [children, classes, className, element, weight, variant]);
+	}, [children, classes, className, group, variant, weight]);
 
 	return (
 		<React.Fragment>
