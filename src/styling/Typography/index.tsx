@@ -20,10 +20,6 @@ function rem(value: number) {
 	return (value/16) + 'rem'
 }
 
-function px(value: number) {
-	return value + 'px';
-}
-
 const useStyles = makeStyles((theme) => ({
 	// ---[ primary ]---
 	primary_h1_regular: {
