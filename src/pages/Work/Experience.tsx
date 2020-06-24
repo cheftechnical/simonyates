@@ -30,7 +30,7 @@ export default function Experience(props: Props) {
 				<div>{children}</div>
 				<div>
 					<Button endIcon={<ArrowRightIcon/>} href={href} variant="text">
-						Read Full Details [arrow]
+						Read Full Details
 					</Button>
 				</div>
 			</Box>
