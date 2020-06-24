@@ -13,6 +13,8 @@ import TiemposTextSemiboldWoff from './fonts/tiempos-text/tiempos-text-test-semi
 import ApercuLightWoff from './fonts/apercu/apercu_light-webfont.woff';
 // @ts-ignore
 import ApercuRegularWoff from './fonts/apercu/apercu_regular-webfont.woff';
+import {color} from './Color';
+import rem from './rem';
 
 const apercuLight: CSSProperties = {
 	fontFamily: 'Apercu Light',
@@ -69,6 +71,52 @@ const tiemposTextSemibold: CSSProperties = {
 
 const theme = createMuiTheme({
 	overrides: {
+		MuiButton: {
+			contained: {
+				padding: rem(16),
+
+				fontFamily: '"Tiempos Text Medium"',
+				fontStyle: 'normal',
+				fontWeight: 500,
+				fontSize: rem(16),
+				lineHeight: rem(16),
+				letterSpacing: rem(1.25),
+				textTransform: 'uppercase',
+
+				color: color.grey['50'],
+				backgroundColor: color.grey['900'],
+
+				boxShadow: 'none',
+
+				'&:hover': {
+					color: color.grey['900'],
+					backgroundColor: color.grey['50'],
+					boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+				},
+
+				'&$disabled': {
+					color: color.grey['50'],
+					backgroundColor: color.grey['300'],
+				}
+			},
+			text: {
+				color: color.grey[900],
+
+				'&:hover': {
+					backgroundColor: 'inherit',
+
+					'& .MuiButton-label': {
+						borderBottom: `2px solid ${color.grey[900]}`
+						// boxShadow: `inset 0px -8px 0px -6px ${color.grey[900]}`
+						// transition:
+					},
+				},
+
+				'&$disabled': {
+
+				}
+			}
+		},
 		MuiCssBaseline: {
 			'@global': {
 				'@font-face': [

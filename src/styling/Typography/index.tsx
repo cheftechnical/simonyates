@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../Color';
+import rem from '../rem';
 
 interface Props {
 	children: string | undefined;
@@ -14,10 +15,6 @@ const defaultProps = {
 	element: 'p',
 	variant: 'primary',
 	weight: 'regular'
-}
-
-function rem(value: number) {
-	return (value/16) + 'rem'
 }
 
 const useStyles = makeStyles((theme) => ({
