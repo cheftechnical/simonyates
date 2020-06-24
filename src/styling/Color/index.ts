@@ -1,4 +1,4 @@
-export default {
+export const color = {
 	grey: {
 		50: '#F7F7F7',
 		100: '#E1E1E1',

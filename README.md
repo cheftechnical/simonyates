@@ -10,7 +10,7 @@ Component prototyping is handled with Storybook, and is divided into three parts
 
 1. Components — which represent common components used throughout the site
 2. Pages — which allow me to test each page of the site without directly navigating to the page. Typically this might be a little excessive, but this site is very text-heavy, and managing the pages this way is just easier for me.
-3. Style Guide — is a collection of core design elements that may be inherited by other components or pages—think colors, logos and stuff.
+3. Style Guide — is a collection of core design elements that may be inherited by other components or pages—think color, logos and stuff.
 
 ## Requirements
 

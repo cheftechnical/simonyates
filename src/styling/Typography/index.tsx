@@ -1,11 +1,12 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
+import {color} from '../Color';
 
 interface Props {
 	children: string | undefined;
 	element: string;
 	variant: string;
-	weight?: string;
+	weight: string;
 }
 
 const defaultProps = {
@@ -15,50 +16,216 @@ const defaultProps = {
 	weight: 'regular'
 }
 
+function rem(value: number) {
+	return (value/16) + 'rem'
+}
+
+function px(value: number) {
+	return value + 'px';
+}
+
 const useStyles = makeStyles((theme) => ({
 	// ---[ primary ]---
-	primary_medium: {
-		fontFamily: '"Tiempos Text Medium"'
+	primary_h1_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(54),
+		lineHeight: rem(88),
+		letterSpacing: rem(-0.5),
+		color: color.grey['900']
 	},
-	primary_semibold: {
-		fontFamily: '"Tiempos Text Semibold"'
+	primary_h2_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(34),
+		lineHeight: rem(56),
+		letterSpacing: rem(0.25),
+		color: color.grey['900']
+	},
+	primary_h3_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(24),
+		lineHeight: rem(32),
+		color: color.grey['900']
+	},
+	primary_h3_medium: {
+		fontFamily: '"Tiempos Text Medium"',
+		fontStyle: 'normal',
+		fontWeight: 500,
+		fontSize: rem(24),
+		lineHeight: rem(32),
+		letterSpacing: rem(0.25),
+		color: color.grey['900']
+	},
+	primary_h3_semibold: {
+		fontFamily: '"Tiempos Text Semibold"',
+		fontStyle: 'normal',
+		fontWeight: 600,
+		fontSize: rem(23),
+		lineHeight: rem(32),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	primary_h4_medium: {
+		fontFamily: '"Tiempos Text Medium"',
+		fontStyle: 'normal',
+		fontWeight: 500,
+		fontSize: rem(16),
+		lineHeight: rem(24),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	primary_h4_semibold: {
+		fontFamily: '"Tiempos Text Semibold"',
+		fontStyle: 'normal',
+		fontWeight: 600,
+		fontSize: rem(16),
+		lineHeight: rem(24),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	primary_body_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(16),
+		lineHeight: rem(24),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	primary_body_semibold: {
+		fontFamily: '"Tiempos Text Semibold"',
+		fontStyle: 'normal',
+		fontWeight: 600,
+		fontSize: rem(16),
+		lineHeight: rem(24),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	primary_subtitle_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(14),
+		lineHeight: rem(16),
+		letterSpacing: rem(0.25),
+		color: color.grey['900']
+	},
+	primary_caption_regular: {
+		fontFamily: '"Tiempos Text"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(12),
+		lineHeight: rem(16),
+		letterSpacing: rem(0.4),
+		color: color.grey['900']
 	},
 
+
 	// ---[ secondary ]---
-	secondary_light: {
-		fontFamily: '"Apercu Light", "Comic Sans Ms"'
+	secondary_h3_light: {
+		fontFamily: '"Apercu Light", "Comic Sans Ms"',
+		fontStyle: 'normal',
+		fontWeight: 300,
+		fontSize: rem(24),
+		lineHeight: rem(40),
+		color: color.grey['900']
 	},
-	secondary_regular: {
-		fontFamily: '"Apercu Regular", "Comic Sans Ms"'
+	secondary_body_regular: {
+		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(16),
+		lineHeight: rem(24),
+		letterSpacing: rem(0.5),
+		color: color.grey['900']
+	},
+	secondary_subtitle_regular: {
+		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(14),
+		lineHeight: rem(16),
+		letterSpacing: rem(0.25),
+		color: color.grey['900']
+	},
+	secondary_caption_regular: {
+		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		fontSize: rem(12),
+		lineHeight: rem(16),
+		letterSpacing: rem(0.4),
+		color: color.grey['900']
 	}
 }));
+
+interface WeightMap {
+	[weight: string]: string;
+}
+
+interface ElementMap {
+	[element: string]: WeightMap
+}
+
+interface ClassMap {
+	[key: string]: ElementMap;
+}
 
 export default function Typography(props: Props = defaultProps) {
 	const classes = useStyles();
 	const {children, element, weight, variant} = props;
 
 	const result = React.useMemo(() => {
-		const className = (() => {
-			switch (variant) {
-				case 'secondary':
-					switch (weight) {
-						case 'light':
-							return classes.secondary_light;
-						case 'regular':
-						default:
-							return classes.secondary_regular;
-					}
-				case 'primary':
-				default:
-					switch (weight) {
-						case 'semibold':
-							return classes.primary_semibold;
-						case 'medium':
-						default:
-							return classes.primary_medium;
-					}
+		const classMap: ClassMap = {
+			primary: {
+				h1: {
+					regular: classes.primary_h1_regular,
+				},
+				h2: {
+					regular: classes.primary_h2_regular,
+				},
+				h3: {
+					regular: classes.primary_h3_regular,
+					medium: classes.primary_h3_medium,
+					semibold: classes.primary_h3_semibold,
+				},
+				h4: {
+					medium: classes.primary_h4_medium,
+					semibold: classes.primary_h4_semibold,
+				},
+				body: {
+					regular: classes.primary_body_regular,
+					semibold: classes.primary_body_semibold,
+				},
+				subtitle: {
+					regular: classes.primary_subtitle_regular,
+				},
+				caption: {
+					regular: classes.primary_caption_regular,
+				}
+			},
+			secondary: {
+				h3: {
+					light: classes.secondary_h3_light,
+				},
+				body: {
+					regular: classes.secondary_body_regular,
+				},
+				subtitle: {
+					regular: classes.secondary_subtitle_regular,
+				},
+				caption: {
+					regular: classes.secondary_caption_regular,
+				}
 			}
-		})();
+		};
+
+		const className = classMap[variant][element][weight];
 
 		switch (element) {
 			case 'h1':
