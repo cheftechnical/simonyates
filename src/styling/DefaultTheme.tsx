@@ -168,6 +168,11 @@ const theme = createMuiTheme({
 			}
 		}
 	},
+	palette: {
+		background: {
+			default: color.white
+		}
+	},
 	typography: {
 		fontFamily: '"Tiempos Text"'
 	}

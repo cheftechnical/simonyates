@@ -22,5 +22,6 @@ export const color = {
 		700: '#92A90C',
 		800: '',
 		900: '#627203'
-	}
+	},
+	white: '#FFFFFF'
 }
