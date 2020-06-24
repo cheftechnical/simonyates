@@ -125,6 +125,22 @@ const theme = createMuiTheme({
 				}
 			}
 		},
+		MuiChip: {
+			root: {
+				fontFamily: '"Apercu Regular"',
+				fontStyle: 'normal',
+				fontWeight: 'normal',
+				fontSize: rem(14),
+				lineHeight: rem(16),
+				letterSpacing: rem(0.25),
+				color: color.grey['800'],
+
+				backgroundColor: color.lime['50'],
+				borderWidth: 1.5,
+				borderStyle: 'solid',
+				borderColor: color.lime['300'],
+			}
+		},
 		MuiCssBaseline: {
 			'@global': {
 				'@font-face': [
