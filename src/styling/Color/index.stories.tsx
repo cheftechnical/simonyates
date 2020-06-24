@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ColorGradient from './ColorGradient';
-import color from './index';
+import {color} from './index';
 
 export default {title: 'Style Guide/Colors'};
 
