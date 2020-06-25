@@ -21,7 +21,7 @@ import ApercuRegularWoff from './fonts/apercu/apercu_regular-webfont.woff';
 const apercuLight: CSSProperties = {
 	fontFamily: 'Apercu Light',
 	fontStyle: 'normal',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Apercu Light'),
 		url(${ApercuLightWoff}) format('woff')
@@ -31,7 +31,7 @@ const apercuLight: CSSProperties = {
 const apercuRegular: CSSProperties = {
 	fontFamily: 'Apercu Regular',
 	fontStyle: 'normal',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Apercu Regular'),
 		url(${ApercuRegularWoff}) format('woff')
@@ -42,7 +42,7 @@ const tiemposTextBold: CSSProperties = {
 	fontFamily: '"Tiempos Text Bold"',
 	fontStyle: 'normal',
 	fontWeight: 'bold',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Tiempos Text Bold'),
 		local('Tiempos Text Test Bold'),
@@ -53,7 +53,7 @@ const tiemposTextBold: CSSProperties = {
 const tiemposTextRegular: CSSProperties = {
 	fontFamily: 'Tiempos Text',
 	fontStyle: 'normal',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Tiempos Text'),
 		local('Tiempos Text Test'),
@@ -64,7 +64,7 @@ const tiemposTextRegular: CSSProperties = {
 const tiemposTextMedium: CSSProperties = {
 	fontFamily: 'Tiempos Text Medium',
 	fontStyle: 'normal',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Tiempos Text Medium'),
 		local('Tiempos Text Test Medium'),
@@ -75,7 +75,7 @@ const tiemposTextMedium: CSSProperties = {
 const tiemposTextSemibold: CSSProperties = {
 	fontFamily: 'Tiempos Text Semibold',
 	fontStyle: 'normal',
-	fontDisplay: 'optional',
+	fontDisplay: 'fallback',
 	src: `
 		local('Tiempos Text Semibold'),
 		local('Tiempos Text Test Semibold'),
