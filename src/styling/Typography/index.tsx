@@ -146,7 +146,10 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: rem(16),
 		lineHeight: rem(24),
 		letterSpacing: rem(0.5),
-		color: color.grey['900']
+		color: color.grey['900'],
+
+
+		margin: 0 // added because some margin is getting from somewhere (probably material)
 	},
 	secondary_subtitle_regular: {
 		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
@@ -236,11 +239,11 @@ export default function Typography(props: Props) {
 			case 'h1':
 				return <h1 className={`${themeClass} ${className}`}>{children}</h1>
 			case 'h2':
-				return <h2 className={themeClass}>{children}</h2>
+				return <h2 className={`${themeClass} ${className}`}>{children}</h2>
 			case 'h3':
-				return <h3 className={themeClass}>{children}</h3>
+				return <h3 className={`${themeClass} ${className}`}>{children}</h3>
 			case 'h4':
-				return <h4 className={themeClass}>{children}</h4>
+				return <h4 className={`${themeClass} ${className}`}>{children}</h4>
 			default:
 				return <p className={`${themeClass} ${className}`}>{children}</p>
 		}
@@ -252,7 +255,7 @@ export default function Typography(props: Props) {
 		</React.Fragment>
 	);
 };
-
+/*
 function h1(props: Props) {
 	const {children} = props;
 
@@ -292,3 +295,4 @@ function p(props: Props) {
 		<p>{children}</p>
 	);
 }
+*/

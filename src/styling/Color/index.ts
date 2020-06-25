@@ -23,5 +23,10 @@ export const color = {
 		800: '',
 		900: '#627203'
 	},
+	limeWithOpacity: {
+		500: {
+			'10%': '#F8FAEF'
+		}
+	},
 	white: '#FFFFFF'
 }

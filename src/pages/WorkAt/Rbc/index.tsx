@@ -9,6 +9,9 @@ import WorkAtProject from '../../../components/workAt/WorkAtProject';
 import Sections from '../../../components/Sections';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
+import Ul from '../../Work/Ul/intex';
+import Li from '../../Work/Li/intex';
+import Typography from '../../../styling/Typography';
 
 export default function Rbc() {
 	const [sections, setSections] = React.useState();
@@ -30,8 +33,7 @@ export default function Rbc() {
 					/>
 					<WorkAtDescription>
 						The Royal Bank of Canada (RBC) is the largest bank in Canada by asset value, with over 80,000
-						employees
-						worldwide.
+						employees worldwide.
 					</WorkAtDescription>
 					<Sections onChange={handleChange}>
 						<Section id="section-1" name="Application Development & Custom Tooling">
@@ -42,10 +44,46 @@ export default function Rbc() {
 									Elasticsearch &bull;
 									PostgreSQL &bull;
 								</Callout>
+
+								<Ul>
+									<Li>Interactive dashboards for monitoring infrastructure</Li>
+									<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
+									<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+								</Ul>
+							</WorkAtProject>
+							
+							<WorkAtProject name="Automatic Validation and Self Healing of Seven Years worth of Financial Data" when="2019–Present">
+								<Typography group="primary" variant="body" weight="regular">
+									Before this software project began, I fought for certain architectural changes to ensure the Elasticsearch could function at scale. The project was already well underway before I got involved, so it was an uphill battle, but I prevailed. The changes I proposed increased performance and reliability and are deeply baked into the current architecture as a result.
+								</Typography>
+
+								<Callout>
+									Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
+								</Callout>
+
+								<Ul>
+									<Li>Interactive dashboards for monitoring infrastructure</Li>
+									<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
+									<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+								</Ul>
 							</WorkAtProject>
 						</Section>
-						<Section id="section-2" name="Machine Learning / Artificial Intelligence"/>
-						<Section id="section-3" name="Budgeting"/>
+						<Section id="section-2" name="Machine Learning / Artificial Intelligence">
+							<Ul>
+								<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
+								<Li>Used NLP via TF–IDF to automatically label reports about previous incidents to help identify areas for improvement</Li>
+							</Ul>
+						</Section>
+						<Section id="section-3" name="Budgeting">
+							<WorkAtProject name="Cost Chargeback Model" when="2019–Present">
+								<Callout>
+									Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
+								</Callout>
+								<Ul>
+									<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
+								</Ul>
+							</WorkAtProject>
+						</Section>
 						<Section id="section-4" name="Events"/>
 						<Section id="section-5" name="Publications"/>
 						<Section id="section-6" name="Active Research"/>
