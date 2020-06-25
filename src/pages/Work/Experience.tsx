@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Button, Grid} from '@material-ui/core';
+import {Button, Grid} from '@material-ui/core';
 import {Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
 import Typography from '../../styling/Typography';
@@ -16,8 +16,14 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
+	root: {
+		marginBottom: theme.spacing(72/8)
+	},
 	h3Link: {
 		color: color.grey['600']
+	},
+	readFullDetails: {
+		marginTop: theme.spacing(32/8)
 	}
 }));
 
@@ -26,7 +32,7 @@ export default function Experience(props: Props) {
 	const {children, employer, href, title, when} = props;
 
 	return (
-		<Grid container>
+		<Grid className={classes.root} container>
 			<Grid item xs={1}>
 				<Link component={ReactRouterDom} to={href}>[logo]</Link>
 			</Grid>
@@ -43,7 +49,7 @@ export default function Experience(props: Props) {
 
 				<div>{children}</div>
 
-				<div>
+				<div className={classes.readFullDetails}>
 					<Button endIcon={<ArrowRightIcon/>} href={href} variant="text">
 						Read Full Details
 					</Button>

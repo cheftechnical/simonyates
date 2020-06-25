@@ -113,7 +113,7 @@ const theme = createMuiTheme({
 
 				'& .MuiButton-label': {
 					paddingBottom: rem(6),
-					borderBottom: `2px solid ${color.grey['50']}`
+					borderBottom: `2px solid ${color.white}`
 				},
 
 				'&:hover': {
@@ -126,7 +126,7 @@ const theme = createMuiTheme({
 					'& .MuiButton-label .MuiButton-endIcon': {
 						paddingBottom: rem(6),
 						marginBottom: '-8px',
-						borderBottom: `2px solid ${color.grey['50']}`
+						borderBottom: `2px solid ${color.white}`
 					}
 				},
 
