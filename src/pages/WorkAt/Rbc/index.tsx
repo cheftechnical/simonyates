@@ -9,8 +9,8 @@ import WorkAtProject from '../../../components/workAt/WorkAtProject';
 import Sections from '../../../components/Sections';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
-import Ul from '../../Work/Ul/intex';
-import Li from '../../Work/Li/intex';
+import Ul from '../../../styling/ListsUnordered/Ul/intex';
+import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
 
 export default function Rbc() {

@@ -3,8 +3,8 @@ import DefaultLayout from '../../layouts/Default';
 import Experience from './Experience';
 import Typography from '../../styling/Typography';
 import {Container} from '@material-ui/core';
-import Li from './Li/intex';
-import Ul from './Ul/intex';
+import Li from '../../styling/ListsUnordered/Li/intex';
+import Ul from '../../styling/ListsUnordered/Ul/intex';
 
 export default function Work() {
     return (
