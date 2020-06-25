@@ -2,16 +2,32 @@ import * as React from 'react';
 import Logo from './Logo';
 import {Box, Container} from '@material-ui/core';
 import Item from './Item';
+import {makeStyles} from '@material-ui/core/styles';
+import {color} from '../../../styling/Color';
 
 interface Props {
 	selected?: string;
 }
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		paddingTop: theme.spacing(56/8),
+		paddingBottom: theme.spacing(24/8),
+		position: 'fixed',
+		backgroundColor: color.white,
+		// border: '1px solid magenta',
+		width: '100%',
+		top: 0,
+		zIndex: 999
+	}
+}));
+
 export default function NavTop(props: Props) {
+	const classes = useStyles();
 	const {selected} = props;
 
 	return (
-		<div>
+		<div className={classes.root}>
 			<Container>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}

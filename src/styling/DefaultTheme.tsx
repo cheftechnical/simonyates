@@ -2,7 +2,11 @@ import * as React from 'react';
 import {createMuiTheme, CssBaseline} from '@material-ui/core';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import {CSSProperties} from '@material-ui/core/styles/withStyles';
+import {color} from './Color';
+import rem from './rem';
 
+// @ts-ignore
+import TiemposTextBoldWoff from './fonts/tiempos-text/tiempos-text-test-bold.woff';
 // @ts-ignore
 import TiemposTextRegularWoff from './fonts/tiempos-text/tiempos-text-test-regular.woff';
 // @ts-ignore
@@ -13,13 +17,11 @@ import TiemposTextSemiboldWoff from './fonts/tiempos-text/tiempos-text-test-semi
 import ApercuLightWoff from './fonts/apercu/apercu_light-webfont.woff';
 // @ts-ignore
 import ApercuRegularWoff from './fonts/apercu/apercu_regular-webfont.woff';
-import {color} from './Color';
-import rem from './rem';
 
 const apercuLight: CSSProperties = {
 	fontFamily: 'Apercu Light',
 	fontStyle: 'normal',
-	fontDisplay: 'swap',
+	fontDisplay: 'optional',
 	src: `
 		local('Apercu Light'),
 		url(${ApercuLightWoff}) format('woff')
@@ -29,17 +31,29 @@ const apercuLight: CSSProperties = {
 const apercuRegular: CSSProperties = {
 	fontFamily: 'Apercu Regular',
 	fontStyle: 'normal',
-	fontDisplay: 'swap',
+	fontDisplay: 'optional',
 	src: `
 		local('Apercu Regular'),
 		url(${ApercuRegularWoff}) format('woff')
 	`
 };
 
+const tiemposTextBold: CSSProperties = {
+	fontFamily: '"Tiempos Text Bold"',
+	fontStyle: 'normal',
+	fontWeight: 'bold',
+	fontDisplay: 'optional',
+	src: `
+		local('Tiempos Text Bold'),
+		local('Tiempos Text Test Bold'),
+		url(${TiemposTextBoldWoff} format('woff')
+	`,
+};
+
 const tiemposTextRegular: CSSProperties = {
 	fontFamily: 'Tiempos Text',
 	fontStyle: 'normal',
-	fontDisplay: 'swap', // @todo do i need this?
+	fontDisplay: 'optional',
 	src: `
 		local('Tiempos Text'),
 		local('Tiempos Text Test'),
@@ -50,7 +64,7 @@ const tiemposTextRegular: CSSProperties = {
 const tiemposTextMedium: CSSProperties = {
 	fontFamily: 'Tiempos Text Medium',
 	fontStyle: 'normal',
-	fontDisplay: 'swap', // @todo do i need this?
+	fontDisplay: 'optional',
 	src: `
 		local('Tiempos Text Medium'),
 		local('Tiempos Text Test Medium'),
@@ -61,7 +75,7 @@ const tiemposTextMedium: CSSProperties = {
 const tiemposTextSemibold: CSSProperties = {
 	fontFamily: 'Tiempos Text Semibold',
 	fontStyle: 'normal',
-	fontDisplay: 'swap', // @todo do i need this?
+	fontDisplay: 'optional',
 	src: `
 		local('Tiempos Text Semibold'),
 		local('Tiempos Text Test Semibold'),
@@ -158,8 +172,9 @@ const theme = createMuiTheme({
 				'@font-face': [
 					apercuLight,
 					apercuRegular,
-					tiemposTextRegular,
+					tiemposTextBold,
 					tiemposTextMedium,
+					tiemposTextRegular,
 					tiemposTextSemibold,
 				]
 			}

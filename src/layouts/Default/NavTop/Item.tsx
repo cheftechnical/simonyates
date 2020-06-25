@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Button, Link} from '@material-ui/core';
-import {Link as ReactRouterDom} from 'react-router-dom';
+// import {Link as ReactRouterDom} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
@@ -10,8 +10,12 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
-	link: {
-
+	active: {
+		// fontFamily: '"Tiempos Text Bold"',
+		fontWeight: 'bold',
+	},
+	button: {
+		marginLeft: theme.spacing((40-16)/8)
 	}
 }));
 
@@ -21,15 +25,11 @@ export default function Item(props: Props) {
 
 	if (selected) {
 		return (
-			<div><b>{title}</b></div>
+			<Button className={`${classes.button} ${classes.active}`} href={href}>{title}</Button>
 		);
 	}
 
 	return (
-		<Button href={href}>{title}</Button>
+		<Button className={classes.button} href={href}>{title}</Button>
 	);
-
-	// return (
-	// 	<Link className={classes.link} component={ReactRouterDom} to={href}>{title}</Link>
-	// );
 };

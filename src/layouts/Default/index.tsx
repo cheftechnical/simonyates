@@ -2,6 +2,7 @@ import React from 'react';
 import NavTop from './NavTop';
 import Footer from './Footer';
 import {Helmet} from 'react-helmet';
+import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
     children: any;
@@ -9,7 +10,14 @@ interface Props {
     top?: string;
 }
 
+const useStyles = makeStyles((theme) => ({
+    main: {
+        marginTop: theme.spacing((96 + 40)/8)
+    }
+}));
+
 export default function DefaultLayout(props: Props) {
+    const classes = useStyles();
     const {children, title, top} = props;
 
     return (
@@ -22,7 +30,7 @@ export default function DefaultLayout(props: Props) {
                 <NavTop selected={top}/>
             </header>
 
-            <main>
+            <main className={classes.main}>
                 {children}
             </main>
 
