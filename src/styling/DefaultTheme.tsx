@@ -137,6 +137,8 @@ const theme = createMuiTheme({
 		},
 		MuiChip: {
 			root: {
+				marginRight: rem(8),
+
 				fontFamily: '"Apercu Regular"',
 				fontStyle: 'normal',
 				fontWeight: 'normal',
