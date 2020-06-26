@@ -8,8 +8,9 @@ import Typography from '../../styling/Typography';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		paddingTop: theme.spacing(4),
-		paddingBottom: theme.spacing(3),
+		marginTop: theme.spacing(88/8),
+		paddingTop: theme.spacing(32/8),
+		paddingBottom: theme.spacing(24/8),
 		backgroundColor: color.grey['900']
 	},
 

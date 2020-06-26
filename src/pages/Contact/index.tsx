@@ -1,9 +1,15 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import {Grid} from '@material-ui/core';
+import {Container, Grid} from '@material-ui/core';
 import ContactForm from './ContactForm';
 import SendingMessageDialog from './SendingMessageDialog';
 import {Message} from './Message';
+import Typography from '../../styling/Typography';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+
+}));
 
 export default function Contact() {
 
@@ -22,15 +28,22 @@ export default function Contact() {
 
 	return (
 		<DefaultLayout title="Contact" top="contact">
-			<Grid container>
-				<Grid item xs={6}>
-					<h1>Pleasure to meet you.</h1>
-					<p>I&rsquo;m always open to make new connections and chat about software development.</p>
-					<ContactForm onSubmit={handleSubmit}/>
+			<Container>
+				<Grid container>
+					<Grid item xs={6}>
+						<Typography group="primary" variant="h1" weight="regular">
+							Pleasure to meet you.
+						</Typography>
+						<Typography group="primary" variant="body" weight="regular">
+							I&rsquo;m always open to make new connections and chat about software development.
+						</Typography>
 
-					{isSending && <span>Sending&hellip;</span>}
+						<ContactForm onSubmit={handleSubmit}/>
+
+						{isSending && <span>Sending&hellip;</span>}
+					</Grid>
 				</Grid>
-			</Grid>
+			</Container>
 
 			<SendingMessageDialog
 				isOpen={isSending}
