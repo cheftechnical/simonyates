@@ -4,6 +4,7 @@ import rem from '../../styling/rem';
 
 interface Props {
 	alt: string;
+	className?: any;
 	src: string;
 }
 
@@ -17,13 +18,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Image(props: Props) {
 	const classes = useStyles();
-	const {alt, src} = props;
+	const {alt, className, src} = props;
 
 	return (
 		<img
 			alt={alt}
-			className={classes.root}
+			className={`${classes.root} ${className}`}
 			src={process.env.PUBLIC_URL + src}
 		/>
-	)
+	);
 }
