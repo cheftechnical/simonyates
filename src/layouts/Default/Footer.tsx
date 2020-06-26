@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	colRight: {
+		paddingTop: theme.spacing(12/8),
 		textAlign: 'right'
 	},
 	image: {
