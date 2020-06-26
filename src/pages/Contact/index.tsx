@@ -6,12 +6,20 @@ import SendingMessageDialog from './SendingMessageDialog';
 import {Message} from './Message';
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
+import {color} from '../../styling/Color';
 
 const useStyles = makeStyles((theme) => ({
-
+	heading: {
+		marginBottom: theme.spacing(8/8)
+	},
+	body: {
+		marginBottom: theme.spacing(40/8),
+		color: color.grey['700']
+	}
 }));
 
 export default function Contact() {
+	const classes = useStyles();
 
 	const [isSending, setIsSending] = React.useState(false);
 	const [message, setMessage] = React.useState<Message>();
@@ -31,10 +39,10 @@ export default function Contact() {
 			<Container>
 				<Grid container>
 					<Grid item xs={6}>
-						<Typography group="primary" variant="h1" weight="regular">
+						<Typography className={classes.heading} group="primary" variant="h1" weight="regular">
 							Pleasure to meet you.
 						</Typography>
-						<Typography group="primary" variant="body" weight="regular">
+						<Typography className={classes.body} group="primary" variant="body" weight="regular">
 							I&rsquo;m always open to make new connections and chat about software development.
 						</Typography>
 

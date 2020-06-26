@@ -3,12 +3,20 @@ import {Button, TextField} from '@material-ui/core';
 import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@material-ui/icons/Send';
 import {Message} from './Message';
+import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
 	onSubmit: (data: Message) => void;
 }
 
+const useStyles = makeStyles((theme) => ({
+	button: {
+		marginTop: theme.spacing(16/8)
+	}
+}));
+
 export default function ContactForm(props: Props) {
+	const classes = useStyles();
 
 	const {onSubmit} = props;
 	const {control, handleSubmit, errors} = useForm<Message>();
@@ -30,7 +38,6 @@ export default function ContactForm(props: Props) {
 					as={<TextField
 						fullWidth
 						required
-						helperText="hola"
 						placeholder="Email"
 					/>}
 					name="emailAddress"
@@ -62,6 +69,7 @@ export default function ContactForm(props: Props) {
 				/>
 
 				<Button
+					className={classes.button}
 					endIcon={<SendIcon/>}
 					type="submit"
 					variant="contained"
