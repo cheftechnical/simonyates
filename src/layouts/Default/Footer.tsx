@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	image: {
 		width: rem(128),
-		fill: 'magenta'
 	},
 	link: {
 		...theme.typography.h1
