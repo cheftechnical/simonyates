@@ -186,10 +186,12 @@ const theme = createMuiTheme({
 		},
 		MuiInput: {
 			underline: {
+				// Indent the value of the text field
 				paddingTop: rem(8),
 				paddingBottom: rem(8),
 				paddingLeft: rem(16),
 				paddingRight: rem(16),
+
 
 				// border of active state
 				'&:after': {
@@ -217,6 +219,22 @@ const theme = createMuiTheme({
 						borderBottomColor: color.grey['200']
 					}
 				}
+			}
+		},
+		MuiFormHelperText: {
+			root: {
+				paddingLeft: rem(16),
+				paddingRight: rem(16),
+				color: color.grey['900'],
+
+				'&$disabled': {
+					color: color.grey['200'],
+				}
+			},
+		},
+		MuiTextField: {
+			root: {
+				marginBottom: rem(24), // this creates a vertical space between components
 			}
 		}
 	},
