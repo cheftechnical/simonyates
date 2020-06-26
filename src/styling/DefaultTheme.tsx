@@ -183,6 +183,41 @@ const theme = createMuiTheme({
 			root: {
 
 			}
+		},
+		MuiInput: {
+			underline: {
+				paddingTop: rem(8),
+				paddingBottom: rem(8),
+				paddingLeft: rem(16),
+				paddingRight: rem(16),
+
+				// border of active state
+				'&:after': {
+					borderBottomColor: color.lime['500']
+				},
+
+				// border of hover state
+				'&:hover:not(.Mui-disabled):before': {
+					borderBottomColor: color.grey['900']
+				},
+
+				// border of inactive state
+				'&:before': {
+					borderBottomWidth: '2px',
+					borderBottomStyle: 'solid',
+					borderBottomColor: color.grey['200']
+				},
+
+				// disabled state
+				'&$disabled': {
+					color: color.grey['200'],
+
+					'&:before': {
+						borderBottomStyle: 'solid',
+						borderBottomColor: color.grey['200']
+					}
+				}
+			}
 		}
 	},
 	palette: {
