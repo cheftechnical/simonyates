@@ -12,7 +12,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        marginTop: theme.spacing((96 + 40)/8)
+        // paddingTop: theme.spacing((96 + 40)/8)
     }
 }));
 

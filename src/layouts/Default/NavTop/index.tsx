@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		paddingTop: theme.spacing(56/8),
 		paddingBottom: theme.spacing(24/8),
-		position: 'fixed',
-		backgroundColor: color.white,
+		// position: 'fixed',
+		// backgroundColor: color.white,
 		// border: '1px solid magenta',
 		width: '100%',
 		top: 0,
