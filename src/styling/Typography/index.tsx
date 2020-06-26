@@ -52,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_h3_regular: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
