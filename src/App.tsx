@@ -1,6 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Contact from './pages/Contact';
 import Featured from './pages/Featured';
@@ -16,29 +14,6 @@ import GenworthCanada from './pages/WorkAt/GenworthCanada';
 import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
 import Infomart from './pages/WorkAt/Infomart';
 import DefaultTheme from './styling/DefaultTheme';
-
-// function App() {
-//     return (
-//         <div className="App">
-//             Hello World
-//
-//             <header className="App-header">
-//                 <img src={logo} className="App-logo" alt="logo"/>
-//                 <p>
-//                     Edit <code>src/App.tsx</code> and save to reload.
-//                 </p>
-//                 <a
-//                     className="App-link"
-//                     href="https://reactjs.org"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                 >
-//                     Learn React
-//                 </a>
-//             </header>
-//         </div>
-//     );
-// }
 
 function App() {
     return (
