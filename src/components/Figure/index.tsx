@@ -2,6 +2,7 @@ import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import rem from '../../styling/rem';
+import Image from '../Image';
 
 interface Props {
 	alt: string;
@@ -30,10 +31,6 @@ export default function Figure(props: Props) {
 	const {alt, caption, src} = props;
 
 	return (
-		<figure><img
-			alt={alt}
-			src={process.env.PUBLIC_URL + src}
-			style={{width: '100%'}}
-		/>{caption && <figcaption className={classes.caption}>{caption}</figcaption>}</figure>
+		<figure><Image alt={alt} src={src}/>{caption && <figcaption className={classes.caption}>{caption}</figcaption>}</figure>
 	);
 };
