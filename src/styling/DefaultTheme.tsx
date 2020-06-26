@@ -86,6 +86,12 @@ const tiemposTextSemibold: CSSProperties = {
 const theme = createMuiTheme({
 	overrides: {
 		MuiButton: {
+			root: {
+				borderRadius: 0,
+			},
+			endIcon: {
+				marginLeft: rem(48)
+			},
 			contained: {
 				padding: rem(16),
 
