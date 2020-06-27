@@ -1,16 +1,38 @@
 import * as React from 'react';
-// import {Link} from "@material-ui/core";
+import {makeStyles} from '@material-ui/core/styles';
+import {color} from '../../../styling/Color';
+import rem from '../../../styling/rem';
 
+// NOTE: scrollspy injects a className into this object
 interface Props {
     id?: string;
     className?: any;
     name: string;
 }
 
+const useStyles = makeStyles((theme) => ({
+    li: {
+        marginBottom: theme.spacing(24/8),
+        paddingLeft: theme.spacing(8/8),
+
+        color: color.grey['500']
+    },
+    a: {
+        textDecoration: 'none',
+        lineHeight: rem(16),
+        letterSpacing: rem(0.25),
+        color: color.grey['500'],
+        borderLeft: 'none !important',
+    },
+}));
+
 export default function NavRightItem(props: Props) {
+    const classes = useStyles();
     const {className, id, name} = props;
 
     return (
-        <li className={className}><a href={`#${id}`}>{name}</a></li>
+        <li className={`${classes.li} ${className}`}>
+            <a className={`${classes.a} ${className}`} href={`#${id}`}>{name}</a>
+        </li>
     );
 };
