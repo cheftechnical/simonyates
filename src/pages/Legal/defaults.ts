@@ -12,13 +12,18 @@ export const h2: TypographyProps = {
 	weight: 'regular'
 }
 
-export const h4: TypographyProps = {
+export const h3: TypographyProps = {
 	group: 'primary',
-	variant: 'h4',
+	variant: 'h3',
 	weight: 'regular'
 };
 
-// @todo add paragraph spacing!
+export const h4: TypographyProps = {
+	group: 'primary',
+	variant: 'h4',
+	weight: 'medium'
+};
+
 export const paragraph: TypographyProps = {
 	group: 'primary',
 	variant: 'body',

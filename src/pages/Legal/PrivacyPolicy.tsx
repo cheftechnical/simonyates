@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '../../styling/Typography';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
 import Li from '../../styling/ListsUnordered/Li/intex';
-import {h2, h4, paragraph, subtitle} from './defaults';
+import {h2, h3, h4, paragraph, subtitle} from './defaults';
 
 const legalName = 'Sybaris Analytics Corporation';
 const tradeName = 'Sybaris';
@@ -16,29 +16,29 @@ export default function PrivacyPolicy() {
 				Privacy Policy
 			</Typography>
 
-			<Typography {...subtitle}>
+			<Typography next {...subtitle}>
 				This Privacy Policy applies to all of the products, services and websites of {legalName}, or its
 				subsidiaries or affiliated companies.
 			</Typography>
 
-			<Typography {...subtitle}>
+			<Typography next {...subtitle}>
 				If you have any questions about this Privacy Policy, please feel free to contact us trough our website,
 				or write to us at:
 			</Typography>
 
 			<address>
-				<Typography {...paragraph}>
+				<Typography next {...paragraph}>
 					Privacy Matters<br/>
 					c/o {legalName}<br/>
 					{address}
 				</Typography>
 			</address>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Information we collect, and how we use it:
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next{...paragraph}>
 				We may collect the following types of information:
 			</Typography>
 
@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
 				</Li>
 			</Ul>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				In addition to the above, we may use the information we collect to:
 			</Typography>
 
@@ -117,16 +117,16 @@ export default function PrivacyPolicy() {
 				will ask for your consent prior to such use.
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				{tradeName} process personal information on our services in the United States of America and other
 				countries. In some cases, we process personal information out of your own country.
 			</Typography>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Information Sharing
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				{legalName} only shares personal information with other companies or individuals outside of {legalName}
 				in the following limited circumstances:
 			</Typography>
@@ -161,29 +161,29 @@ export default function PrivacyPolicy() {
 				</Li>
 			</Ul>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Information Security
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				We take appropriate security measures to protect against unauthorized access to, or unauthorized
 				alteration, disclosure or destruction of data. These include internal reviews of our data collection,
 				storage and processing practices and security measures, including appropriate encryption and physical
 				security measures to guard against unauthorized access to systems where we store personal data.
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				We restrict access to personal information to {legalName} employees, contractors and agents who need to
 				know that information in order to process it on our behalf. These individuals are bound by
 				confidentiality obligations and may be subject to discipline, including termination and criminal
 				prosecution, if they fail to meet these obligations.
 			</Typography>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Accessing and updating personal information
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				When you use {tradeName} services, we make good faith efforts to provide you with access to your
 				personal information and either correct this data if it is inaccurate or delete such data at your
 				request if it is not otherwise required to be retained by law or for legitimate business purposes. We
@@ -199,11 +199,11 @@ export default function PrivacyPolicy() {
 				more information.
 			</Typography>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Enforcement
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				{tradeName} regularly reviews its compliance with this Privacy Policy. When we receive formal written
 				complaints, it is {tradeName}&rsquo;s policy to contact the complaining user regarding his or her
 				concerns. We will cooperate with the appropriate regulatory authorities, including local data protection
@@ -211,11 +211,11 @@ export default function PrivacyPolicy() {
 				between {legalName} and an individual.
 			</Typography>
 
-			<Typography {...h4}>
+			<Typography next {...h3}>
 				Changes to this Privacy Policy
 			</Typography>
 
-			<Typography {...paragraph}>
+			<Typography next {...paragraph}>
 				Please note that this Privacy Policy may change from time to time. We will not reduce your rights under
 				this Privacy Policy without your explicit consent. We will post any Privacy Policy changes on this page
 				and, if the changes are significant, we will provide a more prominent notice (including, for certain
