@@ -9,6 +9,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	intro: {
+		marginBottom: theme.spacing(40/8),
 		color: color.grey['700']
 	}
 }));

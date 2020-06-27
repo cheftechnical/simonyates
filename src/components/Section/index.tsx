@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../styling/Typography';
 
 interface Props {
     children?: any | any[];
@@ -10,7 +9,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(80/8)
+        marginTop: theme.spacing(40/8)
     },
     jumpTarget: {
         content: '',

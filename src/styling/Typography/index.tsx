@@ -66,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_h3_medium: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text Medium"',
 		fontStyle: 'normal',
 		fontWeight: 500,
@@ -75,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_h3_semibold: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text Semibold"',
 		fontStyle: 'normal',
 		fontWeight: 600,
@@ -84,6 +90,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_h4_medium: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text Medium"',
 		fontStyle: 'normal',
 		fontWeight: 500,
@@ -93,6 +102,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_h4_semibold: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text Semibold"',
 		fontStyle: 'normal',
 		fontWeight: 600,
@@ -114,6 +126,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_body_semibold: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text Semibold"',
 		fontStyle: 'normal',
 		fontWeight: 600,
@@ -123,6 +138,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_subtitle_regular: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
@@ -132,6 +150,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	primary_caption_regular: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Tiempos Text"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
@@ -144,6 +165,9 @@ const useStyles = makeStyles((theme) => ({
 
 	// ---[ secondary ]---
 	secondary_h3_light: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Apercu Light", "Comic Sans Ms"',
 		fontStyle: 'normal',
 		fontWeight: 300,
@@ -152,6 +176,9 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['900']
 	},
 	secondary_body_regular: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
@@ -159,11 +186,11 @@ const useStyles = makeStyles((theme) => ({
 		lineHeight: rem(24),
 		letterSpacing: rem(0.5),
 		color: color.grey['900'],
-
-
-		margin: 0 // added because some margin is getting from somewhere (probably material)
 	},
 	secondary_subtitle_regular: {
+		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',
@@ -174,6 +201,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	secondary_caption_regular: {
 		margin: 0,
+		padding: 0,
+
 		fontFamily: '"Apercu Regular", "Comic Sans Ms"',
 		fontStyle: 'normal',
 		fontWeight: 'normal',

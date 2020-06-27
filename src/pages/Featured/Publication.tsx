@@ -17,11 +17,20 @@ const useStyles = makeStyles((theme) => ({
 		marginBottom: theme.spacing(40/8),
 		marginLeft: theme.spacing(40/8),
 	},
+	chips: {
+		marginBottom: theme.spacing(24/8)
+	},
+	name: {
+		marginBottom: theme.spacing(16/8),
+	},
 	when: {
-		color: 'magenta',
+		color: color.grey['600'],
 	},
 	children: {
 		color: color.grey['700']
+	},
+	publisherAndWhen: {
+		marginBottom: theme.spacing(24/8)
 	}
 }));
 
@@ -31,9 +40,9 @@ export default function Publication(props: Props) {
 
 	return (
 		<div className={classes.root}>
-			<Typography group="primary" variant="h4" weight="medium">{name}</Typography>
-			<Typography group="primary" variant="body" weight="regular">{publisher}, <span className={classes.when}>{when}</span></Typography>
-			<div>
+			<Typography className={classes.name} group="primary" variant="h4" weight="medium">{name}</Typography>
+			<Typography className={classes.publisherAndWhen} group="primary" variant="body" weight="regular">{publisher}, <span className={classes.when}>{when}</span></Typography>
+			<div className={classes.chips}>
 				{tags.map((item, index) => (
 					<Chip key={index} label={item}/>
 				))}
