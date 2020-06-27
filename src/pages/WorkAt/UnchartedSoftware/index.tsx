@@ -1,10 +1,10 @@
 import * as React from 'react';
 import DefaultLayout from "../../../layouts/Default";
 import {Container, Grid} from '@material-ui/core';
-import WorkAtHeader from '../../../components/workAt/WorkAtHeader';
-import WorkAtDescription from '../../../components/workAt/WorkAtDescription';
+import WorkAtHeader from '../components/WorkAtHeader';
+import WorkAtDescription from '../components/WorkAtDescription';
 import Section from '../../../components/Section';
-import WorkAtProject from '../../../components/workAt/WorkAtProject';
+import WorkAtProject from '../components/WorkAtProject';
 
 export default function UnchartedSoftware() {
 	return (

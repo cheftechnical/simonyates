@@ -12,8 +12,8 @@ export enum Groups {
 }
 
 
-interface Props {
-	children: any | any[] | undefined;
+export interface Props {
+	children?: any | any[] | undefined;
 	className?: string;
 	group: 'primary' | 'secondary' | undefined;
 	variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'subtitle' | 'caption' | undefined;

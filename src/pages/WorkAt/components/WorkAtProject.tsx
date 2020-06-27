@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../styling/Typography';
-import {color} from '../../styling/Color';
+import Typography from '../../../styling/Typography';
+import {color} from '../../../styling/Color';
 
 interface Props {
     children?: any | any[];
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(56/8)
     },
     nameAndWhen: {
+        marginBottom: theme.spacing(24/8),
         color: color.grey['600']
     }
 }));

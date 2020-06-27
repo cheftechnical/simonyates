@@ -2,7 +2,7 @@ import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
-	children: string;
+	children?: any;
 }
 
 const useStyles = makeStyles((theme) => ({

@@ -9,13 +9,13 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        marginBottom: theme.spacing(24/8),
         padding: theme.spacing(8/8),
         backgroundColor: color.limeWithOpacity['500']['10%'],
         textAlign: 'center'
     },
     typography: {
         color: color.grey['700'],
-
     }
 }));
 

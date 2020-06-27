@@ -3,9 +3,9 @@ import {Container, Grid} from '@material-ui/core';
 import Callout from '../../../components/Callout';
 import DefaultLayout from '../../../layouts/Default';
 import Section from '../../../components/Section';
-import WorkAtDescription from '../../../components/workAt/WorkAtDescription';
-import WorkAtHeader from '../../../components/workAt/WorkAtHeader';
-import WorkAtProject from '../../../components/workAt/WorkAtProject';
+import WorkAtDescription from '../components/WorkAtDescription';
+import WorkAtHeader from '../components/WorkAtHeader';
+import WorkAtProject from '../components/WorkAtProject';
 import Sections from '../../../components/Sections';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
@@ -13,6 +13,11 @@ import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+
+}));
 
 export default function Rbc() {
 	const [sections, setSections] = React.useState();
