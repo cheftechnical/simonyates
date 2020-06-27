@@ -28,7 +28,6 @@ export default function Section(props: Props) {
         <div>
             <div className={classes.jumpTarget} id={id}/>
             <section className={classes.root}>
-                <Typography group="primary" variant="h3" weight="regular">{name}</Typography>
                 {children}
             </section>
         </div>

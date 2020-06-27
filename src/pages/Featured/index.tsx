@@ -13,6 +13,8 @@ import Ul from '../../styling/ListsUnordered/Ul/intex';
 import Li from '../../styling/ListsUnordered/Li/intex';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import Figure from '../../components/Figure';
+import SectionTitle from './SectionTitle';
+import SectionDescription from './SectionDescription';
 
 const useStyles = makeStyles((theme) => ({
 	download: {
@@ -38,9 +40,13 @@ export default function Featured() {
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
 							<Section id="publications" name="Publications">
-								<Typography className={classes.intro} group="primary" variant="body" weight="regular">
+								<SectionTitle>
+									Publications
+								</SectionTitle>
+
+								<SectionDescription>
 									I&rsquo;ve been incredibly lucky to work along some of the brightest minds of North America
-								</Typography>
+								</SectionDescription>
 
 								<Publication
 									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
@@ -74,9 +80,13 @@ export default function Featured() {
 							</Section>
 
 							<Section id="events" name="Events">
-								<Typography className={classes.intro} group="primary" variant="body" weight="regular">
+								<SectionTitle>
+									Events
+								</SectionTitle>
+
+								<SectionDescription>
 									I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.
-								</Typography>
+								</SectionDescription>
 
 								<Publication
 									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"

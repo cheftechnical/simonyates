@@ -41,7 +41,7 @@ export default function NavRight(props: Props) {
 
 	return (
 		<div className={classes.root}>
-			<Scrollspy currentClassName={classes.isCurrent} items={items} style={{listStyleType: 'none'}}>
+			<Scrollspy currentClassName={classes.isCurrent} items={items} style={{listStyleType: 'none'}} offset={70}>
 				{sections.map((item, index) => (
 					<NavRightItem id={item.id} key={index} name={item.name}/>
 				))}

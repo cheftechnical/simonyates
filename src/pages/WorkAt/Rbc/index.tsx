@@ -12,6 +12,7 @@ import {SectionItem} from '../../../components/Section/SectionItem';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
+import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 
 export default function Rbc() {
 	const [sections, setSections] = React.useState();
@@ -26,18 +27,25 @@ export default function Rbc() {
 				<Grid container>
 					<Grid item xs={1}>[logo]</Grid>
 					<Grid item xs={6}>
-						<WorkAtHeader
-							employer="RBC"
-							role="Full-Stack Developer, API Site Reliability Engineering"
-							when="July 2018 to Present"
-							where="Toronto, Canada"
-						/>
-						<WorkAtDescription>
-							The Royal Bank of Canada (RBC) is the largest bank in Canada by asset value, with over 80,000
-							employees worldwide.
-						</WorkAtDescription>
 						<Sections onChange={handleChange}>
+							<Section id="intro" name="Intro">
+								<WorkAtHeader
+									employer="RBC"
+									role="Full-Stack Developer, API Site Reliability Engineering"
+									when="July 2018 to Present"
+									where="Toronto, Canada"
+								/>
+								<WorkAtDescription>
+									The Royal Bank of Canada (RBC) is the largest bank in Canada by asset value, with over 80,000
+									employees worldwide.
+								</WorkAtDescription>
+							</Section>
+
 							<Section id="section-1" name="Application Development & Custom Tooling">
+								<WorkAtSectionTitle>
+									Application Development & Custom Tooling
+								</WorkAtSectionTitle>
+
 								<WorkAtProject name="SRE Global Dashboard" when="2019–Present">
 									<Callout>
 										Node.js + Express &bull;
@@ -69,26 +77,55 @@ export default function Rbc() {
 									</Ul>
 								</WorkAtProject>
 							</Section>
+
 							<Section id="section-2" name="Machine Learning / Artificial Intelligence">
+								<WorkAtSectionTitle>
+									Machine Learning / Artificial Intelligence
+								</WorkAtSectionTitle>
+
 								<Ul>
 									<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
 									<Li>Used NLP via TF–IDF to automatically label reports about previous incidents to help identify areas for improvement</Li>
 								</Ul>
 							</Section>
+
 							<Section id="section-3" name="Budgeting">
+								<WorkAtSectionTitle>
+									Budgeting
+								</WorkAtSectionTitle>
+
 								<WorkAtProject name="Cost Chargeback Model" when="2019–Present">
 									<Callout>
 										Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
 									</Callout>
+
 									<Ul>
 										<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
 									</Ul>
 								</WorkAtProject>
 							</Section>
-							<Section id="section-4" name="Events"/>
-							<Section id="section-5" name="Publications"/>
-							<Section id="section-6" name="Active Research"/>
-							<Section id="section-7" name="Other Activities"/>
+
+							<Section id="section-4" name="Events">
+								<WorkAtSectionTitle>
+									Events
+								</WorkAtSectionTitle>
+							</Section>
+							<Section id="section-5" name="Publications">
+								<WorkAtSectionTitle>
+									Publications
+								</WorkAtSectionTitle>
+							</Section>
+
+							<Section id="section-6" name="Active Research">
+								<WorkAtSectionTitle>
+									Active Research
+								</WorkAtSectionTitle>
+							</Section>
+							<Section id="section-7" name="Other Activities">
+								<WorkAtSectionTitle>
+									Other Activities
+								</WorkAtSectionTitle>
+							</Section>
 						</Sections>
 					</Grid>
 					<Grid item xs={2}/>
