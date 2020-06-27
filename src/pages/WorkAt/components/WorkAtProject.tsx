@@ -6,25 +6,33 @@ import {color} from '../../../styling/Color';
 interface Props {
     children?: any | any[];
     name: string;
+    next?: boolean;
     when: string;
 }
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginBottom: theme.spacing(56/8)
+
     },
     nameAndWhen: {
         marginBottom: theme.spacing(24/8),
         color: color.grey['600']
+    },
+    next: {
+        marginTop: theme.spacing(56/8)
     }
 }));
 
 export default function WorkAtProject(props: Props) {
     const classes = useStyles();
-    const {children, name, when} = props;
+    const {children, name, next, when} = props;
+
+    const className = (next)
+        ? `${classes.root} ${classes.next}`
+        : `${classes.root}`
 
     return (
-        <div className={classes.root}>
+        <div className={className}>
             <Typography className={classes.nameAndWhen} group="primary" variant="h4" weight="semibold">{name}, {when}</Typography>
             <div>{children}</div>
         </div>

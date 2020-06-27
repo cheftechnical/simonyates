@@ -9,6 +9,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        marginTop: theme.spacing(24/8),
         marginBottom: theme.spacing(24/8),
         padding: theme.spacing(8/8),
         backgroundColor: color.limeWithOpacity['500']['10%'],

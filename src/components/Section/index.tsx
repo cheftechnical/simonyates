@@ -8,14 +8,11 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        marginTop: theme.spacing(40/8)
-    },
     jumpTarget: {
         content: '',
         display: 'block',
-        height: '70px', /* fixed header height*/
-        margin: '-70px 0 0', /* negative fixed header height */
+        height: '106px', /* fixed header height*/
+        margin: '-106px 0 0', /* negative fixed header height */
     }
 }));
 
@@ -26,7 +23,7 @@ export default function Section(props: Props) {
     return (
         <div>
             <div className={classes.jumpTarget} id={id}/>
-            <section className={classes.root}>
+            <section>
                 {children}
             </section>
         </div>

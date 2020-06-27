@@ -14,6 +14,8 @@ import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import {makeStyles} from '@material-ui/core/styles';
+import Logo from '../../../components/Logo';
+import WorkAtSubSections from '../components/WorkAtSubSections';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -29,8 +31,10 @@ export default function Rbc() {
 	return (
 		<DefaultLayout title="Work at RBC" top="work">
 			<Container>
-				<Grid container>
-					<Grid item xs={1}>[logo]</Grid>
+				<Grid container spacing={4}>
+					<Grid item xs={1}>
+						<Logo brand="rbc" variant="default"/>
+					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
 							<Section id="intro" name="Intro">
@@ -51,36 +55,38 @@ export default function Rbc() {
 									Application Development & Custom Tooling
 								</WorkAtSectionTitle>
 
-								<WorkAtProject name="SRE Global Dashboard" when="2019–Present">
-									<Callout>
-										Node.js + Express &bull;
-										React + Typescript &bull;
-										Elasticsearch &bull;
-										PostgreSQL &bull;
-									</Callout>
+								<WorkAtSubSections>
+									<WorkAtProject name="SRE Global Dashboard" when="2019–Present">
+										<Callout>
+											Node.js + Express &bull;
+											React + Typescript &bull;
+											Elasticsearch &bull;
+											PostgreSQL &bull;
+										</Callout>
 
-									<Ul>
-										<Li>Interactive dashboards for monitoring infrastructure</Li>
-										<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-										<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
-									</Ul>
-								</WorkAtProject>
+										<Ul>
+											<Li>Interactive dashboards for monitoring infrastructure</Li>
+											<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
+											<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+										</Ul>
+									</WorkAtProject>
 
-								<WorkAtProject name="Automatic Validation and Self Healing of Seven Years worth of Financial Data" when="2019–Present">
-									<Typography group="primary" variant="body" weight="regular">
-										Before this software project began, I fought for certain architectural changes to ensure the Elasticsearch could function at scale. The project was already well underway before I got involved, so it was an uphill battle, but I prevailed. The changes I proposed increased performance and reliability and are deeply baked into the current architecture as a result.
-									</Typography>
+									<WorkAtProject next name="Automatic Validation and Self Healing of Seven Years worth of Financial Data" when="2019–Present">
+										<Typography group="primary" variant="body" weight="regular">
+											Before this software project began, I fought for certain architectural changes to ensure the Elasticsearch could function at scale. The project was already well underway before I got involved, so it was an uphill battle, but I prevailed. The changes I proposed increased performance and reliability and are deeply baked into the current architecture as a result.
+										</Typography>
 
-									<Callout>
-										Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
-									</Callout>
+										<Callout>
+											Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
+										</Callout>
 
-									<Ul>
-										<Li>Interactive dashboards for monitoring infrastructure</Li>
-										<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-										<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
-									</Ul>
-								</WorkAtProject>
+										<Ul>
+											<Li>Interactive dashboards for monitoring infrastructure</Li>
+											<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
+											<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+										</Ul>
+									</WorkAtProject>
+								</WorkAtSubSections>
 							</Section>
 
 							<Section id="section-2" name="Machine Learning / Artificial Intelligence">
@@ -99,15 +105,17 @@ export default function Rbc() {
 									Budgeting
 								</WorkAtSectionTitle>
 
-								<WorkAtProject name="Cost Chargeback Model" when="2019–Present">
-									<Callout>
-										Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
-									</Callout>
+								<WorkAtSubSections>
+									<WorkAtProject name="Cost Chargeback Model" when="2019–Present">
+										<Callout>
+											Node.js + Express • React + Typescript • Elasticsearch • PostgreSQL • [some charting library]
+										</Callout>
 
-									<Ul>
-										<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
-									</Ul>
-								</WorkAtProject>
+										<Ul>
+											<Li>Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats the TPS for [thing]"</Li>
+										</Ul>
+									</WorkAtProject>
+								</WorkAtSubSections>
 							</Section>
 
 							<Section id="section-4" name="Events">
