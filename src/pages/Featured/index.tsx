@@ -97,6 +97,7 @@ export default function Featured() {
 							</Section>
 						</Sections>
 					</Grid>
+					<Grid item xs={3}/>
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>

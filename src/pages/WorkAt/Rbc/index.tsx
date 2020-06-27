@@ -91,7 +91,8 @@ export default function Rbc() {
 							<Section id="section-7" name="Other Activities"/>
 						</Sections>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid item xs={2}/>
+					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</Grid>

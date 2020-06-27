@@ -22,12 +22,11 @@ const useStyles = makeStyles((theme) => ({
 		listStyleType: 'none'
 	},
 
+	// The Scrollspy component attaches this class to the currently selected item
 	isCurrent: {
 		color: color.grey['900'],
-		// backgroundColor: 'cyan',
 		borderLeft: `2px solid ${color.grey['500']}`
 	},
-
 }));
 
 export default function NavRight(props: Props) {

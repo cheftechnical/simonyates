@@ -43,7 +43,8 @@ export default function MayoClinic() {
 							</Section>
 						</Sections>
 					</Grid>
-					<Grid item xs={2}>
+					<Grid item xs={2}/>
+					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</Grid>
