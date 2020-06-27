@@ -6,6 +6,7 @@ import {Container, Grid} from '@material-ui/core';
 import Li from '../../styling/ListsUnordered/Li/intex';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
 import {makeStyles} from '@material-ui/core/styles';
+import Logo from '../../components/Logo';
 
 const useStyles = makeStyles((theme) => ({
     heading: {
@@ -19,22 +20,34 @@ export default function Work() {
     return (
         <DefaultLayout title="Work" top="work">
             <Container>
-                <Grid container>
-                    <Grid item xs={8}>
-                        <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
-                            Here is a glimpse of my life,<br/>
-                            mostly as a programmer.
-                        </Typography>
+                <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
+                    Here is a glimpse of my life,<br/>
+                    mostly as a programmer.
+                </Typography>
 
-                        <Experience employer="RBC" href="/work/rbc" title="Full-Stack Developer" when="2018–Present">
+                {/* RBC */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="rbc" variant="default"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="RBC" href="/work/rbc" role="Full-Stack Developer" when="2018–Present">
                             <Ul>
                                 <Li>A at feugiat laoreet non integer gravida duis.</Li>
                                 <Li>Tempus eget gravida nunc pellentesque.</Li>
                                 <Li>Dictum augue sed eget pulvinar sit curabitur.</Li>
                             </Ul>
                         </Experience>
+                    </Grid>
+                </Grid>
 
-                        <Experience employer="Uncharted Software" href="/work/uncharted-software" title="Senior Software Architect" when="2015–2018">
+                {/* Uncharted Software */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="uncharted-software" variant="default"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="Uncharted Software" href="/work/uncharted-software" role="Senior Software Architect" when="2015–2018">
                             <Ul>
                                 <Li>Prototyping and building complex causal graphs utilizing RDF, Turtle (TTL), and SPARQL</Li>
                                 <Li>Building scalable, distributed computing systems with RabbitMQ/Spark</Li>
@@ -44,8 +57,16 @@ export default function Work() {
                                 <Li>Optimized Elasticsearch models</Li>
                             </Ul>
                         </Experience>
+                    </Grid>
+                </Grid>
 
-                        <Experience employer="Mayo Clinic" href="/work/mayo-clinic" title="Software Engineer" when="2014–2015">
+                {/* Mayo Clinic */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="mayo-clinic" variant="default"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="Mayo Clinic" href="/work/mayo-clinic" role="Software Engineer" when="2014–2015">
                             <Ul>
                                 <Li>Elasticsearch, Elastic Marvel, MongoDB, node.js, socket.io, Express framework, hapi.js, RabbitMQ River, Highcharts, D3, MapReduce, YAML</Li>
                                 <Li>Built extensive set of interactive medical/statistical data visualization charts using D3 for real-time big data analytics</Li>
@@ -58,8 +79,16 @@ export default function Work() {
                                 <Li>1 Trillion electronic medical records (EMR) will be processed by these services</Li>
                             </Ul>
                         </Experience>
+                    </Grid>
+                </Grid>
 
-                        <Experience employer="Genworth Canada" href="/work/genworth-canada" title="Developer" when="2014–2015">
+                {/* Genworth Canada */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="genworth-canada" variant="default"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="Genworth Canada" href="/work/genworth-canada" role="Developer" when="2014–2015">
                             <Ul>
                                 <Li>Elasticsearch, Java, node.js, socket.io, Express framework, Extjs, Selenium (tests written Java), MQTT protocol</Li>
                                 <Li>The “go-to-guy” regarding all things Elasticsearch</Li>
@@ -72,8 +101,16 @@ export default function Work() {
                                 <Li>Implementing “bleeding-edge” capabilities of Elasticsearch, only days after they were released</Li>
                             </Ul>
                         </Experience>
+                    </Grid>
+                </Grid>
 
-                        <Experience employer="Infomart" href="/work/infomart" title="Architect & Lead Developer" when="2012–2014">
+                {/* Infomart */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="infomart" variant="regular"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="Infomart" href="/work/infomart" role="Architect & Lead Developer" when="2012–2014">
                             <Ul>
                                 <Li>Apache Hadoop 1.x, node.js, PHP, Elasticsearch, MongoDB, MySQL, MSSQL, Gnip Powertrack, Gnip EDC, Javascript, jQuery, FQL, Twitter API, Facebook API, YouTube API, Highcharts, Hootsuite API, Google Maps API, OAuth2.0, Memcache, Amazon S3, Bootstrap.js, PHPUnit</Li>
                                 <Li>Designed the technical architecture for application overhaul</Li>
@@ -85,8 +122,16 @@ export default function Work() {
                                 <Li>Built a proprietary visual pie-chart using Javascript and SVG only (no framework), to meet specific needs of the project</Li>
                             </Ul>
                         </Experience>
+                    </Grid>
+                </Grid>
 
-                        <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" title="Technical Director" when="2007–2008">
+                {/* Jib Design & Advertising */}
+                <Grid container spacing={4}>
+                    <Grid item xs={1}>
+                        <Logo brand="jib-design-and-advertising" variant="regular"/>
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" role="Technical Director" when="2007–2008">
                             <Ul>
                                 <Li>PHP, MySQL, Javascript, jQuery, HTML, CSS</Li>
                                 <Li>Upgraded the university registration system for Apple Education Store from WebObjects to PHP</Li>
@@ -99,7 +144,8 @@ export default function Work() {
                         </Experience>
                     </Grid>
                 </Grid>
+
             </Container>
         </DefaultLayout>
     );
-}
+};
