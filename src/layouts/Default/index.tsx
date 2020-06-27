@@ -3,6 +3,7 @@ import NavTop from './NavTop';
 import Footer from './Footer';
 import {Helmet} from 'react-helmet';
 import {makeStyles} from '@material-ui/core/styles';
+import Header from './Header';
 
 interface Props {
     children: any;
@@ -12,7 +13,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        // paddingTop: theme.spacing((96 + 40)/8)
+        marginTop: theme.spacing((96 + 40)/8)
     }
 }));
 
@@ -28,6 +29,7 @@ export default function DefaultLayout(props: Props) {
 
             <header>
                 <NavTop selected={top}/>
+                {/*<Header/>*/}
             </header>
 
             <main className={classes.main}>

@@ -182,8 +182,12 @@ const theme = createMuiTheme({
 					tiemposTextMedium,
 					tiemposTextRegular,
 					tiemposTextSemibold,
-				]
-			}
+				],
+				html: {
+					scrollBehavior: 'smooth',
+					// scrollPaddingTop: '70px',
+				}
+			},
 		},
 		MuiLink: {
 			root: {

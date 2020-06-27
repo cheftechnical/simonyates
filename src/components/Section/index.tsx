@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         marginTop: theme.spacing(80/8)
     },
+    jumpTarget: {
+        content: '',
+        display: 'block',
+        height: '70px', /* fixed header height*/
+        margin: '-70px 0 0', /* negative fixed header height */
+    }
 }));
 
 export default function Section(props: Props) {
@@ -19,9 +25,12 @@ export default function Section(props: Props) {
     const {children, id, name} = props;
 
     return (
-        <section className={classes.root} id={id}>
-            <Typography group="primary" variant="h3" weight="regular">{name}</Typography>
-            {children}
-        </section>
+        <div>
+            <div className={classes.jumpTarget} id={id}/>
+            <section className={classes.root}>
+                <Typography group="primary" variant="h3" weight="regular">{name}</Typography>
+                {children}
+            </section>
+        </div>
     );
 };

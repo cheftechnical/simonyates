@@ -18,6 +18,15 @@ const useStyles = makeStyles((theme) => ({
 	body: {
 		marginBottom: theme.spacing(388/8),
 		color: color.grey['600']
+	},
+	link: {
+		fontWeight: 'bold',
+		color: color.grey['900'],
+		paddingBottom: '4px',
+		borderBottom: '2px solid magenta',
+		'&$:hover:': {
+			borderBottom: '1px solid lime'
+		}
 	}
 }));
 
@@ -32,7 +41,7 @@ export default function NoMatch() {
 				</Typography>
 				<Typography className={classes.body} group="primary" variant="h3" weight="regular">
 					Sorry, that page doesnt exist.<br/>
-					But you can navigate back to <Link component={ReactRouterDom} to="/">home</Link>.
+					But you can navigate back to <Link className={classes.link} component={ReactRouterDom} to="/">home</Link>.
 				</Typography>
 			</Container>
 		</DefaultLayout>

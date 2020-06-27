@@ -31,7 +31,7 @@ export default function NavRight(props: Props) {
 	const items = sections.map(current => {
 		return current.id;
 	});
-
+// offset={0}
 	return (
 		<div className={classes.root}>
 			<Scrollspy currentClassName={classes.isCurrent} items={items}>
