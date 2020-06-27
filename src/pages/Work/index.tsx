@@ -5,14 +5,23 @@ import Typography from '../../styling/Typography';
 import {Container, Grid} from '@material-ui/core';
 import Li from '../../styling/ListsUnordered/Li/intex';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    heading: {
+        marginBottom: theme.spacing(72/8),
+    }
+}));
 
 export default function Work() {
+    const classes = useStyles();
+
     return (
         <DefaultLayout title="Work" top="work">
             <Container>
                 <Grid container>
                     <Grid item xs={8}>
-                        <Typography group="primary" variant="h2" weight="regular">
+                        <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
                             Here is a glimpse of my life,<br/>
                             mostly as a programmer.
                         </Typography>

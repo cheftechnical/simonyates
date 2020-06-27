@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		marginBottom: theme.spacing(72/8)
 	},
+	employer: {
+		marginBottom: theme.spacing(20/8)
+	},
 	h3Link: {
 		color: color.grey['600']
 	},
@@ -37,7 +40,7 @@ export default function Experience(props: Props) {
 				<Link component={ReactRouterDom} to={href}>[logo]</Link>
 			</Grid>
 			<Grid item xs={11}>
-				<Typography group="primary" variant="h3" weight="regular">
+				<Typography className={classes.employer} group="primary" variant="h3" weight="regular">
 					<Link
 						className={classes.h3Link}
 						component={ReactRouterDom}
