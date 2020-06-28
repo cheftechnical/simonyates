@@ -15,7 +15,8 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		position: 'fixed'
+		position: 'fixed',
+		maxWidth: '17%' // @todo no idea why this works, but it does
 	},
 
 	scrollspy: {

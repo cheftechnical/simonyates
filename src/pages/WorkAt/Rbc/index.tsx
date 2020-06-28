@@ -50,7 +50,7 @@ export default function Rbc() {
 								</WorkAtDescription>
 							</Section>
 
-							<Section id="section-1" name="Application Development & Custom Tooling">
+							<Section id="section-1" name="Application Development & Custom&nbsp;Tooling">
 								<WorkAtSectionTitle>
 									Application Development & Custom Tooling
 								</WorkAtSectionTitle>
@@ -89,7 +89,7 @@ export default function Rbc() {
 								</WorkAtSubSections>
 							</Section>
 
-							<Section id="section-2" name="Machine Learning / Artificial Intelligence">
+							<Section id="section-2" name="Machine Learning / Artificial&nbsp;Intelligence">
 								<WorkAtSectionTitle>
 									Machine Learning / Artificial Intelligence
 								</WorkAtSectionTitle>

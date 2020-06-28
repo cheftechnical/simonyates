@@ -72,6 +72,6 @@ export default function Logo(props: Props) {
 	const thisWidth = width || '100%';
 
 	return (
-		<img alt={alt} src={src} width={width}/>
+		<img alt={alt} src={src} width={thisWidth}/>
 	);
 };
