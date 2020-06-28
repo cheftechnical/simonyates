@@ -11,12 +11,13 @@ interface Props {
 		'twitter' |
 		'uncharted-software';
 	variant: string;
+	width?: number | string;
 }
 
 const basePath = '/logos';
 
 export default function Logo(props: Props) {
-	const {brand, variant} = props;
+	const {brand, variant, width} = props;
 
 	const {alt, src} = React.useMemo(() => {
 		switch (brand) {
@@ -68,7 +69,9 @@ export default function Logo(props: Props) {
 		}
 	}, [brand, variant]);
 
+	const thisWidth = width || '100%';
+
 	return (
-		<img alt={alt} src={src} width="100%"/>
+		<img alt={alt} src={src} width={width}/>
 	);
 };

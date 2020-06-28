@@ -60,14 +60,14 @@ export default function Footer() {
 							title="Find me on LinkedIn"
 							target="_blank"
 							href="https://www.linkedin.com/in/simonyates/"
-						><Logo brand="linkedin" variant="grey-300"/></Link>
+						><Logo brand="linkedin" variant="grey-300" width={24}/></Link>
 
 						<Link
 							className={classes.socialIcon}
 							title="Follow me on Twitter"
 							target="_blank"
 							href="https://twitter.com/cheftechnical"
-						><Logo brand="twitter" variant="grey-300"/></Link>
+						><Logo brand="twitter" variant="grey-300" width={24}/></Link>
 					</Grid>
 				</Grid>
 			</Container>
