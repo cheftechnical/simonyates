@@ -6,11 +6,10 @@ import {color} from '../../../styling/Color';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        paddingTop: theme.spacing(28/8),
+        paddingBottom: theme.spacing(28/8),
         backgroundColor: color.grey['50']
     },
-    container: {
-
-    }
 }));
 
 export default function Stats() {
@@ -18,7 +17,7 @@ export default function Stats() {
 
     return (
         <div className={classes.root}>
-            <Container className={classes.container}>
+            <Container>
                 <Grid container>
                     <Grid item xs={3}>
                         <StatsItem caption="years programming" value={25}/>

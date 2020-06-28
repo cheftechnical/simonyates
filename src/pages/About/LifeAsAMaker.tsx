@@ -1,11 +1,21 @@
 import * as React from 'react';
 import {Container, Grid} from "@material-ui/core";
 import Typography from '../../styling/Typography';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        paddingTop: theme.spacing(120/8)
+    }
+}));
 
 export default function LifeAsAMaker() {
+    const classes = useStyles();
+
     return (
-        <Container>
-            <Grid container>
+        <Container className={classes.root}>
+            {/* spacing=3 == 12px*/}
+            <Grid container spacing={3}>
                 <Grid item xs={6}>
                     <Typography group="primary" variant="h1" weight="regular">
                         Life as a Maker
