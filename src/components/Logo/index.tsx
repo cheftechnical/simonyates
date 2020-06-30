@@ -8,9 +8,14 @@ interface Props {
 		'linkedin' |
 		'mayo-clinic' |
 		'rbc' |
+		'simon-yates' |
 		'twitter' |
 		'uncharted-software';
-	variant: string;
+	variant:
+		'default' |
+		'grey-100' |
+		'grey-300' |
+		'grey-500';
 	width?: number | string;
 }
 
@@ -50,6 +55,11 @@ export default function Logo(props: Props) {
 				return {
 					alt: 'Royal Bank of Canada (RBC) logo',
 					src: `${basePath}/${brand}/rbc--color--208x270.png`
+				}
+			case 'simon-yates':
+				return {
+					alt: 'Simon Yates',
+					src: `${basePath}/${brand}/${brand}--${variant}.svg`
 				}
 			case 'twitter':
 				return {

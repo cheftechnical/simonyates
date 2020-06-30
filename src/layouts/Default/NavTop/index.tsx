@@ -1,9 +1,10 @@
 import * as React from 'react';
-import Logo from './Logo';
-import {Box, Container} from '@material-ui/core';
+import {Box, Container, Link} from '@material-ui/core';
 import Item from './Item';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
+import {Link as ReactRouterDom} from 'react-router-dom';
+import Logo from '../../../components/Logo';
 
 interface Props {
 	selected?: string;
@@ -31,7 +32,13 @@ export default function NavTop(props: Props) {
 			<Container>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}
-					<Box flexGrow={1}><Logo/></Box>
+					<Box flexGrow={1}>
+						<Link component={ReactRouterDom} to="/"><Logo
+							brand="simon-yates"
+							variant="default"
+							width={149}
+						/></Link>
+					</Box>
 
 					{/* Right align */}
 					<Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>

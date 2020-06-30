@@ -110,7 +110,7 @@ export default function Work() {
                 {/* Infomart */}
                 <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
-                        <Logo brand="infomart" variant="regular"/>
+                        <Logo brand="infomart" variant="default"/>
                     </Grid>
                     <Grid item xs={10}>
                         <Experience employer="Infomart" href="/work/infomart" role="Architect & Lead Developer" when="2012–2014">
@@ -131,7 +131,7 @@ export default function Work() {
                 {/* Jib Design & Advertising */}
                 <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
-                        <Logo brand="jib-design-and-advertising" variant="regular"/>
+                        <Logo brand="jib-design-and-advertising" variant="default"/>
                     </Grid>
                     <Grid item xs={10}>
                         <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" role="Technical Director" when="2007–2008">

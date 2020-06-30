@@ -5,7 +5,6 @@ import Logo from '../../components/Logo';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import Typography from '../../styling/Typography';
-import Image from '../../components/Image';
 import rem from '../../styling/rem';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 
 	colRight: {
-		paddingTop: theme.spacing(12/8),
+		paddingTop: theme.spacing((57-32)/8),
 		textAlign: 'right'
 	},
 	image: {
@@ -26,8 +25,11 @@ const useStyles = makeStyles((theme) => ({
 	link: {
 		...theme.typography.h1
 	},
+	logo: {
+		marginBottom: theme.spacing(12/8),
+	},
 	socialIcon: {
-		marginLeft: theme.spacing(3)
+		marginLeft: rem(24),
 	},
 	text: {
 		color: color.grey['400']
@@ -42,11 +44,9 @@ export default function Footer() {
 			<Container>
 				<Grid container>
 					<Grid item xs={9}>
-						<div>
-							<Link component={ReactRouterDom} to="/"><Image
-								className={classes.image}
-								alt="Simon Yates"
-								src="/images/simon-yates.svg"
+						<div className={classes.logo}>
+							<Link component={ReactRouterDom} to="/"><Logo
+								brand="simon-yates" variant="grey-100" width={128}
 							/></Link>
 						</div>
 						<Typography className={classes.text} variant="caption" group="secondary" weight="regular">

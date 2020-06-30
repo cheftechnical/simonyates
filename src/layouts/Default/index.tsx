@@ -3,7 +3,6 @@ import NavTop from './NavTop';
 import Footer from './Footer';
 import {Helmet} from 'react-helmet';
 import {makeStyles} from '@material-ui/core/styles';
-// import Header from './Header';
 
 interface Props {
     children: any;
@@ -29,7 +28,6 @@ export default function DefaultLayout(props: Props) {
 
             <header>
                 <NavTop selected={top}/>
-                {/*<Header/>*/}
             </header>
 
             <main className={classes.main}>
