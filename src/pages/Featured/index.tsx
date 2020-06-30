@@ -14,14 +14,10 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import Figure from '../../components/Figure';
 import SectionTitle from './SectionTitle';
 import SectionDescription from './SectionDescription';
+import Download from './Download';
 
 const useStyles = makeStyles((theme) => ({
-	download: {
-		marginTop: theme.spacing(8/8)
-	},
-	intro: {
-		color: color.grey['700']
-	}
+
 }));
 
 export default function Featured() {
@@ -72,9 +68,8 @@ export default function Featured() {
 										<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
 									</Ul>
 
-									<Button className={classes.download} endIcon={<ArrowRightIcon/>} href="/#" variant="text">
-										Download
-									</Button>
+									<Download href="/#"/>
+
 								</Publication>
 							</Section>
 
