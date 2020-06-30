@@ -11,18 +11,11 @@ interface Props {
 	when: string;
 }
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		marginBottom: theme.spacing(72/8)
-	},
-}));
-
 export default function Experience(props: Props) {
-	const classes = useStyles();
 	const {children, employer, href, role, when} = props;
 
 	return (
-		<div className={classes.root}>
+		<div>
 			<EmployerTimeAndRole employer={employer} href={href} role={role} when={when}/>
 			<div>{children}</div>
 			<ReadFullDetails href={href}/>

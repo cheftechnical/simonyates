@@ -11,6 +11,9 @@ import Logo from '../../components/Logo';
 const useStyles = makeStyles((theme) => ({
     heading: {
         marginBottom: theme.spacing(72/8),
+    },
+    employer: {
+        marginTop: theme.spacing(72/8)
     }
 }));
 
@@ -26,7 +29,7 @@ export default function Work() {
                 </Typography>
 
                 {/* RBC */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="rbc" variant="default"/>
                     </Grid>
@@ -42,7 +45,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Uncharted Software */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="uncharted-software" variant="default"/>
                     </Grid>
@@ -61,7 +64,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Mayo Clinic */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="mayo-clinic" variant="default"/>
                     </Grid>
@@ -83,7 +86,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Genworth Canada */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="genworth-canada" variant="default"/>
                     </Grid>
@@ -105,7 +108,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Infomart */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="infomart" variant="regular"/>
                     </Grid>
@@ -126,7 +129,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Jib Design & Advertising */}
-                <Grid container spacing={4}>
+                <Grid container className={classes.employer} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="jib-design-and-advertising" variant="regular"/>
                     </Grid>

@@ -34,7 +34,7 @@ export default function Logo(props: Props) {
 			case 'jib-design-and-advertising':
 				return {
 					alt: 'Jib Design & Advertising logo',
-					src: ''
+					src: `${basePath}/${brand}/${brand}--color.svg`
 				};
 			case 'linkedin':
 				return {
