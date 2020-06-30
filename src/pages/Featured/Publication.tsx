@@ -14,7 +14,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		marginBottom: theme.spacing(40/8),
+		// marginBottom: theme.spacing(40/8),
 		marginLeft: theme.spacing(40/8),
 	},
 	chips: {

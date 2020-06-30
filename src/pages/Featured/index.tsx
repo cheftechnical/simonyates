@@ -13,9 +13,12 @@ import Figure from '../../components/Figure';
 import SectionTitle from './SectionTitle';
 import SectionDescription from './SectionDescription';
 import Download from './Download';
+import rem from '../../styling/rem';
 
 const useStyles = makeStyles((theme) => ({
-
+	nextSection: {
+		marginTop: rem(68),
+	}
 }));
 
 export default function Featured() {
@@ -71,7 +74,7 @@ export default function Featured() {
 								</Publication>
 							</Section>
 
-							<Section id="events" name="Events">
+							<Section className={classes.nextSection} id="events" name="Events">
 								<SectionTitle>
 									Events
 								</SectionTitle>
