@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Section(props: Props) {
     const classes = useStyles();
-    const {children, id, name} = props;
+    const {children, id} = props;
 
     return (
         <div>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '../../styling/Typography';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
 import Li from '../../styling/ListsUnordered/Li/intex';
-import {h2, h3, h4, paragraph, subtitle} from './defaults';
+import {h2, h3, paragraph, subtitle} from './defaults';
 
 const legalName = 'Sybaris Analytics Corporation';
 const tradeName = 'Sybaris';

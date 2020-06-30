@@ -3,7 +3,7 @@ import NavTop from './NavTop';
 import Footer from './Footer';
 import {Helmet} from 'react-helmet';
 import {makeStyles} from '@material-ui/core/styles';
-import Header from './Header';
+// import Header from './Header';
 
 interface Props {
     children: any;

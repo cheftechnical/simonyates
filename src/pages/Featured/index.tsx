@@ -6,7 +6,6 @@ import Sections from '../../components/Sections';
 import Section from '../../components/Section';
 import NavRight from '../../components/NavRight';
 import {SectionItem} from '../../components/Section/SectionItem';
-import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import Ul from '../../styling/ListsUnordered/Ul/intex';

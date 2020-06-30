@@ -13,13 +13,8 @@ import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import {makeStyles} from '@material-ui/core/styles';
 import Logo from '../../../components/Logo';
 import WorkAtSubSections from '../components/WorkAtSubSections';
-
-const useStyles = makeStyles((theme) => ({
-
-}));
 
 export default function Rbc() {
 	const [sections, setSections] = React.useState();
