@@ -35,7 +35,7 @@ export default function Featured() {
 	return (
 		<DefaultLayout title="Featured" top="featured">
 			<Container>
-				<Grid container>
+				<Grid container spacing={4}>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
 							<Section id="publications" name="Publications">

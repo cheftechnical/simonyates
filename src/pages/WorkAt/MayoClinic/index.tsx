@@ -7,6 +7,7 @@ import WorkAtDescription from '../components/WorkAtDescription';
 import Sections from '../../../components/Sections';
 import Section from '../../../components/Section';
 import NavRight from '../../../components/NavRight';
+import Logo from '../../../components/Logo';
 
 export default function MayoClinic() {
 	const [sections, setSections] = React.useState();
@@ -18,8 +19,10 @@ export default function MayoClinic() {
 	return (
 		<DefaultLayout title="Work at Mayo Clinic" top="work">
 			<Container>
-				<Grid container>
-					<Grid item xs={1}>[logo]</Grid>
+				<Grid container spacing={4}>
+					<Grid item xs={1}>
+						<Logo brand="mayo-clinic" variant="default"/>
+					</Grid>
 					<Grid item xs={6}>
 						<WorkAtHeader
 							employer="Mayo Clinic"
