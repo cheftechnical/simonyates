@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import {Button, Container, Grid} from '@material-ui/core';
+import {Container, Grid} from '@material-ui/core';
 import Publication from './Publication';
 import Sections from '../../components/Sections';
 import Section from '../../components/Section';

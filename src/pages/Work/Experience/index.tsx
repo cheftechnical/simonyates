@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import EmployerTimeAndRole from '../EmployerRoleAndWhen';
 import ReadFullDetails from './ReadFullDetails';
 
