@@ -131,6 +131,10 @@ const theme = createMuiTheme({
 
 				color: color.grey[900],
 
+				'& .MuiButton-endIcon': {
+					marginLeft: rem(0)
+				},
+
 				'& .MuiButton-label': {
 					paddingBottom: rem(6),
 					borderBottom: `2px solid ${color.white}`
