@@ -36,9 +36,11 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="RBC" href="/work/rbc" role="Full-Stack Developer" when="2018–Present">
                             <Ul>
-                                <Li>A at feugiat laoreet non integer gravida duis.</Li>
-                                <Li>Tempus eget gravida nunc pellentesque.</Li>
-                                <Li>Dictum augue sed eget pulvinar sit curabitur.</Li>
+                                <Li>Built a chatbot to reduce time the team spends responding to customer questions</Li>
+                                <Li>Built self-healing tools that automate SRE tasks</Li>
+                                <Li>Designed and built custom reporting tools used by over 8,000 engineers at RBC for monitoring critical infrastructure and performing incident forensics</Li>
+                                <Li>Used machine learning to find anomalies in system logs</Li>
+                                <Li>Advised multiple teams on how to optimize Elasticsearch</Li>
                             </Ul>
                         </Experience>
                     </Grid>
@@ -52,12 +54,11 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="Uncharted Software" href="/work/uncharted-software" role="Senior Software Architect" when="2015–2018">
                             <Ul>
-                                <Li>Prototyping and building complex causal graphs utilizing RDF, Turtle (TTL), and SPARQL</Li>
-                                <Li>Building scalable, distributed computing systems with RabbitMQ/Spark</Li>
-                                <Li>Using Natural Language Processing (NLP) and spaCy to create a Named-Entity Recognition (NER) and feature extraction service</Li>
-                                <Li>Working closely with our data scientists to implement emerging Machine Learning (ML) technologies in Python</Li>
-                                <Li>Maintained and extended critical data pipelines in Scala, Spark and Hadoop</Li>
-                                <Li>Optimized Elasticsearch models</Li>
+                                <Li>Worked with data scientists to develop early prototypes of a new causal graph—including all visualization. This tool was used by the data scientists to refine their models and product designers to refine their architecture.</Li>
+                                <Li>Implemented state-of-the-art Natural Language Processing (NLP) technologies to perform Named-Entity Recognition (NER) and feature extraction of unstructured and semi-structured data</Li>
+                                <Li>Extended capabilities of critical data pipelines built in Scala, Spark, HBase, Hadoop and Elasticsearch</Li>
+                                <Li>Optimized Elasticsearch queries and data schemas for optimal performance and search-ability</Li>
+                                <Li>Converted legacy Java code to Scala</Li>
                             </Ul>
                         </Experience>
                     </Grid>
@@ -71,15 +72,11 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="Mayo Clinic" href="/work/mayo-clinic" role="Software Engineer" when="2014–2015">
                             <Ul>
-                                <Li>Elasticsearch, Elastic Marvel, MongoDB, node.js, socket.io, Express framework, hapi.js, RabbitMQ River, Highcharts, D3, MapReduce, YAML</Li>
-                                <Li>Built extensive set of interactive medical/statistical data visualization charts using D3 for real-time big data analytics</Li>
-                                <Li>Built high-throughput and fault-tolerant river to pre-compute and pipe MongoDB, and RabbitMQ data into Elasticsearch</Li>
-                                <Li>Built a tool which simplifies the creation of complex nested Elasticsearch queries</Li>
-                                <Li>Transformed HL7 V2 RIM and FHIR from Apache Spark into a schema optimized for complex analytics in Elasticsearch</Li>
-                                <Li>Refactored experimental tools written by previous developers into a standardized technology stack, and generalized libraries wherever possible</Li>
-                                <Li>Presented work at monthly Lunch-and-Learn workshops to share knowledge with different departs at Mayo Clinic</Li>
-                                <Li>Presented work at 2015 IEEE Big Data Conference in Silicone Valley</Li>
-                                <Li>1 Trillion electronic medical records (EMR) will be processed by these services</Li>
+                                <Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big Data</Li>
+                                <Li>Built software to visualize and analyze patient medical data for clinical decision support</Li>
+                                <Li>Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch documents</Li>
+                                <Li>Re-wrote experimental prototype software for production use</Li>
+                                <Li>Optimized Elasticsearch queries for speed and search-ability</Li>
                             </Ul>
                         </Experience>
                     </Grid>
@@ -93,15 +90,10 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="Genworth Canada" href="/work/genworth-canada" role="Developer" when="2014–2015">
                             <Ul>
-                                <Li>Elasticsearch, Java, node.js, socket.io, Express framework, Extjs, Selenium (tests written Java), MQTT protocol</Li>
-                                <Li>The “go-to-guy” regarding all things Elasticsearch</Li>
-                                <Li>Ensuring that Elasticsearch is configured in a secure manner</Li>
-                                <Li>Demonstrated new ways that Big Data technologies can improve the utility of Genworth’s data through monthly Lunch-and-Learn talks, which have inspired several spin-o projects as a result</Li>
-                                <Li>Designed Elasticsearch mapping rules that will help nd similar addresses and names, despite the many possible permutations with them</Li>
-                                <Li>Shared knowledge of how Elasticsearch works “under-the-hood” to help illustrate how we can leverage this new technology with the team</Li>
-                                <Li>Identified new ways of identifying fraudulent transactions that were previously very time consuming</Li>
-                                <Li>Identified how Genworth could replace one of their “data-scrubbing” vendors with an internal solution via Elasticsearch, and save the company tens of thousands annually</Li>
-                                <Li>Implementing “bleeding-edge” capabilities of Elasticsearch, only days after they were released</Li>
+                                <Li>Designed system to automatically detect names and addresses which may refer to the same subject, but uses different spelling</Li>
+                                <Li>Hosted regular Lunch-and-Learn events on Elasticsearch and demonstrated its applications</Li>
+                                <Li>Saved the company tens of thousands annually by identifying an area of improvement  that eliminated the need for a third-party vendor service</Li>
+                                <Li>Was known as the &ldquo;go-to-guy&rdquo; regarding all things Elasticsearch</Li>
                             </Ul>
                         </Experience>
                     </Grid>
@@ -115,14 +107,11 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="Infomart" href="/work/infomart" role="Architect & Lead Developer" when="2012–2014">
                             <Ul>
-                                <Li>Apache Hadoop 1.x, node.js, PHP, Elasticsearch, MongoDB, MySQL, MSSQL, Gnip Powertrack, Gnip EDC, Javascript, jQuery, FQL, Twitter API, Facebook API, YouTube API, Highcharts, Hootsuite API, Google Maps API, OAuth2.0, Memcache, Amazon S3, Bootstrap.js, PHPUnit</Li>
-                                <Li>Designed the technical architecture for application overhaul</Li>
-                                <Li>Worked with the project manager to write job descriptions and hire a development team</Li>
-                                <Li>Established best-practices, and prepared development style guides for the team</Li>
-                                <Li>Performed technology testing to identify best technologies for the project, proposing several options with advantages/disadvantages to each</Li>
-                                <Li>Primary developer of all big data content (currently about 10 million tweets per month / over 100 million documents in total)</Li>
-                                <Li>Primary Javascript developer (which was extensive in this project)</Li>
-                                <Li>Built a proprietary visual pie-chart using Javascript and SVG only (no framework), to meet specific needs of the project</Li>
+                                <Li>Designed the technical architecture</Li>
+                                <Li>Designed Elasticsearch document schemas and wrote all queries</Li>
+                                <Li>Built the development team from ground up &ndash; managed the hiring process from writing job descriptions, interviews to selecting candidates</Li>
+                                <Li>Wrote the development style guide, including the best practices, for the team</Li>
+                                <Li>Built custom data visualization charts in SVG to meet specific design requirements of the project</Li>
                             </Ul>
                         </Experience>
                     </Grid>
@@ -136,13 +125,10 @@ export default function Work() {
                     <Grid item xs={10}>
                         <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" role="Technical Director" when="2007–2008">
                             <Ul>
-                                <Li>PHP, MySQL, Javascript, jQuery, HTML, CSS</Li>
-                                <Li>Upgraded the university registration system for Apple Education Store from WebObjects to PHP</Li>
-                                <Li>Lead development of HTML emails for Apple Canada, including production and deployment to appropriate demographics</Li>
-                                <Li>Security audits to prevent SQL injection, Session/Cookie hijacking, etc</Li>
-                                <Li>Reverse engineering of Google PageRank formula for better understanding of SEO strategies</Li>
-                                <Li>Designed multilingual solutions based on client needs and budget. Projects were developed using LAMP, ASP (design requirement). Moneris</Li>
-                                <Li>API, integration with Athens stock exchange API</Li>
+                                <Li>Wrote the university registration system for the Apple Education Store on apple.ca</Li>
+                                <Li>Wrote and deployed all HTML emails for Apple Canada</Li>
+                                <Li>Conceptualized, designed and wrote an internal tool for client asset approvals</Li>
+                                <Li>Reverse engineered Google PageRank for improved SEO strategies</Li>
                             </Ul>
                         </Experience>
                     </Grid>
