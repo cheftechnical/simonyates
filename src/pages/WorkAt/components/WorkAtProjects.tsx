@@ -5,7 +5,7 @@ interface Props {
 	children?: any;
 }
 
-export default function WorkAtSubSections(props: Props) {
+export default function WorkAtProjects(props: Props) {
 	const {children} = props;
 
 	return (

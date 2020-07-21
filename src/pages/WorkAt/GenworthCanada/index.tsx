@@ -13,7 +13,7 @@ import Typography from '../../../styling/Typography';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Callout from '../../../components/Callout';
-import WorkAtSubSections from '../components/WorkAtSubSections';
+import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
 
 export default function GenworthCanada() {

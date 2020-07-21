@@ -12,7 +12,7 @@ import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import Typography from '../../../styling/Typography';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
-import WorkAtSubSections from '../components/WorkAtSubSections';
+import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
 
 export default function JibDesignAndAdvertising() {
@@ -62,13 +62,13 @@ export default function JibDesignAndAdvertising() {
 								<WorkAtSectionTitle>
 									Notable Projects
 								</WorkAtSectionTitle>
-								<WorkAtSubSections>
+								<WorkAtProjects>
 									<WorkAtProject name="Apple Canada Introduces iPhone" when="">
 										<Typography group="primary" variant="body" weight="regular">
 											When Apple launched the original iPhone in Canada, it wanted to showcase its ability to view fully–rendered HTML web pages (that was revolutionary at the time). Many websites still relied on Flash at the time, and Apple didn't want to risk showing a web page that would fail because it used an unsupported technology.
 										</Typography>
 									</WorkAtProject>
-								</WorkAtSubSections>
+								</WorkAtProjects>
 							</Section>
 						</Sections>
 					</Grid>

@@ -10,7 +10,7 @@ import Section from '../../../components/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Callout from '../../../components/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import WorkAtSubSections from '../components/WorkAtSubSections';
+import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';

@@ -13,7 +13,7 @@ import Callout from '../../../components/Callout';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import WorkAtSubSections from '../components/WorkAtSubSections';
+import WorkAtProjects from '../components/WorkAtProjects';
 import Sections from '../../../components/Sections';
 
 export default function UnchartedSoftware() {
@@ -53,7 +53,7 @@ export default function UnchartedSoftware() {
 									Projects
 								</WorkAtSectionTitle>
 
-								<WorkAtSubSections>
+								<WorkAtProjects>
 									<WorkAtProject name="[redacted project]" when="2017-2018">
 										<Callout list={[
 											'Node.js + Express',
@@ -88,7 +88,7 @@ export default function UnchartedSoftware() {
 											<Li>Refactored legacy Java code to Scala with rich set of unit tests</Li>
 										</Ul>
 									</WorkAtProject>
-								</WorkAtSubSections>
+								</WorkAtProjects>
 							</Section>
 						</Sections>
 					</Grid>
