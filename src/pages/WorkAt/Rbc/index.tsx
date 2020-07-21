@@ -222,8 +222,8 @@ export default function Rbc() {
 								<Ul>
 									<Li>
 										Developed a chatbot from scratch to answer common questions and provide answers
-										using real-time infrastructure metrics (e.g. "Is service [x] down?" or "Whats
-										the TPS for [thing]")
+										using real-time infrastructure metrics (e.g. &ldquo;Is service [x] down?&rdquo;
+										or &ldquo;Whats the TPS for [thing]&rdquo;)
 									</Li>
 									<Li>
 										Used NLP via TF–IDF to automatically label reports about previous incidents to
