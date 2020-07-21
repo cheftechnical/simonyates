@@ -4,7 +4,8 @@ import {color} from '../../styling/Color';
 import Typography from '../../styling/Typography';
 
 interface Props {
-    children: any | any[];
+    children?: any | any[] | undefined;
+    list?: string[] | undefined;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -22,12 +23,23 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Callout(props: Props) {
     const classes = useStyles();
-    const {children} = props;
+    const {children, list} = props;
+
+    const content = React.useMemo(() => {
+        if (!list) return children;
+
+        return list.map((item, index) => (
+            <span key={index}>
+                {item}{(index < list.length - 1) ? <span> &bull; </span>: ''}
+            </span>
+        ));
+
+    }, [children, list]);
 
     return (
         <div className={classes.root}>
             <Typography className={classes.typography} group="secondary" variant="body" weight="regular">
-                {children}
+                {content}
             </Typography>
         </div>
     );
