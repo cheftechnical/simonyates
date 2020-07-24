@@ -23,10 +23,14 @@ export default function Work() {
     return (
         <DefaultLayout title="Work" top="work">
             <Container>
-                <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
-                    Here is a glimpse of my life,<br/>
-                    mostly as a programmer.
-                </Typography>
+                <Grid container>
+                    <Grid item xs={6}>
+                        <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
+                            Here is a glimpse of my life,<br/>
+                            mostly as a programmer.
+                        </Typography>
+                    </Grid>
+                </Grid>
 
                 {/* RBC */}
                 <Grid container className={classes.employer} spacing={4}>
