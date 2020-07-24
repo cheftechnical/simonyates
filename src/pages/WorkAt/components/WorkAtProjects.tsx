@@ -1,19 +1,24 @@
 import * as React from 'react';
-import {Grid} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
+import rem from '../../../styling/rem';
 
 interface Props {
 	children?: any;
 }
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		paddingLeft: rem(40)
+	},
+}));
+
 export default function WorkAtProjects(props: Props) {
+	const classes = useStyles();
 	const {children} = props;
 
 	return (
-		<Grid container>
-			<Grid item xs={1}/>
-			<Grid item xs={11}>
-				{children}
-			</Grid>
-		</Grid>
+		<div className={classes.root}>
+			{children}
+		</div>
 	);
 };
