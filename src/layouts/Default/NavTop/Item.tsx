@@ -24,11 +24,11 @@ export default function Item(props: Props) {
 
 	if (selected) {
 		return (
-			<Button className={`${classes.button} ${classes.active}`} href={href}>{title}</Button>
+			<Button disableRipple className={`${classes.button} ${classes.active}`} href={href}>{title}</Button>
 		);
 	}
 
 	return (
-		<Button className={classes.button} href={href}>{title}</Button>
+		<Button disableRipple className={classes.button} href={href}>{title}</Button>
 	);
 };
