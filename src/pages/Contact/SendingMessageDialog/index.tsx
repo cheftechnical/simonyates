@@ -1,12 +1,8 @@
 import * as React from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import {Button, Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
+import {Dialog} from '@material-ui/core';
 import {Message} from '../Message';
-import axios from 'axios';
 import RecaptchaFragment from './RecaptchaFragment';
 import SuccessfulFragment from './SuccessfulFragment';
-import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../../styling/rem';
 
 interface Props {
 	defaultFragment?: 'recaptcha' | 'success';
