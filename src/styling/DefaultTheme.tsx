@@ -131,6 +131,8 @@ const theme = createMuiTheme({
 
 				color: color.grey[900],
 
+				minWidth: 'inherit',
+
 				'& .MuiButton-endIcon': {
 					marginLeft: rem(0)
 				},
@@ -138,6 +140,8 @@ const theme = createMuiTheme({
 				'& .MuiButton-label': {
 					paddingBottom: rem(6),
 					borderBottom: `2px solid ${color.white}`
+					// borderBottom: `2px solid cyan`
+
 				},
 
 				'&:hover': {
@@ -145,6 +149,7 @@ const theme = createMuiTheme({
 
 					'& .MuiButton-label': {
 						borderBottom: `2px solid ${color.grey[900]}`,
+						// borderBottom: `2px solid magenta`,
 					},
 
 					'& .MuiButton-label .MuiButton-endIcon': {
