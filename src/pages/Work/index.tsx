@@ -37,7 +37,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="rbc" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="RBC" href="/work/rbc" role="Full-Stack Developer" when="2018–Present">
                             <Ul>
                                 <Li>Built a chatbot to reduce time the team spends responding to customer questions</Li>
@@ -55,7 +55,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="uncharted-software" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="Uncharted Software" href="/work/uncharted-software" role="Senior Software Architect" when="2015–2018">
                             <Ul>
                                 <Li>Worked with data scientists to develop early prototypes of a new causal graph—including all visualization. This tool was used by the data scientists to refine their models and product designers to refine their architecture.</Li>
@@ -73,7 +73,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="mayo-clinic" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="Mayo Clinic" href="/work/mayo-clinic" role="Software Engineer" when="2014–2015">
                             <Ul>
                                 <Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big Data</Li>
@@ -91,7 +91,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="genworth-canada" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="Genworth Canada" href="/work/genworth-canada" role="Developer" when="2014–2015">
                             <Ul>
                                 <Li>Designed system to automatically detect names and addresses which may refer to the same subject, but uses different spelling</Li>
@@ -108,7 +108,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="infomart" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="Infomart" href="/work/infomart" role="Architect & Lead Developer" when="2012–2014">
                             <Ul>
                                 <Li>Designed the technical architecture</Li>
@@ -126,7 +126,7 @@ export default function Work() {
                     <Grid item xs={1}>
                         <Logo brand="jib-design-and-advertising" variant="default"/>
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={6}>
                         <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" role="Technical Director" when="2007–2008">
                             <Ul>
                                 <Li>Wrote the university registration system for the Apple Education Store on apple.ca</Li>
