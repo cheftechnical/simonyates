@@ -69,6 +69,7 @@ export default function ContactForm(props: Props) {
 				/>
 
 				<Button
+					disableRipple
 					className={classes.button}
 					endIcon={<SendIcon/>}
 					type="submit"
