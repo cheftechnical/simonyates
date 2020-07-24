@@ -15,5 +15,21 @@ const handleClose = () => {
 	console.log('onClose');
 };
 
-export const _default = () => <SendingMessageDialog isOpen={false} message={message} onClose={handleClose}/>;
-export const _withOpen = () => <SendingMessageDialog isOpen={true} message={message} onClose={handleClose}/>;
+export const _default = () => <SendingMessageDialog
+	isOpen={false}
+	message={message}
+	onClose={handleClose}
+/>;
+
+export const _withOpen = () => <SendingMessageDialog
+	isOpen={true}
+	message={message}
+	onClose={handleClose}
+/>;
+
+export const _withSuccess = () => <SendingMessageDialog
+	defaultFragment='success'
+	isOpen={true}
+	message={message}
+	onClose={handleClose}
+/>;
