@@ -15,7 +15,9 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(24/8),
         paddingLeft: theme.spacing(8/8),
 
-        color: color.grey['500']
+        color: color.grey['500'],
+
+        borderLeft: `2px solid ${color.white}`
     },
     a: {
         textDecoration: 'none',

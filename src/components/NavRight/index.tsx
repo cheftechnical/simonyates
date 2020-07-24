@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
 	// The Scrollspy component attaches this class to the currently selected item
 	isCurrent: {
 		color: color.grey['900'],
+
+		// borderLeft: `2px solid magenta`
 		borderLeft: `2px solid ${color.grey['500']}`
 	},
 }));
