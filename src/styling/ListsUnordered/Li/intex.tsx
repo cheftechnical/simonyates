@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
+import {color} from '../../Color';
 
 interface Props {
 	children?: any;
@@ -10,7 +11,9 @@ const useStyles = makeStyles((theme) => ({
 		...theme.typography.body1,
 		marginBottom: theme.spacing(16/8),
 		marginLeft: theme.spacing(-9/8),
-		paddingLeft: theme.spacing(12/8)
+		paddingLeft: theme.spacing(12/8),
+
+		color: color.grey['800'],
 	}
 }));
 
