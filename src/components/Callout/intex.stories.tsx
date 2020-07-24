@@ -5,6 +5,6 @@ export default {title: 'Components/Callout'};
 
 export const _default = () => (
     <Callout>
-        Some text goes here.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra volutpat phasellus dictum eu proin. Sed lorem.
     </Callout>
 );
