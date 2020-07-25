@@ -58,6 +58,7 @@ export default function Featured() {
 								</Publication>
 
 								<Publication
+									next
 									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
 									publisher="RBC"
 									tags={['automation', 'custom tooling', 'elasticsearch']}

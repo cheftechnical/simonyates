@@ -7,6 +7,7 @@ import {color} from '../../styling/Color';
 interface Props {
 	children: any | any[] | never[];
 	name: string;
+	next?: boolean;
 	publisher: string;
 	tags: string[];
 	when: string;
@@ -16,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		// marginBottom: theme.spacing(40/8),
 		marginLeft: theme.spacing(40/8),
+	},
+	rootNext: {
+		paddingTop: theme.spacing(40/8),
 	},
 	chips: {
 		marginBottom: theme.spacing(24/8)
@@ -37,10 +41,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Publication(props: Props) {
 	const classes = useStyles();
-	const {children, name, publisher, tags, when} = props;
+	const {children, name, next, publisher, tags, when} = props;
+
+	const rootClass = (next)
+		? `${classes.root} ${classes.rootNext}`
+		: classes.root;
 
 	return (
-		<div className={classes.root}>
+		<div className={rootClass}>
 			<Typography className={classes.name} group="primary" variant="h4" weight="medium">{name}</Typography>
 			<Typography className={classes.publisherAndWhen} group="primary" variant="body" weight="regular">{publisher}, <span className={classes.when}>{when}</span></Typography>
 			<div className={classes.chips}>
