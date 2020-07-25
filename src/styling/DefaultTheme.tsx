@@ -90,7 +90,7 @@ const theme = createMuiTheme({
 				borderRadius: 0,
 			},
 			endIcon: {
-				marginLeft: rem(48)
+				marginLeft: rem(8)
 			},
 			contained: {
 				padding: rem(16),
@@ -219,8 +219,8 @@ const theme = createMuiTheme({
 		MuiInput: {
 			underline: {
 				// Indent the value of the text field
-				paddingTop: rem(8),
-				paddingBottom: rem(8),
+				paddingTop: rem(10),
+				paddingBottom: rem(12),
 				paddingLeft: rem(16),
 				paddingRight: rem(16),
 
@@ -253,6 +253,12 @@ const theme = createMuiTheme({
 				}
 			}
 		},
+		// MuiInputBase: {
+		// 	input: {
+		// 		paddingTop: rem(6),
+		// 		paddingBottom: rem(13)
+		// 	}
+		// },
 		MuiFormHelperText: {
 			root: {
 				paddingLeft: rem(16),

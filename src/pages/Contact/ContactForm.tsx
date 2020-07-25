@@ -61,7 +61,7 @@ export default function ContactForm(props: Props) {
 						multiline
 						required
 						placeholder="Message"
-						rows={5}
+						rows={7}
 					/>}
 					name="body"
 					control={control}
