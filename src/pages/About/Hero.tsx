@@ -7,10 +7,12 @@ import Image from '../../components/Image';
 const useStyles = makeStyles((theme) => ({
     root: {
         paddingBottom: theme.spacing(80/8),
-        // backgroundColor: 'magenta'
     },
     typography: {
-        paddingBottom: theme.spacing(72/8)
+        paddingBottom: theme.spacing(111/8)
+    },
+    photo: {
+        paddingLeft: theme.spacing(48/8),
     }
 }));
 
@@ -19,7 +21,7 @@ export default function Hero() {
 
     return (
         <Container className={classes.root}>
-            <Grid container spacing={6}>
+            <Grid container>
                 <Grid item xs={7}>
                     <Box display="flex" alignItems="flex-end" css={{ height: '100%' }}>
                         <Box>
@@ -30,7 +32,7 @@ export default function Hero() {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item className={classes.photo} xs={5}>
                     <Image alt="Photo of Simon Yates" src="/images/about/hero/simon-yates.png"/>
                 </Grid>
             </Grid>
