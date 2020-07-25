@@ -12,7 +12,9 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     main: {
-        marginTop: theme.spacing((96 + 40)/8)
+        // marginTop: theme.spacing((96 + 40)/8)
+        // marginTop: theme.spacing(170/8)
+        marginTop: theme.spacing(162/8)
     }
 }));
 

@@ -9,11 +9,11 @@ import {makeStyles} from '@material-ui/core/styles';
 import Logo from '../../components/Logo';
 
 const useStyles = makeStyles((theme) => ({
-    heading: {
-        marginBottom: theme.spacing(72/8),
+    employerFirst: {
+        marginTop: theme.spacing(84/8)
     },
-    employer: {
-        marginTop: theme.spacing(72/8)
+    employerNext: {
+        marginTop: theme.spacing(79/8)
     }
 }));
 
@@ -25,7 +25,7 @@ export default function Work() {
             <Container>
                 <Grid container>
                     <Grid item xs={6}>
-                        <Typography className={classes.heading} group="primary" variant="h2" weight="regular">
+                        <Typography group="primary" variant="h2" weight="regular">
                             Here is a glimpse of my life,<br/>
                             mostly as a programmer.
                         </Typography>
@@ -33,7 +33,7 @@ export default function Work() {
                 </Grid>
 
                 {/* RBC */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerFirst} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="rbc" variant="default"/>
                     </Grid>
@@ -51,7 +51,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Uncharted Software */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerNext} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="uncharted-software" variant="default"/>
                     </Grid>
@@ -69,7 +69,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Mayo Clinic */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerNext} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="mayo-clinic" variant="default"/>
                     </Grid>
@@ -87,7 +87,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Genworth Canada */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerNext} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="genworth-canada" variant="default"/>
                     </Grid>
@@ -104,7 +104,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Infomart */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerNext} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="infomart" variant="default"/>
                     </Grid>
@@ -122,7 +122,7 @@ export default function Work() {
                 </Grid>
 
                 {/* Jib Design & Advertising */}
-                <Grid container className={classes.employer} spacing={4}>
+                <Grid container className={classes.employerNext} spacing={4}>
                     <Grid item xs={1}>
                         <Logo brand="jib-design-and-advertising" variant="default"/>
                     </Grid>
