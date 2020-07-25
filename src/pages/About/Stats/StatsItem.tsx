@@ -11,7 +11,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     value: {
-        paddingBottom: theme.spacing(28/8),
+        paddingBottom: theme.spacing(23/8),
         fontSize: rem(64),
         lineHeight: '100%',
         textAlign: 'center',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
     caption: {
         // marginBottom: theme.spacing(28/8),
-        lineHeight: '100%',
+        lineHeight: rem(24),
         textAlign: 'center'
     }
 }));
