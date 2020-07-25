@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
 		letterSpacing: rem(0.4),
 
 		color: color.grey['700']
+	},
+	image: {
+		paddingTop: theme.spacing(40/8),
 	}
 }));
 
@@ -31,6 +34,10 @@ export default function Figure(props: Props) {
 	const {alt, caption, src} = props;
 
 	return (
-		<figure><Image alt={alt} src={src}/>{caption && <figcaption className={classes.caption}>{caption}</figcaption>}</figure>
+		<figure><Image
+			alt={alt}
+			className={classes.image}
+			src={src}
+		/>{caption && <figcaption className={classes.caption}>{caption}</figcaption>}</figure>
 	);
 };
