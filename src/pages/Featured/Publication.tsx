@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['700']
 	},
 	publisherAndWhen: {
-		marginBottom: theme.spacing(24/8)
+		marginBottom: theme.spacing(24/8),
+		color: color.grey['600'],
 	}
 }));
 
