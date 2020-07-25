@@ -198,6 +198,16 @@ const theme = createMuiTheme({
 				},
 				'html,body': {
 					height: '100%'
+				},
+				'ul': {
+					marginLeft: '0px',
+					paddingLeft: '15px',
+				},
+				'li': {
+
+				},
+				'li:before': {
+
 				}
 			},
 		},
