@@ -6,6 +6,9 @@ import {makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     root: {
         paddingTop: theme.spacing(120/8)
+    },
+    body: {
+        paddingTop: theme.spacing(16/8)
     }
 }));
 
@@ -20,7 +23,7 @@ export default function LifeAsAMaker() {
                     <Typography group="primary" variant="h1" weight="regular">
                         Life as a Maker
                     </Typography>
-                    <Typography group="primary" variant="body" weight="regular">
+                    <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu tortor, viverra elementum nibh enim, sed. Mauris egestas magna volutpat, arcu nunc, faucibus. Nulla lacus ultricies cras tincidunt ac at ut. Tristique ornare mattis massa habitasse egestas neque arcu magna placerat. Purus suspendisse mauris neque vel sit felis feugiat adipiscing. Ultricies euismod neque imperdiet enim gravida congue risus.
                     </Typography>
                 </Grid>
