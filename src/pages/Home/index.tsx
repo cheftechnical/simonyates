@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	viewport: {
 		height: '100%',
-		backgroundColor: 'magenta'
+		// backgroundColor: 'magenta'
 	}
 }));
 
