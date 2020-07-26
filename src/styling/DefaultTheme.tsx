@@ -182,6 +182,11 @@ const theme = createMuiTheme({
 				borderColor: color.lime['300'],
 			}
 		},
+		MuiContainer: {
+			maxWidthLg: {
+				maxWidth: rem(1032)
+			}
+		},
 		MuiCssBaseline: {
 			'@global': {
 				'@font-face': [
@@ -253,12 +258,6 @@ const theme = createMuiTheme({
 				}
 			}
 		},
-		// MuiInputBase: {
-		// 	input: {
-		// 		paddingTop: rem(6),
-		// 		paddingBottom: rem(13)
-		// 	}
-		// },
 		MuiFormHelperText: {
 			root: {
 				paddingLeft: rem(16),
