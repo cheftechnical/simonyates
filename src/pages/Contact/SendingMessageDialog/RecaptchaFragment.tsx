@@ -1,11 +1,9 @@
 import * as React from 'react';
-import {Box, Button, Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
+import {Box, Button, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 import {Message} from '../Message';
 import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../../styling/rem';
-import {color} from '../../../styling/Color';
 
 interface Props {
 	message: Message | undefined;
