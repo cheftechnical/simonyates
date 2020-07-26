@@ -4,6 +4,7 @@ import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@material-ui/icons/Send';
 import {Message} from './Message';
 import {makeStyles} from '@material-ui/core/styles';
+import ButtonContained from '../../styling/ButtonContained';
 
 interface Props {
 	onSubmit: (data: Message) => void;
@@ -68,15 +69,23 @@ export default function ContactForm(props: Props) {
 					rules={{required: true}}
 				/>
 
-				<Button
-					disableRipple
+				{/*<Button*/}
+				{/*	disableRipple*/}
+				{/*	className={classes.button}*/}
+				{/*	endIcon={<SendIcon/>}*/}
+				{/*	type="submit"*/}
+				{/*	variant="contained"*/}
+				{/*>*/}
+				{/*	Send*/}
+				{/*</Button>*/}
+
+				<ButtonContained
 					className={classes.button}
-					endIcon={<SendIcon/>}
+					endIcon={<SendIcon style={{fontSize: '16px'}}/>}
 					type="submit"
-					variant="contained"
 				>
 					Send
-				</Button>
+				</ButtonContained>
 
 				{errors.name && <span>This name field is required</span>}
 				{errors.emailAddress && <span>This email address is required</span>}

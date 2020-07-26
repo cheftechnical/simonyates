@@ -108,6 +108,11 @@ const theme = createMuiTheme({
 
 				boxShadow: 'none',
 
+				'&:active': {
+					color: color.grey['900'],
+					boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+				},
+
 				'&:hover': {
 					color: color.grey['900'],
 					backgroundColor: color.grey['50'],
