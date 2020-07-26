@@ -33,7 +33,7 @@ export default function SendingMessageDialog(props: Props) {
 			case 'success':
 				return (<SuccessfulFragment/>);
 		}
-	}, [content, message]);
+	}, [content, message, onClose]);
 
 	return (
 		<Dialog
