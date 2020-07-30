@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button, TextField} from '@material-ui/core';
+import {TextField} from '@material-ui/core';
 import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@material-ui/icons/Send';
 import {Message} from './Message';
@@ -12,7 +12,7 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	button: {
-		marginTop: theme.spacing(16/8)
+		marginTop: theme.spacing(16 / 8)
 	}
 }));
 
