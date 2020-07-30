@@ -295,28 +295,28 @@ export default function Rbc() {
 
 								<WorkAtEvents>
 									<WorkAtEventsGroup name="10KC">
-										<WorkAtEvent date="July 24, 2020" title="Everyday NLP"/>
+										<WorkAtEvent date="Jul 24, 2020" title="Everyday NLP"/>
 									</WorkAtEventsGroup>
 
 									<WorkAtEventsGroup name="Catalyst/Collision">
-										<WorkAtEvent date="September 2020" title="Rapid Automation by SRE"/>
-										<WorkAtEvent date="September 25, 2019" title="Anomaly Detection with Elasticsearch: Talk + Workshop with step-by-step guide handout and a demo booth featuring our chatbot"/>
+										<WorkAtEvent date="Sep 2020" title="Rapid Automation by SRE"/>
+										<WorkAtEvent date="Sep 25, 2019" title="Anomaly Detection with Elasticsearch: Talk + Workshop with step-by-step guide handout and a demo booth featuring our chatbot"/>
 									</WorkAtEventsGroup>
 
 									<WorkAtEventsGroup name="Town Hall">
 										<WorkAtEvent date="May 13, 2020" title="Seven–Year Transaction History Automation"/>
-										<WorkAtEvent date="March 25, 2020" title="Introducing the SRE Chargeback Model"/>
-										<WorkAtEvent date="February 2 & 27, 2020" title="Five–Nines Monitoring and Automation"/>
-										<WorkAtEvent date="January 31, 2020" title="Monitoring Five–Nines Availability"/>
-										<WorkAtEvent date="January 20, 2020" title="How the SRE Team Uses Machine Learning To Monitor 1000's of APIs"/>
-										<WorkAtEvent date="December 13, 2019" title="Monitoring Seven Years of Business & Personal Transaction History"/>
-										<WorkAtEvent date="December 2, 2019" title="SRE Automation with Machine Learning"/>
-										<WorkAtEvent date="October 10, 2019" title="Using Supervised Learning to Detect Anomalies in API Requests"/>
-										<WorkAtEvent date="August 23, 2019" title="Introducing the SRE Chatbot: Why we built it & how it works"/>
-										<WorkAtEvent date="January 25, 2019" title="How to use machine learning in Elasticsearch"/>
-										<WorkAtEvent date="January 11, 2019" title="How to Build Effective ELK Watchers"/>
-										<WorkAtEvent date="December 7, 2018" title="Automating Ping Federate Client Promotions"/>
-										<WorkAtEvent date="November 9 & 23, 2018" title="Validating Seven–Years of Business Transaction History"/>
+										<WorkAtEvent date="Mar 25, 2020" title="Introducing the SRE Chargeback Model"/>
+										<WorkAtEvent date="Feb 2 & 27, 2020" title="Five–Nines Monitoring and Automation"/>
+										<WorkAtEvent date="Jan 31, 2020" title="Monitoring Five–Nines Availability"/>
+										<WorkAtEvent date="Jan 20, 2020" title="How the SRE Team Uses Machine Learning To Monitor 1000's of APIs"/>
+										<WorkAtEvent date="Dec 13, 2019" title="Monitoring Seven Years of Business & Personal Transaction History"/>
+										<WorkAtEvent date="Dec 2, 2019" title="SRE Automation with Machine Learning"/>
+										<WorkAtEvent date="Oct 10, 2019" title="Using Supervised Learning to Detect Anomalies in API Requests"/>
+										<WorkAtEvent date="Aug 23, 2019" title="Introducing the SRE Chatbot: Why we built it & how it works"/>
+										<WorkAtEvent date="Jan 25, 2019" title="How to use machine learning in Elasticsearch"/>
+										<WorkAtEvent date="Jan 11, 2019" title="How to Build Effective ELK Watchers"/>
+										<WorkAtEvent date="Dec 7, 2018" title="Automating Ping Federate Client Promotions"/>
+										<WorkAtEvent date="Nov 9 & 23, 2018" title="Validating Seven–Years of Business Transaction History"/>
 									</WorkAtEventsGroup>
 								</WorkAtEvents>
 							</Section>
@@ -327,16 +327,16 @@ export default function Rbc() {
 
 								<WorkAtPublications>
 									<WorkAtPublication
+										when="Jun 11, 2020"
 										title="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-										when="June 11, 2020"
 									/>
 									<WorkAtPublication
-										title="Building Custom Tools to Automate Seven Years of Transaction History"
 										when="May 1, 2020"
+										title="Building Custom Tools to Automate Seven Years of Transaction History"
 									/>
 									<WorkAtPublication
+										when="Mar 15, 2020"
 										title="Using Supervised Learning to Detect Anomalies in API Requests"
-										when="March 15, 2020"
 									/>
 								</WorkAtPublications>
 							</Section>
