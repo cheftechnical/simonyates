@@ -38,10 +38,15 @@ export default function Contact() {
 		<DefaultLayout title="Contact" top="contact">
 			<Container>
 				<Grid container>
-					<Grid item xs={6}>
+					<Grid item xs={12}>
 						<Typography className={classes.heading} group="primary" variant="h1" weight="regular">
 							Pleasure to meet you.
 						</Typography>
+					</Grid>
+				</Grid>
+
+				<Grid container>
+					<Grid item xs={6}>
 						<Typography className={classes.body} group="primary" variant="body" weight="regular">
 							I&rsquo;m always open to make new connections and chat about software development.
 						</Typography>
