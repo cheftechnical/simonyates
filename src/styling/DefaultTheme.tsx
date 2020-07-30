@@ -84,6 +84,15 @@ const tiemposTextSemibold: CSSProperties = {
 };
 
 const theme = createMuiTheme({
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: 600,
+			md: 960,
+			lg: 1032,   // custom: to match figma
+			xl: 1920,
+		},
+	},
 	overrides: {
 		MuiButton: {
 			root: {
