@@ -218,6 +218,9 @@ const theme = createMuiTheme({
 				},
 				'li:before': {
 
+				},
+				'#root': {
+					height: '100%'
 				}
 			},
 		},
