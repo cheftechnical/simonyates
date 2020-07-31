@@ -17,13 +17,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         height: '100%'
     },
     main: {
-        // marginTop: theme.spacing((96 + 40)/8)
-        // marginTop: theme.spacing(170/8)
         marginTop: theme.spacing(162/8),
         minHeight: '100%'
     },
     fullHeight: {
-        marginTop: rem(-64),
+        marginTop: rem(-48),
         height: '100%'
     }
 }));
