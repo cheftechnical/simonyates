@@ -4,6 +4,7 @@ import {color} from '../../Color';
 
 interface Props {
 	children?: any;
+	className?: any;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -34,9 +35,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Li(props: Props) {
 	const classes = useStyles();
-	const {children} = props;
+	const {children, className} = props;
+
+	const rootClass = (className)
+		? `${classes.li} ${className}`
+		: classes.li
 
 	return (
-		<li className={classes.li}>{children}</li>
+		<li className={rootClass}>{children}</li>
 	);
 };

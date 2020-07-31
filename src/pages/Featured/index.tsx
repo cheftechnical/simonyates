@@ -1,7 +1,7 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 import {Container, Grid} from '@material-ui/core';
-import Publication from './Publication';
+import FeaturedPublication from './FeaturedPublication';
 import Sections from '../../components/Sections';
 import Section from '../../components/Section';
 import NavRight from '../../components/NavRight';
@@ -14,10 +14,28 @@ import SectionTitle from './SectionTitle';
 import SectionDescription from './SectionDescription';
 import Download from './Download';
 import rem from '../../styling/rem';
+import Typography from '../../styling/Typography';
+import FeaturedEvent from './FeaturedEvent';
+import FeaturedEvents from './FeaturedEvents';
+import FeaturedPublications from './FeaturedPublications';
+import {color} from '../../styling/Color';
+import Callout from '../../components/Callout';
+import FeaturedChips from './FeaturedChips';
 
 const useStyles = makeStyles((theme) => ({
 	nextSection: {
 		marginTop: rem(68),
+	},
+	li: {
+		color: color.grey['700'],
+
+		'&:before': {
+			color: color.grey['500']
+		}
+	},
+	typography: {
+		paddingTop: theme.spacing(16 / 8),
+		color: color.grey['700']
 	}
 }));
 
@@ -44,35 +62,34 @@ export default function Featured() {
 									I&rsquo;ve been incredibly lucky to work along some of the brightest minds of North America
 								</SectionDescription>
 
-								<Publication
-									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-									publisher="RBC"
-									tags={['automation', 'custom tooling', 'elasticsearch']}
-									when="June 11, 2020"
-								>
-									<Ul>
-										<Li>Interactive dashboards for monitoring infrastructure</Li>
-										<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-										<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
-									</Ul>
-								</Publication>
+								<FeaturedPublications>
+									<FeaturedPublication
+										name="Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support"
+										publisher="IEEE"
+										tags={['electronic medical record', 'clinical decision support', 'real-time analytics', 'visual analytics', 'data mining']}
+										when="2015"
+									>
+										<Typography className={classes.typography} group="primary" variant="body" weight="regular">
+											Abstract &mdash; We developed a real-time, visual analytics tool for clinical decision support. The system expands the “recall of past experience” approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big-Data techniques, we enable the provider to recall all similar patients from an institution’s electronic medical record (EMR) repository, to explore “what-if” scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern mining.
+										</Typography>
 
-								<Publication
-									next
-									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-									publisher="RBC"
-									tags={['automation', 'custom tooling', 'elasticsearch']}
-									when="June 11, 2020"
-								>
-									<Ul>
-										<Li>Interactive dashboards for monitoring infrastructure</Li>
-										<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-										<Li>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
-									</Ul>
+										<Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf"/>
+									</FeaturedPublication>
 
-									<Download href="/#"/>
-
-								</Publication>
+									<FeaturedPublication
+										next
+										name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
+										publisher="RBC"
+										tags={['automation', 'custom tooling', 'elasticsearch']}
+										when="June 11, 2020"
+									>
+										<Ul>
+											<Li className={classes.li}>Interactive dashboards for monitoring infrastructure</Li>
+											<Li className={classes.li}>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
+											<Li className={classes.li}>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+										</Ul>
+									</FeaturedPublication>
+								</FeaturedPublications>
 							</Section>
 
 							<Section className={classes.nextSection} id="events" name="Events">
@@ -80,26 +97,59 @@ export default function Featured() {
 									Events
 								</SectionTitle>
 
-								<SectionDescription>
-									I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.
-								</SectionDescription>
+								{/*<SectionDescription>*/}
+								{/*	I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.*/}
+								{/*</SectionDescription>*/}
 
-								<Publication
-									name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-									publisher="RBC"
-									tags={['automation', 'custom tooling', 'elasticsearch']}
-									when="June 11, 2020"
-								>
-									<Ul>
-										<Li>Interactive dashboards for monitoring infrastructure</Li>
-										<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-									</Ul>
-									<Figure
-										alt="Placeholder"
-										caption="Here's me at the event"
-										src="/images/featured/events/example/example.png"
-									/>
-								</Publication>
+								<FeaturedEvents>
+									<FeaturedEvent
+										title="Anomaly Detection with Elasticsearch"
+										host="Catalyst/Collision"
+										when="Sep 25, 2019"
+									>
+										<FeaturedChips list={[
+											'talk',
+											'workshop',
+											'machine learning',
+											'anomaly detection'
+										]}
+										/>
+
+										<Ul>
+											<Li className={classes.li}>Talk + Workshop with step-by-step guide handout</Li>
+											<Li className={classes.li}>Demo booth featuring our chatbot</Li>
+										</Ul>
+									</FeaturedEvent>
+
+									<FeaturedEvent
+										next
+										title="Patient-Like-Mine"
+										host="IEEE International Conference on Big Data"
+										when="Oct 29 – Nov 1, 2015"
+									>
+										<Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf" label="Download Paper"/><br/>
+										<Download next href="/downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf" label="Download Program Schedule"/>
+									</FeaturedEvent>
+								</FeaturedEvents>
+
+								{/*<hr/>*/}
+
+								{/*<FeaturedPublication*/}
+								{/*	name="2015 IEEE International Conference on Big Data"*/}
+								{/*	publisher="RBC"*/}
+								{/*	tags={['automation', 'custom tooling', 'elasticsearch']}*/}
+								{/*	when="June 11, 2020"*/}
+								{/*>*/}
+								{/*	<Ul>*/}
+								{/*		<Li>Interactive dashboards for monitoring infrastructure</Li>*/}
+								{/*		<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>*/}
+								{/*	</Ul>*/}
+								{/*	<Figure*/}
+								{/*		alt="Placeholder"*/}
+								{/*		caption="Here's me at the event"*/}
+								{/*		src="/images/featured/events/example/example.png"*/}
+								{/*	/>*/}
+								{/*</FeaturedPublication>*/}
 							</Section>
 						</Sections>
 					</Grid>

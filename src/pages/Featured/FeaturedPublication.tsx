@@ -3,6 +3,7 @@ import {Chip} from '@material-ui/core';
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
+import FeaturedChips from './FeaturedChips';
 
 interface Props {
 	children: any | any[] | never[];
@@ -15,14 +16,9 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		// marginBottom: theme.spacing(40/8),
-		marginLeft: theme.spacing(40/8),
 	},
 	rootNext: {
 		paddingTop: theme.spacing(40/8),
-	},
-	chips: {
-		marginBottom: theme.spacing(24/8)
 	},
 	name: {
 		marginBottom: theme.spacing(16/8),
@@ -34,12 +30,11 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['700']
 	},
 	publisherAndWhen: {
-		marginBottom: theme.spacing(24/8),
 		color: color.grey['600'],
 	}
 }));
 
-export default function Publication(props: Props) {
+export default function FeaturedPublication(props: Props) {
 	const classes = useStyles();
 	const {children, name, next, publisher, tags, when} = props;
 
@@ -49,13 +44,16 @@ export default function Publication(props: Props) {
 
 	return (
 		<div className={rootClass}>
-			<Typography className={classes.name} group="primary" variant="h4" weight="medium">{name}</Typography>
-			<Typography className={classes.publisherAndWhen} group="primary" variant="body" weight="regular">{publisher}, <span className={classes.when}>{when}</span></Typography>
-			<div className={classes.chips}>
-				{tags.map((item, index) => (
-					<Chip key={index} label={item}/>
-				))}
-			</div>
+			<Typography className={classes.name} group="primary" variant="h4" weight="medium">
+				{name}
+			</Typography>
+
+			<Typography className={classes.publisherAndWhen} group="primary" variant="body" weight="regular">
+				{publisher}, <span className={classes.when}>{when}</span>
+			</Typography>
+
+			<FeaturedChips list={tags}/>
+
 			<div className={classes.children}>
 				{children}
 			</div>
