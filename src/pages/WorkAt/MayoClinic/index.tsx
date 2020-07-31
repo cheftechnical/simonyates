@@ -18,6 +18,7 @@ import WorkAtPublication from '../components/WorkAtPublication';
 import WorkAtEvents from '../components/WorkAtEvents';
 import WorkAtEventsGroup from '../components/WorkAtEventsGroup';
 import WorkAtEvent from '../components/WorkAtEvent';
+import Figure from '../../../components/Figure';
 
 export default function MayoClinic() {
 	const [sections, setSections] = React.useState();
@@ -115,6 +116,20 @@ export default function MayoClinic() {
 										<WorkAtEvent date="October 29 — November 1, 2015" title="Santa Clara, CA, USA"/>
 									</WorkAtEventsGroup>
 								</WorkAtEvents>
+							</Section>
+
+							<Section id="recognition" name="Recognition">
+								<WorkAtSectionTitle>
+									Recognition
+								</WorkAtSectionTitle>
+
+								<a href="https://www.elastic.co/elasticon/conf/2016/sf/bringing-healthcare-analytics-to-the-point-of-care-at-mayo-clinic">
+									<Figure
+										alt="Elasticon 2016"
+										caption="Dr. Peter Li acknowledges my help at 43 minutes:"
+										src="/images/work-at/mayo-clinic/elasticon.png"
+									/>
+								</a>
 							</Section>
 						</Sections>
 					</Grid>

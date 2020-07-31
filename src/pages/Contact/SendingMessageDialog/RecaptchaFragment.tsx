@@ -5,6 +5,10 @@ import axios from 'axios';
 import {Message} from '../Message';
 import {makeStyles} from '@material-ui/core/styles';
 
+// https://developers.google.com/recaptcha/docs/display
+// v2
+const recaptchaSiteKey = '6Ldoc7gZAAAAAK-b8CtvPI9W00OkjyouLoxmdwq1';
+
 interface Props {
 	message: Message | undefined;
 	onClose: () => void;
@@ -13,7 +17,6 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		// padding: rem(40),
 		textAlign: 'center'
 	},
 	box: {
@@ -62,7 +65,7 @@ export default function RecaptchaFragment(props: Props) {
 						<Box className={classes.box}>
 							<ReCAPTCHA
 								onChange={handleReCaptchaChange}
-								sitekey="6LfQSKcZAAAAAJCXPWH7aGFHCbUFrapdklKV9JQc"
+								sitekey={recaptchaSiteKey}
 							/>
 						</Box>
 					</Box>
