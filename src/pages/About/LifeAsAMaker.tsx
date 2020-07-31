@@ -6,7 +6,6 @@ import rem from '../../styling/rem';
 import Image from '../../components/Image';
 
 const bodyLineHeight = 24;
-const gutter = 24 / 2;
 
 // -12 because of the grid container gutter
 const useStyles = makeStyles((theme) => ({
@@ -15,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
     },
     h1: {
         lineHeight: rem(88),
-        paddingBottom: rem(24 - gutter),
+        paddingBottom: rem(24),
     },
     h3: {
-        paddingBottom: rem(bodyLineHeight - gutter),
+        paddingBottom: rem(bodyLineHeight),
     },
     body: {
         textAlign: 'justify'
@@ -34,29 +33,32 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: theme.spacing(88/8)
     },
     imageTlc: {
-        paddingLeft: rem(89 - gutter),
+        paddingLeft: rem(88),
     },
     imageGwBasic: {
-        paddingRight: rem(155 - gutter),
+        paddingRight: rem(131),
     },
     imageModelRailroaderMagazine: {
-        paddingLeft: rem(160 - gutter),
-        paddingRight: rem(88 - gutter),
+        paddingLeft: rem(135),
+        paddingRight: rem(88),
     },
     containerLifeAsAMaker: {
-        paddingBottom: rem(139 - gutter),
+        paddingBottom: rem(139),
     },
     containerTlc: {
-        paddingBottom: rem(85 - gutter),
+        paddingBottom: rem(85),
     },
     containerGwBasic: {
-        paddingBottom: rem(152 - gutter),
+        paddingBottom: rem(152),
     },
     containerModelRailroaderMagazine: {
-        paddingBottom: rem(70 - gutter),
+        paddingBottom: rem(70),
     },
     containerSouthernPacificDaylight: {
-        paddingBottom: rem(258 - gutter)
+        paddingBottom: rem(258)
+    },
+    southernPacificDaylightImage: {
+        paddingLeft: rem(30),
     }
 }));
 
@@ -64,7 +66,7 @@ export default function LifeAsAMaker() {
     const classes = useStyles();
 
     return (
-        <Container className={classes.root}>
+        <Container className={classes.root} disableGutters>
             {/* Life as a maker*/}
             <Grid container spacing={3}>
                 <Grid item xs={6}/>
@@ -179,7 +181,7 @@ export default function LifeAsAMaker() {
                 </Grid>
                 <Grid item xs={6}/>
             </Grid>
-            <Grid container className={classes.containerModelRailroaderMagazine} spacing={0}>
+            <Grid container className={classes.containerModelRailroaderMagazine} spacing={3}>
                 <Grid item xs={6}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         It was around this time that I also started getting into model trains. <em>Model Railroader
@@ -212,7 +214,9 @@ export default function LifeAsAMaker() {
             <Grid container className={classes.containerSouthernPacificDaylight} spacing={3}>
                 <Grid item xs={3}/>
                 <Grid item xs={9}>
-                    <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
+                    <div className={classes.southernPacificDaylightImage}>
+                        <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
+                    </div>
                 </Grid>
             </Grid>
         </Container>
