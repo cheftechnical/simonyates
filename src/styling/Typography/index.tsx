@@ -101,7 +101,8 @@ const primary_h4_semibold: CSSProperties = {
 
 	fontFamily: '"Tiempos Text Semibold"',
 	fontStyle: 'normal',
-	fontWeight: 600,
+	// fontWeight: 600,
+	fontWeight: 500,
 	fontSize: rem(16),
 	lineHeight: rem(24),
 	letterSpacing: rem(0.5),
