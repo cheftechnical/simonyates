@@ -28,5 +28,8 @@ export const color = {
 			'10%': '#F8FAEF'
 		}
 	},
+	red: {
+		500: '#A93030'
+	},
 	white: '#FFFFFF'
-}
+};

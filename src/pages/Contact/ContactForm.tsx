@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {TextField} from '@material-ui/core';
 import {Controller, useForm} from 'react-hook-form';
 import SendIcon from '@material-ui/icons/Send';
 import {Message} from './Message';
 import {makeStyles} from '@material-ui/core/styles';
 import ButtonContained from '../../styling/ButtonContained';
+import MyTextField from '../../styling/MyTextField';
 
 interface Props {
 	onSubmit: (data: Message) => void;
@@ -26,9 +26,9 @@ export default function ContactForm(props: Props) {
 		<div>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Controller
-					as={<TextField
-						fullWidth
-						required
+					as={<MyTextField
+						error={!!errors.name}
+						helperText={errors.name ? 'This name field is required' : undefined}
 						placeholder="Name"
 					/>}
 					name="name"
@@ -36,9 +36,9 @@ export default function ContactForm(props: Props) {
 					rules={{required: true}}
 				/>
 				<Controller
-					as={<TextField
-						fullWidth
-						required
+					as={<MyTextField
+						error={!!errors.emailAddress}
+						helperText={errors.emailAddress ? 'Your email address is required' : undefined}
 						placeholder="Email"
 					/>}
 					name="emailAddress"
@@ -47,9 +47,9 @@ export default function ContactForm(props: Props) {
 					rules={{required: true}}
 				/>
 				<Controller
-					as={<TextField
-						fullWidth
-						required
+					as={<MyTextField
+						error={!!errors.subject}
+						helperText={errors.subject ? 'The subject field is required' : undefined}
 						placeholder="Subject"
 					/>}
 					name="subject"
@@ -57,10 +57,10 @@ export default function ContactForm(props: Props) {
 					rules={{required: true}}
 				/>
 				<Controller
-					as={<TextField
-						fullWidth
+					as={<MyTextField
+						error={!!errors.body}
 						multiline
-						required
+						helperText={errors.body ? 'This name field is required' : undefined}
 						placeholder="Message"
 						rows={7}
 					/>}
@@ -68,16 +68,6 @@ export default function ContactForm(props: Props) {
 					control={control}
 					rules={{required: true}}
 				/>
-
-				{/*<Button*/}
-				{/*	disableRipple*/}
-				{/*	className={classes.button}*/}
-				{/*	endIcon={<SendIcon/>}*/}
-				{/*	type="submit"*/}
-				{/*	variant="contained"*/}
-				{/*>*/}
-				{/*	Send*/}
-				{/*</Button>*/}
 
 				<ButtonContained
 					className={classes.button}

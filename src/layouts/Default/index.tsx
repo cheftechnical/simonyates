@@ -1,29 +1,43 @@
 import React from 'react';
 import NavTop from './NavTop';
 import Footer from './Footer';
-import {Helmet} from 'react-helmet';
-import {makeStyles} from '@material-ui/core/styles';
+import {Helmet} from 'react-helmet-async';
+import {makeStyles, Theme} from '@material-ui/core/styles';
+import rem from '../../styling/rem';
 
 interface Props {
     children: any;
+    fullHeight?: boolean;
     title?: string;
     top?: string;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
+    root: {
+        height: '100%'
+    },
     main: {
         // marginTop: theme.spacing((96 + 40)/8)
         // marginTop: theme.spacing(170/8)
-        marginTop: theme.spacing(162/8)
+        marginTop: theme.spacing(162/8),
+        minHeight: '100%'
+    },
+    fullHeight: {
+        marginTop: rem(-64),
+        height: '100%'
     }
 }));
 
 export default function DefaultLayout(props: Props) {
     const classes = useStyles();
-    const {children, title, top} = props;
+    const {children, fullHeight, title, top} = props;
+
+    const mainClass = (fullHeight)
+        ? `${classes.main} ${classes.fullHeight}`
+        : classes.main;
 
     return (
-        <div>
+        <div className={classes.root}>
             <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
                 <title>{title}</title>
             </Helmet>
@@ -32,7 +46,7 @@ export default function DefaultLayout(props: Props) {
                 <NavTop selected={top}/>
             </header>
 
-            <main className={classes.main}>
+            <main className={mainClass}>
                 {children}
             </main>
 

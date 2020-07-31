@@ -222,11 +222,8 @@ const theme = createMuiTheme({
 					marginLeft: '0px',
 					paddingLeft: '15px',
 				},
-				'li': {
-
-				},
-				'li:before': {
-
+				'#root': {
+					height: '100%'
 				}
 			},
 		},
@@ -236,6 +233,7 @@ const theme = createMuiTheme({
 			}
 		},
 		MuiInput: {
+
 			underline: {
 				// Indent the value of the text field
 				paddingTop: rem(10),
@@ -269,6 +267,19 @@ const theme = createMuiTheme({
 						borderBottomStyle: 'solid',
 						borderBottomColor: color.grey['200']
 					}
+				},
+
+				'&$error': {
+					'& .MuiInputBase-input': {
+						color: color.red['500']
+					},
+					'& .MuiInputAdornment-root': {
+						color: color.red['500']
+					}
+				},
+
+				'&$error:after': {
+					borderBottomColor: color.red['500']
 				}
 			}
 		},
@@ -280,6 +291,10 @@ const theme = createMuiTheme({
 
 				'&$disabled': {
 					color: color.grey['200'],
+				},
+
+				'&$error': {
+					color: color.red['500']
 				}
 			},
 		},
