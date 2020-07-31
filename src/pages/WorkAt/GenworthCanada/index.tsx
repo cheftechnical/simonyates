@@ -13,6 +13,7 @@ import Typography from '../../../styling/Typography';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Callout from '../../../components/Callout';
+import WorkAtProject from '../components/WorkAtProject';
 
 export default function GenworthCanada() {
 	const [sections, setSections] = React.useState();
@@ -50,10 +51,10 @@ export default function GenworthCanada() {
 									Helped the team get rapidly up-to-speed with Elasticsearch:
 								</Typography>
 								<Ul>
-									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but uses different spelling</Li>
-									<Li>Hosted regular Lunch-and-Learn events on Elasticsearch and demonstrated its applications</Li>
-									<Li>Saved the company tens of thousands annually by identifying an area of improvement that eliminated the need for a third-party vendor service</Li>
-									<Li>Was known as the &ldquo;go-to-guy&rdquo; regarding all things Elasticsearch</Li>
+									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but use different spelling</Li>
+									<Li>Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its applications</Li>
+									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement—it eliminated the need for a third-party vendor service</Li>
+									<Li>Became the &ldquo;go-to-guy&rdquo; on all things Elasticsearch</Li>
 								</Ul>
 							</Section>
 
@@ -62,8 +63,17 @@ export default function GenworthCanada() {
 									About The Project
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									<em>Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect "red-flag" indicators of fraud from customer applications.</em>
+									<em>Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer applications.</em>
 								</Typography>
+
+								<WorkAtProject next name="Finding Duplicates"/>
+								<Typography next group="primary" variant="body" weight="regular">
+									I was hired based on my previous experience with Elasticsearch, but finding ways of removing dependencies on vendor services was not something I was expected to do. It was only after I got involved in the project and learned about their use case that I saw an opportunity to suggest a better way of doing things.
+								</Typography>
+								<Typography next group="primary" variant="body" weight="regular">
+									Using several state-of-the-art features of Elasticsearch, I was able to prototype a solution that effectively replaced a dependency on one of their key data analytics vendors, saving Genworth 10&rdquo;s of thousands of dollars annually!
+								</Typography>
+
 								<Callout list={[
 									'Node.js + Express w/ socket.io',
 									'Extjs',
@@ -71,15 +81,6 @@ export default function GenworthCanada() {
 									'MQTT',
 									'Selenium'
 								]}/>
-								<Typography group="primary" variant="body" weight="regular">
-									Finding Duplicates
-								</Typography>
-								<Typography group="primary" variant="body" weight="regular">
-									I was hired based on my previous experience with Elasticsearch, but finding ways of removing dependencies on vendor services was not something I was expected to do. It was only after I got involved in the project and learned about their use case that I saw an opportunity to suggest a better way of doing things.
-								</Typography>
-								<Typography group="primary" variant="body" weight="regular">
-									Using several state-of-the-art features of Elasticsearch, I was able to prototype a solution that effectively replaced a dependency on one of their key data analytics vendors, saving Genworth 10's of thousands of dollars annually!
-								</Typography>
 							</Section>
 
 							<Section id="recognition" name="Recognition">
@@ -87,9 +88,9 @@ export default function GenworthCanada() {
 									Recognition
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									<em>&ldquo;Simon has been critical in helping the team in adding technologies like NodeJS, ElasticSearch, and ExtJS to the Path technology stack building on his past experiences.&rdquo;</em>
+									<em>&ldquo;Simon has been critical in helping the team in adding technologies like Node.js, Elasticsearch, and ExtJS to the Path technology stack building on his past experiences.&rdquo;</em>
 								</Typography>
-								<Typography group="primary" variant="body" weight="regular">
+								<Typography next group="primary" variant="body" weight="regular">
 									— Michael Rossi, Product Manager, Genworth Canada (contractor)
 								</Typography>
 							</Section>

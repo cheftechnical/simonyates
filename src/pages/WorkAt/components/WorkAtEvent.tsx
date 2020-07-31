@@ -5,21 +5,29 @@ import rem from '../../../styling/rem';
 
 interface Props {
 	date: string;
+	next?: boolean;
 	title: string;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
-		paddingTop: rem(16),
+		paddingTop: 0,
 	},
+	next: {
+		paddingTop: rem(16),
+	}
 }));
 
 export default function WorkAtEvent(props: Props) {
 	const classes = useStyles();
-	const {date, title} = props;
+	const {date, next, title} = props;
+
+	const className = (next)
+		? `${classes.root} ${classes.next}`
+		: classes.root;
 
 	return (
-		<div className={classes.root}>
+		<div className={className}>
 			<Typography group="primary" variant="body" weight="regular">
 				{date} &bull; {title}
 			</Typography>

@@ -55,11 +55,11 @@ export default function MayoClinic() {
 								</WorkAtSectionTitle>
 
 								<Ul>
-									<Li>Co-authored "Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support" and poster presentation for the 2015 IEEE International Conference on Big Data</Li>
+									<Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big Data</Li>
 									<Li>Built software to visualize and analyze patient medical data for clinical decision support</Li>
 									<Li>Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch documents</Li>
-									<Li>Re-wrote experimental prototype software for production use</Li>
-									<Li>Optimized Elasticsearch queries for speed and search-ability </Li>
+									<Li>Re-wrote experimental prototype software for production</Li>
+									<Li>Optimized Elasticsearch queries for speed and searchability</Li>
 								</Ul>
 							</Section>
 
@@ -69,7 +69,7 @@ export default function MayoClinic() {
 								</WorkAtSectionTitle>
 
 								<Typography group="primary" variant="body" weight="regular">
-									The Patient Like Mine project was a real-time, visual analytics tool for clinical decision support. The System expands the "recall of past experience" approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big Data techniques, we enable the provider to recall all similar patients from an institution's electronic medical record (EMR) repository, to explore "what-if" scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern mining.
+									The Patient Like Mine project was a real-time, visual analytics tool for clinical decision support. The System expands the &ldquo;recall of past experience&rdquo; approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big Data techniques, we enable the provider to recall all similar patients from an institution&rdquo;s electronic medical record (EMR) repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern mining.
 								</Typography>
 
 								<Callout list={[
@@ -99,9 +99,9 @@ export default function MayoClinic() {
 								<WorkAtPublications>
 									<WorkAtPublication
 										author="P. Li, S. Yates, J. Lovely, D. Larson"
+									 	date="2015"
 										publisher="IEEE"
 										title="Patient Like Mine: A Real Time, Visual Analytics Tool For Clinical Decision Support"
-									 	when="2015"
 									/>
 								</WorkAtPublications>
 							</Section>
@@ -113,7 +113,10 @@ export default function MayoClinic() {
 
 								<WorkAtEvents>
 									<WorkAtEventsGroup name="IEEE Big Data Conference">
-										<WorkAtEvent date="October 29 — November 1, 2015" title="Santa Clara, CA, USA"/>
+										<WorkAtEvent
+											date="October 29 — November 1, 2015"
+											title="Santa Clara, CA, USA"
+										/>
 									</WorkAtEventsGroup>
 								</WorkAtEvents>
 							</Section>

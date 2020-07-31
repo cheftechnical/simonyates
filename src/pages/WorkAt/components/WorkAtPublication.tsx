@@ -5,20 +5,24 @@ import rem from '../../../styling/rem';
 
 interface Props {
 	author?: string;
+	next?: boolean;
 	publisher?: string;
 	title: string;
-	when: string;
+	date: string;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
-		paddingTop: rem(16),
+		paddingTop: 0,
 	},
+	next: {
+		paddingTop: rem(16),
+	}
 }));
 
 export default function WorkAtPublication(props: Props) {
 	const classes = useStyles();
-	const {author, publisher, title, when} = props;
+	const {author, next, publisher, title, date} = props;
 
 	const renderedTitle = React.useMemo(() => {
 		const words = title.split(' ');
@@ -40,10 +44,14 @@ export default function WorkAtPublication(props: Props) {
 		? <React.Fragment>, {publisher}</React.Fragment>
 		: <React.Fragment/>;
 
+	const className = (next)
+		? `${classes.root} ${classes.next}`
+		: classes.root;
+
 	return (
-		<div className={classes.root}>
+		<div className={className}>
 			<Typography group="primary" variant="body" weight="regular">
-				{renderedAuthor}{when}. {renderedTitle}{renderedPublisher}
+				{renderedAuthor}{date}. {renderedTitle}{renderedPublisher}
 			</Typography>
 		</div>
 	);

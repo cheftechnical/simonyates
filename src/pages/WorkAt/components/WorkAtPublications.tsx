@@ -4,21 +4,28 @@ import rem from '../../../styling/rem';
 
 interface Props {
 	children?: any;
+	next?: boolean;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		paddingLeft: rem(40),
-		paddingTop: rem(40),
 	},
+	next: {
+		paddingTop: rem(40),
+	}
 }));
 
 export default function WorkAtPublications(props: Props) {
 	const classes = useStyles();
-	const {children} = props;
+	const {children, next} = props;
+
+	const className = (next)
+		? `${classes.root} ${classes.next}`
+		: classes.root;
 
 	return (
-		<div className={classes.root}>
+		<div className={className}>
 			{children}
 		</div>
 	);

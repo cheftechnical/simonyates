@@ -7,7 +7,7 @@ interface Props {
     children?: any | any[];
     name: string;
     next?: boolean;
-    when: string;
+    when?: string;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -31,9 +31,13 @@ export default function WorkAtProject(props: Props) {
         ? `${classes.root} ${classes.next}`
         : `${classes.root}`
 
+    const optionalWhen = (when)
+        ? <React.Fragment>, {when}</React.Fragment>
+        : <React.Fragment/>;
+
     return (
         <div className={className}>
-            <Typography className={classes.nameAndWhen} group="primary" variant="h4" weight="semibold">{name}, {when}</Typography>
+            <Typography className={classes.nameAndWhen} group="primary" variant="h4" weight="semibold">{name}{optionalWhen}</Typography>
             <div>{children}</div>
         </div>
     );

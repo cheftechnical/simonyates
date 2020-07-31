@@ -11,7 +11,7 @@ interface Props {
 const useStyles = makeStyles((theme) => ({
     root: {
         marginTop: theme.spacing(24/8),
-        marginBottom: theme.spacing(24/8),
+        // marginBottom: theme.spacing(24/8),
         padding: theme.spacing(8/8),
         backgroundColor: color.limeWithOpacity['500']['10%'],
         textAlign: 'center'
@@ -21,6 +21,50 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+interface DelimiterProps {
+    index: number;
+    length: number;
+}
+
+
+/**
+ * This Delimiter component will add a bullet between items.
+ *
+ * The component defends against orphans.
+ *
+ * @param props
+ * @constructor
+ */
+function Delimiter(props: DelimiterProps) {
+    const {index, length} = props;
+
+    // Don't append a delimiter to the last item
+    if (index === length - 1) {
+        return (
+            <React.Fragment/>
+        );
+    }
+
+    // Prevent orphan of 2nd-last item
+    if (index === length - 2) {
+        return (
+            <React.Fragment>&nbsp;&bull;&nbsp;</React.Fragment>
+        );
+    }
+
+    // Render all other items normally
+    return (
+        <span> &bull; </span>
+    );
+}
+
+
+/**
+ * Main callout component
+ *
+ * @param props
+ * @constructor
+ */
 export default function Callout(props: Props) {
     const classes = useStyles();
     const {children, list} = props;
@@ -30,7 +74,7 @@ export default function Callout(props: Props) {
 
         return list.map((item, index) => (
             <span key={index}>
-                {item}{(index < list.length - 1) ? <span> &bull; </span>: ''}
+                {item}<Delimiter index={index} length={list.length}/>
             </span>
         ));
 

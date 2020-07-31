@@ -40,13 +40,12 @@ export default function Rbc() {
 							<Section id="intro" name="Intro">
 								<WorkAtHeader
 									employer="RBC"
-									role="Full-Stack Developer, API Site Reliability Engineering"
+									role="Full-Stack Developer, Site Reliability Engineering"
 									when="July 2018 to Present"
 									where="Toronto, Canada"
 								/>
 								<WorkAtDescription>
-									The Royal Bank of Canada (RBC) is the largest bank in Canada by asset value, with
-									over 80,000 employees worldwide.
+									The Royal Bank of Canada (RBC) is the largest bank in Canada by asset value, with over 80,000 employees worldwide.
 								</WorkAtDescription>
 							</Section>
 
@@ -58,19 +57,11 @@ export default function Rbc() {
 								<WorkAtProjects>
 									<WorkAtProject name="SRE Global Dashboard" when="2019–Present">
 										<Typography group="primary" variant="body" weight="regular">
-											The SRE Global Dashboard is a collection of dashboards that were designed to
-											be accessed by everyone within RBC. Directors, product managers and
-											engineers rely on this data to  monitor the availability of more than 600
-											APIs and applications.
+											The <em>SRE Global Dashboard</em> is a collection of dashboards that were designed to be accessed by everyone within RBC. Directors, product managers and engineers rely on this data to  monitor the availability of more than 600 APIs and applications.
 										</Typography>
 
 										<Typography next group="primary" variant="body" weight="regular">
-											I conceptualized the idea of this project after we (the SRE team) exhausted
-											the capabilities of the Elastic Kibana platform. Kibana is great for rapid
-											visualization of data, but there are significant limitations in the types of
-											reporting it can do. I designed and created a stand-alone application that
-											handles these reports which allowed us to have more control over the way
-											data is presented.
+											I conceptualized the idea of this project after we (the SRE team) exhausted the capabilities of the Elastic Kibana platform. Kibana is great for rapid visualization of data, but there are significant limitations in the types of reporting it can do. I designed and created a stand-alone application that handles these reports which allowed us to have more control over the way data is presented.
 										</Typography>
 
 										<Callout list={[
@@ -82,32 +73,20 @@ export default function Rbc() {
 
 										<Ul>
 											<Li>
-												Interactive series of dashboards for monitoring infrastructure. Know
-												what services are working and how well they&rsquo;re performing.
+												Interactive series of dashboards for monitoring infrastructure. Know what services are working and how well they&rsquo;re performing.
 											</Li>
 											<Li>
-												An organized, real-time view of hundreds of servers across multiple data
-												centers. This was an essential tool during a zero-downtime system
-												upgrade, as it allowed the SRE team to be sure that traffic was routed
-												correctly.
+												An organized, real-time view of hundreds of servers across multiple data centers. This was an essential tool during a zero-downtime system upgrade, as it allowed the SRE team to be sure that traffic was routed correctly.
 											</Li>
 											<Li>
-												Real-time monitoring of critical infrastructure which the SRE team has
-												an SLA requiring it to provide five-nines availability (99.999%) for the
-												bank.
+												Real-time monitoring of critical infrastructure which the SRE team has an SLA requiring it to provide five-nines availability (99.999%) for the bank.
 											</Li>
 										</Ul>
 									</WorkAtProject>
 
 									<WorkAtProject next name="Seven Years of Transaction Data" when="2019–Present">
 										<Typography group="primary" variant="body" weight="regular">
-											Before this software project began, I fought for certain architectural
-											changes that would ensure Elasticsearch could function at scale. The project
-											was already well underway before I got involved; it was built by a team
-											other than my own and I was relatively new at RBC. So it was an uphill
-											battle right from the start, but I prevailed. The changes I proposed were
-											later implemented and they increased performance and reliability of the
-											service as a result.
+											Before this software project began, I fought for certain architectural changes that would ensure Elasticsearch could function at scale. The project was already well underway before I got involved; it was built by a team other than my own and I was relatively new at RBC. So it was an uphill battle right from the start, but I prevailed. The changes I proposed were later implemented and they increased performance and reliability of the service as a result.
 										</Typography>
 
 										<Callout list={[
@@ -118,46 +97,34 @@ export default function Rbc() {
 
 										<Ul>
 											<Li>
-												Recommended changes to existing infrastructure that increased
-												reliability of the API
+												Recommended changes to existing infrastructure that increased reliability of the API
 											</Li>
 											<Li>
-												Built a script that reconciled over 21–billion financial transactions
-												to ensure correctness
+												Built a script that reconciled over 21–billion financial transactions to ensure correctness
 											</Li>
 											<Li>
-												Designed self-healing tools that would automatically respond to known
-												failure modes
+												Designed self-healing tools that would automatically respond to known failure modes
 											</Li>
 											<Li>
-												Built tools that automate monthly maintenance activities. Reduced the
-												time that engineers spend each month for maintenance by x% {/* @todo calculate value */}
+												Built tools that automate monthly maintenance activities. Reduced the time that engineers spend each month for maintenance by 12 hrs
 											</Li>
 											<Li>
-												Built a functional prototype that optimizes Elasticsearch queries to
-												prevent over 4,000 failed search queries each month
+												Built a functional prototype that optimizes Elasticsearch queries to prevent over 4,000 failed search queries each month
 											</Li>
 										</Ul>
 									</WorkAtProject>
 
 									<WorkAtProject next name="Chatbot" when="2019–Present">
 										<Typography group="primary" variant="body" weight="regular">
-											The SRE team receives [{/* @todo calculate value */}] emails every day, many
-											of which are internal customers asking the same general questions, but are
-											specific to their APIs. These customers expected an immediate answer, but
-											the team was not large enough to provide an immediate response.
+											The SRE team receives dozens of emails every day, many of which are internal customers asking the same general questions, but are specific to their APIs. These customers expected an immediate answer, but the team was not large enough to provide an immediate response.
 										</Typography>
 
 										<Typography next group="primary" variant="body" weight="regular">
-											RBC&rsquo;s official Chatbot vendor (the one you'll use on rbc.com), was not
-											capable of providing real-time answers from different sources and could only
-											respond with pre-composed messages.
+											RBC&rsquo;s official Chatbot vendor (the one you'll use on rbc.com), was not capable of providing real-time answers from different sources and could only respond with pre-composed messages.
 										</Typography>
 
 										<Typography next group="primary" variant="body" weight="regular">
-											I built the chatbot from the ground-up to respond to these questions, and
-											answers were sourced from a variety of APIs to provide real-time metrics in
-											its response.
+											I built the chatbot from the ground-up to respond to these questions, and answers were sourced from a variety of APIs to provide real-time metrics in its response.
 										</Typography>
 
 										<Callout list={[
@@ -167,12 +134,10 @@ export default function Rbc() {
 
 										<Ul>
 											<Li>
-												I built a chatbot from scratch to help the team spend less time
-												answering common questions from internal customers
+												I built a chatbot from scratch to help the team spend less time answering common questions from internal customers
 											</Li>
 											<Li>
-												Uses TF-IDF for token vectorization and the named–entity resolution
-												(NER) from spaCy
+												Uses TF-IDF for token vectorization and the named–entity resolution (NER) from spaCy
 											</Li>
 											<Li>
 												Made the chatbot answer questions using real–time data in its response
@@ -182,10 +147,7 @@ export default function Rbc() {
 
 									<WorkAtProject next name="OAuth Client Creator for RBC Capital Markets" when="2020–Present">
 										<Typography group="primary" variant="body" weight="regular">
-											PingFederate&rsquo;s API system does not support access control layers which
-											are necessary to control who can manage OAuth client IDs. I built a system
-											to provide this level of control over-top of PingFederate&rsquo;s existing
-											core APIs.
+											PingFederate&rsquo;s API system does not support access control layers which are necessary to control who can manage OAuth client IDs. I built a system to provide this level of control over-top of PingFederate&rsquo;s existing core APIs.
 										</Typography>
 
 										<Typography next group="primary" variant="body" weight="regular">
@@ -194,8 +156,7 @@ export default function Rbc() {
 
 										<Ul>
 											<Li>
-												Streamline creation and approval of OAuth clients,
-												minimizing&nbsp;errors
+												Streamline creation and approval of OAuth clients, minimizing errors
 											</Li>
 											<Li>
 												Added an access control layer to our PingFederate infrastructure
@@ -214,26 +175,18 @@ export default function Rbc() {
 								</WorkAtSectionTitle>
 
 								<Typography group="primary" variant="body" weight="regular">
-									I used machine learning libraries in Python to automate some of the activities
-									supported by the SRE team. Many of these uses are described above, but some of the
-									key highlights include:
+									I used machine learning libraries in Python to automate some of the activities supported by the SRE team. Many of these uses are described above, but some of the key highlights include:
 								</Typography>
 
 								<Ul>
 									<Li>
-										Developed a chatbot from scratch to answer common questions and provide answers
-										using real-time infrastructure metrics (e.g. &ldquo;Is service [x] down?&rdquo;
-										or &ldquo;Whats the TPS for [thing]&rdquo;)
+										Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. &ldquo;Is service [x] down?&rdquo; or &ldquo;Whats the TPS for [thing]&rdquo;)
 									</Li>
 									<Li>
-										Used NLP via TF–IDF to automatically label reports about previous incidents to
-										help identify areas for improvement
+										Used NLP via TF-IDF to automatically label reports about previous incidents to help identify areas for improvement
 									</Li>
 									<Li>
-										Developed feature-embedded model that optimizes disk space and makes it possible
-										to store years worth of historical logs while preserving entropy. Terabytes of
-										data were reduced to mere gigabytes; without this embedding, we were forced to
-										purge the data after a short period of time.
+										Developed feature-embedded model that optimizes disk space and makes it possible to store years worth of historical logs while preserving entropy. Terabytes of data were reduced to mere gigabytes; without this embedding, we were forced to purge the data after a short period of time.
 									</Li>
 								</Ul>
 							</Section>
@@ -246,13 +199,7 @@ export default function Rbc() {
 								<WorkAtProjects>
 									<WorkAtProject name="Cost Chargeback Model" when="2019–Present">
 										<Typography group="primary" variant="body" weight="regular">
-											In 2020, the SRE team moved to a chargeback costing model. Costs for the
-											services supported by the team were often a mix of direct and shared costs.
-											The pricing model I designed used API request logs to weigh the fixed and
-											variable costs associated each service and provide a total service costs to
-											each business unit. The results from this model were updated in real-time
-											and displayed in the SRE Global Dashboard.
-											{/*In summary, I:*/}
+											In 2020, the SRE team moved to a chargeback costing model. Costs for the services supported by the team were often a mix of direct and shared costs. The pricing model I designed used API request logs to weigh the fixed and variable costs associated each service, then provide a total service costs to each business unit. The results from this model were updated in real-time and displayed in the <em>SRE Global Dashboard</em>.
 										</Typography>
 
 										<Callout list={[
@@ -265,15 +212,13 @@ export default function Rbc() {
 
 										<Ul>
 											<Li>
-												Developed a charge back model that weighs department costs to internal
-												customers
+												Developed a charge back model that weighs department costs to internal customers
 											</Li>
 											<Li>
 												Costing reports were published in the <em>SRE Global Dashboard</em>
 											</Li>
 											<Li>
-												Provided a solution that was easily understood and explainable to
-												stakeholders
+												Provided a solution that was easily understood and explainable to stakeholders
 											</Li>
 										</Ul>
 									</WorkAtProject>
@@ -286,40 +231,37 @@ export default function Rbc() {
 								</WorkAtSectionTitle>
 
 								<Typography group="primary" variant="body" weight="regular">
-									I frequently create presentations about the different projects that I&rsquo;m
-									working on for our bi-weekly town hall. In 2019, I also hosted an interactive
-									workshop in partnership with Elastic on machine learning for <em>Catalyst</em>,
-									which is an RBC–specific event taking place during the week of Toronto&rsquo;s
-									popular technology event: <em>Collision</em>.
+									I frequently create presentations about the different projects that I&rdquo;m working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for <em>Catalyst</em>, which is an RBC–specific event taking place during the week of Toronto&rdquo;s popular technology event: <em>Collision</em>.
 								</Typography>
 
 								<WorkAtEvents>
-									<WorkAtEventsGroup name="10KC">
-										<WorkAtEvent date="Jul 24, 2020" title="Everyday NLP"/>
+									<WorkAtEventsGroup next name="10KC">
+										<WorkAtEvent next date="Jul 24, 2020" title="Everyday NLP"/>
 									</WorkAtEventsGroup>
 
-									<WorkAtEventsGroup name="Catalyst/Collision">
-										<WorkAtEvent date="Sep 2020" title="Rapid Automation by SRE"/>
-										<WorkAtEvent date="Sep 25, 2019" title="Anomaly Detection with Elasticsearch: Talk + Workshop with step-by-step guide handout and a demo booth featuring our chatbot"/>
+									<WorkAtEventsGroup next name="Catalyst/Collision">
+										<WorkAtEvent next date="Sep 2020" title="Rapid Automation by SRE"/>
+										<WorkAtEvent next date="Sep 25, 2019" title="Anomaly Detection with Elasticsearch: Talk + Workshop with step-by-step guide handout and a demo booth featuring our chatbot"/>
 									</WorkAtEventsGroup>
 
-									<WorkAtEventsGroup name="Town Hall">
-										<WorkAtEvent date="May 13, 2020" title="Seven–Year Transaction History Automation"/>
-										<WorkAtEvent date="Mar 25, 2020" title="Introducing the SRE Chargeback Model"/>
-										<WorkAtEvent date="Feb 2 & 27, 2020" title="Five–Nines Monitoring and Automation"/>
-										<WorkAtEvent date="Jan 31, 2020" title="Monitoring Five–Nines Availability"/>
-										<WorkAtEvent date="Jan 20, 2020" title="How the SRE Team Uses Machine Learning To Monitor 1000's of APIs"/>
-										<WorkAtEvent date="Dec 13, 2019" title="Monitoring Seven Years of Business & Personal Transaction History"/>
-										<WorkAtEvent date="Dec 2, 2019" title="SRE Automation with Machine Learning"/>
-										<WorkAtEvent date="Oct 10, 2019" title="Using Supervised Learning to Detect Anomalies in API Requests"/>
-										<WorkAtEvent date="Aug 23, 2019" title="Introducing the SRE Chatbot: Why we built it & how it works"/>
-										<WorkAtEvent date="Jan 25, 2019" title="How to use machine learning in Elasticsearch"/>
-										<WorkAtEvent date="Jan 11, 2019" title="How to Build Effective ELK Watchers"/>
-										<WorkAtEvent date="Dec 7, 2018" title="Automating Ping Federate Client Promotions"/>
-										<WorkAtEvent date="Nov 9 & 23, 2018" title="Validating Seven–Years of Business Transaction History"/>
+									<WorkAtEventsGroup next name="Town Hall">
+										<WorkAtEvent next date="May 13, 2020" title="Seven–Year Transaction History Automation"/>
+										<WorkAtEvent next date="Mar 25, 2020" title="Introducing the SRE Chargeback Model"/>
+										<WorkAtEvent next date="Feb 2 & 27, 2020" title="Five–Nines Monitoring and Automation"/>
+										<WorkAtEvent next date="Jan 31, 2020" title="Monitoring Five–Nines Availability"/>
+										<WorkAtEvent next date="Jan 20, 2020" title="How the SRE Team Uses Machine Learning To Monitor 1000's of APIs"/>
+										<WorkAtEvent next date="Dec 13, 2019" title="Monitoring Seven Years of Business & Personal Transaction History"/>
+										<WorkAtEvent next date="Dec 2, 2019" title="SRE Automation with Machine Learning"/>
+										<WorkAtEvent next date="Oct 10, 2019" title="Using Supervised Learning to Detect Anomalies in API Requests"/>
+										<WorkAtEvent next date="Aug 23, 2019" title="Introducing the SRE Chatbot: Why we built it & how it works"/>
+										<WorkAtEvent next date="Jan 25, 2019" title="How to use machine learning in Elasticsearch"/>
+										<WorkAtEvent next date="Jan 11, 2019" title="How to Build Effective ELK Watchers"/>
+										<WorkAtEvent next date="Dec 7, 2018" title="Automating Ping Federate Client Promotions"/>
+										<WorkAtEvent next date="Nov 9 & 23, 2018" title="Validating Seven–Years of Business Transaction History"/>
 									</WorkAtEventsGroup>
 								</WorkAtEvents>
 							</Section>
+
 							<Section id="section-5" name="Publications">
 								<WorkAtSectionTitle>
 									Publications
@@ -327,15 +269,17 @@ export default function Rbc() {
 
 								<WorkAtPublications>
 									<WorkAtPublication
-										when="Jun 11, 2020"
+										date="Jun 11, 2020"
 										title="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
 									/>
 									<WorkAtPublication
-										when="May 1, 2020"
+										next
+										date="May 1, 2020"
 										title="Building Custom Tools to Automate Seven Years of Transaction History"
 									/>
 									<WorkAtPublication
-										when="Mar 15, 2020"
+										next
+										date="Mar 15, 2020"
 										title="Using Supervised Learning to Detect Anomalies in API Requests"
 									/>
 								</WorkAtPublications>
@@ -347,8 +291,7 @@ export default function Rbc() {
 								</WorkAtSectionTitle>
 								<Ul>
 									<Li>
-										Optimized feature embedding to reduce terabytes to a few gigs for efficient
-										machine learning
+										Optimized feature embedding to reduce terabytes to a few gigs for efficient machine learning
 									</Li>
 								</Ul>
 							</Section>

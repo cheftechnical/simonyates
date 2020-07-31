@@ -44,7 +44,7 @@ export default function UnchartedSoftware() {
 								</WorkAtDescription>
 
 								<Typography group="primary" variant="body" weight="regular">
-									Due to the sensitivity of work involved, certain details listed below have been obfuscated or redacted.
+									<em>Due to the sensitivity of work involved, certain details listed below have been obfuscated or redacted.</em>
 								</Typography>
 							</Section>
 
@@ -83,7 +83,7 @@ export default function UnchartedSoftware() {
 										]}/>
 
 										<Ul>
-											<Li>Optimized Elasticsearch model for improved query response time and search-ability</Li>
+											<Li>Optimized Elasticsearch model for improved query response time and searchability</Li>
 											<Li>Used NLP and named entity recognition (NER) via spaCy to extract data from unstructured and semi-structured data</Li>
 											<Li>Refactored legacy Java code to Scala with rich set of unit tests</Li>
 										</Ul>
