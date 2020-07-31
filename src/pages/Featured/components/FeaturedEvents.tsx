@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../styling/rem';
+import rem from '../../../styling/rem';
 
 interface Props {
 	children?: any;

@@ -1,22 +1,22 @@
 import * as React from 'react';
-import {Container, Grid, Link} from '@material-ui/core';
+import {Grid, Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
 import Logo from '../../components/Logo';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import Typography from '../../styling/Typography';
 import rem from '../../styling/rem';
+import MyContainer from '../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		marginTop: theme.spacing(88/8),
-		paddingTop: theme.spacing(32/8),
-		paddingBottom: theme.spacing(24/8),
+		paddingTop: theme.spacing(32 / 8),
+		paddingBottom: theme.spacing(24 / 8),
 		backgroundColor: color.grey['900']
 	},
 
 	colRight: {
-		paddingTop: theme.spacing((57-32)/8),
+		paddingTop: theme.spacing((57 - 32) / 8),
 		textAlign: 'right'
 	},
 	image: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		...theme.typography.h1
 	},
 	logo: {
-		marginBottom: theme.spacing(12/8),
+		marginBottom: theme.spacing(12 / 8),
 	},
 	socialIcon: {
 		marginLeft: rem(24),
@@ -41,7 +41,7 @@ export default function Footer() {
 
 	return (
 		<div className={classes.root}>
-			<Container>
+			<MyContainer>
 				<Grid container>
 					<Grid item xs={9}>
 						<div className={classes.logo}>
@@ -70,7 +70,7 @@ export default function Footer() {
 						><Logo brand="twitter" variant="grey-300" width={24}/></Link>
 					</Grid>
 				</Grid>
-			</Container>
+			</MyContainer>
 		</div>
 	);
 };

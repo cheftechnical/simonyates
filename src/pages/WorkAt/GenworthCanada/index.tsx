@@ -1,8 +1,7 @@
 import * as React from 'react';
 import DefaultLayout from '../../../layouts/Default';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import {SectionItem} from '../../../components/Section/SectionItem';
-import Logo from '../../../components/Logo';
 import NavRight from '../../../components/NavRight';
 import Sections from '../../../components/Sections';
 import WorkAtHeader from '../components/WorkAtHeader';
@@ -14,6 +13,9 @@ import Li from '../../../styling/ListsUnordered/Li/intex';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Callout from '../../../components/Callout';
 import WorkAtProject from '../components/WorkAtProject';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
+import WorkAtLogo from '../components/WorkAtLogo';
 
 export default function GenworthCanada() {
 	const [sections, setSections] = React.useState();
@@ -24,10 +26,10 @@ export default function GenworthCanada() {
 
 	return (
 		<DefaultLayout title="Work at Genworth Canada" top="work">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={1}>
-						<Logo brand="genworth-canada" variant="default"/>
+						<WorkAtLogo brand="genworth-canada" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
@@ -100,8 +102,8 @@ export default function GenworthCanada() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	)
 }

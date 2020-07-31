@@ -1,7 +1,7 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 import {Container, Grid} from '@material-ui/core';
-import FeaturedPublication from './FeaturedPublication';
+import FeaturedPublication from './components/FeaturedPublication';
 import Sections from '../../components/Sections';
 import Section from '../../components/Section';
 import NavRight from '../../components/NavRight';
@@ -15,12 +15,14 @@ import SectionDescription from './SectionDescription';
 import Download from './Download';
 import rem from '../../styling/rem';
 import Typography from '../../styling/Typography';
-import FeaturedEvent from './FeaturedEvent';
-import FeaturedEvents from './FeaturedEvents';
-import FeaturedPublications from './FeaturedPublications';
+import FeaturedEvent from './components/FeaturedEvent';
+import FeaturedEvents from './components/FeaturedEvents';
+import FeaturedPublications from './components/FeaturedPublications';
 import {color} from '../../styling/Color';
 import Callout from '../../components/Callout';
-import FeaturedChips from './FeaturedChips';
+import FeaturedChips from './components/FeaturedChips';
+import MyContainer from '../../styling/MyContainer';
+import MyGridContainer from '../../styling/MyGridContainer';
 
 const useStyles = makeStyles((theme) => ({
 	nextSection: {
@@ -49,8 +51,8 @@ export default function Featured() {
 
 	return (
 		<DefaultLayout title="Featured" top="featured">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
 							<Section id="publications" name="Publications">
@@ -157,8 +159,8 @@ export default function Featured() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };

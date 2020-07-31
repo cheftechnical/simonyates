@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Chip} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../styling/rem';
+import rem from '../../../styling/rem';
 
 interface Props {
 	list: string[];

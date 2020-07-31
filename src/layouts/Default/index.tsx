@@ -5,6 +5,17 @@ import {Helmet} from 'react-helmet-async';
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
 
+
+/**
+ * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
+ * header logo and nav bar.
+ *
+ * By increasing this number, you will shift the content down by that amount. Conversely, a smaller number will make the
+ * content sit higher on the viewport.
+ */
+const fullHeightOpticalOffset = 32;
+
+
 interface Props {
     children: any;
     fullHeight?: boolean;
@@ -20,8 +31,14 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginTop: theme.spacing(162/8),
     },
     fullHeight: {
-        marginTop: rem(-48),
+        marginTop: rem( fullHeightOpticalOffset),
         height: '100%'
+    },
+    footer: {
+        marginTop: theme.spacing(88 / 8),
+    },
+    footerFullHeight: {
+        marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
     }
 }));
 
@@ -32,6 +49,10 @@ export default function DefaultLayout(props: Props) {
     const mainClass = (fullHeight)
         ? `${classes.main} ${classes.fullHeight}`
         : classes.main;
+
+    const footerClass = (fullHeight)
+        ? `${classes.footer} ${classes.footerFullHeight}`
+        : classes.footer;
 
     return (
         <div className={classes.root}>
@@ -47,7 +68,7 @@ export default function DefaultLayout(props: Props) {
                 {children}
             </main>
 
-            <footer>
+            <footer className={footerClass}>
                 <Footer/>
             </footer>
         </div>

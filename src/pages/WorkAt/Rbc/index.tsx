@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import Callout from '../../../components/Callout';
 import DefaultLayout from '../../../layouts/Default';
 import Section from '../../../components/Section';
@@ -13,13 +13,15 @@ import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import Logo from '../../../components/Logo';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtEvents from '../components/WorkAtEvents';
 import WorkAtEventsGroup from '../components/WorkAtEventsGroup';
 import WorkAtEvent from '../components/WorkAtEvent';
 import WorkAtPublications from '../components/WorkAtPublications';
 import WorkAtPublication from '../components/WorkAtPublication';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
+import WorkAtLogo from '../components/WorkAtLogo';
 
 export default function Rbc() {
 	const [sections, setSections] = React.useState();
@@ -30,10 +32,10 @@ export default function Rbc() {
 
 	return (
 		<DefaultLayout title="Work at RBC" top="work">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={1}>
-						<Logo brand="rbc" variant="default"/>
+						<WorkAtLogo brand="rbc" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
@@ -317,8 +319,8 @@ export default function Rbc() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };

@@ -1,38 +1,39 @@
 import * as React from 'react';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import StatsItem from './StatsItem';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
+import MyContainer from '../../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        paddingTop: theme.spacing(60/8),
-        paddingBottom: theme.spacing(36/8),
-        backgroundColor: color.grey['50']
-    },
+	root: {
+		paddingTop: theme.spacing(60 / 8),
+		paddingBottom: theme.spacing(36 / 8),
+		backgroundColor: color.grey['50']
+	},
 }));
 
 export default function Stats() {
-    const classes = useStyles();
+	const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <Container>
-                <Grid container spacing={10}>
-                    <Grid item xs={3}>
-                        <StatsItem caption="years programming" value={25}/>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <StatsItem caption="when I started programming" value={10}/>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <StatsItem caption="software projects completed" value={200}/>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <StatsItem caption="awesome girlfriend" value={1}/>
-                    </Grid>
-                </Grid>
-            </Container>
-        </div>
-    );
+	return (
+		<div className={classes.root}>
+			<MyContainer>
+				<Grid container spacing={10}>
+					<Grid item xs={3}>
+						<StatsItem caption="years programming" value={25}/>
+					</Grid>
+					<Grid item xs={3}>
+						<StatsItem caption="when I started programming" value={10}/>
+					</Grid>
+					<Grid item xs={3}>
+						<StatsItem caption="software projects completed" value={200}/>
+					</Grid>
+					<Grid item xs={3}>
+						<StatsItem caption="awesome girlfriend" value={1}/>
+					</Grid>
+				</Grid>
+			</MyContainer>
+		</div>
+	);
 };

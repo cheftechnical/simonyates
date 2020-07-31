@@ -1,7 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../../layouts/Default';
-import {Container, Grid} from '@material-ui/core';
-import Logo from '../../../components/Logo';
+import {Grid} from '@material-ui/core';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import NavRight from '../../../components/NavRight';
 import Sections from '../../../components/Sections';
@@ -15,6 +14,9 @@ import Li from '../../../styling/ListsUnordered/Li/intex';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
 import Callout from '../../../components/Callout';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
+import WorkAtLogo from '../components/WorkAtLogo';
 
 export default function JibDesignAndAdvertising() {
 	const [sections, setSections] = React.useState();
@@ -25,10 +27,10 @@ export default function JibDesignAndAdvertising() {
 
 	return (
 		<DefaultLayout title="Work at Jib Design &amp; Advertising" top="work">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={1}>
-						<Logo brand="jib-design-and-advertising" variant="default"/>
+						<WorkAtLogo brand="jib-design-and-advertising" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
@@ -130,8 +132,8 @@ export default function JibDesignAndAdvertising() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };

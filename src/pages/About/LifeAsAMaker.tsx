@@ -4,6 +4,8 @@ import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
 import Image from '../../components/Image';
+import MyContainer from '../../styling/MyContainer';
+import MyGridContainer from '../../styling/MyGridContainer';
 
 const bodyLineHeight = 24;
 
@@ -13,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: theme.spacing(120/8)
     },
     h1: {
-        lineHeight: rem(88),
-        paddingBottom: rem(24),
+        lineHeight: 1,
+        paddingBottom: theme.spacing(28 / 8),
     },
     h3: {
         paddingBottom: rem(bodyLineHeight),
@@ -42,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: rem(135),
         paddingRight: rem(88),
     },
-    containerLifeAsAMaker: {
+    lifeAsAMakerBodyContainer: {
         paddingBottom: rem(139),
     },
     containerTlc: {
@@ -66,17 +68,18 @@ export default function LifeAsAMaker() {
     const classes = useStyles();
 
     return (
-        <Container className={classes.root} disableGutters>
+        <MyContainer className={classes.root}>
             {/* Life as a maker*/}
-            <Grid container spacing={3}>
+            <MyGridContainer>
                 <Grid item xs={6}/>
                 <Grid item xs={6}>
                     <Typography className={classes.h1} group="primary" variant="h1" weight="regular">
                         Life as a Maker
                     </Typography>
                 </Grid>
-            </Grid>
-            <Grid container className={classes.containerLifeAsAMaker} spacing={3}>
+            </MyGridContainer>
+
+            <MyGridContainer className={classes.lifeAsAMakerBodyContainer}>
                 <Grid item xs={6}>
                     <Box alignItems="center" className={classes.boxImage} display="flex">
                         <Box>
@@ -107,7 +110,7 @@ export default function LifeAsAMaker() {
                         of educational games from The Learning Company&nbsp;(TLC).
                     </Typography>
                 </Grid>
-            </Grid>
+            </MyGridContainer>
 
             {/* Hello, World! */}
             <Grid container spacing={3}>
@@ -219,6 +222,6 @@ export default function LifeAsAMaker() {
                     </div>
                 </Grid>
             </Grid>
-        </Container>
+        </MyContainer>
     );
 };

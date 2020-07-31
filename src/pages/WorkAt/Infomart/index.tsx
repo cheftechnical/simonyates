@@ -1,7 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../../layouts/Default';
-import {Container, Grid} from '@material-ui/core';
-import Logo from '../../../components/Logo';
+import {Grid} from '@material-ui/core';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import WorkAtHeader from '../components/WorkAtHeader';
@@ -14,6 +13,9 @@ import Li from '../../../styling/ListsUnordered/Li/intex';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtProject from '../components/WorkAtProject';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
+import WorkAtLogo from '../components/WorkAtLogo';
 
 export default function Infomart() {
 	const [sections, setSections] = React.useState();
@@ -24,10 +26,10 @@ export default function Infomart() {
 
 	return (
 		<DefaultLayout title="Work at Infomart" top="work">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={1}>
-						<Logo brand="infomart" variant="default"/>
+						<WorkAtLogo brand="infomart" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
@@ -106,8 +108,8 @@ export default function Infomart() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };

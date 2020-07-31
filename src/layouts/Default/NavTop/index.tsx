@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {Box, Container, Link} from '@material-ui/core';
+import {Box, Link} from '@material-ui/core';
 import Item from './Item';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
 import {Link as ReactRouterDom} from 'react-router-dom';
 import Logo from '../../../components/Logo';
+import MyContainer from '../../../styling/MyContainer';
 
 interface Props {
 	selected?: string;
@@ -12,8 +13,8 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		paddingTop: theme.spacing(56/8),
-		paddingBottom: theme.spacing(24/8),
+		paddingTop: theme.spacing(56 / 8),
+		paddingBottom: theme.spacing(24 / 8),
 		position: 'fixed',
 		backgroundColor: color.white,
 		// border: '1px solid magenta',
@@ -29,7 +30,7 @@ export default function NavTop(props: Props) {
 
 	return (
 		<div className={classes.root}>
-			<Container>
+			<MyContainer>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}
 					<Box flexGrow={1}>
@@ -46,7 +47,7 @@ export default function NavTop(props: Props) {
 					<Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>
 					<Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>
 				</Box>
-			</Container>
+			</MyContainer>
 		</div>
 	);
 };

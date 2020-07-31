@@ -15,6 +15,9 @@ import Li from '../../../styling/ListsUnordered/Li/intex';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import WorkAtProjects from '../components/WorkAtProjects';
 import Sections from '../../../components/Sections';
+import MyGridContainer from '../../../styling/MyGridContainer';
+import MyContainer from '../../../styling/MyContainer';
+import WorkAtLogo from '../components/WorkAtLogo';
 
 export default function UnchartedSoftware() {
 	const [sections, setSections] = React.useState();
@@ -25,10 +28,10 @@ export default function UnchartedSoftware() {
 
 	return (
 		<DefaultLayout title="Work at Uncharted Software" top="work">
-			<Container>
-				<Grid container spacing={4}>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={1}>
-						<Logo brand="uncharted-software" variant="default"/>
+						<WorkAtLogo brand="uncharted-software" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
@@ -96,8 +99,8 @@ export default function UnchartedSoftware() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };

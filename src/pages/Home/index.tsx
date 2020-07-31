@@ -1,8 +1,8 @@
 import React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import {Container} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import Content from './Content';
+import MyContainer from '../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
 	container: {
@@ -18,12 +18,9 @@ export default function Home() {
 
 	return (
 		<DefaultLayout fullHeight>
-			<Container className={classes.container}>
-				<div className={classes.viewport}>
-					<Content/>
-				</div>
-			</Container>
+			<MyContainer className={classes.container}>
+				<Content/>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };
-

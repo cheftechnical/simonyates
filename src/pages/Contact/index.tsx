@@ -7,6 +7,8 @@ import {Message} from './Message';
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
+import MyContainer from '../../styling/MyContainer';
+import MyGridContainer from '../../styling/MyGridContainer';
 
 const useStyles = makeStyles((theme) => ({
 	heading: {
@@ -36,16 +38,16 @@ export default function Contact() {
 
 	return (
 		<DefaultLayout title="Contact" top="contact">
-			<Container>
-				<Grid container>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={12}>
 						<Typography className={classes.heading} group="primary" variant="h1" weight="regular">
 							Pleasure to meet you.
 						</Typography>
 					</Grid>
-				</Grid>
+				</MyGridContainer>
 
-				<Grid container>
+				<MyGridContainer>
 					<Grid item xs={6}>
 						<Typography className={classes.body} group="primary" variant="body" weight="regular">
 							I&rsquo;m always open to make new connections and chat about software development.
@@ -55,8 +57,8 @@ export default function Contact() {
 
 						{isSending && <span>Sending&hellip;</span>}
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 
 			<SendingMessageDialog
 				isOpen={isSending}
