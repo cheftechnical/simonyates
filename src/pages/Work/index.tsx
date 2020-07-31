@@ -41,21 +41,19 @@ export default function Work() {
                         <Experience employer="RBC" href="/work/rbc" role="Full-Stack Developer" when="2018–Present">
                             <Ul>
                                 <Li>
-                                    Built a chatbot to reduce time the team spends responding to customer questions
+                                    Built a chatbot to reduce time the team spends responding to customer&nbsp;questions
                                 </Li>
                                 <Li>
-                                    Built self-healing tools that automate SRE tasks
+                                    Built self-healing tools that automate SRE&nbsp;tasks
                                 </Li>
                                 <Li>
-                                    Designed and built custom reporting tools used by over 8,000 engineers at RBC for
-                                    monitoring critical infrastructure and performing incident forensics
+                                    Designed and built custom reporting tools used by over 8,000 engineers at RBC for monitoring critical infrastructure and performing incident&nbsp;forensics
                                 </Li>
                                 <Li>
-                                    Wrote a machine learning model with scikit-learn to detect anomalies in system logs
-                                    and incident reports
+                                    Wrote a machine learning model with scikit-learn to detect anomalies in system logs and incident&nbsp;reports
                                 </Li>
                                 <Li>
-                                    Advised multiple teams across RBC on how to optimize Elasticsearch
+                                    Advised multiple teams across RBC on Elasticsearch&nbsp;optimization
                                 </Li>
                             </Ul>
                         </Experience>
@@ -71,25 +69,19 @@ export default function Work() {
                         <Experience employer="Uncharted Software" href="/work/uncharted-software" role="Senior Software Architect" when="2015–2018">
                             <Ul>
                                 <Li>
-                                    Worked with data scientists to develop early prototypes of a new causal
-                                    graph—including all visualization. This tool was used by the data scientists to
-                                    refine their models and product designers to refine their architecture.
+                                    Worked with data scientists to develop early prototypes of a new causal graph&mdash;including all visualization. This tool was used by the data scientists to refine their models and product designers to refine their&nbsp;architecture.
                                 </Li>
                                 <Li>
-                                    Implemented state-of-the-art Natural Language Processing (NLP) technologies to
-                                    perform Named-Entity Recognition (NER) and feature extraction of unstructured and
-                                    semi-structured data
+                                    Implemented state-of-the-art Natural Language Processing (NLP) technologies to perform Named-Entity Recognition (NER) and feature extraction of unstructured and semi-structured&nbsp;data
                                 </Li>
                                 <Li>
-                                    Extended capabilities of critical data pipelines built in Scala, Spark, HBase,
-                                    Hadoop and Elasticsearch
+                                    Extended capabilities of critical data pipelines built in Scala, Spark, HBase, Hadoop, and&nbsp;Elasticsearch
                                 </Li>
                                 <Li>
-                                    Improved performance and search results of by optimizing Elasticsearch schemas and
-                                    queries
+                                    Improved performance and search results by optimizing Elasticsearch schemas and&nbsp;queries
                                 </Li>
                                 <Li>
-                                    Converted legacy Java code to Scala
+                                    Converted legacy Java code to&nbsp;Scala
                                 </Li>
                             </Ul>
                         </Experience>
@@ -105,23 +97,19 @@ export default function Work() {
                         <Experience employer="Mayo Clinic" href="/work/mayo-clinic" role="Software Engineer" when="2014–2015">
                             <Ul>
                                 <Li>
-                                    Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for
-                                    Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE
-                                    International Conference on Big Data
+                                    Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big&nbsp;Data
                                 </Li>
                                 <Li>
-                                    Built software to visualize and analyze patient medical data for clinical decision
-                                    support
+                                    Built software to visualize and analyze patient medical data for clinical decision&nbsp;support
                                 </Li>
                                 <Li>
-                                    Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child
-                                    Elasticsearch documents
+                                    Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch&nbsp;documents
                                 </Li>
                                 <Li>
-                                    Re-wrote experimental prototype software for production
+                                    Re-wrote experimental prototype software for&nbsp;production
                                 </Li>
                                 <Li>
-                                    Re-wrote experimental prototype software for production
+                                    Optimized Elasticsearch queries for speed and&nbsp;searchability
                                 </Li>
                             </Ul>
                         </Experience>
@@ -137,19 +125,16 @@ export default function Work() {
                         <Experience employer="Genworth Canada" href="/work/genworth-canada" role="Developer" when="2014–2015">
                             <Ul>
                                 <Li>
-                                    Designed system to automatically detect names and addresses which may refer to the
-                                    same subject, but uses different spelling
+                                    Designed system to automatically detect names and addresses which may refer to the same subject, but use different&nbsp;spelling
                                 </Li>
                                 <Li>
-                                    Hosted regular Lunch-and-Learn events on Elasticsearch and demonstrated its
-                                    applications
+                                    Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its&nbsp;applications
                                 </Li>
                                 <Li>
-                                    Saved the company multi-thousand dollars of annual expenditures by identifying an
-                                    area of improvement &ndash; it eliminated the need for a third-party vendor service
+                                    Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement&mdash;it eliminated the need for a third-party vendor&nbsp;service
                                 </Li>
                                 <Li>
-                                    Became the "go-to-guy" on all things Elasticsearch
+                                    Became the &ldquo;go-to-guy&rdquo; on all things&nbsp;Elasticsearch
                                 </Li>
                             </Ul>
                         </Experience>
@@ -165,24 +150,19 @@ export default function Work() {
                         <Experience employer="Infomart" href="/work/infomart" role="Architect & Lead Developer" when="2012–2014">
                             <Ul>
                                 <Li>
-                                    Designed the software and data architecture that replaced Microsoft SQL Server with
-                                    Elasticsearch
+                                    Designed the software and data architecture that replaced Microsoft SQL Server with&nbsp;Elasticsearch
                                 </Li>
                                 <Li>
-                                    Designed Elasticsearch document schemas and wrote all queries
+                                    Designed Elasticsearch document schemas and wrote all&nbsp;queries
                                 </Li>
                                 <Li>
-                                    Built the development team from the ground up &ndash; managed the hiring process
-                                    from writing job descriptions and interviewing candidate to selecting finalists.
-                                    Once hired, I would onboard them and designate scopes of work which they would be
-                                    responsible for.
+                                    Built the development team from the ground up&mdash;managed the hiring process from writing job descriptions and interviewing candidates to selecting finalists. Once hired, I would onboard them and designate scopes of work for which they would be responsible&nbsp;for.
                                 </Li>
                                 <Li>
-                                    Wrote the development style guide, including the best practices, for the team
+                                    Wrote the development style guide and best practices for the&nbsp;team
                                 </Li>
                                 <Li>
-                                    Built custom data visualization charts in SVG to meet specific design requirements
-                                    of the software
+                                    Built custom data visualization charts in SVG to meet specific design requirements of the&nbsp;software
                                 </Li>
                             </Ul>
                         </Experience>
@@ -198,16 +178,16 @@ export default function Work() {
                         <Experience employer="Jib Design & Advertising" href="/work/jib-design-and-advertising" role="Technical Director" when="2007–2008">
                             <Ul>
                                 <Li>
-                                    Wrote the university registration system for the Apple Education Store on apple.ca
+                                    Wrote the university registration system for the Apple Education Store on&nbsp;apple.ca
                                 </Li>
                                 <Li>
-                                    Wrote and deployed all HTML emails for Apple Canada
+                                    Wrote and deployed all HTML emails for Apple&nbsp;Canada
                                 </Li>
                                 <Li>
-                                    Conceptualized, designed, and wrote internal software for managing client assets
+                                    Conceptualized, designed, and wrote internal software for managing client&nbsp;assets
                                 </Li>
                                 <Li>
-                                    Reverse-engineered Google PageRank for improved SEO strategies
+                                    Reverse-engineered Google PageRank for improved SEO&nbsp;strategies
                                 </Li>
                             </Ul>
                         </Experience>
