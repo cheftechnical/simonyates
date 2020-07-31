@@ -10,6 +10,7 @@ import {makeStyles} from '@material-ui/core/styles';
 const recaptchaSiteKey = '6Ldoc7gZAAAAAK-b8CtvPI9W00OkjyouLoxmdwq1';
 
 interface Props {
+	debug?: boolean;
 	message: Message | undefined;
 	onClose: () => void;
 	onSuccess: () => void;
@@ -24,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function RecaptchaFragment(props: Props) {
+export default function ContentRecaptcha(props: Props) {
 	const classes = useStyles();
-	const {message, onClose, onSuccess} = props;
+	const {debug, message, onClose, onSuccess} = props;
 
 	const send = React.useCallback(() => {
 		// Serialize the message
@@ -56,21 +57,10 @@ export default function RecaptchaFragment(props: Props) {
 		send();
 	}, [send]);
 
-	return (
-		<div>
-			<DialogTitle id="sending-message-dialog-title">Are you a human?</DialogTitle>
-			<DialogContent>
-				<div className={classes.root}>
-					<Box display="flex" justifyContent="center">
-						<Box className={classes.box}>
-							<ReCAPTCHA
-								onChange={handleReCaptchaChange}
-								sitekey={recaptchaSiteKey}
-							/>
-						</Box>
-					</Box>
-				</div>
-			</DialogContent>
+	const debugButtons = React.useMemo(() => {
+		if (!debug) return (<React.Fragment/>);
+
+		return (
 			<DialogActions>
 				<Button color="primary" onClick={send} variant="contained">
 					Test Send
@@ -79,6 +69,25 @@ export default function RecaptchaFragment(props: Props) {
 					Cancel
 				</Button>
 			</DialogActions>
+		);
+	}, [debug, onClose, send]);
+
+	return (
+		<div>
+			<DialogTitle id="sending-message-dialog-title">Are you a human?</DialogTitle>
+			<DialogContent>
+				<div className={classes.root}>
+					<Box display="flex" justifyContent="center">
+						<Box className={classes.box} pb={3}>
+							<ReCAPTCHA
+								onChange={handleReCaptchaChange}
+								sitekey={recaptchaSiteKey}
+							/>
+						</Box>
+					</Box>
+				</div>
+			</DialogContent>
+			{debugButtons}
 		</div>
 	);
 };

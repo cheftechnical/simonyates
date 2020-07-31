@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Dialog} from '@material-ui/core';
 import {Message} from '../Message';
-import RecaptchaFragment from './RecaptchaFragment';
-import SuccessfulFragment from './SuccessfulFragment';
+import ContentRecaptcha from './ContentRecaptcha';
+import ContentSuccessful from './ContentSuccessful';
 
 interface Props {
 	defaultFragment?: 'recaptcha' | 'success';
@@ -24,14 +24,14 @@ export default function SendingMessageDialog(props: Props) {
 		switch (content) {
 			case 'recaptcha':
 				return (
-					<RecaptchaFragment
+					<ContentRecaptcha
 						message={message}
 						onClose={onClose}
 						onSuccess={() => setContent('success')}
 					/>
 				);
 			case 'success':
-				return (<SuccessfulFragment/>);
+				return (<ContentSuccessful/>);
 		}
 	}, [content, message, onClose]);
 

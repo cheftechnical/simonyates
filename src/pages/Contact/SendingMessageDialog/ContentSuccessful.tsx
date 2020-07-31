@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function SuccessfulFragment() {
+export default function ContentSuccessful() {
 	const classes = useStyles();
 
 	return (
