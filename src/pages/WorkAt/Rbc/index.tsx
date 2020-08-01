@@ -156,7 +156,7 @@ export default function Rbc() {
 											This application allowed RBC to:
 										</Typography>
 
-										<Ul>
+										<Ul next>
 											<Li>
 												Streamline creation and approval of OAuth clients, minimizing&nbsp;errors
 											</Li>
@@ -180,7 +180,7 @@ export default function Rbc() {
 									I used machine learning libraries in Python to automate some of the activities supported by the SRE team. Many of these uses are described above, but some of the key highlights&nbsp;include:
 								</Typography>
 
-								<Ul>
+								<Ul next>
 									<Li>
 										Developed a chatbot from scratch to answer common questions and provide answers using real-time infrastructure metrics (e.g. &ldquo;Is service [x] down?&rdquo; or &ldquo;Whats the TPS for&nbsp;[thing]&rdquo;)
 									</Li>
