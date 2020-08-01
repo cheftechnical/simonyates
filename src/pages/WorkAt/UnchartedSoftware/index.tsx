@@ -1,11 +1,10 @@
 import * as React from 'react';
 import DefaultLayout from "../../../layouts/Default";
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import WorkAtHeader from '../components/WorkAtHeader';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Section from '../../../components/Section';
 import WorkAtProject from '../components/WorkAtProject';
-import Logo from '../../../components/Logo';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import Typography from '../../../styling/Typography';

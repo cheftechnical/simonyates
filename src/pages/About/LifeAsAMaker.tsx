@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Container, Grid} from "@material-ui/core";
+import {Box, Grid} from "@material-ui/core";
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
@@ -9,7 +9,6 @@ import MyGridContainer from '../../styling/MyGridContainer';
 
 const bodyLineHeight = 24;
 
-// -12 because of the grid container gutter
 const useStyles = makeStyles((theme) => ({
     root: {
         paddingTop: theme.spacing(120/8)

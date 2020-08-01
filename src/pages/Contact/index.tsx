@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import ContactForm from './ContactForm';
 import SendingMessageDialog from './SendingMessageDialog';
 import {Message} from './Message';

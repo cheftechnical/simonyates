@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Chip} from '@material-ui/core';
 import Typography from '../../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
