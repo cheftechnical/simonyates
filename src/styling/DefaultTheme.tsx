@@ -18,26 +18,26 @@ import rem from './rem';
 // ---[ Apercu Bold ]---------------------------------------------------------------------------------------------------
 
 // @ts-ignore
-import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
+// import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
 
 // @ts-ignore
-import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
+// import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
 
 // ---[ Apercu Italic ]-------------------------------------------------------------------------------------------------
 
 // @ts-ignore
-import ApercuItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
+// import ApercuItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
 
 // @ts-ignore
-import ApercuItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
+// import ApercuItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
 
 // ---[ Apercu Light Italic ]-------------------------------------------------------------------------------------------
 
 // @ts-ignore
-import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
+// import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
 
 // @ts-ignore
-import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
+// import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
 
 // ---[ Apercu Light ]--------------------------------------------------------------------------------------------------
 
