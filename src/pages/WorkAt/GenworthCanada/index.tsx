@@ -15,6 +15,7 @@ import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import WorkAtLogo from '../components/WorkAtLogo';
 import Quote from '../../../components/Quote';
+import WorkAtProjects from '../components/WorkAtProjects';
 
 export default function GenworthCanada() {
 	const [sections, setSections] = React.useState();
@@ -49,32 +50,36 @@ export default function GenworthCanada() {
 								<WorkAtSectionTitle>
 									About The Project
 								</WorkAtSectionTitle>
+
 								<Typography group="primary" variant="body" weight="regular">
 									Genworth Canada was leading a North American initiative to move their application
 									system to Elasticsearch. The goal of this new system: make it easier for Genworth to
 									detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.
 								</Typography>
 
-								<WorkAtProject next name="Finding Duplicates"/>
-								<Typography next group="primary" variant="body" weight="regular">
-									I was hired based on my previous experience with Elasticsearch, but finding ways of
-									removing dependencies on vendor services was not something I was expected to do. It
-									was only after I got involved in the project and learned about their use case that I
-									saw an opportunity to suggest a better way of doing&nbsp;things.
-								</Typography>
-								<Typography next group="primary" variant="body" weight="regular">
-									Using several state-of-the-art features of Elasticsearch, I was able to prototype a
-									solution that effectively replaced a dependency on one of their key data analytics
-									vendors, saving Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
-								</Typography>
+								<WorkAtProjects>
+									<WorkAtProject next name="Finding Duplicates">
+										<Typography next group="primary" variant="body" weight="regular">
+											I was hired based on my previous experience with Elasticsearch, but finding ways of
+											removing dependencies on vendor services was not something I was expected to do. It
+											was only after I got involved in the project and learned about their use case that I
+											saw an opportunity to suggest a better way of doing&nbsp;things.
+										</Typography>
+										<Typography next group="primary" variant="body" weight="regular">
+											Using several state-of-the-art features of Elasticsearch, I was able to prototype a
+											solution that effectively replaced a dependency on one of their key data analytics
+											vendors, saving Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
+										</Typography>
 
-								<Callout noBottomGutter list={[
-									'Node.js + Express w/ socket.io',
-									'Extjs',
-									'Elasticsearch',
-									'MQTT',
-									'Selenium'
-								]}/>
+										<Callout noBottomGutter list={[
+											'Node.js + Express w/ socket.io',
+											'Extjs',
+											'Elasticsearch',
+											'MQTT',
+											'Selenium'
+										]}/>
+									</WorkAtProject>
+								</WorkAtProjects>
 							</Section>
 
 							<Section id="recognition" name="Recognition">
