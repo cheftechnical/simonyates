@@ -18,12 +18,15 @@ export interface Props {
 	weight: 'light' | 'regular' | 'medium' | 'semibold' | undefined;
 }
 
-const fontFamilyApercuRegular = `"Apercu Regular", "Helvetica", "Arial", "sans-serif"`;
-const fontFamilyApercuLight =  `"Apercu Light", "Helvetica", "Arial", "sans-serif"`;
+const defaultSerifFonts =`"Times New Roman", Times, serif`;
+const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
 
-const fontFamilyTiemposTextMedium = `"Tiempos Text Medium"`
-const fontFamilyTiemposTextRegular = `"Tiempos Text"`;
-const fontFamilyTiemposTextSemibold = `"Tiempos Text Semibold"`;
+const fontFamilyApercuRegular = `"Apercu Regular", ${defaultSansSerifFonts}`;
+const fontFamilyApercuLight =  `"Apercu Light", ${defaultSansSerifFonts}`;
+
+const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`
+const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`
+const fontFamilyTiemposTextSemibold = `"Tiempos Text Semibold", ${defaultSerifFonts}`
 
 const primary_h1_regular: CSSProperties = {
 	margin: 0,
