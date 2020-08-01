@@ -9,8 +9,6 @@ import WorkAtHeader from '../components/WorkAtHeader';
 import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import Typography from '../../../styling/Typography';
-import Ul from '../../../styling/ListsUnordered/Ul/intex';
-import Li from '../../../styling/ListsUnordered/Li/intex';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
 import Callout from '../../../components/Callout';
@@ -44,21 +42,6 @@ export default function JibDesignAndAdvertising() {
 								<WorkAtDescription>
 									Design &amp; advertising agency in&nbsp;Toronto.
 								</WorkAtDescription>
-							</Section>
-
-							<Section id="key-results" name="Key Results">
-								<WorkAtSectionTitle>
-									Key Results
-								</WorkAtSectionTitle>
-								<Typography group="primary" variant="body" weight="regular">
-									Boutique Toronto agency that provides digital media production for range of clients, including localization services for Apple&nbsp;Canada.
-								</Typography>
-								<Ul>
-									<Li>Wrote the university registration system for the Apple Education Store on&nbsp;apple.ca</Li>
-									<Li>Wrote and deployed all HTML emails for Apple&nbsp;Canada</Li>
-									<Li>Conceptualized, designed, and wrote internal software for managing client&nbsp;assets</Li>
-									<Li>Reverse-engineered Google PageRank for improved SEO&nbsp;strategies</Li>
-								</Ul>
 							</Section>
 
 							<Section id="notable-projects" name="Notable Projects">

@@ -9,8 +9,6 @@ import Section from '../../../components/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Callout from '../../../components/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import Li from '../../../styling/ListsUnordered/Li/intex';
-import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Typography from '../../../styling/Typography';
 import WorkAtProject from '../components/WorkAtProject';
 import MyContainer from '../../../styling/MyContainer';
@@ -47,18 +45,7 @@ export default function Infomart() {
 									<strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started working with it on this project. At the time, the latest version was version&nbsp;~&nbsp;0.19–0.2.x
 								</Callout>
 							</Section>
-							<Section id="key-results" name="Key Results">
-								<WorkAtSectionTitle>
-									Key Results
-								</WorkAtSectionTitle>
-								<Ul>
-									<Li>Designed the software and data architecture that replaced Microsoft SQL Server with&nbsp;Elasticsearch</Li>
-									<Li>Designed Elasticsearch document schemas and wrote all&nbsp;queries</Li>
-									<Li>Built the development team from the ground up&mdash;managed the hiring process from writing job descriptions and interviewing candidates to selecting finalists. Once hired, I would onboard them and designate scopes of work for which they would be responsible&nbsp;for.</Li>
-									<Li>Wrote the development style guide and best practices for the&nbsp;team</Li>
-									<Li>Built custom data visualization charts in SVG to meet specific design requirements of the&nbsp;software</Li>
-								</Ul>
-							</Section>
+
 							<Section id="about-the-project" name="About The Project">
 								<WorkAtSectionTitle>
 									About The Project

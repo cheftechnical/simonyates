@@ -9,8 +9,6 @@ import Section from '../../../components/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import Typography from '../../../styling/Typography';
-import Li from '../../../styling/ListsUnordered/Li/intex';
-import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Callout from '../../../components/Callout';
 import WorkAtProject from '../components/WorkAtProject';
 import MyContainer from '../../../styling/MyContainer';
@@ -45,27 +43,12 @@ export default function GenworthCanada() {
 								</WorkAtDescription>
 							</Section>
 
-							<Section id="key-results" name="Key Results">
-								<WorkAtSectionTitle>
-									Key Results
-								</WorkAtSectionTitle>
-								<Typography group="primary" variant="body" weight="regular">
-									Helped the team get rapidly up-to-speed with&nbsp;Elasticsearch:
-								</Typography>
-								<Ul>
-									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but use different&nbsp;spelling</Li>
-									<Li>Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its&nbsp;applications</Li>
-									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement&mdash;it eliminated the need for a third-party vendor&nbsp;service</Li>
-									<Li>Became the &ldquo;go-to-guy&rdquo; on all things&nbsp;Elasticsearch</Li>
-								</Ul>
-							</Section>
-
 							<Section id="about-the-project" name="About The Project">
 								<WorkAtSectionTitle>
 									About The Project
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									<em>Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.</em>
+									Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.
 								</Typography>
 
 								<WorkAtProject next name="Finding Duplicates"/>

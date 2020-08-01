@@ -51,20 +51,6 @@ export default function MayoClinic() {
 								</WorkAtDescription>
 							</Section>
 
-							<Section id="key-results" name="Key Results">
-								<WorkAtSectionTitle>
-									Key Results
-								</WorkAtSectionTitle>
-
-								<Ul>
-									<Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big&nbsp;Data</Li>
-									<Li>Built software to visualize and analyze patient medical data for clinical decision&nbsp;support</Li>
-									<Li>Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch&nbsp;documents</Li>
-									<Li>Re-wrote experimental prototype software for&nbsp;production</Li>
-									<Li>Optimized Elasticsearch queries for speed and&nbsp;searchability</Li>
-								</Ul>
-							</Section>
-
 							<Section id="patient-like-mine" name="Patient Like Mine">
 								<WorkAtSectionTitle>
 									Patient Like Mine
