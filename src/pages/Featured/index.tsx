@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 		}
 	},
 	typography: {
-		paddingTop: theme.spacing(16 / 8),
 		color: color.grey['700']
 	}
 }));
@@ -65,7 +64,7 @@ export default function Featured() {
 								<FeaturedPublications>
 									<FeaturedPublication
 										name="Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support"
-										publisher="IEEE"
+										publisher="IEEE Big Data"
 										tags={['electronic medical record', 'clinical decision support', 'real-time analytics', 'visual analytics', 'data mining']}
 										when="2015"
 									>

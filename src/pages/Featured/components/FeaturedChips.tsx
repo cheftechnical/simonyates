@@ -9,8 +9,8 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	chips: {
-		paddingTop: theme.spacing((12 + 4 + 2)/8),
-		paddingBottom: theme.spacing((12 - 4)/8),
+		paddingTop: theme.spacing(24 / 8),
+		paddingBottom: theme.spacing(24 / 8),
 		lineHeight: rem(48 - 4), // less 4 for the border thickness
 	},
 }));

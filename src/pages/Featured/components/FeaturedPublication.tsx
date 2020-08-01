@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 	children: {
 		color: color.grey['700']
 	},
-	publisherAndWhen: {
+	publisher: {
 		color: color.grey['600'],
 	}
 }));
@@ -47,8 +47,12 @@ export default function FeaturedPublication(props: Props) {
 				{name}
 			</Typography>
 
-			<Typography className={classes.publisherAndWhen} group="primary" variant="body" weight="regular">
-				{publisher}, <span className={classes.when}>{when}</span>
+			<Typography className={classes.publisher} group="primary" variant="body" weight="regular">
+				{publisher}
+			</Typography>
+
+			<Typography className={classes.when} group="primary" variant="body" weight="regular">
+				{when}
 			</Typography>
 
 			<FeaturedChips list={tags}/>
