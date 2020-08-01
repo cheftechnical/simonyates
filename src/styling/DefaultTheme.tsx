@@ -217,6 +217,7 @@ const theme = createMuiTheme({
 					height: '100%'
 				},
 				'ul': {
+					marginTop: 0,
 					marginLeft: '0px',
 					paddingLeft: '15px',
 				},
