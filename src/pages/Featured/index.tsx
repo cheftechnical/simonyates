@@ -58,7 +58,8 @@ export default function Featured() {
 								</SectionTitle>
 
 								<SectionDescription>
-									I&rsquo;ve been incredibly lucky to work along some of the brightest minds of North America
+									I&rsquo;ve been incredibly lucky to work along some of the brightest minds of
+									North&nbsp;America
 								</SectionDescription>
 
 								<FeaturedPublications>
@@ -69,7 +70,14 @@ export default function Featured() {
 										when="2015"
 									>
 										<Typography className={classes.typography} group="primary" variant="body" weight="regular">
-											Abstract &mdash; We developed a real-time, visual analytics tool for clinical decision support. The system expands the “recall of past experience” approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big-Data techniques, we enable the provider to recall all similar patients from an institution’s electronic medical record (EMR) repository, to explore “what-if” scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern mining.
+											Abstract &mdash; We developed a real-time, visual analytics tool for
+											clinical decision support. The system expands the &ldquo;recall of past
+											experience&rdquo; approach that a provider (physician) uses to formulate a
+											course of action for a given patient. By utilizing Big-Data techniques, we
+											enable the provider to recall all similar patients from an
+											institution&rdquo;s electronic medical record (EMR) repository, to
+											explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based
+											cohorts for future statistical validation and pattern&nbsp;mining.
 										</Typography>
 
 										<Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf"/>
@@ -83,9 +91,9 @@ export default function Featured() {
 										when="June 11, 2020"
 									>
 										<Ul>
-											<Li className={classes.li}>Interactive dashboards for monitoring infrastructure</Li>
-											<Li className={classes.li}>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>
-											<Li className={classes.li}>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines) availability </Li>
+											<Li className={classes.li}>Interactive dashboards for monitoring&nbsp;infrastructure</Li>
+											<Li className={classes.li}>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee&nbsp;upgrades</Li>
+											<Li className={classes.li}>Real–time monitoring of critical infrastructure to enable the SRE team to monitor SLAs for 99.999% (five–nines)&nbsp;availability</Li>
 										</Ul>
 									</FeaturedPublication>
 								</FeaturedPublications>
@@ -115,8 +123,8 @@ export default function Featured() {
 										/>
 
 										<Ul>
-											<Li className={classes.li}>Talk + Workshop with step-by-step guide handout</Li>
-											<Li className={classes.li}>Demo booth featuring our chatbot</Li>
+											<Li className={classes.li}>Talk + Workshop with step-by-step guide&nbsp;handout</Li>
+											<Li className={classes.li}>Demo booth featuring our&nbsp;chatbot</Li>
 										</Ul>
 									</FeaturedEvent>
 
