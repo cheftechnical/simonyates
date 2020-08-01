@@ -6,10 +6,12 @@ import Typography from '../../styling/Typography';
 interface Props {
     children?: any | any[] | undefined;
     list?: string[] | undefined;
+    noBottomGutter?: boolean | undefined;
     variant?: 'default' | 'alert' | undefined;
 }
 
 const defaultProps = {
+    noBottomGutter: false,
     variant: 'default'
 }
 
@@ -26,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     },
     alert: {
         color: color.red['400'],
+    },
+    noBottomGutter: {
+        marginBottom: 0,
     }
 }));
 
@@ -75,7 +80,7 @@ function Delimiter(props: DelimiterProps) {
  */
 export default function Callout(props: Props) {
     const classes = useStyles();
-    const {children, list, variant} = {...defaultProps, ...props};
+    const {children, list, noBottomGutter, variant} = {...defaultProps, ...props};
 
     const content = React.useMemo(() => {
         if (!list) return children;
@@ -88,12 +93,16 @@ export default function Callout(props: Props) {
 
     }, [children, list]);
 
+    const rootClassName = (noBottomGutter)
+        ? `${classes.root} ${classes.noBottomGutter}`
+        : classes.root;
+
     const typographyClassName = (variant === 'alert')
         ? `${classes.typography} ${classes.alert}`
         : classes.typography;
 
     return (
-        <div className={classes.root}>
+        <div className={rootClassName}>
             <Typography className={typographyClassName} group="secondary" variant="body" weight="regular">
                 {content}
             </Typography>
