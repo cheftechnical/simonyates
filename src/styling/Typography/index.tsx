@@ -25,9 +25,9 @@ const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
 const fontFamilyApercuRegular = `"Apercu Regular", ${defaultSansSerifFonts}`;
 const fontFamilyApercuLight =  `"Apercu Light", ${defaultSansSerifFonts}`;
 
-const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`
-const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`
-const fontFamilyTiemposTextSemibold = `"Tiempos Text", ${defaultSerifFonts}`
+const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`;
+const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`;
+const fontFamilyTiemposTextSemibold = `"Tiempos Text", ${defaultSerifFonts}`; // the semi-bold uses the regular family, but with a different weight
 
 const primary_h1_regular: CSSProperties = {
 	margin: 0,
