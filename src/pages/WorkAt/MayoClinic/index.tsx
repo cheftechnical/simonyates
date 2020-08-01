@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import DefaultLayout from '../../../layouts/Default';
-import {Grid, Link} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import WorkAtHeader from '../components/WorkAtHeader';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Sections from '../../../components/Sections';
@@ -124,13 +124,13 @@ export default function MayoClinic() {
 									Recognition
 								</WorkAtSectionTitle>
 
-								<Link href="https://www.elastic.co/elasticon/conf/2016/sf/bringing-healthcare-analytics-to-the-point-of-care-at-mayo-clinic" target="_blank">
-									<Figure
-										alt="Elasticon 2016"
-										caption="Dr. Peter Li acknowledges my help at 43 minutes."
-										src="/images/work-at/mayo-clinic/elasticon.png"
-									/>
-								</Link>
+								<Figure
+									alt="Elasticon 2016"
+									caption="Dr. Peter Li acknowledges my help at 43 minutes."
+									href="https://www.elastic.co/elasticon/conf/2016/sf/bringing-healthcare-analytics-to-the-point-of-care-at-mayo-clinic"
+									callToAction={(<React.Fragment>Watch Video &rsaquo;</React.Fragment>)}
+									src="/images/work-at/mayo-clinic/elasticon.png"
+								/>
 							</Section>
 						</Sections>
 					</Grid>

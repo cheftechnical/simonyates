@@ -3,10 +3,14 @@ import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import rem from '../../styling/rem';
 import Image from '../Image';
+import {ReactElement} from 'react';
+import {Link} from '@material-ui/core';
 
 interface Props {
 	alt: string;
-	caption?: string;
+	callToAction?: string | ReactElement;
+	caption?: string | ReactElement;
+	href?: string | undefined;
 	next?: boolean;
 	src: string;
 }
@@ -39,17 +43,59 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Figure(props: Props) {
 	const classes = useStyles();
-	const {alt, caption, next, src} = props;
+	const {alt, callToAction, caption, href, next, src} = props;
 
 	const rootClassName = (next)
 		? `${classes.root} ${classes.rootNext}`
 		: classes.root;
 
+	const renderedFigureContent = React.useMemo(() => {
+		const image = (
+			<Image
+				alt={alt}
+				className={classes.image}
+				src={src}
+			/>
+		);
+
+		if (href) {
+			return (
+				<Link href={href} target="_blank">{image}</Link>
+			);
+		}
+
+		return image;
+	}, [alt, classes.image, href, src]);
+
+	const renderedFigureCaption = React.useMemo(() => {
+		if (!caption) return;
+
+		const captionContent = (callToAction)
+			? (
+				<div>
+					<div>
+						{caption}
+					</div>
+					<div>
+						<Link href={href} target="_blank">
+							Watch Video &rsaquo;
+						</Link>
+					</div>
+				</div>
+			) : (
+				<React.Fragment>
+					{caption}
+				</React.Fragment>
+			);
+
+		return (
+			<figcaption className={classes.caption}>
+				{captionContent}
+			</figcaption>
+		);
+	}, [callToAction, classes.caption, caption, href]);
+
 	return (
-		<figure className={rootClassName}><Image
-			alt={alt}
-			className={classes.image}
-			src={src}
-		/>{caption && <figcaption className={classes.caption}>{caption}</figcaption>}</figure>
+		<figure className={rootClassName}>{renderedFigureContent}{renderedFigureCaption}</figure>
 	);
 };

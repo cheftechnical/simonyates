@@ -55,7 +55,7 @@ export default function WorkAtPublication(props: Props) {
 		: <React.Fragment/>;
 
 	const renderedPublisher = (publisher)
-		? <React.Fragment>, {publisher}</React.Fragment>
+		? <React.Fragment>. {publisher}</React.Fragment>
 		: <React.Fragment/>;
 
 	const className = (next)
