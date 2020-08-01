@@ -20,13 +20,14 @@ export interface Props {
 
 const defaultSerifFonts =`"Times New Roman", Times, serif`;
 const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
+// const defaultTestFonts = `"Comic Sans Ms"`;
 
 const fontFamilyApercuRegular = `"Apercu Regular", ${defaultSansSerifFonts}`;
 const fontFamilyApercuLight =  `"Apercu Light", ${defaultSansSerifFonts}`;
 
 const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`
 const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`
-const fontFamilyTiemposTextSemibold = `"Tiempos Text Semibold", ${defaultSerifFonts}`
+const fontFamilyTiemposTextSemibold = `"Tiempos Text", ${defaultSerifFonts}`
 
 const primary_h1_regular: CSSProperties = {
 	margin: 0,
@@ -111,8 +112,7 @@ const primary_h4_semibold: CSSProperties = {
 
 	fontFamily: fontFamilyTiemposTextSemibold,
 	fontStyle: 'normal',
-	// fontWeight: 600,
-	fontWeight: 500,
+	fontWeight: 600,
 	fontSize: rem(16),
 	lineHeight: rem(24),
 	letterSpacing: rem(0.5),
