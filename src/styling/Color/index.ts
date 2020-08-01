@@ -29,6 +29,7 @@ export const color = {
 		}
 	},
 	red: {
+		400: '#B64F4F',
 		500: '#A93030'
 	},
 	white: '#FFFFFF'

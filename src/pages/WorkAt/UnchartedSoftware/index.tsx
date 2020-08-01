@@ -7,7 +7,6 @@ import Section from '../../../components/Section';
 import WorkAtProject from '../components/WorkAtProject';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
-import Typography from '../../../styling/Typography';
 import Callout from '../../../components/Callout';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
@@ -45,9 +44,9 @@ export default function UnchartedSoftware() {
 									Uncharted Software is a data visualization company with products used by government, law enforcement, financial&nbsp;industries.
 								</WorkAtDescription>
 
-								<Typography group="primary" variant="body" weight="regular">
-									<em>Due to the sensitivity of work involved, certain details listed below have been obfuscated or&nbsp;redacted.</em>
-								</Typography>
+								<Callout variant="alert">
+									Due to the sensitivity of work involved, certain details listed below have been obfuscated or&nbsp;redacted.
+								</Callout>
 							</Section>
 
 							<Section id="projects" name="Projects">
