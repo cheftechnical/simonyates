@@ -93,8 +93,6 @@ export default function ContactForm(props: Props) {
 					Send
 				</ButtonContained>
 
-				{/*{errors.name && <span>This name field is required</span>}*/}
-				{/*{errors.emailAddress && <span>This email address is required</span>}*/}
 			</form>
 		</div>
 	);
