@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "SimonYates.ca",
+ "description": "Personal website of Simon Yates",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#FFFFFF",
+ "theme_color": "#222222",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
