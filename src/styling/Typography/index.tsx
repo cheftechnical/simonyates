@@ -22,9 +22,11 @@ const defaultSerifFonts =`"Times New Roman", Times, serif`;
 const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
 // const defaultTestFonts = `"Comic Sans Ms"`;
 
+// Apercu
 const fontFamilyApercuRegular = `"Apercu Regular", ${defaultSansSerifFonts}`;
 const fontFamilyApercuLight =  `"Apercu Light", ${defaultSansSerifFonts}`;
 
+// Tiempos Text
 const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`;
 const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`;
 const fontFamilyTiemposTextSemibold = `"Tiempos Text", ${defaultSerifFonts}`; // the semi-bold uses the regular family, but with a different weight

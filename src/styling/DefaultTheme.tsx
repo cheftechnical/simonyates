@@ -5,20 +5,65 @@ import {CSSProperties} from '@material-ui/core/styles/withStyles';
 import {color} from './Color';
 import rem from './rem';
 
-/**
+
+
+
+
+/***********************************************************************************************************************
  * Apercu
- */
+ * @source: https://www.colophon-foundry.org
+ * @license: Purchased 2020-08-01
+ **********************************************************************************************************************/
+
+// ---[ Apercu Bold ]---------------------------------------------------------------------------------------------------
+
 // @ts-ignore
-import ApercuLightWoff from './fonts/apercu/apercu_light-webfont.woff';
+import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
+
 // @ts-ignore
-import ApercuRegularWoff from './fonts/apercu/apercu_regular-webfont.woff';
+import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
+
+// ---[ Apercu Italic ]-------------------------------------------------------------------------------------------------
+
+// @ts-ignore
+import ApercuItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
+
+// @ts-ignore
+import ApercuItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
+
+// ---[ Apercu Light Italic ]-------------------------------------------------------------------------------------------
+
+// @ts-ignore
+import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
+
+// @ts-ignore
+import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
+
+// ---[ Apercu Light ]--------------------------------------------------------------------------------------------------
+
+// @ts-ignore
+import ApercuLightWoff from './fonts/apercu/apercu-light-web/web/apercu-light.woff';
+
+// @ts-ignore
+import ApercuLightWoff2 from './fonts/apercu/apercu-light-web/web/apercu-light.woff2';
+
+// ---[ Apercu Regular ]------------------------------------------------------------------------------------------------
+
+// @ts-ignore
+import ApercuRegularWoff from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff';
+
+// @ts-ignore
+import ApercuRegularWoff2 from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff2';
 
 
-/**
+
+
+
+/***********************************************************************************************************************
  * Tiempos Text
  * @source: https://klim.co.nz/
  * @licence: Purchased 2020-08-01
- */
+ **********************************************************************************************************************/
 
 // ---[ Tiempos Text Bold ]---------------------------------------------------------------------------------------------
 
@@ -66,6 +111,7 @@ const apercuLight: CSSProperties = {
 	fontDisplay: 'fallback',
 	src: `
 		local('Apercu Light'),
+		url(${ApercuLightWoff2}) format('woff2'),
 		url(${ApercuLightWoff}) format('woff')
 	`
 };
@@ -76,6 +122,7 @@ const apercuRegular: CSSProperties = {
 	fontDisplay: 'fallback',
 	src: `
 		local('Apercu Regular'),
+		url(${ApercuRegularWoff2}) format('woff2'),
 		url(${ApercuRegularWoff}) format('woff')
 	`
 };
