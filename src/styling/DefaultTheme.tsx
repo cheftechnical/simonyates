@@ -5,18 +5,60 @@ import {CSSProperties} from '@material-ui/core/styles/withStyles';
 import {color} from './Color';
 import rem from './rem';
 
-// @ts-ignore
-import TiemposTextBoldWoff from './fonts/tiempos-text/tiempos-text-test-bold.woff';
-// @ts-ignore
-import TiemposTextRegularWoff from './fonts/tiempos-text/tiempos-text-test-regular.woff';
-// @ts-ignore
-import TiemposTextMediumWoff from './fonts/tiempos-text/tiempos-text-test-medium.woff';
-// @ts-ignore
-import TiemposTextSemiboldWoff from './fonts/tiempos-text/tiempos-text-test-semibold.woff';
+/**
+ * Apercu
+ */
 // @ts-ignore
 import ApercuLightWoff from './fonts/apercu/apercu_light-webfont.woff';
 // @ts-ignore
 import ApercuRegularWoff from './fonts/apercu/apercu_regular-webfont.woff';
+
+
+/**
+ * Tiempos Text
+ * @source: https://klim.co.nz/
+ * @licence: Purchased 2020-08-01
+ */
+
+// ---[ Tiempos Text Bold ]---------------------------------------------------------------------------------------------
+
+// @ts-ignore
+// import TiemposTextBoldEot from './fonts/tiempos-text-web/tiempos-text-web-bold.eot';
+// @ts-ignore
+import TiemposTextBoldWoff from './fonts/tiempos-text-web/tiempos-text-web-bold.woff';
+// @ts-ignore
+import TiemposTextBoldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
+
+// ---[ Tiempos Text Regular ]------------------------------------------------------------------------------------------
+
+// @ts-ignore
+// import TiemposTextRegularEot from './fonts/tiempos-text-web/tiempos-text-web-regular.eot';
+// @ts-ignore
+import TiemposTextRegularWoff from './fonts/tiempos-text-web/tiempos-text-web-regular.woff';
+// @ts-ignore
+import TiemposTextRegularWoff2 from './fonts/tiempos-text-web/tiempos-text-web-regular.woff2';
+
+// ---[ Tiempos Text Medium ]-------------------------------------------------------------------------------------------
+
+// @ts-ignore
+// import TiemposTextMediumEot from './fonts/tiempos-text-web/tiempos-text-web-medium.eot';
+// @ts-ignore
+import TiemposTextMediumWoff from './fonts/tiempos-text-web/tiempos-text-web-medium.woff';
+// @ts-ignore
+import TiemposTextMediumWoff2 from './fonts/tiempos-text-web/tiempos-text-web-medium.woff2';
+
+// ---[ Tiempos Text Semibold ]-----------------------------------------------------------------------------------------
+
+// @ts-ignore
+// import TiemposTextSemiboldEot from './fonts/tiempos-text-web/tiempos-text-web-semibold.eot';
+// @ts-ignore
+import TiemposTextSemiboldWoff from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff';
+// @ts-ignore
+import TiemposTextSemiboldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff2';
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+
 
 const apercuLight: CSSProperties = {
 	fontFamily: 'Apercu Light',
@@ -46,6 +88,8 @@ const tiemposTextBold: CSSProperties = {
 	src: `
 		local('Tiempos Text Bold'),
 		local('Tiempos Text Test Bold'),
+		local('Tiempos Text Web Bold'),
+		url(${TiemposTextBoldWoff2} format('woff2'),
 		url(${TiemposTextBoldWoff} format('woff')
 	`,
 };
@@ -56,7 +100,9 @@ const tiemposTextRegular: CSSProperties = {
 	fontDisplay: 'fallback',
 	src: `
 		local('Tiempos Text'),
-		local('Tiempos Text Test'),
+		local('Tiempos Text Test Regular'),
+		local('Tiempos Text Web Regular'),
+		url(${TiemposTextRegularWoff2}) format('woff2'),
 		url(${TiemposTextRegularWoff}) format('woff')
 	`,
 };
@@ -68,6 +114,8 @@ const tiemposTextMedium: CSSProperties = {
 	src: `
 		local('Tiempos Text Medium'),
 		local('Tiempos Text Test Medium'),
+		local('Tiempos Text Web Medium'),
+		url(${TiemposTextMediumWoff2}) format('woff2'),
 		url(${TiemposTextMediumWoff}) format('woff')
 	`,
 };
@@ -79,7 +127,9 @@ const tiemposTextSemibold: CSSProperties = {
 	src: `
 		local('Tiempos Text Semibold'),
 		local('Tiempos Text Test Semibold'),
-		url(${TiemposTextSemiboldWoff}) format('woff')
+		local('Tiempos Text Web Semibold'),
+		url(${TiemposTextSemiboldWoff2}) format('woff2'),
+		url(${TiemposTextSemiboldWoff}) format('woff'),
 	`,
 };
 
