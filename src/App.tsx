@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Contact from './pages/Contact';
 import Featured from './pages/Featured';
@@ -14,11 +14,13 @@ import GenworthCanada from './pages/WorkAt/GenworthCanada';
 import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
 import Infomart from './pages/WorkAt/Infomart';
 import DefaultTheme from './styling/DefaultTheme';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
     return (
         <DefaultTheme>
             <Router>
+                <ScrollToTop/>
                 <Switch>
                     <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
                     <Route exact path="/work/rbc" component={Rbc}/>
