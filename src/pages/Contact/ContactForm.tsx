@@ -6,6 +6,9 @@ import {makeStyles} from '@material-ui/core/styles';
 import ButtonContained from '../../styling/ButtonContained';
 import MyTextField from '../../styling/MyTextField';
 
+// @source https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+const regexEmailAddress = /\S+@\S+\.\S+/
+
 interface Props {
 	onSubmit: (data: Message) => void;
 }
@@ -28,45 +31,58 @@ export default function ContactForm(props: Props) {
 				<Controller
 					as={<MyTextField
 						error={!!errors.name}
-						helperText={errors.name ? 'This name field is required' : undefined}
+						helperText={errors.name?.message ? errors.name.message.toString() : undefined}
 						placeholder="Name"
 					/>}
 					name="name"
 					control={control}
-					rules={{required: true}}
+					rules={{
+						required: 'Your name is required'
+					}}
 				/>
 				<Controller
 					as={<MyTextField
 						error={!!errors.emailAddress}
-						helperText={errors.emailAddress ? 'Your email address is required' : undefined}
+						helperText={errors.emailAddress?.message ? errors.emailAddress.message.toString() : undefined}
 						placeholder="Email"
+						InputProps={{type: "text"}}
 					/>}
 					name="emailAddress"
 					control={control}
 					type="email"
-					rules={{required: true}}
+					rules={{
+						required: 'Your email address is required',
+						pattern: {
+							value: regexEmailAddress,
+							message: 'You must provide a valid email address'
+						}
+					}}
 				/>
 				<Controller
 					as={<MyTextField
 						error={!!errors.subject}
-						helperText={errors.subject ? 'The subject field is required' : undefined}
+						helperText={errors.subject?.message ? errors.subject.message.toString() : undefined}
 						placeholder="Subject"
 					/>}
 					name="subject"
 					control={control}
-					rules={{required: true}}
+					rules={{
+						required: 'A subject is required'
+					}}
 				/>
 				<Controller
 					as={<MyTextField
 						error={!!errors.body}
 						multiline
-						helperText={errors.body ? 'This name field is required' : undefined}
+						helperText={errors.body?.message ? errors.body.message.toString() : undefined}
 						placeholder="Message"
 						rows={7}
 					/>}
 					name="body"
 					control={control}
-					rules={{required: true}}
+					rules={{
+						required: 'A message is required'
+					}}
 				/>
 
 				<ButtonContained
@@ -77,8 +93,8 @@ export default function ContactForm(props: Props) {
 					Send
 				</ButtonContained>
 
-				{errors.name && <span>This name field is required</span>}
-				{errors.emailAddress && <span>This email address is required</span>}
+				{/*{errors.name && <span>This name field is required</span>}*/}
+				{/*{errors.emailAddress && <span>This email address is required</span>}*/}
 			</form>
 		</div>
 	);
