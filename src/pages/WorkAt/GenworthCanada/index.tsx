@@ -14,6 +14,7 @@ import WorkAtProject from '../components/WorkAtProject';
 import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import WorkAtLogo from '../components/WorkAtLogo';
+import Quote from '../../../components/Quote';
 
 export default function GenworthCanada() {
 	const [sections, setSections] = React.useState();
@@ -39,7 +40,8 @@ export default function GenworthCanada() {
 									where="Oakville, ON, Canada"
 								/>
 								<WorkAtDescription>
-									Genworth Canada is the leading private sector supplier of mortgage default insurance in&nbsp;Canada.
+									Genworth Canada is the leading private sector supplier of mortgage default
+									insurance in&nbsp;Canada.
 								</WorkAtDescription>
 							</Section>
 
@@ -48,18 +50,25 @@ export default function GenworthCanada() {
 									About The Project
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.
+									Genworth Canada was leading a North American initiative to move their application
+									system to Elasticsearch. The goal of this new system: make it easier for Genworth to
+									detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.
 								</Typography>
 
 								<WorkAtProject next name="Finding Duplicates"/>
 								<Typography next group="primary" variant="body" weight="regular">
-									I was hired based on my previous experience with Elasticsearch, but finding ways of removing dependencies on vendor services was not something I was expected to do. It was only after I got involved in the project and learned about their use case that I saw an opportunity to suggest a better way of doing&nbsp;things.
+									I was hired based on my previous experience with Elasticsearch, but finding ways of
+									removing dependencies on vendor services was not something I was expected to do. It
+									was only after I got involved in the project and learned about their use case that I
+									saw an opportunity to suggest a better way of doing&nbsp;things.
 								</Typography>
 								<Typography next group="primary" variant="body" weight="regular">
-									Using several state-of-the-art features of Elasticsearch, I was able to prototype a solution that effectively replaced a dependency on one of their key data analytics vendors, saving Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
+									Using several state-of-the-art features of Elasticsearch, I was able to prototype a
+									solution that effectively replaced a dependency on one of their key data analytics
+									vendors, saving Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
 								</Typography>
 
-								<Callout list={[
+								<Callout noBottomGutter list={[
 									'Node.js + Express w/ socket.io',
 									'Extjs',
 									'Elasticsearch',
@@ -72,12 +81,12 @@ export default function GenworthCanada() {
 								<WorkAtSectionTitle>
 									Recognition
 								</WorkAtSectionTitle>
-								<Typography group="primary" variant="body" weight="regular">
-									<em>&ldquo;Simon has been critical in helping the team in adding technologies like Node.js, Elasticsearch, and ExtJS to the Path technology stack building on his past&nbsp;experiences.&rdquo;</em>
-								</Typography>
-								<Typography next group="primary" variant="body" weight="regular">
-									— Michael Rossi, Product Manager, Genworth Canada (contractor)
-								</Typography>
+
+								<Quote source="Michael Rossi, Product Manager, Genworth Canada">
+									Simon has been critical in helping the team in adding technologies like Node.js,
+									Elasticsearch, and ExtJS to the Path technology stack building on his
+									past&nbsp;experiences.
+								</Quote>
 							</Section>
 						</Sections>
 					</Grid>

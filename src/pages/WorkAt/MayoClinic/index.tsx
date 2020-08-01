@@ -47,7 +47,10 @@ export default function MayoClinic() {
 								/>
 
 								<WorkAtDescription>
-									Mayo Clinic is an American nonprofit academic medical center based in Rochester, MN, focused on integrated patient care, education and research. It employs over 4,500 physicians and scientists, along with 58,400 administrative and allied health&nbsp;staff.
+									Mayo Clinic is an American nonprofit academic medical center based in Rochester, MN,
+									focused on integrated patient care, education and research. It employs over 4,500
+									physicians and scientists, along with 58,400 administrative and allied
+									health&nbsp;staff.
 								</WorkAtDescription>
 							</Section>
 
@@ -57,7 +60,13 @@ export default function MayoClinic() {
 								</WorkAtSectionTitle>
 
 								<Typography group="primary" variant="body" weight="regular">
-									The Patient Like Mine project was a real-time, visual analytics tool for clinical decision support. The System expands the &ldquo;recall of past experience&rdquo; approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big Data techniques, we enable the provider to recall all similar patients from an institution&rdquo;s electronic medical record (EMR) repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern&nbsp;mining.
+									The Patient Like Mine project was a real-time, visual analytics tool for clinical
+									decision support. The System expands the &ldquo;recall of past experience&rdquo;
+									approach that a provider (physician) uses to formulate a course of action for a
+									given patient. By utilizing Big Data techniques, we enable the provider to recall
+									all similar patients from an institution&rdquo;s electronic medical record (EMR)
+									repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these
+									evidence-based cohorts for future statistical validation and pattern&nbsp;mining.
 								</Typography>
 
 								<Callout list={[

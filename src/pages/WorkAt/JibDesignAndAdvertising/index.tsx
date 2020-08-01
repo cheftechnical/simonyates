@@ -15,6 +15,7 @@ import Callout from '../../../components/Callout';
 import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import WorkAtLogo from '../components/WorkAtLogo';
+import Quote from '../../../components/Quote';
 
 export default function JibDesignAndAdvertising() {
 	const [sections, setSections] = React.useState();
@@ -83,7 +84,7 @@ export default function JibDesignAndAdvertising() {
 									</WorkAtProject>
 								</WorkAtProjects>
 
-								<Callout list={[
+								<Callout noBottomGutter list={[
 									'PHP',
 									'Javascript + jQuery',
 									'HTML + CSS',
@@ -96,17 +97,18 @@ export default function JibDesignAndAdvertising() {
 								<WorkAtSectionTitle>
 									Recognition
 								</WorkAtSectionTitle>
-								<Typography group="primary" variant="body" weight="regular">
-									<em>&ldquo;I do appreciate the good work you&rsquo;ve done. I am very pleased with the application and your coding. Logical.
-										Commented. Made it much easier to go through.&rdquo;</em> &mdash; Alain Brisard, Web Communications Producer, Apple Canada Inc. (June 3rd, 2008)
-								</Typography>
 
-								<Typography next group="primary" variant="body" weight="regular">
-									<em>&ldquo;Thanks for your help, much appreciated. Now the website will in a higher gear and better for us admins and members
-									to&nbsp;use.&rdquo;</em>
+								<Quote source="Alain Brisard, Web Communications Producer, Apple Canada Inc.">
+									I do appreciate the good work you&rsquo;ve done. I am very pleased with the
+									application and your coding. Logical. Commented. Made it much easier to
+									go&nbsp;through.
+								</Quote>
 
-									&mdash; Martin Yeung, Marketing Manager, Verity Prop Ltd. (December 17th, 2007)
-								</Typography>
+								<Quote next source="Martin Yeung, Marketing Manager, Verity Prop Ltd.">
+									Thanks for your help, much appreciated. Now the website will in a higher gear and
+									better for us admins and members to&nbsp;use.
+								</Quote>
+
 							</Section>
 						</Sections>
 					</Grid>

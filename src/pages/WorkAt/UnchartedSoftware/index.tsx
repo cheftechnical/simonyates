@@ -41,11 +41,13 @@ export default function UnchartedSoftware() {
 									where="Toronto, Canada"
 								/>
 								<WorkAtDescription>
-									Uncharted Software is a data visualization company with products used by government, law enforcement, financial&nbsp;industries.
+									Uncharted Software is a data visualization company with products used by government,
+									law enforcement, financial&nbsp;industries.
 								</WorkAtDescription>
 
-								<Callout variant="alert">
-									Due to the sensitivity of work involved, certain details listed below have been obfuscated or&nbsp;redacted.
+								<Callout noBottomGutter variant="alert">
+									Due to the sensitivity of work involved, certain details listed below have been
+									obfuscated or&nbsp;redacted.
 								</Callout>
 							</Section>
 
