@@ -1,11 +1,12 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import {Container, Link} from '@material-ui/core';
+import {Link} from '@material-ui/core';
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color';
 import {Link as ReactRouterDom} from 'react-router-dom';
 import rem from '../../styling/rem';
+import MyContainer from '../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
 	headline: {
@@ -23,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: 'bold',
 		color: color.grey['900'],
 		paddingBottom: '4px',
-		borderBottom: '2px solid magenta',
-		'&$:hover:': {
-			borderBottom: '1px solid lime'
-		}
+		// borderBottom: '2px solid magenta',
+		// '&$:hover:': {
+		// 	borderBottom: '1px solid lime'
+		// }
 	}
 }));
 
@@ -35,7 +36,7 @@ export default function NoMatch() {
 
 	return (
 		<DefaultLayout title="404: Page Not Found">
-			<Container>
+			<MyContainer>
 				<Typography className={classes.headline} group="primary" variant="h1" weight="regular">
 					404
 				</Typography>
@@ -43,7 +44,7 @@ export default function NoMatch() {
 					Sorry, that page doesnt exist.<br/>
 					But you can navigate back to <Link className={classes.link} component={ReactRouterDom} to="/">home</Link>.
 				</Typography>
-			</Container>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };
