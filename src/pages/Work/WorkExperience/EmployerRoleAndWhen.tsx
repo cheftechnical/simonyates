@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
 		marginBottom: theme.spacing(20/8)
 	},
 	h3Link: {
-		color: color.grey['600']
+		color: color.grey['600'],
+		'&:hover': {
+			color: color.grey['600'],
+		}
 	},
 	readFullDetails: {
 		marginTop: theme.spacing(32/8)

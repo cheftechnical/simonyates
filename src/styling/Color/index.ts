@@ -1,6 +1,10 @@
 export const color = {
+	blue: {
+		500: '#1767B0',
+		800: '#0D4A97',
+	},
 	grey: {
-		50: '#F7F7F7',
+		 50: '#F7F7F7',
 		100: '#E1E1E1',
 		200: '#CFCFCF',
 		300: '#B1B1B1',
@@ -12,7 +16,7 @@ export const color = {
 		900: '#222222'
 	},
 	lime: {
-		50: '#F8FAEF',
+		 50: '#F8FAEF',
 		100: '',
 		200: '',
 		300: '#DDE7B1',

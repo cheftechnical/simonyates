@@ -5,6 +5,7 @@ import Typography from '../../styling/Typography';
 
 interface Props {
     children?: any | any[] | undefined;
+    className?: string | undefined;
     list?: string[] | undefined;
     noBottomGutter?: boolean | undefined;
     variant?: 'default' | 'alert' | undefined;
@@ -80,7 +81,7 @@ function Delimiter(props: DelimiterProps) {
  */
 export default function Callout(props: Props) {
     const classes = useStyles();
-    const {children, list, noBottomGutter, variant} = {...defaultProps, ...props};
+    const {children, className, list, noBottomGutter, variant} = {...defaultProps, ...props};
 
     const content = React.useMemo(() => {
         if (!list) return children;
@@ -94,8 +95,8 @@ export default function Callout(props: Props) {
     }, [children, list]);
 
     const rootClassName = (noBottomGutter)
-        ? `${classes.root} ${classes.noBottomGutter}`
-        : classes.root;
+        ? `${classes.root} ${classes.noBottomGutter} ${className}`
+        : `${classes.root} ${className}`;
 
     const typographyClassName = (variant === 'alert')
         ? `${classes.typography} ${classes.alert}`

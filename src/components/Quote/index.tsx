@@ -34,15 +34,21 @@ const useStyles = makeStyles((theme) => ({
 		margin: 0,
 		padding: 0,
 	},
+	blockquoteTypography: {
+		color: color.grey['800']
+	},
 	footer: {
 		paddingTop: theme.spacing(16 / 8),
+	},
+	footerTypography: {
+		color: color.grey['600']
 	},
 	span: {
 		fontFamily: `"Times New Roman"`,
 		fontStyle: 'normal',
 		fontWeight: 'normal',
 		color: color.lime['500'],
-	}
+	},
 }));
 
 export default function Quote(props: Props) {
@@ -60,7 +66,7 @@ export default function Quote(props: Props) {
 	const renderedSource = (source)
 		? (
 			<footer className={classes.footer}>
-				<Typography group="primary" variant="subtitle" weight="regular">{source}</Typography>
+				<Typography className={classes.footerTypography} group="primary" variant="subtitle" weight="regular">{source}</Typography>
 			</footer>
 		) : '';
 
@@ -69,7 +75,7 @@ export default function Quote(props: Props) {
 			<Box className={classes.boxQuote}>&ldquo;</Box>
 			<Box className={classes.boxContent} flexGrow={1}>
 				<blockquote className={classes.blockquote} cite={source}>
-					<Typography group="secondary" variant="body" weight="regular">{children}{renderedEndQuote}</Typography>
+					<Typography className={classes.blockquoteTypography} group="secondary" variant="body" weight="light">{children}{renderedEndQuote}</Typography>
 					{renderedSource}
 				</blockquote>
 			</Box>

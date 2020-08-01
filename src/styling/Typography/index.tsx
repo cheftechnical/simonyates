@@ -18,11 +18,18 @@ export interface Props {
 	weight: 'light' | 'regular' | 'medium' | 'semibold' | undefined;
 }
 
+const fontFamilyApercuRegular = `"Apercu Regular", "Helvetica", "Arial", "sans-serif"`;
+const fontFamilyApercuLight =  `"Apercu Light", "Helvetica", "Arial", "sans-serif"`;
+
+const fontFamilyTiemposTextMedium = `"Tiempos Text Medium"`
+const fontFamilyTiemposTextRegular = `"Tiempos Text"`;
+const fontFamilyTiemposTextSemibold = `"Tiempos Text Semibold"`;
+
 const primary_h1_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(54),
@@ -35,7 +42,7 @@ const primary_h2_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(34),
@@ -48,7 +55,7 @@ const primary_h3_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(24),
@@ -60,7 +67,7 @@ const primary_h3_medium: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text Medium"',
+	fontFamily: fontFamilyTiemposTextMedium,
 	fontStyle: 'normal',
 	fontWeight: 500,
 	fontSize: rem(24),
@@ -73,7 +80,7 @@ const primary_h3_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text Semibold"',
+	fontFamily: fontFamilyTiemposTextSemibold,
 	fontStyle: 'normal',
 	fontWeight: 600,
 	fontSize: rem(23),
@@ -86,7 +93,7 @@ const primary_h4_medium: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text Medium"',
+	fontFamily: fontFamilyTiemposTextMedium,
 	fontStyle: 'normal',
 	fontWeight: 500,
 	fontSize: rem(16),
@@ -99,7 +106,7 @@ const primary_h4_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text Semibold"',
+	fontFamily: fontFamilyTiemposTextSemibold,
 	fontStyle: 'normal',
 	// fontWeight: 600,
 	fontWeight: 500,
@@ -113,7 +120,7 @@ const primary_body_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(16),
@@ -126,7 +133,7 @@ const primary_body_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text Semibold"',
+	fontFamily: fontFamilyTiemposTextSemibold,
 	fontStyle: 'normal',
 	fontWeight: 600,
 	fontSize: rem(16),
@@ -139,7 +146,7 @@ const primary_subtitle_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(14),
@@ -152,7 +159,7 @@ const primary_caption_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Tiempos Text"',
+	fontFamily: fontFamilyTiemposTextRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(12),
@@ -165,7 +172,7 @@ const secondary_h3_light: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Apercu Light", "Comic Sans Ms"',
+	fontFamily: fontFamilyApercuLight,
 	fontStyle: 'normal',
 	fontWeight: 300,
 	fontSize: rem(24),
@@ -177,7 +184,20 @@ const secondary_body_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+	fontFamily: fontFamilyApercuRegular,
+	fontStyle: 'normal',
+	fontWeight: 'normal',
+	fontSize: rem(16),
+	lineHeight: rem(24),
+	letterSpacing: rem(0.5),
+	color: color.grey['900'],
+};
+
+const secondary_body_light: CSSProperties = {
+	margin: 0,
+	padding: 0,
+
+	fontFamily: fontFamilyApercuLight,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(16),
@@ -190,32 +210,32 @@ const secondary_subtitle_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+	fontFamily: fontFamilyApercuRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(14),
 	lineHeight: rem(16),
 	letterSpacing: rem(0.25),
-	color: color.grey['900']
+	color: color.grey['900'],
 };
 
 const secondary_caption_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: '"Apercu Regular", "Comic Sans Ms"',
+	fontFamily: fontFamilyApercuRegular,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(12),
 	lineHeight: rem(16),
 	letterSpacing: rem(0.4),
-	color: color.grey['900']
+	color: color.grey['900'],
 };
 
 
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	primary_h1_regular: {
 		...primary_h1_regular
 	},
@@ -332,6 +352,13 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: secondary_body_regular.lineHeight
 	},
 
+	secondary_body_light: {
+		...secondary_body_light
+	},
+	secondary_body_light_next: {
+		...secondary_body_light,
+		marginTop: secondary_body_light.lineHeight
+	},
 
 	secondary_subtitle_regular: {
 		...secondary_subtitle_regular
@@ -441,6 +468,10 @@ export default function Typography(props: Props) {
 					}
 				},
 				body: {
+					light: {
+						default: classes.secondary_body_light,
+						next: classes.secondary_body_light_next
+					},
 					regular: {
 						default: classes.secondary_body_regular,
 						next: classes.secondary_body_regular_next,

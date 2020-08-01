@@ -97,8 +97,9 @@ export default function MayoClinic() {
 									<WorkAtPublication
 										author="P. Li, S. Yates, J. Lovely, D. Larson"
 									 	date="2015"
-										publisher="IEEE"
+										publisher="IEEE Big Data"
 										title="Patient Like Mine: A Real Time, Visual Analytics Tool For Clinical Decision Support"
+										link="/downloads/publications/ieee/2015/patient-like-mine.pdf"
 									/>
 								</WorkAtPublications>
 							</Section>

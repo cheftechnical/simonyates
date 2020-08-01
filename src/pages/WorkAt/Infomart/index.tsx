@@ -14,8 +14,16 @@ import WorkAtProject from '../components/WorkAtProject';
 import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import WorkAtLogo from '../components/WorkAtLogo';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+	callout: {
+		marginBottom: theme.spacing(20 / 8)
+	}
+}));
 
 export default function Infomart() {
+	const classes = useStyles();
 	const [sections, setSections] = React.useState();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {
@@ -36,13 +44,13 @@ export default function Infomart() {
 									employer="Infomart"
 									role="Architect & Lead Developer"
 									when="2012–2014"
-									where="North York, ON, Canada"
+									where="Toronto, Canada"
 								/>
 								<WorkAtDescription>
 									Infomart was a division of Postmedia, the industry standard for Canadian
 									newspaper&nbsp;archiving.
 								</WorkAtDescription>
-								<Callout noBottomGutter>
+								<Callout className={classes.callout}>
 									<strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started
 									working with it on this project. At the time, the latest version was
 									version&nbsp;~&nbsp;0.19–0.2.x

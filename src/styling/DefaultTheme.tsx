@@ -225,7 +225,11 @@ const theme = createMuiTheme({
 		},
 		MuiLink: {
 			root: {
+				color: color.blue['500'],
 
+				'&:hover': {
+					color: color.blue['800']
+				}
 			}
 		},
 		MuiInput: {
