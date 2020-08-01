@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
         color: color.grey['500'],
 
-        borderLeft: `2px solid ${color.white}`
+        borderLeft: `2px solid ${color.white}`,
     },
     a: {
         textDecoration: 'none',
@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: rem(0.25),
         color: color.grey['500'],
         borderLeft: 'none !important',
+
+        '&:hover': {
+            color: color.grey['900']
+        }
     },
 }));
 
