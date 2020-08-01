@@ -7,10 +7,18 @@ import Image from '../Image';
 interface Props {
 	alt: string;
 	caption?: string;
+	next?: boolean;
 	src: string;
 }
 
 const useStyles = makeStyles((theme) => ({
+	root: {
+
+	},
+	rootNext: {
+		paddingTop: theme.spacing(40/8),
+	},
+
 	caption: {
 		marginTop: theme.spacing((8-2) /8), // subtract 2 for automatic spacing
 
@@ -25,16 +33,20 @@ const useStyles = makeStyles((theme) => ({
 		color: color.grey['700']
 	},
 	image: {
-		paddingTop: theme.spacing(40/8),
+
 	}
 }));
 
 export default function Figure(props: Props) {
 	const classes = useStyles();
-	const {alt, caption, src} = props;
+	const {alt, caption, next, src} = props;
+
+	const rootClassName = (next)
+		? `${classes.root} ${classes.rootNext}`
+		: classes.root;
 
 	return (
-		<figure><Image
+		<figure className={rootClassName}><Image
 			alt={alt}
 			className={classes.image}
 			src={src}
