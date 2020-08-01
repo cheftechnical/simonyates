@@ -208,7 +208,6 @@ const theme = createMuiTheme({
 				],
 				html: {
 					scrollBehavior: 'smooth',
-					// scrollPaddingTop: '70px',
 				},
 				'html,body': {
 					height: '100%'
