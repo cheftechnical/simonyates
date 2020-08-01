@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
-import Typography from '../../styling/Typography';
+import Typography from '../../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../styling/Color';
+import {color} from '../../../styling/Color';
 
 interface Props {
 	employer: string;
@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	readFullDetails: {
 		marginTop: theme.spacing(32/8)
+	},
+	when: {
+		whiteSpace: 'nowrap'
 	}
 }));
 
@@ -38,7 +41,7 @@ export default function EmployerRollAndWhen(props: Props) {
 				component={ReactRouterDom}
 				to={href}
 			>
-				{employer}, {role}, {when}
+				{employer}, {role}, <span className={classes.when}>{when}</span>
 			</Link>
 		</Typography>
 	);

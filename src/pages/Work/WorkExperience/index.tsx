@@ -1,5 +1,5 @@
 import * as React from 'react';
-import EmployerTimeAndRole from '../EmployerRoleAndWhen';
+import EmployerTimeAndRole from './EmployerRoleAndWhen';
 import ReadFullDetails from './ReadFullDetails';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 	when: string;
 }
 
-export default function Experience(props: Props) {
+export default function WorkExperience(props: Props) {
 	const {children, employer, href, role, when} = props;
 
 	return (

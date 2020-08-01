@@ -39,10 +39,13 @@ export default function Infomart() {
 									where="North York, ON, Canada"
 								/>
 								<WorkAtDescription>
-									Infomart was a division of Postmedia, the industry standard for Canadian newspaper&nbsp;archiving.
+									Infomart was a division of Postmedia, the industry standard for Canadian
+									newspaper&nbsp;archiving.
 								</WorkAtDescription>
 								<Callout noBottomGutter>
-									<strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started working with it on this project. At the time, the latest version was version&nbsp;~&nbsp;0.19–0.2.x
+									<strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started
+									working with it on this project. At the time, the latest version was
+									version&nbsp;~&nbsp;0.19–0.2.x
 								</Callout>
 							</Section>
 
@@ -51,13 +54,20 @@ export default function Infomart() {
 									About The Project
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									For the last 30 years, Infomart had collected over 200 million newspaper articles from every major Canadian&nbsp;publisher.
+									For the last 30 years, Infomart had collected over 200 million newspaper articles
+									from every major Canadian&nbsp;publisher.
 								</Typography>
 								<Typography next group="primary" variant="body" weight="regular">
-									The goal of this project was to enhance the search capabilities of the tool, while expanding its archives to include content from leading social media platforms like Twitter, Facebook, and&nbsp;YouTube.
+									The goal of this project was to enhance the search capabilities of the tool, while
+									expanding its archives to include content from leading social media platforms like
+									Twitter, Facebook, and&nbsp;YouTube.
 								</Typography>
 								<Typography next group="primary" variant="body" weight="regular">
-									Data was originally stored in Microsoft SQL Server, but given the full text requirements of the tool, Elasticsearch proved to be an ideal use-case for this modernization effort. Elasticsearch was still in its early beta then (~ version 0.19–0.2.x), so the documentation was a challenge, but the promise was very&nbsp;high.
+									Data was originally stored in Microsoft SQL Server, but given the full text
+									requirements of the tool, Elasticsearch proved to be an ideal use-case for this
+									modernization effort. Elasticsearch was still in its early beta then
+									(~ version 0.19–0.2.x), so the documentation was a challenge, but the promise was
+									very&nbsp;high.
 								</Typography>
 
 								<WorkAtProject next name="Languages & Frameworks"/>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import Experience from './Experience';
+import WorkExperience from './WorkExperience';
 import Typography from '../../styling/Typography';
 import {Grid} from '@material-ui/core';
 import Li from '../../styling/ListsUnordered/Li/intex';
@@ -43,7 +43,7 @@ export default function Work() {
 						<Logo brand="rbc" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="RBC"
                             href="/work/rbc"
                             role="Full-Stack Developer"
@@ -68,7 +68,7 @@ export default function Work() {
 									Advised multiple teams across RBC on Elasticsearch&nbsp;optimization
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
@@ -78,7 +78,7 @@ export default function Work() {
 						<Logo brand="uncharted-software" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="Uncharted Software"
                             href="/work/uncharted-software"
                             role="Senior Software Architect"
@@ -107,7 +107,7 @@ export default function Work() {
 									Converted legacy Java code to&nbsp;Scala
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
@@ -117,7 +117,7 @@ export default function Work() {
 						<Logo brand="mayo-clinic" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="Mayo Clinic"
                             href="/work/mayo-clinic"
                             role="Software Engineer"
@@ -144,7 +144,7 @@ export default function Work() {
 									Optimized Elasticsearch queries for speed and&nbsp;searchability
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
@@ -154,7 +154,7 @@ export default function Work() {
 						<Logo brand="genworth-canada" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="Genworth Canada"
                             href="/work/genworth-canada"
                             role="Developer"
@@ -178,7 +178,7 @@ export default function Work() {
 									Became the &ldquo;go-to-guy&rdquo; on all things&nbsp;Elasticsearch
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
@@ -188,7 +188,7 @@ export default function Work() {
 						<Logo brand="infomart" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="Infomart"
                             href="/work/infomart"
                             role="Architect & Lead Developer"
@@ -216,7 +216,7 @@ export default function Work() {
 									of the&nbsp;software
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
@@ -226,7 +226,7 @@ export default function Work() {
 						<Logo brand="jib-design-and-advertising" variant="default"/>
 					</Grid>
 					<Grid item xs={6}>
-						<Experience
+						<WorkExperience
                             employer="Jib Design & Advertising"
                             href="/work/jib-design-and-advertising"
                             role="Technical Director"
@@ -248,7 +248,7 @@ export default function Work() {
 									Reverse-engineered Google PageRank for improved SEO&nbsp;strategies
 								</Li>
 							</Ul>
-						</Experience>
+						</WorkExperience>
 					</Grid>
 				</MyGridContainer>
 
