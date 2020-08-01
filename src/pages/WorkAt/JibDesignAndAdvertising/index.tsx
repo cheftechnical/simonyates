@@ -51,8 +51,7 @@ export default function JibDesignAndAdvertising() {
 									Key Results
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									{/* @todo: update this line */}
-									Lead developer on all client web development&nbsp;projects:
+									Boutique Toronto agency that provides digital media production for range of clients, including localization services for Apple&nbsp;Canada.
 								</Typography>
 								<Ul>
 									<Li>Wrote the university registration system for the Apple Education Store on&nbsp;apple.ca</Li>
@@ -72,7 +71,7 @@ export default function JibDesignAndAdvertising() {
 											When Apple launched the original iPhone in Canada, they partnered with the Montreal Gazette to feature their online newspaper in its live press demo. This was an extremely high-profile event for Apple, and they couldn&rsquo;t risk any hiccups from a poorly rendering page view. So I built their replica website for this&nbsp;demo.
 										</Typography>
 										<Typography next group="primary" variant="body" weight="regular">
-											As a show of thanks, the partners of Jib gave me an iPhone—6 months before it was available in Canada. Although I  don&rsquo;t use it anymore, I still have it (box included). They&rsquo;re quite a collector&rsquo;s item&nbsp;now.
+											As a show of thanks, the partners of Jib gave me an iPhone&mdash;6 months before it was available in Canada. Although I don&rsquo;t use it anymore, I still have it (box included). They&rsquo;re quite a collector&rsquo;s item&nbsp;now.
 										</Typography>
 									</WorkAtProject>
 

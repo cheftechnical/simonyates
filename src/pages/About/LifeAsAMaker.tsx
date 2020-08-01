@@ -106,7 +106,7 @@ export default function LifeAsAMaker() {
                     </Typography>
                     <Typography className={classes.bodyNext} group="primary" variant="body" weight="regular">
                         It was an 80386SX with a 40 MB HDD, and (I think) 4 MB of RAM. Pre-installed with DOS 4.01, it
-                        came equipped with a SoundBlaster sound card—which was state of the art at the time, and a bunch
+                        came equipped with a SoundBlaster sound card&mdash;which was state of the art at the time, and a bunch
                         of educational games from The Learning Company&nbsp;(TLC).
                     </Typography>
                 </Grid>

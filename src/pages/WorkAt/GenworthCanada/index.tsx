@@ -55,7 +55,7 @@ export default function GenworthCanada() {
 								<Ul>
 									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but use different spelling</Li>
 									<Li>Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its applications</Li>
-									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement—it eliminated the need for a third-party vendor service</Li>
+									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement&mdash;it eliminated the need for a third-party vendor service</Li>
 									<Li>Became the &ldquo;go-to-guy&rdquo; on all things Elasticsearch</Li>
 								</Ul>
 							</Section>
