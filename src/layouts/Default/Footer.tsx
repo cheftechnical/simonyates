@@ -14,26 +14,21 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: theme.spacing(24 / 8),
 		backgroundColor: color.grey['900']
 	},
-
-	colRight: {
-		paddingTop: theme.spacing((57 - 32) / 8),
+	gridItemLogo: {
+		padding: 0,
+	},
+	gridItemLeft: {
+		paddingTop: theme.spacing(16/8),
+	},
+	gridItemRight: {
 		textAlign: 'right'
 	},
-	image: {
-		width: rem(128),
-	},
-	link: {
-		...theme.typography.h1
-	},
-	logo: {
-		marginBottom: theme.spacing(12 / 8),
+	typography: {
+		color: color.grey['400']
 	},
 	socialIcon: {
 		marginLeft: rem(24),
 	},
-	text: {
-		color: color.grey['400']
-	}
 }));
 
 export default function Footer() {
@@ -42,19 +37,24 @@ export default function Footer() {
 	return (
 		<div className={classes.root}>
 			<MyContainer>
-				<Grid container>
-					<Grid item xs={9}>
-						<div className={classes.logo}>
-							<Link component={ReactRouterDom} to="/"><Logo
-								brand="simon-yates" variant="grey-100" width={128}
-							/></Link>
-						</div>
-						<Typography className={classes.text} variant="caption" group="secondary" weight="regular">
+				<Grid container spacing={0}>
+					<Grid item className={classes.gridItemLogo} xs={12}>
+						<Link component={ReactRouterDom} to="/"><Logo
+							brand="simon-yates" variant="grey-100" width={128}
+						/></Link>
+					</Grid>
+				</Grid>
+
+				<Grid container spacing={0}>
+					<Grid item className={classes.gridItemLeft} xs={6}>
+						<Typography className={classes.typography} variant="caption" group="secondary" weight="regular">
 							&copy; 2020 Sybaris Analytics Corporation<br/>
-							<Link className={classes.text} component={ReactRouterDom} to="/legal">Legal</Link>
+						</Typography>
+						<Typography className={classes.typography} variant="caption" group="secondary" weight="regular">
+							<Link className={classes.typography} component={ReactRouterDom} to="/legal">Legal</Link>
 						</Typography>
 					</Grid>
-					<Grid item xs={3} className={classes.colRight}>
+					<Grid item className={classes.gridItemRight} xs={6}>
 						<Link
 							className={classes.socialIcon}
 							title="Find me on LinkedIn"
@@ -70,6 +70,7 @@ export default function Footer() {
 						><Logo brand="twitter" variant="grey-300" width={24}/></Link>
 					</Grid>
 				</Grid>
+
 			</MyContainer>
 		</div>
 	);

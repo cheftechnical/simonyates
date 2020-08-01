@@ -112,15 +112,16 @@ export default function LifeAsAMaker() {
             </MyGridContainer>
 
             {/* Hello, World! */}
-            <Grid container spacing={3}>
+            <MyGridContainer>
                 <Grid item xs={6}>
                     <Typography className={classes.h3} group="primary" variant="h3" weight="medium">
                         Hello, World!
                     </Typography>
                 </Grid>
                 <Grid item xs={6}/>
-            </Grid>
-            <Grid container className={classes.containerTlc} spacing={3}>
+            </MyGridContainer>
+
+            <MyGridContainer className={classes.containerTlc}>
                 <Grid item xs={6}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         While TLC&rsquo;s Super Solvers: <em>Out Numbered! and Challenge of  the Ancient Empires!</em> may have
@@ -147,10 +148,10 @@ export default function LifeAsAMaker() {
                         </Box>
                     </Box>
                 </Grid>
-            </Grid>
+            </MyGridContainer>
 
             {/* GW Basic */}
-            <Grid container className={classes.containerGwBasic} spacing={3}>
+            <MyGridContainer className={classes.containerGwBasic}>
                 <Grid item xs={6}>
                     <Box alignItems="center" className={classes.boxImage} display="flex">
                         <Box>
@@ -172,18 +173,19 @@ export default function LifeAsAMaker() {
                         allowed me to make things and do things that someone hadn&rsquo;t done&nbsp;before.</strong>
                     </Typography>
                 </Grid>
-            </Grid>
+            </MyGridContainer>
 
             {/* Model Railroader Magazine */}
-            <Grid container spacing={3}>
+            <MyGridContainer>
                 <Grid item xs={6}>
                     <Typography className={classes.h3} group="primary" variant="h3" weight="medium">
                         Model trains, Arduino
                     </Typography>
                 </Grid>
                 <Grid item xs={6}/>
-            </Grid>
-            <Grid container className={classes.containerModelRailroaderMagazine} spacing={3}>
+            </MyGridContainer>
+
+            <MyGridContainer className={classes.containerModelRailroaderMagazine}>
                 <Grid item xs={6}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         It was around this time that I also started getting into model trains. <em>Model Railroader
@@ -211,16 +213,16 @@ export default function LifeAsAMaker() {
                         </Box>
                     </Box>
                 </Grid>
-            </Grid>
+            </MyGridContainer>
 
-            <Grid container className={classes.containerSouthernPacificDaylight} spacing={3}>
+            <MyGridContainer className={classes.containerSouthernPacificDaylight}>
                 <Grid item xs={3}/>
                 <Grid item xs={9}>
                     <div className={classes.southernPacificDaylightImage}>
                         <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
                     </div>
                 </Grid>
-            </Grid>
+            </MyGridContainer>
         </MyContainer>
     );
 };
