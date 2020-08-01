@@ -3,6 +3,7 @@ import {Grid} from '@material-ui/core';
 import Image from '../../../components/Image';
 import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
+import MyGridContainer from '../../../styling/MyGridContainer';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -15,20 +16,20 @@ export default function Photos() {
 
 	return (
 		<div className={classes.root}>
-			<Grid container spacing={3}>
+			<MyGridContainer>
 				<Grid item xs={3}>
-					<Image alt="Jean-nis Joplin" src="/images/about/photo-gallery/jean.png"/>
+					<Image alt="Jean'is Joplin" src="/images/about/photo-gallery/jean.png"/>
 				</Grid>
 				<Grid item xs={3}>
-					<Image alt="Jean-nis Joplin" src="/images/about/photo-gallery/mexico-1.png"/>
+					<Image alt="Mexico" src="/images/about/photo-gallery/mexico-1.png"/>
 				</Grid>
 				<Grid item xs={3}>
-					<Image alt="Jean-nis Joplin" src="/images/about/photo-gallery/mexico-2.png"/>
+					<Image alt="Mexico" src="/images/about/photo-gallery/mexico-2.png"/>
 				</Grid>
 				<Grid item xs={3}>
-					<Image alt="Jean-nis Joplin" src="/images/about/photo-gallery/mexico-3.png"/>
+					<Image alt="Mexico" src="/images/about/photo-gallery/mexico-3.png"/>
 				</Grid>
-			</Grid>
+			</MyGridContainer>
 		</div>
 	);
 };
