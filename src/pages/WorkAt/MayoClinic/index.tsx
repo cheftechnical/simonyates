@@ -47,7 +47,7 @@ export default function MayoClinic() {
 								/>
 
 								<WorkAtDescription>
-									Mayo Clinic is an American nonprofit academic medical center based in Rochester, MN, focused on integrated patient care, education and research. It employs over 4,500 physicians and scientists, along with 58,400 administrative and allied health staff.
+									Mayo Clinic is an American nonprofit academic medical center based in Rochester, MN, focused on integrated patient care, education and research. It employs over 4,500 physicians and scientists, along with 58,400 administrative and allied health&nbsp;staff.
 								</WorkAtDescription>
 							</Section>
 
@@ -57,11 +57,11 @@ export default function MayoClinic() {
 								</WorkAtSectionTitle>
 
 								<Ul>
-									<Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big Data</Li>
-									<Li>Built software to visualize and analyze patient medical data for clinical decision support</Li>
-									<Li>Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch documents</Li>
-									<Li>Re-wrote experimental prototype software for production</Li>
-									<Li>Optimized Elasticsearch queries for speed and searchability</Li>
+									<Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support&rdquo;</em> and poster presentation for the 2015 IEEE International Conference on Big&nbsp;Data</Li>
+									<Li>Built software to visualize and analyze patient medical data for clinical decision&nbsp;support</Li>
+									<Li>Built pipeline to transform data from HL7 V2 RIM and FHIR schemas to parent/child Elasticsearch&nbsp;documents</Li>
+									<Li>Re-wrote experimental prototype software for&nbsp;production</Li>
+									<Li>Optimized Elasticsearch queries for speed and&nbsp;searchability</Li>
 								</Ul>
 							</Section>
 
@@ -71,7 +71,7 @@ export default function MayoClinic() {
 								</WorkAtSectionTitle>
 
 								<Typography group="primary" variant="body" weight="regular">
-									The Patient Like Mine project was a real-time, visual analytics tool for clinical decision support. The System expands the &ldquo;recall of past experience&rdquo; approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big Data techniques, we enable the provider to recall all similar patients from an institution&rdquo;s electronic medical record (EMR) repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern mining.
+									The Patient Like Mine project was a real-time, visual analytics tool for clinical decision support. The System expands the &ldquo;recall of past experience&rdquo; approach that a provider (physician) uses to formulate a course of action for a given patient. By utilizing Big Data techniques, we enable the provider to recall all similar patients from an institution&rdquo;s electronic medical record (EMR) repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based cohorts for future statistical validation and pattern&nbsp;mining.
 								</Typography>
 
 								<Callout list={[
@@ -86,10 +86,10 @@ export default function MayoClinic() {
 								]}/>
 
 								<Ul>
-									<Li>Building all of the visualization tools of the project</Li>
-									<Li>Optimizing Elasticsearch queries to provide real-time search on very-large large datasets, which included over 1 billion facts, each with over 1 thousand properties and up to 1 thousand data points per second</Li>
-									<Li>Re-writing an internal tool used for creating complex nested Elasticsearch queries, using modern ES6 standards</Li>
-									<Li>Presenting our work at monthly <em>Lunch-and-Learn</em> workshops, where we would share our progress with other teams within the Mayo Clinic</Li>
+									<Li>Building all of the visualization tools of the&nbsp;project</Li>
+									<Li>Optimizing Elasticsearch queries to provide real-time search on very-large large datasets, which included over 1 billion facts, each with over 1 thousand properties and up to 1 thousand data points per&nbsp;second</Li>
+									<Li>Re-writing an internal tool used for creating complex nested Elasticsearch queries, using modern ES6&nbsp;standards</Li>
+									<Li>Presenting our work at monthly <em>Lunch-and-Learn</em> workshops, where we would share our progress with other teams within the Mayo&nbsp;Clinic</Li>
 								</Ul>
 							</Section>
 

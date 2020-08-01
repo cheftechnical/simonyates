@@ -41,7 +41,7 @@ export default function GenworthCanada() {
 									where="Oakville, ON, Canada"
 								/>
 								<WorkAtDescription>
-									Genworth Canada is the leading private sector supplier of mortgage default insurance in Canada.
+									Genworth Canada is the leading private sector supplier of mortgage default insurance in&nbsp;Canada.
 								</WorkAtDescription>
 							</Section>
 
@@ -50,13 +50,13 @@ export default function GenworthCanada() {
 									Key Results
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									Helped the team get rapidly up-to-speed with Elasticsearch:
+									Helped the team get rapidly up-to-speed with&nbsp;Elasticsearch:
 								</Typography>
 								<Ul>
-									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but use different spelling</Li>
-									<Li>Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its applications</Li>
-									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement&mdash;it eliminated the need for a third-party vendor service</Li>
-									<Li>Became the &ldquo;go-to-guy&rdquo; on all things Elasticsearch</Li>
+									<Li>Designed system to automatically detect names and addresses which may refer to the same subject, but use different&nbsp;spelling</Li>
+									<Li>Hosted regular company-wide Lunch-and-Learn&rsquo;s on Elasticsearch and demonstrated its&nbsp;applications</Li>
+									<Li>Saved the company multi-thousand dollars of annual expenditures by identifying an area of improvement&mdash;it eliminated the need for a third-party vendor&nbsp;service</Li>
+									<Li>Became the &ldquo;go-to-guy&rdquo; on all things&nbsp;Elasticsearch</Li>
 								</Ul>
 							</Section>
 
@@ -65,15 +65,15 @@ export default function GenworthCanada() {
 									About The Project
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									<em>Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer applications.</em>
+									<em>Genworth Canada was leading a North American initiative to move their application system to Elasticsearch. The goal of this new system: make it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of fraud from customer&nbsp;applications.</em>
 								</Typography>
 
 								<WorkAtProject next name="Finding Duplicates"/>
 								<Typography next group="primary" variant="body" weight="regular">
-									I was hired based on my previous experience with Elasticsearch, but finding ways of removing dependencies on vendor services was not something I was expected to do. It was only after I got involved in the project and learned about their use case that I saw an opportunity to suggest a better way of doing things.
+									I was hired based on my previous experience with Elasticsearch, but finding ways of removing dependencies on vendor services was not something I was expected to do. It was only after I got involved in the project and learned about their use case that I saw an opportunity to suggest a better way of doing&nbsp;things.
 								</Typography>
 								<Typography next group="primary" variant="body" weight="regular">
-									Using several state-of-the-art features of Elasticsearch, I was able to prototype a solution that effectively replaced a dependency on one of their key data analytics vendors, saving Genworth 10&rdquo;s of thousands of dollars annually!
+									Using several state-of-the-art features of Elasticsearch, I was able to prototype a solution that effectively replaced a dependency on one of their key data analytics vendors, saving Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
 								</Typography>
 
 								<Callout list={[
@@ -90,7 +90,7 @@ export default function GenworthCanada() {
 									Recognition
 								</WorkAtSectionTitle>
 								<Typography group="primary" variant="body" weight="regular">
-									<em>&ldquo;Simon has been critical in helping the team in adding technologies like Node.js, Elasticsearch, and ExtJS to the Path technology stack building on his past experiences.&rdquo;</em>
+									<em>&ldquo;Simon has been critical in helping the team in adding technologies like Node.js, Elasticsearch, and ExtJS to the Path technology stack building on his past&nbsp;experiences.&rdquo;</em>
 								</Typography>
 								<Typography next group="primary" variant="body" weight="regular">
 									— Michael Rossi, Product Manager, Genworth Canada (contractor)
@@ -106,4 +106,4 @@ export default function GenworthCanada() {
 			</MyContainer>
 		</DefaultLayout>
 	)
-}
+};

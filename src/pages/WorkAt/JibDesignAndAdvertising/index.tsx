@@ -42,7 +42,7 @@ export default function JibDesignAndAdvertising() {
 									where="Toronto, ON, Canada"
 								/>
 								<WorkAtDescription>
-									Design &amp; advertising agency in Toronto.
+									Design &amp; advertising agency in&nbsp;Toronto.
 								</WorkAtDescription>
 							</Section>
 
@@ -120,7 +120,7 @@ export default function JibDesignAndAdvertising() {
 
 								<Typography next group="primary" variant="body" weight="regular">
 									<em>&ldquo;Thanks for your help, much appreciated. Now the website will in a higher gear and better for us admins and members
-									to use.&rdquo;</em>
+									to&nbsp;use.&rdquo;</em>
 
 									&mdash; Martin Yeung, Marketing Manager, Verity Prop Ltd. (December 17th, 2007)
 								</Typography>

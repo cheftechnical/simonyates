@@ -42,11 +42,11 @@ export default function UnchartedSoftware() {
 									where="Toronto, Canada"
 								/>
 								<WorkAtDescription>
-									Uncharted Software is a data visualization company with products used by government, law enforcement, financial industries.
+									Uncharted Software is a data visualization company with products used by government, law enforcement, financial&nbsp;industries.
 								</WorkAtDescription>
 
 								<Typography group="primary" variant="body" weight="regular">
-									<em>Due to the sensitivity of work involved, certain details listed below have been obfuscated or redacted.</em>
+									<em>Due to the sensitivity of work involved, certain details listed below have been obfuscated or&nbsp;redacted.</em>
 								</Typography>
 							</Section>
 
@@ -67,10 +67,10 @@ export default function UnchartedSoftware() {
 										]}/>
 
 										<Ul>
-											<Li>Built back-end framework of new product</Li>
-											<Li>Built RDF/Turtle/SPARQL parser for causal graph traversing and visualization</Li>
-											<Li>Built full-stack prototype of interactive causal graph</Li>
-											<Li>Worked closely with data scientists to develop early prototypes of product</Li>
+											<Li>Built back-end framework of new&nbsp;product</Li>
+											<Li>Built RDF/Turtle/SPARQL parser for causal graph traversing and&nbsp;visualization</Li>
+											<Li>Built full-stack prototype of interactive causal&nbsp;graph</Li>
+											<Li>Worked closely with data scientists to develop early prototypes of&nbsp;product</Li>
 										</Ul>
 									</WorkAtProject>
 
@@ -85,9 +85,9 @@ export default function UnchartedSoftware() {
 										]}/>
 
 										<Ul>
-											<Li>Optimized Elasticsearch model for improved query response time and searchability</Li>
-											<Li>Used NLP and named entity recognition (NER) via spaCy to extract data from unstructured and semi-structured data</Li>
-											<Li>Refactored legacy Java code to Scala with rich set of unit tests</Li>
+											<Li>Optimized Elasticsearch model for improved query response time and&nbsp;searchability</Li>
+											<Li>Used NLP and named entity recognition (NER) via spaCy to extract data from unstructured and semi-structured&nbsp;data</Li>
+											<Li>Refactored legacy Java code to Scala with rich set of unit&nbsp;tests</Li>
 										</Ul>
 									</WorkAtProject>
 								</WorkAtProjects>
