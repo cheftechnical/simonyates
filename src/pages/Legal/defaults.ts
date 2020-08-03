@@ -2,7 +2,7 @@ import {Props as TypographyProps} from '../../styling/Typography';
 
 export const subtitle: TypographyProps = {
 	group: 'primary',
-	variant: 'subtitle',
+	variant: 'body',
 	weight: 'regular'
 };
 

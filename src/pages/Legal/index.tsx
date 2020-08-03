@@ -3,10 +3,12 @@ import DefaultLayout from '../../layouts/Default';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsAndConditions from './TermsAndConditions';
 import {SectionItem} from '../../components/Section/SectionItem';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import Sections from '../../components/Sections';
 import NavRight from '../../components/NavRight';
 import Section from '../../components/Section';
+import MyContainer from '../../styling/MyContainer';
+import MyGridContainer from '../../styling/MyGridContainer';
 
 export default function Legal() {
 	const [sections, setSections] = React.useState();
@@ -17,8 +19,8 @@ export default function Legal() {
 
 	return (
 		<DefaultLayout title="Legal">
-			<Container>
-				<Grid container>
+			<MyContainer>
+				<MyGridContainer>
 					<Grid item xs={6}>
 						<Sections onChange={handleChange}>
 							<Section id="privacy-policy" name="Privacy Policy">
@@ -33,8 +35,8 @@ export default function Legal() {
 					<Grid item xs={3}>
 						<NavRight sections={sections}/>
 					</Grid>
-				</Grid>
-			</Container>
+				</MyGridContainer>
+			</MyContainer>
 		</DefaultLayout>
 	);
 };
