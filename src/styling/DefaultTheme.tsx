@@ -15,45 +15,56 @@ import rem from './rem';
  * @license: Purchased 2020-08-01
  **********************************************************************************************************************/
 
-// ---[ Apercu Bold ]---------------------------------------------------------------------------------------------------
-
-// @ts-ignore
-// import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
-
-// @ts-ignore
-// import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
-
-// ---[ Apercu Italic ]-------------------------------------------------------------------------------------------------
-
-// @ts-ignore
-// import ApercuItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
-
-// @ts-ignore
-// import ApercuItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
-
-// ---[ Apercu Light Italic ]-------------------------------------------------------------------------------------------
-
-// @ts-ignore
-// import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
-
-// @ts-ignore
-// import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
-
-// ---[ Apercu Light ]--------------------------------------------------------------------------------------------------
-
+// ---[ Apercu | 300 | Light ]--------------------------------------------------------------------------------------------------
 // @ts-ignore
 import ApercuLightWoff from './fonts/apercu/apercu-light-web/web/apercu-light.woff';
-
 // @ts-ignore
 import ApercuLightWoff2 from './fonts/apercu/apercu-light-web/web/apercu-light.woff2';
 
-// ---[ Apercu Regular ]------------------------------------------------------------------------------------------------
 
+// ---[ Apercu | 300 | Light Italic ]-------------------------------------------------------------------------------------------
+// @ts-ignore
+import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
+// @ts-ignore
+import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
+
+
+// ---[ Apercu | 400 | Regular ]------------------------------------------------------------------------------------------------
 // @ts-ignore
 import ApercuRegularWoff from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff';
-
 // @ts-ignore
 import ApercuRegularWoff2 from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff2';
+
+
+// ---[ Apercu | 400 | Regular Italic ]-------------------------------------------------------------------------------------------------
+// @ts-ignore
+import ApercuRegularItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
+// @ts-ignore
+import ApercuRegularItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
+
+
+// ---[ Apercu | 700 | Bold ]-------------------------------------------------------------------------------------------
+// @ts-ignore
+import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
+// @ts-ignore
+import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
+
+
+// ---[ Apercu | 700 | Bold Italic ]------------------------------------------------------------------------------------
+// @todo buy Apercu Bold Italic
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,121 +76,242 @@ import ApercuRegularWoff2 from './fonts/apercu/apercu-regular-web/web/apercu-reg
  * @licence: Purchased 2020-08-01
  **********************************************************************************************************************/
 
-// ---[ Tiempos Text Bold ]---------------------------------------------------------------------------------------------
 
-// @ts-ignore
-// import TiemposTextBoldEot from './fonts/tiempos-text-web/tiempos-text-web-bold.eot';
-// @ts-ignore
-import TiemposTextBoldWoff from './fonts/tiempos-text-web/tiempos-text-web-bold.woff';
-// @ts-ignore
-import TiemposTextBoldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
-
-// ---[ Tiempos Text Regular ]------------------------------------------------------------------------------------------
-
-// @ts-ignore
-// import TiemposTextRegularEot from './fonts/tiempos-text-web/tiempos-text-web-regular.eot';
+// ---[ Tiempos Text | 400 | Regular ]----------------------------------------------------------------------------------
 // @ts-ignore
 import TiemposTextRegularWoff from './fonts/tiempos-text-web/tiempos-text-web-regular.woff';
 // @ts-ignore
 import TiemposTextRegularWoff2 from './fonts/tiempos-text-web/tiempos-text-web-regular.woff2';
 
-// ---[ Tiempos Text Medium ]-------------------------------------------------------------------------------------------
 
+// ---[ Tiempos Text | 400 | Regular Italic ]---------------------------------------------------------------------------
 // @ts-ignore
-// import TiemposTextMediumEot from './fonts/tiempos-text-web/tiempos-text-web-medium.eot';
+import TiemposTextRegularItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff';
+// @ts-ignore
+import TiemposTextRegularItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff2';
+
+
+// ---[ Tiempos Text | 500 | Medium ]-----------------------------------------------------------------------------------
 // @ts-ignore
 import TiemposTextMediumWoff from './fonts/tiempos-text-web/tiempos-text-web-medium.woff';
 // @ts-ignore
 import TiemposTextMediumWoff2 from './fonts/tiempos-text-web/tiempos-text-web-medium.woff2';
 
-// ---[ Tiempos Text Semibold ]-----------------------------------------------------------------------------------------
 
+// ---[ Tiempos Text | 500 | Medium Italic ]----------------------------------------------------------------------------
 // @ts-ignore
-// import TiemposTextSemiboldEot from './fonts/tiempos-text-web/tiempos-text-web-semibold.eot';
+import TiemposTextMediumItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff';
+// @ts-ignore
+import TiemposTextMediumItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff2';
+
+
+// ---[ Tiempos Text | 600 | Semibold ]---------------------------------------------------------------------------------
 // @ts-ignore
 import TiemposTextSemiboldWoff from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff';
 // @ts-ignore
 import TiemposTextSemiboldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff2';
 
 
-// ---------------------------------------------------------------------------------------------------------------------
+// ---[ Tiempos Text | 600 | Semibold Italic ]--------------------------------------------------------------------------
+// @ts-ignore
+import TiemposTextSemiboldItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff';
+// @ts-ignore
+import TiemposTextSemiboldItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff2';
 
 
+// ---[ Tiempos Text | 700 | Bold ]-------------------------------------------------------------------------------------
+// @ts-ignore
+import TiemposTextBoldWoff from './fonts/tiempos-text-web/tiempos-text-web-bold.woff';
+// @ts-ignore
+import TiemposTextBoldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
+
+
+// ---[ Tiempos Text | 700 | Bold Italic ]------------------------------------------------------------------------------
+// @ts-ignore
+import TiemposTextBoldItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff';
+// @ts-ignore
+import TiemposTextBoldItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff2';
+
+
+
+
+// ---[ Apercu ]--------------------------------------------------------------------------------------------------------
+
+const apercu = `"Apercu"`;
+
+// Apercu | 300 | Light
 const apercuLight: CSSProperties = {
-	fontFamily: 'Apercu Light',
+	fontFamily: apercu,
 	fontStyle: 'normal',
+	fontWeight: 300,
 	fontDisplay: 'fallback',
 	src: `
-		local('Apercu Light'),
 		url(${ApercuLightWoff2}) format('woff2'),
 		url(${ApercuLightWoff}) format('woff')
 	`
 };
 
-const apercuRegular: CSSProperties = {
-	fontFamily: 'Apercu Regular',
-	fontStyle: 'normal',
+// Apercu | 300 | Light Italic
+const apercuLightItalic: CSSProperties = {
+	fontFamily: apercu,
+	fontStyle: 'italic',
+	fontWeight: 300,
 	fontDisplay: 'fallback',
 	src: `
-		local('Apercu Regular'),
+		url(${ApercuLightItalicWoff2}) format('woff2'),
+		url(${ApercuLightItalicWoff}) format('woff')
+	`
+};
+
+// Apercu | 400 | Regular
+const apercuRegular: CSSProperties = {
+	fontFamily: apercu,
+	fontStyle: 'normal',
+	fontWeight: 'normal',
+	fontDisplay: 'fallback',
+	src: `
 		url(${ApercuRegularWoff2}) format('woff2'),
 		url(${ApercuRegularWoff}) format('woff')
 	`
 };
 
-const tiemposTextBold: CSSProperties = {
-	fontFamily: '"Tiempos Text Bold"',
-	fontStyle: 'normal',
-	fontWeight: 'bold',
+// Apercu | 400 | Regular Italic
+const apercuRegularItalic: CSSProperties = {
+	fontFamily: apercu,
+	fontStyle: 'italic',
+	fontWeight: 'normal',
 	fontDisplay: 'fallback',
 	src: `
-		local('Tiempos Text Bold'),
-		local('Tiempos Text Test Bold'),
-		local('Tiempos Text Web Bold'),
-		url(${TiemposTextBoldWoff2} format('woff2'),
-		url(${TiemposTextBoldWoff} format('woff')
-	`,
+		url(${ApercuRegularItalicWoff2}) format('woff2'),
+		url(${ApercuRegularItalicWoff}) format('woff')
+	`
 };
 
+// Apercu | 700 | Bold
+const apercuBold: CSSProperties = {
+	fontFamily: apercu,
+	fontStyle: 'normal',
+	fontWeight: 700,
+	fontDisplay: 'fallback',
+	src: `
+		url(${ApercuBoldWoff2}) format('woff2'),
+		url(${ApercuBoldWoff}) format('woff')
+	`
+};
+
+// Apercu | 700 | Bold Italic
+// @todo apercuBoldItalic
+
+
+
+
+
+// ----[ Tiempos Text ]-------------------------------------------------------------------------------------------------
+
+const tiemposText = `"Tiempos Text"`
+
+// Tiempos Text | 400 | Regular
 const tiemposTextRegular: CSSProperties = {
-	fontFamily: 'Tiempos Text',
+	fontFamily: tiemposText,
+	fontWeight: 'normal',
 	fontStyle: 'normal',
 	fontDisplay: 'fallback',
 	src: `
-		local('Tiempos Text'),
-		local('Tiempos Text Test Regular'),
-		local('Tiempos Text Web Regular'),
 		url(${TiemposTextRegularWoff2}) format('woff2'),
 		url(${TiemposTextRegularWoff}) format('woff')
 	`,
 };
 
+// Tiempos Text | 400 | Regular Italic
+const tiemposTextRegularItalic: CSSProperties = {
+	fontFamily: tiemposText,
+	fontWeight: 'normal',
+	fontStyle: 'italic',
+	fontDisplay: 'fallback',
+	src: `
+		url(${TiemposTextRegularItalicWoff2}) format('woff2'),
+		url(${TiemposTextRegularItalicWoff}) format('woff')	
+	`
+};
+
+// Tiempos Text | 500 | Medium
 const tiemposTextMedium: CSSProperties = {
-	fontFamily: 'Tiempos Text Medium',
+	fontFamily: tiemposText,
+	fontWeight: 500,
 	fontStyle: 'normal',
 	fontDisplay: 'fallback',
 	src: `
-		local('Tiempos Text Medium'),
-		local('Tiempos Text Test Medium'),
-		local('Tiempos Text Web Medium'),
 		url(${TiemposTextMediumWoff2}) format('woff2'),
 		url(${TiemposTextMediumWoff}) format('woff')
 	`,
 };
 
+// Tiempos Text | 500 | Medium Italic
+const tiemposTextMediumItalic: CSSProperties = {
+	fontFamily: tiemposText,
+	fontWeight: 500,
+	fontStyle: 'italic',
+	fontDisplay: 'fallback',
+	src: `
+		url(${TiemposTextMediumItalicWoff2}) format('woff2'),
+		url(${TiemposTextMediumItalicWoff}) format('woff')
+	`,
+};
+
+// Tiempos Text | 600 | Semibold
 const tiemposTextSemibold: CSSProperties = {
-	fontFamily: 'Tiempos Text Semibold',
+	fontFamily: tiemposText,
+	fontWeight: 600,
 	fontStyle: 'normal',
 	fontDisplay: 'fallback',
 	src: `
-		local('Tiempos Text Semibold'),
-		local('Tiempos Text Test Semibold'),
-		local('Tiempos Text Web Semibold'),
 		url(${TiemposTextSemiboldWoff2}) format('woff2'),
 		url(${TiemposTextSemiboldWoff}) format('woff'),
 	`,
 };
 
+// Tiempos Text | 600 | Semibold Italic
+const tiemposTextSemiboldItalic: CSSProperties = {
+	fontFamily: tiemposText,
+	fontWeight: 600,
+	fontStyle: 'italic',
+	fontDisplay: 'fallback',
+	src: `
+		url(${TiemposTextSemiboldItalicWoff2}) format('woff2'),
+		url(${TiemposTextSemiboldItalicWoff}) format('woff'),
+	`,
+};
+
+// Tiempos Text | 700 | Bold
+const tiemposTextBold: CSSProperties = {
+	fontFamily: tiemposText,
+	fontStyle: 'normal',
+	fontWeight: 'bold',
+	fontDisplay: 'fallback',
+	src: `
+		url(${TiemposTextBoldWoff2} format('woff2'),
+		url(${TiemposTextBoldWoff} format('woff')
+	`,
+};
+
+// Tiempos Text | 700 | Bold Italic
+const tiemposTextBoldItalic: CSSProperties = {
+	fontFamily: tiemposText,
+	fontStyle: 'italic',
+	fontWeight: 'bold',
+	fontDisplay: 'fallback',
+	src: `
+		url(${TiemposTextBoldItalicWoff2} format('woff2'),
+		url(${TiemposTextBoldItalicWoff} format('woff')
+	`,
+}
+
+
+
+
+/***********************************************************************************************************************
+ * Define the theme
+ /*********************************************************************************************************************/
 const theme = createMuiTheme({
 	breakpoints: {
 		values: {
@@ -296,12 +428,25 @@ const theme = createMuiTheme({
 		MuiCssBaseline: {
 			'@global': {
 				'@font-face': [
+					// Apercu
+					apercuBold,
+					apercuRegularItalic,
 					apercuLight,
+					apercuLightItalic,
 					apercuRegular,
-					tiemposTextBold,
-					tiemposTextMedium,
+
+					// Tiempos
 					tiemposTextRegular,
+					tiemposTextRegularItalic,
+
+					tiemposTextMedium,
+					tiemposTextMediumItalic,
+
 					tiemposTextSemibold,
+					tiemposTextSemiboldItalic,
+
+					tiemposTextBold,
+					tiemposTextBoldItalic,
 				],
 				html: {
 					scrollBehavior: 'smooth',

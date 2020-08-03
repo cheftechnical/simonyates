@@ -22,20 +22,15 @@ const defaultSerifFonts =`"Times New Roman", Times, serif`;
 const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
 // const defaultTestFonts = `"Comic Sans Ms"`;
 
-// Apercu
-const fontFamilyApercuRegular = `"Apercu Regular", ${defaultSansSerifFonts}`;
-const fontFamilyApercuLight =  `"Apercu Light", ${defaultSansSerifFonts}`;
-
-// Tiempos Text
-const fontFamilyTiemposTextMedium = `"Tiempos Text Medium", ${defaultSerifFonts}`;
-const fontFamilyTiemposTextRegular = `"Tiempos Text", ${defaultSerifFonts}`;
-const fontFamilyTiemposTextSemibold = `"Tiempos Text", ${defaultSerifFonts}`; // the semi-bold uses the regular family, but with a different weight
+// Font families
+const fontFamilyApercu =  `"Apercu", ${defaultSerifFonts}`;
+const fontFamilyTiemposText = `"Tiempos Text", ${defaultSansSerifFonts}`;
 
 const primary_h1_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(54),
@@ -48,7 +43,7 @@ const primary_h2_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(34),
@@ -61,7 +56,7 @@ const primary_h3_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(24),
@@ -73,7 +68,7 @@ const primary_h3_medium: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextMedium,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 500,
 	fontSize: rem(24),
@@ -86,7 +81,7 @@ const primary_h3_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextSemibold,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 600,
 	fontSize: rem(23),
@@ -99,7 +94,7 @@ const primary_h4_medium: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextMedium,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 500,
 	fontSize: rem(16),
@@ -112,7 +107,7 @@ const primary_h4_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextSemibold,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 600,
 	fontSize: rem(16),
@@ -125,7 +120,7 @@ const primary_body_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(16),
@@ -138,7 +133,7 @@ const primary_body_semibold: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextSemibold,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 600,
 	fontSize: rem(16),
@@ -151,7 +146,7 @@ const primary_subtitle_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(14),
@@ -164,7 +159,7 @@ const primary_caption_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyTiemposTextRegular,
+	fontFamily: fontFamilyTiemposText,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(12),
@@ -177,7 +172,7 @@ const secondary_h3_light: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyApercuLight,
+	fontFamily: fontFamilyApercu,
 	fontStyle: 'normal',
 	fontWeight: 300,
 	fontSize: rem(24),
@@ -189,7 +184,7 @@ const secondary_body_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyApercuRegular,
+	fontFamily: fontFamilyApercu,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(16),
@@ -202,9 +197,9 @@ const secondary_body_light: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyApercuLight,
+	fontFamily: fontFamilyApercu,
 	fontStyle: 'normal',
-	fontWeight: 'normal',
+	fontWeight: 300,
 	fontSize: rem(16),
 	lineHeight: rem(24),
 	letterSpacing: rem(0.5),
@@ -215,7 +210,7 @@ const secondary_subtitle_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyApercuRegular,
+	fontFamily: fontFamilyApercu,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(14),
@@ -228,7 +223,7 @@ const secondary_caption_regular: CSSProperties = {
 	margin: 0,
 	padding: 0,
 
-	fontFamily: fontFamilyApercuRegular,
+	fontFamily: fontFamilyApercu,
 	fontStyle: 'normal',
 	fontWeight: 'normal',
 	fontSize: rem(12),
