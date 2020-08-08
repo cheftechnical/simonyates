@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Grid} from '@material-ui/core';
+import {Box, Grid} from '@material-ui/core';
 import Callout from '../../../components/Callout';
 import DefaultLayout from '../../../layouts/Default';
 import Section from '../../../components/Section';
@@ -34,10 +34,13 @@ export default function Rbc() {
 		<DefaultLayout title="Work at RBC" top="work">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={1}>
+					{/* Avatar */}
+					<Grid item md={1} xs={2}>
 						<WorkAtLogo brand="rbc" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+
+					{/* Content */}
+					<Grid item md={6} xs={12}>
 						<Sections onChange={handleChange}>
 							<Section id="intro" name="Intro">
 								<WorkAtHeader
@@ -130,7 +133,7 @@ export default function Rbc() {
 										</Typography>
 
 										<Callout list={[
-											'Python + scikit-learn, NLTK, numpy, pandas &amp; spaCy',
+											'Python + scikit-learn, NLTK, numpy, pandas & spaCy',
 											'Elasticsearch'
 										]}/>
 
@@ -315,8 +318,12 @@ export default function Rbc() {
 							</Section>
 						</Sections>
 					</Grid>
-					<Grid item xs={2}/>
-					<Grid item xs={3}>
+
+					{/* Gutter */}
+					<Grid item md={2}/>
+
+					{/* Navigation */}
+					<Grid item md={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</MyGridContainer>

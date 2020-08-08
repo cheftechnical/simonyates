@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
+import ConditionalIndent from '../../../components/ConditionalIndent';
 
 interface Props {
 	children?: any;
@@ -8,9 +9,8 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		paddingLeft: rem(40),
-	},
+	root: {},
+
 	next: {
 		paddingTop: rem(40),
 	}
@@ -20,13 +20,13 @@ export default function WorkAtPublications(props: Props) {
 	const classes = useStyles();
 	const {children, next} = props;
 
-	const className = (next)
+	const rootClassName = (next)
 		? `${classes.root} ${classes.next}`
 		: classes.root;
 
 	return (
-		<div className={className}>
+		<ConditionalIndent className={rootClassName}>
 			{children}
-		</div>
+		</ConditionalIndent>
 	);
 }

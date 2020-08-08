@@ -29,7 +29,7 @@ export default function Work() {
 		<DefaultLayout title="Work" top="work">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={12}>
 						<Typography group="primary" variant="h2" weight="regular">
 							Here is a glimpse of my life,<br/>
 							mostly as a programmer.
@@ -39,10 +39,10 @@ export default function Work() {
 
 				{/* RBC */}
 				<MyGridContainer className={classes.employerFirst}>
-					<Grid item xs={1} className={classes.gridItemLogo}>
+					<Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="rbc" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="RBC"
                             href="/work/rbc"
@@ -74,10 +74,10 @@ export default function Work() {
 
 				{/* Uncharted Software */}
 				<MyGridContainer className={classes.employerNext}>
-                    <Grid item xs={1} className={classes.gridItemLogo}>
+                    <Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="uncharted-software" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="Uncharted Software"
                             href="/work/uncharted-software"
@@ -113,10 +113,10 @@ export default function Work() {
 
 				{/* Mayo Clinic */}
 				<MyGridContainer className={classes.employerNext}>
-                    <Grid item xs={1} className={classes.gridItemLogo}>
+                    <Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="mayo-clinic" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="Mayo Clinic"
                             href="/work/mayo-clinic"
@@ -150,10 +150,10 @@ export default function Work() {
 
 				{/* Genworth Canada */}
 				<MyGridContainer className={classes.employerNext}>
-                    <Grid item xs={1} className={classes.gridItemLogo}>
+                    <Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="genworth-canada" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="Genworth Canada"
                             href="/work/genworth-canada"
@@ -184,10 +184,10 @@ export default function Work() {
 
 				{/* Infomart */}
 				<MyGridContainer className={classes.employerNext}>
-                    <Grid item xs={1} className={classes.gridItemLogo}>
+                    <Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="infomart" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="Infomart"
                             href="/work/infomart"
@@ -222,10 +222,10 @@ export default function Work() {
 
 				{/* Jib Design & Advertising */}
 				<MyGridContainer className={classes.employerNext}>
-                    <Grid item xs={1} className={classes.gridItemLogo}>
+                    <Grid item md={1} xs={2} className={classes.gridItemLogo}>
 						<Logo brand="jib-design-and-advertising" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={10}>
 						<WorkExperience
                             employer="Jib Design & Advertising"
                             href="/work/jib-design-and-advertising"

@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     footerFullHeight: {
         marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
-    }
+    },
+
 }));
 
 export default function DefaultLayout(props: Props) {
@@ -61,7 +62,7 @@ export default function DefaultLayout(props: Props) {
             </Helmet>
 
             <header>
-                <NavTop selected={top}/>
+                <NavTop selected={top} />
             </header>
 
             <main className={mainClass}>
@@ -71,6 +72,7 @@ export default function DefaultLayout(props: Props) {
             <footer className={footerClass}>
                 <Footer/>
             </footer>
+
         </div>
     );
 };

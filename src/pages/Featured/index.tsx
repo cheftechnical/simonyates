@@ -50,7 +50,8 @@ export default function Featured() {
 		<DefaultLayout title="Featured" top="featured">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={6}>
+					{/* Content */}
+					<Grid item md={6} xs={12}>
 						<Sections onChange={handleChange}>
 							<Section id="publications" name="Publications">
 								<SectionTitle>
@@ -160,8 +161,12 @@ export default function Featured() {
 							</Section>
 						</Sections>
 					</Grid>
-					<Grid item xs={3}/>
-					<Grid item xs={3}>
+
+					{/* Gutter */}
+					<Grid item md={3}/>
+
+					{/* Navigation */}
+					<Grid item md={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</MyGridContainer>

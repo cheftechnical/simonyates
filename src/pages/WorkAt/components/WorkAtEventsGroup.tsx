@@ -2,6 +2,7 @@ import * as React from 'react';
 import Typography from '../../../styling/Typography';
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
+import ConditionalIndent from '../../../components/ConditionalIndent';
 
 interface Props {
 	children?: any;
@@ -10,9 +11,7 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		paddingLeft: rem(40),
-	},
+	root: {},
 	next: {
 		paddingTop: rem(40),
 	}
@@ -27,11 +26,11 @@ export default function WorkAtEventsGroup(props: Props) {
 		: classes.root;
 
 	return (
-		<div className={className}>
+		<ConditionalIndent className={className}>
 			<Typography group="primary" variant="h4" weight="semibold">
 				{name}
 			</Typography>
 			<div>{children}</div>
-		</div>
+		</ConditionalIndent>
 	);
 };

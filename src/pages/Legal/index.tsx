@@ -21,7 +21,7 @@ export default function Legal() {
 		<DefaultLayout title="Legal">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={12}>
 						<Sections onChange={handleChange}>
 							<Section id="privacy-policy" name="Privacy Policy">
 								<PrivacyPolicy/>
@@ -31,8 +31,8 @@ export default function Legal() {
 							</Section>
 						</Sections>
 					</Grid>
-					<Grid item xs={3}/>
-					<Grid item xs={3}>
+					<Grid item md={3}/>
+					<Grid item md={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</MyGridContainer>

@@ -33,10 +33,13 @@ export default function MayoClinic() {
 		<DefaultLayout title="Work at Mayo Clinic" top="work">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={1}>
+					{/* Avatar */}
+					<Grid item md={1} xs={2}>
 						<WorkAtLogo brand="mayo-clinic" variant="default"/>
 					</Grid>
-					<Grid item xs={6}>
+
+					{/* Content */}
+					<Grid item md={6} xs={12}>
 						<Sections onChange={handleChange}>
 							<Section id="intro" name="Intro">
 								<WorkAtHeader
@@ -134,12 +137,16 @@ export default function MayoClinic() {
 							</Section>
 						</Sections>
 					</Grid>
-					<Grid item xs={2}/>
-					<Grid item xs={3}>
+
+					{/* Gutter */}
+					<Grid item md={2}/>
+
+					{/* Navigation */}
+					<Grid item md={3}>
 						<NavRight sections={sections}/>
 					</Grid>
 				</MyGridContainer>
 			</MyContainer>
 		</DefaultLayout>
 	)
-}
+};

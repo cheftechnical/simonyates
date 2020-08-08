@@ -9,8 +9,9 @@ interface Props {
 export default function MyContainer(props: Props) {
 	const {children, className} = props;
 
+		// <Container className={className} disableGutters>
 	return (
-		<Container className={className} disableGutters>
+		<Container className={className}>
 			{children}
 		</Container>
 	);

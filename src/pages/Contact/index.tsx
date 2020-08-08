@@ -40,7 +40,8 @@ export default function Contact() {
 		<DefaultLayout title="Contact" top="contact">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item xs={12}>
+					{/* Content */}
+					<Grid item md={12} xs={12}>
 						<Typography className={classes.heading} group="primary" variant="h1" weight="regular">
 							Pleasure to meet you.
 						</Typography>
@@ -48,7 +49,7 @@ export default function Contact() {
 				</MyGridContainer>
 
 				<MyGridContainer>
-					<Grid item xs={6}>
+					<Grid item md={6} xs={12}>
 						<Typography className={classes.body} group="primary" variant="body" weight="regular">
 							I&rsquo;m always open to make new connections and chat about software development.
 						</Typography>

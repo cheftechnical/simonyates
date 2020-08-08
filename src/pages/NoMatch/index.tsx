@@ -24,10 +24,6 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: 'bold',
 		color: color.grey['900'],
 		paddingBottom: '4px',
-		// borderBottom: '2px solid magenta',
-		// '&$:hover:': {
-		// 	borderBottom: '1px solid lime'
-		// }
 	}
 }));
 
@@ -41,8 +37,8 @@ export default function NoMatch() {
 					404
 				</Typography>
 				<Typography className={classes.body} group="primary" variant="h3" weight="regular">
-					Sorry, that page doesnt exist.<br/>
-					But you can navigate back to <Link className={classes.link} component={ReactRouterDom} to="/">home</Link>.
+					Sorry, that page doesn&rsquo;t&nbsp;exist.<br/>
+					But you can navigate back to&nbsp;<Link className={classes.link} component={ReactRouterDom} to="/">home</Link>.
 				</Typography>
 			</MyContainer>
 		</DefaultLayout>

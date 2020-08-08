@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Grid} from "@material-ui/core";
+import {Box, Grid, Hidden} from "@material-ui/core";
 import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
@@ -70,8 +70,8 @@ export default function LifeAsAMaker() {
         <MyContainer className={classes.root}>
             {/* Life as a maker*/}
             <MyGridContainer>
-                <Grid item xs={6}/>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={false}/>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.h1} group="primary" variant="h1" weight="regular">
                         Life as a Maker
                     </Typography>
@@ -79,16 +79,18 @@ export default function LifeAsAMaker() {
             </MyGridContainer>
 
             <MyGridContainer className={classes.lifeAsAMakerBodyContainer}>
-                <Grid item xs={6}>
-                    <Box alignItems="center" className={classes.boxImage} display="flex">
-                        <Box>
-                            <div className={classes.imageLifeAsAMaker}>
-                                <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
-                            </div>
+                <Hidden mdDown>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div className={classes.imageLifeAsAMaker}>
+                                    <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
+                                </div>
+                            </Box>
                         </Box>
-                    </Box>
-                </Grid>
-                <Grid item xs={6}>
+                    </Grid>
+                </Hidden>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         I was 3 when I first used a computer. The year was 1984 and my dad was doing some interior
                         design work for the Canadian headquarters of a computer company out of Silicon Valley. As a
@@ -113,16 +115,16 @@ export default function LifeAsAMaker() {
 
             {/* Hello, World! */}
             <MyGridContainer>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.h3} group="primary" variant="h3" weight="medium">
                         Hello, World!
                     </Typography>
                 </Grid>
-                <Grid item xs={6}/>
+                <Grid item md={6}/>
             </MyGridContainer>
 
             <MyGridContainer className={classes.containerTlc}>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         While TLC&rsquo;s Super Solvers: <em>Out Numbered! and Challenge of  the Ancient Empires!</em> may have
                         kept me busy during summer break, it was this synthesized musical keyboard game that came
@@ -139,29 +141,35 @@ export default function LifeAsAMaker() {
                         it was fascinating&nbsp;stuff!
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
-                    <Box alignItems="center" className={classes.boxImage} display="flex">
-                        <Box>
-                            <div className={classes.imageTlc}>
-                                <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
-                            </div>
+
+                <Hidden mdDown>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div className={classes.imageTlc}>
+                                    <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
+                                </div>
+                            </Box>
                         </Box>
-                    </Box>
-                </Grid>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
 
             {/* GW Basic */}
             <MyGridContainer className={classes.containerGwBasic}>
-                <Grid item xs={6}>
-                    <Box alignItems="center" className={classes.boxImage} display="flex">
-                        <Box>
-                            <div className={classes.imageGwBasic}>
-                                <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
-                            </div>
+                <Hidden mdDown>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div className={classes.imageGwBasic}>
+                                    <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
+                                </div>
+                            </Box>
                         </Box>
-                    </Box>
-                </Grid>
-                <Grid item xs={6}>
+                    </Grid>
+                </Hidden>
+
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         I started coding sheet music into the computer and playing it back. My mom was very confused as
                         to why I kept playing <em>When The Saint&rsquo;s Go Marching In</em>, and other Christmas tunes
@@ -177,16 +185,18 @@ export default function LifeAsAMaker() {
 
             {/* Model Railroader Magazine */}
             <MyGridContainer>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.h3} group="primary" variant="h3" weight="medium">
                         Model trains, Arduino
                     </Typography>
                 </Grid>
-                <Grid item xs={6}/>
+                <Hidden mdDown>
+                    <Grid item md={6}/>
+                </Hidden>
             </MyGridContainer>
 
             <MyGridContainer className={classes.containerModelRailroaderMagazine}>
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         It was around this time that I also started getting into model trains. <em>Model Railroader
                         Magazine</em> would often include snippets of BASIC code that allowed you to control the COM
@@ -204,20 +214,26 @@ export default function LifeAsAMaker() {
                         Arduino, so stay tuned to see what I make with&nbsp;that.
                     </Typography>
                 </Grid>
-                <Grid item xs={6}>
-                    <Box alignItems="center" className={classes.boxImage} display="flex">
-                        <Box>
-                            <div className={classes.imageModelRailroaderMagazine}>
-                                <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
-                            </div>
+
+                <Hidden mdDown>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div className={classes.imageModelRailroaderMagazine}>
+                                    <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
+                                </div>
+                            </Box>
                         </Box>
-                    </Box>
-                </Grid>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
 
             <MyGridContainer className={classes.containerSouthernPacificDaylight}>
-                <Grid item xs={3}/>
-                <Grid item xs={9}>
+                <Hidden mdDown>
+                    <Grid item md={3}/>
+                </Hidden>
+
+                <Grid item md={9} xs={12}>
                     <div className={classes.southernPacificDaylightImage}>
                         <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
                     </div>

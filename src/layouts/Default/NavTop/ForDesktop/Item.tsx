@@ -10,7 +10,6 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
 	active: {
-		// fontFamily: '"Tiempos Text Bold"',
 		fontWeight: 'bold',
 	},
 	button: {

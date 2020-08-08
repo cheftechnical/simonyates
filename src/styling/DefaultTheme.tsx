@@ -306,7 +306,8 @@ const tiemposTextBoldItalic: CSSProperties = {
 	`,
 }
 
-
+const containerPaddingLeft = 22;
+const containerPaddingRight = 22;
 
 
 /***********************************************************************************************************************
@@ -318,7 +319,7 @@ const theme = createMuiTheme({
 			xs: 0,
 			sm: 600,
 			md: 960,
-			lg: 1032,   // custom: to match figma
+			lg: 1032 + containerPaddingLeft + containerPaddingRight,   // custom: to match figma
 			xl: 1920,
 		},
 	},
@@ -333,7 +334,7 @@ const theme = createMuiTheme({
 			contained: {
 				padding: rem(16),
 
-				fontFamily: '"Tiempos Text Medium"',
+				fontFamily: tiemposText,
 				fontStyle: 'normal',
 				fontWeight: 500,
 				fontSize: rem(16),
@@ -364,7 +365,7 @@ const theme = createMuiTheme({
 			},
 			text: {
 				padding: 0,
-				fontFamily: '"Tiempos Text"',
+				fontFamily: tiemposText,
 				fontStyle: 'normal',
 				fontWeight: 'normal',
 				fontSize: rem(14),
@@ -383,8 +384,6 @@ const theme = createMuiTheme({
 				'& .MuiButton-label': {
 					paddingBottom: rem(6),
 					borderBottom: `2px solid ${color.white}`
-					// borderBottom: `2px solid cyan`
-
 				},
 
 				'&:hover': {
@@ -392,7 +391,6 @@ const theme = createMuiTheme({
 
 					'& .MuiButton-label': {
 						borderBottom: `2px solid ${color.grey[900]}`,
-						// borderBottom: `2px solid magenta`,
 					},
 
 					'& .MuiButton-label .MuiButton-endIcon': {
@@ -405,13 +403,27 @@ const theme = createMuiTheme({
 				'&$disabled': {
 					color: color.grey[300],
 				},
+
+				'&$textSecondary': {
+					color: color.grey['100'],
+
+					'& .MuiButton-label': {
+						borderBottom: `2px solid ${color.grey['900']}`
+					},
+
+					'&:hover': {
+						'& .MuiButton-label': {
+							borderBottom: `2px solid ${color.grey['100']}`
+						},
+					}
+				}
 			}
 		},
 		MuiChip: {
 			root: {
 				marginRight: rem(8),
 
-				fontFamily: '"Apercu Regular"',
+				fontFamily: apercu,
 				fontStyle: 'normal',
 				fontWeight: 'normal',
 				fontSize: rem(14),
@@ -423,6 +435,12 @@ const theme = createMuiTheme({
 				borderWidth: 1.5,
 				borderStyle: 'solid',
 				borderColor: color.lime['300'],
+			}
+		},
+		MuiContainer: {
+			root: {
+				paddingLeft: rem(containerPaddingLeft),
+				paddingRight: rem(containerPaddingRight),
 			}
 		},
 		MuiCssBaseline: {
@@ -550,7 +568,7 @@ const theme = createMuiTheme({
 		}
 	},
 	typography: {
-		fontFamily: '"Tiempos Text"'
+		fontFamily: tiemposText
 	}
 });
 
