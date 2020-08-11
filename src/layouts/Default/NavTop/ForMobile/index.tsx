@@ -9,6 +9,7 @@ import Menu from './Menu';
 import {color} from '../../../../styling/Color';
 import Typography from '../../../../styling/Typography';
 import rem from '../../../../styling/rem';
+import CenterVertically from './CenterVertically';
 
 interface Props {
 	selected?: string;
@@ -26,11 +27,21 @@ const useStyles = makeStyles((theme) => ({
 		zIndex: 999
 	},
 	selected: {
+		paddingRight: theme.spacing((16-12) / 8),
 		fontWeight: 'bold',
 		fontSize: rem(14),
 		lineHeight: rem(16),
 		letterSpacing: rem(1.25),
 		textTransform: 'uppercase',
+	},
+	box1: {
+		// backgroundColor: 'magenta'
+	},
+	box2: {
+		// backgroundColor: 'cyan'
+	},
+	box3: {
+		// backgroundColor: 'lime'
 	}
 }));
 
@@ -44,7 +55,7 @@ export default function ForMobile(props: Props) {
 		setIsMenuVisible(false);
 	}, []);
 
-	const handleShowMenu = React.useCallback(() =>{
+	const handleShowMenu = React.useCallback(() => {
 		setIsMenuVisible(true);
 	}, []);
 
@@ -54,24 +65,30 @@ export default function ForMobile(props: Props) {
 			<MyContainer>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}
-					<Box flexGrow={1}>
-						<Link component={ReactRouterDom} to="/"><Logo
-							brand="simon-yates"
-							variant="default"
-							width={149}
-						/></Link>
+					<Box flexGrow={1} className={classes.box1}>
+						<CenterVertically>
+							<Link component={ReactRouterDom} to="/"><Logo
+								brand="simon-yates"
+								variant="default"
+								width={149}
+							/></Link>
+						</CenterVertically>
 					</Box>
 
 					{/*	Right align */}
-					<Box>
-						<Typography className={classes.selected} group="primary" variant="body" weight="regular">
-							{selected}
-						</Typography>
+					<Box className={classes.box2}>
+						<CenterVertically>
+							<Typography className={classes.selected} group="primary" variant="body" weight="regular">
+								{selected}
+							</Typography>
+						</CenterVertically>
 					</Box>
-					<Box>
-						<IconButton aria-label="menu" onClick={handleShowMenu}>
-							<MenuIcon/>
-						</IconButton>
+					<Box className={classes.box3}>
+						<CenterVertically>
+							<IconButton aria-label="menu" onClick={handleShowMenu}>
+								<MenuIcon/>
+							</IconButton>
+						</CenterVertically>
 					</Box>
 				</Box>
 			</MyContainer>
