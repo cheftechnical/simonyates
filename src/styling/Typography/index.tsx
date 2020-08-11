@@ -27,17 +27,17 @@ const fontFamilyTiemposText = `"Tiempos Text", ${defaultSansSerifFonts}`;
 
 
 // The lineHeights are used to set the marginTop of components with the `next` property
-const primary_h1_400_regular_lineHeight       = rem(88);
-const primary_h2_400_regular_lineHeight       = rem(56);
-const primary_h3_400_regular_lineHeight       = rem(32);
-const primary_h3_500_medium_lineHeight        = rem(32);
-const primary_h3_600_semibold_lineHeight      = rem(32);
-const primary_h4_500_medium_lineHeight        = rem(24);
-const primary_h4_600_semibold_lineHeight      = rem(24);
-const primary_body_400_regular_lineHeight     = rem(24);
-const primary_body_600_semibold_lineHeight    = rem(24);
-const primary_subtitle_400_regular_lineHeight = rem(16);
-const primary_caption_400_regular_lineHeight  = rem(16);
+const primary_h1_400_regular_lineHeight         = rem(88);
+const primary_h2_400_regular_lineHeight         = rem(56);
+const primary_h3_400_regular_lineHeight         = rem(32);
+const primary_h3_500_medium_lineHeight          = rem(32);
+const primary_h3_600_semibold_lineHeight        = rem(32);
+const primary_h4_500_medium_lineHeight          = rem(24);
+const primary_h4_600_semibold_lineHeight        = rem(24);
+const primary_body_400_regular_lineHeight       = rem(24);
+const primary_body_600_semibold_lineHeight      = rem(24);
+const primary_subtitle_400_regular_lineHeight   = rem(16);
+const primary_caption_400_regular_lineHeight    = rem(16);
 
 const secondary_h3_300_light_lineHeight         = rem(40);
 const secondary_body_300_light_lineHeight       = rem(24);
@@ -75,12 +75,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 		[theme.breakpoints.up('xs')]: {
 			fontSize: rem(34),
 			lineHeight: rem(56),
-			color: 'red'
+			// color: 'red'
 		},
 		[theme.breakpoints.up('md')]: {
 			fontSize: rem(54),
 			lineHeight: primary_h1_400_regular_lineHeight,
-			color: 'orange'
+			// color: 'orange'
 		}
 	},
 	primary_h1_400_regular_next: {
