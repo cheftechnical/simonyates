@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {Grid, Link} from '@material-ui/core';
 import {Link as ReactRouterDom} from 'react-router-dom';
-import Logo from '../../components/Logo';
+import Logo from '../../../components/Logo';
 import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../styling/Color';
-import Typography from '../../styling/Typography';
-import rem from '../../styling/rem';
-import MyContainer from '../../styling/MyContainer';
+import {color} from '../../../styling/Color';
+import Typography from '../../../styling/Typography';
+import rem from '../../../styling/rem';
+import MyContainer from '../../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
