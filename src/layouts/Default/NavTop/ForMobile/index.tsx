@@ -7,6 +7,8 @@ import Logo from '../../../../components/Logo';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from './Menu';
 import {color} from '../../../../styling/Color';
+import Typography from '../../../../styling/Typography';
+import rem from '../../../../styling/rem';
 
 interface Props {
 	selected?: string;
@@ -22,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 		top: 0,
 		zIndex: 999
+	},
+	selected: {
+		fontWeight: 'bold',
+		fontSize: rem(14),
+		lineHeight: rem(16),
+		letterSpacing: rem(1.25),
+		textTransform: 'uppercase',
 	}
 }));
 
@@ -54,6 +63,11 @@ export default function ForMobile(props: Props) {
 					</Box>
 
 					{/*	Right align */}
+					<Box>
+						<Typography className={classes.selected} group="primary" variant="body" weight="regular">
+							{selected}
+						</Typography>
+					</Box>
 					<Box>
 						<IconButton aria-label="menu" onClick={handleShowMenu}>
 							<MenuIcon/>
