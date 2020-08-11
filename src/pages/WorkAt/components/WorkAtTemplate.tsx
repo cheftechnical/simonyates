@@ -5,14 +5,18 @@ import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import MyContainer from '../../../styling/MyContainer';
 import {makeStyles} from '@material-ui/core/styles';
+import WorkAtEmployer from './WorkAtEmployer';
+import WorkAtRole from './WorkAtRole';
+import WorkAtWhenWhere from './WorkAtWhenWhere';
 
 interface Props {
 	content: React.ReactElement;
-	employer: React.ReactElement;
+	employer: string;
 	logo: React.ReactElement;
 	sections: SectionItem[];
-	role: React.ReactElement;
-	whenWhere: React.ReactElement;
+	role: React.ReactElement | string;
+	when: string;
+	where: string;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +33,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function WorkAtTemplate(props: Props) {
 	const classes = useStyles();
-	const {content, employer, logo, role, sections, whenWhere} = props;
+	const {content, employer, logo, role, sections, when, where} = props;
+
+	const renderedWorkAtEmployer = React.useMemo(() => {
+		return (<WorkAtEmployer employer={employer}/>);
+	}, [employer]);
+
+	const renderedWorkAtRole = React.useMemo(() => {
+		return (<WorkAtRole>{role}</WorkAtRole>);
+	}, [role]);
+
+	const renderedWorkAtWhenWhere = React.useMemo(() => {
+		return (<WorkAtWhenWhere when={when} where={where}/>);
+	},[when, where]);
 
 	return (
 		<MyContainer className={classes.root}>
@@ -43,12 +59,12 @@ export default function WorkAtTemplate(props: Props) {
 				<Hidden mdUp>
 					<Grid item sm={6} xs={10}>
 						<Box alignItems="center" className={classes.boxImage} display="flex">
-							<Box>{employer}</Box>
+							<Box>{renderedWorkAtEmployer}</Box>
 						</Box>
 					</Grid>
 					<Grid item sm={12} xs={12}>
-						{role}
-						{whenWhere}
+						{renderedWorkAtRole}
+						{renderedWorkAtWhenWhere}
 						{content}
 					</Grid>
 				</Hidden>
@@ -58,12 +74,12 @@ export default function WorkAtTemplate(props: Props) {
 					{/* Content */}
 					<Grid item sm={6} xs={10}>
 						<div>
-							{employer}
+							{renderedWorkAtEmployer}
 						</div>
 						<div className={classes.role}>
-							{role}
+							{renderedWorkAtRole}
 						</div>
-						{whenWhere}
+						{renderedWorkAtWhenWhere}
 						{content}
 					</Grid>
 

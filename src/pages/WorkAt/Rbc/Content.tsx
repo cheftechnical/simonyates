@@ -16,7 +16,6 @@ import WorkAtPublication from '../components/WorkAtPublication';
 import Sections from '../../../components/Sections';
 import {SectionItem} from '../../../components/Section/SectionItem';
 
-
 interface Props {
 	onChange?: (newValues: SectionItem[]) => void;
 }
