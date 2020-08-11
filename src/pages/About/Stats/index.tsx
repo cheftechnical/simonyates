@@ -1,9 +1,13 @@
 import * as React from 'react';
-import {Grid} from '@material-ui/core';
+import {Grid, Hidden} from '@material-ui/core';
 import StatsItem from './StatsItem';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
 import MyContainer from '../../../styling/MyContainer';
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import {Carousel} from 'react-responsive-carousel';
+
+import Carousel from 'react-material-ui-carousel'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -11,6 +15,13 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: theme.spacing(36 / 8),
 		backgroundColor: color.grey['50']
 	},
+
+	carouselActive: {
+
+	},
+	carouselIndicator: {
+
+	}
 }));
 
 export default function Stats() {
@@ -18,22 +29,48 @@ export default function Stats() {
 
 	return (
 		<div className={classes.root}>
-			<MyContainer>
-				<Grid container spacing={10}>
-					<Grid item xs={3}>
+			{/* Desktop */}
+			<Hidden smDown>
+				<MyContainer>
+					<Grid container spacing={10}>
+						<Grid item xs={3}>
+							<StatsItem caption="years programming" value={25}/>
+						</Grid>
+						<Grid item xs={3}>
+							<StatsItem caption="when I started programming" value={10}/>
+						</Grid>
+						<Grid item xs={3}>
+							<StatsItem caption="software projects completed" value={200}/>
+						</Grid>
+						<Grid item xs={3}>
+							<StatsItem caption="awesome girlfriend" value={1}/>
+						</Grid>
+					</Grid>
+				</MyContainer>
+			</Hidden>
+
+			{/*	Mobile */}
+			<Hidden mdUp>
+				<Carousel
+					autoPlay={false}
+					animation="slide"
+					activeIndicatorProps={{className: classes.carouselActive, style: {}}}
+					indicatorProps={{className: classes.carouselActive, style: {}}}
+				>
+					<div>
 						<StatsItem caption="years programming" value={25}/>
-					</Grid>
-					<Grid item xs={3}>
+					</div>
+					<div>
 						<StatsItem caption="when I started programming" value={10}/>
-					</Grid>
-					<Grid item xs={3}>
+					</div>
+					<div>
 						<StatsItem caption="software projects completed" value={200}/>
-					</Grid>
-					<Grid item xs={3}>
+					</div>
+					<div>
 						<StatsItem caption="awesome girlfriend" value={1}/>
-					</Grid>
-				</Grid>
-			</MyContainer>
+					</div>
+				</Carousel>
+			</Hidden>
 		</div>
 	);
 };

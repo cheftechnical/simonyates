@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {Box, Grid, useMediaQuery, useTheme} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../styling/Typography';
-import Image from '../../components/Image';
-import MyContainer from '../../styling/MyContainer';
-import MyGridContainer from '../../styling/MyGridContainer';
+import Typography from '../../../styling/Typography';
+import Image from '../../../components/Image';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
 
 const useStyles = makeStyles((theme) => ({
 	rootDesktop: {
