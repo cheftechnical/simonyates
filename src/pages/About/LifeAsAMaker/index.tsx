@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {Box, Grid, Hidden} from "@material-ui/core";
-import Typography from '../../styling/Typography';
+import {Box, Grid, Hidden, useMediaQuery, useTheme} from "@material-ui/core";
+import Typography from '../../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../styling/rem';
-import Image from '../../components/Image';
-import MyContainer from '../../styling/MyContainer';
-import MyGridContainer from '../../styling/MyGridContainer';
+import rem from '../../../styling/rem';
+import Image from '../../../components/Image';
+import MyContainer from '../../../styling/MyContainer';
+import MyGridContainer from '../../../styling/MyGridContainer';
 
 const bodyLineHeight = 24;
 
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100%'
     },
     imageLifeAsAMaker: {
-        paddingRight: theme.spacing(88/8)
+        paddingRight: theme.spacing(88/8),
     },
     imageTlc: {
         paddingLeft: rem(88),
@@ -65,6 +65,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LifeAsAMaker() {
     const classes = useStyles();
+    const theme = useTheme();
+    const matchesSm = useMediaQuery(theme.breakpoints.up('md'));
+
+    const imageLifeAsAMakerClassName = (matchesSm)
+        ? classes.imageLifeAsAMaker
+        : '';
+
+
 
     return (
         <MyContainer className={classes.root}>
@@ -79,7 +87,7 @@ export default function LifeAsAMaker() {
             </MyGridContainer>
 
             <MyGridContainer className={classes.lifeAsAMakerBodyContainer}>
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
                             <Box>
@@ -90,6 +98,7 @@ export default function LifeAsAMaker() {
                         </Box>
                     </Grid>
                 </Hidden>
+
                 <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         I was 3 when I first used a computer. The year was 1984 and my dad was doing some interior
@@ -111,6 +120,18 @@ export default function LifeAsAMaker() {
                         of educational games from The Learning Company&nbsp;(TLC).
                     </Typography>
                 </Grid>
+
+                <Hidden mdUp>
+                    <Grid item md={6} xs={12}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div>
+                                    <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
+                                </div>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
 
             {/* Hello, World! */}
@@ -142,7 +163,7 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
 
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
                             <Box>
@@ -153,15 +174,39 @@ export default function LifeAsAMaker() {
                         </Box>
                     </Grid>
                 </Hidden>
+
+                <Hidden mdUp>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div>
+                                    <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
+                                </div>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
 
             {/* GW Basic */}
             <MyGridContainer className={classes.containerGwBasic}>
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
                             <Box>
                                 <div className={classes.imageGwBasic}>
+                                    <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
+                                </div>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Hidden>
+
+                <Hidden mdUp>
+                    <Grid item md={6}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div>
                                     <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
                                 </div>
                             </Box>
@@ -190,7 +235,8 @@ export default function LifeAsAMaker() {
                         Model trains, Arduino
                     </Typography>
                 </Grid>
-                <Hidden mdDown>
+
+                <Hidden smDown>
                     <Grid item md={6}/>
                 </Hidden>
             </MyGridContainer>
@@ -215,7 +261,7 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
 
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
                             <Box>
@@ -226,10 +272,23 @@ export default function LifeAsAMaker() {
                         </Box>
                     </Grid>
                 </Hidden>
+
+                {/* xs, sm */}
+                <Hidden mdUp>
+                    <Grid item md={6} xs={12}>
+                        <Box alignItems="center" className={classes.boxImage} display="flex">
+                            <Box>
+                                <div>
+                                    <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
+                                </div>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
 
             <MyGridContainer className={classes.containerSouthernPacificDaylight}>
-                <Hidden mdDown>
+                <Hidden smDown>
                     <Grid item md={3}/>
                 </Hidden>
 
