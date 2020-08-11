@@ -3,4 +3,5 @@ import Section from "./index";
 
 export default {title: 'Components/Section'};
 
-export const _default = () => <Section name="My Section Name"/>;
+export const _default = () => <Section id="test" name="My Section Name"/>;
+

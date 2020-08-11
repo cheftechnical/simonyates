@@ -17,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: theme.spacing(24 / 8),
 		position: 'fixed',
 		backgroundColor: color.white,
-		// border: '1px solid magenta',
+		// border: '1px solid cyan',
+		// backgroundColor: 'cyan',
+		// opacity: 0.25,
 		width: '100%',
 		top: 0,
 		zIndex: 999
@@ -29,25 +31,25 @@ export default function ForDesktop(props: Props) {
 	const {selected} = props;
 
 	return (
-			<div className={classes.root}>
-				<MyContainer>
-					<Box display="flex" justifyContent="flex-end">
-						{/* Left align */}
-						<Box flexGrow={1}>
-							<Link component={ReactRouterDom} to="/"><Logo
-								brand="simon-yates"
-								variant="default"
-								width={149}
-							/></Link>
-						</Box>
-
-						{/* Right align */}
-						<Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>
-						<Box><Item href="/featured" selected={selected === 'featured'} title="Featured"/></Box>
-						<Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>
-						<Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>
+		<div className={classes.root}>
+			<MyContainer>
+				<Box display="flex" justifyContent="flex-end">
+					{/* Left align */}
+					<Box flexGrow={1}>
+						<Link component={ReactRouterDom} to="/"><Logo
+							brand="simon-yates"
+							variant="default"
+							width={149}
+						/></Link>
 					</Box>
-				</MyContainer>
-			</div>
+
+					{/* Right align */}
+					<Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>
+					<Box><Item href="/featured" selected={selected === 'featured'} title="Featured"/></Box>
+					<Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>
+					<Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>
+				</Box>
+			</MyContainer>
+		</div>
 	);
 };

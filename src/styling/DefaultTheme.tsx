@@ -57,19 +57,6 @@ import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /***********************************************************************************************************************
  * Tiempos Text
  * @source: https://klim.co.nz/
@@ -307,7 +294,9 @@ const tiemposTextBoldItalic: CSSProperties = {
 }
 
 const containerPaddingLeft = 22;
+// const containerPaddingLeft = 0;
 const containerPaddingRight = 22;
+// const containerPaddingRight = 0;
 
 
 /***********************************************************************************************************************
@@ -319,7 +308,7 @@ const theme = createMuiTheme({
 			xs: 0,
 			sm: 600,
 			md: 960,
-			lg: 1032 + containerPaddingLeft + containerPaddingRight,   // custom: to match figma
+			lg: 1032 + (containerPaddingLeft/1) + (containerPaddingRight/1),   // custom: to match figma
 			xl: 1920,
 		},
 	},

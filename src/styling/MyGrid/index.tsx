@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {Container, Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import MyGridContainer from '../MyGridContainer';
+import MyContainer from '../MyContainer';
 
 const useStyles = makeStyles((theme) => ({
 	container: {
@@ -14,23 +16,26 @@ const useStyles = makeStyles((theme) => ({
 export default function MyGrid() {
 	const classes = useStyles();
 
+	//<Container className={classes.container} disableGutters>
 	return (
-		<Container className={classes.container} disableGutters>
-			<Grid container spacing={3}>
-				<Grid item className={classes.gridItem} xs={1}><Content>1</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>2</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>3</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>4</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>5</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>6</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>7</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>8</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>9</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>10</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>11</Content></Grid>
-				<Grid item className={classes.gridItem} xs={1}><Content>12</Content></Grid>
-			</Grid>
-		</Container>
+		<MyContainer>
+			<MyGridContainer>
+				<Grid container spacing={3}>
+					<Grid item className={classes.gridItem} xs={1}><Content>1</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>2</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>3</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>4</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>5</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>6</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>7</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>8</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>9</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>10</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>11</Content></Grid>
+					<Grid item className={classes.gridItem} xs={1}><Content>12</Content></Grid>
+				</Grid>
+			</MyGridContainer>
+		</MyContainer>
 	);
 };
 

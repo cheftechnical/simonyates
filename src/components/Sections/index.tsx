@@ -1,8 +1,9 @@
 import * as React from 'react';
+import {makeStyles} from '@material-ui/core/styles';
 
 type SectionItem = {
-	id: string,
-	name: string
+	id: string;
+	name: string;
 }
 
 interface Props {
@@ -10,7 +11,14 @@ interface Props {
 	onChange: (sectionItems: SectionItem[]) => void;
 }
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		// border: '1px solid blue'
+	}
+}));
+
 export default function Sections(props: Props) {
+	const classes = useStyles();
 	const {children, onChange} = props;
 
 	const [initialized, setInitialized] = React.useState(false);
@@ -31,7 +39,7 @@ export default function Sections(props: Props) {
 	}, [children, initialized, onChange]);
 
 	return (
-		<div>
+		<div className={classes.root}>
 			{children}
 		</div>
 	);

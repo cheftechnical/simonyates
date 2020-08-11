@@ -38,7 +38,7 @@ export default function NavRightItem(props: Props) {
 
     return (
         <li className={`${classes.li} ${className}`}>
-            <a className={`${classes.a} ${className}`} href={`#${id}`}>{name}</a>
+            <a className={`${classes.a} ${className}`} href={`#${id}_link`}>{name}</a>
         </li>
     );
 };

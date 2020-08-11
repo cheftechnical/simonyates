@@ -26,12 +26,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function WorkAtHeader(props: Props) {
     const classes = useStyles();
-    const {employer, role, when, where} = props;
+    const {when, where} = props;
 
     return (
         <div>
-            <Typography className={classes.employer} group="primary" variant="h3" weight="regular">{employer}</Typography>
-            <Typography className={classes.role} group="primary" variant="h4" weight="medium">{role}</Typography>
             <Typography className={classes.whenWhere} group="primary" variant="body" weight="regular">{when} &bull; {where}</Typography>
         </div>
     );

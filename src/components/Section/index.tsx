@@ -4,17 +4,24 @@ import {makeStyles} from '@material-ui/core/styles';
 interface Props {
     children?: any | any[];
     className?: string;
-    id?: string;
+    id: string;
     name: string;
+    onVisibleChange?: (id: string, visible: boolean) => void;
 }
 
 const useStyles = makeStyles((theme) => ({
+    section: {
+        // backgroundColor: 'magenta',
+        // border: '1px solid cyan',
+    },
     jumpTarget: {
         content: '',
         display: 'block',
-        height: '106px', /* fixed header height*/
-        margin: '-106px 0 0', /* negative fixed header height */
-    }
+        height: '100px',
+        marginTop: '-100px',
+        visibility: 'hidden',
+    },
+
 }));
 
 export default function Section(props: Props) {
@@ -23,8 +30,8 @@ export default function Section(props: Props) {
 
     return (
         <div className={className}>
-            <div className={classes.jumpTarget} id={id}/>
-            <section>
+            <section id={id} className={classes.section}>
+                <div id={`${id}_link`} className={classes.jumpTarget}/>
                 {children}
             </section>
         </div>
