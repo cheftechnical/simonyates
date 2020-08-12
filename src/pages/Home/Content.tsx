@@ -7,7 +7,6 @@ import CenterVertically from '../../components/CenterVertically/CenterVertically
 import {Hidden} from '@material-ui/core';
 
 export default function Content() {
-
 	return (
 		<CenterVertically>
 			<Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
