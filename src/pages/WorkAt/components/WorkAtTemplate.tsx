@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MyGridContainer from '../../../styling/MyGridContainer';
-import {Box, Grid, Hidden} from '@material-ui/core';
+import {Grid, Hidden} from '@material-ui/core';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Section/SectionItem';
 import MyContainer from '../../../styling/MyContainer';
@@ -8,6 +8,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import WorkAtEmployer from './WorkAtEmployer';
 import WorkAtRole from './WorkAtRole';
 import WorkAtWhenWhere from './WorkAtWhenWhere';
+import CenterVertically from '../../../components/CenterVertically/CenterVertically';
 
 interface Props {
 	content: React.ReactElement;
@@ -20,12 +21,7 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		// border: '1px solid lime'
-	},
-	boxImage: {
-		height: '100%'
-	},
+	root: {},
 	role: {
 		paddingTop: theme.spacing(28/8),
 	}
@@ -55,12 +51,12 @@ export default function WorkAtTemplate(props: Props) {
 					{logo}
 				</Grid>
 
-				 {/* xs, sm */}
+				 {/* Show for mobile (xs, sm) */}
 				<Hidden mdUp>
 					<Grid item sm={6} xs={10}>
-						<Box alignItems="center" className={classes.boxImage} display="flex">
-							<Box>{renderedWorkAtEmployer}</Box>
-						</Box>
+						<CenterVertically>
+							{renderedWorkAtEmployer}
+						</CenterVertically>
 					</Grid>
 					<Grid item sm={12} xs={12}>
 						{renderedWorkAtRole}
@@ -69,7 +65,7 @@ export default function WorkAtTemplate(props: Props) {
 					</Grid>
 				</Hidden>
 
-				{/* md, lg, xl */}
+				{/* Show for desktop (md, lg, xl) */}
 				<Hidden smDown>
 					{/* Content */}
 					<Grid item sm={6} xs={10}>
