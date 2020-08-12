@@ -2,13 +2,10 @@ import * as React from 'react';
 import Typography from '../../../styling/Typography';
 import Photos from './Photos';
 import {makeStyles} from '@material-ui/core/styles';
-import rem from '../../../styling/rem';
 import MyContainer from '../../../styling/MyContainer';
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		paddingTop: rem(58)
-	},
+	root: {},
 }));
 
 export default function PhotoGallery() {

@@ -10,8 +10,11 @@ import MyGridContainer from '../../../styling/MyGridContainer';
 const bodyLineHeight = 24;
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    rootDesktop: {
         paddingTop: theme.spacing(120/8)
+    },
+    rootMobile: {
+        paddingTop: rem(80),
     },
     h1: {
         lineHeight: 1,
@@ -43,20 +46,35 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: rem(135),
         paddingRight: rem(88),
     },
-    lifeAsAMakerBodyContainer: {
+    containerLifeAsAMakerBodyDesktop: {
         paddingBottom: rem(139),
     },
-    containerTlc: {
-        paddingBottom: rem(85),
+    containerLifeAsAMakerBodyMobile: {
+        paddingBottom: rem(80),
     },
-    containerGwBasic: {
+    containerTlcDesktop: {
+        paddingBottom: rem(64),
+    },
+    containerTlcMobile: {
+        paddingBottom: rem(64),
+    },
+    containerGwBasicDesktop: {
         paddingBottom: rem(152),
     },
-    containerModelRailroaderMagazine: {
+    containerGwBasicMobile: {
+        paddingBottom: rem(56),
+    },
+    containerModelRailroaderMagazineDesktop: {
         paddingBottom: rem(70),
     },
-    containerSouthernPacificDaylight: {
+    containerModelRailroaderMagazineMobile: {
+        paddingBottom: rem(0),
+    },
+    containerSouthernPacificDaylightDesktop: {
         paddingBottom: rem(258)
+    },
+    containerSouthernPacificDaylightMobile: {
+        paddingBottom: rem(109),
     },
     southernPacificDaylightImage: {
         paddingLeft: rem(30),
@@ -66,16 +84,34 @@ const useStyles = makeStyles((theme) => ({
 export default function LifeAsAMaker() {
     const classes = useStyles();
     const theme = useTheme();
-    const matchesSm = useMediaQuery(theme.breakpoints.up('md'));
+    const matchesSm = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const imageLifeAsAMakerClassName = (matchesSm)
-        ? classes.imageLifeAsAMaker
-        : '';
+    const rootClassName = (matchesSm)
+        ? classes.rootMobile
+        : classes.rootDesktop;
 
+    const containerLifeAsAMakerBodyClassName = (matchesSm)
+        ? classes.containerLifeAsAMakerBodyMobile
+        : classes.containerLifeAsAMakerBodyDesktop;
 
+    const containerTlcClassname = (matchesSm)
+        ? classes.containerTlcMobile
+        : classes.containerTlcDesktop;
+
+    const containerGwBasicClassName = (matchesSm)
+        ? classes.containerGwBasicMobile
+        : classes.containerGwBasicDesktop;
+
+    const containerModelRailroaderMagazine = (matchesSm)
+        ? classes.containerModelRailroaderMagazineMobile
+        : classes.containerModelRailroaderMagazineDesktop;
+
+    const containerSouthernPacificDaylight = (matchesSm)
+        ? classes.containerSouthernPacificDaylightMobile
+        : classes.containerSouthernPacificDaylightDesktop;
 
     return (
-        <MyContainer className={classes.root}>
+        <MyContainer className={rootClassName}>
             {/* Life as a maker*/}
             <MyGridContainer>
                 <Grid item md={6} xs={false}/>
@@ -86,7 +122,7 @@ export default function LifeAsAMaker() {
                 </Grid>
             </MyGridContainer>
 
-            <MyGridContainer className={classes.lifeAsAMakerBodyContainer}>
+            <MyGridContainer className={containerLifeAsAMakerBodyClassName}>
                 <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
@@ -144,7 +180,7 @@ export default function LifeAsAMaker() {
                 <Grid item md={6}/>
             </MyGridContainer>
 
-            <MyGridContainer className={classes.containerTlc}>
+            <MyGridContainer className={containerTlcClassname}>
                 <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         While TLC&rsquo;s Super Solvers: <em>Out Numbered! and Challenge of  the Ancient Empires!</em> may have
@@ -189,7 +225,7 @@ export default function LifeAsAMaker() {
             </MyGridContainer>
 
             {/* GW Basic */}
-            <MyGridContainer className={classes.containerGwBasic}>
+            <MyGridContainer className={containerGwBasicClassName}>
                 <Hidden smDown>
                     <Grid item md={6}>
                         <Box alignItems="center" className={classes.boxImage} display="flex">
@@ -241,7 +277,7 @@ export default function LifeAsAMaker() {
                 </Hidden>
             </MyGridContainer>
 
-            <MyGridContainer className={classes.containerModelRailroaderMagazine}>
+            <MyGridContainer className={containerModelRailroaderMagazine}>
                 <Grid item md={6} xs={12}>
                     <Typography className={classes.body} group="primary" variant="body" weight="regular">
                         It was around this time that I also started getting into model trains. <em>Model Railroader
@@ -287,16 +323,23 @@ export default function LifeAsAMaker() {
                 </Hidden>
             </MyGridContainer>
 
-            <MyGridContainer className={classes.containerSouthernPacificDaylight}>
+            <MyGridContainer className={containerSouthernPacificDaylight}>
                 <Hidden smDown>
                     <Grid item md={3}/>
+                    <Grid item md={9} xs={12}>
+                        <div className={classes.southernPacificDaylightImage}>
+                            <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
+                        </div>
+                    </Grid>
                 </Hidden>
 
-                <Grid item md={9} xs={12}>
-                    <div className={classes.southernPacificDaylightImage}>
-                        <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
-                    </div>
-                </Grid>
+                <Hidden mdUp>
+                    <Grid item xs={12}>
+                        <div>
+                            <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
+                        </div>
+                    </Grid>
+                </Hidden>
             </MyGridContainer>
         </MyContainer>
     );
