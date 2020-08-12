@@ -31,9 +31,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'justify',
         paddingTop: rem(bodyLineHeight * 2)
     },
-    boxImage: {
-        height: '100%'
-    },
     imageLifeAsAMaker: {
         paddingRight: theme.spacing(88/8),
     },
