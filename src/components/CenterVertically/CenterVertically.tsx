@@ -9,7 +9,7 @@ interface Props {
 	children?: any;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	root: {
 		height: '100%',
 	}

@@ -9,7 +9,7 @@ import Menu from './Menu';
 import {color} from '../../../../styling/Color';
 import Typography from '../../../../styling/Typography';
 import rem from '../../../../styling/rem';
-import CenterVertically from './CenterVertically';
+import CenterVertically from '../../../../components/CenterVertically/CenterVertically';
 
 interface Props {
 	selected?: string;

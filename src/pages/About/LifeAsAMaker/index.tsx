@@ -1,11 +1,12 @@
 import * as React from 'react';
-import {Box, Grid, Hidden, useMediaQuery, useTheme} from "@material-ui/core";
+import {Grid, Hidden, useMediaQuery, useTheme} from "@material-ui/core";
 import Typography from '../../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
 import Image from '../../../components/Image';
 import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
+import CenterVertically from '../../../components/CenterVertically/CenterVertically';
 
 const bodyLineHeight = 24;
 
@@ -123,15 +124,14 @@ export default function LifeAsAMaker() {
             </MyGridContainer>
 
             <MyGridContainer className={containerLifeAsAMakerBodyClassName}>
+                {/* Show for desktop */}
                 <Hidden smDown>
                     <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div className={classes.imageLifeAsAMaker}>
-                                    <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                        <CenterVertically>
+                            <div className={classes.imageLifeAsAMaker}>
+                                <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
+                            </div>
+                        </CenterVertically>
                     </Grid>
                 </Hidden>
 
@@ -157,18 +157,15 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
 
+                {/* Show for mobile */}
                 <Hidden mdUp>
-                    <Grid item md={6} xs={12}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div>
-                                    <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                    <Grid item xs={12}>
+                        <Image alt="Apple Macintosh" src="/images/about/life-as-a-maker/apple-macintosh.png"/>
                     </Grid>
                 </Hidden>
             </MyGridContainer>
+
+            {/* ---------------------------------------------------------------------------------------------------- */}
 
             {/* Hello, World! */}
             <MyGridContainer>
@@ -199,54 +196,44 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
 
+                {/* Show for desktop */}
                 <Hidden smDown>
                     <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div className={classes.imageTlc}>
-                                    <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                        <CenterVertically>
+                            <div className={classes.imageTlc}>
+                                <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
+                            </div>
+                        </CenterVertically>
                     </Grid>
                 </Hidden>
 
+                {/* Show for mobile */}
                 <Hidden mdUp>
-                    <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div>
-                                    <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                    <Grid item xs={12}>
+                        <Image alt="The Learning Company - Super Solvers: Out Numbered!" src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"/>
                     </Grid>
                 </Hidden>
             </MyGridContainer>
 
+            {/* ---------------------------------------------------------------------------------------------------- */}
+
             {/* GW Basic */}
             <MyGridContainer className={containerGwBasicClassName}>
+                {/* Show for desktop */}
                 <Hidden smDown>
                     <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div className={classes.imageGwBasic}>
-                                    <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                        <CenterVertically>
+                            <div className={classes.imageGwBasic}>
+                                <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
+                            </div>
+                        </CenterVertically>
                     </Grid>
                 </Hidden>
 
+                {/* Show for mobile*/}
                 <Hidden mdUp>
-                    <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div>
-                                    <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                    <Grid item xs={12}>
+                        <Image alt="GW Basic" src="/images/about/life-as-a-maker/gw-basic.png"/>
                     </Grid>
                 </Hidden>
 
@@ -263,6 +250,8 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
             </MyGridContainer>
+
+            {/* ---------------------------------------------------------------------------------------------------- */}
 
             {/* Model Railroader Magazine */}
             <MyGridContainer>
@@ -297,33 +286,29 @@ export default function LifeAsAMaker() {
                     </Typography>
                 </Grid>
 
+                {/* Show for desktop */}
                 <Hidden smDown>
                     <Grid item md={6}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div className={classes.imageModelRailroaderMagazine}>
-                                    <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                        <CenterVertically>
+                            <div className={classes.imageModelRailroaderMagazine}>
+                                <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
+                            </div>
+                        </CenterVertically>
                     </Grid>
                 </Hidden>
 
-                {/* xs, sm */}
+                {/* Show for mobile */}
                 <Hidden mdUp>
-                    <Grid item md={6} xs={12}>
-                        <Box alignItems="center" className={classes.boxImage} display="flex">
-                            <Box>
-                                <div>
-                                    <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
-                                </div>
-                            </Box>
-                        </Box>
+                    <Grid item xs={12}>
+                        <Image alt="Model Railroader Magazine" src="/images/about/life-as-a-maker/model-railroader-magazine.png"/>
                     </Grid>
                 </Hidden>
             </MyGridContainer>
 
+            {/* ---------------------------------------------------------------------------------------------------- */}
+
             <MyGridContainer className={containerSouthernPacificDaylight}>
+                {/* Show for desktop */}
                 <Hidden smDown>
                     <Grid item md={3}/>
                     <Grid item md={9} xs={12}>
@@ -333,11 +318,10 @@ export default function LifeAsAMaker() {
                     </Grid>
                 </Hidden>
 
+                {/* Show for mobile */}
                 <Hidden mdUp>
                     <Grid item xs={12}>
-                        <div>
-                            <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
-                        </div>
+                        <Image alt="Southern Pacific Daylight" src="/images/about/life-as-a-maker/southern-pacific-daylight.png"/>
                     </Grid>
                 </Hidden>
             </MyGridContainer>
