@@ -338,19 +338,37 @@ const theme = createMuiTheme({
 
 				'&:active': {
 					color: color.grey['900'],
+					backgroundColor: color.grey['50'],
 					boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+
+					'@media (hover: none)': {
+						color: color.grey['900'],
+						backgroundColor: color.grey['50'],
+						boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+					}
 				},
 
 				'&:hover': {
 					color: color.grey['900'],
 					backgroundColor: color.grey['50'],
 					boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+
+					'@media (hover: none)': {
+						color: color.grey['900'],
+						backgroundColor: color.grey['50'],
+						boxShadow: `inset 0px 0px 0px 2px ${color.grey[900]}`,
+					}
 				},
 
 				'&$disabled': {
 					color: color.grey['50'],
 					backgroundColor: color.grey['300'],
-				}
+
+					'@media (hover: none)': {
+						color: color.grey['50'],
+						backgroundColor: color.grey['300'],
+					}
+				},
 			},
 			text: {
 				padding: 0,

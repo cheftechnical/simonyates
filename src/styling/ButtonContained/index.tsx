@@ -5,14 +5,22 @@ interface Props {
 	children: string;
 	className?: any;
 	endIcon?: any;
+	onClick?: any;
 	type?: any;
 }
 
 export default function ButtonContained(props: Props) {
-	const {children, className, endIcon, type} = props;
+	const {children, className, endIcon, onClick, type} = props;
 
 	return (
-		<Button disableRipple className={className} endIcon={endIcon} type={type} variant="contained">
+		<Button
+			disableRipple
+			className={className}
+			endIcon={endIcon}
+			onClick={onClick}
+			type={type}
+			variant="contained"
+		>
 			{children}
 		</Button>
 	);
