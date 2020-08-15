@@ -9,41 +9,35 @@ import {Hidden} from '@material-ui/core';
 export default function Content() {
 	return (
 		<CenterVertically>
-			<Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
-				<Typography group="primary" variant="h1" weight="regular" >
+			<Typography group="primary" variant="h1" weight="regular" >
+				<Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
 					Hi, I&rsquo;m Simon&nbsp;Yates.<br/>
 					I couldn&rsquo;t fit everything into LinkedIn,
 					so I made a&nbsp;website.
-				</Typography>
-				{/*[a]*/}
-			</Hidden>
+					{/*[a]*/}
+				</Hidden>
 
-			<Hidden only={['xs', /*'sm',*/ 'md', 'lg', 'xl']}>
-				<Typography group="primary" variant="h1" weight="regular" >
+				<Hidden only={['xs', /*'sm',*/ 'md', 'lg', 'xl']}>
 					Hi, I&rsquo;m Simon Yates.<br/>
 					I couldn&rsquo;t fit everything into LinkedIn,
 					so&nbsp;I&nbsp;made&nbsp;a&nbsp;website.
-				</Typography>
-				{/*[b]*/}
-			</Hidden>
+					{/*[b]*/}
+				</Hidden>
 
-			<Hidden only={['xs', 'sm', /*'md',*/ 'lg', 'xl']}>
-				<Typography group="primary" variant="h1" weight="regular" >
+				<Hidden only={['xs', 'sm', /*'md',*/ 'lg', 'xl']}>
 					Hi, I&rsquo;m Simon Yates.<br/>
 					I couldn&rsquo;t fit everything into LinkedIn,
 					so&nbsp;I made a&nbsp;website.
-				</Typography>
-				{/*[c]*/}
-			</Hidden>
+					{/*[c]*/}
+				</Hidden>
 
-			<Hidden only={['xs', 'sm', 'md', /*'lg', 'xl'*/]}>
-				<Typography group="primary" variant="h1" weight="regular" >
+				<Hidden only={['xs', 'sm', 'md', /*'lg', 'xl'*/]}>
 					Hi, I&rsquo;m Simon Yates.<br/>
 					I couldn&rsquo;t fit everything into&nbsp;LinkedIn,<br/>
 					so I made a&nbsp;website.
-				</Typography>
-				{/*[d]*/}
-			</Hidden>
+					{/*[d]*/}
+				</Hidden>
+			</Typography>
 		</CenterVertically>
 	);
 };

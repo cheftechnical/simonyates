@@ -1,7 +1,6 @@
 import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 import WorkExperience from './WorkExperience';
-import Typography from '../../styling/Typography';
 import {Grid} from '@material-ui/core';
 import Li from '../../styling/ListsUnordered/Li/intex';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
@@ -9,6 +8,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Logo from '../../components/Logo';
 import MyContainer from '../../styling/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer';
+import Hero from './Hero';
 
 const useStyles = makeStyles((theme) => ({
 	employerFirst: {
@@ -30,10 +30,7 @@ export default function Work() {
 			<MyContainer>
 				<MyGridContainer>
 					<Grid item md={6} xs={12}>
-						<Typography group="primary" variant="h2" weight="regular">
-							Here is a glimpse of my life,<br/>
-							mostly as a programmer.
-						</Typography>
+						<Hero/>
 					</Grid>
 				</MyGridContainer>
 
