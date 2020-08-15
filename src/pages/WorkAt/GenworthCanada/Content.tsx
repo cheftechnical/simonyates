@@ -30,9 +30,9 @@ export default function Content(props: Props) {
 				</WorkAtDescription>
 			</Section>
 
-			<Section id="about-the-project" name="About The Project">
+			<Section id="about-the-project" name="About the Project">
 				<WorkAtSectionTitle>
-					About The Project
+					About the Project
 				</WorkAtSectionTitle>
 
 				<Typography group="primary" variant="body" weight="regular">

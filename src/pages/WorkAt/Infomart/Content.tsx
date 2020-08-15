@@ -41,9 +41,9 @@ export default function Content(props: Props) {
 				</Callout>
 			</Section>
 
-			<Section id="about-the-project" name="About The Project">
+			<Section id="about-the-project" name="About the Project">
 				<WorkAtSectionTitle>
-					About The Project
+					About the Project
 				</WorkAtSectionTitle>
 				<Typography group="primary" variant="body" weight="regular">
 					For the last 30 years, Infomart had collected over 200 million newspaper articles
