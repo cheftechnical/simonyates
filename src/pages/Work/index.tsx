@@ -29,7 +29,7 @@ export default function Work() {
 		<DefaultLayout title="Work" top="work">
 			<MyContainer>
 				<MyGridContainer>
-					<Grid item md={6} xs={12}>
+					<Grid item md={7} xs={12}>
 						<Hero/>
 					</Grid>
 				</MyGridContainer>
