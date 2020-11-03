@@ -18,8 +18,6 @@ If you want to run a copy of this site, you'll require the following:
 
 - Node.js, v12.18.0 LTS
 
-This project was bootstrapped with 
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -47,10 +45,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
-
-Simon's Deployment
-yarn build
-console.aws
-root user
-AWS (Sybaris) simon@sybaris.ca
