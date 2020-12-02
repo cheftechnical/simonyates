@@ -26,7 +26,7 @@ export default function Rbc() {
 				content={renderedContent}
 				employer="RBC"
 				logo={renderedWorkAtLogo}
-				role={(<React.Fragment>Full-Stack Developer, Site Reliability&nbsp;Engineering</React.Fragment>)}
+				role={(<React.Fragment>Product Manager / Lead Software Engineer, Site&nbsp;Reliability&nbsp;Engineering</React.Fragment>)}
 				sections={sections}
 				when="July 2018 to Present"
 				where="Toronto, Canada"

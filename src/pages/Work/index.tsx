@@ -43,26 +43,29 @@ export default function Work() {
 						<WorkExperience
                             employer="RBC"
                             href="/work/rbc"
-                            role="Full-Stack Developer"
+                            role="Product Manager / Lead Software Engineer"
                             when="2018–Present"
                         >
 							<Ul>
 								<Li>
-									Built a chatbot to reduce time the team spends responding to customer&nbsp;questions
+									Successfully influenced a critical change to the new product, which is used daily by
+									RBC&rsquo;s business customers, without delaying the launch date
 								</Li>
 								<Li>
-									Built self-healing tools that automate SRE&nbsp;tasks
+									Designed an analytics tool that is now essential to any of the 80,000 worldwide
+									employees who have a vested interest in the bank&rsquo;s critical infrastructure.
+									The product is used everyday by engineers and decision makers to monitor more than
+									1,200 public and private APIs. It is the face of the SRE team.
 								</Li>
 								<Li>
-									Designed and built custom reporting tools used by over 8,000 engineers at RBC for
-									monitoring critical infrastructure and performing incident&nbsp;forensics
+									Advised multiple teams across RBC on Elasticsearch optimization techniques
 								</Li>
 								<Li>
 									Wrote a machine learning model with scikit-learn to detect anomalies in system logs
-									and incident&nbsp;reports
+									and incident reports
 								</Li>
 								<Li>
-									Advised multiple teams across RBC on Elasticsearch&nbsp;optimization
+									Built a chatbot to reduce time the team spends responding to customer questions
 								</Li>
 							</Ul>
 						</WorkExperience>
