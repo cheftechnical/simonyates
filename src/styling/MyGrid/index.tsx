@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {Container, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import MyGridContainer from '../MyGridContainer';
 import MyContainer from '../MyContainer';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	container: {
 		backgroundColor: 'magenta'
 	},
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 export default function MyGrid() {
 	const classes = useStyles();
 
-	//<Container className={classes.container} disableGutters>
 	return (
 		<MyContainer>
 			<MyGridContainer>
@@ -43,7 +42,7 @@ interface ContentProps {
 	children?: any;
 }
 
-const useContentStyles = makeStyles((theme) => ({
+const useContentStyles = makeStyles(() => ({
 	root: {
 		backgroundColor: 'pink',
 		height: '100px'

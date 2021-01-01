@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {InputAdornment, TextField} from '@material-ui/core';
+import {InputAdornment} from '@material-ui/core';
 import MyTextField from './index';
 
 export default {title: 'Style Guide/MyTextField'};
