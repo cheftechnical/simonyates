@@ -1,20 +1,21 @@
 import * as React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Contact from './pages/Contact';
-import Featured from './pages/Featured';
-import Home from './pages/Home';
-import NoMatch from './pages/NoMatch';
 import About from './pages/About';
-import Work from './pages/Work';
-import Rbc from './pages/WorkAt/Rbc';
-import UnchartedSoftware from './pages/WorkAt/UnchartedSoftware';
+import Contact from './pages/Contact';
+import DefaultTheme from './styling/DefaultTheme';
+import Featured from './pages/Featured';
+import Figpie from './pages/Projects/Figpie';
+import GenworthCanada from './pages/WorkAt/GenworthCanada';
+import Home from './pages/Home';
+import Infomart from './pages/WorkAt/Infomart';
+import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
 import Legal from './pages/Legal';
 import MayoClinic from './pages/WorkAt/MayoClinic';
-import GenworthCanada from './pages/WorkAt/GenworthCanada';
-import JibDesignAndAdvertising from './pages/WorkAt/JibDesignAndAdvertising';
-import Infomart from './pages/WorkAt/Infomart';
-import DefaultTheme from './styling/DefaultTheme';
+import NoMatch from './pages/NoMatch';
+import Rbc from './pages/WorkAt/Rbc';
 import ScrollToTop from './ScrollToTop';
+import UnchartedSoftware from './pages/WorkAt/UnchartedSoftware';
+import Work from './pages/Work';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
                     <Route exact path="/work/infomart" component={Infomart}/>
                     <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
+                    <Route exact path="/figpie" component={Figpie}/>
                     <Route exact path="/work" component={Work}/>
                     <Route exact path="/legal" component={Legal}/>
                     <Route exact path="/featured" component={Featured}/>
