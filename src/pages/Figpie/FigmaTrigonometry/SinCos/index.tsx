@@ -26,13 +26,23 @@ class SinCos extends React.Component<Props> {
 	padding: number = (8 * 8);
 	width: number = 500;
 	height: number = 500;
+
+	// calculated values
 	radius: number = (Math.min(this.width, this.height) - (2 * this.padding)) / 2;
+	tickDistance: number = 0;
 
 	// elements
-	needle: any;
-	needleNode: any;
-	needleX2: number = 0;
-	needleY2: number = 0;
+	angleLine: any;        // The line representing the angle
+	needle: any;           // The lien representing the needle
+	needleNode: any;       // The circle representing the tip of the needle
+	coordinateLabel: any;
+
+	needleAt = {
+		x1: 0,
+		y1: 0,
+		x2: 0,
+		y2: 0
+	}
 
 	draggableNode: any;
 
@@ -58,6 +68,7 @@ class SinCos extends React.Component<Props> {
 	componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>, snapshot?: any) {
 		if (this.props.value !== prevProps.value) {
 			this.updateChart(this.props.value);
+			this.resetDragTouchPoint();
 		}
 	}
 
@@ -80,10 +91,10 @@ class SinCos extends React.Component<Props> {
 
 		// Draw the dot grid
 		const horizontalTicksPerRadius = 10;
-		const tickDistance = this.radius / horizontalTicksPerRadius;
+		this.tickDistance = this.radius / horizontalTicksPerRadius;
 
-		for (let x = this.padding - tickDistance; x <= (this.width - (2 * tickDistance)); x += tickDistance) {
-			for (let y = this.padding - tickDistance; y <= (this.height - (2 * tickDistance)); y += tickDistance) {
+		for (let x = this.padding - this.tickDistance; x <= (this.width - (2 * this.tickDistance)); x += this.tickDistance) {
+			for (let y = this.padding - this.tickDistance; y <= (this.height - (2 * this.tickDistance)); y += this.tickDistance) {
 				this.svg.append('line')
 					.attr('x1', x)
 					.attr('y1', y)
@@ -119,8 +130,8 @@ class SinCos extends React.Component<Props> {
 			this.svg.append('path')
 				.attr('transform', transform)
 				.attr('d', d3.line()([
-					[i * tickDistance, tickLength + 1],
-					[i * tickDistance, -tickLength]
+					[i * this.tickDistance, tickLength + 1],
+					[i * this.tickDistance, -tickLength]
 				]))
 				.attr('class', 'crisp')
 				.attr('stroke', color.grey['100']);
@@ -129,8 +140,8 @@ class SinCos extends React.Component<Props> {
 			this.svg.append('path')
 				.attr('transform', transform)
 				.attr('d', d3.line()([
-					[tickLength - 1, i * tickDistance],
-					[-tickLength, i * tickDistance]
+					[tickLength - 1, i * this.tickDistance],
+					[-tickLength, i * this.tickDistance]
 				]))
 				.attr('class', 'crisp')
 				.attr('stroke', color.grey['100']);
@@ -148,8 +159,7 @@ class SinCos extends React.Component<Props> {
 			.attr('transform', transform)
 			.attr('d', arc as unknown as string)
 			.attr('stroke', color.grey['500'])
-			.attr('fill', 'none')
-		// .attr('fill', color.white);
+			.attr('fill', 'none');
 
 
 		// Render label at 0°...270°
@@ -171,7 +181,7 @@ class SinCos extends React.Component<Props> {
 			.attr('y', this.radius + axisPadding + 12)
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
-			.text('(0, -1)');
+			.text('(0, 1)');
 
 		// 180°
 		this.svg.append('text')
@@ -189,7 +199,7 @@ class SinCos extends React.Component<Props> {
 			.attr('y', 0 - this.radius - axisPadding)
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
-			.text('(0, 1)');
+			.text('(0, -1)');
 
 		// Draw the needle
 		this.needle = this.svg.append('path')
@@ -235,13 +245,35 @@ class SinCos extends React.Component<Props> {
 				.on('end', dragEnded)
 			);
 
+		// Draw the label of the current (x,y) coordinates
+		this.coordinateLabel = this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', 0)
+			.attr('y', 0)
+			.attr('font-size', '14px')
+			.attr('fill', color.blue['500'])
+			.text(`(x, y)`);
+
+		// Draw the angle line
+		this.angleLine = this.svg.append('path')
+			.attr('transform', transform)
+			.attr('d', d3.arc()
+				.innerRadius(0)
+				.outerRadius(8 * 3)
+				.startAngle(degToRad(0))
+				.endAngle(degToRad(0))
+			)
+			.attr('stroke', color.grey['300'])
+			.attr('fill', 'none');
+
+
+		const that = this;
+
 		function dragStarted(this: any) {
 			d3.select(this)
 				.attr('opacity', '0.75')
 				.attr('stroke', color.lime['500']);
 		}
-
-		const that = this;
 
 		function dragging(this: any, event: any, d: any) {
 			// console.log('dragged', dragged);
@@ -283,11 +315,7 @@ class SinCos extends React.Component<Props> {
 		}
 
 		function dragEnded(this: any, event: any, d: any) {
-			d3.select(this).raise()
-				.attr('cx', that.needleX2)
-				.attr('cy', that.needleY2)
-				// .attr('opacity', '0.0')
-				.attr('stroke', color.grey['200']);
+			that.resetDragTouchPoint();
 
 			// Raise the event
 			that.props.onChange(Math.round(that.angleDegrees));
@@ -298,20 +326,59 @@ class SinCos extends React.Component<Props> {
 	updateChart(value: number) {
 		this.angleDegrees = value;
 
+		// Calculate the needle position
 		const theta = degToRad(this.angleDegrees);
-
-		const x1 = 0;
-		this.needleX2 = Math.cos(theta) * this.radius;
-
-		const y1 = 0;
-		this.needleY2 = Math.sin(theta) * this.radius;
-
+		this.needleAt = {
+			x1: 0,
+			y1: 0,
+			x2: Math.cos(theta) * this.radius,
+			y2: Math.sin(theta) * this.radius,
+		}
 		const lineGenerator = d3.line();
-		const needleData = lineGenerator([[x1, y1], [this.needleX2, this.needleY2]]);
+		const needleData = lineGenerator([
+			[this.needleAt.x1, this.needleAt.y1],
+			[this.needleAt.x2, this.needleAt.y2]
+		]);
+		this.needle
+			.attr('d', needleData);
+		this.needleNode
+			.attr('cx', this.needleAt.x2)
+			.attr('cy', this.needleAt.y2);
 
-		this.needle.attr('d', needleData);
-		this.needleNode.attr('cx', this.needleX2);
-		this.needleNode.attr('cy', this.needleY2);
+		// Calculate the needle line
+		const startAngle = 90;
+		const endAngle = (value > 0) ? value + 90 : 360 + value + 90;
+		this.angleLine.attr('d', d3.arc()
+			.innerRadius(0)
+			.outerRadius(this.tickDistance * 1.5)
+			.startAngle(degToRad(startAngle))
+			.endAngle(degToRad(endAngle))
+		);
+
+		// Calculate the label position
+		const indent = 8 * 3
+		const labelCenter = {
+			x: Math.cos(theta) * (this.radius - indent),
+			y: Math.sin(theta) * (this.radius - indent) - 1,
+		}
+		const labelValue = {
+			x2: (this.needleAt.x2 / this.radius).toFixed(3),
+			y2: (this.needleAt.y2 / this.radius).toFixed(3),
+		}
+		this.coordinateLabel
+			.text(`__ (${labelValue.x2}, ${labelValue.y2})`)
+			.attr('x', labelCenter.x)
+			.attr('y', labelCenter.y);
+	}
+
+	/**
+	 * Returns the drag touch point to the needle position
+	 */
+	resetDragTouchPoint() {
+		this.draggableNode
+			.attr('cx', this.needleAt.x2)
+			.attr('cy', this.needleAt.y2)
+			.attr('stroke', color.grey['200']);
 	}
 
 	/**
