@@ -220,9 +220,15 @@ class SinCos extends React.Component<Props> {
 			.attr('r', 15)
 			.attr('fill', 'white')
 			.attr('opacity', '0.0')
-			.attr('stroke', color.blue['500'])
-			.attr('stroke-width', 1)
+			.attr('stroke', color.grey['200'])
+			.attr('stroke-width', 2)
 			.style('cursor', 'pointer')
+			.on('mouseover', function (this: any) {
+				d3.select(this).raise().attr('opacity', '.75');
+			})
+			.on('mouseout', function (this: any) {
+				d3.select(this).raise().attr('opacity', '0.0');
+			})
 			.call(d3.drag()
 				.on('start', dragStarted)
 				.on('drag', dragging)
@@ -232,7 +238,7 @@ class SinCos extends React.Component<Props> {
 		function dragStarted(this: any) {
 			d3.select(this)
 				.attr('opacity', '0.75')
-				.attr('stroke', color.grey['100']);
+				.attr('stroke', color.lime['500']);
 		}
 
 		const that = this;
@@ -280,8 +286,8 @@ class SinCos extends React.Component<Props> {
 			d3.select(this).raise()
 				.attr('cx', that.needleX2)
 				.attr('cy', that.needleY2)
-				.attr('opacity', '0.0')
-				.attr('stroke', color.blue['500']);
+				// .attr('opacity', '0.0')
+				.attr('stroke', color.grey['200']);
 
 			// Raise the event
 			that.props.onChange(Math.round(that.angleDegrees));
