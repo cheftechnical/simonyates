@@ -1,9 +1,9 @@
 import * as React from 'react';
-import DefaultLayout from '../../../layouts/Default';
-import MyContainer from '../../../styling/MyContainer';
-import Typography from '../../../styling/Typography';
-import Ul from '../../../styling/ListsUnordered/Ul/intex';
-import Li from '../../../styling/ListsUnordered/Li/intex';
+import DefaultLayout from '../../layouts/Default';
+import MyContainer from '../../styling/MyContainer';
+import Typography from '../../styling/Typography';
+import Ul from '../../styling/ListsUnordered/Ul/intex';
+import Li from '../../styling/ListsUnordered/Li/intex';
 import {Link} from '@material-ui/core';
 
 export default function Figpie() {

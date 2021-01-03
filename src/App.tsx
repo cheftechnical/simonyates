@@ -4,7 +4,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import DefaultTheme from './styling/DefaultTheme';
 import Featured from './pages/Featured';
-import Figpie from './pages/Projects/Figpie';
+import Figpie from './pages/Figpie';
+import FigpieTrigonometry from './pages/Figpie/FigmaTrigonometry';
 import GenworthCanada from './pages/WorkAt/GenworthCanada';
 import Home from './pages/Home';
 import Infomart from './pages/WorkAt/Infomart';
@@ -29,6 +30,7 @@ function App() {
                     <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
                     <Route exact path="/work/infomart" component={Infomart}/>
                     <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
+                    <Route exact path="/figpie/trigonometry" component={FigpieTrigonometry}/>
                     <Route exact path="/figpie" component={Figpie}/>
                     <Route exact path="/work" component={Work}/>
                     <Route exact path="/legal" component={Legal}/>
