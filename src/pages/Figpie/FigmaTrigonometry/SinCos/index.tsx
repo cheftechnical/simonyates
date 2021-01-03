@@ -6,6 +6,7 @@ import {color} from '../../../../styling/Color';
 
 interface Props {
 	classes: any;
+	onChange: (angleDegrees: number) => void;
 	value: number;
 }
 
@@ -34,6 +35,8 @@ class SinCos extends React.Component<Props> {
 	needleY2: number = 0;
 
 	draggableNode: any;
+
+	angleDegrees: number = 0;
 
 	constructor(props: Props) {
 		super(props);
@@ -216,7 +219,7 @@ class SinCos extends React.Component<Props> {
 			.attr('cy', 0)
 			.attr('r', 15)
 			.attr('fill', 'white')
-			.attr('opacity', '0.5')
+			.attr('opacity', '0.0')
 			.attr('stroke', color.blue['500'])
 			.attr('stroke-width', 1)
 			.style('cursor', 'pointer')
@@ -228,8 +231,8 @@ class SinCos extends React.Component<Props> {
 
 		function dragStarted(this: any) {
 			d3.select(this)
-				.attr('opacity', '0.5')
-				.attr('stroke', color.grey['200']);
+				.attr('opacity', '0.75')
+				.attr('stroke', color.grey['100']);
 		}
 
 		const that = this;
@@ -275,20 +278,25 @@ class SinCos extends React.Component<Props> {
 
 		function dragEnded(this: any, event: any, d: any) {
 			d3.select(this).raise()
-				.attr('stroke', color.blue['500'])
 				.attr('cx', that.needleX2)
-				.attr('cy', that.needleY2);
+				.attr('cy', that.needleY2)
+				.attr('opacity', '0.0')
+				.attr('stroke', color.blue['500']);
 
-			// d3.select(this).raise().attr("transform", d => "translate(" + [0, 0] + ")")
+			// Raise the event
+			that.props.onChange(Math.round(that.angleDegrees));
 		}
 
 	}
 
 	updateChart(value: number) {
-		const theta = degToRad(value);
+		this.angleDegrees = value;
+
+		const theta = degToRad(this.angleDegrees);
 
 		const x1 = 0;
 		this.needleX2 = Math.cos(theta) * this.radius;
+
 		const y1 = 0;
 		this.needleY2 = Math.sin(theta) * this.radius;
 

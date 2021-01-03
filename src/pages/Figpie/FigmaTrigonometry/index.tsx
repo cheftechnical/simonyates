@@ -35,13 +35,17 @@ function FigmaTrigonometryMaths() {
 		setInputDegrees(event.target.value);
 	}, []);
 
+	const handleSinCosChange = React.useCallback((angleDegrees: number) => {
+		setInputDegrees(angleDegrees);
+	}, []);
+
 	React.useEffect(() => {
 		const timer = setTimeout(() => {
 			console.log('Updating formula');
 
 			const theta = degToRad(inputDegrees);
 			const x2 = Math.cos(theta);
-			const y2 = Math.sin(theta);
+			const y2 = Math.sin(theta) * -1;
 
 			const red500 = color.red['500'];
 			const blue500 = color.blue['500'];
@@ -88,7 +92,7 @@ function FigmaTrigonometryMaths() {
 				$$`,
 			});
 
-		}, 1000);
+		}, 10);
 		return () => clearTimeout(timer);
 	}, [inputDegrees]);
 
@@ -98,6 +102,7 @@ function FigmaTrigonometryMaths() {
 				<MyGridContainer>
 					<Grid item xs={6}>
 						<SinCos
+							onChange={handleSinCosChange}
 							value={inputDegrees}
 						/>
 					</Grid>
