@@ -41,8 +41,6 @@ function FigmaTrigonometryMaths() {
 
 	React.useEffect(() => {
 		const timer = setTimeout(() => {
-			console.log('Updating formula');
-
 			const theta = degToRad(inputDegrees);
 			const x2 = Math.cos(theta);
 			const y2 = Math.sin(theta) * -1;
