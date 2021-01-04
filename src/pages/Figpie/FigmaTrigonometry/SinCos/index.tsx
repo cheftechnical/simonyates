@@ -164,6 +164,7 @@ class SinCos extends React.Component<Props> {
 
 		// Render label at 0°...270°
 		const axisPadding = 8;
+		const degreeTextFill = color.grey['500'];
 
 		// 0°
 		this.svg.append('text')
@@ -173,15 +174,29 @@ class SinCos extends React.Component<Props> {
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
 			.text('(1, 0)');
+		this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', this.radius - axisPadding - 16 - 3) // actual width of label, 8=fudge
+			.attr('y', (21 / 2) - 4) // actual height, 4=fudge
+			.attr('font-size', '16px')
+			.attr('fill', degreeTextFill)
+			.text('0°');
 
 		// 270°
 		this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', -12)
-			.attr('y', this.radius + axisPadding + 12)
+			.attr('x', 0 - (26 / 2)) // actual label width
+			.attr('y', this.radius + axisPadding + (16 / 2)) // actual label height
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
 			.text('(0, 1)');
+		this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', 0 - (32 / 2)) // actual label width
+			.attr('y', this.radius - axisPadding - (21 / 2)) // actual label height
+			.attr('font-size', '16px')
+			.attr('fill', degreeTextFill)
+			.text('270°');
 
 		// 180°
 		this.svg.append('text')
@@ -191,6 +206,13 @@ class SinCos extends React.Component<Props> {
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
 			.text('(-1, 0)');
+		this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', 0 - this.radius + axisPadding + 8) // actual label width
+			.attr('y', (21 / 2) - 4) // actual height, 4=fudge
+			.attr('font-size', '16px')
+			.attr('fill', degreeTextFill)
+			.text('180°');
 
 		// 90°
 		this.svg.append('text')
@@ -200,6 +222,13 @@ class SinCos extends React.Component<Props> {
 			.attr('font-size', '12px')
 			.attr('fill', color.grey['900'])
 			.text('(0, -1)');
+		this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', 0 - (25 / 2) + 3) // actual label width, 3=fudge
+			.attr('y', 0 - this.radius + axisPadding + (25) - 3) // actual height, 4=fudge
+			.attr('font-size', '16px')
+			.attr('fill', degreeTextFill)
+			.text('90°');
 
 		// Draw the needle
 		this.needle = this.svg.append('path')
