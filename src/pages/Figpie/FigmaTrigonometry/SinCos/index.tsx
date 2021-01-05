@@ -3,9 +3,11 @@ import * as d3 from 'd3';
 import {withStyles} from '@material-ui/core';
 import {degToRad, radToDeg} from './trig';
 import {color} from '../../../../styling/Color';
+import {AxisDirection} from '../AxisDirection';
 
 interface Props {
 	classes: any;
+	yAxisDirection: AxisDirection;
 	onChange: (angleDegrees: number) => void;
 	value: number;
 }
@@ -30,6 +32,7 @@ class SinCos extends React.Component<Props> {
 	// calculated values
 	radius: number = (Math.min(this.width, this.height) - (2 * this.padding)) / 2;
 	tickDistance: number = 0;
+	angleLineDistance: number = 0;
 
 	// elements
 	angleLine: any;        // The line representing the angle
@@ -92,6 +95,7 @@ class SinCos extends React.Component<Props> {
 		// Draw the dot grid
 		const horizontalTicksPerRadius = 10;
 		this.tickDistance = this.radius / horizontalTicksPerRadius;
+		this.angleLineDistance = this.tickDistance * 1.5;
 
 		for (let x = this.padding - this.tickDistance; x <= (this.width - (2 * this.tickDistance)); x += this.tickDistance) {
 			for (let y = this.padding - this.tickDistance; y <= (this.height - (2 * this.tickDistance)); y += this.tickDistance) {
@@ -108,13 +112,18 @@ class SinCos extends React.Component<Props> {
 
 		// Draw the cross-hairs
 		const lineGenerator = d3.line();
-		const xAxis = lineGenerator([[-this.radius, 0], [this.radius, 0]]);
+		// const xAxis = lineGenerator([[0 - this.radius, 0], [this.radius, 0]]);
+		const xAxis = lineGenerator([
+			[0 - this.radius, 0],
+			[this.radius, 0.5], // there is a weird anti-alias bug that caused the xAxis to not render in Chrome, but making the line slightly skewed fixes this
+		])
 		const yAxis = lineGenerator([[0, -this.radius], [0, this.radius]]);
 
 		this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', xAxis)
 			.attr('class', 'crisp')
+			.attr('stroke-width', 1)
 			.attr('stroke', color.grey['200']);
 
 		this.svg.append('path')
@@ -123,7 +132,7 @@ class SinCos extends React.Component<Props> {
 			.attr('class', 'crisp')
 			.attr('stroke', color.grey['200']);
 
-		// Draw the horizontal ticks
+		// Draw the axis ticks ticks
 		const tickLength = 5;
 		for (let i = -10; i <= 10; i++) {
 			// X-Axis
@@ -148,19 +157,13 @@ class SinCos extends React.Component<Props> {
 		}
 
 		// Draw the circle
-		const arc = d3.arc()
-			.innerRadius(0)
-			.outerRadius(this.radius)
-			.startAngle(degToRad(0))
-			.endAngle(degToRad(360));
-
-		// Draw a circle
-		this.svg.append('path')
+		this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('d', arc as unknown as string)
+			.attr('cx', 0)
+			.attr('cy', 0)
+			.attr('r', this.radius)
 			.attr('stroke', color.grey['500'])
 			.attr('fill', 'none');
-
 
 		// Render label at 0°...270°
 		const axisPadding = 8;
@@ -287,8 +290,8 @@ class SinCos extends React.Component<Props> {
 		this.angleLine = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.arc()
-				.innerRadius(0)
-				.outerRadius(8 * 3)
+				.innerRadius(this.angleLineDistance)
+				.outerRadius(this.angleLineDistance)
 				.startAngle(degToRad(0))
 				.endAngle(degToRad(0))
 			)
@@ -305,55 +308,61 @@ class SinCos extends React.Component<Props> {
 		}
 
 		function dragging(this: any, event: any, d: any) {
-			// console.log('dragged', dragged);
+			const {height, width} = that;
+			const {yAxisDirection} = that.props;
 
-			// Calculate the new position first
-			// d.x = event.x;
-			// d.y = event.y;
-			// d3.select(this).raise().attr("transform", d => "translate(" + [event.x, event.y] + ")") // <-- works
-			d3.select(this).raise()
-				.attr('cx', event.x - (that.width / 2))
-				.attr('cy', event.y - (that.width / 2));
-
-			// Calculate the needle
-
-			// Calculate the (x,y) position of the draggable point
-			const props = {
-				width: 500,
-				height: 500,
-			};
-			const point = {
-				x: event.x - (props.width / 2),
-				y: event.y - (props.height / 2),
+			// Calculate the new position of the draggable touch point
+			const touchPoint = {
+				x: event.x - (width / 2),
+				y: event.y - (height / 2),
 			}
-			// console.log(`actual: ${event.x}, ${event.y}`);
-			// console.log(`point: (${point.x}, ${point.y})`)
+			d3.select(this).raise()
+				.attr('cx', touchPoint.x)
+				.attr('cy', touchPoint.y);
 
-			const adjacent = point.x;
-			const opposite = point.y;
-			const radians = Math.atan(opposite / adjacent);
+			// Calculate the target direction to the touch point
+			const adjacent = touchPoint.x;
+			const opposite = touchPoint.y * yAxisDirection;
+			const radians = Math.atan(opposite / adjacent)
 			const degrees = radToDeg(radians);
 
+			// THE FOLLOWING CRAPPY CODE WAS WRITTEN WHEN I WAS REALLY TIRED
+			// I NEED TO FIX THIS DISASTER!
+
 			// If we are in negative territory, flip the values
-			const newValue = (point.x < 0)
-				? degrees - 180
+			const newValue = (touchPoint.x < 0)
+				? 180 + degrees
 				: degrees;
 
+			const newValue2 = (newValue < 0)
+				? 360 + newValue
+				: newValue;
+
+			// const newValue = (touchPoint.x < 0)
+			// 	? 360 + degrees
+			// 	: degrees;
+			// const newValue = degrees;
+			// console.log('newValue', newValue);
+
 			// Update the needle
-			that.updateChart(newValue);
+			// const newValue = degrees;
+			that.updateChart(newValue2);
 		}
 
-		function dragEnded(this: any, event: any, d: any) {
+		function dragEnded(this: any) {
 			that.resetDragTouchPoint();
 
-			// Raise the event
+			// Raise the onChange event
 			that.props.onChange(Math.round(that.angleDegrees));
 		}
-
 	}
 
-	updateChart(value: number) {
-		this.angleDegrees = value;
+	updateChart(newValue: number) {
+		const {yAxisDirection} = this.props;
+		// console.log('yAxisDirection [369]:', yAxisDirection);
+
+		// Update the global property
+		this.angleDegrees = newValue;
 
 		// Calculate the needle position
 		const theta = degToRad(this.angleDegrees);
@@ -361,7 +370,7 @@ class SinCos extends React.Component<Props> {
 			x1: 0,
 			y1: 0,
 			x2: Math.cos(theta) * this.radius,
-			y2: Math.sin(theta) * this.radius,
+			y2: Math.sin(theta) * this.radius * yAxisDirection,
 		}
 		const lineGenerator = d3.line();
 		const needleData = lineGenerator([
@@ -374,21 +383,23 @@ class SinCos extends React.Component<Props> {
 			.attr('cx', this.needleAt.x2)
 			.attr('cy', this.needleAt.y2);
 
-		// Calculate the needle line
-		const startAngle = 90;
-		const endAngle = (value > 0) ? value + 90 : 360 + value + 90;
+		// Calculate the angle line
+		const angleLine = {
+			startAngle: 90,
+			endAngle: 90 - newValue,
+		};
 		this.angleLine.attr('d', d3.arc()
-			.innerRadius(0)
-			.outerRadius(this.tickDistance * 1.5)
-			.startAngle(degToRad(startAngle))
-			.endAngle(degToRad(endAngle))
+			.innerRadius(this.angleLineDistance)
+			.outerRadius(this.angleLineDistance)
+			.startAngle(degToRad(angleLine.startAngle))
+			.endAngle(degToRad(angleLine.endAngle))
 		);
 
 		// Calculate the label position
 		const indent = 8 * 3
 		const labelCenter = {
 			x: Math.cos(theta) * (this.radius - indent),
-			y: Math.sin(theta) * (this.radius - indent) - 1,
+			y: Math.sin(theta) * (this.radius - indent) * yAxisDirection,
 		}
 		const labelValue = {
 			x2: (this.needleAt.x2 / this.radius).toFixed(3),

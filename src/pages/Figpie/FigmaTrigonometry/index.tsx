@@ -11,6 +11,7 @@ import MathJax from "mathjax3-react";
 import MyTextField from '../../../styling/MyTextField';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import {color} from '../../../styling/Color';
+import {AxisDirection} from './AxisDirection';
 
 // https://github.com/asnunes/mathjax3-react <-- vastuly superior
 
@@ -24,10 +25,13 @@ const defaultFormula = {
 	vector: ''
 }
 
+const defaultYAxisDirection: AxisDirection = -1;
+
 function FigmaTrigonometryMaths() {
 	const classes = useStyles();
 
 	const [formula, setFormula] = React.useState(defaultFormula);
+	const [yAxisDirection, setYAxisDirection] = React.useState(defaultYAxisDirection);
 	const [inputDegrees, setInputDegrees] = React.useState<number>(0);
 
 	// const handleSliderChange = React.useCallback((event: any, newValue: number | number[]) => {
@@ -41,15 +45,22 @@ function FigmaTrigonometryMaths() {
 
 	React.useEffect(() => {
 		const timer = setTimeout(() => {
+			// console.log('yAxisDirection', yAxisDirection);
+
 			const theta = degToRad(inputDegrees);
 			const x2 = Math.cos(theta);
-			const y2 = Math.sin(theta) * -1;
+			const y2 = Math.sin(theta) * yAxisDirection;
 
 			const red500 = color.red['500'];
 			const blue500 = color.blue['500'];
 
 			const blue = String.raw`\color{${blue500}}`;
 			const red = String.raw`\color{${red500}}`;
+
+			// console.log({
+			// 	positive: Math.sin(theta) * 1,
+			// 	negative: Math.sin(theta) * -1,
+			// })
 
 			/*
 			v_1 & = egin{bmatrix}
@@ -64,7 +75,7 @@ function FigmaTrigonometryMaths() {
 					\
 			 */
 			setFormula({
-				vector: String.raw `$$					
+				vector: String.raw`$$					
 					\begin{equation}
 					\begin{split}
 					{${blue}{angle}} & = ${inputDegrees}^\circ \\
@@ -92,7 +103,7 @@ function FigmaTrigonometryMaths() {
 
 		}, 10);
 		return () => clearTimeout(timer);
-	}, [inputDegrees]);
+	}, [inputDegrees, yAxisDirection]);
 
 	return (
 		<DefaultLayout title="Trigonometry" top="figpie">
@@ -102,7 +113,9 @@ function FigmaTrigonometryMaths() {
 						<SinCos
 							onChange={handleSinCosChange}
 							value={inputDegrees}
+							yAxisDirection={yAxisDirection}
 						/>
+						{/*{yAxisDirection}*/}
 					</Grid>
 					<Grid item xs={6}>
 						<MyTextField
