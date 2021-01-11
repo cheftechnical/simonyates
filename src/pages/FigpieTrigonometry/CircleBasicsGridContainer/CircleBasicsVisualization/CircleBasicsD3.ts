@@ -39,6 +39,8 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 		};
 		const transform = `translate(${translate.x}, ${translate.y})`;
 
+		const ticksPerRadius = 10;
+
 		// Create the new chart
 		this.createChart('#sincos', this.width, this.height);
 
@@ -46,9 +48,9 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 		this.angleLineDistance = this.tickDistance * 1.5;
 
 		// Calculate the distance between each tick of the x/y axis
-		this.tickDistance = this.calculateTickDistance(this.radius, 10);
+		this.tickDistance = this.calculateTickDistance(this.radius, ticksPerRadius);
 
-		this.addDotGrid(this.padding, this.tickDistance, this.width, this.height);
+		this.addDotGrid(this.padding, ticksPerRadius, this.tickDistance, this.width, this.height);
 
 		// Draw the cross-hairs
 		const lineGenerator = d3.line();
@@ -263,7 +265,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 			// Calculate the target direction to the touch point
 			const adjacent = touchPoint.x;
 			const opposite = touchPoint.y * yAxisDirection;
-			const radians = Math.atan(opposite / adjacent)
+			const radians = Math.atan(opposite / adjacent);
 			const degrees = radToDeg(radians);
 
 			// THE FOLLOWING CRAPPY CODE WAS WRITTEN WHEN I WAS REALLY TIRED
