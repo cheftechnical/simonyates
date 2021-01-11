@@ -1,84 +1,37 @@
-import * as React from 'react';
 import * as d3 from 'd3';
-import {withStyles} from '@material-ui/core';
-import {degToRad, radToDeg} from './trig';
+import {Visualization} from '../../libs/Visualization';
+import {BaseVisualization, } from '../../libs/BaseVisualization';
 import {color} from '../../../../styling/Color';
-import {AxisDirection} from '../AxisDirection';
+import {degToRad, radToDeg} from '../../libs/trig';
 
-interface Props {
-	classes: any;
-	yAxisDirection: AxisDirection;
-	onChange: (angleDegrees: number) => void;
-	value: number;
-}
-
-const styles = () => ({
-	root: {
-		backgroundColor: color.grey['50'],
-		fontSize: 0, // this is very important, otherwise you'll get a weird gap at the bottom,
-
-		'& .crisp': {
-			shapeRendering: 'crispEdges',
-		}
-	}
-})
-
-class SinCos extends React.Component<Props> {
-	svg: any;
-	padding: number = (8 * 8);
-	width: number = 500;
-	height: number = 500;
-
-	// calculated values
-	radius: number = (Math.min(this.width, this.height) - (2 * this.padding)) / 2;
-	tickDistance: number = 0;
+export class CircleBasicsD3 extends BaseVisualization implements Visualization {
+	// Properties
+	angleDegrees: number = 0;
 	angleLineDistance: number = 0;
-
-	// elements
-	angleLine: any;        // The line representing the angle
-	needle: any;           // The lien representing the needle
-	needleNode: any;       // The circle representing the tip of the needle
-	coordinateLabel: any;
-
 	needleAt = {
 		x1: 0,
 		y1: 0,
 		x2: 0,
 		y2: 0
-	}
+	};
+	yAxisDirection: number = -1;
 
-	draggableNode: any;
+	// Events
+	onChange: any;
 
-	angleDegrees: number = 0;
+	// Elements
+	angleLine: any;        // The line representing the angle
+	coordinateLabel: any;  // The label of the current coordinates
+	draggableNode: any;    // The node that the user can click on to drag
+	needle: any;           // The lien representing the needle
+	needleNode: any;       // The circle representing the tip of the needle
 
-	constructor(props: Props) {
-		super(props);
-
-		this.state = {}
-	}
-
-	/**
-	 * When the component has mounted...
-	 */
-	componentDidMount() {
-		console.log('componentDidMount');
-		this.drawChart(this.props.value);
-	}
 
 	/**
-	 * When the component updates...
+	 * Draw the chart
+	 * @param data
 	 */
-	componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>, snapshot?: any) {
-		if (this.props.value !== prevProps.value) {
-			this.updateChart(this.props.value);
-			this.resetDragTouchPoint();
-		}
-	}
-
-	/**
-	 * Render the chart
-	 */
-	drawChart(data: any) {
+	drawChart() {
 		// Move (0,0) to the center of the svg element
 		const translate = {
 			x: this.width / 2,
@@ -87,28 +40,15 @@ class SinCos extends React.Component<Props> {
 		const transform = `translate(${translate.x}, ${translate.y})`;
 
 		// Create the new chart
-		this.svg = d3.select('#sincos')
-			.append('svg')
-			.attr('width', this.width)
-			.attr('height', this.height);
+		this.createChart('#sincos', this.width, this.height);
 
 		// Draw the dot grid
-		const horizontalTicksPerRadius = 10;
-		this.tickDistance = this.radius / horizontalTicksPerRadius;
 		this.angleLineDistance = this.tickDistance * 1.5;
 
-		for (let x = this.padding - this.tickDistance; x <= (this.width - (2 * this.tickDistance)); x += this.tickDistance) {
-			for (let y = this.padding - this.tickDistance; y <= (this.height - (2 * this.tickDistance)); y += this.tickDistance) {
-				this.svg.append('line')
-					.attr('x1', x)
-					.attr('y1', y)
-					.attr('x2', x + 1)
-					.attr('y2', y)
-					.attr('class', 'crisp')
-					.attr('stroke-width', 1)
-					.attr('stroke', color.grey['300'])
-			}
-		}
+		// Calculate the distance between each tick of the x/y axis
+		this.tickDistance = this.calculateTickDistance(this.radius, 10);
+
+		this.addDotGrid(this.padding, this.tickDistance, this.width, this.height);
 
 		// Draw the cross-hairs
 		const lineGenerator = d3.line();
@@ -309,7 +249,7 @@ class SinCos extends React.Component<Props> {
 
 		function dragging(this: any, event: any, d: any) {
 			const {height, width} = that;
-			const {yAxisDirection} = that.props;
+			const yAxisDirection = that.yAxisDirection;
 
 			// Calculate the new position of the draggable touch point
 			const touchPoint = {
@@ -353,12 +293,15 @@ class SinCos extends React.Component<Props> {
 			that.resetDragTouchPoint();
 
 			// Raise the onChange event
-			that.props.onChange(Math.round(that.angleDegrees));
+			// that.props.onChange(Math.round(that.angleDegrees));
+
+			that.onChange(Math.round(that.angleDegrees))
 		}
 	}
 
 	updateChart(newValue: number) {
-		const {yAxisDirection} = this.props;
+		// const {yAxisDirection} = this.props;
+		const yAxisDirection = this.yAxisDirection;
 		// console.log('yAxisDirection [369]:', yAxisDirection);
 
 		// Update the global property
@@ -420,17 +363,4 @@ class SinCos extends React.Component<Props> {
 			.attr('cy', this.needleAt.y2)
 			.attr('stroke', color.grey['200']);
 	}
-
-	/**
-	 * Render the component
-	 */
-	render() {
-		const {classes} = this.props;
-
-		return (
-			<div className={classes.root} id="sincos"/>
-		)
-	}
 }
-
-export default withStyles(styles)(SinCos);

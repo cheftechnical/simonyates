@@ -5,7 +5,7 @@ import Contact from './pages/Contact';
 import DefaultTheme from './styling/DefaultTheme';
 import Featured from './pages/Featured';
 import Figpie from './pages/Figpie';
-import FigpieTrigonometry from './pages/Figpie/FigmaTrigonometry';
+import FigpieTrigonometry from './pages/FigpieTrigonometry';
 import GenworthCanada from './pages/WorkAt/GenworthCanada';
 import Home from './pages/Home';
 import Infomart from './pages/WorkAt/Infomart';
