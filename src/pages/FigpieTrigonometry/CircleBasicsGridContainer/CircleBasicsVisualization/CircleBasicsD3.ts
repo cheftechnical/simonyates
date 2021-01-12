@@ -72,6 +72,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 			.attr('transform', transform)
 			.attr('d', yAxis)
 			.attr('class', 'crisp')
+			.attr('stroke-width', 1)
 			.attr('stroke', color.grey['200']);
 
 		// Draw the axis ticks ticks

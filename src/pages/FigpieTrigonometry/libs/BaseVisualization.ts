@@ -102,4 +102,55 @@ export class BaseVisualization implements BaseVisualizationInterface {
 		// 	}
 		// }
 	}
+
+	addDotGrid2(zeroX: number, zeroY: number, tickCount: number, tickDistance: number) {
+		for (let i = -1; i<=tickCount + 1; i++) {
+			for (let j = -1; j <= tickCount + 1; j++) {
+				this.svg.append('line')
+					.attr('x1', zeroX + (i * tickDistance))
+					.attr('y1', zeroY + (j * tickDistance))
+					.attr('x2', zeroX + (i * tickDistance) + 1)
+					.attr('y2', zeroY + (j * tickDistance))
+					.attr('class', 'crisp')
+					.attr('stroke-width', 1)
+					.attr('stroke', color.grey['300'])
+					// .attr('stroke', color.grey['900'])
+			}
+		}
+	}
+
+
+	/**
+	 * Adds ticks to the axis
+	 *
+	 * @param transform
+	 * @param tickLength
+	 * @param from
+	 * @param to
+	 */
+	addAxisTicks(transform: string, tickLength: number, from: number, to: number) {
+		for (let i = from; i <= to; i++) {
+			// X-Axis
+			this.svg.append('path')
+				.attr('transform', transform)
+				.attr('d', d3.line()([
+					[i * this.tickDistance / 2, tickLength + 1],
+					[i * this.tickDistance / 2, -tickLength]
+				]))
+				.attr('class', 'crisp')
+				.attr('stroke-width', 1)
+				.attr('stroke', color.grey['100']);
+
+			// Y-Axis
+			this.svg.append('path')
+				.attr('transform', transform)
+				.attr('d', d3.line()([
+					[tickLength - 1, i * this.tickDistance / 2],
+					[-tickLength, i * this.tickDistance / 2]
+				]))
+				.attr('class', 'crisp')
+				.attr('stroke-width', 1)
+				.attr('stroke', color.grey['100']);
+		}
+	}
 }

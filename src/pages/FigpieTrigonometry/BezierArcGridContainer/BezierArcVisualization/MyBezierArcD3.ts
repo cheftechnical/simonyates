@@ -20,12 +20,15 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 	c2Circle: any;
 	c2Text: any;
 	c2Line: any;
+	endAngleLine: any;
 
 	draggableNode: any;
 	arc: any;
 
 	axisPadding = 8;
 	labelHeight = 21;
+
+	point: any;
 
 	drawChart() {
 		// Calculate the radius
@@ -40,7 +43,11 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			x: this.width / 2,
 			y: this.height / 2,
 		};
-		const transform = `translate(${center.x - (2.5 * this.tickDistance)}, ${center.y - (2.5 * this.tickDistance)})`;
+		const zeroAt: Coordinate = {
+			x: center.x - (2.5 * this.tickDistance),
+			y: center.y - (2.5 * this.tickDistance),
+		};
+		const transform = `translate(${zeroAt.x}, ${zeroAt.y})`;
 
 		// Create the chart
 		this.createChart('#BezierArc', this.width, this.height);
@@ -49,7 +56,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		this.addBackground();
 
 		// Add the dot grid
-		this.addDotGrid(this.padding, ticksPerRadius, this.tickDistance, this.width, this.height);
+		// this.addDotGrid(this.padding, ticksPerRadius, this.tickDistance, this.width, this.height);
+		this.addDotGrid2(zeroAt.x, zeroAt.y, 10, this.tickDistance / 2);
 
 		// Add the axis lines
 		this.svg.append('path')
@@ -71,9 +79,13 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			.attr('stroke-width', 1)
 			.attr('stroke', color.grey['200']);
 
-		// Calculate the points
+		// Add the axis ticks
+		this.addAxisTicks(transform, 9, 0, 10);
+
+
+		// Calculate the point
 		const endAngle = 270;
-		const points = this.calculatePoints(360, endAngle);
+		this.point = this.calculatePoints(360, endAngle);
 
 
 		const pointRadius = 7;
@@ -87,16 +99,16 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		// Add start
 		this.sCircle = this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('cx', points.s.x)
-			.attr('cy', points.s.y)
+			.attr('cx', this.point.s.x)
+			.attr('cy', this.point.s.y)
 			.attr('r', pointRadius)
 			.attr('fill', 'none')
 			.attr('stroke', strokeFixed)
 			.attr('stroke-width', pointWidth);
 		this.sText = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', points.s.x + this.axisPadding)
-			.attr('y', points.s.y + this.labelHeight)
+			.attr('x', this.textOffset(this.point.s).x)
+			.attr('y', this.textOffset(this.point.s).y)
 			.attr('fill', strokeFixed)
 			.attr('font-size', '16px')
 			.text('S');
@@ -104,8 +116,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		// Add end
 		this.eCircle = this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('cx', points.e.x)
-			.attr('cy', points.e.y)
+			.attr('cx', this.point.e.x)
+			.attr('cy', this.point.e.y)
 			.attr('r', pointRadius)
 			.attr('fill', 'none')
 			.attr('stroke', strokeInteractive)
@@ -113,8 +125,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			.style('cursor', 'pointer');
 		this.eText = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', points.e.x + this.axisPadding)
-			.attr('y', points.e.y + this.labelHeight)
+			.attr('x', this.textOffset(this.point.e).x)
+			.attr('y', this.textOffset(this.point.e).y)
 			.attr('fill', color.grey['900'])
 			.attr('font-size', '16px')
 			.text('E');
@@ -122,15 +134,15 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		// Add control point 1
 		this.c1Circle = this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('cx', points.c1.x)
-			.attr('cy', points.c1.y)
+			.attr('cx', this.point.c1.x)
+			.attr('cy', this.point.c1.y)
 			.attr('r', 5)
 			.attr('fill', 'none')
 			.attr('stroke', strokeCalculated);
 		this.c1Text = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', points.c1.x + this.axisPadding)
-			.attr('y', points.c1.y + this.labelHeight)
+			.attr('x', this.textOffset(this.point.c1).x)
+			.attr('y', this.textOffset(this.point.c1).y)
 			.attr('font-size', '16px')
 			.attr('fill', strokeCalculated)
 			.text('C1');
@@ -138,36 +150,62 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		// Add control point 2
 		this.c2Circle = this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('cx', points.c2.x)
-			.attr('cy', points.c2.y)
+			.attr('cx', this.point.c2.x)
+			.attr('cy', this.point.c2.y)
 			.attr('r', 5)
 			.attr('stroke', color.grey['900'])
 			.attr('fill', 'none');
 		this.c2Text = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', points.c2.x + this.axisPadding)
-			.attr('y', points.c2.y + this.labelHeight)
+			.attr('x', this.textOffset(this.point.c2).x)
+			.attr('y', this.textOffset(this.point.c2).y)
 			.attr('font-size', '16px')
 			.attr('fill', color.grey['900'])
 			.text('C2');
 
-		// Add control point 1 line
+		// Add control 1 line
 		this.c1Line = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
-				[points.s.x, points.s.y],
-				[points.c1.x, points.c1.y],
+				[this.point.s.x, this.point.s.y],
+				[this.point.c1.x, this.point.c1.y],
 			]))
 			.attr('stroke', color.blue[500]);
 
-		// Add control point 2 line
+		// Add control 2 line
 		this.c2Line = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
-				[points.e.x, points.e.y],
-				[points.c2.x, points.c2.y],
+				[this.point.e.x, this.point.e.y],
+				[this.point.c2.x, this.point.c2.y],
 			]))
 			.attr('stroke', color.blue[500]);
+
+		// Add the end angle line
+		this.endAngleLine = this.svg.append('path')
+			.attr('transform', transform)
+			.attr('d', d3.line()([
+				[0, 0],
+				[this.point.e.x, this.point.e.y],
+			]))
+			.attr('stroke', color.blue[500]);
+
+
+		// Add the arc contour (that path which the arc must follow)
+		this.svg.append('path')
+			.attr('transform', transform)
+			.attr('class', 'crisp')
+			.attr('cx', 0)
+			.attr('cy', 0)
+			.attr('d', d3.arc()
+				.innerRadius(this.radius)
+				.outerRadius(this.radius)
+				.startAngle(degToRad(90))
+				.endAngle(degToRad(180))
+			)
+			.attr('stroke-width', 1)
+			.attr('stroke', color.grey['300']);
+
 
 		// Add the projected arc
 		this.arc = this.svg.append('path')
@@ -187,8 +225,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		// Draw the draggable node
 		this.draggableNode = this.svg.append('circle')
 			.attr('transform', transform)
-			.attr('cx', points.e.x)
-			.attr('cy', points.e.y)
+			.attr('cx', this.point.e.x)
+			.attr('cy', this.point.e.y)
 			.attr('r', 15)
 			.attr('fill', 'white')
 			.attr('opacity', '0.0')
@@ -245,7 +283,7 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 				}
 
 				if (touchPoint.y < 0) {
-					return 0;
+					return 359.9;
 				}
 
 				return 360 + degrees
@@ -259,22 +297,15 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		}
 	}
 
-	calculateC1(): Coordinate {
-		const angle0 = 360;
-		const angle1 = 270;
-		const varPhi = degToRad(angle0 - angle1);
-
-		const f = this.calculateF(varPhi);
-
-		return {
-			x: this.radius,
-			y: this.radius * f,
-		}
-	}
-
+	/**
+	 * Calculate the position of all of the point
+	 *
+	 * @param angle0
+	 * @param angle1
+	 */
 	calculatePoints(angle0: number, angle1: number) {
 		const varPhi = degToRad(angle0 - angle1);
-		const f = this.calculateF(varPhi);
+		const f = (4 / 3) * Math.tan(varPhi / 4);
 
 		const s: Coordinate = {
 			x: this.radius,
@@ -304,15 +335,18 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		};
 	}
 
-	calculateF(varPhi: number): number {
-		return (4 / 3) * Math.tan(varPhi / 4);
-	}
-
 	resetDragTouchPoint(): void {
 		this.draggableNode
-			.attr('cx', 0)
-			.attr('cy', 0)
+			.attr('cx', this.point.e.x)
+			.attr('cy', this.point.e.y)
 			.attr('stroke', color.grey['200']);
+	}
+
+	textOffset(coordinate: Coordinate): Coordinate {
+		return {
+			x: coordinate.x + this.axisPadding,
+			y: coordinate.y + this.labelHeight,
+		}
 	}
 
 	updateChart(endAngle: number) {
@@ -325,41 +359,46 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			.startAngle(degToRad(90))
 			.endAngle(degToRad(arcEndAngle)));
 
-		// Calculate the points
-		const points = this.calculatePoints(360, endAngle);
+		// Calculate the point
+		this.point = this.calculatePoints(360, endAngle);
 
 		// End
 		this.eCircle
-			.attr('cx', points.e.x)
-			.attr('cy', points.e.y);
+			.attr('cx', this.point.e.x)
+			.attr('cy', this.point.e.y);
 		this.eText
-			.attr('x', points.e.x + this.axisPadding)
-			.attr('y', points.e.y + this.labelHeight);
+			.attr('x', this.point.e.x + this.axisPadding)
+			.attr('y', this.point.e.y + this.labelHeight);
+		this.endAngleLine
+			.attr('d', d3.line()([
+				[0, 0],
+				[this.point.e.x, this.point.e.y],
+			]));
 
 		// Control 2
 		this.c2Circle
-			.attr('cx', points.c2.x)
-			.attr('cy', points.c2.y);
+			.attr('cx', this.point.c2.x)
+			.attr('cy', this.point.c2.y);
 		this.c2Line
 			.attr('d', d3.line()([
-				[points.e.x, points.e.y],
-				[points.c2.x, points.c2.y],
+				[this.point.e.x, this.point.e.y],
+				[this.point.c2.x, this.point.c2.y],
 			]));
 		this.c2Text
-			.attr('x', points.c2.x + this.axisPadding)
-			.attr('y', points.c2.y + this.labelHeight)
+			.attr('x', this.textOffset(this.point.c2).x)
+			.attr('y', this.textOffset(this.point.c2).y)
 
 		// Control 1
 		this.c1Circle
-			.attr('cx', points.c1.x)
-			.attr('cy', points.c1.y);
+			.attr('cx', this.point.c1.x)
+			.attr('cy', this.point.c1.y);
 		this.c1Line
 			.attr('d', d3.line()([
-				[points.s.x, points.s.y],
-				[points.c1.x, points.c1.y],
+				[this.point.s.x, this.point.s.y],
+				[this.point.c1.x, this.point.c1.y],
 			]));
 		this.c1Text
-			.attr('x', points.c1.x + this.axisPadding)
-			.attr('y', points.c1.y + this.labelHeight);
+			.attr('x', this.textOffset(this.point.c1).x)
+			.attr('y', this.textOffset(this.point.c1).y);
 	}
 }
