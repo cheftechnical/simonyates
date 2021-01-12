@@ -9,7 +9,11 @@ interface Coordinate {
 	y: number;
 }
 
-export class MyBezierArcD3 extends BaseVisualization implements Visualization {
+interface MyArc {
+	onChange: (endAngle: number) => any;
+}
+
+export class MyBezierArcD3 extends BaseVisualization implements Visualization, MyArc {
 	sCircle: any;
 	sText: any;
 	eCircle: any;
@@ -21,6 +25,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 	c2Text: any;
 	c2Line: any;
 	endAngleLine: any;
+
+	endAngle: any;
 
 	draggableNode: any;
 	arc: any;
@@ -42,7 +48,16 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		arcContour: color.grey['100'] // should be darker than the axis line and less than arc
 	}
 
-	zeroAt: Coordinate | undefined;
+	zeroAt: Coordinate = {
+		x: 0,
+		y: 0,
+	};
+
+	onChange = (endAngle: number) => {
+		this.onChange(endAngle);
+	}
+
+
 
 	drawChart() {
 		// Calculate the radius
@@ -263,18 +278,11 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		}
 
 		function dragging(this: any, event: any) {
-			const {height, width} = that;
-
-			const center = {
-				x: width / 2,
-				y: height / 2,
-			}
-
 			// Calculate the new position of the draggable touch point (this match needs to match the transform)
 			const touchPoint: Coordinate = {
-				x: event.x - (center.x - (2.5 * that.tickDistance)),
-				y: event.y - (center.y - (2.5 * that.tickDistance)),
-			};
+				x: event.x - that.zeroAt.x,
+				y: event.y - that.zeroAt.y,
+			}
 			d3.select(this).raise()
 				.attr('cx', touchPoint.x)
 				.attr('cy', touchPoint.y);
@@ -303,8 +311,12 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 
 		function dragEnded(this: any) {
 			that.resetDragTouchPoint();
+
+			// Raise the onChange event
+			that.onChange(that.endAngle);
 		}
 	}
+
 
 	/**
 	 * Calculate the position of all of the point
@@ -359,6 +371,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 	}
 
 	updateChart(endAngle: number) {
+		this.endAngle = endAngle;
+
 		const d = (value: number) => (value).toFixed(1);
 
 		// Reverse the circle (to work with d3's circle)

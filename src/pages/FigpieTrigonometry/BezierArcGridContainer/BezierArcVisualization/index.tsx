@@ -5,6 +5,7 @@ import {withStyles} from '@material-ui/core';
 
 interface Props {
 	classes: any;
+	onChange: (endAngle: number) => void;
 }
 
 const styles = () => ({
@@ -21,6 +22,14 @@ const styles = () => ({
 
 class BezierArcVisualization extends React.Component<Props> {
 	myBezierArc = new MyBezierArcD3();
+
+	constructor(props: Props) {
+		super(props);
+
+		this.myBezierArc.onChange = (endAngle: number) => {
+			this.props.onChange(endAngle);
+		}
+	}
 
 	componentDidMount() {
 		this.drawChart();

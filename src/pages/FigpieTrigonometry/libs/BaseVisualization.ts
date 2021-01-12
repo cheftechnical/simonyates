@@ -2,6 +2,7 @@ import * as d3 from 'd3';
 import {color} from '../../../styling/Color';
 
 interface BaseVisualizationInterface {
+	onChange?: <T>() => any;
 	padding: number;
 	height: number;
 	width: number;
@@ -17,7 +18,6 @@ export class BaseVisualization implements BaseVisualizationInterface {
 
 	// Properties with calculated defaults
 	radius: number = (Math.min(this.width, this.height) - (2 * this.padding)) / 2;
-
 
 	/**
 	 * Calculates the distance of each tick on the x/y axis
