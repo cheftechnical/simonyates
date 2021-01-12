@@ -11,8 +11,9 @@ export default function BezierArcGridContainer() {
 	const [radius, setRadius] = React.useState<number>(100.0);
 	const [endAngle, setEndAngle] = React.useState<number>(315.0)
 
-	const handleBezierArcD3Change = React.useCallback((endAngle: number) => {
-		setEndAngle(endAngle);
+	const handleBezierArcD3Change = React.useCallback((newEndAngle: number, newRadius: number) => {
+		setEndAngle(newEndAngle);
+		setRadius(newRadius);
 	}, []);
 
 	const handleEndAngleChange = React.useCallback((event) => {
@@ -35,6 +36,7 @@ export default function BezierArcGridContainer() {
 					<MyGridContainer>
 						<Grid item xs={6}>
 							<MyTextField
+								disabled
 								label="Radius"
 								onChange={handleRadiusChange}
 								type="number"

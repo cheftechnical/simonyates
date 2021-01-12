@@ -10,7 +10,7 @@ interface Coordinate {
 }
 
 interface MyArc {
-	onChange: (endAngle: number) => any;
+	// onChange: (endAngle: number, radius: number) => any;
 }
 
 export class MyBezierArcD3 extends BaseVisualization implements Visualization, MyArc {
@@ -53,8 +53,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 		y: 0,
 	};
 
-	onChange = (endAngle: number) => {
-		this.onChange(endAngle);
+	onChange = (endAngle: number, radius: number) => {
+		this.onChange(endAngle, radius);
 	}
 
 
@@ -313,7 +313,7 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			that.resetDragTouchPoint();
 
 			// Raise the onChange event
-			that.onChange(that.endAngle);
+			that.onChange(that.endAngle, that.radius);
 		}
 	}
 
