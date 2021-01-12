@@ -42,9 +42,11 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 		arcContour: color.grey['100'] // should be darker than the axis line and less than arc
 	}
 
+	zeroAt: Coordinate | undefined;
+
 	drawChart() {
 		// Calculate the radius
-		this.radius = this.width - (2 * this.padding);
+		this.radius = this.width - (3 * this.padding);
 
 		// Calculate the distance between each tick
 		const ticksPerRadius = 5;
@@ -55,11 +57,11 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			x: this.width / 2,
 			y: this.height / 2,
 		};
-		const zeroAt: Coordinate = {
-			x: center.x - (2.5 * this.tickDistance),
+		this.zeroAt = {
+			x: center.x - (2.75 * this.tickDistance),
 			y: center.y - (2.5 * this.tickDistance),
 		};
-		const transform = `translate(${zeroAt.x}, ${zeroAt.y})`;
+		const transform = `translate(${this.zeroAt.x}, ${this.zeroAt.y})`;
 
 		// Create the chart
 		this.createChart('#BezierArc', this.width, this.height);
@@ -69,7 +71,7 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 
 		// Add the dot grid
 		// this.addDotGrid(this.padding, ticksPerRadius, this.tickDistance, this.width, this.height);
-		this.addDotGrid2(zeroAt.x, zeroAt.y, 10, this.tickDistance / 2);
+		this.addDotGrid2(this.zeroAt.x, this.zeroAt.y, 10, this.tickDistance / 2);
 
 		// Add the axis lines
 		this.svg.append('path')
@@ -412,5 +414,9 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization {
 			.attr('x', this.textOffset(this.point.c1).x)
 			.attr('y', this.textOffset(this.point.c1).y)
 			.text(`C1 = (${d(this.point.c1.x)}, ${d(this.point.c1.y)})`);
+
+		// Start
+		this.sText
+			.text(`S = (${d(this.point.s.x)}, ${d(this.point.s.y)})`);
 	}
 }
