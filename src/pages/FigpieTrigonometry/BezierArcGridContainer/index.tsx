@@ -61,7 +61,7 @@ export default function BezierArcGridContainer() {
 				</Grid>
 			</MyGridContainer>
 			<MyGridContainer>
-				<Grid item xs={3}>
+				<Grid item xs={2}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
@@ -74,23 +74,23 @@ export default function BezierArcGridContainer() {
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
-						variable="E"
-					/>
-				</Grid>
-				<Grid item xs={3}>
-					<BezierArcMathJax
-						radius={radius}
-						startAngle={startAngle}
-						endAngle={endAngle}
 						variable="C1"
 					/>
 				</Grid>
-				<Grid item xs={3}>
+				<Grid item xs={4}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
 						variable="C2"
+					/>
+				</Grid>
+				<Grid item xs={3}>
+					<BezierArcMathJax
+						radius={radius}
+						startAngle={startAngle}
+						endAngle={endAngle}
+						variable="E"
 					/>
 				</Grid>
 			</MyGridContainer>

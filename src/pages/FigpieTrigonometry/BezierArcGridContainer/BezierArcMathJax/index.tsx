@@ -30,8 +30,6 @@ export default function BezierArcMathJax(props: Props) {
 	const [formula, setFormula] = React.useState<string>('');
 
 	const renderedFormula = React.useMemo(() => {
-		console.log('rendering formula');
-
 		return (
 			<MathJax.Formula formula={formula}/>
 		);

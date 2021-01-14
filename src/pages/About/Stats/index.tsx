@@ -43,7 +43,7 @@ export default function Stats() {
 							<StatsItem caption="software projects completed" value={200}/>
 						</Grid>
 						<Grid item xs={3}>
-							<StatsItem caption="awesome girlfriend" value={1}/>
+							<StatsItem caption="figma plugin" value={1}/>
 						</Grid>
 					</Grid>
 				</MyContainer>

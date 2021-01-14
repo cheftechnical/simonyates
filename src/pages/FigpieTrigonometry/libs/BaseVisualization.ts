@@ -1,5 +1,7 @@
 import * as d3 from 'd3';
 import {color} from '../../../styling/Color';
+import {degToRad} from './trig';
+import {Coordinate} from './Coordinate';
 
 interface BaseVisualizationInterface {
 	onChange?: <T>() => any;
@@ -152,5 +154,44 @@ export class BaseVisualization implements BaseVisualizationInterface {
 				.attr('stroke-width', 1)
 				.attr('stroke', color.grey['100']);
 		}
+	}
+
+
+	/**
+	 * Calculate the position of all of the point
+	 *
+	 * @param angle0
+	 * @param angle1
+	 */
+	calculatePoints(angle0: number, angle1: number) {
+		const varPhi = degToRad(angle0 - angle1);
+		const f = (4 / 3) * Math.tan(varPhi / 4);
+
+		const s: Coordinate = {
+			x: this.radius,
+			y: 0,
+		};
+
+		const e: Coordinate = {
+			x: this.radius * Math.cos(varPhi),
+			y: this.radius * Math.sin(varPhi),
+		};
+
+		const c1: Coordinate = {
+			x: this.radius,
+			y: this.radius * f,
+		};
+
+		const c2: Coordinate = {
+			x: this.radius * (Math.cos(varPhi) + f * Math.sin(varPhi)),
+			y: this.radius * (Math.sin(varPhi) - f * Math.cos(varPhi)),
+		}
+
+		return {
+			s,
+			e,
+			c1,
+			c2,
+		};
 	}
 }

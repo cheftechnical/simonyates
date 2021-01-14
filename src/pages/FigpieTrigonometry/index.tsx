@@ -5,6 +5,7 @@ import CircleBasicsGridContainer from './CircleBasicsGridContainer';
 import MyMathJaxProvider from './MyMathJaxProvider';
 import MyContainer from '../../styling/MyContainer';
 import BezierArcGridContainer from './BezierArcGridContainer';
+import RotationGridContainer from './RotationGridContainer';
 
 export default function FigpieTrigonometry() {
 	return (
@@ -24,6 +25,11 @@ export default function FigpieTrigonometry() {
 						B&eacute;zier Arc
 					</Typography>
 					<BezierArcGridContainer/>
+
+					<Typography next group="primary" variant="h2" weight="regular">
+						Rotation
+					</Typography>
+					<RotationGridContainer/>
 
 				</MyContainer>
 			</DefaultLayout>
