@@ -93,8 +93,8 @@ export default function RotationMathJax(props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.s.x)} cos(${d(theta)}) - ${d(point.s.y)} sin(${d(theta)}) \\
-						          ${d(point.s.x)} sin(${d(theta)}) + ${d(point.s.y)} cos(${d(theta)})
+						          ${d(point.s.x)} \times cos(${d(theta)}) - ${d(point.s.y)} sin(${d(theta)}) \\
+						          ${d(point.s.x)} \times sin(${d(theta)}) + ${d(point.s.y)} cos(${d(theta)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -120,8 +120,8 @@ export default function RotationMathJax(props: Props) {
 						        \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.c1.x)} cos(${d(theta)}) - ${d(point.c1.y)} sin(${d(theta)}) \\
-						          ${d(point.c1.x)} sin(${d(theta)}) + ${d(point.c1.y)} cos(${d(theta)})
+						          ${d(point.c1.x)} \times cos(${d(theta)}) - ${d(point.c1.y)} sin(${d(theta)}) \\
+						          ${d(point.c1.x)} \times sin(${d(theta)}) + ${d(point.c1.y)} cos(${d(theta)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -147,8 +147,8 @@ export default function RotationMathJax(props: Props) {
 						         \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.c2.x)} cos(${d(theta)}) - ${d(point.c2.y)} sin(${d(theta)}) \\
-						          ${d(point.c2.x)} sin(${d(theta)}) + ${d(point.c2.y)} cos(${d(theta)})
+						          ${d(point.c2.x)} \times cos(${d(theta)}) - ${d(point.c2.y)} sin(${d(theta)}) \\
+						          ${d(point.c2.x)} \times sin(${d(theta)}) + ${d(point.c2.y)} cos(${d(theta)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -174,8 +174,8 @@ export default function RotationMathJax(props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.e.x)} cos(${d(theta)}) - ${d(point.e.y)} sin(${d(theta)}) \\
-						          ${d(point.e.x)} sin(${d(theta)}) + ${d(point.e.y)} cos(${d(theta)})
+						          ${d(point.e.x)} \times cos(${d(theta)}) - ${d(point.e.y)} sin(${d(theta)}) \\
+						          ${d(point.e.x)} \times sin(${d(theta)}) + ${d(point.e.y)} cos(${d(theta)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}

@@ -2,13 +2,38 @@ import * as d3 from 'd3';
 import {BaseVisualization} from '../../libs/BaseVisualization';
 import {Visualization} from '../../libs/Visualization';
 import {color} from '../../../../styling/Color';
-import {degToRad} from '../../libs/trig';
+import {degToRad, radToDeg} from '../../libs/trig';
 
 export class RotationD3 extends BaseVisualization implements Visualization {
 	color = {
+		axisLine: color.grey['100'],
+
 		circleContour: color.grey['100'],
-		vectorLine: color.grey['500'],
+		circleTicks: color.grey['200'],
+
+		draggableFill: 'white',
+		draggableOutlineInactive: color.grey['200'],
+		draggableOutlineStarted: color.lime['500'],
+
+		nodeMutable: color.blue['500'],
+
+		vectorLine: color.grey['400'],
+		magenta: 'magenta',
 	};
+
+	// elements
+	elementEdge0S: any;
+	elementEdge0E: any;
+	elementEdgeEC2: any;
+	elementEdgeSC1: any;
+	elementNodeC1: any;
+	elementNodeC2: any;
+	elementNodeS: any;
+	elementNodeE: any;
+	draggableNode: any;
+
+	startAngle = 0;
+	endAngle = 0;
 
 	point = {
 		s: {
@@ -45,12 +70,35 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 		// Calculate the point coordinates
 		this.point = this.calculatePoints(360, 270);
 
-
 		// Create the chart
 		this.createChart('#RotationD3', this.width, this.height);
 
 		// Add the background
 		this.addBackground();
+
+		// Add the dot grid
+		const ticksPerRadius = 10;
+		this.addDotGrid(this.padding, ticksPerRadius, this.tickDistance, this.width, this.height);
+
+		// Add the axis lines
+		this.svg.append('path')
+			.attr('transform', transform)
+			.attr('d', d3.line()([
+				[0 - this.radius, 0],
+				[this.radius, 0]
+			]))
+			.attr('class', 'crisp')
+			.attr('stroke', this.color.axisLine)
+			.attr('stroke-width', 1);
+		this.svg.append('path')
+			.attr('transform', transform)
+			.attr('d', d3.line()([
+				[0, 0 - this.radius],
+				[0, this.radius]
+			]))
+			.attr('class', 'crisp')
+			.attr('stroke', this.color.axisLine)
+			.attr('stroke-width', 1);
 
 		// Add the circle
 		this.svg.append('circle')
@@ -62,10 +110,13 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			.attr('stroke', this.color.circleContour)
 			.attr('stroke-width', 1);
 
+		// add the circle ticks
+		this.drawTicks(transform);
+
 		// ---[ Add the slice ]----
 
-		// (p0->p1)
-		this.svg.append('path')
+		// (0-S)
+		this.elementEdge0S = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
 				[0, 0],
@@ -73,32 +124,69 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			]))
 			.attr('stroke', this.color.vectorLine);
 
-		// (p0->p4)
-		this.svg.append('path')
+		// S
+		this.elementNodeS = this.svg.append('circle')
+			.attr('transform', transform)
+			.attr('cx', this.point.s.x)
+			.attr('cy', this.point.s.y)
+			.attr('r', 7)
+			.attr('fill', 'none')
+			.attr('opacity', 1)
+			.attr('stroke', this.color.nodeMutable)
+			.attr('stroke-width', 2)
+			.style('cursor', 'pointer');
+
+		// (0-E)
+		this.elementEdge0E = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
 				[0, 0],
 				[this.point.e.x, this.point.e.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+		this.elementNodeE = this.svg.append('circle')
+			.attr('transform', transform)
+			.attr('cx', this.point.e.x)
+			.attr('cy', this.point.e.y)
+			.attr('r', 7)
+			.attr('fill', 'none')
+			.attr('stroke', this.color.vectorLine)
+			.attr('stroke-width', 2);
 
-		// p1->p2 control line
-		this.svg.append('path')
+		// S-C1
+		this.elementEdgeSC1 = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
 				[this.point.s.x, this.point.s.y],
 				[this.point.c1.x, this.point.c1.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+		this.elementNodeC1 = this.svg.append('circle')
+			.attr('transform', transform)
+			.attr('cx', this.point.c1.x)
+			.attr('cy', this.point.c1.y)
+			.attr('r', 5)
+			.attr('fill', 'none')
+			.attr('stroke', this.color.vectorLine)
+			.attr('stroke-width', 1);
 
-		// p4->p3 control line
-		this.svg.append('path')
+
+		// E-C2
+		this.elementEdgeEC2 = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('d', d3.line()([
 				[this.point.e.x, this.point.e.y],
 				[this.point.c2.x, this.point.c2.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+		this.elementNodeC2 = this.svg.append('circle')
+			.attr('transform', transform)
+			.attr('cx', this.point.c2.x)
+			.attr('cy', this.point.c2.y)
+			.attr('r', 5)
+			.attr('fill', 'none')
+			.attr('stroke', this.color.vectorLine)
+			.attr('stroke-width', 1);
 
 		// arc
 		this.svg.append('path')
@@ -113,5 +201,178 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			)
 			.attr('stroke-width', 1)
 			.attr('stroke', this.color.vectorLine);
+
+		// Draw the draggable node
+		this.draggableNode = this.svg.append('circle')
+			.attr('transform', transform)
+			.attr('cx', this.radius)
+			.attr('cy', 0)
+			.attr('r', 15)
+			.attr('fill', 'white')
+			.attr('opacity', '0.0')
+			.attr('stroke', this.color.draggableOutlineInactive)
+			.attr('stroke-width', 2)
+			.style('cursor', 'pointer')
+			.on('mouseover', function (this: any) {
+				d3.select(this).raise().attr('opacity', '.75');
+			})
+			.on('mouseout', function (this: any) {
+				d3.select(this).raise().attr('opacity', '0.0');
+			})
+			.call(d3.drag()
+				.on('start', dragStarted)
+				.on('drag', dragging)
+				.on('end', dragEnded)
+			);
+
+		const that = this;
+
+		function dragStarted(this: any) {
+			that.startAngle = 0;
+
+			d3.select(this)
+				.attr('opacity', '0.75')
+				.attr('stroke', that.color.draggableOutlineStarted);
+		}
+
+		function dragging(this: any, event: any) {
+			// Calculate the new position of the draggable touch point
+			const touchPoint = {
+				x: event.x - (that.width / 2),
+				y: event.y - (that.height / 2),
+			};
+			d3.select(this).raise()
+				.attr('cx', touchPoint.x)
+				.attr('cy', touchPoint.y);
+
+			// Calculate the endAngle
+			const adjacent = touchPoint.x;
+			const opposite = touchPoint.y * -1; // invert y axis
+			const radians = Math.atan(opposite / adjacent);
+			const degrees = radToDeg(radians);
+
+			const endAngle = 360 - ((): number => {
+				if (touchPoint.x < 0) {
+					return degrees + 180;
+				}
+
+				if (touchPoint.y > 0) {
+					return 360 + degrees;
+				}
+
+				return degrees
+			})();
+
+			that.updateChart(endAngle);
+		}
+
+		function dragEnded(this: any) {
+			that.resetDragTouchPoint();
+		}
+	}
+
+
+	/**
+	 * Draw the ticks for the circle
+	 *
+	 * @param transform
+	 */
+	drawTicks(transform: string) {
+		for (let i = 0; i < 360; i += 4.5) {
+			const theta = i * (Math.PI / 180);
+
+			const tickLength = (i % (360 / 16)) ? 3 : 7
+
+			const x1 = (this.radius - tickLength) * Math.cos(theta);
+			const y1 = (this.radius - tickLength) * Math.sin(theta);
+
+			const x2 = (this.radius + tickLength) * Math.cos(theta);
+			const y2 = (this.radius + tickLength) * Math.sin(theta);
+
+			this.svg.append('path')
+				.attr('transform', transform)
+				.attr('d', d3.line()([
+					[x1, y1],
+					[x2, y2],
+				]))
+				.attr('class', 'crisp')
+				.attr('stroke', this.color.circleTicks)
+				.attr('stroke-width', 1);
+		}
+	}
+
+
+	/**
+	 * Returns the drag touch point to the needle position
+	 */
+	resetDragTouchPoint() {
+		this.draggableNode
+			.attr('cx', this.radius)
+			.attr('cy', 0)
+			.attr('stroke', this.color.draggableOutlineInactive);
+	}
+
+	updateChart(endAngle: number) {
+		console.log('endAngle', endAngle);
+
+		const theta = degToRad(endAngle);
+		const updatedPoint = {
+			s: {
+				x: this.point.s.x * Math.cos(theta) - this.point.s.y * Math.sin(theta),
+				y: this.point.s.x * Math.sin(theta) + this.point.s.y * Math.cos(theta),
+			},
+			c1: {
+				x: this.point.c1.x * Math.cos(theta) - this.point.c1.y * Math.sin(theta),
+				y: this.point.c1.x * Math.sin(theta) + this.point.c1.y * Math.cos(theta),
+			},
+			c2: {
+				x: this.point.c2.x * Math.cos(theta) - this.point.c2.y * Math.sin(theta),
+				y: this.point.c2.x * Math.sin(theta) + this.point.c2.y * Math.cos(theta),
+			},
+			e: {
+				x: this.point.e.x * Math.cos(theta) - this.point.e.y * Math.sin(theta),
+				y: this.point.e.x * Math.sin(theta) + this.point.e.y * Math.cos(theta),
+			}
+		};
+
+		this.elementNodeS
+			.attr('cx', updatedPoint.s.x)
+			.attr('cy', updatedPoint.s.y);
+
+		this.elementEdge0S
+			.attr('d', d3.line()([
+				[0, 0],
+				[updatedPoint.s.x, updatedPoint.s.y],
+			]));
+
+		this.elementNodeC1
+			.attr('cx', updatedPoint.c1.x)
+			.attr('cy', updatedPoint.c1.y);
+
+		this.elementEdgeSC1
+			.attr('d', d3.line()([
+				[updatedPoint.s.x, updatedPoint.s.y],
+				[updatedPoint.c1.x, updatedPoint.c1.y],
+			]));
+
+		this.elementNodeC2
+			.attr('cx', updatedPoint.c2.x)
+			.attr('cy', updatedPoint.c2.y);
+
+		this.elementEdgeEC2
+			.attr('d', d3.line()([
+				[updatedPoint.e.x, updatedPoint.e.y],
+				[updatedPoint.c2.x, updatedPoint.c2.y],
+			]));
+
+		this.elementNodeE
+			.attr('cx', updatedPoint.e.x)
+			.attr('cy', updatedPoint.e.y);
+
+		this.elementEdge0E
+			.attr('d', d3.line()([
+				[0, 0],
+				[updatedPoint.e.x, updatedPoint.e.y]
+			]));
 	}
 }

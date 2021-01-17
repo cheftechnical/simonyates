@@ -12,19 +12,19 @@ export default function FigpieTrigonometry() {
 		<MyMathJaxProvider>
 			<DefaultLayout title="How it Works" top="figpie">
 				<MyContainer>
-					<Typography group="primary" variant="h1" weight="regular">
-						Trigonometry
-					</Typography>
+					{/*<Typography group="primary" variant="h1" weight="regular">*/}
+					{/*	Trigonometry*/}
+					{/*</Typography>*/}
 
-					<Typography next group="primary" variant="h2" weight="regular">
-						Circle Basics
-					</Typography>
-					<CircleBasicsGridContainer/>
+					{/*<Typography next group="primary" variant="h2" weight="regular">*/}
+					{/*	Circle Basics*/}
+					{/*</Typography>*/}
+					{/*<CircleBasicsGridContainer/>*/}
 
-					<Typography next group="primary" variant="h2" weight="regular">
-						B&eacute;zier Arc
-					</Typography>
-					<BezierArcGridContainer/>
+					{/*<Typography next group="primary" variant="h2" weight="regular">*/}
+					{/*	B&eacute;zier Arc*/}
+					{/*</Typography>*/}
+					{/*<BezierArcGridContainer/>*/}
 
 					<Typography next group="primary" variant="h2" weight="regular">
 						Rotation
