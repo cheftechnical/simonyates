@@ -37,9 +37,7 @@ export default function CircleBasicsMathJax(props: Props) {
 		const blue = String.raw`\color{${blue500}}`;
 		const red = String.raw`\color{${red500}}`;
 
-		setFormula(String.raw`$$					
-			\begin{equation}
-			\begin{split}
+		const equation = String.raw`
 			{${blue}{angle}} & = ${inputDegrees}^\circ \\
 			\\
 			{${red}\theta} & = {${blue}{angle}} * (\pi / 180) \\
@@ -57,7 +55,12 @@ export default function CircleBasicsMathJax(props: Props) {
 			y_2 & = sin({${red}\theta}) \\ 
 				& = sin({${red}${theta.toFixed(3)}}) \\
 				& = ${y2.toFixed(3)} \\
-			\\
+		`;
+
+		setFormula(String.raw`$$					
+			\begin{equation}
+			\begin{split}
+			${equation}
 			\end{split}
 			\end{equation}
 		$$`);
