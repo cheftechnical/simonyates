@@ -1,11 +1,13 @@
 import * as React from 'react';
+import {color} from '../../../../../styling/Color';
+import {degToRad} from '../../../libs/trig';
+import {makeStyles} from '@material-ui/core/styles';
+import {AxisDirection} from '../AxisDirection';
 
 // @ts-ignore
 import MathJax from "mathjax3-react";
-import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../../../../styling/Color';
-import {degToRad} from '../../../libs/trig';
-import {AxisDirection} from '../AxisDirection';
+
+const timeout = 1000;
 
 interface Props {
 	inputDegrees: number;
@@ -22,9 +24,9 @@ export default function CircleBasicsMathJax(props: Props) {
 	const classes = useStyles();
 	const {inputDegrees, yAxisDirection} = props;
 
-	const [formula, setFormula] = React.useState<string>('');
+	const [formula, setFormula] = React.useState<string>();
 
-	React.useEffect(() => {
+	const refreshEquation = React.useCallback(() => {
 		const theta = degToRad(inputDegrees);
 		const x2 = Math.cos(theta);
 		const y2 = Math.sin(theta) * yAxisDirection;
@@ -61,9 +63,23 @@ export default function CircleBasicsMathJax(props: Props) {
 		$$`);
 	}, [inputDegrees, yAxisDirection]);
 
+	const renderedFormula = React.useMemo(() => {
+		return (
+			<MathJax.Formula formula={formula}/>
+		);
+	}, [formula]);
+
+	React.useEffect(() => {
+		const timer = setTimeout(() => {
+			refreshEquation();
+		}, timeout);
+
+		return () => clearTimeout(timer);
+	}, [refreshEquation, inputDegrees, yAxisDirection]);
+
 	return (
 		<div className={classes.root}>
-			<MathJax.Formula formula={formula}/>
+			{renderedFormula}
 		</div>
 	)
 }
