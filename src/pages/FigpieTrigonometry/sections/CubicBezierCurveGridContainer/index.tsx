@@ -1,9 +1,9 @@
 import * as React from 'react';
-import MyGridContainer from '../../../styling/MyGridContainer';
+import MyGridContainer from '../../../../styling/MyGridContainer';
 import {Grid} from '@material-ui/core';
-import BezierArcD3 from './BezierArcVisualization';
-import BezierArcMathJax from './BezierArcMathJax';
-import MyTextField from '../../../styling/MyTextField';
+import CubicBezierCurveVisualization from './CubicBezierCurveVisualization';
+import BezierArcMathJax from './CubicBezierCurveMathJax';
+import MyTextField from '../../../../styling/MyTextField';
 
 const startAngle = 360;
 
@@ -11,7 +11,7 @@ export default function BezierArcGridContainer() {
 	const [radius, setRadius] = React.useState<number>(100.0);
 	const [endAngle, setEndAngle] = React.useState<number>(315.0)
 
-	const handleBezierArcD3Change = React.useCallback((newEndAngle: number, newRadius: number) => {
+	const handleBezierArcVisualizationChange = React.useCallback((newEndAngle: number, newRadius: number) => {
 		setEndAngle(newEndAngle);
 		setRadius(newRadius);
 	}, []);
@@ -28,8 +28,8 @@ export default function BezierArcGridContainer() {
 		<div>
 			<MyGridContainer>
 				<Grid item xs={6}>
-					<BezierArcD3
-						onChange={handleBezierArcD3Change}
+					<CubicBezierCurveVisualization
+						onChange={handleBezierArcVisualizationChange}
 					/>
 				</Grid>
 				<Grid item xs={6}>

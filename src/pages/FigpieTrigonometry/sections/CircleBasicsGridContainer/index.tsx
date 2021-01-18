@@ -3,9 +3,9 @@ import SinCos from './CircleBasicsVisualization';
 import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import CircleBasicsMathJax from './CircleBasicsMathJax';
-import MyTextField from '../../../styling/MyTextField';
-import MyGridContainer from '../../../styling/MyGridContainer';
-import {color} from '../../../styling/Color';
+import MyTextField from '../../../../styling/MyTextField';
+import MyGridContainer from '../../../../styling/MyGridContainer';
+import {color} from '../../../../styling/Color';
 import {AxisDirection} from './AxisDirection';
 
 // https://github.com/asnunes/mathjax3-react <-- vastuly superior

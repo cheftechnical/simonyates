@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {MyBezierArcD3} from './MyBezierArcD3';
-import {color} from '../../../../styling/Color';
+import {color} from '../../../../../styling/Color';
 import {withStyles} from '@material-ui/core';
+import {RotationD3} from './RotationD3';
 
 interface Props {
 	classes: any;
-	onChange: (endAngle: number, radius: number) => void;
+	onChange: (endAngle: number) => void;
 }
 
 const styles = () => ({
@@ -20,36 +20,32 @@ const styles = () => ({
 })
 
 
-class BezierArcVisualization extends React.Component<Props> {
-	myBezierArc = new MyBezierArcD3();
+class RotationVisualization extends React.Component<Props> {
+	rotationD3 = new RotationD3();
 
 	constructor(props: Props) {
 		super(props);
 
-		this.myBezierArc.onChange = (endAngle: number, radius: number) => {
-			this.props.onChange(endAngle, radius);
+		this.rotationD3.onChange = (endAngle: number) => {
+			this.props.onChange(endAngle);
 		}
 	}
 
 	componentDidMount() {
-		this.drawChart();
+		this.rotationD3.drawChart();
 	}
 
 	componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>, snapshot?: any) {
 
 	}
 
-	drawChart() {
-		this.myBezierArc.drawChart();
-	}
-
 	render() {
 		const {classes} = this.props;
 
 		return (
-			<div className={classes.root} id="BezierArc"/>
+			<div className={classes.root} id="RotationD3"/>
 		)
 	}
 }
 
-export default withStyles(styles)(BezierArcVisualization);
+export default withStyles(styles)(RotationVisualization);

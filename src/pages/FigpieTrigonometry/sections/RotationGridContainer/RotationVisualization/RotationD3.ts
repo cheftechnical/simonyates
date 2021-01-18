@@ -1,8 +1,8 @@
 import * as d3 from 'd3';
-import {BaseVisualization} from '../../libs/BaseVisualization';
-import {Visualization} from '../../libs/Visualization';
-import {color} from '../../../../styling/Color';
-import {degToRad, radToDeg} from '../../libs/trig';
+import {BaseVisualization} from '../../../libs/BaseVisualization';
+import {Visualization} from '../../../libs/Visualization';
+import {color} from '../../../../../styling/Color';
+import {degToRad, radToDeg} from '../../../libs/trig';
 
 export class RotationD3 extends BaseVisualization implements Visualization {
 	color = {
@@ -39,7 +39,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 	draggableNode: any;
 
 	startAngle = 0;
-	// endAngle = 0;
+	endAngle = 0;
 
 	point = {
 		s: {
@@ -82,6 +82,10 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 		x: 0,
 		y: 0,
 	};
+
+	onChange = (endAngle: number) => {
+		this.onChange(endAngle);
+	}
 
 	drawChart() {
 		// (0,0) should be the center
@@ -327,6 +331,9 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 
 		function dragEnded(this: any) {
 			that.resetDragTouchPoint();
+
+			// Raise the onChange event
+			that.onChange(that.endAngle);
 		}
 	}
 
@@ -372,8 +379,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 	}
 
 	updateChart(endAngle: number) {
-		console.log('endAngle', endAngle);
-		// this.endAngle = endAngle;
+		this.endAngle = endAngle;
 
 		const d = (value: number) => (value).toFixed(1);
 

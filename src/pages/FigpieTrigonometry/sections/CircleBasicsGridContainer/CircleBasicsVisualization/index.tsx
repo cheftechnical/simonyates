@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {withStyles} from '@material-ui/core';
-import {color} from '../../../../styling/Color';
+import {color} from '../../../../../styling/Color';
 import {AxisDirection} from '../AxisDirection';
 import {CircleBasicsD3} from './CircleBasicsD3';
 

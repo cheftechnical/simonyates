@@ -3,8 +3,8 @@ import * as React from 'react';
 // @ts-ignore
 import MathJax from "mathjax3-react";
 import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../../../styling/Color';
-import {degToRad} from '../../libs/trig';
+import {color} from '../../../../../styling/Color';
+import {degToRad} from '../../../libs/trig';
 import {AxisDirection} from '../AxisDirection';
 
 interface Props {

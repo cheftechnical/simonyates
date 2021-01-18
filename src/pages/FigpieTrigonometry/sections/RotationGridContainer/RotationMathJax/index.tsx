@@ -1,14 +1,17 @@
 import * as React from 'react';
+import {color} from '../../../../../styling/Color';
+import {degToRad} from '../../../libs/trig';
 import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../../../styling/Color';
+import {CubicBezier} from '../../../libs/CubicBezier';
 
 // @ts-ignore
 import MathJax from "mathjax3-react";
-import {degToRad} from '../../libs/trig';
 
 const timeout = 1000;
 
 interface Props {
+	cubicBezier: CubicBezier;
+	theta: number;
 	variable?: 'S' | 'C1' | 'C2' | 'E';
 }
 
@@ -25,61 +28,61 @@ const d = (value: number): string => {
 
 export default function RotationMathJax(props: Props) {
 	const classes = useStyles();
-
-	const {variable} = props;
+	const {cubicBezier, theta, variable} = props;
 
 	const [formula, setFormula] = React.useState<string>();
 
 	const refreshEquation = React.useCallback(() => {
 		// inputs will eventually become properties, but i'm hard-coding now for dev
-		const point = {
-			s: {
-				x: 308,
-				y: 0
-			},
-			c1: {
-				x: 100,
-				y: 25.5
-			},
-			c2: {
-				x: 89.4,
-				y: 51.9
-			},
-			e: {
-				x: 70.7,
-				y: 70.7
-			}
-		};
-		const thetaDeg = 45;
-		const theta = degToRad(thetaDeg);
-		const cosTheta = Math.cos(theta);
-		const sinTheta = Math.sin(theta);
+		// const point = {
+		// 	s: {
+		// 		x: 308,
+		// 		y: 0
+		// 	},
+		// 	c1: {
+		// 		x: 100,
+		// 		y: 25.5
+		// 	},
+		// 	c2: {
+		// 		x: 89.4,
+		// 		y: 51.9
+		// 	},
+		// 	e: {
+		// 		x: 70.7,
+		// 		y: 70.7
+		// 	}
+		// };
 
-		const sXTimesCosTheta = point.s.x * cosTheta;
-		const sXTimesSinTheta = point.s.x * sinTheta;
-		const sYTimesSinTheta = point.s.y * sinTheta;
-		const sYTimesCosTheta = point.s.y * cosTheta;
+		// const thetaDeg = 45;
+		const thetaRad = degToRad(theta);
+		const cosTheta = Math.cos(thetaRad);
+		const sinTheta = Math.sin(thetaRad);
+
+		const sXTimesCosTheta = cubicBezier.s.x * cosTheta;
+		const sXTimesSinTheta = cubicBezier.s.x * sinTheta;
+		const sYTimesSinTheta = cubicBezier.s.y * sinTheta;
+		const sYTimesCosTheta = cubicBezier.s.y * cosTheta;
 		const sX = sXTimesCosTheta - sYTimesSinTheta;
 		const sY = sXTimesSinTheta + sYTimesCosTheta;
 
-		const c1XTimesCosTheta = point.c1.x * cosTheta;
-		const c1XTimesSinTheta = point.c1.x * sinTheta;
-		const c1YTimesSinTheta = point.c1.y * sinTheta;
-		const c1YTimesCosTheta = point.c1.y * cosTheta;
+		const c1XTimesCosTheta = cubicBezier.c1.x * cosTheta;
+		const c1XTimesSinTheta = cubicBezier.c1.x * sinTheta;
+		const c1YTimesSinTheta = cubicBezier.c1.y * sinTheta;
+		const c1YTimesCosTheta = cubicBezier.c1.y * cosTheta;
 		const c1X = c1XTimesCosTheta - c1YTimesSinTheta;
 		const c1Y = c1XTimesSinTheta + c1YTimesCosTheta;
 
-		const c2XTimesCosTheta = point.c2.x * cosTheta;
-		const c2XTimesSinTheta = point.c2.x * sinTheta;
-		const c2YTimesSinTheta = point.c2.y * sinTheta;
-		const c2YTimesCosTheta = point.c2.y * cosTheta;
+		const c2XTimesCosTheta = cubicBezier.c2.x * cosTheta;
+		const c2XTimesSinTheta = cubicBezier.c2.x * sinTheta;
+		const c2YTimesSinTheta = cubicBezier.c2.y * sinTheta;
+		const c2YTimesCosTheta = cubicBezier.c2.y * cosTheta;
 		const c2X = c2XTimesCosTheta - c2YTimesSinTheta;
 		const c2Y = c2XTimesSinTheta + c2YTimesCosTheta;
 
-		const eXTimesCosTheta = point.e.x * cosTheta;
-		const eXTimesSinTheta = point.e.x * sinTheta;
-		const eYTimesSinTheta = point.e.y * sinTheta;
-		const eYTimesCosTheta = point.e.y * cosTheta;
+		const eXTimesCosTheta = cubicBezier.e.x * cosTheta;
+		const eXTimesSinTheta = cubicBezier.e.x * sinTheta;
+		const eYTimesSinTheta = cubicBezier.e.y * sinTheta;
+		const eYTimesCosTheta = cubicBezier.e.y * cosTheta;
 		const eX = eXTimesCosTheta - eYTimesSinTheta;
 		const eY = eXTimesSinTheta + eYTimesCosTheta;
 
@@ -93,13 +96,13 @@ export default function RotationMathJax(props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.s.x)} \times cos(${d(theta)}) - ${d(point.s.y)} sin(${d(theta)}) \\
-						          ${d(point.s.x)} \times sin(${d(theta)}) + ${d(point.s.y)} cos(${d(theta)})
+						          ${d(cubicBezier.s.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.s.y)} sin(${d(thetaRad)}) \\
+						          ${d(cubicBezier.s.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.s.y)} cos(${d(thetaRad)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(point.s.x)} \times ${d(cosTheta)} - ${d(point.s.y)} \times ${d(sinTheta)} \\
-					              ${d(point.s.x)} \times ${d(sinTheta)} + ${d(point.s.y)} \times ${d(cosTheta)} \\
+					              ${d(cubicBezier.s.x)} \times ${d(cosTheta)} - ${d(cubicBezier.s.y)} \times ${d(sinTheta)} \\
+					              ${d(cubicBezier.s.x)} \times ${d(sinTheta)} + ${d(cubicBezier.s.y)} \times ${d(cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -120,13 +123,13 @@ export default function RotationMathJax(props: Props) {
 						        \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.c1.x)} \times cos(${d(theta)}) - ${d(point.c1.y)} sin(${d(theta)}) \\
-						          ${d(point.c1.x)} \times sin(${d(theta)}) + ${d(point.c1.y)} cos(${d(theta)})
+						          ${d(cubicBezier.c1.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.c1.y)} sin(${d(thetaRad)}) \\
+						          ${d(cubicBezier.c1.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.c1.y)} cos(${d(thetaRad)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(point.c1.x)} \times ${d(cosTheta)} - ${d(point.c1.y)} \times ${d(sinTheta)} \\
-					              ${d(point.c1.x)} \times ${d(sinTheta)} + ${d(point.c1.y)} \times ${d(cosTheta)} \\
+					              ${d(cubicBezier.c1.x)} \times ${d(cosTheta)} - ${d(cubicBezier.c1.y)} \times ${d(sinTheta)} \\
+					              ${d(cubicBezier.c1.x)} \times ${d(sinTheta)} + ${d(cubicBezier.c1.y)} \times ${d(cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -147,13 +150,13 @@ export default function RotationMathJax(props: Props) {
 						         \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.c2.x)} \times cos(${d(theta)}) - ${d(point.c2.y)} sin(${d(theta)}) \\
-						          ${d(point.c2.x)} \times sin(${d(theta)}) + ${d(point.c2.y)} cos(${d(theta)})
+						          ${d(cubicBezier.c2.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.c2.y)} sin(${d(thetaRad)}) \\
+						          ${d(cubicBezier.c2.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.c2.y)} cos(${d(thetaRad)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(point.c2.x)} \times ${d(cosTheta)} - ${d(point.c2.y)} \times ${d(sinTheta)} \\
-					              ${d(point.c2.x)} \times ${d(sinTheta)} + ${d(point.c2.y)} \times ${d(cosTheta)} \\
+					              ${d(cubicBezier.c2.x)} \times ${d(cosTheta)} - ${d(cubicBezier.c2.y)} \times ${d(sinTheta)} \\
+					              ${d(cubicBezier.c2.x)} \times ${d(sinTheta)} + ${d(cubicBezier.c2.y)} \times ${d(cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -174,13 +177,13 @@ export default function RotationMathJax(props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(point.e.x)} \times cos(${d(theta)}) - ${d(point.e.y)} sin(${d(theta)}) \\
-						          ${d(point.e.x)} \times sin(${d(theta)}) + ${d(point.e.y)} cos(${d(theta)})
+						          ${d(cubicBezier.e.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.e.y)} sin(${d(thetaRad)}) \\
+						          ${d(cubicBezier.e.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.e.y)} cos(${d(thetaRad)})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(point.e.x)} \times ${d(cosTheta)} - ${d(point.e.y)} \times ${d(sinTheta)} \\
-					              ${d(point.e.x)} \times ${d(sinTheta)} + ${d(point.e.y)} \times ${d(cosTheta)} \\
+					              ${d(cubicBezier.e.x)} \times ${d(cosTheta)} - ${d(cubicBezier.e.y)} \times ${d(sinTheta)} \\
+					              ${d(cubicBezier.e.x)} \times ${d(sinTheta)} + ${d(cubicBezier.e.y)} \times ${d(cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -195,15 +198,15 @@ export default function RotationMathJax(props: Props) {
 					`;
 				default:
 					return String.raw`
-						\theta & = ${thetaDeg}^\circ \\
+						\theta & = ${theta}^\circ \\
 						\\
-						S & = (${point.s.x}, ${point.s.y}) \\
+						S & = (${cubicBezier.s.x}, ${cubicBezier.s.y}) \\
 						\\
-						C_1 & = (${point.c1.x}, ${point.c1.y}) \\
+						C_1 & = (${cubicBezier.c1.x}, ${cubicBezier.c1.y}) \\
 						\\
-						C_2 & = (${point.c2.x}, ${point.c2.y}) \\
+						C_2 & = (${cubicBezier.c2.x}, ${cubicBezier.c2.y}) \\
 						\\
-						E & = (${point.e.x}, ${point.e.y}) \\
+						E & = (${cubicBezier.e.x}, ${cubicBezier.e.y}) \\
 					`;
 			}
 		})();
@@ -215,7 +218,8 @@ export default function RotationMathJax(props: Props) {
 			\end{split}
 			\end{equation}
 		$$`);
-	}, [variable]);
+
+	}, [cubicBezier, theta, variable]);
 
 	const renderedFormula = React.useMemo(() => {
 		return (
