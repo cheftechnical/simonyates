@@ -194,4 +194,14 @@ export class BaseVisualization implements BaseVisualizationInterface {
 			c2,
 		};
 	}
+
+	labelOffset(coordinate: Coordinate): Coordinate {
+		const axisPadding = 8;
+		const labelHeight = 21;
+
+		return {
+			x: coordinate.x + axisPadding,
+			y: coordinate.y + labelHeight,
+		}
+	}
 }

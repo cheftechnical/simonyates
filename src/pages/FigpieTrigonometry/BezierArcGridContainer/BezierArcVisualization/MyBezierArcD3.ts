@@ -128,8 +128,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			.attr('stroke-width', pointWidth);
 		this.sText = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', this.textOffset(this.point.s).x)
-			.attr('y', this.textOffset(this.point.s).y)
+			.attr('x', this.labelOffset(this.point.s).x)
+			.attr('y', this.labelOffset(this.point.s).y)
 			.attr('fill', this.color.pointCalculatedText)
 			.attr('font-size', '12px')
 			.text('S');
@@ -145,8 +145,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			.attr('stroke-width', pointWidth);
 		this.eText = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', this.textOffset(this.point.e).x)
-			.attr('y', this.textOffset(this.point.e).y)
+			.attr('x', this.labelOffset(this.point.e).x)
+			.attr('y', this.labelOffset(this.point.e).y)
 			.attr('fill', this.color.pointInteractiveText)
 			.attr('font-size', '12px')
 			.text('E');
@@ -161,8 +161,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			.attr('stroke', this.color.pointCalculatedCircle);
 		this.c1Text = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', this.textOffset(this.point.c1).x)
-			.attr('y', this.textOffset(this.point.c1).y)
+			.attr('x', this.labelOffset(this.point.c1).x)
+			.attr('y', this.labelOffset(this.point.c1).y)
 			.attr('fill', this.color.pointCalculatedText)
 			.attr('font-size', '12px')
 			.text('C1');
@@ -177,8 +177,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			.attr('stroke', this.color.pointCalculatedCircle);
 		this.c2Text = this.svg.append('text')
 			.attr('transform', transform)
-			.attr('x', this.textOffset(this.point.c2).x)
-			.attr('y', this.textOffset(this.point.c2).y)
+			.attr('x', this.labelOffset(this.point.c2).x)
+			.attr('y', this.labelOffset(this.point.c2).y)
 			.attr('fill', this.color.pointCalculatedText)
 			.attr('font-size', '12px')
 			.text('C2');
@@ -321,13 +321,6 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 			.attr('stroke', color.grey['200']);
 	}
 
-	textOffset(coordinate: Coordinate): Coordinate {
-		return {
-			x: coordinate.x + this.axisPadding,
-			y: coordinate.y + this.labelHeight,
-		}
-	}
-
 	updateChart(endAngle: number) {
 		this.endAngle = endAngle;
 
@@ -369,8 +362,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 				[this.point.c2.x, this.point.c2.y],
 			]));
 		this.c2Text
-			.attr('x', this.textOffset(this.point.c2).x)
-			.attr('y', this.textOffset(this.point.c2).y)
+			.attr('x', this.labelOffset(this.point.c2).x)
+			.attr('y', this.labelOffset(this.point.c2).y)
 			.text(`C2 = (${d(this.point.c2.x)}, ${d(this.point.c2.y)})`);
 
 		// Control Point 1
@@ -383,8 +376,8 @@ export class MyBezierArcD3 extends BaseVisualization implements Visualization, M
 				[this.point.c1.x, this.point.c1.y],
 			]));
 		this.c1Text
-			.attr('x', this.textOffset(this.point.c1).x)
-			.attr('y', this.textOffset(this.point.c1).y)
+			.attr('x', this.labelOffset(this.point.c1).x)
+			.attr('y', this.labelOffset(this.point.c1).y)
 			.text(`C1 = (${d(this.point.c1.x)}, ${d(this.point.c1.y)})`);
 
 		// Start

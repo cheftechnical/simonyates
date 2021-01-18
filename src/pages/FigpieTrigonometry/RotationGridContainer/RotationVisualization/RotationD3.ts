@@ -16,6 +16,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 		draggableOutlineStarted: color.lime['500'],
 
 		nodeMutable: color.blue['500'],
+		nodeLabel: color.grey['900'],
 
 		vectorLine: color.grey['400'],
 		magenta: 'magenta',
@@ -26,16 +27,39 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 	elementEdge0E: any;
 	elementEdgeEC2: any;
 	elementEdgeSC1: any;
+	elementEdgeSE: any;
 	elementNodeC1: any;
+	elementNodeC1Label: any;
 	elementNodeC2: any;
+	elementNodeC2Label: any;
 	elementNodeS: any;
+	elementNodeSLabel: any;
 	elementNodeE: any;
+	elementNodeELabel: any;
 	draggableNode: any;
 
 	startAngle = 0;
-	endAngle = 0;
+	// endAngle = 0;
 
 	point = {
+		s: {
+			x: 0,
+			y: 0,
+		},
+		c1: {
+			x: 0,
+			y: 0,
+		},
+		c2: {
+			x: 0,
+			y: 0,
+		},
+		e: {
+			x: 0,
+			y: 0,
+		},
+	};
+	pointUpdated = {
 		s: {
 			x: 0,
 			y: 0,
@@ -136,6 +160,14 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			.attr('stroke-width', 2)
 			.style('cursor', 'pointer');
 
+		this.elementNodeSLabel = this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', this.labelOffset(this.point.s).x)
+			.attr('y', this.labelOffset(this.point.s).y)
+			.attr('fill', this.color.nodeLabel)
+			.attr('font-size', '12px')
+			.text('S');
+
 		// (0-E)
 		this.elementEdge0E = this.svg.append('path')
 			.attr('transform', transform)
@@ -144,6 +176,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 				[this.point.e.x, this.point.e.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+
 		this.elementNodeE = this.svg.append('circle')
 			.attr('transform', transform)
 			.attr('cx', this.point.e.x)
@@ -153,6 +186,14 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			.attr('stroke', this.color.vectorLine)
 			.attr('stroke-width', 2);
 
+		this.elementNodeELabel = this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', this.labelOffset(this.point.e).x)
+			.attr('y', this.labelOffset(this.point.e).y)
+			.attr('fill', this.color.nodeLabel)
+			.attr('font-size', '12px')
+			.text('E');
+
 		// S-C1
 		this.elementEdgeSC1 = this.svg.append('path')
 			.attr('transform', transform)
@@ -161,6 +202,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 				[this.point.c1.x, this.point.c1.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+
 		this.elementNodeC1 = this.svg.append('circle')
 			.attr('transform', transform)
 			.attr('cx', this.point.c1.x)
@@ -169,6 +211,14 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			.attr('fill', 'none')
 			.attr('stroke', this.color.vectorLine)
 			.attr('stroke-width', 1);
+
+		this.elementNodeC1Label = this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', this.labelOffset(this.point.c1).x)
+			.attr('y', this.labelOffset(this.point.c1).y)
+			.attr('fill', this.color.nodeLabel)
+			.attr('font-size', '12px')
+			.text('C1');
 
 
 		// E-C2
@@ -179,6 +229,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 				[this.point.c2.x, this.point.c2.y]
 			]))
 			.attr('stroke', this.color.vectorLine);
+
 		this.elementNodeC2 = this.svg.append('circle')
 			.attr('transform', transform)
 			.attr('cx', this.point.c2.x)
@@ -188,8 +239,16 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 			.attr('stroke', this.color.vectorLine)
 			.attr('stroke-width', 1);
 
+		this.elementNodeC2Label = this.svg.append('text')
+			.attr('transform', transform)
+			.attr('x', this.labelOffset(this.point.c2).x)
+			.attr('y', this.labelOffset(this.point.c2).y)
+			.attr('fill', this.color.nodeLabel)
+			.attr('font-size', '12px')
+			.text('C1');
+
 		// arc
-		this.svg.append('path')
+		this.elementEdgeSE = this.svg.append('path')
 			.attr('transform', transform)
 			.attr('cx', 0)
 			.attr('cy', 0)
@@ -307,16 +366,20 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 	 */
 	resetDragTouchPoint() {
 		this.draggableNode
-			.attr('cx', this.radius)
-			.attr('cy', 0)
+			.attr('cx', this.pointUpdated.s.x)
+			.attr('cy', this.pointUpdated.s.y)
 			.attr('stroke', this.color.draggableOutlineInactive);
 	}
 
 	updateChart(endAngle: number) {
 		console.log('endAngle', endAngle);
+		// this.endAngle = endAngle;
+
+		const d = (value: number) => (value).toFixed(1);
 
 		const theta = degToRad(endAngle);
-		const updatedPoint = {
+
+		this.pointUpdated = {
 			s: {
 				x: this.point.s.x * Math.cos(theta) - this.point.s.y * Math.sin(theta),
 				y: this.point.s.x * Math.sin(theta) + this.point.s.y * Math.cos(theta),
@@ -336,43 +399,72 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 		};
 
 		this.elementNodeS
-			.attr('cx', updatedPoint.s.x)
-			.attr('cy', updatedPoint.s.y);
+			.attr('cx', this.pointUpdated.s.x)
+			.attr('cy', this.pointUpdated.s.y);
+
+		this.elementNodeSLabel
+			.attr('x', this.labelOffset(this.pointUpdated.s).x)
+			.attr('y', this.labelOffset(this.pointUpdated.s).y)
+			.text(`S = (${d(this.pointUpdated.s.x)}, ${d(this.pointUpdated.s.y)}`);
 
 		this.elementEdge0S
 			.attr('d', d3.line()([
 				[0, 0],
-				[updatedPoint.s.x, updatedPoint.s.y],
+				[this.pointUpdated.s.x, this.pointUpdated.s.y],
 			]));
 
 		this.elementNodeC1
-			.attr('cx', updatedPoint.c1.x)
-			.attr('cy', updatedPoint.c1.y);
+			.attr('cx', this.pointUpdated.c1.x)
+			.attr('cy', this.pointUpdated.c1.y);
+
+		this.elementNodeC1Label
+			.attr('x', this.labelOffset(this.pointUpdated.c1).x)
+			.attr('y', this.labelOffset(this.pointUpdated.c1).y)
+			.text(`C1 = (${d(this.pointUpdated.c1.x)}, ${d(this.pointUpdated.c1.y)}`);
 
 		this.elementEdgeSC1
 			.attr('d', d3.line()([
-				[updatedPoint.s.x, updatedPoint.s.y],
-				[updatedPoint.c1.x, updatedPoint.c1.y],
+				[this.pointUpdated.s.x, this.pointUpdated.s.y],
+				[this.pointUpdated.c1.x, this.pointUpdated.c1.y],
 			]));
 
 		this.elementNodeC2
-			.attr('cx', updatedPoint.c2.x)
-			.attr('cy', updatedPoint.c2.y);
+			.attr('cx', this.pointUpdated.c2.x)
+			.attr('cy', this.pointUpdated.c2.y);
+
+		this.elementNodeC2Label
+			.attr('x', this.labelOffset(this.pointUpdated.c2).x)
+			.attr('y', this.labelOffset(this.pointUpdated.c2).y)
+			.text(`C2 = (${d(this.pointUpdated.c2.x)}, ${d(this.pointUpdated.c2.y)}`);
 
 		this.elementEdgeEC2
 			.attr('d', d3.line()([
-				[updatedPoint.e.x, updatedPoint.e.y],
-				[updatedPoint.c2.x, updatedPoint.c2.y],
+				[this.pointUpdated.e.x, this.pointUpdated.e.y],
+				[this.pointUpdated.c2.x, this.pointUpdated.c2.y],
 			]));
 
 		this.elementNodeE
-			.attr('cx', updatedPoint.e.x)
-			.attr('cy', updatedPoint.e.y);
+			.attr('cx', this.pointUpdated.e.x)
+			.attr('cy', this.pointUpdated.e.y);
+
+		this.elementNodeELabel
+			.attr('x', this.labelOffset(this.pointUpdated.e).x)
+			.attr('y', this.labelOffset(this.pointUpdated.e).y)
+			.text(`E = (${d(this.pointUpdated.e.x)}, ${d(this.pointUpdated.e.y)}`);
 
 		this.elementEdge0E
 			.attr('d', d3.line()([
 				[0, 0],
-				[updatedPoint.e.x, updatedPoint.e.y]
+				[this.pointUpdated.e.x, this.pointUpdated.e.y]
 			]));
+
+		// arc
+		this.elementEdgeSE
+			.attr('d', d3.arc()
+				.innerRadius(this.radius)
+				.outerRadius(this.radius)
+				.startAngle(degToRad(90 + endAngle))
+				.endAngle(degToRad(180 + endAngle))
+		)
 	}
 }
