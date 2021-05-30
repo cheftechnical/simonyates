@@ -19,30 +19,30 @@ import UnchartedSoftware from './pages/WorkAt/UnchartedSoftware';
 import Work from './pages/Work';
 
 function App() {
-    return (
-        <DefaultTheme>
-            <Router>
-                <ScrollToTop/>
-                <Switch>
-                    <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
-                    <Route exact path="/work/rbc" component={Rbc}/>
-                    <Route exact path="/work/mayo-clinic" component={MayoClinic}/>
-                    <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
-                    <Route exact path="/work/infomart" component={Infomart}/>
-                    <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
-                    <Route exact path="/figpie/trigonometry" component={FigpieTrigonometry}/>
-                    <Route exact path="/figpie" component={Figpie}/>
-                    <Route exact path="/work" component={Work}/>
-                    <Route exact path="/legal" component={Legal}/>
-                    <Route exact path="/featured" component={Featured}/>
-                    <Route exact path="/contact" component={Contact}/>
-                    <Route exact path="/about" component={About}/>
-                    <Route exact path="/" component={Home}/>
-                    <Route component={NoMatch}/>
-                </Switch>
-            </Router>
-        </DefaultTheme>
-    );
+  return (
+    <DefaultTheme>
+      <Router>
+        <ScrollToTop/>
+        <Switch>
+          <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
+          <Route exact path="/work/rbc" component={Rbc}/>
+          <Route exact path="/work/mayo-clinic" component={MayoClinic}/>
+          <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
+          <Route exact path="/work/infomart" component={Infomart}/>
+          <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
+          <Route exact path="/figpie/trigonometry" component={FigpieTrigonometry}/>
+          <Route exact path="/figpie" component={Figpie}/>
+          <Route exact path="/work" component={Work}/>
+          <Route exact path="/legal" component={Legal}/>
+          <Route exact path="/featured" component={Featured}/>
+          <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/" component={Home}/>
+          <Route component={NoMatch}/>
+        </Switch>
+      </Router>
+    </DefaultTheme>
+  );
 }
 
 export default App;
