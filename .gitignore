@@ -7,3 +7,6 @@
 
 # Production files
 build/
+
+# Development files
+yarn-error.log
