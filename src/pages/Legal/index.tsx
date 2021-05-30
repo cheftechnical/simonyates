@@ -11,7 +11,7 @@ import MyContainer from '../../styling/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer';
 
 export default function Legal() {
-	const [sections, setSections] = React.useState();
+	const [sections, setSections] = React.useState<SectionItem[]>();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {
 		setSections(newValue);

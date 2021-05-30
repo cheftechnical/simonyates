@@ -4,7 +4,7 @@ This is the persona website of Simon Yates (aka @ChefTechnical).
 
 I chose to open-source the website for anyone curious to see how I built it.
 
-The website was built using React + Typescript, is hosted on an AWS S3 bucket, and is proxied through Cloudflare; design follows the Google Material design system. Although most of the design elements rely on components from the React Material-UI framework, I had to write my own `Typography` component as the one bundled with the framework was far too limiting.
+The website was built with React + Typescript, is hosted on an AWS S3 bucket, and is proxied through Cloudflare; design follows the Google Material design system. Although most of the design elements rely on components from the React Material-UI framework, I had to write my own `Typography` component as the one bundled with the framework was far too limiting.
 
 Component prototyping is handled with Storybook, and is divided into three parts: 
 
@@ -45,3 +45,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Maintenance
+
+### Upgrading Storybook
+
+```bash
+yarn upgrade-interactive --latest
+```

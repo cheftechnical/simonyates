@@ -6,7 +6,7 @@ import WorkAtTemplate from '../components/WorkAtTemplate';
 import Content from './Content';
 
 export default function GenworthCanada() {
-	const [sections, setSections] = React.useState();
+	const [sections, setSections] = React.useState<SectionItem[]>();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {
 		setSections(newValue);

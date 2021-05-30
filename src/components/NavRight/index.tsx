@@ -10,7 +10,7 @@ type SectionItem = {
 }
 
 interface Props {
-	sections: SectionItem[];
+	sections?: SectionItem[];
 }
 
 const useStyles = makeStyles((theme) => ({

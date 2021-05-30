@@ -44,25 +44,26 @@ export default function Photos() {
 
 			{/*	Mobile */}
 			<Hidden mdUp>
-				<Carousel
-					autoPlay={false}
-					animation="slide"
-					activeIndicatorProps={{className: classes.carouselActive, style: {}}}
-					indicatorProps={{className: classes.carouselActive, style: {}}}
-				>
-					<div>
-						<Image alt="Jean'is Joplin" src="/images/about/photo-gallery/jean.png"/>
-					</div>
-					<div>
-						<Image alt="Mexico" src="/images/about/photo-gallery/mexico-1.png"/>
-					</div>
-					<div>
-						<Image alt="Mexico" src="/images/about/photo-gallery/mexico-2.png"/>
-					</div>
-					<div>
-						<Image alt="Mexico" src="/images/about/photo-gallery/mexico-3.png"/>
-					</div>
-				</Carousel>
+				{/* @todo this needs to be fixed */}
+				{/*<Carousel*/}
+				{/*	autoPlay={false}*/}
+				{/*	animation="slide"*/}
+				{/*	activeIndicatorProps={{className: classes.carouselActive, style: {}}}*/}
+				{/*	indicatorProps={{className: classes.carouselActive, style: {}}}*/}
+				{/*>*/}
+				{/*	<div>*/}
+				{/*		<Image alt="Jean'is Joplin" src="/images/about/photo-gallery/jean.png"/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<Image alt="Mexico" src="/images/about/photo-gallery/mexico-1.png"/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<Image alt="Mexico" src="/images/about/photo-gallery/mexico-2.png"/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<Image alt="Mexico" src="/images/about/photo-gallery/mexico-3.png"/>*/}
+				{/*	</div>*/}
+				{/*</Carousel>*/}
 			</Hidden>
 		</div>
 	);

@@ -14,7 +14,7 @@ interface Props {
 	content: React.ReactElement;
 	employer: string;
 	logo: React.ReactElement;
-	sections: SectionItem[];
+	sections?: SectionItem[];
 	role: React.ReactElement | string;
 	when: string;
 	where: string;

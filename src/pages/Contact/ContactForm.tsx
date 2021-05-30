@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
 export default function ContactForm(props: Props) {
 	const classes = useStyles();
 
+	/* @todo This needs to be fixed */
+	return (
+		<div>[Fix Me]</div>
+	)
+/*
 	const {onSubmit} = props;
 	const {control, handleSubmit, errors} = useForm<Message>();
 
@@ -96,4 +101,5 @@ export default function ContactForm(props: Props) {
 			</form>
 		</div>
 	);
+ */
 };

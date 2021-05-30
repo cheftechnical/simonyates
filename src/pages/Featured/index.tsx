@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Featured() {
 	const classes = useStyles();
-	const [sections, setSections] = React.useState();
+	const [sections, setSections] = React.useState<SectionItem[]>();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {
 		setSections(newValue);

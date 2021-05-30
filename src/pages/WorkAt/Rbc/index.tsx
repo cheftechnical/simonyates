@@ -6,7 +6,7 @@ import Content from './Content';
 import WorkAtTemplate from '../components/WorkAtTemplate';
 
 export default function Rbc() {
-	const [sections, setSections] = React.useState();
+	const [sections, setSections] = React.useState<SectionItem[]>();
 
 	const handleChange = React.useCallback((newValue: SectionItem[]) => {
 		setSections(newValue);

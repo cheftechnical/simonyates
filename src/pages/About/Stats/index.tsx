@@ -51,25 +51,26 @@ export default function Stats() {
 
 			{/*	Mobile */}
 			<Hidden mdUp>
-				<Carousel
-					autoPlay={false}
-					animation="slide"
-					activeIndicatorProps={{className: classes.carouselActive, style: {}}}
-					indicatorProps={{className: classes.carouselActive, style: {}}}
-				>
-					<div>
-						<StatsItem caption="years programming" value={25}/>
-					</div>
-					<div>
-						<StatsItem caption="when I started programming" value={10}/>
-					</div>
-					<div>
-						<StatsItem caption="software projects completed" value={200}/>
-					</div>
-					<div>
-						<StatsItem caption="awesome girlfriend" value={1}/>
-					</div>
-				</Carousel>
+				{/* @todo This needs to be fixed */}
+				{/*<Carousel*/}
+				{/*	autoPlay={false}*/}
+				{/*	animation="slide"*/}
+				{/*	activeIndicatorProps={{className: classes.carouselActive, style: {}}}*/}
+				{/*	indicatorProps={{className: classes.carouselActive, style: {}}}*/}
+				{/*>*/}
+				{/*	<div>*/}
+				{/*		<StatsItem caption="years programming" value={25}/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<StatsItem caption="when I started programming" value={10}/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<StatsItem caption="software projects completed" value={200}/>*/}
+				{/*	</div>*/}
+				{/*	<div>*/}
+				{/*		<StatsItem caption="awesome girlfriend" value={1}/>*/}
+				{/*	</div>*/}
+				{/*</Carousel>*/}
 			</Hidden>
 		</div>
 	);
