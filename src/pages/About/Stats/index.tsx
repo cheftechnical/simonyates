@@ -14,6 +14,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+interface Stat {
+  caption: string;
+  value: number;
+}
+
+const stat: Stat[] = [
+  {
+    caption: 'years programming',
+    value: 25,
+  },
+  {
+    caption: 'when I started programming',
+    value: 10,
+  },
+  {
+    caption: 'software projects completed',
+    value: 200,
+  },
+  {
+    caption: 'figma plugin',
+    value: 1,
+  }
+];
+
 export default function Stats() {
   const classes = useStyles();
 
@@ -24,16 +48,16 @@ export default function Stats() {
         <MyContainer>
           <Grid container spacing={10}>
             <Grid item xs={3}>
-              <StatsItem caption="years programming" value={25}/>
+              <StatsItem {...stat[0]}/>
             </Grid>
             <Grid item xs={3}>
-              <StatsItem caption="when I started programming" value={10}/>
+              <StatsItem {...stat[1]}/>
             </Grid>
             <Grid item xs={3}>
-              <StatsItem caption="software projects completed" value={200}/>
+              <StatsItem {...stat[2]}/>
             </Grid>
             <Grid item xs={3}>
-              <StatsItem caption="figma plugin" value={1}/>
+              <StatsItem {...stat[3]}/>
             </Grid>
           </Grid>
         </MyContainer>
@@ -43,16 +67,16 @@ export default function Stats() {
       <Hidden mdUp>
         <Carousel animation="slide" autoPlay={false}>
           <div>
-            <StatsItem caption="years programming" value={25}/>
+            <StatsItem {...stat[0]}/>
           </div>
           <div>
-            <StatsItem caption="when I started programming" value={10}/>
+            <StatsItem {...stat[1]}/>
           </div>
           <div>
-            <StatsItem caption="software projects completed" value={200}/>
+            <StatsItem {...stat[2]}/>
           </div>
           <div>
-            <StatsItem caption="awesome girlfriend" value={1}/>
+            <StatsItem {...stat[3]}/>
           </div>
         </Carousel>
       </Hidden>
