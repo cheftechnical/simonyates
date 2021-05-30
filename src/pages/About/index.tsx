@@ -6,12 +6,12 @@ import LifeAsAMaker from './LifeAsAMaker';
 import PhotoGallery from './PhotoGallery';
 
 export default function About() {
-    return (
-        <DefaultLayout title="About" top="about">
-            <Hero/>
-            <Stats/>
-            <LifeAsAMaker/>
-            <PhotoGallery/>
-        </DefaultLayout>
-    );
+  return (
+    <DefaultLayout title="About" top="about">
+      <Hero/>
+      <Stats/>
+      <LifeAsAMaker/>
+      <PhotoGallery/>
+    </DefaultLayout>
+  );
 };

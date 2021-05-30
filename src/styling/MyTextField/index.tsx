@@ -9,6 +9,12 @@ interface Props {
 
 }
 
+/**
+ * @deprecated use MyTextField2
+ *
+ * @param props
+ * @constructor
+ */
 export default function MyTextField(props: Props) {
 	const {error, InputProps} = props;
 

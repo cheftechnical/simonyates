@@ -51,7 +51,7 @@ export default function Contact() {
 				<MyGridContainer>
 					<Grid item md={6} xs={12}>
 						<Typography className={classes.body} group="primary" variant="body" weight="regular">
-							I&rsquo;m always open to make new connections and chat about software development.
+							I&rsquo;m always open to make new connections and chat about software&nbsp;development.
 						</Typography>
 
 						<ContactForm onSubmit={handleSubmit}/>

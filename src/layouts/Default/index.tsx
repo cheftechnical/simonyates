@@ -17,62 +17,62 @@ const fullHeightOpticalOffset = 32;
 
 
 interface Props {
-    children: any;
-    fullHeight?: boolean;
-    title?: string;
-    top?: string;
+  children: any;
+  fullHeight?: boolean;
+  title?: string;
+  top?: string;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-    root: {
-        height: '100%'
-    },
-    main: {
-        marginTop: theme.spacing(162/8),
-    },
-    fullHeight: {
-        marginTop: rem( fullHeightOpticalOffset),
-        height: '100%'
-    },
-    footer: {
-        marginTop: theme.spacing(88 / 8),
-    },
-    footerFullHeight: {
-        marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
-    },
+  root: {
+    height: '100%'
+  },
+  main: {
+    marginTop: theme.spacing(162 / 8),
+  },
+  fullHeight: {
+    marginTop: rem(fullHeightOpticalOffset),
+    height: '100%'
+  },
+  footer: {
+    marginTop: theme.spacing(88 / 8),
+  },
+  footerFullHeight: {
+    marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
+  },
 
 }));
 
 export default function DefaultLayout(props: Props) {
-    const classes = useStyles();
-    const {children, fullHeight, title, top} = props;
+  const classes = useStyles();
+  const {children, fullHeight, title, top} = props;
 
-    const mainClass = (fullHeight)
-        ? `${classes.main} ${classes.fullHeight}`
-        : classes.main;
+  const mainClass = (fullHeight)
+    ? `${classes.main} ${classes.fullHeight}`
+    : classes.main;
 
-    const footerClass = (fullHeight)
-        ? `${classes.footer} ${classes.footerFullHeight}`
-        : classes.footer;
+  const footerClass = (fullHeight)
+    ? `${classes.footer} ${classes.footerFullHeight}`
+    : classes.footer;
 
-    return (
-        <div className={classes.root}>
-            <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
-                <title>{title}</title>
-            </Helmet>
+  return (
+    <div className={classes.root}>
+      <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
+        <title>{title}</title>
+      </Helmet>
 
-            <header>
-                <NavTop selected={top} />
-            </header>
+      <header>
+        <NavTop selected={top}/>
+      </header>
 
-            <main className={mainClass}>
-                {children}
-            </main>
+      <main className={mainClass}>
+        {children}
+      </main>
 
-            <footer className={footerClass}>
-                <Footer/>
-            </footer>
+      <footer className={footerClass}>
+        <Footer/>
+      </footer>
 
-        </div>
-    );
+    </div>
+  );
 };
