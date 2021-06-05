@@ -43,7 +43,7 @@ export default function FeaturedPublication(props: Props) {
 
 	return (
 		<div className={rootClass}>
-			<Typography className={classes.name} group="primary" variant="h4" weight="medium">
+			<Typography className={classes.name} component="h3" group="primary" variant="h4" weight="medium">
 				{name}
 			</Typography>
 

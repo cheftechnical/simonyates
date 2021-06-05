@@ -17,6 +17,6 @@ export default function WorkAtRole(props: Props) {
 	const {children} = props;
 
 	return (
-		<Typography className={classes.role} group="primary" variant="h4" weight="medium">{children}</Typography>
+		<Typography className={classes.role} component="p" group="primary" variant="h4" weight="medium">{children}</Typography>
 	);
 };

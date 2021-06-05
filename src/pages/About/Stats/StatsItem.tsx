@@ -30,8 +30,8 @@ export default function StatsItem(props: Props) {
 
     return (
         <div>
-            <Typography className={classes.value} group="primary" variant="h2" weight="regular">{value}</Typography>
-            <Typography className={classes.caption} group="primary" variant="body" weight="regular">{caption}</Typography>
+            <Typography className={classes.value} component="p" group="primary" variant="h2" weight="regular">{value}</Typography>
+            <Typography className={classes.caption} component="p" group="primary" variant="body" weight="regular">{caption}</Typography>
         </div>
     );
 };

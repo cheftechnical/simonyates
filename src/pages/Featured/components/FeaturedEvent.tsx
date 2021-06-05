@@ -37,7 +37,7 @@ export default function FeaturedEvent(props: Props) {
 
 	return (
 		<div className={rootClass}>
-			<Typography group="primary" variant="h4" weight="medium">
+			<Typography group="primary" component="h3" variant="h4" weight="medium">
 				{title}
 			</Typography>
 

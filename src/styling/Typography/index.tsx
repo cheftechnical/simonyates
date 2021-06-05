@@ -11,6 +11,11 @@ export enum Groups {
 export interface Props {
 	children?: any | any[] | undefined;
 	className?: string;
+
+	/**
+	 * Specifies which component to use, if omitted it will use the variant
+	 */
+	component?: string;
 	group: 'primary' | 'secondary' | undefined;
 	next?: boolean;
 	variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'subtitle' | 'caption' | undefined;
@@ -382,7 +387,7 @@ interface ClassMap {
 
 export default function Typography(props: Props) {
 	const classes = useStyles();
-	const {children, className, group, next, variant, weight} = props;
+	const {children, className, component, group, next, variant, weight} = props;
 
 	const result = React.useMemo(() => {
 		const classMap: ClassMap = {
@@ -492,7 +497,9 @@ export default function Typography(props: Props) {
 			? `${baseClass} ${className}`
 			: baseClass;
 
-		switch (variant) {
+		const lookup = (component) ? component : variant;
+
+		switch (lookup) {
 			case 'h1':
 				return <h1 className={thisClassName}>{children}</h1>
 			case 'h2':

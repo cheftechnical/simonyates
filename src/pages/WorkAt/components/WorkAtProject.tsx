@@ -37,7 +37,7 @@ export default function WorkAtProject(props: Props) {
 
     return (
         <div className={className}>
-            <Typography className={classes.nameAndWhen} group="primary" variant="h4" weight="semibold">{name}{optionalWhen}</Typography>
+            <Typography className={classes.nameAndWhen} component="h3" group="primary" variant="h4" weight="semibold">{name}{optionalWhen}</Typography>
             <div>{children}</div>
         </div>
     );

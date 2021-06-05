@@ -114,7 +114,7 @@ export default function LifeAsAMaker() {
             <MyGridContainer>
                 <Grid item md={6} xs={false}/>
                 <Grid item md={6} xs={12}>
-                    <Typography className={classes.h1} group="primary" variant="h1" weight="regular">
+                    <Typography className={classes.h1} component="h2" group="primary" variant="h1" weight="regular">
                         Life as a Maker
                     </Typography>
                 </Grid>

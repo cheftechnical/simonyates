@@ -39,8 +39,8 @@ export default function Hero() {
         <Grid item md={7} xs={12}>
           <Box display="flex" alignItems="flex-end" css={{height: '100%'}}>
             <Box>
-              <Typography className={typographyClassName} group="primary" variant="h3" weight="regular">
-                Simon Yates,<br/>
+              <Typography className={typographyClassName} component="h1" group="primary" variant="h3" weight="regular">
+                Simon Yates, <br/>
                 <strong>Programmer</strong> from Toronto
               </Typography>
             </Box>

@@ -19,7 +19,7 @@ export default function WorkAtSectionTitle(props: Props) {
 
 	return (
 		<div className={classes.root}>
-			<Typography className={classes.root} group="primary" variant="h3" weight="regular">
+			<Typography className={classes.root} component="h2" group="primary" variant="h3" weight="regular">
 				{children}
 			</Typography>
 		</div>

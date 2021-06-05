@@ -4,7 +4,7 @@ import {Hidden} from '@material-ui/core';
 
 export default function Hero() {
 	return (
-		<Typography group="primary" variant="h2" weight="regular">
+		<Typography component="h1" group="primary" variant="h2" weight="regular">
 			<Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
 				Here is a glimpse of my life,
 				mostly as a&nbsp;programmer.
