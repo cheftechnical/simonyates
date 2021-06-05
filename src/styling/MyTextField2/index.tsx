@@ -7,6 +7,8 @@ import {InputProps as StandardInputProps} from '@material-ui/core/Input/Input';
 interface Props {
   defaultValue?: any;
 
+  disabled?: boolean;
+
   /**
    * When true, the component will show that it has an error
    */
@@ -28,6 +30,11 @@ interface Props {
   name: string;
 
   /**
+   * Label of the component
+   */
+  label?: string;
+
+  /**
    * Callback raised when the component changes
    *
    * @param newValue
@@ -44,6 +51,8 @@ interface Props {
    */
   placeholder?: string;
 
+  type?: 'number';
+
   /**
    * Value of the component
    */
@@ -52,7 +61,7 @@ interface Props {
 
 // REMINDER: the tpe of forwardRef is the REVERSE order that they're listed in the callback arguments?!!!
 export const MyTextField2 = React.forwardRef<HTMLInputElement, Props>((props: Props, ref: ForwardedRef<HTMLInputElement>) => {
-  const {defaultValue, error, helperText, multiline, name, onChange, placeholder, rows, value} = props;
+  const {defaultValue, disabled, error, helperText, label, multiline, name, onChange, placeholder, rows, type, value} = props;
 
   if (error) {
     return (
@@ -60,13 +69,16 @@ export const MyTextField2 = React.forwardRef<HTMLInputElement, Props>((props: Pr
         error
         fullWidth
         defaultValue={defaultValue}
+        disabled={disabled}
         helperText={helperText}
+        label={label}
         multiline={multiline}
         name={name}
         ref={ref}
         onChange={onChange}
         placeholder={placeholder}
         rows={rows}
+        type={type}
         value={value}
         InputProps={{
           // ...InputProps,
@@ -80,13 +92,16 @@ export const MyTextField2 = React.forwardRef<HTMLInputElement, Props>((props: Pr
     <TextField
       fullWidth
       defaultValue={defaultValue}
+      disabled={disabled}
       helperText={helperText}
+      label={label}
       multiline={multiline}
       name={name}
       ref={ref}
       onChange={onChange}
       placeholder={placeholder}
       rows={rows}
+      type={type}
       value={value}
     />
   )

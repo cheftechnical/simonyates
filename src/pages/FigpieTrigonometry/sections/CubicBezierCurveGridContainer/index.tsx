@@ -2,27 +2,27 @@ import * as React from 'react';
 import MyGridContainer from '../../../../styling/MyGridContainer';
 import {Grid} from '@material-ui/core';
 import CubicBezierCurveVisualization from './CubicBezierCurveVisualization';
-import BezierArcMathJax from './CubicBezierCurveMathJax';
-import MyTextField from '../../../../styling/MyTextField';
+import {MyTextField2} from '../../../../styling/MyTextField2';
+import {BezierArcMathJax} from './CubicBezierCurveMathJax';
 
 const startAngle = 360;
 
-export default function BezierArcGridContainer() {
+export const BezierArcGridContainer = React.memo(function () {
 	const [radius, setRadius] = React.useState<number>(100.0);
 	const [endAngle, setEndAngle] = React.useState<number>(315.0)
 
-	const handleBezierArcVisualizationChange = React.useCallback((newEndAngle: number, newRadius: number) => {
+	const handleBezierArcVisualizationChange = ((newEndAngle: number, newRadius: number) => {
 		setEndAngle(newEndAngle);
 		setRadius(newRadius);
-	}, []);
+	});
 
-	const handleEndAngleChange = React.useCallback((event) => {
+	const handleEndAngleChange = ((event: any) => {
 		setEndAngle(event.target.value);
-	}, []);
+	});
 
-	const handleRadiusChange = React.useCallback((event) => {
+	const handleRadiusChange = ((event: any) => {
 		setRadius(event.target.value);
-	}, []);
+	});
 
 	return (
 		<div>
@@ -35,20 +35,22 @@ export default function BezierArcGridContainer() {
 				<Grid item xs={6}>
 					<MyGridContainer>
 						<Grid item xs={6}>
-							<MyTextField
+							<MyTextField2
 								disabled
 								label="Radius"
+								name="radius"
 								onChange={handleRadiusChange}
 								type="number"
-								value={radius}
+								value={radius.toString()}
 							/>
 						</Grid>
 						<Grid item xs={6}>
-							<MyTextField
+							<MyTextField2
 								label="End Angle"
+								name="endAngle"
 								onChange={handleEndAngleChange}
 								type="number"
-								value={endAngle}
+								value={endAngle.toString()}
 							/>
 						</Grid>
 					</MyGridContainer>
@@ -96,4 +98,4 @@ export default function BezierArcGridContainer() {
 			</MyGridContainer>
 		</div>
 	)
-}
+});

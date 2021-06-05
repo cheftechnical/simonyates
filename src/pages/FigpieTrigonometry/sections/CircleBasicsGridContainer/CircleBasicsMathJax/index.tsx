@@ -14,13 +14,14 @@ interface Props {
 	yAxisDirection: AxisDirection;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	root: {
 		color: color.grey['900'],
 	},
 }));
 
-export default function CircleBasicsMathJax(props: Props) {
+// export default function CircleBasicsMathJax(props: Props) {
+export const CircleBasicsMathJax = React.memo(function (props: Props) {
 	const classes = useStyles();
 	const {inputDegrees, yAxisDirection} = props;
 
@@ -46,11 +47,11 @@ export default function CircleBasicsMathJax(props: Props) {
 			\\
 			x_1 & = 0 \\
 			\\
+			y_1 & = 0 \\
+			\\
 			x_2 & = cos({${red}\theta}) \\ 
 				& = cos({${red}${theta.toFixed(3)}}) \\
 				& = ${x2.toFixed(3)} \\
-			\\
-			y_1 & = 0 \\
 			\\    
 			y_2 & = sin({${red}\theta}) \\ 
 				& = sin({${red}${theta.toFixed(3)}}) \\
@@ -85,4 +86,4 @@ export default function CircleBasicsMathJax(props: Props) {
 			{renderedFormula}
 		</div>
 	)
-}
+});

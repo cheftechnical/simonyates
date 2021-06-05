@@ -15,7 +15,7 @@ interface Props {
 	variable?: 'S' | 'C1' | 'C2' | 'E';
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	root: {
 		color: color.grey['900'],
 	},
@@ -26,7 +26,8 @@ const d = (value: number): string => {
 	return (Math.round(value * 10000) / 10000).toString();
 }
 
-export default function RotationMathJax(props: Props) {
+// export default function RotationMathJax(props: Props) {
+export const RotationMathJax = React.memo(function (props: Props) {
 	const classes = useStyles();
 	const {cubicBezier, theta, variable} = props;
 
@@ -240,4 +241,4 @@ export default function RotationMathJax(props: Props) {
 			{renderedFormula}
 		</div>
 	)
-}
+});
