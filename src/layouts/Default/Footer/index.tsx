@@ -57,6 +57,7 @@ export default function Footer() {
 					<Grid item className={classes.gridItemRight} xs={6}>
 						<Link
 							className={classes.socialIcon}
+							rel="noopener"
 							title="Find me on LinkedIn"
 							target="_blank"
 							href="https://www.linkedin.com/in/simonyates/"
@@ -64,6 +65,7 @@ export default function Footer() {
 
 						<Link
 							className={classes.socialIcon}
+							rel="noopener"
 							title="Follow me on Twitter"
 							target="_blank"
 							href="https://twitter.com/cheftechnical"
