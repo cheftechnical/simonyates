@@ -35,7 +35,7 @@ export default function Footer() {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.root}>
+		<div aria-label="Site Directory" className={classes.root} role="navigation">
 			<MyContainer>
 				<Grid container spacing={0}>
 					<Grid item className={classes.gridItemLogo} xs={12}>
@@ -70,7 +70,6 @@ export default function Footer() {
 						><Logo brand="twitter" variant="grey-300" width={24}/></Link>
 					</Grid>
 				</Grid>
-
 			</MyContainer>
 		</div>
 	);

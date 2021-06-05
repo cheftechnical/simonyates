@@ -49,7 +49,6 @@ export default function Menu(props: Props) {
 	const {onClose, selected, visible} = props;
 
 	const handleClose = React.useCallback(() => {
-		console.log('handleClose');
 		onClose();
 	}, [onClose]);
 
