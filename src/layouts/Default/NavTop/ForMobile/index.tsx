@@ -61,7 +61,7 @@ export default function ForMobile(props: Props) {
 
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.root} role="navigation">
 			<MyContainer>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}
