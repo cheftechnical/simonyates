@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   footerFullHeight: {
     marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
   },
-
 }));
 
 export default function DefaultLayout(props: Props) {
