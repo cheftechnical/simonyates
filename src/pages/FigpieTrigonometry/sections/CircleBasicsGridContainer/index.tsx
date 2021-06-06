@@ -21,7 +21,7 @@ const defaultYAxisDirection: AxisDirection = -1;
 export const CircleBasicsGridContainer = React.memo(function () {
   const classes = useStyles();
 
-  const [yAxisDirection, setYAxisDirection] = React.useState(defaultYAxisDirection);
+  // const [yAxisDirection, setYAxisDirection] = React.useState(defaultYAxisDirection);
   const [inputDegrees, setInputDegrees] = React.useState<number>(0);
 
   const handleInputDegreesChange = ((event: any) => {
@@ -38,7 +38,7 @@ export const CircleBasicsGridContainer = React.memo(function () {
         <SinCos
           onChange={handleSinCosChange}
           value={inputDegrees}
-          yAxisDirection={yAxisDirection}
+          yAxisDirection={defaultYAxisDirection}
         />
         {/*{yAxisDirection}*/}
       </Grid>
@@ -53,7 +53,7 @@ export const CircleBasicsGridContainer = React.memo(function () {
         <div className={classes.root}>
           <CircleBasicsMathJax
             inputDegrees={inputDegrees}
-            yAxisDirection={yAxisDirection}
+            yAxisDirection={defaultYAxisDirection}
           />
         </div>
       </Grid>

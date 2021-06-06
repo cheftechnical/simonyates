@@ -27,7 +27,7 @@ const defaultCubicBezier: CubicBezier = {
 
 export const RotationGridContainer = React.memo(function () {
 
-  const [cubicBezier, setCubicBezier] = React.useState<CubicBezier>(defaultCubicBezier);
+  // const [cubicBezier, setCubicBezier] = React.useState<CubicBezier>(defaultCubicBezier);
   const [theta, setTheta] = React.useState<number>(0);
 
   const handleRotationVisualizationChange = ((newTheta: number) => {
@@ -54,7 +54,7 @@ export const RotationGridContainer = React.memo(function () {
           />
 
           <RotationMathJax
-            cubicBezier={cubicBezier}
+            cubicBezier={defaultCubicBezier}
             theta={theta}
           />
         </Grid>
@@ -63,28 +63,28 @@ export const RotationGridContainer = React.memo(function () {
       <MyGridContainer>
         <Grid item xs={6}>
           <RotationMathJax
-            cubicBezier={cubicBezier}
+            cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="S"
           />
         </Grid>
         <Grid item xs={6}>
           <RotationMathJax
-            cubicBezier={cubicBezier}
+            cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="C1"
           />
         </Grid>
         <Grid item xs={6}>
           <RotationMathJax
-            cubicBezier={cubicBezier}
+            cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="C2"
           />
         </Grid>
         <Grid item xs={6}>
           <RotationMathJax
-            cubicBezier={cubicBezier}
+            cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="E"
           />
