@@ -31,7 +31,7 @@ export default function ForDesktop(props: Props) {
 	const {selected} = props;
 
 	return (
-		<div aria-label="Global" className={classes.root} role="navigation">
+		<div className={classes.root}>
 			<MyContainer>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}

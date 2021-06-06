@@ -14,7 +14,7 @@ export default function NavTop(props: Props) {
   const {selected} = props;
 
   return (
-    <nav>
+    <nav aria-label="Global">
       {/* Desktop */}
       <Hidden smDown>
         <ForDesktop selected={selected}/>

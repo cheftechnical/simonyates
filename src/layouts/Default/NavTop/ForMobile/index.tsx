@@ -61,7 +61,7 @@ export default function ForMobile(props: Props) {
 
 
 	return (
-		<div aria-label="Global" className={classes.root} role="navigation">
+		<div className={classes.root}>
 			<MyContainer>
 				<Box display="flex" justifyContent="flex-end">
 					{/* Left align */}
