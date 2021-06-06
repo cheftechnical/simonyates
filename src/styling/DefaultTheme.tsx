@@ -489,6 +489,14 @@ const theme = createMuiTheme({
 				},
 			},
 		},
+		MuiLinearProgress: {
+			colorPrimary: {
+				 backgroundColor: color.grey['200'],
+			},
+			barColorPrimary: {
+				backgroundColor: color.grey['900'],
+			}
+		},
 		MuiLink: {
 			root: {
 				color: color.blue['500'],

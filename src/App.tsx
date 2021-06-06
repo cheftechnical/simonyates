@@ -3,6 +3,7 @@ import {lazy, Suspense} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import DefaultTheme from './styling/DefaultTheme';
 import ScrollToTop from './ScrollToTop';
+import Loading from './Loading';
 
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -25,7 +26,7 @@ function App() {
     <DefaultTheme>
       <Router>
         <ScrollToTop/>
-        <Suspense fallback={<div>Loading&hellip;</div>}>
+        <Suspense fallback={<Loading/>}>
           <Switch>
             <Route exact path="/work/uncharted-software" component={UnchartedSoftware}/>
             <Route exact path="/work/rbc" component={Rbc}/>
