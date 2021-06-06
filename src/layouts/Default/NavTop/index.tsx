@@ -1,25 +1,29 @@
 import * as React from 'react';
-import {useMediaQuery, useTheme} from '@material-ui/core';
+import {Hidden} from '@material-ui/core';
 import ForMobile from './ForMobile';
 import ForDesktop from './ForDesktop';
 
 interface Props {
+  /**
+   * Key of the selected nav item
+   */
   selected?: string;
 }
 
 export default function NavTop(props: Props) {
   const {selected} = props;
 
-  const theme = useTheme();
-  const matchesXs = useMediaQuery(theme.breakpoints.down('xs'));
-
-  if (matchesXs) {
-    return (
-      <ForMobile selected={selected}/>
-    );
-  }
-
   return (
-    <ForDesktop selected={selected}/>
+    <nav>
+      {/* Desktop */}
+      <Hidden smDown>
+        <ForDesktop selected={selected}/>
+      </Hidden>
+
+      {/*	Mobile */}
+      <Hidden mdUp>
+        <ForMobile selected={selected}/>
+      </Hidden>
+    </nav>
   );
 };
