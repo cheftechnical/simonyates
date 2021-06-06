@@ -4,7 +4,7 @@ import {degToRad} from './trig';
 import {Coordinate} from './Coordinate';
 
 interface BaseVisualizationInterface {
-	onChange?: <T>() => any;
+	// onChange?: <T>() => any;
 	padding: number;
 	height: number;
 	width: number;
