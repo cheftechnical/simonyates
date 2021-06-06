@@ -5,50 +5,59 @@ import NavRightItem from './NavRightItem';
 import {color} from '../../styling/Color';
 
 type SectionItem = {
-	id: string,
-	name: string
+  /**
+   * Unique ID of the section which references the anchor-id on the page
+   */
+  id: string,
+
+  /**
+   * Display name of the section
+   */
+  name: string
 }
 
 interface Props {
-	sections?: SectionItem[];
+  sections?: SectionItem[];
 }
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		position: 'fixed',
-		maxWidth: '17%' // @todo no idea why this works, but it does
-	},
+const useStyles = makeStyles(() => ({
+  root: {
+    position: 'fixed',
+    maxWidth: '17%' // no idea why this works, but it does
+  },
 
-	scrollspy: {
-		listStyleType: 'none'
-	},
+  scrollspy: {
+    listStyleType: 'none'
+  },
 
-	// The Scrollspy component attaches this class to the currently selected item
-	isCurrent: {
-		color: color.grey['900'],
+  // The Scrollspy component attaches this class to the currently selected item
+  isCurrent: {
+    color: color.grey['900'],
 
-		// borderLeft: `2px solid magenta`
-		borderLeft: `2px solid ${color.grey['500']}`
-	},
+    // borderLeft: `2px solid magenta`
+    borderLeft: `2px solid ${color.grey['500']}`
+  },
 }));
 
 export default function NavRight(props: Props) {
-	const classes = useStyles();
-	const {sections} = props;
+  const classes = useStyles();
+  const {sections} = props;
 
-	if (!sections) return <React.Fragment/>;
+  if (!sections) return <React.Fragment/>;
 
-	const items = sections.map(current => {
-		return current.id;
-	});
+  const items = sections.map(current => {
+    return current.id;
+  });
 
-	return (
-		<div className={classes.root}>
-			<Scrollspy currentClassName={classes.isCurrent} items={items} style={{listStyleType: 'none'}} offset={-100}>
-				{sections.map((item, index) => (
-					<NavRightItem id={item.id} key={index} name={item.name}/>
-				))}
-			</Scrollspy>
-		</div>
-	);
+  return (
+    <nav aria-label="Sections">
+      <div className={classes.root}>
+        <Scrollspy currentClassName={classes.isCurrent} items={items} style={{listStyleType: 'none'}} offset={-100}>
+          {sections.map((item, index) => (
+            <NavRightItem id={item.id} key={index} name={item.name}/>
+          ))}
+        </Scrollspy>
+      </div>
+    </nav>
+  );
 };
