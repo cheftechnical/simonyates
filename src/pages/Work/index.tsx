@@ -44,7 +44,7 @@ export default function Work() {
               employer="RBC"
               href="/work/rbc"
               role="Product Manager / Lead Software Engineer"
-              when="2018–Present"
+              when="2018–2021"
             >
               <Ul>
                 <Li>

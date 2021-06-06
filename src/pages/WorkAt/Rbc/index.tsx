@@ -28,7 +28,7 @@ export default function Rbc() {
 				logo={renderedWorkAtLogo}
 				role={(<React.Fragment>Product Manager / Lead Software Engineer, Site&nbsp;Reliability&nbsp;Engineering</React.Fragment>)}
 				sections={sections}
-				when="July 2018 to Present"
+				when="July 2018 to March 2021"
 				where="Toronto, Canada"
 			/>
 		</DefaultLayout>
