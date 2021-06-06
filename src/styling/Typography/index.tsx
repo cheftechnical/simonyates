@@ -27,8 +27,8 @@ const defaultSansSerifFonts = `"Helvetica", "Arial", "sans-serif"`;
 // const defaultTestFonts = `"Comic Sans Ms"`;
 
 // Font families
-const fontFamilyApercu =  `"Apercu", ${defaultSerifFonts}`;
-const fontFamilyTiemposText = `"Tiempos Text", ${defaultSansSerifFonts}`;
+const fontFamilyApercu =  `"Apercu", ${defaultSansSerifFonts}`;
+const fontFamilyTiemposText = `"Tiempos Text", ${defaultSerifFonts}`;
 
 
 // The lineHeights are used to set the marginTop of components with the `next` property
