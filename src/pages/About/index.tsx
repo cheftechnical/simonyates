@@ -8,10 +8,12 @@ import PhotoGallery from './PhotoGallery';
 export default function About() {
   return (
     <DefaultLayout title="About" top="about">
-      <Hero/>
-      <Stats/>
-      <LifeAsAMaker/>
-      <PhotoGallery/>
+      <article>
+        <Hero/>
+        <Stats/>
+        <LifeAsAMaker/>
+        <PhotoGallery/>
+      </article>
     </DefaultLayout>
   );
 };
