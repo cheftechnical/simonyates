@@ -511,7 +511,7 @@ export default function Typography(props: Props) {
 			default:
 				return <p className={thisClassName}>{children}</p>
 		}
-	}, [children, classes, className, group, next, variant, weight]);
+	}, [children, classes, className, component, group, next, variant, weight]);
 
 	return (
 		<React.Fragment>
