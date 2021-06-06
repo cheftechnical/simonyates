@@ -72,7 +72,6 @@ export default function DefaultLayout(props: Props) {
       <footer className={footerClass}>
         <Footer/>
       </footer>
-
     </div>
   );
 };
