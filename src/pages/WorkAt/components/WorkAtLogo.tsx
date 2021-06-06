@@ -19,7 +19,7 @@ export default function WorkAtLogo(props: Props) {
 
 	return (
 		<div className={classes.root}>
-			<Logo brand={brand} variant={variant}/>
+			<Logo brand={brand} variant={variant} width="100%"/>
 		</div>
 	);
 }

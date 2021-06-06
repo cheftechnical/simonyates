@@ -1,87 +1,60 @@
 import * as React from 'react';
+import {Dimension, getImage} from './getImage';
 
 interface Props {
-	brand:
-		'genworth-canada' |
-		'infomart' |
-		'jib-design-and-advertising' |
-		'linkedin' |
-		'mayo-clinic' |
-		'rbc' |
-		'simon-yates' |
-		'twitter' |
-		'uncharted-software';
-	variant:
-		'default' |
-		'grey-100' |
-		'grey-300' |
-		'grey-500';
-	width?: number | string;
+  brand:
+    'genworth-canada' |
+    'infomart' |
+    'jib-design-and-advertising' |
+    'linkedin' |
+    'mayo-clinic' |
+    'rbc' |
+    'simon-yates' |
+    'twitter' |
+    'uncharted-software';
+  variant:
+    'default' |
+    'grey-100' |
+    'grey-300' |
+    'grey-500';
+
+  width?: number | string;
+  // width?: number | '100%';
 }
 
-const basePath = '/logos';
-
 export default function Logo(props: Props) {
-	const {brand, variant, width} = props;
+  const {brand, variant, width} = props;
 
-	const {alt, src} = React.useMemo(() => {
-		switch (brand) {
-			case 'genworth-canada':
-				return {
-					alt: 'Genworth Canada logo',
-					src: `${basePath}/${brand}/genworth-canada--color--598x598.jpg`
-				};
-			case 'infomart':
-				return {
-					alt: 'Infomart logo',
-					src: `${basePath}/${brand}/infomart--color--400x82.png`
-				};
-			case 'jib-design-and-advertising':
-				return {
-					alt: 'Jib Design & Advertising logo',
-					src: `${basePath}/${brand}/${brand}--color.svg`
-				};
-			case 'linkedin':
-				return {
-					alt: 'LinkedIn logo',
-					src: `${basePath}/${brand}/${brand}--${variant}.svg`
-				};
-			case 'mayo-clinic':
-				return {
-					alt: 'Mayo Clinic logo',
-					src: `${basePath}/${brand}/mayo-clinic--color--200x200.png`
-				};
-			case 'rbc':
-				return {
-					alt: 'Royal Bank of Canada (RBC) logo',
-					src: `${basePath}/${brand}/rbc--color--208x270.png`
-				}
-			case 'simon-yates':
-				return {
-					alt: 'Simon Yates',
-					src: `${basePath}/${brand}/${brand}--${variant}.svg`
-				}
-			case 'twitter':
-				return {
-					alt: 'Twitter logo',
-					src: `${basePath}/${brand}/${brand}--${variant}.svg`
-				};
-			case 'uncharted-software':
-				return {
-					alt: 'Uncharted Software logo',
-					src: `${basePath}/${brand}/uncharted-software--color--400x400.png`
-				};
-			default:
-				return {
-					alt: '',
-					src: ''
-				};
-		}
-	}, [brand, variant]);
+  const image = getImage(brand, variant);
 
-	const thisWidth = width || '100%';
+  // If no image, return nothing
+  if (!image) return (<React.Fragment/>);
 
-	return (
-		<img alt={alt} src={src} width={thisWidth}/>
-	);
+  if (typeof width === 'number') {
+    // Scale the image
+    const scaledDimension: Dimension = {
+      height: (width / image.dimension.width) * image.dimension.height,
+      width: width,
+    };
+
+    // Return the scaled image
+    return (
+      <img
+        alt={image.alt}
+        src={image.src}
+        height={scaledDimension.height}
+        width={scaledDimension.width}
+      />
+    );
+  }
+
+  // If width=100%, return same
+  // if (!width || width === '100%') {
+    return <img
+      alt={image.alt}
+      src={image.src}
+      height="auto"
+      width={width}
+    />
+  // }
 };
