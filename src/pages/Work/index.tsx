@@ -49,23 +49,23 @@ export default function Work() {
               <Ul>
                 <Li>
                   Successfully influenced a critical change to the new product, which is used daily by
-                  RBC&rsquo;s business customers, without delaying the launch date
+                  RBC&rsquo;s business customers, without delaying the launch&nbsp;date
                 </Li>
                 <Li>
                   Designed an analytics tool that is now essential to any of the 80,000 worldwide
                   employees who have a vested interest in the bank&rsquo;s critical infrastructure.
                   The product is used everyday by engineers and decision makers to monitor more than
-                  1,200 public and private APIs. It is the face of the SRE team.
+                  1,200 public and private APIs. It is the face of the SRE&nbsp;team.
                 </Li>
                 <Li>
                   Advised multiple teams across RBC on Elasticsearch optimization techniques
                 </Li>
                 <Li>
                   Wrote a machine learning model with scikit-learn to detect anomalies in system logs
-                  and incident reports
+                  and incident&nbsp;reports
                 </Li>
                 <Li>
-                  Built a chatbot to reduce time the team spends responding to customer questions
+                  Built a chatbot to reduce time the team spends responding to customer&nbsp;questions
                 </Li>
               </Ul>
             </WorkExperience>
