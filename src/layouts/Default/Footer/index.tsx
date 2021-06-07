@@ -48,7 +48,7 @@ export default function Footer() {
 				<Grid container spacing={0}>
 					<Grid item className={classes.gridItemLeft} xs={6}>
 						<Typography className={classes.typography} variant="caption" group="secondary" weight="regular">
-							&copy; 2020 Sybaris Analytics Corporation<br/>
+							&copy; 2021 Sybaris Analytics Corporation<br/>
 						</Typography>
 						<Typography className={classes.typography} variant="caption" group="secondary" weight="regular">
 							<Link className={classes.typography} component={ReactRouterDom} to="/legal">Legal</Link>
