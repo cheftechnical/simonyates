@@ -17,7 +17,7 @@ export default function WorkExperience(props: Props) {
 		<div>
 			<EmployerTimeAndRole employer={employer} href={href} role={role} when={when}/>
 			<div>{children}</div>
-			<ReadFullDetails ariaLabel={`Read more about ${employer}`} href={href}/>
+			<ReadFullDetails ariaLabel={`Read more about my experience at ${employer}`} href={href}/>
 		</div>
 	);
 };
