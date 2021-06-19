@@ -19,8 +19,8 @@ describe('Renders quote', () => {
   test('Has list', () => {
     render(<Quote source="Simon">Text goes here</Quote>);
 
-    const receivedQuote   = screen.getByText('Text goes here');
-    const receivedSource   = screen.getByText('Simon');
+    const receivedQuote = screen.getByText('Text goes here');
+    const receivedSource = screen.getByText('Simon');
 
     expect(receivedQuote).toBeInTheDocument();
     expect(receivedSource).toBeInTheDocument();
