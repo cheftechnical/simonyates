@@ -1,9 +1,8 @@
-import * as React from 'react';
 import {lazy, Suspense} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import DefaultTheme from './styling/DefaultTheme';
-import ScrollToTop from './ScrollToTop';
 import Loading from './Loading';
+import ScrollToTop from './ScrollToTop';
 
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
