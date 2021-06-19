@@ -21,7 +21,6 @@ DefaultList.args = {
   list: loremIpsumArray,
 };
 
-
 export const Alert = Template.bind({});
 Alert.args = {
   children: <>{loremIpsumString}</>,
