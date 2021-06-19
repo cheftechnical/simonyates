@@ -1,16 +1,30 @@
-import * as React from 'react';
-import Quote from './index';
+import {Story} from '@storybook/react';
+import Quote, {Props} from './index';
 
-export default {title: 'Components/Quote'};
+export default {
+  title: 'Components/Quote',
+  component: Quote,
+};
 
-export const _default = () => (
-	<Quote>
-		I do appreciate the good work you&rsquo;ve done. I am very pleased with the application and your coding. Logical. Commented. Made it much easier to go through.
-	</Quote>
-);
+const Template: Story<Props> = (args: Props) => <Quote {...args}/>;
 
-export const _withSource = () => (
-	<Quote source="Alain Brisard, Web Communications Producer, Apple Canada Inc.">
-		I do appreciate the good work you&rsquo;ve done. I am very pleased with the application and your coding. Logical. Commented. Made it much easier to go through.
-	</Quote>
-);
+export const Default = Template.bind({});
+Default.args = {
+  children: (
+    <>
+      I do appreciate the good work you&rsquo;ve done. I am very pleased with the application and your coding. Logical.
+      Commented. Made it much easier to go through.
+    </>
+  )
+};
+
+export const WithSource = Template.bind({});
+WithSource.args = {
+  children: (
+    <>
+      I do appreciate the good work you&rsquo;ve done. I am very pleased with the application and your coding. Logical.
+      Commented. Made it much easier to go through.
+    </>
+  ),
+  source: 'Alain Brisard, Web Communications Producer, Apple Canada Inc.',
+};
