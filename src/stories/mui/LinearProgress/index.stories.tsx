@@ -1,8 +1,12 @@
-import {LinearProgress} from '@material-ui/core';
-import DefaultTheme from '../../../styling/DefaultTheme';
+import {Story} from '@storybook/react';
+import {LinearProgress, LinearProgressProps} from '@material-ui/core';
 
 export default {
   title: 'Mui/LinearProgress',
+  component: LinearProgress,
 };
 
-export const _default = () => <DefaultTheme><LinearProgress/></DefaultTheme>;
+const Template: Story<LinearProgressProps> = (args: LinearProgressProps) => <LinearProgress {...args}/>;
+
+export const Default = Template.bind({});
+Default.args = {};
