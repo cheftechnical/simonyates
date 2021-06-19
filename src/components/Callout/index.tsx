@@ -110,10 +110,6 @@ export default function Callout(props: Props) {
 
   }, [children, list]);
 
-  // const rootClassName = (noBottomGutter)
-  //   ? `${classes.root} ${classes.noBottomGutter} ${className}`
-  //   : `${classes.root} ${className}`;
-
   const rootClassName = classNames([
     classes.root,
     {[classes.noBottomGutter]: noBottomGutter},
