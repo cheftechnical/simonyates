@@ -1,6 +1,5 @@
-import * as React from 'react';
 import {LinearProgress} from '@material-ui/core';
-import DefaultTheme from '../DefaultTheme';
+import DefaultTheme from '../../../styling/DefaultTheme';
 
 export default {
   title: 'Mui/LinearProgress',
