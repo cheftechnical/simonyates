@@ -67,10 +67,6 @@ export default function Quote(props: Props) {
     {[classes.rootNext]: next}
   );
 
-  // const rootClassName = (next)
-  //   ? classes.rootNext
-  //   : undefined;
-
   const renderedEndQuote = (
     <span className={classes.span}>&rdquo;</span>
   );
