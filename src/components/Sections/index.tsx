@@ -1,46 +1,39 @@
-import * as React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import {useEffect, useState} from 'react';
+import {SectionItem} from '../Section/SectionItem';
 
-type SectionItem = {
-	id: string;
-	name: string;
+export interface Props {
+  /**
+   * The content of the callout.
+   */
+  children?: any[] | any;
+  /**
+   * Callback fired when the list of sectionItems changes
+   *
+   * @param sectionItems
+   */
+  onChange: (sectionItems: SectionItem[]) => void;
 }
-
-interface Props {
-	children?: any | any[];
-	onChange: (sectionItems: SectionItem[]) => void;
-}
-
-const useStyles = makeStyles((theme) => ({
-	root: {
-		// border: '1px solid blue'
-	}
-}));
 
 export default function Sections(props: Props) {
-	const classes = useStyles();
-	const {children, onChange} = props;
+  const {children, onChange} = props;
 
-	const [initialized, setInitialized] = React.useState(false);
+  const [initialized, setInitialized] = useState(false);
 
-	React.useEffect(() => {
-		if (initialized) return;
-		setInitialized(true);
+  useEffect(() => {
+    if (initialized) return;
+    setInitialized(true);
 
-		const sectionItems = children.map((item: any) => {
-			return {
-				id: item.props.id,
-				name: item.props.name
-			};
-		});
+    const sectionItems = children.map((item: any) => {
+      return {
+        id: item.props.id,
+        name: item.props.name
+      };
+    });
 
-		onChange(sectionItems);
+    onChange(sectionItems);
+  }, [children, initialized, onChange]);
 
-	}, [children, initialized, onChange]);
-
-	return (
-		<div className={classes.root}>
-			{children}
-		</div>
-	);
+  return (
+    <>{children}</>
+  );
 };
