@@ -6,6 +6,8 @@ import {color} from './Color';
 import rem from './rem';
 
 
+const s3BasePath = 'https://s3.amazonaws.com/simonyates.ca-fonts';
+
 /***********************************************************************************************************************
  * Apercu
  * @source: https://www.colophon-foundry.org
@@ -13,24 +15,24 @@ import rem from './rem';
  **********************************************************************************************************************/
 
 // ---[ Apercu | 300 | Light ]--------------------------------------------------------------------------------------------------
-const ApercuLightWoff = '/fonts/apercu/apercu-light-web/web/apercu-light.woff';
-const ApercuLightWoff2 = '/fonts/apercu/apercu-light-web/web/apercu-light.woff2';
+const ApercuLightWoff = `${s3BasePath}/apercu/apercu-light-web/web/apercu-light.woff`;
+const ApercuLightWoff2 = `${s3BasePath}/apercu/apercu-light-web/web/apercu-light.woff2`;
 
 // ---[ Apercu | 300 | Light Italic ]-------------------------------------------------------------------------------------------
-const ApercuLightItalicWoff = '/fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
-const ApercuLightItalicWoff2 = '/fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
+const ApercuLightItalicWoff = `${s3BasePath}/apercu/apercu-light-italic-web/web/apercu-light-italic.woff`;
+const ApercuLightItalicWoff2 = `${s3BasePath}/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2`;
 
 // ---[ Apercu | 400 | Regular ]------------------------------------------------------------------------------------------------
-const ApercuRegularWoff = '/fonts/apercu/apercu-regular-web/web/apercu-regular.woff';
-const ApercuRegularWoff2 = '/fonts/apercu/apercu-regular-web/web/apercu-regular.woff2';
+const ApercuRegularWoff = `${s3BasePath}/apercu/apercu-regular-web/web/apercu-regular.woff`;
+const ApercuRegularWoff2 = `${s3BasePath}/apercu/apercu-regular-web/web/apercu-regular.woff2`;
 
 // ---[ Apercu | 400 | Regular Italic ]-------------------------------------------------------------------------------------------------
-const ApercuRegularItalicWoff = '/fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
-const ApercuRegularItalicWoff2 = '/fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
+const ApercuRegularItalicWoff = `${s3BasePath}/apercu/apercu-italic-web/web/apercu-italic.woff`;
+const ApercuRegularItalicWoff2 = `${s3BasePath}/apercu/apercu-italic-web/web/apercu-italic.woff2`;
 
 // ---[ Apercu | 700 | Bold ]-------------------------------------------------------------------------------------------
-const ApercuBoldWoff = '/fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
-const ApercuBoldWoff2 = '/fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
+const ApercuBoldWoff = `${s3BasePath}/apercu/apercu-bold-web/web/apercu-bold.woff`;
+const ApercuBoldWoff2 = `${s3BasePath}/apercu/apercu-bold-web/web/apercu-bold.woff2`;
 
 // ---[ Apercu | 700 | Bold Italic ]------------------------------------------------------------------------------------
 // @todo buy Apercu Bold Italic
@@ -43,36 +45,36 @@ const ApercuBoldWoff2 = '/fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
  **********************************************************************************************************************/
 
 // ---[ Tiempos Text | 400 | Regular ]----------------------------------------------------------------------------------
-const TiemposTextRegularWoff = '/fonts/tiempos-text-web/tiempos-text-web-regular.woff';
-const TiemposTextRegularWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-regular.woff2';
+const TiemposTextRegularWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular.woff`;
+const TiemposTextRegularWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular.woff2`;
 
 // ---[ Tiempos Text | 400 | Regular Italic ]---------------------------------------------------------------------------
-const TiemposTextRegularItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff';
-const TiemposTextRegularItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff2';
+const TiemposTextRegularItalicWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular-italic.woff`;
+const TiemposTextRegularItalicWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular-italic.woff2`;
 
 // ---[ Tiempos Text | 500 | Medium ]-----------------------------------------------------------------------------------
-const TiemposTextMediumWoff = '/fonts/tiempos-text-web/tiempos-text-web-medium.woff';
-const TiemposTextMediumWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-medium.woff2';
+const TiemposTextMediumWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-medium.woff`;
+const TiemposTextMediumWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-medium.woff2`;
 
 // ---[ Tiempos Text | 500 | Medium Italic ]----------------------------------------------------------------------------
-const TiemposTextMediumItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff';
-const TiemposTextMediumItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff2';
+const TiemposTextMediumItalicWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-medium-italic.woff`;
+const TiemposTextMediumItalicWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-medium-italic.woff2`;
 
 // ---[ Tiempos Text | 600 | Semibold ]---------------------------------------------------------------------------------
-const TiemposTextSemiboldWoff = '/fonts/tiempos-text-web/tiempos-text-web-semibold.woff';
-const TiemposTextSemiboldWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-semibold.woff2';
+const TiemposTextSemiboldWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-semibold.woff`;
+const TiemposTextSemiboldWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-semibold.woff2`;
 
 // ---[ Tiempos Text | 600 | Semibold Italic ]--------------------------------------------------------------------------
-const TiemposTextSemiboldItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff';
-const TiemposTextSemiboldItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff2';
+const TiemposTextSemiboldItalicWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-semibold-italic.woff`;
+const TiemposTextSemiboldItalicWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-semibold-italic.woff2`;
 
 // ---[ Tiempos Text | 700 | Bold ]-------------------------------------------------------------------------------------
-const TiemposTextBoldWoff = '/fonts/tiempos-text-web/tiempos-text-web-bold.woff';
-const TiemposTextBoldWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
+const TiemposTextBoldWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-bold.woff`;
+const TiemposTextBoldWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-bold.woff2`;
 
 // ---[ Tiempos Text | 700 | Bold Italic ]------------------------------------------------------------------------------
-const TiemposTextBoldItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff';
-const TiemposTextBoldItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff2';
+const TiemposTextBoldItalicWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-bold-italic.woff`;
+const TiemposTextBoldItalicWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-bold-italic.woff2`;
 
 
 // ---[ Apercu ]--------------------------------------------------------------------------------------------------------
