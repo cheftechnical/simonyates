@@ -1,20 +1,8 @@
-import * as React from 'react';
 import Scrollspy from 'react-scrollspy';
 import {makeStyles} from '@material-ui/core/styles';
 import NavRightItem from './NavRightItem';
 import {color} from '../../styling/Color';
-
-type SectionItem = {
-  /**
-   * Unique ID of the section which references the anchor-id on the page
-   */
-  id: string;
-
-  /**
-   * Display name of the section
-   */
-  name: string;
-}
+import {SectionItem} from '../Sections/SectionItem';
 
 interface Props {
   sections?: SectionItem[];
@@ -43,7 +31,7 @@ export default function NavRight(props: Props) {
   const classes = useStyles();
   const {sections} = props;
 
-  if (!sections) return <React.Fragment/>;
+  if (!sections) return <></>;
 
   const items = sections.map(current => {
     return current.id;
