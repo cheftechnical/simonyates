@@ -1,7 +1,16 @@
-import * as React from 'react';
-import Section from "./index";
+import {Story} from '@storybook/react';
+import Section, {Props} from './index';
 
-export default {title: 'Components/Section'};
+export default {
+  title: 'Components/Section',
+  component: Section,
+};
 
-export const _default = () => <Section id="test" name="My Section Name"/>;
+const Template: Story<Props> = (args: Props) => <Section {...args}/>;
 
+export const Default = Template.bind({});
+Default.args = {
+  children: <>Children</>,
+  id: 'test',
+  name: 'My Section Name',
+};

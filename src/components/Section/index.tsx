@@ -1,11 +1,29 @@
-import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
+import {ReactNode} from 'react';
 
-interface Props {
-  children?: any | any[];
+export interface Props {
+  /**
+   * The content of the callout.
+   */
+  children?: ReactNode;
+  /**
+   * The component styling
+   */
   className?: string;
+  /**
+   * An id that uniquely identifies the component on the page
+   */
   id: string;
+  /**
+   * The name of the section
+   */
   name: string;
+  /**
+   * Callback is raised with the visible status of the component changes
+   *
+   * @param id
+   * @param visible
+   */
   onVisibleChange?: (id: string, visible: boolean) => void;
 }
 
@@ -21,7 +39,6 @@ const useStyles = makeStyles(() => ({
     marginTop: '-100px',
     visibility: 'hidden',
   },
-
 }));
 
 export default function Section(props: Props) {
