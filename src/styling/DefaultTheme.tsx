@@ -6,9 +6,6 @@ import {color} from './Color';
 import rem from './rem';
 
 
-
-
-
 /***********************************************************************************************************************
  * Apercu
  * @source: https://www.colophon-foundry.org
@@ -16,45 +13,27 @@ import rem from './rem';
  **********************************************************************************************************************/
 
 // ---[ Apercu | 300 | Light ]--------------------------------------------------------------------------------------------------
-// @ts-ignore
-import ApercuLightWoff from './fonts/apercu/apercu-light-web/web/apercu-light.woff';
-// @ts-ignore
-import ApercuLightWoff2 from './fonts/apercu/apercu-light-web/web/apercu-light.woff2';
-
+const ApercuLightWoff = '/fonts/apercu/apercu-light-web/web/apercu-light.woff';
+const ApercuLightWoff2 = '/fonts/apercu/apercu-light-web/web/apercu-light.woff2';
 
 // ---[ Apercu | 300 | Light Italic ]-------------------------------------------------------------------------------------------
-// @ts-ignore
-import ApercuLightItalicWoff from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
-// @ts-ignore
-import ApercuLightItalicWoff2 from './fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
-
+const ApercuLightItalicWoff = '/fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff';
+const ApercuLightItalicWoff2 = '/fonts/apercu/apercu-light-italic-web/web/apercu-light-italic.woff2';
 
 // ---[ Apercu | 400 | Regular ]------------------------------------------------------------------------------------------------
-// @ts-ignore
-import ApercuRegularWoff from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff';
-// @ts-ignore
-import ApercuRegularWoff2 from './fonts/apercu/apercu-regular-web/web/apercu-regular.woff2';
-
+const ApercuRegularWoff = '/fonts/apercu/apercu-regular-web/web/apercu-regular.woff';
+const ApercuRegularWoff2 = '/fonts/apercu/apercu-regular-web/web/apercu-regular.woff2';
 
 // ---[ Apercu | 400 | Regular Italic ]-------------------------------------------------------------------------------------------------
-// @ts-ignore
-import ApercuRegularItalicWoff from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
-// @ts-ignore
-import ApercuRegularItalicWoff2 from './fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
-
+const ApercuRegularItalicWoff = '/fonts/apercu/apercu-italic-web/web/apercu-italic.woff';
+const ApercuRegularItalicWoff2 = '/fonts/apercu/apercu-italic-web/web/apercu-italic.woff2';
 
 // ---[ Apercu | 700 | Bold ]-------------------------------------------------------------------------------------------
-// @ts-ignore
-import ApercuBoldWoff from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
-// @ts-ignore
-import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
-
+const ApercuBoldWoff = '/fonts/apercu/apercu-bold-web/web/apercu-bold.woff';
+const ApercuBoldWoff2 = '/fonts/apercu/apercu-bold-web/web/apercu-bold.woff2';
 
 // ---[ Apercu | 700 | Bold Italic ]------------------------------------------------------------------------------------
 // @todo buy Apercu Bold Italic
-
-
-
 
 
 /***********************************************************************************************************************
@@ -63,63 +42,37 @@ import ApercuBoldWoff2 from './fonts/apercu/apercu-bold-web/web/apercu-bold.woff
  * @licence: Purchased 2020-08-01
  **********************************************************************************************************************/
 
-
 // ---[ Tiempos Text | 400 | Regular ]----------------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextRegularWoff from './fonts/tiempos-text-web/tiempos-text-web-regular.woff';
-// @ts-ignore
-import TiemposTextRegularWoff2 from './fonts/tiempos-text-web/tiempos-text-web-regular.woff2';
-
+const TiemposTextRegularWoff = '/fonts/tiempos-text-web/tiempos-text-web-regular.woff';
+const TiemposTextRegularWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-regular.woff2';
 
 // ---[ Tiempos Text | 400 | Regular Italic ]---------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextRegularItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff';
-// @ts-ignore
-import TiemposTextRegularItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff2';
-
+const TiemposTextRegularItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff';
+const TiemposTextRegularItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-regular-italic.woff2';
 
 // ---[ Tiempos Text | 500 | Medium ]-----------------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextMediumWoff from './fonts/tiempos-text-web/tiempos-text-web-medium.woff';
-// @ts-ignore
-import TiemposTextMediumWoff2 from './fonts/tiempos-text-web/tiempos-text-web-medium.woff2';
-
+const TiemposTextMediumWoff = '/fonts/tiempos-text-web/tiempos-text-web-medium.woff';
+const TiemposTextMediumWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-medium.woff2';
 
 // ---[ Tiempos Text | 500 | Medium Italic ]----------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextMediumItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff';
-// @ts-ignore
-import TiemposTextMediumItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff2';
-
+const TiemposTextMediumItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff';
+const TiemposTextMediumItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-medium-italic.woff2';
 
 // ---[ Tiempos Text | 600 | Semibold ]---------------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextSemiboldWoff from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff';
-// @ts-ignore
-import TiemposTextSemiboldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-semibold.woff2';
-
+const TiemposTextSemiboldWoff = '/fonts/tiempos-text-web/tiempos-text-web-semibold.woff';
+const TiemposTextSemiboldWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-semibold.woff2';
 
 // ---[ Tiempos Text | 600 | Semibold Italic ]--------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextSemiboldItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff';
-// @ts-ignore
-import TiemposTextSemiboldItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff2';
-
+const TiemposTextSemiboldItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff';
+const TiemposTextSemiboldItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-semibold-italic.woff2';
 
 // ---[ Tiempos Text | 700 | Bold ]-------------------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextBoldWoff from './fonts/tiempos-text-web/tiempos-text-web-bold.woff';
-// @ts-ignore
-import TiemposTextBoldWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
-
+const TiemposTextBoldWoff = '/fonts/tiempos-text-web/tiempos-text-web-bold.woff';
+const TiemposTextBoldWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-bold.woff2';
 
 // ---[ Tiempos Text | 700 | Bold Italic ]------------------------------------------------------------------------------
-// @ts-ignore
-import TiemposTextBoldItalicWoff from './fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff';
-// @ts-ignore
-import TiemposTextBoldItalicWoff2 from './fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff2';
-
-
+const TiemposTextBoldItalicWoff = '/fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff';
+const TiemposTextBoldItalicWoff2 = '/fonts/tiempos-text-web/tiempos-text-web-bold-italic.woff2';
 
 
 // ---[ Apercu ]--------------------------------------------------------------------------------------------------------
