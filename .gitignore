@@ -3,7 +3,7 @@
 
 # Application dependencies
 /node_modules/
-/src/styling/fonts/
+#/src/styling/fonts/
 
 # Production files
 build/
