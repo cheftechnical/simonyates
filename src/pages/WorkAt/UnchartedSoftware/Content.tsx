@@ -8,15 +8,9 @@ import WorkAtProject from '../components/WorkAtProject';
 import Ul from '../../../styling/ListsUnordered/Ul/intex';
 import Li from '../../../styling/ListsUnordered/Li/intex';
 import Sections from '../../../components/Sections';
+import {WorkAtContentProps} from '../WorkAtContentProps';
 
-interface Props {
-  /**
-   * Callback fired when the section changes
-   *
-   * @param newValues
-   */
-  onChange?: (newValues: SectionItem[]) => void;
-}
+interface Props extends WorkAtContentProps {}
 
 export default function Content(props: Props) {
   const {onChange} = props;
