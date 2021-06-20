@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {SectionItem} from '../Section/SectionItem';
+import {SectionItem} from './SectionItem';
 
 export interface Props {
   /**

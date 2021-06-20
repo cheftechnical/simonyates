@@ -2,7 +2,7 @@ import * as React from 'react';
 import MyGridContainer from '../../../styling/MyGridContainer';
 import {Grid, Hidden} from '@material-ui/core';
 import NavRight from '../../../components/NavRight';
-import {SectionItem} from '../../../components/Section/SectionItem';
+import {SectionItem} from '../../../components/Sections/SectionItem';
 import MyContainer from '../../../styling/MyContainer';
 import {makeStyles} from '@material-ui/core/styles';
 import WorkAtEmployer from './WorkAtEmployer';

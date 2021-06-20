@@ -1,4 +1,4 @@
-import {SectionItem} from '../../../components/Section/SectionItem';
+import {SectionItem} from '../../../components/Sections/SectionItem';
 import Section from '../../../components/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Callout from '../../../components/Callout';

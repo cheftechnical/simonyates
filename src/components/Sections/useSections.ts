@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {SectionItem} from '../Section/SectionItem';
+import {SectionItem} from './SectionItem';
 
 type HandleSectionChange = (newValue: SectionItem[]) => void;
 

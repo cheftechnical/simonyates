@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {SectionItem} from '../../../components/Section/SectionItem';
+import {SectionItem} from '../../../components/Sections/SectionItem';
 import Section from '../../../components/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
