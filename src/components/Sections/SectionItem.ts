@@ -1,10 +1,10 @@
 export type SectionItem = {
   /**
-   * A unique ID that identifies the section, this will be used as the anchor id the link
+   * Unique ID of the section which references the anchor-id on the page
    */
   id: string;
   /**
-   * The name of the section, and is the text which appears in the list of sections
+   * Display name of the section
    */
   name: string;
 };

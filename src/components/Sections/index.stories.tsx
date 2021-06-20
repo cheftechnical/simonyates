@@ -1,11 +1,7 @@
 import * as React from 'react';
 import Sections from './index';
 import Section from '../Section';
-
-type SectionItem = {
-	id: string,
-	name: string
-}
+import {SectionItem} from './SectionItem';
 
 export default {title: 'Components/Sections'};
 
