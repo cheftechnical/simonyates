@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color';
 import rem from '../../../styling/rem';
@@ -9,12 +8,10 @@ interface Props {
    * Unique anchor id
    */
   id?: string;
-
   /**
    * (Optional) class name
    */
   className?: any;
-
   /**
    * Display name of the link
    */
