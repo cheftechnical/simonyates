@@ -1,11 +1,9 @@
-import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 import {Grid} from '@material-ui/core';
 import FeaturedPublication from './components/FeaturedPublication';
 import Sections from '../../components/Sections';
 import Section from '../../components/Section';
 import NavRight from '../../components/NavRight';
-import {SectionItem} from '../../components/Section/SectionItem';
 import {makeStyles} from '@material-ui/core/styles';
 import Ul from '../../styling/ListsUnordered/Ul/intex';
 import Li from '../../styling/ListsUnordered/Li/intex';
@@ -21,6 +19,7 @@ import {color} from '../../styling/Color';
 import FeaturedChips from './components/FeaturedChips';
 import MyContainer from '../../styling/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer';
+import {useSections} from '../../components/Sections/useSections';
 
 const useStyles = makeStyles(() => ({
   nextSection: {
@@ -40,11 +39,7 @@ const useStyles = makeStyles(() => ({
 
 export default function Featured() {
   const classes = useStyles();
-  const [sections, setSections] = React.useState<SectionItem[]>();
-
-  const handleChange = React.useCallback((newValue: SectionItem[]) => {
-    setSections(newValue);
-  }, []);
+  const [sections, handleSectionChange] = useSections();
 
   return (
     <DefaultLayout title="Featured" top="featured">
@@ -52,7 +47,7 @@ export default function Featured() {
         <MyGridContainer>
           {/* Content */}
           <Grid item md={6} xs={12}>
-            <Sections onChange={handleChange}>
+            <Sections onChange={handleSectionChange}>
               <Section id="publications" name="Publications">
                 <SectionTitle>
                   Publications
@@ -137,32 +132,18 @@ export default function Featured() {
                     host="IEEE International Conference on Big Data"
                     when="Oct 29 – Nov 1, 2015"
                   >
-                    <Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf"
-                              label="Download Paper"/><br/>
-                    <Download next
-                              href="/downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
-                              label="Download Program Schedule"/>
+                    <Download
+                      href="/downloads/publications/ieee/2015/patient-like-mine.pdf"
+                      label="Download Paper"
+                    /><br/>
+                    <Download
+                      next
+                      href="/downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
+                      label="Download Program Schedule"
+                    />
                   </FeaturedEvent>
                 </FeaturedEvents>
 
-                {/*<hr/>*/}
-
-                {/*<FeaturedPublication*/}
-                {/*	name="2015 IEEE International Conference on Big Data"*/}
-                {/*	publisher="RBC"*/}
-                {/*	tags={['automation', 'custom tooling', 'elasticsearch']}*/}
-                {/*	when="June 11, 2020"*/}
-                {/*>*/}
-                {/*	<Ul>*/}
-                {/*		<Li>Interactive dashboards for monitoring infrastructure</Li>*/}
-                {/*		<Li>A live–view monitor shows the status of hundreds of servers in real–time that became an essential tool for Apigee upgrades</Li>*/}
-                {/*	</Ul>*/}
-                {/*	<Figure*/}
-                {/*		alt="Placeholder"*/}
-                {/*		caption="Here's me at the event"*/}
-                {/*		src="/images/featured/events/example/example.png"*/}
-                {/*	/>*/}
-                {/*</FeaturedPublication>*/}
               </Section>
             </Sections>
           </Grid>

@@ -6,5 +6,5 @@ export interface WorkAtContentProps {
    *
    * @param newValues
    */
-  onChange?: (newValues: SectionItem[]) => void;
+  onChange: (newValues: SectionItem[]) => void;
 }

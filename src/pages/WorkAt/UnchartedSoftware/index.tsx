@@ -1,36 +1,23 @@
-import * as React from 'react';
-import DefaultLayout from "../../../layouts/Default";
-import {SectionItem} from '../../../components/Section/SectionItem';
+import DefaultLayout from '../../../layouts/Default';
 import WorkAtLogo from '../components/WorkAtLogo';
 import Content from './Content';
 import WorkAtTemplate from '../components/WorkAtTemplate';
+import {useSections} from '../../../components/Sections/useSections';
 
 export default function UnchartedSoftware() {
-	const [sections, setSections] = React.useState<SectionItem[]>();
+  const [sections, handleSectionChange] = useSections();
 
-	const handleChange = React.useCallback((newValue: SectionItem[]) => {
-		setSections(newValue);
-	}, []);
-
-	const renderedContent = React.useMemo(() => {
-		return (<Content onChange={handleChange}/>);
-	}, [handleChange]);
-
-	const renderedWorkAtLogo = React.useMemo(() => {
-		return (<WorkAtLogo brand="uncharted-software" variant="default"/>);
-	}, []);
-
-	return (
-		<DefaultLayout title="Work at Uncharted Software" top="work">
-			<WorkAtTemplate
-				content={renderedContent}
-				employer="Uncharted Software"
-				logo={renderedWorkAtLogo}
-				sections={sections}
-				role="Senior Software Architect"
-				when="May 2016 to 2018"
-				where="Toronto, Canada"
-			/>
-		</DefaultLayout>
-	);
+  return (
+    <DefaultLayout title="Work at Uncharted Software" top="work">
+      <WorkAtTemplate
+        content={<Content onChange={handleSectionChange}/>}
+        employer="Uncharted Software"
+        logo={<WorkAtLogo brand="uncharted-software" variant="default"/>}
+        role="Senior Software Architect"
+        sections={sections}
+        when="May 2016 to 2018"
+        where="Toronto, Canada"
+      />
+    </DefaultLayout>
+  );
 };
