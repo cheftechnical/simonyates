@@ -54,8 +54,7 @@ export default function Featured() {
                 </SectionTitle>
 
                 <SectionDescription>
-                  I&rsquo;ve been incredibly lucky to work along some of the brightest minds of
-                  North&nbsp;America
+                  I&rsquo;ve been incredibly lucky to work along some of the brightest minds of North&nbsp;America
                 </SectionDescription>
 
                 <FeaturedPublications>
