@@ -1,38 +1,50 @@
-import * as React from 'react';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import {Button} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		paddingTop: theme.spacing(24 / 8)
-	},
-	next: {
-		paddingTop: theme.spacing(0 / 8),
-	}
+  root: {
+    paddingTop: theme.spacing(24 / 8)
+  },
+  next: {
+    paddingTop: theme.spacing(0 / 8),
+  }
 }));
 
 interface Props {
-	href: string;
-	label?: string;
-	next?: boolean;
+  /**
+   * The URI of of the resource to be downloaded
+   */
+  href: string;
+  /**
+   * The label of the link
+   */
+  label?: string;
+  /**
+   * If `true`, additional top padding is applied. This should be used when multiple instances of the same component
+   * are used in series.
+   */
+  next?: boolean;
 }
 
-const defaultProps = {
-	label: 'Download'
-}
+const defaultProps: Props = {
+  label: 'Download',
+  href: '',
+};
 
 export default function Download(props: Props) {
-	const classes = useStyles();
-	const {href, label, next} = {...defaultProps, ...props};
+  const classes = useStyles();
+  const {href, label, next} = {...defaultProps, ...props};
 
-	const className = (next)
-		? `${classes.root} ${classes.next}`
-		: classes.root;
+  const className = classNames([
+    classes.root,
+    {[classes.next]: next},
+  ]);
 
-	return (
-		<Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text">
-			{label}
-		</Button>
-	);
+  return (
+    <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text">
+      {label}
+    </Button>
+  );
 };
