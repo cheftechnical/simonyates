@@ -5,10 +5,10 @@ import classNames from 'classnames';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(24 / 8)
+    marginTop: theme.spacing(24 / 8)
   },
   next: {
-    paddingTop: theme.spacing(0 / 8),
+    marginTop: theme.spacing(0 / 8),
   }
 }));
 
