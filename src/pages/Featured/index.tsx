@@ -71,7 +71,7 @@ export default function Featured() {
                       experience&rdquo; approach that a provider (physician) uses to formulate a
                       course of action for a given patient. By utilizing Big-Data techniques, we
                       enable the provider to recall all similar patients from an
-                      institution&rdquo;s electronic medical record (EMR) repository, to
+                      institution&rsquo;s electronic medical record (EMR) repository, to
                       explore &ldquo;what-if&rdquo; scenarios, and to collect these evidence-based
                       cohorts for future statistical validation and pattern&nbsp;mining.
                     </Typography>
