@@ -39,7 +39,7 @@ export default function TemperatureConversions() {
         if (index === valueIndex) {
           return event.target.value;
         } else {
-          return temperatures[index].convert(thisValue).toString();
+          return temperatures[index].convert(thisValue).toFixed(1).toString();
         }
       });
     });
