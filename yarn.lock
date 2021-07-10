@@ -3342,10 +3342,10 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-scrollspy@^3.3.3":
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/@types/react-scrollspy/-/react-scrollspy-3.3.3.tgz#ebf82b20f0a14cf2db175f6b3d65f2e3d1acb911"
-  integrity sha512-HLaQStNl141NngJoczBNAK71GRmmbO25p+JiJyEI0bUvH9MKO8B52SI3kVb1PU48S/n1SiNbabDn3D1p37/1bA==
+"@types/react-scrollspy@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@types/react-scrollspy/-/react-scrollspy-3.3.4.tgz#60fd2a48e899b5911c8c044844a3fc2d379b7fa2"
+  integrity sha512-nm7JqM1kWmx2wU0YTr4KwyoKedeoHyKpel9dTlQaTaolicFGOAVx5uCWVjf0bXt1zXU1Tk4aKdBWtxrB5Ccnxg==
   dependencies:
     "@types/react" "*"
 
