@@ -12425,10 +12425,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-material-ui-carousel@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/react-material-ui-carousel/-/react-material-ui-carousel-2.2.6.tgz#9440d0dce52f83fe3e8ae2238b8f9b899c84d7c1"
-  integrity sha512-ibCAJPGdglZV5Xmf+DTrriEcf+HO16i/SbXDr1BnwJWP+GyNybQHNKI5h7GaCCBFB4sZnR87FVQyckfugxyLvw==
+react-material-ui-carousel@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/react-material-ui-carousel/-/react-material-ui-carousel-2.2.7.tgz#2f2721310a90870df2a3e6f8543f1fd4e70800b7"
+  integrity sha512-aO42C4oupmIxmJwYaTWrlWaXvVVspKcpEu/5efZ9slteATEsqqPtNAeVaE40Vimw2hZeIh2e8vpRwjq7fSsLxw==
   dependencies:
     auto-bind "^2.1.1"
     react-swipeable "^6.1.0"
