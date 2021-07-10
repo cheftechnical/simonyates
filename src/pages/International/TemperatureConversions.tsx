@@ -15,7 +15,7 @@ const temperatures: Temperature[] = [
     convert: (c) => {
       return (c * 9 / 5) + 32;
     },
-    convertFormula: <>(c * 9 / 5) + 32</>,
+    convertFormula: <>f = (c * 9 / 5) + 32</>,
     symbol: '° F'
   },
   {
@@ -23,7 +23,7 @@ const temperatures: Temperature[] = [
     convert: (f) => {
       return (f - 32) * 5 / 9;
     },
-    convertFormula: <>(f - 32) * 5 / 9</>,
+    convertFormula: <>c = (f - 32) * 5 / 9</>,
     symbol: '° C'
   },
 ];
