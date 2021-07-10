@@ -1,10 +1,9 @@
-import * as React from 'react';
 import {Grid, Hidden} from '@material-ui/core';
-import StatsItem from './StatsItem';
 import {makeStyles} from '@material-ui/core/styles';
+import Carousel from 'react-material-ui-carousel';
 import {color} from '../../../styling/Color';
 import MyContainer from '../../../styling/MyContainer';
-import Carousel from 'react-material-ui-carousel'
+import StatsItem from './StatsItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {

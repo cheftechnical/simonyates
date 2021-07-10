@@ -1,9 +1,8 @@
-import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
-import Hero from './Hero';
-import Stats from './Stats';
 import LifeAsAMaker from './LifeAsAMaker';
+import Hero from './Hero';
 import PhotoGallery from './PhotoGallery';
+import Stats from './Stats';
 
 export default function About() {
   return (

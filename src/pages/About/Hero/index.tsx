@@ -1,12 +1,14 @@
-import * as React from 'react';
 import {Box, Grid, useMediaQuery, useTheme} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../../styling/Typography';
 import Image from '../../../components/Image';
 import MyContainer from '../../../styling/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer';
+import Typography from '../../../styling/Typography';
 
 const useStyles = makeStyles((theme) => ({
+  box: {
+    height: '100%'
+  },
   rootDesktop: {
     paddingBottom: theme.spacing(80 / 8),
   },
@@ -37,7 +39,7 @@ export default function Hero() {
     <MyContainer className={rootClassName}>
       <MyGridContainer>
         <Grid item md={7} xs={12}>
-          <Box display="flex" alignItems="flex-end" css={{height: '100%'}}>
+          <Box alignItems="flex-end" className={classes.box} display="flex">
             <Box>
               <Typography className={typographyClassName} component="h1" group="primary" variant="h3" weight="regular">
                 Simon Yates, <br/>

@@ -1,7 +1,6 @@
-import * as React from 'react';
+import MyContainer from '../../../styling/MyContainer';
 import Typography from '../../../styling/Typography';
 import Photos from './Photos';
-import MyContainer from '../../../styling/MyContainer';
 
 export default function PhotoGallery() {
   return (
