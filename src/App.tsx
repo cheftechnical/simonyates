@@ -12,6 +12,7 @@ const Figpie = lazy(() => import('./pages/Figpie'));
 const GenworthCanada = lazy(() => import('./pages/WorkAt/GenworthCanada'));
 const Home = lazy(() => import('./pages/Home'));
 const Infomart = lazy(() => import('./pages/WorkAt/Infomart'));
+const International = lazy(() => import('./pages/International'));
 const JibDesignAndAdvertising = lazy(() => import('./pages/WorkAt/JibDesignAndAdvertising'));
 const Legal = lazy(() => import('./pages/Legal'));
 const MayoClinic = lazy(() => import('./pages/WorkAt/MayoClinic'));
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>
             <Route exact path="/work/infomart" component={Infomart}/>
             <Route exact path="/work/genworth-canada" component={GenworthCanada}/>
+            <Route exact path="/resources/international" component={International}/>
             <Route exact path="/figpie/trigonometry" component={FigpieTrigonometry}/>
             <Route exact path="/figpie" component={Figpie}/>
             <Route exact path="/work" component={Work}/>
