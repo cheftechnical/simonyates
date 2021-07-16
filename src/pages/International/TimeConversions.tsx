@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {Box, Grid} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import MyGridContainer from '../../styling/MyGridContainer';
 import DateTime from './DateTime';
 
@@ -10,6 +10,9 @@ interface Region {
 const regions: Region[] = [
   {
     timeZone: 'America/Los_Angeles',
+  },
+  {
+    timeZone: 'America/Denver',
   },
   {
     timeZone: 'America/Chicago',
@@ -23,6 +26,12 @@ const regions: Region[] = [
   {
     timeZone: 'Europe/Berlin',
   },
+  {
+    timeZone: 'Asia/Hong_Kong',
+  },
+  {
+    timeZone: 'Asia/Tokyo',
+  }
 ];
 
 export default function TimeConversions() {
@@ -46,19 +55,27 @@ export default function TimeConversions() {
         <Grid item xs={2}/>
       </MyGridContainer>
 
-      <Box mt={6}>
-        <table>
-          <tbody>
-          <tr>
-            {regions.map((region: Region, index: number) => (
-              <td key={index} width={(1 / regions.length * 100).toString() + '%'} valign="top">
-                <DateTime now={now} timeZone={region.timeZone}/>
-              </td>
-            ))}
-          </tr>
-          </tbody>
-        </table>
-      </Box>
+      <MyGridContainer>
+        {regions.map((region: Region, index: number) => (
+          <Grid item key={index} xs={3}>
+            <DateTime now={now} timeZone={region.timeZone}/>
+          </Grid>
+        ))}
+      </MyGridContainer>
+
+      {/*<Box mt={6}>*/}
+      {/*  <table>*/}
+      {/*    <tbody>*/}
+      {/*    <tr>*/}
+      {/*      {regions.map((region: Region, index: number) => (*/}
+      {/*        <td key={index} width={(1 / regions.length * 100).toString() + '%'} valign="top">*/}
+      {/*          <DateTime now={now} timeZone={region.timeZone}/>*/}
+      {/*        </td>*/}
+      {/*      ))}*/}
+      {/*    </tr>*/}
+      {/*    </tbody>*/}
+      {/*  </table>*/}
+      {/*</Box>*/}
     </div>
   );
 }
