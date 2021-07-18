@@ -16,13 +16,15 @@ export default function DateTime(props: Props) {
     <Box textAlign="center">
       <Typography group="primary" variant="h4" weight="medium">
         ({format(zonedDate, 'O', {timeZone: timeZone})})<br/>
-        {format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/>
+        {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/>*/}
         {timeZone}
       </Typography>
-      
-      {format(zonedDate, 'MMMM d, yyyy')}<br/>
-      {format(zonedDate, 'HH:mm:ss')}<br/>
-      {format(zonedDate, 'hh:mm:ss aaa')}<br/>
+
+      <Typography group="primary" variant="body" weight="regular">
+        {format(zonedDate, 'EEEE, MMMM d, yyyy')}<br/>
+        {format(zonedDate, 'HH:mm:ss')}<br/>
+        {format(zonedDate, 'hh:mm:ss aaa')}<br/>
+      </Typography>
     </Box>
-  )
+  );
 }
