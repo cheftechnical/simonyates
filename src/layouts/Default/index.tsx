@@ -28,7 +28,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   main: {
     marginTop: theme.spacing(162 / 8),
-    minHeight: `calc(100vh - 244px + 24px)`, // ensure that the main content always occupies at least the viewport
+    // minHeight: `calc(100vh - 244px + 24px)`, // ensure that the main content always occupies at least the viewport
+    // minHeight: `calc(100vh - 162px - 132px)`, // ensure that the main content always occupies at least the viewport
+    // backgroundColor: 'magenta',
   },
   fullHeight: {
     marginTop: rem(fullHeightOpticalOffset),
