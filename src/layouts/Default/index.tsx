@@ -4,7 +4,7 @@ import Footer from './Footer';
 import {Helmet} from 'react-helmet-async';
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
-
+import classNames from 'classnames';
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -14,7 +14,6 @@ import rem from '../../styling/rem';
  * content sit higher on the viewport.
  */
 const fullHeightOpticalOffset = 32;
-
 
 interface Props {
   children: any;
@@ -29,10 +28,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   main: {
     marginTop: theme.spacing(162 / 8),
+    minHeight: `calc(100vh - 244px + 24px)`, // ensure that the main content always occupies at least the viewport
   },
   fullHeight: {
     marginTop: rem(fullHeightOpticalOffset),
-    height: '100%'
+    height: '100%',
   },
   footer: {
     marginTop: theme.spacing(88 / 8),
@@ -46,13 +46,13 @@ export default function DefaultLayout(props: Props) {
   const classes = useStyles();
   const {children, fullHeight, title, top} = props;
 
-  const mainClass = (fullHeight)
-    ? `${classes.main} ${classes.fullHeight}`
-    : classes.main;
+  const mainClass = classNames(classes.main, {
+    [classes.fullHeight]: fullHeight,
+  });
 
-  const footerClass = (fullHeight)
-    ? `${classes.footer} ${classes.footerFullHeight}`
-    : classes.footer;
+  const footerClass = classNames(classes.footer, {
+    [classes.footerFullHeight]: fullHeight,
+  });
 
   return (
     <div className={classes.root}>
