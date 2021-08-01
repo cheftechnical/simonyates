@@ -22,8 +22,8 @@ const useStyles = makeStyles(() =>
       margin: -1,
       overflow: 'hidden',
       padding: 0,
-      top: 0,
       position: 'absolute',
+      top: 0,
       whiteSpace: 'nowrap',
       width: 1, // disable this line if you want to debug
     },
@@ -31,12 +31,12 @@ const useStyles = makeStyles(() =>
     a: {
       '&:focus': {
         clip: 'auto',
-        left: 0,
-        top: 0,
-        width: '100%',
         height: 'auto',
+        left: 0,
         margin: 0,
         padding: '10px 0',
+        top: 0,
+        width: '100%',
 
         /**
          * The original source code included a styled background and border
@@ -48,7 +48,6 @@ const useStyles = makeStyles(() =>
         // borderStyle: 'solid',
         // borderColor: color.red[500],
         border: 'none',
-
         borderLeft: 'none',
         borderRight: 'none',
         textAlign: 'center',
