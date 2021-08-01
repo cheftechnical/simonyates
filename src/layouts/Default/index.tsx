@@ -1,10 +1,9 @@
-import React from 'react';
+import {makeStyles, Theme} from '@material-ui/core/styles';
+import classNames from 'classnames';
+import {Helmet} from 'react-helmet-async';
+import rem from '../../styling/rem';
 import NavTop from './NavTop';
 import Footer from './Footer';
-import {Helmet} from 'react-helmet-async';
-import {makeStyles, Theme} from '@material-ui/core/styles';
-import rem from '../../styling/rem';
-import classNames from 'classnames';
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
