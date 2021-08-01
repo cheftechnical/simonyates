@@ -1,5 +1,6 @@
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import classNames from 'classnames';
+import {ReactNode} from 'react';
 import {Helmet} from 'react-helmet-async';
 import rem from '../../styling/rem';
 import NavTop from './NavTop';
@@ -15,9 +16,21 @@ import Footer from './Footer';
 const fullHeightOpticalOffset = 32;
 
 interface Props {
-  children: any;
+  /**
+   * Child components
+   */
+  children: ReactNode;
+  /**
+   * If `true`, layout will use the full height of the viewport
+   */
   fullHeight?: boolean;
+  /**
+   * The title of the page as it appears in the <head><title></head>
+   */
   title?: string;
+  /**
+   * This key identifies top-nav item is selected
+   */
   top?: string;
 }
 
