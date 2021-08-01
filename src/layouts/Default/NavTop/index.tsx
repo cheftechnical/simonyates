@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {Hidden} from '@material-ui/core';
 import ForMobile from './ForMobile';
 import ForDesktop from './ForDesktop';
