@@ -1,22 +1,43 @@
-import * as React from 'react';
-import MyGridContainer from '../../../styling/MyGridContainer';
 import {Grid, Hidden} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
+import {ReactElement, useMemo} from 'react';
+import CenterVertically from '../../../components/CenterVertically/CenterVertically';
 import NavRight from '../../../components/NavRight';
 import {SectionItem} from '../../../components/Sections/SectionItem';
 import MyContainer from '../../../styling/MyContainer';
-import {makeStyles} from '@material-ui/core/styles';
+import MyGridContainer from '../../../styling/MyGridContainer';
 import WorkAtEmployer from './WorkAtEmployer';
 import WorkAtRole from './WorkAtRole';
 import WorkAtWhenWhere from './WorkAtWhenWhere';
-import CenterVertically from '../../../components/CenterVertically/CenterVertically';
 
 interface Props {
-  content: React.ReactElement;
+  /**
+   * The main content
+   */
+  content: ReactElement;
+  /**
+   * The name of the employer
+   */
   employer: string;
-  logo: React.ReactElement;
+  /**
+   * The employer's logo
+   */
+  logo: ReactElement;
+  /**
+   * A collection of sections
+   */
   sections?: SectionItem[];
-  role: React.ReactElement | string;
+  /**
+   * The role I performed
+   */
+  role: ReactElement | string;
+  /**
+   * When I worked here
+   */
   when: string;
+  /**
+   * Where the work was located
+   */
   where: string;
 }
 
@@ -31,15 +52,15 @@ export default function WorkAtTemplate(props: Props) {
   const classes = useStyles();
   const {content, employer, logo, role, sections, when, where} = props;
 
-  const renderedWorkAtEmployer = React.useMemo(() => {
+  const renderedWorkAtEmployer = useMemo(() => {
     return (<WorkAtEmployer employer={employer}/>);
   }, [employer]);
 
-  const renderedWorkAtRole = React.useMemo(() => {
+  const renderedWorkAtRole = useMemo(() => {
     return (<WorkAtRole>{role}</WorkAtRole>);
   }, [role]);
 
-  const renderedWorkAtWhenWhere = React.useMemo(() => {
+  const renderedWorkAtWhenWhere = useMemo(() => {
     return (<WorkAtWhenWhere when={when} where={where}/>);
   }, [when, where]);
 

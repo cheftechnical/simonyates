@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet-async';
 import rem from '../../styling/rem';
 import NavTop from './NavTop';
 import Footer from './Footer';
+import SkipNav from './SkipNav';
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -13,7 +14,7 @@ import Footer from './Footer';
  * By increasing this number, you will shift the content down by that amount. Conversely, a smaller number will make the
  * content sit higher on the viewport.
  */
-const fullHeightOpticalOffset = 32;
+const fullHeightOpticalOffset = -32 - 8 - 8 - 1;
 
 interface Props {
   /**
@@ -39,7 +40,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100%'
   },
   main: {
-    marginTop: theme.spacing(162 / 8),
+    // marginTop: theme.spacing(162 / 8),
+    paddingTop: theme.spacing(162 / 8),
   },
   fullHeight: {
     marginTop: rem(fullHeightOpticalOffset),
@@ -52,6 +54,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
   },
 }));
+
+const mainId = 'main-content';
 
 export default function DefaultLayout(props: Props) {
   const classes = useStyles();
@@ -71,11 +75,14 @@ export default function DefaultLayout(props: Props) {
         <title>{title}</title>
       </Helmet>
 
+      <SkipNav mainId={mainId}/>
+
       <header>
         <NavTop selected={top}/>
       </header>
 
-      <main className={mainClass}>
+      {/* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component */}
+      <main id={mainId} className={mainClass} tabIndex={-1}>
         {children}
       </main>
 

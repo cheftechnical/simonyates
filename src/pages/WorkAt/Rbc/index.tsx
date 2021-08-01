@@ -1,8 +1,8 @@
-import DefaultLayout from '../../../layouts/Default';
-import WorkAtLogo from '../components/WorkAtLogo';
-import Content from './Content';
-import WorkAtTemplate from '../components/WorkAtTemplate';
 import {useSections} from '../../../components/Sections/useSections';
+import WorkAtLogo from '../components/WorkAtLogo';
+import WorkAtTemplate from '../components/WorkAtTemplate';
+import DefaultLayout from '../../../layouts/Default';
+import Content from './Content';
 
 export default function Rbc() {
   const [sections, handleSectionChange] = useSections();
