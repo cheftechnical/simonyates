@@ -24,13 +24,13 @@ interface Props {
    */
   logo: ReactElement;
   /**
-   * A collection of sections
-   */
-  sections?: SectionItem[];
-  /**
    * The role I performed
    */
   role: ReactElement | string;
+  /**
+   * A collection of sections
+   */
+  sections?: SectionItem[];
   /**
    * When I worked here
    */
