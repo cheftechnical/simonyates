@@ -1,14 +1,14 @@
-import * as React from 'react';
-import DefaultLayout from '../../layouts/Default';
 import {Grid} from '@material-ui/core';
-import ContactForm from './ContactForm';
-import SendingMessageDialog from './SendingMessageDialog';
-import {Message} from './Message';
-import Typography from '../../styling/Typography';
 import {makeStyles} from '@material-ui/core/styles';
+import {useCallback, useState} from 'react';
+import DefaultLayout from '../../layouts/Default';
 import {color} from '../../styling/Color';
 import MyContainer from '../../styling/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer';
+import Typography from '../../styling/Typography';
+import ContactForm from './ContactForm';
+import {Message} from './Message';
+import SendingMessageDialog from './SendingMessageDialog';
 
 const useStyles = makeStyles((theme) => ({
 	heading: {
@@ -23,15 +23,14 @@ const useStyles = makeStyles((theme) => ({
 export default function Contact() {
 	const classes = useStyles();
 
-	const [isSending, setIsSending] = React.useState(false);
-	const [message, setMessage] = React.useState<Message>();
+	const [isSending, setIsSending] = useState<boolean>(false);
+	const [message, setMessage] = useState<Message>();
 
-	const handleSendingDialogClose = React.useCallback(() => {
+	const handleSendingDialogClose = useCallback(() => {
 		setIsSending(false);
 	}, []);
 
-	const handleSubmit = React.useCallback((value: Message) => {
-		console.log('sending message...', value);
+	const handleSubmit = useCallback((value: Message) => {
 		setIsSending(true);
 		setMessage(value);
 	}, []);
