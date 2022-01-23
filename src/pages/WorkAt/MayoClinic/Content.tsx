@@ -96,7 +96,10 @@ export default function Content(props: Props) {
         </WorkAtSectionTitle>
 
         <WorkAtEvents>
-          <WorkAtEventsGroup name="IEEE Big Data Conference">
+          <WorkAtEventsGroup
+            href="https://s3.amazonaws.com/simonyates.ca-downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
+            name="IEEE Big Data Conference"
+          >
             <WorkAtEvent
               date="October 29 — November 1, 2015"
               title="Santa Clara, CA, USA"
