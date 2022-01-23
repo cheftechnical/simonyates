@@ -5,6 +5,7 @@ import Logo from '../../../../components/Logo';
 import {color} from '../../../../styling/Color';
 import MyContainer from '../../../../styling/MyContainer';
 import Item from './Item';
+import MenuItems from './MenuItems';
 
 interface Props {
   /**
@@ -43,10 +44,11 @@ export default function ForDesktop(props: Props) {
           </Box>
 
           {/* Right align */}
-          <Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>
-          <Box><Item href="/featured" selected={selected === 'featured'} title="Featured"/></Box>
-          <Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>
-          <Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>
+          {/*<Box><Item href="/work" selected={selected === 'work'} title="Work"/></Box>*/}
+          {/*<Box><Item href="/featured" selected={selected === 'featured'} title="Featured"/></Box>*/}
+          {/*<Box><Item href="/about" selected={selected === 'about'} title="About"/></Box>*/}
+          {/*<Box><Item href="/contact" selected={selected === 'contact'} title="Contact"/></Box>*/}
+          <Box><MenuItems selected={selected}/></Box>
         </Box>
       </MyContainer>
     </div>
