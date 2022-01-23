@@ -4,7 +4,7 @@ import {Link as ReactRouterDom} from 'react-router-dom';
 import Logo from '../../../../components/Logo';
 import {color} from '../../../../styling/Color';
 import MyContainer from '../../../../styling/MyContainer';
-import Item from './Item';
+// import Item from './Item';
 import MenuItems from './MenuItems';
 
 interface Props {
