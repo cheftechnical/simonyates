@@ -3,8 +3,8 @@
  *
  * This function is useful for converting designs from Figma.
  *
- * @param value
+ * @param px
  */
-export default function rem(value: number) {
-	return (value/16) + 'rem'
+export default function rem(px: number) {
+	return (px/16) + 'rem'
 };
