@@ -132,12 +132,12 @@ export default function Featured() {
                     when="Oct 29 – Nov 1, 2015"
                   >
                     <Download
-                      href="/downloads/publications/ieee/2015/patient-like-mine.pdf"
+                      href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"
                       label="Download Paper"
                     /><br/>
                     <Download
                       next
-                      href="/downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
+                      href="https://s3.amazonaws.com/simonyates.ca-downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
                       label="Download Program Schedule"
                     />
                   </FeaturedEvent>

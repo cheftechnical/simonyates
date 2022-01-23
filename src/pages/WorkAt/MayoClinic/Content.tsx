@@ -85,7 +85,7 @@ export default function Content(props: Props) {
             date="2015"
             publisher="IEEE Big Data"
             title="Patient Like Mine: A Real Time, Visual Analytics Tool For Clinical Decision Support"
-            link="/downloads/publications/ieee/2015/patient-like-mine.pdf"
+            link="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"
           />
         </WorkAtPublications>
       </Section>

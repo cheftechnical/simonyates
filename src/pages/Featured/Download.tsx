@@ -43,7 +43,7 @@ export default function Download(props: Props) {
   ]);
 
   return (
-    <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text">
+    <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text" target="_blank">
       {label}
     </Button>
   );
