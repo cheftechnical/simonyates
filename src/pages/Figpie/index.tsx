@@ -44,7 +44,7 @@ export default function Figpie() {
 					</Li>
 				</Ul>
 				<Typography next group="primary" variant="body" weight="regular">
-					And it's 100% free!
+					And it&rsquo;s 100% free!
 				</Typography>
 
 				<Typography next group="primary" variant="h2" weight="regular">
