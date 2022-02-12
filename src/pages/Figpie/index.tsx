@@ -1,4 +1,3 @@
-import * as React from 'react';
 import DefaultLayout from '../../layouts/Default';
 import MyContainer from '../../styling/MyContainer';
 import Typography from '../../styling/Typography';
