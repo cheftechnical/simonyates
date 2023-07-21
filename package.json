@@ -1,6 +1,6 @@
 {
   "name": "simonyates",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
@@ -73,6 +73,9 @@
     "@storybook/addon-links": "^6.3.6",
     "@storybook/node-logger": "^6.3.6",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.6"
-  }
+    "@storybook/react": "^6.3.6",
+    "yarn-audit-fix": "^9.3.12"
+  },
+  "postinstall": "cd node_modules/fsevents && node-gyp rebuild && cd ../../",
+  "postupgrade": "yarn postinstall"
 }
