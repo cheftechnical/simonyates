@@ -1,0 +1,333 @@
+// import {styled} from "@mui/system";
+// import rem from "../rem";
+// import color from "../Color";
+//
+// export default styled(()=>({
+//
+//     appBar: {
+//         borderRadius: 15,
+//         margin: "30px 0",
+//         display: "flex",
+//         flexDirection: "row",
+//         justifyContent: "center",
+//         alignItems: "center",
+//     },
+//     heading: {
+//         color: "rgba(0,183,255, 1)",
+//     },
+//     image: {
+//         marginLeft: "15px",
+//     },
+// }));
+//
+//
+// //
+// // export default styled(()=>({
+// //     app
+// //
+// // // const useStyles = makeStyles((theme: Theme) => ({
+// //     // ---[ Primary | H1 | 400 | Regular ]------------------------------------------------------------------------------
+// // //     primary_h1_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(54),
+// // //
+// // //         letterSpacing: rem(-0.5),
+// // //         color: color.grey['900'],
+// // //
+// // //         // [theme.breakpoints.up('xs')]: {
+// // //         //     fontSize: rem(34),
+// // //         //     lineHeight: rem(56),
+// // //         //     // color: 'red'
+// // //         // },
+// // //         // [theme.breakpoints.up('md')]: {
+// // //         //     fontSize: rem(54),
+// // //         //     lineHeight: primary_h1_400_regular_lineHeight,
+// // //         //     // color: 'orange'
+// // //         // }
+// // //     },
+// // //     primary_h1_400_regular_next: {
+// // //         marginTop: primary_h1_400_regular_lineHeight,
+// // //
+// // //         // [theme.breakpoints.up('xs')]: {
+// // //         //     marginTop: rem(56)
+// // //         // },
+// // //         // [theme.breakpoints.up('lg')]: {
+// // //         //     marginTop: primary_h1_400_regular_lineHeight,
+// // //         // }
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H2 | 400 | Regular ]------------------------------------------------------------------------------
+// // //     primary_h2_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(34),
+// // //         lineHeight: primary_h2_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.25),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_h2_400_regular_next: {
+// // //         marginTop: primary_h2_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H3 | 400 | Regular ]------------------------------------------------------------------------------
+// // //     primary_h3_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(24),
+// // //         lineHeight: primary_h3_400_regular_lineHeight,
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_h3_400_regular_next: {
+// // //         marginTop: primary_h3_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H3 | 500 | Medium ]-------------------------------------------------------------------------------
+// // //     primary_h3_500_medium: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 500,
+// // //         fontSize: rem(24),
+// // //         lineHeight: primary_h3_500_medium_lineHeight,
+// // //         letterSpacing: rem(0.25),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_h3_500_medium_next: {
+// // //         marginTop: primary_h3_500_medium_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H3 | 600 | Semibold ]-----------------------------------------------------------------------------
+// // //     primary_h3_600_semibold: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 600,
+// // //         fontSize: rem(23),
+// // //         lineHeight: primary_h3_600_semibold_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900']
+// // //     },
+// // //     primary_h3_600_semibold_next: {
+// // //         marginTop: primary_h3_600_semibold_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H4 | 500 | Medium ]-------------------------------------------------------------------------------
+// // //     primary_h4_500_medium: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 500,
+// // //         fontSize: rem(16),
+// // //         lineHeight: primary_h4_500_medium_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900']
+// // //     },
+// // //     primary_h4_500_medium_next: {
+// // //         marginTop: primary_h4_500_medium_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | H4 | 600 | Semibold ]-----------------------------------------------------------------------------
+// // //     primary_h4_600_semibold: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 600,
+// // //         fontSize: rem(16),
+// // //         lineHeight: primary_h4_600_semibold_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_h4_600_semibold_next: {
+// // //         marginTop: primary_h4_600_semibold_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | Body | 400 | Regular ]----------------------------------------------------------------------------
+// // //     primary_body_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(16),
+// // //         lineHeight: primary_body_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_body_400_regular_next: {
+// // //         marginTop: primary_body_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | Body | 600 | Semibold ]---------------------------------------------------------------------------
+// // //     primary_body_600_semibold: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 600,
+// // //         fontSize: rem(16),
+// // //         lineHeight: primary_body_600_semibold_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_body_600_semibold_next: {
+// // //         marginTop: primary_body_600_semibold_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | Subtitle | 400 | Regular ]------------------------------------------------------------------------
+// // //     primary_subtitle_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(14),
+// // //         lineHeight: primary_subtitle_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.25),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_subtitle_400_regular_next: {
+// // //         marginTop: primary_subtitle_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Primary | Caption | 400 | Regular ]-------------------------------------------------------------------------
+// // //     primary_caption_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyTiemposText,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(12),
+// // //         lineHeight: primary_caption_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.4),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     primary_caption_400_regular_next: {
+// // //         marginTop: primary_caption_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Secondary | H3 | 300 | Light ]------------------------------------------------------------------------------
+// // //     secondary_h3_300_light: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyApercu,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 300,
+// // //         fontSize: rem(24),
+// // //         lineHeight: secondary_h3_300_light_lineHeight,
+// // //         color: color.grey['900'],
+// // //     },
+// // //     secondary_h3_300_light_next: {
+// // //         // marginTop: primary_subtitle_regular.lineHeight
+// // //         marginTop: secondary_h3_300_light_lineHeight // @todo check if any corrections were made in the design to fix this root issue
+// // //     },
+// // //
+// // //
+// // //     // ---[ Secondary | Body | 300 | Light ]----------------------------------------------------------------------------
+// // //     secondary_body_300_light: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyApercu,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 300,
+// // //         fontSize: rem(16),
+// // //         lineHeight: secondary_body_300_light_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     secondary_body_300_light_next: {
+// // //         marginTop: secondary_body_300_light_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Secondary | Body | 400 | Regular ]--------------------------------------------------------------------------
+// // //     secondary_body_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyApercu,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(16),
+// // //         lineHeight: secondary_body_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.5),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     secondary_body_400_regular_next: {
+// // //         marginTop: secondary_body_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Secondary | Subtitle | 400 | Regular ]----------------------------------------------------------------------
+// // //     secondary_subtitle_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyApercu,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(14),
+// // //         lineHeight: secondary_subtitle_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.25),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     secondary_subtitle_400_regular_next: {
+// // //         marginTop: secondary_subtitle_400_regular_lineHeight
+// // //     },
+// // //
+// // //
+// // //     // ---[ Secondary | Caption | 400 | Regular ]-----------------------------------------------------------------------
+// // //     secondary_caption_400_regular: {
+// // //         margin: 0,
+// // //         padding: 0,
+// // //
+// // //         fontFamily: fontFamilyApercu,
+// // //         fontStyle: 'normal',
+// // //         fontWeight: 'normal',
+// // //         fontSize: rem(12),
+// // //         lineHeight: secondary_caption_400_regular_lineHeight,
+// // //         letterSpacing: rem(0.4),
+// // //         color: color.grey['900'],
+// // //     },
+// // //     secondary_caption_400_regular_next: {
+// // //         marginTop: secondary_caption_400_regular_lineHeight
+// // //     }
+// // // // }));
+// // }));
