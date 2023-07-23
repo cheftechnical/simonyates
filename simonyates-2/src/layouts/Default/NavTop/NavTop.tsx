@@ -1,6 +1,7 @@
 // import {Hidden} from '@material-ui/core';
 import ForMobile from './ForMobile/ForMobile';
 import ForDesktop from './ForDesktop/ForDesktop';
+import {Hidden} from "@mui/material";
 
 interface Props {
   /**
@@ -12,22 +13,17 @@ interface Props {
 export default function NavTop(props: Props) {
   const {selected} = props;
 
-  // return (
-  //   <nav aria-label="Global">
-  //     {/* Desktop */}
-  //     <Hidden smDown>
-  //       <ForDesktop selected={selected}/>
-  //     </Hidden>
-  //
-  //     {/*	Mobile */}
-  //     <Hidden mdUp>
-  //       <ForMobile selected={selected}/>
-  //     </Hidden>
-  //   </nav>
-  // );
+  return (
+    <nav aria-label="Global">
+      {/* Desktop */}
+      <Hidden smDown>
+        <ForDesktop selected={selected}/>
+      </Hidden>
 
-    // @todo mui5
-    return (
-        <div>[NavTop]</div>
-    )
+      {/*	Mobile */}
+      <Hidden mdUp>
+        <ForMobile selected={selected}/>
+      </Hidden>
+    </nav>
+  );
 };
