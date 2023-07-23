@@ -88,20 +88,20 @@ export default function DefaultLayout(props: Props) {
 
   return (
     <StyledDivRoot>
-      {/*<Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">*/}
-      {/*  <title>{title}</title>*/}
-      {/*</Helmet>*/}
+      <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
+        <title>{title}</title>
+      </Helmet>
 
-      {/*<SkipNav mainId={mainId}/>*/}
+      <SkipNav mainId={mainId}/>
 
-      {/*<header>*/}
-      {/*  <NavTop selected={top}/>*/}
-      {/*</header>*/}
+      <header>
+        <NavTop selected={top}/>
+      </header>
 
       {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
-      {/*<main id={mainId} style={sxStyleMain} tabIndex={-1}>*/}
-      {/*  {children}*/}
-      {/*</main>*/}
+      <main id={mainId} style={sxStyleMain} tabIndex={-1}>
+        {children}
+      </main>
 
       <StyledFooter>
         <Footer/>
