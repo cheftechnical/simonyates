@@ -1,11 +1,12 @@
 // import {makeStyles, Theme} from '@material-ui/core/styles';
 // import classNames from 'classnames';
 import {ReactNode} from 'react';
-// import {Helmet} from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 import rem from '../../styling/rem';
 import NavTop from './NavTop/NavTop';
 import Footer from './Footer/Footer';
 import SkipNav from './SkipNav/SkipNav';
+import {styled} from "@mui/material";
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -56,6 +57,20 @@ interface Props {
 //   },
 // }));
 
+const sxStyleMain = {
+    marginTop: rem(fullHeightOpticalOffset),
+    height: '100%',
+    backgroundColor: 'magenta'
+};
+
+const StyledDivRoot = styled('div')(({theme}) => ({
+  height: '100%'
+}));
+
+const StyledFooter = styled('footer')(({theme}) => ({
+  marginTop: theme.spacing(88 / 8),
+}));
+
 const mainId = 'main-content';
 
 export default function DefaultLayout(props: Props) {
@@ -70,31 +85,27 @@ export default function DefaultLayout(props: Props) {
   // const footerClass = classNames(classes.footer, {
   //   [classes.footerFullHeight]: fullHeight,
   // });
-  //
-  // return (
-  //   <div className={classes.root}>
-  //     <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
-  //       <title>{title}</title>
-  //     </Helmet>
-  //
-  //     <SkipNav mainId={mainId}/>
-  //
-  //     <header>
-  //       <NavTop selected={top}/>
-  //     </header>
-  //
-  //     {/* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component */}
-  //     <main id={mainId} className={mainClass} tabIndex={-1}>
-  //       {children}
-  //     </main>
-  //
-  //     <footer className={footerClass}>
-  //       <Footer/>
-  //     </footer>
-  //   </div>
-  // );
 
   return (
-      <div>[Default]</div>
-  )
+    <StyledDivRoot>
+      {/*<Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">*/}
+      {/*  <title>{title}</title>*/}
+      {/*</Helmet>*/}
+
+      {/*<SkipNav mainId={mainId}/>*/}
+
+      {/*<header>*/}
+      {/*  <NavTop selected={top}/>*/}
+      {/*</header>*/}
+
+      {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
+      {/*<main id={mainId} style={sxStyleMain} tabIndex={-1}>*/}
+      {/*  {children}*/}
+      {/*</main>*/}
+
+      <StyledFooter>
+        <Footer/>
+      </StyledFooter>
+    </StyledDivRoot>
+  );
 };

@@ -49,7 +49,7 @@ const StyledGridItemRight = styled(Grid)(({theme}) => ({
 	textAlign: 'right'
 }));
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledReactRouterDomLink = styled(ReactRouterDom)(({theme}) => ({
 	color: color.grey['400']
 }));
 
@@ -82,7 +82,7 @@ export default function Footer() {
 						</StyledTypography>
 						<StyledTypography variant="caption" group="secondary" weight="regular">
 							{/* @todo mui5 */}
-							{/*<StyledLink component={ReactRouterDom} to="/legal">Legal</StyledLink>*/}
+							<StyledReactRouterDomLink to="/legal">Legal</StyledReactRouterDomLink>
 						</StyledTypography>
 					</StyledGridItemLeft>
 					<StyledGridItemRight item xs={6}>
