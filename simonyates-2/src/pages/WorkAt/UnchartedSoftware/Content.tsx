@@ -1,12 +1,12 @@
 import {SectionItem} from '../../../components/Sections/SectionItem';
-import Section from '../../../components/Section';
+import Section from '../../../components/Section/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
-import Callout from '../../../components/Callout';
+import Callout from '../../../components/Callout/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
-import Ul from '../../../styling/ListsUnordered/Ul/intex';
-import Li from '../../../styling/ListsUnordered/Li/intex';
+import Ul from '../../../styling/ListsUnordered/Ul/Ul';
+import Li from '../../../styling/ListsUnordered/Li/Li';
 import Sections from '../../../components/Sections';
 import {WorkAtContentProps} from '../WorkAtContentProps';
 

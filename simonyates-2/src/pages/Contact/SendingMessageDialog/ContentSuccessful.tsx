@@ -1,30 +1,46 @@
-import * as React from 'react';
-import CheckIcon from '@material-ui/icons/Check';
-import {Box, Link} from '@material-ui/core';
+// import * as React from 'react';
+// import CheckIcon from '@material-ui/icons/Check';
+// import {Box, Link} from '@material-ui/core';
 import Logo from '../../../components/Logo';
 import Typography from '../../../styling/Typography/Typography';
-import {makeStyles} from '@material-ui/core/styles';
+// import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
 import {color} from '../../../styling/Color/Color';
+import {Box, Link, makeStyles, styled} from "@mui/material";
+import CheckIcon from '@mui/icons-material/Check';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    padding: rem(40),
-    textAlign: 'center'
-  },
-  link: {
-    color: color.grey['900'],
-  },
-  wellChatSoon: {
-    color: color.grey['600']
-  }
+// @todo mui5
+// const useStyles = makeStyles(() => ({
+//   root: {
+//     padding: rem(40),
+//     textAlign: 'center'
+//   },
+//   link: {
+//     color: color.grey['900'],
+//   },
+//   wellChatSoon: {
+//     color: color.grey['600']
+//   }
+// }));
+
+const StyledDivRoot = styled('div')(({theme}) => ({
+  padding: rem(40),
+  textAlign: 'center'
 }));
 
+const StyledLink = styled(Link)(({theme}) => ({
+  color: color.grey['900'],
+}))
+
+const StyledTypographyWellChatSoon = styled(Typography)(({theme}) => ({
+  color: color.grey['600']
+}))
+
 export default function ContentSuccessful() {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <StyledDivRoot>
       <Box mt={16 / 8}>
         <CheckIcon style={{fontSize: 104}}/>
       </Box>
@@ -36,9 +52,9 @@ export default function ContentSuccessful() {
       </Box>
 
       <Box mt={8 / 8}>
-        <Typography className={classes.wellChatSoon} group="primary" variant="body" weight="regular">
+        <StyledTypographyWellChatSoon group="primary" variant="body" weight="regular">
           We&rsquo;ll chat soon.
-        </Typography>
+        </StyledTypographyWellChatSoon>
       </Box>
 
       <Box mt={88 / 8}>
@@ -58,12 +74,11 @@ export default function ContentSuccessful() {
               </Box>
               <Box ml={8 / 8}>
                 <Typography group="secondary" variant="body" weight="regular">
-                  <Link
-                    className={classes.link}
+                  <StyledLink
                     title="Find me on LinkedIn"
                     target="_blank"
                     href="https://www.linkedin.com/in/simonyates/"
-                  >LinkedIn</Link>
+                  >LinkedIn</StyledLink>
                 </Typography>
               </Box>
             </Box>
@@ -75,12 +90,11 @@ export default function ContentSuccessful() {
               </Box>
               <Box ml={8 / 8}>
                 <Typography group="secondary" variant="body" weight="regular">
-                  <Link
-                    className={classes.link}
+                  <StyledLink
                     title="Follow me on Twitter"
                     target="_blank"
                     href="https://twitter.com/cheftechnical"
-                  >Twitter</Link>
+                  >Twitter</StyledLink>
                 </Typography>
               </Box>
             </Box>
@@ -88,6 +102,6 @@ export default function ContentSuccessful() {
           </Box>
         </Box>
       </Box>
-    </div>
+    </StyledDivRoot>
   );
 };

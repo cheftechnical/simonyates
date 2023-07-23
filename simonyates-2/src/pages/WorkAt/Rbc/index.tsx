@@ -1,7 +1,7 @@
 import {useSections} from '../../../components/Sections/useSections';
 import WorkAtLogo from '../components/WorkAtLogo';
 import WorkAtTemplate from '../components/WorkAtTemplate';
-import DefaultLayout from '../../../layouts/Default';
+import DefaultLayout from '../../../layouts/Default/Default';
 import Content from './Content';
 
 export default function Rbc() {

@@ -1,6 +1,6 @@
-import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@material-ui/core';
+// import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@material-ui/core';
 import {ChangeEvent, ReactNode, useState} from 'react';
-import MyGridContainer from '../../styling/MyGridContainer';
+import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 
 interface Temperature {
   code: string;
@@ -45,23 +45,27 @@ export default function TemperatureConversions() {
     });
   };
 
+  // return (
+  //   <MyGridContainer>
+  //     {temperatures.map((temperature: Temperature, index: number) => (
+  //       <Grid item key={index} xs={6}>
+  //         <FormControl fullWidth>
+  //           {/*<InputLabel htmlFor={`temperature-${temperature.code}`}>Temperature</InputLabel>*/}
+  //           <Input
+  //             id={`currency-${temperature.code}`}
+  //             name={`currency-${temperature.code}`}
+  //             onChange={(event) => handleChange(event, index)}
+  //             endAdornment={<InputAdornment position="start">{temperature.symbol}</InputAdornment>}
+  //             value={values[index]}
+  //           />
+  //           <FormHelperText>{temperature.convertFormula}</FormHelperText>
+  //         </FormControl>
+  //       </Grid>
+  //     ))}
+  //   </MyGridContainer>
+  // );
+
   return (
-    <MyGridContainer>
-      {temperatures.map((temperature: Temperature, index: number) => (
-        <Grid item key={index} xs={6}>
-          <FormControl fullWidth>
-            {/*<InputLabel htmlFor={`temperature-${temperature.code}`}>Temperature</InputLabel>*/}
-            <Input
-              id={`currency-${temperature.code}`}
-              name={`currency-${temperature.code}`}
-              onChange={(event) => handleChange(event, index)}
-              endAdornment={<InputAdornment position="start">{temperature.symbol}</InputAdornment>}
-              value={values[index]}
-            />
-            <FormHelperText>{temperature.convertFormula}</FormHelperText>
-          </FormControl>
-        </Grid>
-      ))}
-    </MyGridContainer>
-  );
+      <div>[TemperatureConversions]</div>
+  )
 }

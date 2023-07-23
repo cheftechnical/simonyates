@@ -1,6 +1,7 @@
 import {format, utcToZonedTime} from 'date-fns-tz';
 import Typography from '../../styling/Typography/Typography';
-import {Box} from '@material-ui/core';
+import {Box} from "@mui/material";
+// import {Box} from '@material-ui/core';
 
 export interface Props {
   now: Date;

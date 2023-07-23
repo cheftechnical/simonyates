@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ConditionalIndent from '../../../components/ConditionalIndent';
+import ConditionalIndent from '../../../components/ConditionalIndent/ConditionalIndent';
 
 interface Props {
 	children?: any;

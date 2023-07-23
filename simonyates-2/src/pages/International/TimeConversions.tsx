@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import {Grid} from '@material-ui/core';
-import MyGridContainer from '../../styling/MyGridContainer';
+// import {Grid} from '@material-ui/core';
+import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import DateTime from './DateTime';
 
 interface Region {
@@ -43,23 +43,27 @@ export default function TimeConversions() {
     }, 1000);
   }, [now]);
 
-  return (
-    <>
-      <MyGridContainer>
-        {/* Zulu time is always top and center */}
-        <Grid item xs={3}/>
-        <Grid item xs={6}>
-          <DateTime now={now} timeZone="GMT"/>
-        </Grid>
+  // return (
+  //   <>
+  //     <MyGridContainer>
+  //       {/* Zulu time is always top and center */}
+  //       <Grid item xs={3}/>
+  //       <Grid item xs={6}>
+  //         <DateTime now={now} timeZone="GMT"/>
+  //       </Grid>
+  //
+  //       {/* List all other time zones*/}
+  //       <Grid item xs={3}/>
+  //       {regions.map((region: Region, index: number) => (
+  //         <Grid item key={index} xs={6} sm={4} md={3}>
+  //           <DateTime now={now} timeZone={region.timeZone}/>
+  //         </Grid>
+  //       ))}
+  //     </MyGridContainer>
+  //   </>
+  // );
 
-        {/* List all other time zones*/}
-        <Grid item xs={3}/>
-        {regions.map((region: Region, index: number) => (
-          <Grid item key={index} xs={6} sm={4} md={3}>
-            <DateTime now={now} timeZone={region.timeZone}/>
-          </Grid>
-        ))}
-      </MyGridContainer>
-    </>
-  );
+  return (
+      <div>[TimeConversions]</div>
+  )
 }

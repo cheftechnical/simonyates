@@ -1,8 +1,8 @@
-import DefaultLayout from '../../layouts/Default';
-import LifeAsAMaker from './LifeAsAMaker';
-import Hero from './Hero';
-import PhotoGallery from './PhotoGallery';
-import Stats from './Stats';
+import DefaultLayout from '../../layouts/Default/Default';
+import LifeAsAMaker from './LifeAsAMaker/LifeAsAMaker';
+import Hero from './Hero/Hero';
+import PhotoGallery from './PhotoGallery/PhotoGallery';
+import Stats from './Stats/Stats';
 
 export default function About() {
   return (

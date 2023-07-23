@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Typography from '../../../styling/Typography/Typography';
-import {makeStyles} from '@material-ui/core/styles';
+// import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../../styling/rem';
-import ConditionalIndent from '../../../components/ConditionalIndent';
+import ConditionalIndent from '../../../components/ConditionalIndent/ConditionalIndent';
 import {useMemo} from 'react';
-import {Link} from '@material-ui/core';
+// import {Link} from '@material-ui/core';
 
 interface Props {
   children?: any;
@@ -22,39 +22,43 @@ interface Props {
   next?: boolean;
 }
 
-const useStyles = makeStyles(() => ({
-  root: {},
-  next: {
-    paddingTop: rem(40),
-  }
-}));
+// const useStyles = makeStyles(() => ({
+//   root: {},
+//   next: {
+//     paddingTop: rem(40),
+//   }
+// }));
 
 export default function WorkAtEventsGroup(props: Props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const {children, href, name, next} = props;
 
-  const className = (next)
-    ? `${classes.root} ${classes.next}`
-    : classes.root;
+  // const className = (next)
+  //   ? `${classes.root} ${classes.next}`
+  //   : classes.root;
 
-  const renderedName = useMemo(() => {
-    if (href) {
-      return (
-        <Link href={href} target="_blank">
-          {name}
-        </Link>
-      );
-    } else {
-      return <>{name}</>;
-    }
-  }, [href, name]);
+  // const renderedName = useMemo(() => {
+  //   if (href) {
+  //     return (
+  //       <Link href={href} target="_blank">
+  //         {name}
+  //       </Link>
+  //     );
+  //   } else {
+  //     return <>{name}</>;
+  //   }
+  // }, [href, name]);
+
+  // return (
+  //   <ConditionalIndent className={className}>
+  //     <Typography component="h3" group="primary" variant="h4" weight="semibold">
+  //       {renderedName}
+  //     </Typography>
+  //     <div>{children}</div>
+  //   </ConditionalIndent>
+  // );
 
   return (
-    <ConditionalIndent className={className}>
-      <Typography component="h3" group="primary" variant="h4" weight="semibold">
-        {renderedName}
-      </Typography>
-      <div>{children}</div>
-    </ConditionalIndent>
-  );
+      <div>[WorkAtEventsGroup]</div>
+  )
 };

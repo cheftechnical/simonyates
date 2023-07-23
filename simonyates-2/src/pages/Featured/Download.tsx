@@ -1,16 +1,17 @@
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import {Button} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
-import classNames from 'classnames';
+// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import {Button} from '@material-ui/core';
+// import {makeStyles} from '@material-ui/core/styles';
+// import classNames from 'classnames';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    marginTop: theme.spacing(24 / 8)
-  },
-  next: {
-    marginTop: theme.spacing(0 / 8),
-  }
-}));
+// @todo mui5
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     marginTop: theme.spacing(24 / 8)
+//   },
+//   next: {
+//     marginTop: theme.spacing(0 / 8),
+//   }
+// }));
 
 interface Props {
   /**
@@ -34,17 +35,22 @@ const defaultProps: Props = {
 };
 
 export default function Download(props: Props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const {href, label, next} = {...defaultProps, ...props};
 
-  const className = classNames([
-    classes.root,
-    {[classes.next]: next},
-  ]);
+  // @todo mui5
+  // const className = classNames([
+  //   classes.root,
+  //   {[classes.next]: next},
+  // ]);
+
+  // return (
+  //   <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text" target="_blank">
+  //     {label}
+  //   </Button>
+  // );
 
   return (
-    <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text" target="_blank">
-      {label}
-    </Button>
-  );
+      <div>[Download]</div>
+  )
 };

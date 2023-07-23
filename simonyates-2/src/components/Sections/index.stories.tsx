@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Sections from './index';
-import Section from '../Section';
+import Section from '../Section/Section';
 import {SectionItem} from './SectionItem';
 
 export default {title: 'Components/Sections'};

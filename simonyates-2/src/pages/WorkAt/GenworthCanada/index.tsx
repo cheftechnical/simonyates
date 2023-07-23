@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../layouts/Default';
+import DefaultLayout from '../../../layouts/Default/Default';
 import WorkAtLogo from '../components/WorkAtLogo';
 import WorkAtTemplate from '../components/WorkAtTemplate';
 import Content from './Content';

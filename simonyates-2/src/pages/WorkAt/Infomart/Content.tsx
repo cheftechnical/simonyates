@@ -1,24 +1,30 @@
 import {SectionItem} from '../../../components/Sections/SectionItem';
-import Section from '../../../components/Section';
+import Section from '../../../components/Section/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
-import Callout from '../../../components/Callout';
+import Callout from '../../../components/Callout/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import Typography from '../../../styling/Typography/Typography';
 import WorkAtProject from '../components/WorkAtProject';
 import Sections from '../../../components/Sections';
-import {makeStyles} from '@material-ui/core/styles';
+// import {makeStyles} from '@material-ui/core/styles';
 import {WorkAtContentProps} from '../WorkAtContentProps';
+import {styled} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
-const useStyles = makeStyles((theme) => ({
-  callout: {
-    marginBottom: theme.spacing(20 / 8)
-  }
+// const useStyles = makeStyles((theme) => ({
+//   callout: {
+//     marginBottom: theme.spacing(20 / 8)
+//   }
+// }));
+
+const StyledCallout = styled(Callout)(({theme}) => ({
+  marginBottom: theme.spacing(20 / 8)
 }));
 
+
 export default function Content(props: Props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const {onChange} = props;
 
   const handleChange = ((newValues: SectionItem[]) => {
@@ -32,11 +38,13 @@ export default function Content(props: Props) {
           Infomart was a division of Postmedia, the industry standard for Canadian
           newspaper&nbsp;archiving.
         </WorkAtDescription>
-        <Callout className={classes.callout}>
+        {/*<Callout className={classes.callout}>*/}
+        <StyledCallout>
           <strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started
           working with it on this project. At the time, the latest version was
           version&nbsp;~&nbsp;0.19–0.2.x
-        </Callout>
+        {/*</Callout>*/}
+        </StyledCallout>
       </Section>
 
       <Section id="about-the-project" name="About the Project">

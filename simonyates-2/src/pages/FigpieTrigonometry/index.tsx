@@ -1,11 +1,11 @@
 import * as React from 'react';
-import DefaultLayout from '../../layouts/Default';
+import DefaultLayout from '../../layouts/Default/Default';
 import Typography from '../../styling/Typography/Typography';
 import MyMathJaxProvider from './MyMathJaxProvider';
-import MyContainer from '../../styling/MyContainer';
-import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer';
-import {RotationGridContainer} from './sections/RotationGridContainer';
-import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer';
+import MyContainer from '../../styling/MyContainer/MyContainer';
+import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer';
+import {RotationGridContainer} from './sections/RotationGridContainer/RotationGridContainer';
+import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer/CircleBasicsGridContainer';
 
 export default function FigpieTrigonometry() {
   return (

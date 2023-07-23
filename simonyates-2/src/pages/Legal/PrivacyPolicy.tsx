@@ -1,7 +1,7 @@
-import * as React from 'react';
+// import * as React from 'react';
 import Typography from '../../styling/Typography/Typography';
-import Ul from '../../styling/ListsUnordered/Ul/intex';
-import Li from '../../styling/ListsUnordered/Li/intex';
+import Ul from '../../styling/ListsUnordered/Ul/Ul';
+import Li from '../../styling/ListsUnordered/Li/Li';
 import {h2, h3, paragraph, subtitle} from './defaults';
 
 const legalName = 'Sybaris Analytics Corporation';
