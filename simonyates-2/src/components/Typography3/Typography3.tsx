@@ -3,6 +3,8 @@
 import {ReactNode, useMemo} from 'react';
 import {fontFamilyTiemposText} from './fontFamilies';
 import rem from '../../styling/rem';
+import {styled} from "@mui/material";
+import {css} from '@emotion/react';
 
 export enum ComponentIs {
   div = 'div',
@@ -42,6 +44,31 @@ export interface Props {
 //   })
 // );
 
+// const StyledDiv = styled('div')(({theme}) => ({
+//
+// }));
+
+const styles = {
+  groupPrimary: {
+    fontFamily: fontFamilyTiemposText,
+    fontStyle: 'normal',
+  },
+  variantButton: {
+    fontSize: rem(14),
+    lineHeight: rem(16),
+    letterSpacing: rem(1.25),
+    textTransform: 'uppercase',
+  },
+
+  // Weights
+  weightBold: {
+    fontWeight: 'bold',
+  },
+  weightRegular: {
+    fontWeight: 'normal',
+  }
+}
+
 /**
  * This is version 3.0 of my Typography component
  *
@@ -52,7 +79,25 @@ export function Typography3(props: Props) {
   // const classes = useStyles();
   const {children, component = ComponentIs.p, group, variant, weight} = props;
 
-  // @todo mui5
+  let myStyles = {};
+
+  if (group === 'primary') {
+    myStyles = {...myStyles, ...styles.groupPrimary}
+  }
+
+  if (variant === 'button') {
+    myStyles = {...myStyles, ...styles.variantButton}
+  }
+
+  switch (weight) {
+    case 'bold':
+      myStyles = {...myStyles, ...styles.weightBold};
+      break;
+    case 'regular':
+      myStyles = {...myStyles, ...styles.weightRegular};
+      break;
+  }
+
   // const renderedComponent = useMemo(() => {
   //   const className = classNames({
   //     // Groups
@@ -78,9 +123,14 @@ export function Typography3(props: Props) {
   //
   // return <>{renderedComponent}</>;
 
-  return (
-      <div>[Typography3]</div>
-  )
+  switch (component) {
+    case ComponentIs.div:
+      return <div css={myStyles}>{children}</div>;
+    case ComponentIs.p:
+      return <p css={myStyles}>{children}</p>;
+    default:
+      throw new Error(`group="${group}" is not a valid property for Typography3`);
+  }
 }
 
 export default Typography3;

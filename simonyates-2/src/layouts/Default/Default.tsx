@@ -1,5 +1,3 @@
-// import {makeStyles, Theme} from '@material-ui/core/styles';
-// import classNames from 'classnames';
 import {ReactNode} from 'react';
 import {Helmet} from 'react-helmet-async';
 import rem from '../../styling/rem';
@@ -16,6 +14,7 @@ import {styled} from "@mui/material";
  * content sit higher on the viewport.
  */
 const fullHeightOpticalOffset = -32 - 8 - 8 - 1;
+const mainId = 'main-content';
 
 interface Props {
   /**
@@ -36,55 +35,35 @@ interface Props {
   top?: string;
 }
 
-// @todo mui5
-// const useStyles = makeStyles((theme: Theme) => ({
-//   root: {
-//     height: '100%'
-//   },
-//   main: {
-//     // marginTop: theme.spacing(162 / 8),
-//     paddingTop: theme.spacing(162 / 8),
-//   },
-//   fullHeight: {
-//     marginTop: rem(fullHeightOpticalOffset),
-//     height: '100%',
-//   },
-//   footer: {
-//     marginTop: theme.spacing(88 / 8),
-//   },
-//   footerFullHeight: {
-//     marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
-//   },
-// }));
-
-const sxStyleMain = {
-    marginTop: rem(fullHeightOpticalOffset),
-    height: '100%',
-    backgroundColor: 'magenta'
-};
-
 const StyledDivRoot = styled('div')(({theme}) => ({
   height: '100%'
+}));
+
+const StyledMain = styled('main')(({theme}) => ({
+  // marginTop: theme.spacing(162 / 8),
+  paddingTop: theme.spacing(162 / 8),
+}));
+
+const StyledMainFullHeight = styled(StyledMain)(({theme}) => ({
+  marginTop: rem(fullHeightOpticalOffset),
+  height: '100%',
 }));
 
 const StyledFooter = styled('footer')(({theme}) => ({
   marginTop: theme.spacing(88 / 8),
 }));
 
-const mainId = 'main-content';
+const StyledFooterFullHeight = styled(StyledFooter)(({theme}) => ({
+  marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
+}));
 
 export default function DefaultLayout(props: Props) {
   // const classes = useStyles();
   const {children, fullHeight, title, top} = props;
 
-  // @todo mui5
-  // const mainClass = classNames(classes.main, {
-  //   [classes.fullHeight]: fullHeight,
-  // });
-  //
-  // const footerClass = classNames(classes.footer, {
-  //   [classes.footerFullHeight]: fullHeight,
-  // });
+  const [MyMain, MyFooter] = fullHeight
+    ? [StyledMainFullHeight, StyledFooterFullHeight]
+    : [StyledMain, StyledFooter];
 
   return (
     <StyledDivRoot>
@@ -99,13 +78,13 @@ export default function DefaultLayout(props: Props) {
       </header>
 
       {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
-      <main id={mainId} style={sxStyleMain} tabIndex={-1}>
+      <MyMain id={mainId} tabIndex={-1}>
         {children}
-      </main>
+      </MyMain>
 
-      <StyledFooter>
+      <MyFooter>
         <Footer/>
-      </StyledFooter>
+      </MyFooter>
     </StyledDivRoot>
   );
 };
