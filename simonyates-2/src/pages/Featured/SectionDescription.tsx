@@ -1,11 +1,9 @@
-// import * as React from 'react';
 import Typography from '../../styling/Typography/Typography';
-// import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color/Color';
 import {styled} from "@mui/material";
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
 // const useStyles = makeStyles((theme) => ({
@@ -15,18 +13,18 @@ interface Props {
 // 	}
 // }));
 const StyledTypography = styled(Typography)(({theme}) => ({
-	marginBottom: theme.spacing(40/8),
-	color: color.grey['700']
+  marginBottom: theme.spacing(40 / 8),
+  color: color.grey['700']
 }))
 
 export default function SectionDescription(props: Props) {
-	// const classes = useStyles();
+  // const classes = useStyles();
 
-	const {children} = props;
+  const {children} = props;
 
-	return (
-		<StyledTypography group="primary" variant="body" weight="regular">
-			{children}
-		</StyledTypography>
-	);
+  return (
+    <StyledTypography group="primary" variant="body" weight="regular">
+      {children}
+    </StyledTypography>
+  );
 };

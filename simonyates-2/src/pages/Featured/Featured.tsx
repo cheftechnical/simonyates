@@ -1,7 +1,7 @@
 import DefaultLayout from '../../layouts/Default/Default';
 // import {Grid} from '@material-ui/core';
 import FeaturedPublication from './components/FeaturedPublication';
-import Sections from '../../components/Sections';
+import Sections from '../../components/Sections/Sections';
 import Section from '../../components/Section/Section';
 import NavRight from '../../components/NavRight/NavRight';
 // import {makeStyles} from '@material-ui/core/styles';
@@ -163,13 +163,13 @@ export default function Featured() {
             </Sections>
           </Grid>
 
-          {/* Gutter */}
-          <Grid item md={3}/>
+      {/*    /!* Gutter *!/*/}
+      {/*    <Grid item md={3}/>*/}
 
-          {/* Navigation */}
-          <Grid item md={3}>
-            <NavRight sections={sections}/>
-          </Grid>
+      {/*    /!* Navigation *!/*/}
+      {/*    <Grid item md={3}>*/}
+      {/*      <NavRight sections={sections}/>*/}
+      {/*    </Grid>*/}
         </MyGridContainer>
       </MyContainer>
     </DefaultLayout>

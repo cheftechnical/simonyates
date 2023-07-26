@@ -23,14 +23,24 @@ export default function Sections(props: Props) {
     if (initialized) return;
     setInitialized(true);
 
-    const sectionItems = children.map((item: any) => {
-      return {
-        id: item.props.id,
-        name: item.props.name
-      };
-    });
+    if (Array.isArray(children)) {
+      const sectionItems = children.map((item: any) => {
+        return {
+          id: item.props.id,
+          name: item.props.name
+        };
+      });
 
-    onChange(sectionItems);
+      onChange(sectionItems);
+    } else {
+      const sectionItem = {
+        id: children.props.id,
+        name: children.props.name
+      };
+
+      onChange([sectionItem]);
+    }
+
   }, [children, initialized, onChange]);
 
   return (

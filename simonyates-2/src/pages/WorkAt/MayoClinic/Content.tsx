@@ -13,7 +13,7 @@ import WorkAtEvents from '../components/WorkAtEvents';
 import WorkAtEventsGroup from '../components/WorkAtEventsGroup';
 import WorkAtEvent from '../components/WorkAtEvent';
 import Figure from '../../../components/Figure/Figure';
-import Sections from '../../../components/Sections';
+import Sections from '../../../components/Sections/Sections';
 import {WorkAtContentProps} from '../WorkAtContentProps';
 
 interface Props extends WorkAtContentProps {}

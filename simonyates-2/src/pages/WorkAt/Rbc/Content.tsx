@@ -12,7 +12,7 @@ import WorkAtEventsGroup from '../components/WorkAtEventsGroup';
 import WorkAtEvent from '../components/WorkAtEvent';
 import WorkAtPublications from '../components/WorkAtPublications';
 import WorkAtPublication from '../components/WorkAtPublication';
-import Sections from '../../../components/Sections';
+import Sections from '../../../components/Sections/Sections';
 import {SectionItem} from '../../../components/Sections/SectionItem';
 import {WorkAtContentProps} from '../WorkAtContentProps';
 

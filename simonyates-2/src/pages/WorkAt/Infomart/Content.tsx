@@ -5,7 +5,7 @@ import Callout from '../../../components/Callout/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import Typography from '../../../styling/Typography/Typography';
 import WorkAtProject from '../components/WorkAtProject';
-import Sections from '../../../components/Sections';
+import Sections from '../../../components/Sections/Sections';
 // import {makeStyles} from '@material-ui/core/styles';
 import {WorkAtContentProps} from '../WorkAtContentProps';
 import {styled} from "@mui/material";

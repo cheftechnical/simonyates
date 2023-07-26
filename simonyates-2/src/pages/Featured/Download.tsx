@@ -13,6 +13,10 @@
 //   }
 // }));
 
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import {Button, Link, styled} from "@mui/material";
+import {useCallback} from "react";
+
 interface Props {
   /**
    * The URI of of the resource to be downloaded
@@ -34,23 +38,31 @@ const defaultProps: Props = {
   href: '',
 };
 
+const StyledButton = styled(Button)(({theme}) => ({
+  // default
+}));
+
+const StyledButtonNext = styled(StyledButton)(({theme}) => ({
+  marginTop: theme.spacing(0 / 8),
+}));
+
 export default function Download(props: Props) {
   // const classes = useStyles();
   const {href, label, next} = {...defaultProps, ...props};
 
-  // @todo mui5
-  // const className = classNames([
-  //   classes.root,
-  //   {[classes.next]: next},
-  // ]);
+  const handleOnClick = useCallback(() => {
+    const link = document.createElement("a");
+    link.download = label ? label : '';
+    link.href = href;
+    link.target = '_blank';
+    link.click();
+  }, [href, label]);
 
-  // return (
-  //   <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text" target="_blank">
-  //     {label}
-  //   </Button>
-  // );
+  const MyStyledButton = (next) ? StyledButtonNext : StyledButton;
 
   return (
-      <div>[Download]</div>
-  )
+    <MyStyledButton endIcon={<ArrowRightIcon/>} onClick={handleOnClick} variant="text">
+      {label}
+    </MyStyledButton>
+  );
 };

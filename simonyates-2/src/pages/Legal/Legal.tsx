@@ -2,7 +2,7 @@ import DefaultLayout from '../../layouts/Default/Default';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsAndConditions from './TermsAndConditions';
 // import {Grid} from '@material-ui/core';
-import Sections from '../../components/Sections';
+import Sections from '../../components/Sections/Sections';
 import NavRight from '../../components/NavRight/NavRight';
 import Section from '../../components/Section/Section';
 import MyContainer from '../../styling/MyContainer/MyContainer';

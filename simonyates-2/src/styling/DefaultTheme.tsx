@@ -3,7 +3,7 @@
 // import {CSSProperties} from '@material-ui/core/styles/withStyles';
 import {color} from './Color/Color';
 import rem from './rem';
-import {CssBaseline, ThemeProvider} from "@mui/material";
+import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 
 
 const s3BasePath = 'https://s3.amazonaws.com/simonyates.ca-fonts';
@@ -145,9 +145,6 @@ const apercu = `"Apercu"`;
 // @todo apercuBoldItalic
 
 
-
-
-
 // ----[ Tiempos Text ]-------------------------------------------------------------------------------------------------
 
 const tiemposText = `"Tiempos Text"`
@@ -257,16 +254,16 @@ const containerPaddingRight = 22;
 /***********************************************************************************************************************
  * Define the theme
  /*********************************************************************************************************************/
-// const theme = createTheme({
-// 	breakpoints: {
-// 		values: {
-// 			xs: 0,
-// 			sm: 600,
-// 			md: 960,
-// 			lg: 1032 + (containerPaddingLeft/1) + (containerPaddingRight/1),   // custom: to match figma
-// 			xl: 1920,
-// 		},
-// 	},
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1032 + (containerPaddingLeft / 1) + (containerPaddingRight / 1),   // custom: to match figma
+      xl: 1920,
+    },
+  },
 // 	overrides: {
 // 		MuiButton: {
 // 			root: {
@@ -532,34 +529,30 @@ const containerPaddingRight = 22;
 // 			}
 // 		}
 // 	},
-// 	palette: {
-// 		background: {
-// 			default: color.white
-// 		}
-// 	},
+	palette: {
+		background: {
+			default: color.white
+		}
+	},
 // 	typography: {
 // 		fontFamily: tiemposText
 // 	}
-// });
+});
 
 interface Props {
-	// children: Element | (string | Element)[];
-	children: any;
+  // children: Element | (string | Element)[];
+  children: any;
 }
 
 export default function DefaultTheme(props: Props) {
-	const {children} = props;
+  const {children} = props;
 
-	// return (
-	// 	<ThemeProvider theme={theme}>
-	// 		<CssBaseline/>
-	// 		{children}
-	// 	</ThemeProvider>
-	// );
-
-	return (
-		<div>{children}</div>
-	)
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      {children}
+    </ThemeProvider>
+  );
 };
 
 

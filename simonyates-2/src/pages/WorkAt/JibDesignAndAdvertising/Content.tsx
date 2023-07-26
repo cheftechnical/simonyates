@@ -7,7 +7,7 @@ import WorkAtProject from '../components/WorkAtProject';
 import Typography from '../../../styling/Typography/Typography';
 import Callout from '../../../components/Callout/Callout';
 import Quote from '../../../components/Quote/Quote';
-import Sections from '../../../components/Sections';
+import Sections from '../../../components/Sections/Sections';
 import {WorkAtContentProps} from '../WorkAtContentProps';
 
 interface Props extends WorkAtContentProps {}

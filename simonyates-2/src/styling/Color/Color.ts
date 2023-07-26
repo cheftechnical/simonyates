@@ -38,3 +38,5 @@ export const color = {
 	},
 	white: '#FFFFFF'
 };
+
+export default color;
