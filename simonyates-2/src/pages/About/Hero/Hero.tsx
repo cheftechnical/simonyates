@@ -1,77 +1,44 @@
 import Image from '../../../components/Image/Image';
 import MyContainer from '../../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
-// import Typography from '../../../styling/Typography/Typography';
-import {Box, Grid, styled, Typography as MuiTypography} from "@mui/material";
-import themeMui from "../../../styling/ThemeMui";
-
-// const useStyles = makeStyles((themeMui) => ({
-//   box: {
-//     height: '100%'
-//   },
-//   rootDesktop: {
-//     paddingBottom: themeMui.spacing(80 / 8),
-//   },
-//   rootMobile: {
-//     paddingBottom: themeMui.spacing(26 / 8),
-//   },
-//   typographyDesktop: {
-//     paddingBottom: themeMui.spacing(72 / 8)
-//   },
-//   typographyMobile: {}
-// }));
+import {Box, Grid, styled, Typography} from "@mui/material";
 
 const StyledBox = styled(Box)(({theme}) => ({
   height: '100%'
 }));
 
 const StyledDivMyContainer = styled(MyContainer)(({theme}) => ({
-  // desktop
-  paddingBottom: theme.spacing(80 / 8),
-
   // mobile
   [theme.breakpoints.down('sm')]: {
     paddingBottom: theme.spacing(26 / 8),
+  },
+  // desktop
+  [theme.breakpoints.up('sm')]: {
+    paddingBottom: theme.spacing(80 / 8),
   }
 }));
 
-const StyledTypography = styled(MuiTypography)(({theme}) => ({
+const StyledTypography = styled(Typography)(({theme}) => ({
   // mobile
-  [themeMui.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('sm')]: {
     // nothing special
   },
   // desktop
-  [themeMui.breakpoints.up('sm')]: {
-    paddingBottom: themeMui.spacing(72 / 8),
+  [theme.breakpoints.up('sm')]: {
+    paddingBottom: theme.spacing(72 / 8),
   },
-})) as typeof MuiTypography;
+})) as typeof Typography;
 
 export default function Hero() {
-  // const themeMui = useTheme();
-  // const matchesSm = useMediaQuery(themeMui.breakpoints.down('sm'));
-
-  // const classes = useStyles();
-
-  // const rootClassName = (matchesSm)
-  //   ? classes.rootMobile
-  //   : classes.rootDesktop;
-
-  // const typographyClassName = (matchesSm)
-  //   ? classes.typographyMobile
-  //   : classes.typographyDesktop;
-
   return (
     <StyledDivMyContainer>
       <MyGridContainer>
         <Grid item md={7} xs={12}>
           <StyledBox alignItems="flex-end" display="flex">
             <Box>
-              {/*<StyledTypography component="h1" group="primary" variant="primaryH3" weight="regular">*/}
-              {/*<MuiTypography component="h1" variant="primaryH3">*/}
               <StyledTypography component="h1" variant="primaryH3">
                 Simon Yates, <br/>
                 <strong>Programmer</strong> from Toronto
-              {/*</MuiTypography>*/}
               </StyledTypography>
             </Box>
           </StyledBox>
