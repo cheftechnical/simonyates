@@ -1,9 +1,8 @@
-import Typography from '../../../styling/Typography/Typography';
-import {Hidden} from "@mui/material";
+import {Hidden, Typography} from "@mui/material";
 
 export default function Hero() {
   return (
-    <Typography component="h1" group="primary" variant="h2" weight="regular">
+    <Typography component="h1" variant="primaryH2">
       <Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
         Here is a glimpse of my life,
         mostly as a&nbsp;programmer.

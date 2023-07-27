@@ -42,11 +42,14 @@ const StyledDivRoot = styled('div')(({theme}) => ({
 const StyledMain = styled('main')(({theme}) => ({
   // marginTop: themeMui.spacing(162 / 8),
   paddingTop: theme.spacing(162 / 8),
+
+  // color: 'red !important',
 }));
 
 const StyledMainFullHeight = styled(StyledMain)(({theme}) => ({
   marginTop: rem(fullHeightOpticalOffset),
   height: '100%',
+  // color: 'green !important'
 }));
 
 const StyledFooter = styled('footer')(({theme}) => ({

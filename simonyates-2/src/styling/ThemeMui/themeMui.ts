@@ -121,7 +121,7 @@ export const themeMui = createTheme({
       xs: 0,
       sm: 600,
       md: 960,
-      lg: 1032 + (containerPaddingLeft / 1) + (containerPaddingRight / 1),   // custom: to match figma
+      lg: 1032 + containerPaddingLeft + containerPaddingRight,   // custom: to match figma
       xl: 1920,
     },
   },
@@ -296,20 +296,23 @@ export const themeMui = createTheme({
             tiemposTextBold,
             tiemposTextBoldItalic,
           ],
-          html: {
-            scrollBehavior: 'smooth',
-          },
-          'html,body': {
-            height: '100%'
-          },
-          '#root': {
-            height: '100%'
-          },
-          'ul': {
-            marginTop: 0,
-            marginLeft: '0px',
-            paddingLeft: '15px',
-          },
+        },
+        html: {
+          scrollBehavior: 'smooth',
+          // backgroundColor: 'red !important'
+        },
+        'html,body': {
+          height: '100%',
+          // backgroundColor: 'orange !important'
+        },
+        '#root': {
+          height: '100%',
+          // backgroundColor: 'green !important'
+        },
+        'ul': {  // todo, check if this section is still needed in mui5
+          marginTop: 0,
+          marginLeft: '0px',
+          paddingLeft: '15px',
         },
       }
     },
@@ -437,9 +440,7 @@ export const themeMui = createTheme({
       lineHeight: rem(88),
       letterSpacing: rem(0.5),
     },
-    primaryH2: {
-
-    },
+    primaryH2: {},
     primaryH3: {
       fontWeight: 400,
       fontSize: rem(24),
@@ -451,56 +452,28 @@ export const themeMui = createTheme({
       lineHeight: rem(32),
       letterSpacing: rem(0.25),
     },
-    primaryH3Semibold: {
-
-    },
-    primaryH4: {
-
-    },
-    primaryH4Semibold: {
-
-    },
+    primaryH3Semibold: {},
+    primaryH4: {},
+    primaryH4Semibold: {},
     primaryBody: {
       fontWeight: 400,
       fontSize: rem(16),
       lineHeight: rem(24),
       letterSpacing: rem(0.5),
     },
-    primaryBodySemibold: {
-
-    },
-    primarySubtitle: {
-
-    },
-    primaryButtonText: {
-
-    },
-    primaryButtonTextBold: {
-
-    },
-    primaryButtonContained: {
-
-    },
-    primaryCaption: {
-
-    },
+    primaryBodySemibold: {},
+    primarySubtitle: {},
+    primaryButtonText: {},
+    primaryButtonTextBold: {},
+    primaryButtonContained: {},
+    primaryCaption: {},
 
     // Secondary: Apercu
-    secondaryH3: {
-
-    },
-    secondaryBody: {
-
-    },
-    secondaryBodyLight: {
-
-    },
-    secondarySubtitle: {
-
-    },
-    secondaryCaption: {
-
-    }
+    secondaryH3: {},
+    secondaryBody: {},
+    secondaryBodyLight: {},
+    secondarySubtitle: {},
+    secondaryCaption: {}
   }
 });
 
