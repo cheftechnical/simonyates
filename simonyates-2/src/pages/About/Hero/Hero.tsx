@@ -15,7 +15,7 @@ const StyledDivMyContainer = styled(MyContainer)(({theme}) => ({
   // desktop
   [theme.breakpoints.up('sm')]: {
     paddingBottom: theme.spacing(80 / 8),
-  }
+  },
 }));
 
 const StyledTypography = styled(Typography)(({theme}) => ({
