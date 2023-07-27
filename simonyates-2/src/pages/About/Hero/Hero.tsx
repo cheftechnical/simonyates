@@ -44,10 +44,7 @@ const StyledTypography = styled(MuiTypography)(({theme}) => ({
   [themeMui.breakpoints.up('sm')]: {
     paddingBottom: themeMui.spacing(72 / 8),
   },
-
-  // color: 'magenta !important',
-  // fontSize: '200px'
-}));
+})) as typeof MuiTypography;
 
 export default function Hero() {
   // const themeMui = useTheme();
@@ -69,12 +66,13 @@ export default function Hero() {
         <Grid item md={7} xs={12}>
           <StyledBox alignItems="flex-end" display="flex">
             <Box>
-              {/*<StyledTypography component="h1" group="primary" variant="h3" weight="regular">*/}
-              <MuiTypography component="h1" variant="primaryH3">
+              {/*<StyledTypography component="h1" group="primary" variant="primaryH3" weight="regular">*/}
+              {/*<MuiTypography component="h1" variant="primaryH3">*/}
+              <StyledTypography component="h1" variant="primaryH3">
                 Simon Yates, <br/>
                 <strong>Programmer</strong> from Toronto
-              </MuiTypography>
-              {/*</StyledTypography>*/}
+              {/*</MuiTypography>*/}
+              </StyledTypography>
             </Box>
           </StyledBox>
         </Grid>
