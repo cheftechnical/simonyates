@@ -1,14 +1,14 @@
 /**
  * This component will render the welcome text and consider widows/orphans at various viewport sizes.
  */
-import Typography from '../../styling/Typography/Typography';
+// import Typography from '../../styling/Typography/Typography';
 import CenterVertically from '../../components/CenterVertically/CenterVertically';
-import {Hidden} from "@mui/material";
+import {Hidden, Typography} from "@mui/material";
 
 export default function Content() {
   return (
     <CenterVertically>
-      <Typography group="primary" variant="h1" weight="regular">
+      <Typography component="h1" variant="primaryH1">
         <Hidden only={[/*'xs',*/ 'sm', 'md', 'lg', 'xl']}>
           Hi, I&rsquo;m Simon&nbsp;Yates.<br/>
           I couldn&rsquo;t fit everything into LinkedIn,
