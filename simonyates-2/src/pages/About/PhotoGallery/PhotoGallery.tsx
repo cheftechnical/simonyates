@@ -6,7 +6,7 @@ export default function PhotoGallery() {
   return (
     <MyContainer>
       {/*<Typography group="primary" variant="body" weight="regular">*/}
-      <Typography variant="primaryBody">
+      <Typography component="p" variant="primaryBody">
         In case you&rsquo;re curious, here are some of my photos from traveling
       </Typography>
 
