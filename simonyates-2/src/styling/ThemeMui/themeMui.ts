@@ -329,6 +329,9 @@ export const themeMui = createTheme({
     },
 
     MuiLink: {
+      defaultProps: {
+        underline: 'hover'
+      },
       styleOverrides: {
         root: {
           color: color.blue['500'],
@@ -337,7 +340,7 @@ export const themeMui = createTheme({
             color: color.blue['800']
           }
         }
-      }
+      },
     },
 
     MuiInput: {

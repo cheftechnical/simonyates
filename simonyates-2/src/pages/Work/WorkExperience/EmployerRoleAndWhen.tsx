@@ -1,8 +1,6 @@
 import {Link as ReactRouterDom} from 'react-router-dom';
-import Typography from '../../../styling/Typography/Typography';
-// import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../../styling/Color/Color';
-import {styled} from "@mui/material";
+import {Link, styled, Typography} from "@mui/material";
 
 interface Props {
   employer: string;
@@ -32,12 +30,12 @@ interface Props {
 //   }
 // }));
 
-const StyledLink = styled(ReactRouterDom)(({theme}) => ({
+const StyledLink = styled(Link)(({theme}) => ({
   color: color.grey['600'],
   '&:hover': {
     color: color.grey['600'],
   }
-}));
+})) as typeof Link;
 
 const StyledSpanWhen = styled('span')(({theme}) => ({
   whiteSpace: 'nowrap'
@@ -45,16 +43,18 @@ const StyledSpanWhen = styled('span')(({theme}) => ({
 
 const StyledTypographyEmployer = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(20 / 8)
-}));
+})) as typeof Typography;
 
 export default function EmployerRollAndWhen(props: Props) {
   const {employer, href, role, when} = props;
 
   return (
-    <StyledTypographyEmployer component="h2" group="primary" variant="h3" weight="regular">
-      <StyledLink to={href}>
+    <StyledTypographyEmployer component="h2" variant="primaryH3">
+      {/*<StyledLink to={href}>*/}
+      <StyledLink component={ReactRouterDom} to={href}>
         {employer}, {role}, <StyledSpanWhen>{when}</StyledSpanWhen>
       </StyledLink>
+      {/*</StyledLink>*/}
     </StyledTypographyEmployer>
   );
 }
