@@ -13,14 +13,14 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
 // 	},
 // 	rootNext: {
-// 		paddingTop: theme.spacing(40/8),
+// 		paddingTop: themeMui.spacing(40/8),
 // 	},
 // 	name: {
-// 		marginBottom: theme.spacing(16/8),
+// 		marginBottom: themeMui.spacing(16/8),
 // 	},
 // 	when: {
 // 		color: color.grey['600'],

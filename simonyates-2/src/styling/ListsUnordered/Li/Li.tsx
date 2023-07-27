@@ -7,10 +7,10 @@ interface Props {
     className?: any;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	li: {
-// 		...theme.typography.body1,
-// 		marginBottom: theme.spacing(16/8),
+// 		...themeMui.typography.body1,
+// 		marginBottom: themeMui.spacing(16/8),
 //
 // 		marginLeft: '21px', // this moves the whole line (including bullet)
 // 		paddingLeft: 0,

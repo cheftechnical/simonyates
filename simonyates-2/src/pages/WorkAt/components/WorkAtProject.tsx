@@ -10,16 +10,16 @@ interface Props {
     when?: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //     root: {
 //
 //     },
 //     nameAndWhen: {
-//         marginBottom: theme.spacing(24/8),
+//         marginBottom: themeMui.spacing(24/8),
 //         color: color.grey['600']
 //     },
 //     next: {
-//         marginTop: theme.spacing(56/8)
+//         marginTop: themeMui.spacing(56/8)
 //     }
 // }));
 

@@ -17,16 +17,16 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
 //
 // 	},
 // 	rootNext: {
-// 		paddingTop: theme.spacing(40/8),
+// 		paddingTop: themeMui.spacing(40/8),
 // 	},
 //
 // 	caption: {
-// 		marginTop: theme.spacing((8-2) /8), // subtract 2 for automatic spacing
+// 		marginTop: themeMui.spacing((8-2) /8), // subtract 2 for automatic spacing
 //
 // 		// @todo I hate the way I coded this — the value is coming from Typography
 // 		fontFamily: '"Tiempos Text"',

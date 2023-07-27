@@ -9,9 +9,9 @@ interface Props {
 	where: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	whenWhere: {
-// 		marginBottom: theme.spacing(32/8),
+// 		marginBottom: themeMui.spacing(32/8),
 // 		color: color.grey['600']
 // 	},
 // }));

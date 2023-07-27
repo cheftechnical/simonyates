@@ -21,7 +21,7 @@ export interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme: Theme) =>
+// const useStyles = makeStyles((themeMui: Theme) =>
 //   createStyles({
 //     groupPrimary: {
 //       fontFamily: fontFamilyTiemposText,
@@ -44,7 +44,7 @@ export interface Props {
 //   })
 // );
 
-// const StyledDiv = styled('div')(({theme}) => ({
+// const StyledDiv = styled('div')(({themeMui}) => ({
 //
 // }));
 

@@ -18,9 +18,9 @@ interface Props {
   title: ReactNode | string;
 }
 
-// const useStyles = makeStyles((theme: Theme) => ({
+// const useStyles = makeStyles((themeMui: Theme) => ({
 //   next: {
-//     paddingTop: theme.spacing(2),
+//     paddingTop: themeMui.spacing(2),
 //   }
 // }));
 

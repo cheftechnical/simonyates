@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100%'
   },
   main: {
-    // marginTop: theme.spacing(162 / 8),
+    // marginTop: themeMui.spacing(162 / 8),
     paddingTop: theme.spacing(162 / 8),
   },
   fullHeight: {

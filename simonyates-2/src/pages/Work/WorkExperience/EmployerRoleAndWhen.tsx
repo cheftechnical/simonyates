@@ -11,12 +11,12 @@ interface Props {
   when: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
-//     marginBottom: theme.spacing(72 / 8)
+//     marginBottom: themeMui.spacing(72 / 8)
 //   },
 //   employer: {
-//     marginBottom: theme.spacing(20 / 8)
+//     marginBottom: themeMui.spacing(20 / 8)
 //   },
 //   h3Link: {
 //     color: color.grey['600'],
@@ -25,7 +25,7 @@ interface Props {
 //     }
 //   },
 //   readFullDetails: {
-//     marginTop: theme.spacing(32 / 8)
+//     marginTop: themeMui.spacing(32 / 8)
 //   },
 //   when: {
 //     whiteSpace: 'nowrap'

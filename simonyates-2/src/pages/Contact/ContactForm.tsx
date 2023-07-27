@@ -18,9 +18,9 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   button: {
-//     marginTop: theme.spacing(16 / 8)
+//     marginTop: themeMui.spacing(16 / 8)
 //   }
 // }));
 

@@ -16,11 +16,11 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
 //     backgroundColor: color.white,
-//     paddingTop: theme.spacing(48 / 8),
-//     paddingBottom: theme.spacing(24 / 8),
+//     paddingTop: themeMui.spacing(48 / 8),
+//     paddingBottom: themeMui.spacing(24 / 8),
 //     position: 'fixed',
 //     top: 0,
 //     width: '100%',

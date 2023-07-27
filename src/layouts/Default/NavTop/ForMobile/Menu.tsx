@@ -18,8 +18,8 @@ interface Props {
 const useStyles = makeStyles((theme) => ({
 	root: {
 		paddingTop: theme.spacing(48 / 8),
-		// paddingLeft: theme.spacing(24 / 8),
-		// paddingRight: theme.spacing(12 / 8), // visually 24, because the button consumes 12 px
+		// paddingLeft: themeMui.spacing(24 / 8),
+		// paddingRight: themeMui.spacing(12 / 8), // visually 24, because the button consumes 12 px
 		position: 'fixed',
 		backgroundColor: color.grey['900'],
 

@@ -19,10 +19,10 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   li: {
-//     marginBottom: theme.spacing(24 / 8),
-//     paddingLeft: theme.spacing(8 / 8),
+//     marginBottom: themeMui.spacing(24 / 8),
+//     paddingLeft: themeMui.spacing(8 / 8),
 //
 //     color: color.grey['500'],
 //

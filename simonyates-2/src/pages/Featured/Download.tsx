@@ -4,12 +4,12 @@
 // import classNames from 'classnames';
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
-//     marginTop: theme.spacing(24 / 8)
+//     marginTop: themeMui.spacing(24 / 8)
 //   },
 //   next: {
-//     marginTop: theme.spacing(0 / 8),
+//     marginTop: themeMui.spacing(0 / 8),
 //   }
 // }));
 

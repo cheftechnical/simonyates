@@ -25,7 +25,7 @@
 // // export default styled(()=>({
 // //     app
 // //
-// // // const useStyles = makeStyles((theme: Theme) => ({
+// // // const useStyles = makeStyles((themeMui: Theme) => ({
 // //     // ---[ Primary | H1 | 400 | Regular ]------------------------------------------------------------------------------
 // // //     primary_h1_400_regular: {
 // // //         margin: 0,
@@ -39,12 +39,12 @@
 // // //         letterSpacing: rem(-0.5),
 // // //         color: color.grey['900'],
 // // //
-// // //         // [theme.breakpoints.up('xs')]: {
+// // //         // [themeMui.breakpoints.up('xs')]: {
 // // //         //     fontSize: rem(34),
 // // //         //     lineHeight: rem(56),
 // // //         //     // color: 'red'
 // // //         // },
-// // //         // [theme.breakpoints.up('md')]: {
+// // //         // [themeMui.breakpoints.up('md')]: {
 // // //         //     fontSize: rem(54),
 // // //         //     lineHeight: primary_h1_400_regular_lineHeight,
 // // //         //     // color: 'orange'
@@ -53,10 +53,10 @@
 // // //     primary_h1_400_regular_next: {
 // // //         marginTop: primary_h1_400_regular_lineHeight,
 // // //
-// // //         // [theme.breakpoints.up('xs')]: {
+// // //         // [themeMui.breakpoints.up('xs')]: {
 // // //         //     marginTop: rem(56)
 // // //         // },
-// // //         // [theme.breakpoints.up('lg')]: {
+// // //         // [themeMui.breakpoints.up('lg')]: {
 // // //         //     marginTop: primary_h1_400_regular_lineHeight,
 // // //         // }
 // // //     },

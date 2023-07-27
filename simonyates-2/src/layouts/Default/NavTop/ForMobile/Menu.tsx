@@ -19,11 +19,11 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		paddingTop: theme.spacing(48 / 8),
-// 		// paddingLeft: theme.spacing(24 / 8),
-// 		// paddingRight: theme.spacing(12 / 8), // visually 24, because the button consumes 12 px
+// 		paddingTop: themeMui.spacing(48 / 8),
+// 		// paddingLeft: themeMui.spacing(24 / 8),
+// 		// paddingRight: themeMui.spacing(12 / 8), // visually 24, because the button consumes 12 px
 // 		position: 'fixed',
 // 		backgroundColor: color.grey['900'],
 //
@@ -43,7 +43,7 @@ interface Props {
 // 	},
 //
 // 	menuItems: {
-// 		paddingTop: theme.spacing((44 - 24 - 12) / 8),
+// 		paddingTop: themeMui.spacing((44 - 24 - 12) / 8),
 // 		textAlign: 'right'
 // 	}
 // }));
@@ -54,8 +54,8 @@ const StyledContainer = styled(Container)(({theme}) => ({
 
 const StyledDivRoot = styled('div')(({theme}) => ({
 	paddingTop: theme.spacing(48 / 8),
-	// paddingLeft: theme.spacing(24 / 8),
-	// paddingRight: theme.spacing(12 / 8), // visually 24, because the button consumes 12 px
+	// paddingLeft: themeMui.spacing(24 / 8),
+	// paddingRight: themeMui.spacing(12 / 8), // visually 24, because the button consumes 12 px
 	position: 'fixed',
 	backgroundColor: color.grey['900'],
 

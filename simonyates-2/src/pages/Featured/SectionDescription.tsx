@@ -6,9 +6,9 @@ interface Props {
   children?: any;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	intro: {
-// 		marginBottom: theme.spacing(40/8),
+// 		marginBottom: themeMui.spacing(40/8),
 // 		color: color.grey['700']
 // 	}
 // }));

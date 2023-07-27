@@ -20,7 +20,7 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
 // 		textAlign: 'center'
 // 	},

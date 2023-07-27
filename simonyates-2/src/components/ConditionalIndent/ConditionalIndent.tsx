@@ -10,7 +10,7 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme: Theme) => ({
+// const useStyles = makeStyles((themeMui: Theme) => ({
 // 	rootDesktop: {
 // 		paddingLeft: rem(40),
 // 	},
@@ -31,8 +31,8 @@ const StyledDiv = styled('div')(({theme}) => ({
 }));
 
 export default function ConditionalIndent(props: Props) {
-	// const theme = useTheme();
-	// const matchesSm = useMediaQuery(theme.breakpoints.down('sm'));
+	// const themeMui = useTheme();
+	// const matchesSm = useMediaQuery(themeMui.breakpoints.down('sm'));
 
 	// const classes = useStyles();
 	const {children, className} = props;

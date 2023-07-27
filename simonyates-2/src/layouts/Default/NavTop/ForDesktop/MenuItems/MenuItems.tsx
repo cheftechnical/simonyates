@@ -30,7 +30,7 @@ export interface Props {
 const nMilliseconds = '150ms';
 
 // @todo mui5
-// const useStyles = makeStyles((theme: Theme) =>
+// const useStyles = makeStyles((themeMui: Theme) =>
 //   createStyles({
 //
 //     ul: {
@@ -45,7 +45,7 @@ const nMilliseconds = '150ms';
 //
 //     li: {
 //       // margin: '0 2rem',
-//       marginLeft: theme.spacing(3), // controls the spacing between each menu item
+//       marginLeft: themeMui.spacing(3), // controls the spacing between each menu item
 //     },
 //
 //     liFadeIn: {},

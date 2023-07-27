@@ -1,34 +1,33 @@
-// import * as React from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
 import rem from '../../styling/rem';
+import {styled} from "@mui/material";
 
 interface Props {
-	alt: string;
-	className?: any;
-	src: string;
+  alt: string;
+  className?: any;
+  src: string;
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
 // 		marginBottom: rem(-4),
 // 		width: '100%'
 // 	}
 // }));
 
+const StyledImg = styled('img')(({theme}) => ({
+  marginBottom: rem(-4),
+  width: '100%'
+}))
+
 export default function Image(props: Props) {
-	// const classes = useStyles();
-	const {alt, className, src} = props;
+  const {alt, className, src} = props;
 
-	// return (
-	// 	<img
-	// 		alt={alt}
-	// 		className={`${classes.root} ${className}`}
-	// 		src={process.env.PUBLIC_URL + src}
-	// 	/>
-	// );
-
-	return (
-		<div>[Image]</div>
-	)
+  return (
+    <StyledImg
+      alt={alt}
+      className={`${className}`}
+      src={process.env.PUBLIC_URL + src}
+    />
+  );
 }

@@ -19,10 +19,10 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		paddingTop: theme.spacing(48 / 8),
-// 		paddingBottom: theme.spacing(24 / 8),
+// 		paddingTop: themeMui.spacing(48 / 8),
+// 		paddingBottom: themeMui.spacing(24 / 8),
 // 		position: 'fixed',
 // 		backgroundColor: color.white,
 // 		// border: '1px solid magenta',
@@ -31,7 +31,7 @@ interface Props {
 // 		zIndex: 999
 // 	},
 // 	selected: {
-// 		paddingRight: theme.spacing((16-12) / 8),
+// 		paddingRight: themeMui.spacing((16-12) / 8),
 // 		fontWeight: 'bold',
 // 		fontSize: rem(14),
 // 		lineHeight: rem(16),

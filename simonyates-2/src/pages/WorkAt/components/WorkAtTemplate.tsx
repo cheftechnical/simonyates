@@ -39,10 +39,10 @@ interface Props {
   where: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {},
 //   role: {
-//     paddingTop: theme.spacing(28 / 8),
+//     paddingTop: themeMui.spacing(28 / 8),
 //   }
 // }));
 

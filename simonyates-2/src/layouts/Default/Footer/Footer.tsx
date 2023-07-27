@@ -8,17 +8,17 @@ import MyContainer from '../../../styling/MyContainer/MyContainer';
 import rem from '../../../styling/rem';
 import {Grid, Link, styled} from "@mui/material";
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		paddingTop: theme.spacing(32 / 8),
-// 		paddingBottom: theme.spacing(24 / 8),
+// 		paddingTop: themeMui.spacing(32 / 8),
+// 		paddingBottom: themeMui.spacing(24 / 8),
 // 		backgroundColor: color.grey['900']
 // 	},
 // 	gridItemLogo: {
 // 		padding: 0,
 // 	},
 // 	gridItemLeft: {
-// 		paddingTop: theme.spacing(16/8),
+// 		paddingTop: themeMui.spacing(16/8),
 // 	},
 // 	gridItemRight: {
 // 		textAlign: 'right'

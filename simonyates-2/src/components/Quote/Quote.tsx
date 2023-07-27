@@ -24,12 +24,12 @@ export interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   rootNext: {
-//     paddingTop: theme.spacing(48 / 8),
+//     paddingTop: themeMui.spacing(48 / 8),
 //   },
 //   boxQuote: {
-//     paddingRight: theme.spacing(8 / 8),
+//     paddingRight: themeMui.spacing(8 / 8),
 //     fontFamily: `"Times New Roman"`,
 //     fontStyle: 'normal',
 //     fontWeight: 'normal',
@@ -38,7 +38,7 @@ export interface Props {
 //     color: color.lime['500'],
 //   },
 //   boxContent: {
-//     paddingTop: theme.spacing(12 / 8),
+//     paddingTop: themeMui.spacing(12 / 8),
 //   },
 //   blockquote: {
 //     margin: 0,
@@ -48,7 +48,7 @@ export interface Props {
 //     color: color.grey['800']
 //   },
 //   footer: {
-//     paddingTop: theme.spacing(16 / 8),
+//     paddingTop: themeMui.spacing(16 / 8),
 //   },
 //   footerTypography: {
 //     color: color.grey['600']

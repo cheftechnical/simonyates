@@ -8,12 +8,12 @@ interface Props {
 	title: string;
 }
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	active: {
 // 		fontWeight: 'bold',
 // 	},
 // 	button: {
-// 		marginLeft: theme.spacing((40-16)/8)
+// 		marginLeft: themeMui.spacing((40-16)/8)
 // 	}
 // }));
 

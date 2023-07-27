@@ -8,7 +8,7 @@ interface Props {
 	next?: boolean;
 }
 
-// const useStyles = makeStyles((theme: Theme) => ({
+// const useStyles = makeStyles((themeMui: Theme) => ({
 // 	root: {},
 //
 // 	next: {

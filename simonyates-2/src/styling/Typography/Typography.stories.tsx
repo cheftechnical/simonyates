@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Typography from './Typography';
-import DefaultTheme from '../DefaultTheme';
+import DefaultTheme from '../ThemeProviderWrapper';
 
 export default {title: 'Style Guide/Typography'};
 

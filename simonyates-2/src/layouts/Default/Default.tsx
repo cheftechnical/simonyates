@@ -40,7 +40,7 @@ const StyledDivRoot = styled('div')(({theme}) => ({
 }));
 
 const StyledMain = styled('main')(({theme}) => ({
-  // marginTop: theme.spacing(162 / 8),
+  // marginTop: themeMui.spacing(162 / 8),
   paddingTop: theme.spacing(162 / 8),
 }));
 

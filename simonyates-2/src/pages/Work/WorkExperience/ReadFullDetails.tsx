@@ -17,9 +17,9 @@ interface Props {
   href: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   readFullDetails: {
-//     marginTop: theme.spacing(32 / 8)
+//     marginTop: themeMui.spacing(32 / 8)
 //   }
 // }));
 

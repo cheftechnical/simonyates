@@ -8,15 +8,15 @@ import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import Hero from './Hero/Hero';
 import {Grid, styled} from "@mui/material";
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   employerFirst: {
-//     marginTop: theme.spacing(84 / 8)
+//     marginTop: themeMui.spacing(84 / 8)
 //   },
 //   employerNext: {
-//     marginTop: theme.spacing(79 / 8)
+//     marginTop: themeMui.spacing(79 / 8)
 //   },
 //   gridItemLogo: {
-//     paddingLeft: theme.spacing(8 / 8),
+//     paddingLeft: themeMui.spacing(8 / 8),
 //   }
 // }));
 

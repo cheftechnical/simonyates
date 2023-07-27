@@ -9,10 +9,10 @@ interface Props {
 }
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	chips: {
-// 		paddingTop: theme.spacing(24 / 8),
-// 		paddingBottom: theme.spacing(24 / 8),
+// 		paddingTop: themeMui.spacing(24 / 8),
+// 		paddingBottom: themeMui.spacing(24 / 8),
 // 		lineHeight: rem(48 - 4), // less 4 for the border thickness
 // 	},
 // }));

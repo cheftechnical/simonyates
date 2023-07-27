@@ -7,10 +7,10 @@ interface Props {
 	children?: any;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		marginTop: theme.spacing((80-12) / 8),
-// 		marginBottom: theme.spacing(32 / 8)
+// 		marginTop: themeMui.spacing((80-12) / 8),
+// 		marginBottom: themeMui.spacing(32 / 8)
 // 	}
 // }));
 

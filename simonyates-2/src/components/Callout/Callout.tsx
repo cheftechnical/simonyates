@@ -33,11 +33,11 @@ const defaultProps = {
 };
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
-//     marginTop: theme.spacing(24 / 8),
-//     marginBottom: theme.spacing(24 / 8),
-//     padding: theme.spacing(8 / 8),
+//     marginTop: themeMui.spacing(24 / 8),
+//     marginBottom: themeMui.spacing(24 / 8),
+//     padding: themeMui.spacing(8 / 8),
 //     backgroundColor: color.limeWithOpacity['500']['10%'],
 //     textAlign: 'center',
 //   },

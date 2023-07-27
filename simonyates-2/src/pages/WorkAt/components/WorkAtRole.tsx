@@ -7,9 +7,9 @@ interface Props {
 	children: any;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	role: {
-// 		marginBottom: theme.spacing(8/8),
+// 		marginBottom: themeMui.spacing(8/8),
 // 	},
 // }));
 

@@ -2,9 +2,9 @@
 // import {makeStyles} from '@material-ui/core/styles';
 import Logo from '../../../components/Logo';
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		paddingLeft: theme.spacing(8 / 8),
+// 		paddingLeft: themeMui.spacing(8 / 8),
 // 	}
 // }));
 

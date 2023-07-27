@@ -12,12 +12,12 @@ import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
 import {Grid, styled} from "@mui/material";
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	heading: {
-// 		marginBottom: theme.spacing(8/8)
+// 		marginBottom: themeMui.spacing(8/8)
 // 	},
 // 	body: {
-// 		marginBottom: theme.spacing(40/8),
+// 		marginBottom: themeMui.spacing(40/8),
 // 		color: color.grey['700']
 // 	}
 // }));

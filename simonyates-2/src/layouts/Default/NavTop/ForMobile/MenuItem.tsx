@@ -10,9 +10,9 @@ interface Props {
 	title: string;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {
-// 		paddingTop: theme.spacing(24 / 8)
+// 		paddingTop: themeMui.spacing(24 / 8)
 // 	},
 // 	active: {
 // 		fontWeight: 'bold',

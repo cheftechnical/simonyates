@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         color: color.grey['600']
     },
     caption: {
-        // marginBottom: theme.spacing(28/8),
+        // marginBottom: themeMui.spacing(28/8),
         lineHeight: rem(24),
         textAlign: 'center'
     }

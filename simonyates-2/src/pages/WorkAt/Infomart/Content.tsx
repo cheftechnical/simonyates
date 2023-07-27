@@ -12,9 +12,9 @@ import {styled} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   callout: {
-//     marginBottom: theme.spacing(20 / 8)
+//     marginBottom: themeMui.spacing(20 / 8)
 //   }
 // }));
 

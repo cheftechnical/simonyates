@@ -6,10 +6,10 @@ interface Props {
 	next?: boolean | undefined;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 // 	root: {},
 // 	rootNext: {
-// 		paddingTop: theme.spacing(24 / 8)
+// 		paddingTop: themeMui.spacing(24 / 8)
 // 	}
 // }));
 

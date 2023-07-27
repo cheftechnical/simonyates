@@ -7,12 +7,12 @@ interface Props {
   children: any;
 }
 
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
-//     marginBottom: theme.spacing(8 / 8)
+//     marginBottom: themeMui.spacing(8 / 8)
 //   },
 //   description: {
-//     marginBottom: theme.spacing((88 - 68) / 8), // 68 is margin top of section titles
+//     marginBottom: themeMui.spacing((88 - 68) / 8), // 68 is margin top of section titles
 //     color: color.grey['600']
 //   }
 // }));

@@ -4,14 +4,14 @@
 import {color} from '../../../styling/Color/Color';
 import MyContainer from '../../../styling/MyContainer/MyContainer';
 import StatsItem from './StatsItem';
-import {Grid, styled} from "@mui/material";
+import {Grid, Hidden, styled} from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 
 // @todo mui5
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((themeMui) => ({
 //   root: {
-//     paddingTop: theme.spacing(60 / 8),
-//     paddingBottom: theme.spacing(36 / 8),
+//     paddingTop: themeMui.spacing(60 / 8),
+//     paddingBottom: themeMui.spacing(36 / 8),
 //     backgroundColor: color.grey['50']
 //   },
 // }));
@@ -47,52 +47,45 @@ const stat: Stat[] = [
 ];
 
 export default function Stats() {
-  // const classes = useStyles();
-
-  // return (
-  //   <StyledDivRoot>
-  //     {/* Desktop */}
-  //     <Hidden smDown>
-  //       <MyContainer>
-  //         <Grid container spacing={10}>
-  //           <Grid item xs={3}>
-  //             <StatsItem {...stat[0]}/>
-  //           </Grid>
-  //           <Grid item xs={3}>
-  //             <StatsItem {...stat[1]}/>
-  //           </Grid>
-  //           <Grid item xs={3}>
-  //             <StatsItem {...stat[2]}/>
-  //           </Grid>
-  //           <Grid item xs={3}>
-  //             <StatsItem {...stat[3]}/>
-  //           </Grid>
-  //         </Grid>
-  //       </MyContainer>
-  //     </Hidden>
-  //
-  //     {/*	Mobile */}
-  //     <Hidden mdUp>
-  //       <Carousel animation="slide" autoPlay={false}>
-  //         <div>
-  //           <StatsItem {...stat[0]}/>
-  //         </div>
-  //         <div>
-  //           <StatsItem {...stat[1]}/>
-  //         </div>
-  //         <div>
-  //           <StatsItem {...stat[2]}/>
-  //         </div>
-  //         <div>
-  //           <StatsItem {...stat[3]}/>
-  //         </div>
-  //       </Carousel>
-  //     </Hidden>
-  //   </StyledDivRoot>
-  // );
-
-  // @todo mui5
   return (
-      <div>[Stats]</div>
-  )
+    <StyledDivRoot>
+      {/* Desktop */}
+      <Hidden smDown>
+        <MyContainer>
+          <Grid container spacing={10}>
+            <Grid item xs={3}>
+              <StatsItem {...stat[0]}/>
+            </Grid>
+            <Grid item xs={3}>
+              <StatsItem {...stat[1]}/>
+            </Grid>
+            <Grid item xs={3}>
+              <StatsItem {...stat[2]}/>
+            </Grid>
+            <Grid item xs={3}>
+              <StatsItem {...stat[3]}/>
+            </Grid>
+          </Grid>
+        </MyContainer>
+      </Hidden>
+
+      {/*	Mobile */}
+      <Hidden mdUp>
+        <Carousel animation="slide" autoPlay={false}>
+          <div>
+            <StatsItem {...stat[0]}/>
+          </div>
+          <div>
+            <StatsItem {...stat[1]}/>
+          </div>
+          <div>
+            <StatsItem {...stat[2]}/>
+          </div>
+          <div>
+            <StatsItem {...stat[3]}/>
+          </div>
+        </Carousel>
+      </Hidden>
+    </StyledDivRoot>
+  );
 };
