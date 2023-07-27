@@ -70,7 +70,7 @@ export default function Hero() {
           <StyledBox alignItems="flex-end" display="flex">
             <Box>
               {/*<StyledTypography component="h1" group="primary" variant="h3" weight="regular">*/}
-              <MuiTypography component="h1" variant="h3">
+              <MuiTypography component="h1" variant="primaryH3">
                 Simon Yates, <br/>
                 <strong>Programmer</strong> from Toronto
               </MuiTypography>

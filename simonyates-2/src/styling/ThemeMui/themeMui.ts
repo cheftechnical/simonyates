@@ -17,29 +17,101 @@ const containerPaddingRight = 22;
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
-    primaryBody: CSSProperties;
+    //
+    // The following are sorted by the order used in the Figma file
+    //
+
+    // Primary: Tiempo
     primaryH1: CSSProperties;
     primaryH2: CSSProperties;
+    primaryH3: CSSProperties;
     primaryH3Medium: CSSProperties;
+    primaryH3Semibold: CSSProperties;
+    primaryH4: CSSProperties;
+    primaryH4Semibold: CSSProperties;
+    primaryBody: CSSProperties;
+    primaryBodySemibold: CSSProperties;
+    primarySubtitle: CSSProperties;
+    primaryButtonText: CSSProperties;
+    primaryButtonTextBold: CSSProperties;
+    primaryButtonContained: CSSProperties;
+    primaryCaption: CSSProperties;
+
+    // Secondary: Apercu
+    secondaryH3: CSSProperties;
+    secondaryBody: CSSProperties;
+    secondaryBodyLight: CSSProperties;
+    secondarySubtitle: CSSProperties;
+    secondaryCaption: CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
-    primaryBody: CSSProperties;
+    //
+    // The following are sorted by the order used in the Figma file
+    //
+
+    // Primary: Tiempo
     primaryH1: CSSProperties;
-    primaryH2?: CSSProperties;
+    primaryH2: CSSProperties;
+    primaryH3: CSSProperties;
     primaryH3Medium: CSSProperties;
+    primaryH3Semibold: CSSProperties;
+    primaryH4: CSSProperties;
+    primaryH4Semibold: CSSProperties;
+    primaryBody: CSSProperties;
+    primaryBodySemibold: CSSProperties;
+    primarySubtitle: CSSProperties;
+    primaryButtonText: CSSProperties;
+    primaryButtonTextBold: CSSProperties;
+    primaryButtonContained: CSSProperties;
+    primaryCaption: CSSProperties;
+
+    // Secondary: Apercu
+    secondaryH3: CSSProperties;
+    secondaryBody: CSSProperties;
+    secondaryBodyLight: CSSProperties;
+    secondarySubtitle: CSSProperties;
+    secondaryCaption: CSSProperties;
   }
 }
 
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
-    primaryBody: true;
+    // Disable default variants
+    h1: false;
+    h2: false;
+    h3: false;
+    h4: false;
+
+
+    //
+    // The following are sorted by the order used in the Figma file
+    //
+
+    // Primary: Tiempo
     primaryH1: true;
     primaryH2: true;
+    primaryH3: true;
     primaryH3Medium: true;
-    // h3: false;
+    primaryH3Semibold: true;
+    primaryH4: true;
+    primaryH4Semibold: true;
+    primaryBody: true;
+    primaryBodySemibold: true;
+    primarySubtitle: true;
+    primaryButtonText: true;
+    primaryButtonTextBold: true;
+    primaryButtonContained: true;
+    primaryCaption: true;
+
+    // Secondary: Apercu
+    secondaryH3: true;
+    secondaryBody: true;
+    secondaryBodyLight: true;
+    secondarySubtitle: true;
+    secondaryCaption: true;
   }
 }
 
@@ -359,25 +431,6 @@ export const themeMui = createTheme({
 
   typography: {
     fontFamily: tiemposText,
-    h1: {
-
-    },
-    h2: {
-
-    },
-    // h3, regular
-    h3: {
-      fontWeight: 400,
-      fontSize: rem(24),
-      lineHeight: rem(32),
-    },
-
-    primaryBody: {
-      fontWeight: 400,
-      fontSize: rem(16),
-      lineHeight: rem(24),
-      letterSpacing: rem(0.5),
-    },
     primaryH1: {
       fontWeight: 400,
       fontSize: rem(54),
@@ -385,13 +438,68 @@ export const themeMui = createTheme({
       letterSpacing: rem(0.5),
     },
     primaryH2: {
-      color: 'magenta'
+
+    },
+    primaryH3: {
+      fontWeight: 400,
+      fontSize: rem(24),
+      lineHeight: rem(32),
     },
     primaryH3Medium: {
       fontWeight: 500,
       fontSize: rem(24),
       lineHeight: rem(32),
       letterSpacing: rem(0.25),
+    },
+    primaryH3Semibold: {
+
+    },
+    primaryH4: {
+
+    },
+    primaryH4Semibold: {
+
+    },
+    primaryBody: {
+      fontWeight: 400,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5),
+    },
+    primaryBodySemibold: {
+
+    },
+    primarySubtitle: {
+
+    },
+    primaryButtonText: {
+
+    },
+    primaryButtonTextBold: {
+
+    },
+    primaryButtonContained: {
+
+    },
+    primaryCaption: {
+
+    },
+
+    // Secondary: Apercu
+    secondaryH3: {
+
+    },
+    secondaryBody: {
+
+    },
+    secondaryBodyLight: {
+
+    },
+    secondarySubtitle: {
+
+    },
+    secondaryCaption: {
+
     }
   }
 });
