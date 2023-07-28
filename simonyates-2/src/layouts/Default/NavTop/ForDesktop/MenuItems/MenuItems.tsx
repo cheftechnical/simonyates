@@ -1,14 +1,9 @@
-import {css} from '@emotion/react';
-
-// import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import './index.css';
-// import classNames from 'classnames';
-import Typography3 from '../../../../../components/Typography3/Typography3';
 import {color} from '../../../../../styling/Color/Color';
 import rem from '../../../../../styling/rem';
-import {styled} from "@mui/material";
+import {Link, styled, Typography} from "@mui/material";
 import {useMemo} from "react";
-import {render} from "@testing-library/react";
+import {Link as ReactRouterDomLink} from 'react-router-dom';
 
 enum Variant {
   FadeIn = 'fadeIn',
@@ -121,6 +116,18 @@ const StyledLi = styled('li')(({theme}) => ({
   marginLeft: theme.spacing(3), // controls the spacing between each menu item
 }));
 
+const StyledLiCenter = styled(StyledLi)(({theme}) => ({
+  '& a::after': {
+    opacity: '1',
+    transform: 'scale(0)',
+    transformOrigin: 'center',
+  },
+
+  '& a:hover::after, & a:focus::after': {
+    transform: 'scale(1)',
+  },
+}));
+
 const StyledLiFadeIn = styled(StyledLi)(({theme}) => ({
   // do nothing
 }));
@@ -144,18 +151,6 @@ const StyledLiSlideIn = styled(StyledLi)(({theme}) => ({
   }
 }));
 
-const StyledLiCenter = styled(StyledLi)(({theme}) => ({
-  '& a::after': {
-    opacity: '1',
-    transform: 'scale(0)',
-    transformOrigin: 'center',
-  },
-
-  '& a:hover::after, & a:focus::after': {
-    transform: 'scale(1)',
-  },
-}));
-
 const StyledUl = styled('ul')(({theme}) => ({
   listStyle: 'none',
   margin: '0',
@@ -166,7 +161,7 @@ const StyledUl = styled('ul')(({theme}) => ({
   justifyContent: 'center',
 }))
 
-const StyledA = styled('a')(({theme}) => ({
+const StyledReactRouterDomLink = styled(ReactRouterDomLink)(({theme}) => ({
   color: 'inherit',
   textDecoration: 'none',
 
@@ -197,7 +192,7 @@ const StyledA = styled('a')(({theme}) => ({
   }
 }));
 
-const StyledAFadeIn = styled(StyledA)(({theme}) => ({}));
+const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(({theme}) => ({}));
 
 export function MenuItems(props: Props) {
   // const classes = useStyles();
@@ -226,52 +221,44 @@ export function MenuItems(props: Props) {
     }
   }, [variant]);
 
-  const MyStyledA = (variant === Variant.FadeIn)
-    ? StyledAFadeIn
-    : StyledA;
+  const MyStyledReactRouterDomLink = (variant === Variant.FadeIn)
+    ? StyledReactRouterDomLinkFadeIn
+    : StyledReactRouterDomLink;
 
   return (
     <div role="navigation">
       <StyledUl>
         <MyLi>
-          <Typography3
-            component="div"
-            group="primary"
-            variant="button"
-            weight={selected === 'work' ? 'bold' : 'regular'}
+          <Typography
+            fontWeight={selected === 'work' ? 'bold' : 'regular'}
+            variant="primaryButtonText"
           >
-            <MyStyledA href="/work">Work</MyStyledA>
-          </Typography3>
+            <MyStyledReactRouterDomLink to="/work">Work</MyStyledReactRouterDomLink>
+          </Typography>
         </MyLi>
         <MyLi>
-          <Typography3
-            component="div"
-            group="primary"
-            variant="button"
-            weight={selected === 'featured' ? 'bold' : 'regular'}
+          <Typography
+            fontWeight={selected === 'featured' ? 'bold' : 'regular'}
+            variant="primaryButtonText"
           >
-            <MyStyledA href="/featured">Featured</MyStyledA>
-          </Typography3>
+            <MyStyledReactRouterDomLink to="/featured">Featured</MyStyledReactRouterDomLink>
+          </Typography>
         </MyLi>
         <MyLi>
-          <Typography3
-            component="div"
-            group="primary"
-            variant="button"
-            weight={selected === 'about' ? 'bold' : 'regular'}
+          <Typography
+            fontWeight={selected === 'about' ? 'bold' : 'regular'}
+            variant="primaryButtonText"
           >
-            <MyStyledA href="/about">About</MyStyledA>
-          </Typography3>
+            <MyStyledReactRouterDomLink to="/about">About</MyStyledReactRouterDomLink>
+          </Typography>
         </MyLi>
         <MyLi>
-          <Typography3
-            component="div"
-            group="primary"
-            variant="button"
-            weight={selected === 'contact' ? 'bold' : 'regular'}
+          <Typography
+            fontWeight={selected === 'contact' ? 'bold' : 'regular'}
+            variant="primaryButtonText"
           >
-            <MyStyledA href="/contact">Contact</MyStyledA>
-          </Typography3>
+            <MyStyledReactRouterDomLink to="/contact">Contact</MyStyledReactRouterDomLink>
+          </Typography>
         </MyLi>
       </StyledUl>
     </div>

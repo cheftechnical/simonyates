@@ -86,6 +86,7 @@ declare module '@mui/material/Typography' {
     h2: false;
     h3: false;
     h4: false;
+    button: false;
 
 
     //
@@ -489,7 +490,14 @@ export const themeMui = createTheme({
     },
     primaryBodySemibold: {},
     primarySubtitle: {},
-    primaryButtonText: {},
+    primaryButtonText: {
+      fontWeight: 400,
+      fontSize: rem(14),
+      lineHeight: rem(16),
+      letterSpacing: rem(1.25),
+      textTransform: 'uppercase'
+
+    },
     primaryButtonTextBold: {},
     primaryButtonContained: {},
     primaryCaption: {},
