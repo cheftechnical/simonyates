@@ -7,6 +7,7 @@ const About = lazy(() => import('./pages/About/About'));
 const Featured = lazy(() => import('./pages/Featured'));
 const Home = lazy(() => import('./pages/Home'));
 const NoMatch = lazy(() => import('./pages/NoMatch'));
+const Rbc = lazy(() => import('./pages/workAt/Rbc'));
 const Work = lazy(() => import('./pages/Work'));
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Suspense fallback={<LinearProgress/>}>
           <Routes>
             {/*<Route path="/work/uncharted-software" component={UnchartedSoftware}/>*/}
-            {/*<Route path="/work/rbc" component={Rbc}/>*/}
+            <Route path="/work/rbc" element={<Rbc/>}/>
             {/*<Route path="/work/mayo-clinic" component={MayoClinic}/>*/}
             {/*<Route path="/work/jib-design-and-advertising" component={JibDesignAndAdvertising}/>*/}
             {/*<Route path="/work/infomart" component={Infomart}/>*/}

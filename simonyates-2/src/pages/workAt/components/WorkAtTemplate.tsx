@@ -7,6 +7,7 @@ import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
 import WorkAtEmployer from './WorkAtEmployer';
 import WorkAtRole from './WorkAtRole';
 import WorkAtWhenWhere from './WorkAtWhenWhere';
+import {Box, Grid, Hidden} from "@mui/material";
 
 interface Props {
   /**
@@ -62,56 +63,53 @@ export default function WorkAtTemplate(props: Props) {
     return (<WorkAtWhenWhere when={when} where={where}/>);
   }, [when, where]);
 
-  // return (
-  //   <MyContainer className={classes.root}>
-  //     <MyGridContainer>
-  //       {/* Avatar */}
-  //       <Grid item sm={1} xs={2}>
-  //         {logo}
-  //       </Grid>
-  //
-  //       {/* Show for mobile (xs, sm) */}
-  //       <Hidden mdUp>
-  //         {/* Content */}
-  //         <Grid item sm={6} xs={10}>
-  //           <CenterVertically>
-  //             {renderedWorkAtEmployer}
-  //           </CenterVertically>
-  //         </Grid>
-  //         <Grid item sm={12} xs={12}>
-  //           {renderedWorkAtRole}
-  //           {renderedWorkAtWhenWhere}
-  //           {content}
-  //         </Grid>
-  //       </Hidden>
-  //
-  //       {/* Show for desktop (md, lg, xl) */}
-  //       <Hidden smDown>
-  //         {/* Content */}
-  //         <Grid item sm={6} xs={10}>
-  //           <div>
-  //             {renderedWorkAtEmployer}
-  //           </div>
-  //           <div className={classes.role}>
-  //             {renderedWorkAtRole}
-  //           </div>
-  //           {renderedWorkAtWhenWhere}
-  //           {content}
-  //         </Grid>
-  //
-  //         {/* Gutter */}
-  //         <Grid item md={2}/>
-  //
-  //         {/* Navigation */}
-  //         <Grid item md={3}>
-  //           <NavRight sections={sections}/>
-  //         </Grid>
-  //       </Hidden>
-  //     </MyGridContainer>
-  //   </MyContainer>
-  // );
-
   return (
-      <div>{content}</div>
-  )
+    <MyContainer>
+      <MyGridContainer>
+        {/* Avatar */}
+        <Grid item sm={1} xs={2}>
+          {logo}
+        </Grid>
+
+        {/* Show for mobile (xs, sm) */}
+        <Hidden mdUp>
+          {/* Content */}
+          <Grid item sm={6} xs={10}>
+            <CenterVertically>
+              {renderedWorkAtEmployer}
+            </CenterVertically>
+          </Grid>
+          <Grid item sm={12} xs={12}>
+            {renderedWorkAtRole}
+            {renderedWorkAtWhenWhere}
+            {content}
+          </Grid>
+        </Hidden>
+
+        {/* Show for desktop (md, lg, xl) */}
+        <Hidden smDown>
+          {/* Content */}
+          <Grid item sm={6} xs={10}>
+            <div>
+              {renderedWorkAtEmployer}
+            </div>
+            {/*<div className={classes.role}>*/}
+            <Box pt="3.5">
+              {renderedWorkAtRole}
+            </Box>
+            {renderedWorkAtWhenWhere}
+            {content}
+          </Grid>
+
+          {/* Gutter */}
+          <Grid item md={2}/>
+
+          {/* Navigation */}
+          <Grid item md={3}>
+            <NavRight sections={sections}/>
+          </Grid>
+        </Hidden>
+      </MyGridContainer>
+    </MyContainer>
+  );
 };

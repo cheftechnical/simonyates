@@ -1,8 +1,6 @@
 import {ReactNode, useMemo} from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
 import {color} from '../../styling/Color/Color';
-import Typography from '../../styling/Typography/Typography';
-// import classNames from 'classnames';
+import {styled, Typography} from "@mui/material";
 
 export interface Props {
   /**
@@ -51,6 +49,14 @@ const defaultProps = {
 //     marginBottom: 0,
 //   }
 // }));
+
+const StyledDivRoot = styled('div')(({theme}) => ({
+  marginTop: theme.spacing(24 / 8),
+  marginBottom: theme.spacing(24 / 8),
+  padding: theme.spacing(8 / 8),
+  backgroundColor: color.limeWithOpacity['500']['10%'],
+  textAlign: 'center',
+}));
 
 interface DelimiterProps {
   index: number;
@@ -129,16 +135,11 @@ export default function Callout(props: Props) {
   //   {[classes.typography]: variant !== 'alert'},
   // ]);
 
-  // @todo mui5
-  // return (
-  //   <div className={rootClassName}>
-  //     <Typography className={typographyClassName} group="secondary" variant="body" weight="regular">
-  //       {content}
-  //     </Typography>
-  //   </div>
-  // );
-
   return (
-      <div>[Callout]</div>
-  )
+    <StyledDivRoot sx={{marginBottom: noBottomGutter ? 0 : ''}}>
+      <Typography sx={{color: variant === 'alert' ? color.red['400'] : color.grey['700']}} variant="secondaryBody">
+        {content}
+      </Typography>
+    </StyledDivRoot>
+  );
 };

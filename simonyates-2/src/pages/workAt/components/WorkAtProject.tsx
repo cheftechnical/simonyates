@@ -1,6 +1,4 @@
-import * as React from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../../styling/Typography/Typography';
+import {Box, styled, Typography} from "@mui/material";
 import {color} from '../../../styling/Color/Color';
 
 interface Props {
@@ -23,6 +21,11 @@ interface Props {
 //     }
 // }));
 
+const StyledTypography = styled(Typography)(({theme}) => ({
+    marginBottom: theme.spacing(24/8),
+    color: color.grey['600']
+})) as typeof Typography;
+
 export default function WorkAtProject(props: Props) {
     // const classes = useStyles();
     const {children, name, next, when} = props;
@@ -32,17 +35,13 @@ export default function WorkAtProject(props: Props) {
     //     : `${classes.root}`
 
     const optionalWhen = (when)
-        ? <React.Fragment>, {when}</React.Fragment>
-        : <React.Fragment/>;
-
-    // return (
-    //     <div className={className}>
-    //         <Typography className={classes.nameAndWhen} component="h3" group="primary" variant="h4" weight="semibold">{name}{optionalWhen}</Typography>
-    //         <div>{children}</div>
-    //     </div>
-    // );
+        ? <>, {when}</>
+        : <></>;
 
     return (
-        <div>[WorkAtProject]</div>
-    )
+        <Box mt={next ? 56/8 : 0}>
+            <StyledTypography component="h3" variant="primaryH4Semibold">{name}{optionalWhen}</StyledTypography>
+            <div>{children}</div>
+        </Box>
+    );
 };

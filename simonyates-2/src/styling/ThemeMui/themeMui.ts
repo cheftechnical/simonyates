@@ -30,6 +30,7 @@ declare module '@mui/material/styles' {
     primaryH4: CSSProperties;
     primaryH4Semibold: CSSProperties;
     primaryBody: CSSProperties;
+    primaryBodyNext: CSSProperties;
     primaryBodySemibold: CSSProperties;
     primarySubtitle: CSSProperties;
     primaryButtonText: CSSProperties;
@@ -60,6 +61,7 @@ declare module '@mui/material/styles' {
     primaryH4: CSSProperties;
     primaryH4Semibold: CSSProperties;
     primaryBody: CSSProperties;
+    primaryBodyNext: CSSProperties;
     primaryBodySemibold: CSSProperties;
     primarySubtitle: CSSProperties;
     primaryButtonText: CSSProperties;
@@ -99,6 +101,7 @@ declare module '@mui/material/Typography' {
     primaryH4: true;
     primaryH4Semibold: true;
     primaryBody: true;
+    primaryBodyNext: true;
     primaryBodySemibold: true;
     primarySubtitle: true;
     primaryButtonText: true;
@@ -456,13 +459,33 @@ export const themeMui = createTheme({
       letterSpacing: rem(0.25),
     },
     primaryH3Semibold: {},
-    primaryH4: {},
-    primaryH4Semibold: {},
+    primaryH4: {
+      fontWeight: 500,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5)
+    },
+    primaryH4Semibold: {
+      fontWeight: 600,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5)
+    },
     primaryBody: {
       fontWeight: 400,
       fontSize: rem(16),
       lineHeight: rem(24),
       letterSpacing: rem(0.5),
+    },
+    primaryBodyNext: {
+      // same as body
+      fontWeight: 400,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5),
+
+      // additional space
+      marginTop: rem(24), // lineHeight
     },
     primaryBodySemibold: {},
     primarySubtitle: {},

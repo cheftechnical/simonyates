@@ -3,7 +3,6 @@ import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
-import Typography from '../../../styling/Typography/Typography';
 import Callout from '../../../components/Callout/Callout';
 import Ul from '../../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../../styling/ListsUnordered/Li/Li';
@@ -15,6 +14,7 @@ import WorkAtPublication from '../components/WorkAtPublication';
 import Sections from '../../../components/Sections/Sections';
 import {SectionItem} from '../../../components/Sections/SectionItem';
 import {WorkAtContentProps} from '../WorkAtContentProps';
+import {Typography} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
@@ -41,13 +41,13 @@ export default function Content(props: Props) {
 
         <WorkAtProjects>
           <WorkAtProject name="SRE Global Dashboard" when="2019–Present">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               The <em>SRE Global Dashboard</em> is a collection of dashboards that were designed to be accessed by
               everyone within RBC. Directors, product managers and engineers rely on this data to monitor the
               availability of more than 600 APIs and&nbsp;applications.
             </Typography>
 
-            <Typography next group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBodyNext">
               I conceptualized the idea of this project after we (the SRE team) exhausted the capabilities of the
               Elastic Kibana platform. Kibana is great for rapid visualization of data, but there are significant
               limitations in the types of reporting it can do. I designed and created a stand-alone application that
@@ -79,7 +79,7 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="Seven Years of Transaction Data" when="2019–Present">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               Before this software project began, I fought for certain architectural changes that would ensure
               Elasticsearch could function at scale. The project was already well underway before I got involved; it was
               built by a team other than my own and I was relatively new at RBC. So it was an uphill battle right from
@@ -115,18 +115,18 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="Chatbot" when="2019–Present">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               The SRE team receives dozens of emails every day, many of which are internal customers asking the same
               general questions, but are specific to their APIs. These customers expected an immediate answer, but the
               team was not large enough to provide an immediate&nbsp;response.
             </Typography>
 
-            <Typography next group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBodyNext">
               RBC&rsquo;s official Chatbot vendor (the one you'll use on rbc.com), was not capable of providing
               real-time answers from different sources and could only respond with pre-composed&nbsp;messages.
             </Typography>
 
-            <Typography next group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBodyNext">
               I built the chatbot from the ground-up to respond to these questions, and answers were sourced from a
               variety of APIs to provide real-time metrics in its&nbsp;response.
             </Typography>
@@ -151,13 +151,13 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="OAuth Client Creator for RBC Capital Markets" when="2020–Present">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               PingFederate&rsquo;s API system does not support access control layers which are necessary to control who
               can manage OAuth client IDs. I built a system to provide this level of control over-top of
               PingFederate&rsquo;s existing core&nbsp;APIs.
             </Typography>
 
-            <Typography next group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBodyNext">
               This application allowed RBC to:
             </Typography>
 
@@ -181,7 +181,7 @@ export default function Content(props: Props) {
           Machine Learning / Artificial Intelligence
         </WorkAtSectionTitle>
 
-        <Typography group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBody">
           I used machine learning libraries in Python to automate some of the activities supported by the SRE team. Many
           of these uses are described above, but some of the key highlights&nbsp;include:
         </Typography>
@@ -211,7 +211,7 @@ export default function Content(props: Props) {
 
         <WorkAtProjects>
           <WorkAtProject name="Cost Chargeback Model" when="2019–Present">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               In 2020, the SRE team moved to a chargeback costing model. Costs for the services supported by the team
               were often a mix of direct and shared costs. The pricing model I designed used API request logs to weigh
               the fixed and variable costs associated each service, then provide a total service costs to each business
@@ -247,7 +247,7 @@ export default function Content(props: Props) {
           Events
         </WorkAtSectionTitle>
 
-        <Typography group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBody">
           I frequently create presentations about the different projects that I&rdquo;m working on for our bi-weekly
           town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning
           for <em>Catalyst</em>, which is an RBC–specific event taking place during the week of Toronto&rdquo;s popular

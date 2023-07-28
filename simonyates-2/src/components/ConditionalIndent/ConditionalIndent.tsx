@@ -21,13 +21,15 @@ interface Props {
 // }));
 
 const StyledDiv = styled('div')(({theme}) => ({
-	// desktop (default)
-	paddingLeft: rem(40),
-
 	[theme.breakpoints.down('sm')]: {
 		// for mobile
 		paddingLeft: 0
 	},
+
+	[theme.breakpoints.up('sm')]: {
+		// desktop (default)
+		paddingLeft: rem(40),
+	}
 }));
 
 export default function ConditionalIndent(props: Props) {

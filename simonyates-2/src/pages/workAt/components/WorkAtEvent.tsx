@@ -1,7 +1,5 @@
-import Typography from '../../../styling/Typography/Typography';
-// import {makeStyles, Theme} from '@material-ui/core/styles';
 import {ReactNode} from 'react';
-// import classNames from 'classnames';
+import {Box, Typography, useTheme} from "@mui/material";
 
 interface Props {
   /**
@@ -38,15 +36,13 @@ export default function WorkAtEvent(props: Props) {
   //   [classes.next]: next,
   // });
 
-  // return (
-  //   <div className={className}>
-  //     <Typography group="primary" variant="body" weight="regular">
-  //       {date} &bull; {title}
-  //     </Typography>
-  //   </div>
-  // );
-
   return (
-      <div>[WorkAtEvent]</div>
-  )
+    <Box sx={(theme) => ({
+      paddingTop: next ? theme.spacing(2) : 0
+    })}>
+      <Typography component="p" variant="primaryBody">
+        {date} &bull; {title}
+      </Typography>
+    </Box>
+  );
 };
