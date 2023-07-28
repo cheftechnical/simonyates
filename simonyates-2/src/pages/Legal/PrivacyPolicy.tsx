@@ -1,8 +1,7 @@
-// import * as React from 'react';
-import Typography from '../../styling/Typography/Typography';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import {h2, h3, paragraph, subtitle} from './defaults';
+import {Typography} from '@mui/material';
 
 const legalName = 'Sybaris Analytics Corporation';
 const tradeName = 'Sybaris';
@@ -12,33 +11,33 @@ const address = '';
 export default function PrivacyPolicy() {
 	return (
 		<div>
-			<Typography {...h2}>
+			<Typography component="h1" variant="primaryH2">
 				Privacy Policy
 			</Typography>
 
-			<Typography next {...subtitle}>
+			<Typography component="p" variant="primarySubtitleNext">
 				This Privacy Policy applies to all of the products, services and websites of {legalName}, or its
 				subsidiaries or affiliated&nbsp;companies.
 			</Typography>
 
-			<Typography next {...subtitle}>
+			<Typography component="p" variant="primarySubtitleNext">
 				If you have any questions about this Privacy Policy, please feel free to contact us trough our website,
 				or write to us&nbsp;at:
 			</Typography>
 
 			<address>
-				<Typography next {...paragraph}>
+				<Typography component="p" variant="primaryBodyNext">
 					Privacy Matters<br/>
 					c/o {legalName}<br/>
 					{address}
 				</Typography>
 			</address>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Information we collect, and how we use&nbsp;it:
 			</Typography>
 
-			<Typography next{...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				We may collect the following types of&nbsp;information:
 			</Typography>
 
@@ -98,7 +97,7 @@ export default function PrivacyPolicy() {
 				</Li>
 			</Ul>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				In addition to the above, we may use the information we collect&nbsp;to:
 			</Typography>
 
@@ -112,21 +111,21 @@ export default function PrivacyPolicy() {
 				</Li>
 			</Ul>
 
-			<Typography {...paragraph}>
+			<Typography component="p" variant="primaryBody">
 				If we use this information in a manner different than the purpose for which it was collected, then we
 				will ask for your consent prior to such&nbsp;use.
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				{tradeName} process personal information on our services in the Canada and other
 				countries. In some cases, we process personal information out of your own&nbsp;country.
 			</Typography>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Information Sharing
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				{legalName} only shares personal information with other companies or individuals outside of {legalName}
 				in the following limited&nbsp;circumstances:
 			</Typography>
@@ -161,29 +160,29 @@ export default function PrivacyPolicy() {
 				</Li>
 			</Ul>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Information Security
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				We take appropriate security measures to protect against unauthorized access to, or unauthorized
 				alteration, disclosure or destruction of data. These include internal reviews of our data collection,
 				storage and processing practices and security measures, including appropriate encryption and physical
 				security measures to guard against unauthorized access to systems where we store personal&nbsp;data.
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				We restrict access to personal information to {legalName} employees, contractors and agents who need to
 				know that information in order to process it on our behalf. These individuals are bound by
 				confidentiality obligations and may be subject to discipline, including termination and criminal
 				prosecution, if they fail to meet these&nbsp;obligations.
 			</Typography>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Accessing and updating personal&nbsp;information
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				When you use {tradeName} services, we make good faith efforts to provide you with access to your
 				personal information and either correct this data if it is inaccurate or delete such data at your
 				request if it is not otherwise required to be retained by law or for legitimate business purposes. We
@@ -199,11 +198,11 @@ export default function PrivacyPolicy() {
 				more&nbsp;information.
 			</Typography>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Enforcement
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				{tradeName} regularly reviews its compliance with this Privacy Policy. When we receive formal written
 				complaints, it is {tradeName}&rsquo;s policy to contact the complaining user regarding his or her
 				concerns. We will cooperate with the appropriate regulatory authorities, including local data protection
@@ -211,11 +210,11 @@ export default function PrivacyPolicy() {
 				between {legalName} and an&nbsp;individual.
 			</Typography>
 
-			<Typography next {...h3}>
+			<Typography component="h2" variant="primaryH3Next">
 				Changes to this Privacy&nbsp;Policy
 			</Typography>
 
-			<Typography next {...paragraph}>
+			<Typography component="p" variant="primaryBodyNext">
 				Please note that this Privacy Policy may change from time to time. We will not reduce your rights under
 				this Privacy Policy without your explicit consent. We will post any Privacy Policy changes on this page
 				and, if the changes are significant, we will provide a more prominent notice (including, for certain

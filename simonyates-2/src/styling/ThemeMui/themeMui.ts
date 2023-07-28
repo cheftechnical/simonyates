@@ -25,6 +25,7 @@ declare module '@mui/material/styles' {
     primaryH1: CSSProperties;
     primaryH2: CSSProperties;
     primaryH3: CSSProperties;
+    primaryH3Next: CSSProperties;
     primaryH3Medium: CSSProperties;
     primaryH3Semibold: CSSProperties;
     primaryH4: CSSProperties;
@@ -33,6 +34,7 @@ declare module '@mui/material/styles' {
     primaryBodyNext: CSSProperties;
     primaryBodySemibold: CSSProperties;
     primarySubtitle: CSSProperties;
+    primarySubtitleNext: CSSProperties;
     primaryButtonText: CSSProperties;
     primaryButtonTextBold: CSSProperties;
     primaryButtonContained: CSSProperties;
@@ -56,6 +58,7 @@ declare module '@mui/material/styles' {
     primaryH1: CSSProperties;
     primaryH2: CSSProperties;
     primaryH3: CSSProperties;
+    primaryH3Next: CSSProperties;
     primaryH3Medium: CSSProperties;
     primaryH3Semibold: CSSProperties;
     primaryH4: CSSProperties;
@@ -64,6 +67,7 @@ declare module '@mui/material/styles' {
     primaryBodyNext: CSSProperties;
     primaryBodySemibold: CSSProperties;
     primarySubtitle: CSSProperties;
+    primarySubtitleNext: CSSProperties;
     primaryButtonText: CSSProperties;
     primaryButtonTextBold: CSSProperties;
     primaryButtonContained: CSSProperties;
@@ -97,6 +101,7 @@ declare module '@mui/material/Typography' {
     primaryH1: true;
     primaryH2: true;
     primaryH3: true;
+    primaryH3Next: true;
     primaryH3Medium: true;
     primaryH3Semibold: true;
     primaryH4: true;
@@ -105,6 +110,7 @@ declare module '@mui/material/Typography' {
     primaryBodyNext: true;
     primaryBodySemibold: true;
     primarySubtitle: true;
+    primarySubtitleNext: true;
     primaryButtonText: true;
     primaryButtonTextBold: true;
     primaryButtonContained: true;
@@ -447,11 +453,24 @@ export const themeMui = createTheme({
       lineHeight: rem(88),
       letterSpacing: rem(0.5),
     },
-    primaryH2: {},
+    primaryH2: {
+      fontWeight: 400,
+      fontSize: rem(34),
+      lineHeight: rem(56),
+      letterSpacing: rem(0.25),
+    },
     primaryH3: {
       fontWeight: 400,
       fontSize: rem(24),
       lineHeight: rem(32),
+    },
+    primaryH3Next: {
+      fontWeight: 400,
+      fontSize: rem(24),
+      lineHeight: rem(32),
+
+      // additional space
+      marginTop: rem(32), // lineHeight
     },
     primaryH3Medium: {
       fontWeight: 500,
@@ -489,7 +508,20 @@ export const themeMui = createTheme({
       marginTop: rem(24), // lineHeight
     },
     primaryBodySemibold: {},
-    primarySubtitle: {},
+    primarySubtitle: {
+      fontWeight: 400,
+      fontSize: rem(14),
+      lineHeight: rem(16),
+      letterSpacing: rem(0.25),
+    },
+    primarySubtitleNext: {
+      fontWeight: 400,
+      fontSize: rem(14),
+      lineHeight: rem(16),
+      letterSpacing: rem(0.25),
+
+      marginTop: rem(16), // same as line height
+    },
     primaryButtonText: {
       fontWeight: 400,
       fontSize: rem(14),

@@ -1,9 +1,8 @@
-// import * as React from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
+import {styled} from "@mui/material";
 
 interface Props {
-	children: any;
-	next?: boolean | undefined;
+  children: any;
+  next?: boolean | undefined;
 }
 
 // const useStyles = makeStyles((themeMui) => ({
@@ -13,23 +12,26 @@ interface Props {
 // 	}
 // }));
 
+const StyledUl = styled('ul')(({theme}) => ({}));
+
+const StyledUlNext = styled(StyledUl)(({theme}) => ({
+  paddingTop: theme.spacing(24 / 8)
+}))
+
 export default function Ul(props: Props) {
-	// const classes = useStyles();
-	const {children, next} = props;
+  // const classes = useStyles();
+  const {children, next} = props;
 
-	// const rootClassName = (next)
-	// 	? `${classes.root} ${classes.rootNext}`
-	// 	: classes.root;
-	//
-	// return (
-	// 	<ul className={rootClassName}>
-	// 		{children}
-	// 	</ul>
-	// );
+  // const rootClassName = (next)
+  // 	? `${classes.root} ${classes.rootNext}`
+  // 	: classes.root;
+  //
 
-	return (
-		<ul>
-			{children}
-		</ul>
-	)
+  const MyStyledUl = (next)
+    ? StyledUlNext
+    : StyledUl;
+
+  return (
+    <MyStyledUl>{children}</MyStyledUl>
+  );
 };
