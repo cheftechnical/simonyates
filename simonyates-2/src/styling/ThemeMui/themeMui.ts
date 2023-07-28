@@ -24,6 +24,7 @@ declare module '@mui/material/styles' {
     // Primary: Tiempo
     primaryH1: CSSProperties;
     primaryH2: CSSProperties;
+    primaryH2Next: CSSProperties;
     primaryH3: CSSProperties;
     primaryH3Next: CSSProperties;
     primaryH3Medium: CSSProperties;
@@ -58,6 +59,7 @@ declare module '@mui/material/styles' {
     // Primary: Tiempo
     primaryH1: CSSProperties;
     primaryH2: CSSProperties;
+    primaryH2Next: CSSProperties;
     primaryH3: CSSProperties;
     primaryH3Next: CSSProperties;
     primaryH3Medium: CSSProperties;
@@ -102,6 +104,7 @@ declare module '@mui/material/Typography' {
     // Primary: Tiempo
     primaryH1: true;
     primaryH2: true;
+    primaryH2Next: true;
     primaryH3: true;
     primaryH3Next: true;
     primaryH3Medium: true;
@@ -461,6 +464,15 @@ export const themeMui = createTheme({
       fontSize: rem(34),
       lineHeight: rem(56),
       letterSpacing: rem(0.25),
+    },
+    primaryH2Next: {
+      fontWeight: 400,
+      fontSize: rem(34),
+      lineHeight: rem(56),
+      letterSpacing: rem(0.25),
+
+      // additional space
+      marginTop: rem(56), // same as lineHeight
     },
     primaryH3: {
       fontWeight: 400,

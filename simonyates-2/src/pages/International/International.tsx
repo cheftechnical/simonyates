@@ -1,5 +1,5 @@
 // import {Box} from '@material-ui/core';
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import CurrencyConversions from './CurrencyConversions';
 import TemperatureConversions from './TemperatureConversions';

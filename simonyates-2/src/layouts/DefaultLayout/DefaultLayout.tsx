@@ -5,6 +5,7 @@ import NavTop from './NavTop/NavTop';
 import Footer from './Footer/Footer';
 import SkipNav from './SkipNav/SkipNav';
 import {styled} from "@mui/material";
+import {ScrollRestoration} from "react-router-dom";
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -69,25 +70,33 @@ export default function DefaultLayout(props: Props) {
     : [StyledMain, StyledFooter];
 
   return (
-    <StyledDivRoot>
-      <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
-        <title>{title}</title>
-      </Helmet>
+    <>
+      <StyledDivRoot>
+        <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
+          <title>{title}</title>
+        </Helmet>
 
-      <SkipNav mainId={mainId}/>
+        <SkipNav mainId={mainId}/>
 
-      <header>
-        <NavTop selected={top}/>
-      </header>
+        <header>
+          <NavTop selected={top}/>
+        </header>
 
-      {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
-      <MyMain id={mainId} tabIndex={-1}>
-        {children}
-      </MyMain>
+        {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
+        <MyMain id={mainId} tabIndex={-1}>
+          {children}
+        </MyMain>
 
-      <MyFooter>
-        <Footer/>
-      </MyFooter>
-    </StyledDivRoot>
+        <MyFooter>
+          <Footer/>
+        </MyFooter>
+      </StyledDivRoot>
+
+      <ScrollRestoration
+        getKey={(location, matches) => {
+          return location.pathname;
+        }}
+      />
+    </>
   );
 };

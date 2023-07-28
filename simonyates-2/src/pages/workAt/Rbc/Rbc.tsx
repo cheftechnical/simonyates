@@ -1,14 +1,14 @@
 import {useSections} from '../../../components/Sections/useSections';
 import WorkAtLogo from '../components/WorkAtLogo';
 import WorkAtTemplate from '../components/WorkAtTemplate';
-import DefaultLayout from '../../../layouts/Default/Default';
+import DefaultLayout from '../../../layouts/DefaultLayout/DefaultLayout';
 import Content from './Content';
 
 export default function Rbc() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Work at RBC" top="work">
+    // <DefaultLayout title="Work at RBC" top="work">
       <WorkAtTemplate
         content={<Content onChange={handleSectionChange}/>}
         employer="RBC"
@@ -20,6 +20,6 @@ export default function Rbc() {
         when="July 2018 to March 2021"
         where="Toronto, Canada"
       />
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

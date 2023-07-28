@@ -1,28 +1,26 @@
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import MyContainer from '../../styling/MyContainer/MyContainer';
-import Typography from '../../styling/Typography/Typography';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
-import {Link} from "@mui/material";
-// import {Link} from '@material-ui/core';
+import {Link, Typography} from "@mui/material";
 
 export default function Figpie() {
 	return (
-		<DefaultLayout title="Figpie" top="figpie">
+		// <DefaultLayout title="Figpie" top="figpie">
 			<MyContainer>
-				<Typography group="primary" variant="h1" weight="regular">
+				<Typography component="h1" variant="primaryH1">
 					Figpie
 				</Typography>
-				<Typography next group="primary" variant="h3" weight="regular">
+				<Typography component="p" variant="primaryH3Next">
 					<strong>Figpie</strong> creates beautiful pie charts in Figma.
 				</Typography>
-				<Typography next group="primary" variant="body" weight="regular">
+				<Typography component="p" variant="primaryBodyNext">
 					Creating pie charts in Figma is hard. Working with vectors can be challenging, and creating a chart that lines up correctly is more tricky than it sounds!
 				</Typography>
-				<Typography next group="primary" variant="body" weight="regular">
+				<Typography component="p" variant="primaryBodyNext">
 					I created Figpie to be as simple and intuitive as possible. It is a tool for designers.
 				</Typography>
-				<Typography next group="primary" variant="body" weight="regular">
+				<Typography component="p" variant="primaryBodyNext">
 					Key Features:
 				</Typography>
 				<Ul next>
@@ -43,19 +41,19 @@ export default function Figpie() {
 						after all
 					</Li>
 				</Ul>
-				<Typography next group="primary" variant="body" weight="regular">
+				<Typography component="p" variant="primaryBodyNext">
 					And it&rsquo;s 100% free!
 				</Typography>
 
-				<Typography next group="primary" variant="h2" weight="regular">
+				<Typography component="h2" variant="primaryH2Next">
 					Support
 				</Typography>
-				<Typography next group="primary" variant="body" weight="regular">
+				<Typography component="p" variant="primaryBodyNext">
 					Found a bug or have a feature request?
 					Message me on Twitter <Link href="https://twitter.com/cheftechnical" rel="external" target="_blank">
 					@ChefTechnical</Link>
 				</Typography>
 			</MyContainer>
-		</DefaultLayout>
+		// </DefaultLayout>
 	)
 }

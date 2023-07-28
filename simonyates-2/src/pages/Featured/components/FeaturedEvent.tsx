@@ -1,6 +1,5 @@
-import Typography from '../../../styling/Typography/Typography';
 import {color} from '../../../styling/Color/Color';
-import {styled} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 
 interface Props {
   children?: any;
@@ -38,11 +37,11 @@ const StyledDivRootNext = styled(StyledDivRoot)(({theme}) => ({
 const StyledTypographyHost = styled(Typography)(({theme}) => ({
   paddingTop: theme.spacing(16 / 8),
   color: color.grey['600']
-}));
+})) as typeof Typography;
 
 const StyledTypographyWhen = styled(Typography)(({theme}) => ({
   color: color.grey['600']
-}))
+})) as typeof Typography;
 
 export default function FeaturedEvent(props: Props) {
   // const classes = useStyles();
@@ -52,15 +51,15 @@ export default function FeaturedEvent(props: Props) {
 
   return (
     <MyStyledDivRoot>
-      <Typography group="primary" component="h3" variant="h4" weight="medium">
+      <Typography component="h3" variant="primaryH4Semibold">
         {title}
       </Typography>
 
-      <StyledTypographyHost group="primary" variant="body" weight="regular">
+      <StyledTypographyHost component="p" variant="primaryBody">
         {host}
       </StyledTypographyHost>
 
-      <StyledTypographyWhen group="primary" variant="body" weight="regular">
+      <StyledTypographyWhen component="p" variant="primaryBody">
         {when}
       </StyledTypographyWhen>
 

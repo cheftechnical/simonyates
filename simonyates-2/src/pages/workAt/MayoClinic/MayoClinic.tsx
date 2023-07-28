@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../layouts/Default/Default';
+import DefaultLayout from '../../../layouts/DefaultLayout/DefaultLayout';
 import WorkAtLogo from '../components/WorkAtLogo';
 import Content from './Content';
 import WorkAtTemplate from '../components/WorkAtTemplate';
@@ -8,7 +8,7 @@ export default function MayoClinic() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Work at Mayo Clinic" top="work">
+    // <DefaultLayout title="Work at Mayo Clinic" top="work">
       <WorkAtTemplate
         content={<Content onChange={handleSectionChange}/>}
         employer="Mayo Clinic"
@@ -18,6 +18,6 @@ export default function MayoClinic() {
         when="October 2014 to October 15"
         where="Rochester, MN, USA"
       />
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

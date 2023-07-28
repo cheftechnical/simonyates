@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../layouts/Default/Default';
+import DefaultLayout from '../../../layouts/DefaultLayout/DefaultLayout';
 import WorkAtLogo from '../components/WorkAtLogo';
 import Content from './Content';
 import WorkAtTemplate from '../components/WorkAtTemplate';
@@ -8,7 +8,7 @@ export default function JibDesignAndAdvertising() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Work at Jib Design &amp; Advertising" top="work">
+    // <DefaultLayout title="Work at Jib Design &amp; Advertising" top="work">
       <WorkAtTemplate
         content={<Content onChange={handleSectionChange}/>}
         employer="Jib Design & Advertising"
@@ -18,6 +18,6 @@ export default function JibDesignAndAdvertising() {
         when="2007–2008"
         where="Toronto, ON, Canada"
       />
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

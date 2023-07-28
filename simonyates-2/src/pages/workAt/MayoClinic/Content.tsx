@@ -1,9 +1,7 @@
-import * as React from 'react';
 import {SectionItem} from '../../../components/Sections/SectionItem';
 import Section from '../../../components/Section/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import Typography from '../../../styling/Typography/Typography';
 import Callout from '../../../components/Callout/Callout';
 import Ul from '../../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../../styling/ListsUnordered/Li/Li';
@@ -15,6 +13,7 @@ import WorkAtEvent from '../components/WorkAtEvent';
 import Figure from '../../../components/Figure/Figure';
 import Sections from '../../../components/Sections/Sections';
 import {WorkAtContentProps} from '../WorkAtContentProps';
+import {Typography} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
@@ -41,7 +40,7 @@ export default function Content(props: Props) {
           Patient Like Mine
         </WorkAtSectionTitle>
 
-        <Typography group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBody">
           The Patient Like Mine project was a real-time, visual analytics tool for clinical
           decision support. The System expands the &ldquo;recall of past experience&rdquo;
           approach that a provider (physician) uses to formulate a course of action for a

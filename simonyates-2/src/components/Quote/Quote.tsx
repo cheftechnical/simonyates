@@ -94,7 +94,6 @@ export default function Quote(props: Props) {
       </StyledFooter>
     ) : '';
 
-  // @todo mui5
   // return (
   //   <Box className={rootClassName} display="flex">
   //     <Box className={classes.boxQuote}>&ldquo;</Box>
@@ -114,7 +113,5 @@ export default function Quote(props: Props) {
   //   </Box>
   // );
 
-  return (
-      <div>[Quote]</div>
-  )
+  return (<div>[Quote]</div>);
 };

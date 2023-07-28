@@ -1,4 +1,4 @@
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import WorkExperience from './WorkExperience/WorkExperience';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
@@ -34,7 +34,7 @@ const StyledGridItemLogo = styled(Grid)(({theme}) => ({
 
 export default function Work() {
   return (
-    <DefaultLayout title="Work" top="work">
+    // <DefaultLayout title="Work" top="work">
       <MyContainer>
         <MyGridContainer>
           <Grid item md={7} xs={12}>
@@ -261,6 +261,6 @@ export default function Work() {
         </StyledMyGridContainerEmployerNext>
 
       </MyContainer>
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

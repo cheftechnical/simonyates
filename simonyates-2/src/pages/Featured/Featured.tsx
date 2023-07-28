@@ -1,5 +1,4 @@
-import DefaultLayout from '../../layouts/Default/Default';
-// import {Grid} from '@material-ui/core';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import FeaturedPublication from './components/FeaturedPublication';
 import Sections from '../../components/Sections/Sections';
 import Section from '../../components/Section/Section';
@@ -11,7 +10,6 @@ import SectionTitle from './SectionTitle';
 import SectionDescription from './SectionDescription';
 import Download from './Download';
 import rem from '../../styling/rem';
-import Typography from '../../styling/Typography/Typography';
 import FeaturedEvent from './components/FeaturedEvent';
 import FeaturedEvents from './components/FeaturedEvents';
 import FeaturedPublications from './components/FeaturedPublications';
@@ -20,7 +18,7 @@ import FeaturedChips from './components/FeaturedChips';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import {useSections} from '../../components/Sections/useSections';
-import {Grid, styled} from "@mui/material";
+import {Grid, styled, Typography} from "@mui/material";
 
 // const useStyles = makeStyles(() => ({
 //   nextSection: {
@@ -51,14 +49,14 @@ const StyledNextSection = styled(Section)(({theme}) => ({
 
 const StyledTypography = styled(Typography)(({theme}) => ({
   color: color.grey['700']
-}))
+})) as typeof Typography;
 
 export default function Featured() {
   // const classes = useStyles();
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Featured" top="featured">
+    // <DefaultLayout title="Featured" top="featured">
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
@@ -80,7 +78,7 @@ export default function Featured() {
                     tags={['electronic medical record', 'clinical decision support', 'real-time analytics', 'visual analytics', 'data mining']}
                     when="2015"
                   >
-                    <StyledTypography group="primary" variant="body" weight="regular">
+                    <StyledTypography variant="primaryBody" >
                       Abstract &mdash; We developed a real-time, visual analytics tool for
                       clinical decision support. The system expands the &ldquo;recall of past
                       experience&rdquo; approach that a provider (physician) uses to formulate a
@@ -172,6 +170,6 @@ export default function Featured() {
       {/*    </Grid>*/}
         </MyGridContainer>
       </MyContainer>
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

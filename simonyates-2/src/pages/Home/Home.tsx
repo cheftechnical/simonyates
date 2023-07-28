@@ -1,13 +1,13 @@
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import Content from './Content';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 
 export default function Home() {
   return (
-    <DefaultLayout fullHeight>
+    // <DefaultLayout fullHeight>
       <MyContainer fullHeight>
         <Content/>
       </MyContainer>
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

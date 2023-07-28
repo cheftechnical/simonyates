@@ -1,4 +1,4 @@
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsAndConditions from './TermsAndConditions';
 import Sections from '../../components/Sections/Sections';
@@ -13,7 +13,7 @@ export default function Legal() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Legal">
+    // <DefaultLayout title="Legal">
       <MyContainer>
         <MyGridContainer>
           <Grid item md={6} xs={12}>
@@ -32,6 +32,6 @@ export default function Legal() {
           </Grid>
         </MyGridContainer>
       </MyContainer>
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

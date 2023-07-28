@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../layouts/Default/Default';
+import DefaultLayout from '../../../layouts/DefaultLayout/DefaultLayout';
 import WorkAtLogo from '../components/WorkAtLogo';
 import Content from './Content';
 import WorkAtTemplate from '../components/WorkAtTemplate';
@@ -8,7 +8,7 @@ export default function UnchartedSoftware() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    <DefaultLayout title="Work at Uncharted Software" top="work">
+    // <DefaultLayout title="Work at Uncharted Software" top="work">
       <WorkAtTemplate
         content={<Content onChange={handleSectionChange}/>}
         employer="Uncharted Software"
@@ -18,6 +18,6 @@ export default function UnchartedSoftware() {
         when="May 2016 to 2018"
         where="Toronto, Canada"
       />
-    </DefaultLayout>
+    // </DefaultLayout>
   );
 };

@@ -4,11 +4,11 @@ import WorkAtDescription from '../components/WorkAtDescription';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
 import WorkAtProjects from '../components/WorkAtProjects';
 import WorkAtProject from '../components/WorkAtProject';
-import Typography from '../../../styling/Typography/Typography';
 import Callout from '../../../components/Callout/Callout';
 import Quote from '../../../components/Quote/Quote';
 import Sections from '../../../components/Sections/Sections';
 import {WorkAtContentProps} from '../WorkAtContentProps';
+import {Typography} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
@@ -33,13 +33,13 @@ export default function Content(props: Props) {
         </WorkAtSectionTitle>
         <WorkAtProjects>
           <WorkAtProject name="Apple Canada Introduces iPhone" when="">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               When Apple launched the original iPhone in Canada, they partnered with the Montreal Gazette
               to feature their online newspaper in its live press demo. This was an extremely high-profile
               event for Apple, and they couldn&rsquo;t risk any hiccups from a poorly rendering page view.
               So I built their replica website for this&nbsp;demo.
             </Typography>
-            <Typography next group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBodyNext">
               As a show of thanks, the partners of Jib gave me an iPhone&mdash;6 months before it was
               available in Canada. Although I don&rsquo;t use it anymore, I still have it (box included).
               They&rsquo;re quite a collector&rsquo;s item&nbsp;now.
@@ -47,7 +47,7 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="Apple Canada's Online Store for Students">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               Apple supports students with special pricing through its Apple Education Store. Access to
               this store required users to register their student ID with Apple to verity their
               eligibility. This feature was originally written in WebObjects, and I was tasked with
@@ -56,14 +56,14 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.delaila.co.uk">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               Development of an online jewelry store with a custom e-commerce engine that integrated with
               HSBC and managed through a custom–built content management system&nbsp;(CMS).
             </Typography>
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.eloundabeach.gr">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               Elounda Beach is a luxury hotel in Greece, with a single night&rsquo;s stay costing upwards
               of $5,000. I built a custom, multi-lingual CMS and integrated a third-party
               reservation&nbsp;system.
@@ -71,7 +71,7 @@ export default function Content(props: Props) {
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.verity.ca">
-            <Typography group="primary" variant="body" weight="regular">
+            <Typography component="p" variant="primaryBody">
               Verity is an exclusive women's club in Toronto, that provides support for the advancement of
               women through professional, social and personal opportunities. I built the website and the
               supporting&nbsp;CMS.

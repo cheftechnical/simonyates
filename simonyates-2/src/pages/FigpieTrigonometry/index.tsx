@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import Typography from '../../styling/Typography/Typography';
 import MyMathJaxProvider from './MyMathJaxProvider';
 import MyContainer from '../../styling/MyContainer/MyContainer';

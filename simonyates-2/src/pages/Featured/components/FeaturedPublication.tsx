@@ -1,7 +1,6 @@
-import Typography from '../../../styling/Typography/Typography';
 import {color} from '../../../styling/Color/Color';
 import FeaturedChips from './FeaturedChips';
-import {styled} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 
 interface Props {
   children: any | any[] | never[];
@@ -47,15 +46,15 @@ const StyledDivRootNext = styled(StyledDivRoot)(({theme}) => ({
 
 const StyledTypographyName = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(16 / 8),
-}))
+})) as typeof Typography;
 
 const StyledTypographyPublisher = styled(Typography)(({theme}) => ({
   color: color.grey['600'],
-}))
+})) as typeof Typography;
 
 const StyledTypographyWhen = styled(Typography)(({theme}) => ({
   color: color.grey['600'],
-}))
+})) as typeof Typography;
 
 export default function FeaturedPublication(props: Props) {
   // const classes = useStyles();
@@ -70,15 +69,15 @@ export default function FeaturedPublication(props: Props) {
 
   return (
     <MyStyledDivRoot>
-      <StyledTypographyName component="h3" group="primary" variant="h4" weight="medium">
+      <StyledTypographyName component="h3" variant="primaryH4Semibold">
         {name}
       </StyledTypographyName>
 
-      <StyledTypographyPublisher group="primary" variant="body" weight="regular">
+      <StyledTypographyPublisher component="p" variant="primaryBody">
         {publisher}
       </StyledTypographyPublisher>
 
-      <StyledTypographyWhen group="primary" variant="body" weight="regular">
+      <StyledTypographyWhen component="p" variant="primaryBody">
         {when}
       </StyledTypographyWhen>
 

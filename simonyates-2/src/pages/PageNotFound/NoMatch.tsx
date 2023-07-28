@@ -1,15 +1,15 @@
-import DefaultLayout from '../../layouts/Default/Default';
+import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import {color} from '../../styling/Color/Color';
-import {Link as ReactRouterDom} from 'react-router-dom';
+import {Link as ReactRouterDomLink} from 'react-router-dom';
 import rem from '../../styling/rem';
 import MyContainer from '../../styling/MyContainer/MyContainer';
-import {styled, Typography} from "@mui/material";
+import {Link, styled, Typography} from "@mui/material";
 
-const StyledLink = styled(ReactRouterDom)(({theme}) => ({
+const StyledLink = styled(Link)(({theme}) => ({
   fontWeight: 'bold',
   color: color.grey['900'],
   paddingBottom: '4px',
-}));
+})) as typeof Link;
 
 const StyledTypographyBody = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(388 / 8),
@@ -32,7 +32,7 @@ export default function NoMatch() {
         </StyledTypographyHeadline>
         <StyledTypographyBody component="p" variant="primaryH3">
           Sorry, that page doesn&rsquo;t&nbsp;exist.<br/>
-          But you can navigate back to&nbsp;<StyledLink to="/">home</StyledLink>.
+          But you can navigate back to&nbsp;<StyledLink component={ReactRouterDomLink} to="/">home</StyledLink>.
         </StyledTypographyBody>
       </MyContainer>
     </DefaultLayout>

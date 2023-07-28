@@ -1,6 +1,5 @@
-import Typography from '../../styling/Typography/Typography';
 import {color} from '../../styling/Color/Color';
-import {styled} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 
 interface Props {
   children?: any;
@@ -15,7 +14,7 @@ interface Props {
 const StyledTypography = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(40 / 8),
   color: color.grey['700']
-}))
+})) as typeof Typography;
 
 export default function SectionDescription(props: Props) {
   // const classes = useStyles();
@@ -23,7 +22,7 @@ export default function SectionDescription(props: Props) {
   const {children} = props;
 
   return (
-    <StyledTypography group="primary" variant="body" weight="regular">
+    <StyledTypography component="p" variant="primaryBody">
       {children}
     </StyledTypography>
   );
