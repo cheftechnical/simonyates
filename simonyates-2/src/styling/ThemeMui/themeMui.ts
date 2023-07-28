@@ -561,7 +561,14 @@ export const themeMui = createTheme({
     // Secondary: Apercu
     secondaryH3: {},
     secondaryBody: {},
-    secondaryBodyLight: {},
+    secondaryBodyLight: {
+      fontFamily: apercu,
+      fontWeight: 300,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5),
+      // color: 'magenta !important'
+    },
     secondarySubtitle: {},
     secondaryCaption: {}
   }

@@ -1,11 +1,8 @@
-// import {Grid, Hidden, useMediaQuery, useTheme} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
 import CenterVertically from '../../../components/CenterVertically/CenterVertically';
 import Image from '../../../components/Image/Image';
 import rem from '../../../styling/rem';
 import MyContainer from '../../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
-import Typography from '../../../styling/Typography/Typography';
 import {Grid, Typography as MuiTypography, styled, Hidden} from '@mui/material';
 
 const bodyLineHeight = 24;

@@ -1,7 +1,6 @@
-import {createRoutesFromElements, createBrowserRouter, Route, Routes} from "react-router-dom";
+import {createBrowserRouter, Route, Routes} from "react-router-dom";
 import React, {lazy} from "react";
 import Root from "./routes";
-import PageNotFound from "./pages/PageNotFound";
 
 const About = lazy(() => import('./pages/About/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -13,7 +12,7 @@ const Infomart = lazy(() => import('./pages/workAt/Infomart'));
 const JibDesignAndAdvertising = lazy(() => import('./pages/workAt/JibDesignAndAdvertising'));
 const Legal = lazy(() => import('./pages/Legal'));
 const MayoClinic = lazy(() => import('./pages/workAt/MayoClinic'));
-const NoMatch = lazy(() => import('./pages/PageNotFound'));
+const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 const Rbc = lazy(() => import('./pages/workAt/Rbc'));
 const UnchartedSoftware = lazy(() => import('./pages/workAt/UnchartedSoftware'));
 const Work = lazy(() => import('./pages/Work'));
@@ -36,11 +35,8 @@ const Work = lazy(() => import('./pages/Work'));
 //       <Route path="/about" element={<About/>}/>
 
 
-
 //       {/*<Route path="/resources/international" component={International}/>*/}
 //       {/*<Route path="/figpie/trigonometry" component={FigpieTrigonometry}/>*/}
-
-
 
 
 //       <Route path="/" element={<Home/>}/>
@@ -111,7 +107,6 @@ const router = createBrowserRouter([
       },
     ]
   }
-])
-
+]);
 
 export default router;

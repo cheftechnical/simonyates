@@ -1,11 +1,7 @@
-// import {Box} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
-import Typography from '../../styling/Typography/Typography';
 import rem from '../../styling/rem';
 import {color} from '../../styling/Color/Color';
-// import classNames from 'classnames';
 import {ReactNode} from 'react';
-import {Box, styled} from "@mui/material";
+import {Box, styled, Typography} from "@mui/material";
 
 export interface Props {
   /**
@@ -61,12 +57,42 @@ export interface Props {
 //   },
 // }));
 
+const StyledBlockquote = styled('blockquote')(({theme}) => ({
+  margin: 0,
+  padding: 0,
+}))
+
+const StyledBlockquoteTypography = styled(Typography)(({theme}) => ({
+  color: color.grey['800']
+})) as typeof Typography;
+
+const StyledBoxQuote = styled(Box)(({theme}) => ({
+  paddingRight: theme.spacing(8 / 8),
+  fontFamily: `"Times New Roman"`,
+  fontStyle: 'normal',
+  fontWeight: 'normal',
+  fontSize: rem(64),
+  lineHeight: '100%',
+  color: color.lime['500'],
+}));
+
+const StyledBoxContent = styled(Box)(({theme}) => ({
+  paddingTop: theme.spacing(12 / 8),
+}));
+
 const StyledFooter = styled('footer')(({theme}) => ({
   paddingTop: theme.spacing(16 / 8),
 }));
 
 const StyledTypographyFooter = styled(Typography)(({theme}) => ({
   color: color.grey['600']
+})) as typeof Typography;
+
+const StyledSpan = styled('span')(({theme}) => ({
+  fontFamily: `"Times New Roman"`,
+  fontStyle: 'normal',
+  fontWeight: 'normal',
+  color: color.lime['500'],
 }));
 
 export default function Quote(props: Props) {
@@ -77,41 +103,33 @@ export default function Quote(props: Props) {
   //   {[classes.rootNext]: next}
   // );
 
-  // const renderedEndQuote = (
-  //   <span className={classes.span}>&rdquo;</span>
-  // );
+  const renderedEndQuote = (
+    <StyledSpan>&rdquo;</StyledSpan>
+  );
 
   const renderedSource = (source)
     ? (
       <StyledFooter>
-        <StyledTypographyFooter
-          group="primary"
-          variant="subtitle"
-          weight="regular"
-        >
+        <StyledTypographyFooter variant="primarySubtitle">
           {source}
         </StyledTypographyFooter>
       </StyledFooter>
     ) : '';
 
-  // return (
-  //   <Box className={rootClassName} display="flex">
-  //     <Box className={classes.boxQuote}>&ldquo;</Box>
-  //     <Box className={classes.boxContent} flexGrow={1}>
-  //       <blockquote className={classes.blockquote} cite={source}>
-  //         <Typography
-  //           className={classes.blockquoteTypography}
-  //           group="secondary"
-  //           variant="body"
-  //           weight="light"
-  //         >
-  //           {children}{renderedEndQuote}
-  //         </Typography>
-  //         {renderedSource}
-  //       </blockquote>
-  //     </Box>
-  //   </Box>
-  // );
-
-  return (<div>[Quote]</div>);
+  return (
+    <Box
+      display="flex"
+      sx={{paddingTop: (theme) => next ? theme.spacing(48 / 8) : 0}}
+    >
+      <StyledBoxQuote>&ldquo;</StyledBoxQuote>
+      <StyledBoxContent flexGrow={1}>
+        <StyledBlockquote cite={source}>
+          <StyledBlockquoteTypography component="blockquote" variant="secondaryBodyLight">
+            {children}{renderedEndQuote}
+          </StyledBlockquoteTypography>
+          {renderedSource}
+        </StyledBlockquote>
+      </StyledBoxContent>
+    </Box>
+  );
 };
