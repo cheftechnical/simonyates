@@ -1,10 +1,7 @@
-// import * as React from 'react';
-import Typography from '../../../styling/Typography/Typography';
-// import {makeStyles} from '@material-ui/core/styles';
-import {styled} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
 // const useStyles = makeStyles((themeMui) => ({
@@ -15,23 +12,16 @@ interface Props {
 // }));
 
 const StyledTypography = styled(Typography)(({theme}) => ({
-	marginTop: theme.spacing((80-12) / 8),
-	marginBottom: theme.spacing(32 / 8)
-}))
+  marginTop: theme.spacing((80 - 12) / 8),
+  marginBottom: theme.spacing(32 / 8)
+})) as typeof Typography;
 
 export default function WorkAtSectionTitle(props: Props) {
-	// const classes = useStyles();
-	const {children} = props;
+  const {children} = props;
 
-	// return (
-	// 	<div className={classes.root}>
-	// 		<Typography className={classes.root} component="h2" group="primary" variant="h3" weight="regular">
-	// 			{children}
-	// 		</Typography>
-	// 	</div>
-	// );
-
-	return (
-		<div>{children}</div>
-	)
+  return (
+    <StyledTypography component="h2" variant="primaryH3">
+      {children}
+    </StyledTypography>
+  );
 };
