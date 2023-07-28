@@ -29,6 +29,7 @@ declare module '@mui/material/styles' {
     primaryH3Medium: CSSProperties;
     primaryH3Semibold: CSSProperties;
     primaryH4: CSSProperties;
+    primaryH4Next: CSSProperties;
     primaryH4Semibold: CSSProperties;
     primaryBody: CSSProperties;
     primaryBodyNext: CSSProperties;
@@ -62,6 +63,7 @@ declare module '@mui/material/styles' {
     primaryH3Medium: CSSProperties;
     primaryH3Semibold: CSSProperties;
     primaryH4: CSSProperties;
+    primaryH4Next: CSSProperties;
     primaryH4Semibold: CSSProperties;
     primaryBody: CSSProperties;
     primaryBodyNext: CSSProperties;
@@ -105,6 +107,7 @@ declare module '@mui/material/Typography' {
     primaryH3Medium: true;
     primaryH3Semibold: true;
     primaryH4: true;
+    primaryH4Next: true;
     primaryH4Semibold: true;
     primaryBody: true;
     primaryBodyNext: true;
@@ -484,6 +487,15 @@ export const themeMui = createTheme({
       fontSize: rem(16),
       lineHeight: rem(24),
       letterSpacing: rem(0.5)
+    },
+    primaryH4Next: {
+      fontWeight: 500,
+      fontSize: rem(16),
+      lineHeight: rem(24),
+      letterSpacing: rem(0.5),
+
+      // additional space
+      marginTop: rem(24), // lineHeight
     },
     primaryH4Semibold: {
       fontWeight: 600,
