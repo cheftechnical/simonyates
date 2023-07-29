@@ -1,5 +1,5 @@
 import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
-import MyMathJaxProvider from './MyMathJaxProvider';
+import MathJaxProviderWrapper from './MathJaxProviderWrapper';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer';
 import {RotationGridContainer} from './sections/RotationGridContainer/RotationGridContainer';
@@ -8,7 +8,7 @@ import {Typography} from "@mui/material";
 
 export default function FigpieTrigonometry() {
   return (
-    <MyMathJaxProvider>
+    // <MathJaxProviderWrapper>
       <DefaultLayout title="How it Works" top="figpie">
         <MyContainer>
           <Typography component="h1" variant="primaryH1">
@@ -18,23 +18,19 @@ export default function FigpieTrigonometry() {
           <Typography component="h2" variant="primaryH2Next">
             Circle Basics
           </Typography>
-          <CircleBasicsGridContainer/>
+          {/*<CircleBasicsGridContainer/>*/}
 
           <Typography component="h2" variant="primaryH2Next">
             Cubic B&eacute;zier
           </Typography>
-          <BezierArcGridContainer/>
+          {/*<BezierArcGridContainer/>*/}
 
           <Typography component="h2" variant="primaryH2Next">
             Rotation
           </Typography>
-          <RotationGridContainer/>
+          {/*<RotationGridContainer/>*/}
         </MyContainer>
       </DefaultLayout>
-    </MyMathJaxProvider>
+    // </MathJaxProviderWrapper>
   );
-
-  // return (
-  //   <div>[FigpieTrigonometry]</div>
-  // )
 }

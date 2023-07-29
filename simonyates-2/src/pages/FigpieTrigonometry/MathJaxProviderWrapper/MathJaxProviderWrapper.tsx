@@ -7,7 +7,7 @@ interface Props {
 	children: any;
 }
 
-export default function MyMathJaxProvider(props: Props) {
+export default function MathJaxProviderWrapper(props: Props) {
 	const {children} = props;
 
 	// return (
@@ -31,7 +31,7 @@ export default function MyMathJaxProvider(props: Props) {
 
 	return (
 		<MathJax.Provider>
-			<MathJax.Formula formula="$$\int x^2dx$$" />
+			{/*<MathJax.Formula formula="$$\int x^2dx$$" />*/}
 		</MathJax.Provider>
 	)
 }
