@@ -7,34 +7,34 @@ import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer/Ci
 import {Typography} from "@mui/material";
 
 export default function FigpieTrigonometry() {
-  // return (
-  //   <MyMathJaxProvider>
-  //     <DefaultLayout title="How it Works" top="figpie">
-  //       <MyContainer>
-  //         <Typography component="h1" variant="primaryH1">
-  //           How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
-  //         </Typography>
-  //
-  //         <Typography component="h2" variant="primaryH2Next">
-  //           Circle Basics
-  //         </Typography>
-  //         <CircleBasicsGridContainer/>
-  //
-  //         <Typography component="h2" variant="primaryH2Next">
-  //           Cubic B&eacute;zier
-  //         </Typography>
-  //         <BezierArcGridContainer/>
-  //
-  //         <Typography component="h2" variant="primaryH2Next">
-  //           Rotation
-  //         </Typography>
-  //         <RotationGridContainer/>
-  //       </MyContainer>
-  //     </DefaultLayout>
-  //   </MyMathJaxProvider>
-  // );
-
   return (
-    <div>[FigpieTrigonometry]</div>
-  )
+    <MyMathJaxProvider>
+      <DefaultLayout title="How it Works" top="figpie">
+        <MyContainer>
+          <Typography component="h1" variant="primaryH1">
+            How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
+          </Typography>
+
+          <Typography component="h2" variant="primaryH2Next">
+            Circle Basics
+          </Typography>
+          <CircleBasicsGridContainer/>
+
+          <Typography component="h2" variant="primaryH2Next">
+            Cubic B&eacute;zier
+          </Typography>
+          <BezierArcGridContainer/>
+
+          <Typography component="h2" variant="primaryH2Next">
+            Rotation
+          </Typography>
+          <RotationGridContainer/>
+        </MyContainer>
+      </DefaultLayout>
+    </MyMathJaxProvider>
+  );
+
+  // return (
+  //   <div>[FigpieTrigonometry]</div>
+  // )
 }

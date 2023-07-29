@@ -10,22 +10,28 @@ interface Props {
 export default function MyMathJaxProvider(props: Props) {
 	const {children} = props;
 
+	// return (
+	// 	<MathJax.Provider
+	// 		options={{
+	// 			loader: {
+	// 				load: [
+	// 					'[tex]/color',
+	// 				]
+	// 			},
+	// 			tex: {
+	// 				packages: {
+	// 					'[+]': ['color']
+	// 				},
+	// 			},
+	// 		}}
+	// 	>
+	// 		{children}
+	// 	</MathJax.Provider>
+	// )
+
 	return (
-		<MathJax.Provider
-			options={{
-				loader: {
-					load: [
-						'[tex]/color',
-					]
-				},
-				tex: {
-					packages: {
-						'[+]': ['color']
-					},
-				},
-			}}
-		>
-			{children}
+		<MathJax.Provider>
+			<MathJax.Formula formula="$$\int x^2dx$$" />
 		</MathJax.Provider>
 	)
 }
