@@ -1,13 +1,14 @@
-// import * as React from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
-// import {Button} from '@material-ui/core';
 import rem from '../../../../styling/rem';
-import {styled} from "@mui/material";
+import {Button, Link, styled} from "@mui/material";
+import color from "../../../../styling/Color";
+
+// @todo use ReactRouterDomLink for the navigation
+// import {Link as ReactRouterDomLink} from 'react-router-dom';
 
 interface Props {
-	href: string;
-	selected: boolean;
-	title: string;
+  href: string;
+  selected: boolean;
+  title: string;
 }
 
 // const useStyles = makeStyles((themeMui) => ({
@@ -27,34 +28,43 @@ interface Props {
 // 	}
 // }));
 
+const StyledButton = styled(Button)(({theme}) => ({
+  color: color.grey[100],
+  fontSize: rem(24),
+  lineHeight: rem(32),
+
+  '& .MuiButton-label': {
+    paddingBottom: 0
+  }
+})) as typeof Button;
+
+const StyledButtonActive = styled(StyledButton)(({theme}) => ({
+  fontWeight: 'bold',
+})) as typeof Button;
+
 const StyledDivRoot = styled('div')(({theme}) => ({
-	paddingTop: theme.spacing(24 / 8)
+  paddingTop: theme.spacing(24 / 8),
+  color: 'magenta'
 }))
 
 export default function MenuItem(props: Props) {
-	// const classes = useStyles();
-	const {href, selected, title} = props;
+  const {href, selected, title} = props;
 
-	// @todo mui5
-	// if (selected) {
-	// 	return (
-	// 		<StyledDivRoot>
-	// 			<Button disableRipple className={`${classes.default} ${classes.active}`} color="secondary" href={href}>
-	// 				{title}
-	// 			</Button>
-	// 		</StyledDivRoot>
-	// 	);
-	// }
-	//
-	// return (
-	// 	<StyledDivRoot>
-	// 		<Button disableRipple className={classes.default} color="secondary" href={href}>
-	// 			{title}
-	// 		</Button>
-	// 	</StyledDivRoot>
-	// );
+  if (selected) {
+    return (
+      <StyledDivRoot>
+        <StyledButtonActive disableRipple color="secondary" href={href}>
+          {title}
+        </StyledButtonActive>
+      </StyledDivRoot>
+    );
+  }
 
-	return (
-		<div>[MenuItem]</div>
-	)
+  return (
+    <StyledDivRoot>
+      <StyledButton disableRipple color="secondary" href={href} component={Link}>
+        {title}
+      </StyledButton>
+    </StyledDivRoot>
+  );
 }
