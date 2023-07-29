@@ -1,5 +1,5 @@
+import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@mui/material';
 import {ChangeEvent, useState} from 'react';
-// import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@material-ui/core';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 
 interface Currency {
@@ -49,28 +49,24 @@ export default function CurrencyConversions() {
     });
   };
 
-  // return (
-  //   <MyGridContainer>
-  //     {currencies.map((currency: Currency, index: number) => (
-  //       <Grid item key={index} xs={6}>
-  //         <FormControl fullWidth>
-  //           {/*<InputLabel htmlFor={`currency-${currency.code}`}>Amount</InputLabel>*/}
-  //           <Input
-  //             id={`currency-${currency.code}`}
-  //             name={`currency-${currency.code}`}
-  //             onChange={(event) => handleChange(event, index)}
-  //             startAdornment={<InputAdornment position="start">{currency.symbol}</InputAdornment>}
-  //             endAdornment={<InputAdornment position="start">{currency.code}</InputAdornment>}
-  //             value={value[index]}
-  //           />
-  //           <FormHelperText>USD.{currency.code} = {currency.exchangeRate}</FormHelperText>
-  //         </FormControl>
-  //       </Grid>
-  //     ))}
-  //   </MyGridContainer>
-  // )
-
   return (
-      <div>[CurrencyConversions]</div>
+    <MyGridContainer>
+      {currencies.map((currency: Currency, index: number) => (
+        <Grid item key={index} xs={6}>
+          <FormControl fullWidth>
+            {/*<InputLabel htmlFor={`currency-${currency.code}`}>Amount</InputLabel>*/}
+            <Input
+              id={`currency-${currency.code}`}
+              name={`currency-${currency.code}`}
+              onChange={(event) => handleChange(event, index)}
+              startAdornment={<InputAdornment position="start">{currency.symbol}</InputAdornment>}
+              endAdornment={<InputAdornment position="start">{currency.code}</InputAdornment>}
+              value={value[index]}
+            />
+            <FormHelperText>USD.{currency.code} = {currency.exchangeRate}</FormHelperText>
+          </FormControl>
+        </Grid>
+      ))}
+    </MyGridContainer>
   )
 }
