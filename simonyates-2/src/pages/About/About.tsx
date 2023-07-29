@@ -1,18 +1,18 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import LifeAsAMaker from './LifeAsAMaker/LifeAsAMaker';
 import Hero from './Hero/Hero';
 import PhotoGallery from './PhotoGallery/PhotoGallery';
 import Stats from './Stats/Stats';
+import PageWrapper from "../../components/PageWrapper";
 
 export default function About() {
   return (
-    // <DefaultLayout title="About" top="about">
+    <PageWrapper title="About">
       <article>
         <Hero/>
         <Stats/>
         <LifeAsAMaker/>
         <PhotoGallery/>
       </article>
-    // </DefaultLayout>
+    </PageWrapper>
   );
 };

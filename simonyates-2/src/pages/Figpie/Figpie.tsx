@@ -1,12 +1,12 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import {Link, Typography} from "@mui/material";
+import PageWrapper from "../../components/PageWrapper";
 
 export default function Figpie() {
 	return (
-		// <DefaultLayout title="Figpie" top="figpie">
+		<PageWrapper title="Figpie">
 			<MyContainer>
 				<Typography component="h1" variant="primaryH1">
 					Figpie
@@ -54,6 +54,6 @@ export default function Figpie() {
 					@ChefTechnical</Link>
 				</Typography>
 			</MyContainer>
-		// </DefaultLayout>
+		</PageWrapper>
 	)
 }

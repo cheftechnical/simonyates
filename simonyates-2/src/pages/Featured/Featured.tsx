@@ -1,9 +1,7 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import FeaturedPublication from './components/FeaturedPublication';
 import Sections from '../../components/Sections/Sections';
 import Section from '../../components/Section/Section';
 import NavRight from '../../components/NavRight/NavRight';
-// import {makeStyles} from '@material-ui/core/styles';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import SectionTitle from './SectionTitle';
@@ -19,6 +17,7 @@ import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import {useSections} from '../../components/Sections/useSections';
 import {Grid, styled, Typography} from "@mui/material";
+import PageWrapper from '../../components/PageWrapper';
 
 // const useStyles = makeStyles(() => ({
 //   nextSection: {
@@ -56,7 +55,7 @@ export default function Featured() {
   const [sections, handleSectionChange] = useSections();
 
   return (
-    // <DefaultLayout title="Featured" top="featured">
+    <PageWrapper title="Featured">
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
@@ -78,7 +77,7 @@ export default function Featured() {
                     tags={['electronic medical record', 'clinical decision support', 'real-time analytics', 'visual analytics', 'data mining']}
                     when="2015"
                   >
-                    <StyledTypography variant="primaryBody" >
+                    <StyledTypography variant="primaryBody">
                       Abstract &mdash; We developed a real-time, visual analytics tool for
                       clinical decision support. The system expands the &ldquo;recall of past
                       experience&rdquo; approach that a provider (physician) uses to formulate a
@@ -161,15 +160,15 @@ export default function Featured() {
             </Sections>
           </Grid>
 
-      {/*    /!* Gutter *!/*/}
-      {/*    <Grid item md={3}/>*/}
+          {/* Gutter */}
+          <Grid item md={3}/>
 
-      {/*    /!* Navigation *!/*/}
-      {/*    <Grid item md={3}>*/}
-      {/*      <NavRight sections={sections}/>*/}
-      {/*    </Grid>*/}
+          {/* Navigation */}
+          <Grid item md={3}>
+            <NavRight sections={sections}/>
+          </Grid>
         </MyGridContainer>
       </MyContainer>
-    // </DefaultLayout>
+    </PageWrapper>
   );
 };

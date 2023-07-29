@@ -1,5 +1,4 @@
 import {useCallback, useState} from 'react';
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import {color} from '../../styling/Color/Color';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
@@ -7,6 +6,7 @@ import ContactForm from './ContactForm';
 import {Message} from './Message';
 import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
 import {Grid, styled, Typography} from "@mui/material";
+import PageWrapper from "../../components/PageWrapper";
 
 // @todo mui5
 // const useStyles = makeStyles((themeMui) => ({
@@ -44,8 +44,7 @@ export default function Contact() {
   }, []);
 
   return (
-    // <DefaultLayout title="Contact" top="contact">
-    <>
+    <PageWrapper title="Contact">
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
@@ -74,7 +73,6 @@ export default function Contact() {
         message={message}
         onClose={handleSendingDialogClose}
       />
-    </>
+    </PageWrapper>
   );
-  // </DefaultLayout>
 };

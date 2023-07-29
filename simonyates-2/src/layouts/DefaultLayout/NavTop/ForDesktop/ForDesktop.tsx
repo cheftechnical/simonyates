@@ -1,10 +1,7 @@
-// import {Box, Link} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
-import {Link as ReactRouterDom} from 'react-router-dom';
+import {Link as ReactRouterDomLink} from 'react-router-dom';
 import Logo from '../../../../components/Logo';
 import {color} from '../../../../styling/Color/Color';
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
-// import Item from './Item';
 import MenuItems from './MenuItems/MenuItems';
 import {Box, Link, styled} from "@mui/material";
 
@@ -48,7 +45,7 @@ export default function ForDesktop(props: Props) {
         <Box display="flex" justifyContent="flex-end">
           {/* Left align */}
           <Box flexGrow={1}>
-            <Link component={ReactRouterDom} to="/"><Logo
+            <Link component={ReactRouterDomLink} to="/"><Logo
               brand="simon-yates"
               variant="default"
               width={149}

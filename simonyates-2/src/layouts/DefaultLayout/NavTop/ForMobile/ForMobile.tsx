@@ -1,7 +1,6 @@
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
 import {Link as ReactRouterDom} from 'react-router-dom';
 import Logo from '../../../../components/Logo';
-// import MenuIcon from '@material-ui/icons/Menu';
 import Menu from './Menu';
 import {color} from '../../../../styling/Color/Color';
 import rem from '../../../../styling/rem';
