@@ -1,9 +1,9 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import {color} from '../../styling/Color/Color';
 import {Link as ReactRouterDomLink} from 'react-router-dom';
 import rem from '../../styling/rem';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import {Link, styled, Typography} from "@mui/material";
+import PageWrapper from '../../components/PageWrapper';
 
 const StyledLink = styled(Link)(({theme}) => ({
   fontWeight: 'bold',
@@ -25,7 +25,7 @@ const StyledTypographyHeadline = styled(Typography)(({theme}) => ({
 
 export default function NoMatch() {
   return (
-    <DefaultLayout title="404: Page Not Found">
+    <PageWrapper title="404: Page Not Found">
       <MyContainer>
         <StyledTypographyHeadline component="h1" variant="primaryH1">
           404
@@ -35,6 +35,6 @@ export default function NoMatch() {
           But you can navigate back to&nbsp;<StyledLink component={ReactRouterDomLink} to="/">home</StyledLink>.
         </StyledTypographyBody>
       </MyContainer>
-    </DefaultLayout>
+    </PageWrapper>
   );
 };
