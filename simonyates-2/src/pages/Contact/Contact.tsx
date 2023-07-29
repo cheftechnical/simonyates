@@ -1,15 +1,12 @@
-// import {Grid} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
 import {useCallback, useState} from 'react';
 import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import {color} from '../../styling/Color/Color';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
-import Typography from '../../styling/Typography/Typography';
 import ContactForm from './ContactForm';
 import {Message} from './Message';
 import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
-import {Grid, styled} from "@mui/material";
+import {Grid, styled, Typography} from "@mui/material";
 
 // @todo mui5
 // const useStyles = makeStyles((themeMui) => ({
@@ -25,11 +22,11 @@ import {Grid, styled} from "@mui/material";
 const StyledTypographyBody = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(40 / 8),
   color: color.grey['700']
-}));
+})) as typeof Typography;
 
 const StyledTypographyHeading = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(8 / 8)
-}));
+})) as typeof Typography;
 
 export default function Contact() {
   // const classes = useStyles();
@@ -53,7 +50,7 @@ export default function Contact() {
         <MyGridContainer>
           {/* Content */}
           <Grid item md={12} xs={12}>
-            <StyledTypographyHeading group="primary" variant="h1" weight="regular">
+            <StyledTypographyHeading component="h1" variant="primaryH1">
               Pleasure to meet you.
             </StyledTypographyHeading>
           </Grid>
@@ -61,7 +58,7 @@ export default function Contact() {
 
         <MyGridContainer>
           <Grid item md={6} xs={12}>
-            <StyledTypographyBody group="primary" variant="body" weight="regular">
+            <StyledTypographyBody component="p" variant="primaryBody">
               I&rsquo;m always open to make new connections and chat about software&nbsp;development.
             </StyledTypographyBody>
 
