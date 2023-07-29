@@ -1,4 +1,3 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import Content from './Content';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 
