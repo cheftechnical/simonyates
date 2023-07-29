@@ -1,4 +1,3 @@
-import DefaultLayout from '../../layouts/DefaultLayout/DefaultLayout';
 import WorkExperience from './WorkExperience/WorkExperience';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
@@ -7,6 +6,7 @@ import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import Hero from './Hero/Hero';
 import {Grid, styled} from "@mui/material";
+import PageWrapper from '../../components/PageWrapper';
 
 // const useStyles = makeStyles((themeMui) => ({
 //   employerFirst: {
@@ -34,7 +34,7 @@ const StyledGridItemLogo = styled(Grid)(({theme}) => ({
 
 export default function Work() {
   return (
-    // <DefaultLayout title="Work" top="work">
+    <PageWrapper title="Work">
       <MyContainer>
         <MyGridContainer>
           <Grid item md={7} xs={12}>
@@ -261,6 +261,6 @@ export default function Work() {
         </StyledMyGridContainerEmployerNext>
 
       </MyContainer>
-    // </DefaultLayout>
+     </PageWrapper>
   );
 };
