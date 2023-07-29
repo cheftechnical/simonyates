@@ -1,21 +1,22 @@
 import {createBrowserRouter, Route, Routes} from "react-router-dom";
 import React, {lazy} from "react";
-import Root from "./routes";
+import Root from "./Root";
 
-const About = lazy(() => import('./pages/About/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Featured = lazy(() => import('./pages/Featured'));
-const Figpie = lazy(() => import('./pages/Figpie'));
-const GenworthCanada = lazy(() => import('./pages/workAt/GenworthCanada'));
-const Home = lazy(() => import('./pages/Home'));
-const Infomart = lazy(() => import('./pages/workAt/Infomart'));
-const JibDesignAndAdvertising = lazy(() => import('./pages/workAt/JibDesignAndAdvertising'));
-const Legal = lazy(() => import('./pages/Legal'));
-const MayoClinic = lazy(() => import('./pages/workAt/MayoClinic'));
-const PageNotFound = lazy(() => import('./pages/PageNotFound'));
-const Rbc = lazy(() => import('./pages/workAt/Rbc'));
-const UnchartedSoftware = lazy(() => import('./pages/workAt/UnchartedSoftware'));
-const Work = lazy(() => import('./pages/Work'));
+const About = lazy(() => import('../pages/About/About'));
+const Contact = lazy(() => import('../pages/Contact'));
+const Featured = lazy(() => import('../pages/Featured'));
+const Figpie = lazy(() => import('../pages/Figpie'));
+const FigpieTrigonometry = lazy(() => import('../pages/FigpieTrigonometry'));
+const GenworthCanada = lazy(() => import('../pages/workAt/GenworthCanada'));
+const Home = lazy(() => import('../pages/Home'));
+const Infomart = lazy(() => import('../pages/workAt/Infomart'));
+const JibDesignAndAdvertising = lazy(() => import('../pages/workAt/JibDesignAndAdvertising'));
+const Legal = lazy(() => import('../pages/Legal'));
+const MayoClinic = lazy(() => import('../pages/workAt/MayoClinic'));
+const PageNotFound = lazy(() => import('../pages/PageNotFound'));
+const Rbc = lazy(() => import('../pages/workAt/Rbc'));
+const UnchartedSoftware = lazy(() => import('../pages/workAt/UnchartedSoftware'));
+const Work = lazy(() => import('../pages/Work'));
 
 
 // const router1 = createBrowserRouter(
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
         path: 'about',
         element: <About/>,
       },
+      {
+        path: '/figpie/trigonometry',
+        element: <FigpieTrigonometry/>,
+      }
     ]
   }
 ]);

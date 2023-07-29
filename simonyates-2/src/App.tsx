@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import {BrowserRouter, ScrollRestoration, RouterProvider} from 'react-router-dom';
 import ThemeProviderWrapper from "./styling/ThemeProviderWrapper";
 import {LinearProgress} from "@mui/material";
-import router from "./router";
+import router from "./routes/router";
 
 
 function App() {
