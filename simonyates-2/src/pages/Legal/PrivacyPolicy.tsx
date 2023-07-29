@@ -1,6 +1,5 @@
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
-import {h2, h3, paragraph, subtitle} from './defaults';
 import {Typography} from '@mui/material';
 
 const legalName = 'Sybaris Analytics Corporation';
