@@ -3,12 +3,10 @@ import Section from '../../../components/Section/Section';
 import WorkAtDescription from '../components/WorkAtDescription';
 import Callout from '../../../components/Callout/Callout';
 import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import Typography from '../../../styling/Typography/Typography';
 import WorkAtProject from '../components/WorkAtProject';
 import Sections from '../../../components/Sections/Sections';
-// import {makeStyles} from '@material-ui/core/styles';
 import {WorkAtContentProps} from '../WorkAtContentProps';
-import {styled} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
@@ -51,16 +49,16 @@ export default function Content(props: Props) {
         <WorkAtSectionTitle>
           About the Project
         </WorkAtSectionTitle>
-        <Typography group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBody">
           For the last 30 years, Infomart had collected over 200 million newspaper articles
           from every major Canadian&nbsp;publisher.
         </Typography>
-        <Typography next group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBodyNext">
           The goal of this project was to enhance the search capabilities of the tool, while
           expanding its archives to include content from leading social media platforms like
           Twitter, Facebook, and&nbsp;YouTube.
         </Typography>
-        <Typography next group="primary" variant="body" weight="regular">
+        <Typography component="p" variant="primaryBodyNext">
           Data was originally stored in Microsoft SQL Server, but given the full text
           requirements of the tool, Elasticsearch proved to be an ideal use-case for this
           modernization effort. Elasticsearch was still in its early beta then
