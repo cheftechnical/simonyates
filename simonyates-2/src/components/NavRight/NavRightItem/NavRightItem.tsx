@@ -1,6 +1,8 @@
 // import {makeStyles} from '@material-ui/core/styles';
 // import {color} from '../../../styling/Color/Color';
 import rem from '../../../styling/rem';
+import {Link, styled} from "@mui/material";
+import color from "../../../styling/Color";
 
 // NOTE: scrollspy injects a className into this object
 interface Props {
@@ -41,11 +43,31 @@ interface Props {
 //   },
 // }));
 
+const StyledLi = styled('li')(({theme}) => ({
+  marginBottom: theme.spacing(24 / 8),
+  paddingLeft: theme.spacing(8 / 8),
+
+  color: color.grey['500'],
+
+  borderLeft: `2px solid ${color.white}`,
+}));
+
+const StyledLink = styled(Link)(({theme}) => ({
+  textDecoration: 'none',
+  lineHeight: rem(16),
+  letterSpacing: rem(0.25),
+  color: color.grey['500'],
+  borderLeft: 'none !important',
+
+  '&:hover': {
+    color: color.grey['900']
+  }
+})) as typeof Link;
+
 export default function NavRightItem(props: Props) {
   // const classes = useStyles();
   const {className, id, name} = props;
 
-  // @todo mui5
   // return (
   //   <li className={`${classes.li} ${className}`}>
   //     <a className={`${classes.a} ${className}`} href={`#${id}`}>{name}</a>
@@ -53,6 +75,8 @@ export default function NavRightItem(props: Props) {
   // );
 
   return (
-      <div>[NavRightItem]</div>
+    <StyledLi>
+      <StyledLink href={`#${id}`}>{name}</StyledLink>
+    </StyledLi>
   )
 };

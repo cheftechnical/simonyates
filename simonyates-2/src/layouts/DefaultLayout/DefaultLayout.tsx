@@ -62,7 +62,6 @@ const StyledFooterFullHeight = styled(StyledFooter)(({theme}) => ({
 }));
 
 export default function DefaultLayout(props: Props) {
-  // const classes = useStyles();
   const {children, fullHeight, title, top} = props;
 
   const [MyMain, MyFooter] = fullHeight

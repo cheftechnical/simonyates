@@ -4,6 +4,7 @@ import Root from "./Root";
 
 const About = lazy(() => import('../pages/About/About'));
 const Contact = lazy(() => import('../pages/Contact'));
+const Experiment = lazy(() => import('../pages/Experiment/ExperimentScrollSpy'));
 const Featured = lazy(() => import('../pages/Featured'));
 const Figpie = lazy(() => import('../pages/Figpie'));
 const FigpieTrigonometry = lazy(() => import('../pages/FigpieTrigonometry'));
@@ -21,6 +22,10 @@ const Work = lazy(() => import('../pages/Work'));
 
 // @todo add a loading state: https://reactrouter.com/en/main/start/tutorial
 const router = createBrowserRouter([
+  {
+    path: 'experiment',
+    element: <Experiment/>,
+  },
   {
     path: '/',
     element: <Root/>,

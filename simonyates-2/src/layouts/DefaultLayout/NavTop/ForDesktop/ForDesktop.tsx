@@ -40,7 +40,7 @@ export default function ForDesktop(props: Props) {
   const {selected} = props;
 
   return (
-    <StyledDivRoot>
+    <StyledDivRoot sx={{opacity: 0.1}}>
       <MyContainer>
         <Box display="flex" justifyContent="flex-end">
           {/* Left align */}
