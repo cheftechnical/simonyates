@@ -33,7 +33,8 @@ interface Props {
 
 const StyledDivRoot = styled('div')(({theme}) => ({
   position: 'fixed',
-  maxWidth: '17%' // no idea why this works, but it does
+  maxWidth: '17%', // no idea why this works, but it does
+  border: '1px solid magenta',
 }));
 
 export default function NavRight(props: Props) {
@@ -76,6 +77,7 @@ export default function NavRight(props: Props) {
   return (
     <nav aria-label="Sections">
       <StyledDivRoot>
+        asfd
         <Scrollspy sectionRefs={sectionRefs}>
           {({currentElementIndexInViewport}) => (
             <div>

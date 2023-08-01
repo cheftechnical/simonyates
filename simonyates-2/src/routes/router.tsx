@@ -18,6 +18,7 @@ const Legal = lazy(() => import('../pages/Legal'));
 const MayoClinic = lazy(() => import('../pages/workAt/MayoClinic'));
 const PageNotFound = lazy(() => import('../pages/PageNotFound'));
 const Rbc = lazy(() => import('../pages/workAt/Rbc'));
+const TrueNorth = lazy(() => import('../pages/workAt/TrueNorth'));
 const UnchartedSoftware = lazy(() => import('../pages/workAt/UnchartedSoftware'));
 const Work = lazy(() => import('../pages/Work'));
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: 'work/uncharted-software',
         element: <UnchartedSoftware/>,
+      },
+      {
+        path: 'work/truenorth',
+        element: <TrueNorth/>,
       },
       {
         path: 'work/rbc',
