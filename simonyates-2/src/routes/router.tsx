@@ -1,6 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import React, {lazy} from "react";
 import Root from "./Root";
+import ArrayFunction from "../pages/Experiment/ArrayFunction";
 
 const About = lazy(() => import('../pages/About/About'));
 const Contact = lazy(() => import('../pages/Contact'));
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: 'experiment',
     element: <Experiment/>,
+  },
+  {
+    path: 'array-function',
+    element: <ArrayFunction/>,
   },
   {
     path: '/',
