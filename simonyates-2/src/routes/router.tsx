@@ -34,13 +34,22 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <Root/>,
-    errorElement: <PageNotFound/>,
     children: [
       {
         index: true,
         element: <Home/>,
-      },
+      }
+    ]
+  },
+  {
+    path: '/',
+    element: <Root/>,
+    errorElement: <PageNotFound/>,
+    children: [
+      // {
+      //   index: true,
+      //   element: <Home/>,
+      // },
       // ---
       {
         path: 'work/uncharted-software',

@@ -77,7 +77,6 @@ export default function NavRight(props: Props) {
   return (
     <nav aria-label="Sections">
       <StyledDivRoot>
-        asfd
         <Scrollspy sectionRefs={sectionRefs}>
           {({currentElementIndexInViewport}) => (
             <div>
