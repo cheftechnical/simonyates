@@ -1,11 +1,7 @@
-// import Scrollspy from 'react-scrollspy';
-// import {makeStyles} from '@material-ui/core/styles';
-import NavRightItem from './NavRightItem/NavRightItem';
-import {color} from '../../styling/Color/Color';
 import {SectionItem} from '../Sections/SectionItem';
-import {styled} from "@mui/material";
-import {Scrollspy} from "@makotot/ghostui";
-import {useRef} from 'react';
+// import {styled} from "@mui/material";
+// import {Scrollspy} from "@makotot/ghostui";
+// import {useRef} from 'react';
 
 interface Props {
   sections?: SectionItem[];
@@ -31,26 +27,26 @@ interface Props {
 //   },
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
-  position: 'fixed',
-  maxWidth: '17%', // no idea why this works, but it does
-  border: '1px solid magenta',
-}));
+// const StyledDivRoot = styled('div')(({theme}) => ({
+//   position: 'fixed',
+//   maxWidth: '17%', // no idea why this works, but it does
+//   border: '1px solid magenta',
+// }));
 
 export default function NavRight(props: Props) {
   // const classes = useStyles();
-  const {sections = []} = props;
+  // const {sections = []} = props;
 
-  console.log('sections', sections);
+  // console.log('sections', sections);
 
   // const items = sections.map(current => {
   //   return current.id;
   // });
 
-  const sectionRefs = [
-    useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null),
-  ];
+  // const sectionRefs = [
+  //   useRef<HTMLDivElement>(null),
+  //   useRef<HTMLDivElement>(null),
+  // ];
 
 
   // if (!sections) return <></>;
@@ -74,71 +70,74 @@ export default function NavRight(props: Props) {
   // );
 
 
-  return (
-    <nav aria-label="Sections">
-      <StyledDivRoot>
-        <Scrollspy sectionRefs={sectionRefs}>
-          {({currentElementIndexInViewport}) => (
-            <div>
-              <ul
-                data-cy="nav-wrapper"
-                style={{
-                  listStyle: "none",
-                  position: "fixed",
-                  top: 0,
-                  right: 0,
-                  backgroundColor: "#fff",
-                  padding: "1rem"
-                }}
-              >
-                {sections.map((_, i) => (
-                  <li
-                    key={i}
-                    className={
-                      currentElementIndexInViewport === i ? "active" : ""
-                    }
-                    data-cy={`nav-item`}
-                  >
-                    <a
-                      href={`#section-${i}`}
-                      style={{
-                        color:
-                          currentElementIndexInViewport === i ? "#f00" : "#222"
-                      }}
-                    >
-                      section-{i}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              {/*<div data-cy="section-wrapper">*/}
-              {/*  {sections.map((_, i) => (*/}
-              {/*    <div*/}
-              {/*      id={`section-${i}`}*/}
-              {/*      data-cy={`section-item`}*/}
-              {/*      key={i}*/}
-              {/*      ref={sectionRefs[i]}*/}
-              {/*      className={*/}
-              {/*        currentElementIndexInViewport === i ? "active" : ""*/}
-              {/*      }*/}
-              {/*      style={{*/}
-              {/*        display: "flex",*/}
-              {/*        justifyContent: "center",*/}
-              {/*        alignItems: "center",*/}
-              {/*        height: "500px",*/}
-              {/*        backgroundColor: `#${i}${i}${i}`,*/}
-              {/*        color: "#fff",*/}
-              {/*        fontSize: "2rem"*/}
-              {/*      }}*/}
-              {/*    >*/}
-              {/*      {i}*/}
-              {/*    </div>*/}
-              {/*  ))}*/}
-              {/*</div>*/}
-            </div>
-          )}
-        </Scrollspy>
-      </StyledDivRoot>
-    </nav>
-  );
+  // return (
+  //   <nav aria-label="Sections">
+  //     <StyledDivRoot>
+  //       <Scrollspy sectionRefs={sectionRefs}>
+  //         {({currentElementIndexInViewport}) => (
+  //           <div>
+  //             <ul
+  //               data-cy="nav-wrapper"
+  //               style={{
+  //                 listStyle: "none",
+  //                 position: "fixed",
+  //                 top: 0,
+  //                 right: 0,
+  //                 backgroundColor: "#fff",
+  //                 padding: "1rem"
+  //               }}
+  //             >
+  //               {sections.map((_, i) => (
+  //                 <li
+  //                   key={i}
+  //                   className={
+  //                     currentElementIndexInViewport === i ? "active" : ""
+  //                   }
+  //                   data-cy={`nav-item`}
+  //                 >
+  //                   <a
+  //                     href={`#section-${i}`}
+  //                     style={{
+  //                       color:
+  //                         currentElementIndexInViewport === i ? "#f00" : "#222"
+  //                     }}
+  //                   >
+  //                     section-{i}
+  //                   </a>
+  //                 </li>
+  //               ))}
+  //             </ul>
+  //             {/*<div data-cy="section-wrapper">*/}
+  //             {/*  {sections.map((_, i) => (*/}
+  //             {/*    <div*/}
+  //             {/*      id={`section-${i}`}*/}
+  //             {/*      data-cy={`section-item`}*/}
+  //             {/*      key={i}*/}
+  //             {/*      ref={sectionRefs[i]}*/}
+  //             {/*      className={*/}
+  //             {/*        currentElementIndexInViewport === i ? "active" : ""*/}
+  //             {/*      }*/}
+  //             {/*      style={{*/}
+  //             {/*        display: "flex",*/}
+  //             {/*        justifyContent: "center",*/}
+  //             {/*        alignItems: "center",*/}
+  //             {/*        height: "500px",*/}
+  //             {/*        backgroundColor: `#${i}${i}${i}`,*/}
+  //             {/*        color: "#fff",*/}
+  //             {/*        fontSize: "2rem"*/}
+  //             {/*      }}*/}
+  //             {/*    >*/}
+  //             {/*      {i}*/}
+  //             {/*    </div>*/}
+  //             {/*  ))}*/}
+  //             {/*</div>*/}
+  //           </div>
+  //         )}
+  //       </Scrollspy>
+  //     </StyledDivRoot>
+  //   </nav>
+  // );
+
+  // @todo fix right nav
+  return (<></>);
 };

@@ -1,7 +1,7 @@
 import './index.css';
 import {color} from '../../../../../styling/Color/Color';
 import rem from '../../../../../styling/rem';
-import {Link, styled, Typography} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 import {useMemo} from "react";
 import {Link as ReactRouterDomLink} from 'react-router-dom';
 

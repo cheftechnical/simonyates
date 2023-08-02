@@ -7,7 +7,7 @@ import {MessageFormValues} from './MessageFormValues';
 import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
 import {Grid, styled, Typography} from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
-import {FieldValues, SubmitHandler} from "react-hook-form";
+import {SubmitHandler} from "react-hook-form";
 
 // @todo mui5
 // const useStyles = makeStyles((themeMui) => ({

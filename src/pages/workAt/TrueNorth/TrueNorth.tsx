@@ -16,6 +16,7 @@ export default function TrueNorth() {
         role={
           <>Team Lead & Staff Frontend Software Engineer</>
         }
+        sections={sections}
         when="March 2021 to March 2023"
         where="San Francisco, CA, USA"
       />

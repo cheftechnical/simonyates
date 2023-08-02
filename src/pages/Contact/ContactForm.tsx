@@ -2,9 +2,8 @@
  * Resources:
  * https://react-hook-form.com/get-started#IntegratingwithUIlibraries
  */
-import {Controller, FieldValues, SubmitHandler, useForm} from 'react-hook-form';
+import {Controller, SubmitHandler, useForm} from 'react-hook-form';
 import {MessageFormValues} from './MessageFormValues';
-import ButtonContained from '../../styling/ButtonContained/ButtonContained';
 import {MyTextField2} from '../../styling/MyTextField2/MyTextField2';
 import SendIcon from "@mui/icons-material/Send";
 import {Button, styled} from "@mui/material";

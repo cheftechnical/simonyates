@@ -1,8 +1,8 @@
-import MathJaxProviderWrapper from './MathJaxProviderWrapper';
+// import MathJaxProviderWrapper from './MathJaxProviderWrapper';
 import MyContainer from '../../styling/MyContainer/MyContainer';
-import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer';
-import {RotationGridContainer} from './sections/RotationGridContainer/RotationGridContainer';
-import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer/CircleBasicsGridContainer';
+// import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer';
+// import {RotationGridContainer} from './sections/RotationGridContainer/RotationGridContainer';
+// import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer/CircleBasicsGridContainer';
 import {Typography} from "@mui/material";
 import PageWrapper from '../../components/PageWrapper';
 

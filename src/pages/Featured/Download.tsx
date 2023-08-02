@@ -14,7 +14,7 @@
 // }));
 
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import {Button, Link, styled} from "@mui/material";
+import {Button, styled} from "@mui/material";
 import {useCallback} from "react";
 
 interface Props {
