@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import {color} from '../../../styling/Color';
+import {color} from '../../../styling/Color/Color';
 import {degToRad} from './trig';
 import {Coordinate} from './Coordinate';
 

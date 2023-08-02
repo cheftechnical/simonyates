@@ -1,6 +1,6 @@
+import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@mui/material';
 import {ChangeEvent, useState} from 'react';
-import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@material-ui/core';
-import MyGridContainer from '../../styling/MyGridContainer';
+import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 
 interface Currency {
   code: string;

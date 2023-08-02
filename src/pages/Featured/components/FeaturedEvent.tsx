@@ -1,57 +1,71 @@
-import * as React from 'react';
-import Typography from '../../../styling/Typography';
-import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../../styling/Color';
+import {color} from '../../../styling/Color/Color';
+import {styled, Typography} from "@mui/material";
 
 interface Props {
-	children?: any;
-	host: string;
-	next?: boolean;
-	when: string;
-	title: string;
+  children?: any;
+  host: string;
+  next?: boolean;
+  when: string;
+  title: string;
 }
 
-const useStyles = makeStyles((theme) => ({
-	root: {
+// @todo mui5
+// const useStyles = makeStyles((themeMui) => ({
+// 	root: {
+//
+// 	},
+// 	rootNext: {
+// 		paddingTop: themeMui.spacing(40 / 8)
+// 	},
+// 	host: {
+// 		paddingTop: themeMui.spacing(16 / 8),
+// 		color: color.grey['600']
+// 	},
+// 	when: {
+// 		color: color.grey['600']
+// 	}
+// }));
 
-	},
-	rootNext: {
-		paddingTop: theme.spacing(40 / 8)
-	},
-	host: {
-		paddingTop: theme.spacing(16 / 8),
-		color: color.grey['600']
-	},
-	when: {
-		color: color.grey['600']
-	}
+const StyledDivRoot = styled('div')(({theme}) => ({
+  // default
 }));
 
+const StyledDivRootNext = styled(StyledDivRoot)(({theme}) => ({
+  paddingTop: theme.spacing(40 / 8)
+}));
+
+const StyledTypographyHost = styled(Typography)(({theme}) => ({
+  paddingTop: theme.spacing(16 / 8),
+  color: color.grey['600']
+})) as typeof Typography;
+
+const StyledTypographyWhen = styled(Typography)(({theme}) => ({
+  color: color.grey['600']
+})) as typeof Typography;
+
 export default function FeaturedEvent(props: Props) {
-	const classes = useStyles();
-	const {children, host, next, title, when} = props;
+  // const classes = useStyles();
+  const {children, host, next, title, when} = props;
 
-	const rootClass = (next)
-		? `${classes.root} ${classes.rootNext}`
-		: classes.root;
+  const MyStyledDivRoot = (next) ? StyledDivRoot : StyledDivRootNext;
 
-	return (
-		<div className={rootClass}>
-			<Typography group="primary" component="h3" variant="h4" weight="medium">
-				{title}
-			</Typography>
+  return (
+    <MyStyledDivRoot>
+      <Typography component="h3" variant="primaryH4Semibold">
+        {title}
+      </Typography>
 
-			<Typography className={classes.host} group="primary" variant="body" weight="regular">
-				{host}
-			</Typography>
+      <StyledTypographyHost component="p" variant="primaryBody">
+        {host}
+      </StyledTypographyHost>
 
-			<Typography className={classes.when} group="primary" variant="body" weight="regular">
-				{when}
-			</Typography>
+      <StyledTypographyWhen component="p" variant="primaryBody">
+        {when}
+      </StyledTypographyWhen>
 
-			<div>
-				{children}
-			</div>
-		</div>
-	);
+      <div>
+        {children}
+      </div>
+    </MyStyledDivRoot>
+  );
 };

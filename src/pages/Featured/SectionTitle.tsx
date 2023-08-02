@@ -1,24 +1,26 @@
-import * as React from 'react';
-import Typography from '../../styling/Typography';
-import {makeStyles} from '@material-ui/core/styles';
+import {styled, Typography} from "@mui/material";
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
-const useStyles = makeStyles((theme) => ({
-	typography: {
-		marginBottom: theme.spacing(16/8)
-	}
-}));
+// const useStyles = makeStyles((themeMui) => ({
+// 	typography: {
+// 		marginBottom: themeMui.spacing(16/8)
+// 	}
+// }));
+
+const StyledTypography = styled(Typography)(({theme}) => ({
+  marginBottom: theme.spacing(16 / 8)
+})) as typeof Typography;
+
 
 export default function SectionTitle(props: Props) {
-	const classes = useStyles();
-	const {children} = props;
+  const {children} = props;
 
-	return (
-		<Typography className={classes.typography} group="primary" variant="h2" weight="regular">
-			{children}
-		</Typography>
-	);
+  return (
+    <StyledTypography component="h2" variant="primaryH2">
+      {children}
+    </StyledTypography>
+  );
 };

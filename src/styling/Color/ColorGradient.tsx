@@ -1,5 +1,7 @@
-import * as React from 'react';
-import {Grid} from '@material-ui/core';
+// import * as React from 'react';
+// import {Grid} from '@material-ui/core';
+
+import {Grid} from "@mui/material";
 
 type ColorStyle = {
 	50: string;

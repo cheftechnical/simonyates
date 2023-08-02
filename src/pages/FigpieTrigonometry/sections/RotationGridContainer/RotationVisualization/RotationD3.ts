@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import {BaseVisualization} from '../../../libs/BaseVisualization';
 import {Visualization} from '../../../libs/Visualization';
-import {color} from '../../../../../styling/Color';
+import {color} from '../../../../../styling/Color/Color';
 import {degToRad, radToDeg} from '../../../libs/trig';
 
 export class RotationD3 extends BaseVisualization implements Visualization {

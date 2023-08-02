@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
-import {Grid} from '@material-ui/core';
-import MyGridContainer from '../../styling/MyGridContainer';
+import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import DateTime from './DateTime';
+import {Grid} from "@mui/material";
 
 interface Region {
   timeZone: string;

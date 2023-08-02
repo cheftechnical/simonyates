@@ -1,22 +1,22 @@
-import * as React from 'react';
-import {Grid, Hidden} from '@material-ui/core';
-import Image from '../../../components/Image';
-import {makeStyles} from '@material-ui/core/styles';
+import Image from '../../../components/Image/Image';
 import rem from '../../../styling/rem';
-import MyGridContainer from '../../../styling/MyGridContainer';
+import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
 import Carousel from 'react-material-ui-carousel';
+import {Grid, Hidden, styled} from "@mui/material";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    paddingTop: rem(24)
-  },
-}));
+// const useStyles = makeStyles(() => ({
+//   root: {
+//     paddingTop: rem(24)
+//   },
+// }));
+
+const StyledDivRoot = styled('div')(({theme}) => ({
+  paddingTop: rem(24)
+}))
 
 export default function Photos() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
+    <StyledDivRoot>
       {/* Desktop */}
       <Hidden smDown>
         <MyGridContainer>
@@ -52,6 +52,6 @@ export default function Photos() {
           </div>
         </Carousel>
       </Hidden>
-    </div>
+    </StyledDivRoot>
   );
 };

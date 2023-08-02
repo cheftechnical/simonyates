@@ -1,0 +1,12 @@
+# IDE files
+/.idea
+
+# Application dependencies
+/node_modules/
+#/src/styling/fonts/
+
+# Production files
+build/
+
+# Development files
+yarn-error.log

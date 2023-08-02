@@ -2,43 +2,29 @@
  * Resources:
  * https://react-hook-form.com/get-started#IntegratingwithUIlibraries
  */
-import * as React from 'react';
-import {Controller, useForm} from 'react-hook-form';
-import SendIcon from '@material-ui/icons/Send';
-import {Message} from './Message';
-import {makeStyles} from '@material-ui/core/styles';
-import ButtonContained from '../../styling/ButtonContained';
-import {MyTextField2} from '../../styling/MyTextField2';
+import {Controller, FieldValues, SubmitHandler, useForm} from 'react-hook-form';
+import {MessageFormValues} from './MessageFormValues';
+import ButtonContained from '../../styling/ButtonContained/ButtonContained';
+import {MyTextField2} from '../../styling/MyTextField2/MyTextField2';
+import SendIcon from "@mui/icons-material/Send";
+import {Button, styled} from "@mui/material";
 
 // @source https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 const regexEmailAddress = /\S+@\S+\.\S+/
 
 interface Props {
-  onSubmit: (data: Message) => void;
+  // onSubmit: (data: MessageFormValues) => void;
+  onSubmit: SubmitHandler<MessageFormValues>;
 }
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    marginTop: theme.spacing(16 / 8)
-  }
+const StyledButton = styled(Button)(({theme}) => ({
+  marginTop: theme.spacing(16 / 8)
 }));
 
-// interface IFormInputs {
-//   name: string;
-// }
-
 export default function ContactForm(props: Props) {
-  const classes = useStyles();
-
   const {onSubmit} = props;
-  // const {handleSubmit, control, reset} = useForm<IFormInputs>();
-  // const {control, handleSubmit, errors} = useForm<MessageFormValues>();
-  const {control, handleSubmit, formState: {errors}} = useForm();
+  const {control, handleSubmit, formState: {errors}} = useForm<MessageFormValues>();
 
-  // const onSubmit: SubmitHandler<IFormInputs> = data => {
-  //   console.log(data);
-  //   // onSubmit(data);
-  // }
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -121,13 +107,12 @@ export default function ContactForm(props: Props) {
           }}
         />
 
-        <ButtonContained
-          className={classes.button}
+        <StyledButton
           endIcon={<SendIcon style={{fontSize: '16px'}}/>}
           type="submit"
         >
           Send
-        </ButtonContained>
+        </StyledButton>
 
       </form>
     </div>

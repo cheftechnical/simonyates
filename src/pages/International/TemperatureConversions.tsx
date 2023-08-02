@@ -1,6 +1,6 @@
-import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@material-ui/core';
 import {ChangeEvent, ReactNode, useState} from 'react';
-import MyGridContainer from '../../styling/MyGridContainer';
+import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
+import {FormControl, FormHelperText, Grid, Input, InputAdornment} from "@mui/material";
 
 interface Temperature {
   code: string;

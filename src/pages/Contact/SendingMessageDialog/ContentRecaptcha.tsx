@@ -1,9 +1,12 @@
-import * as React from 'react';
-import {Box, Button, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
+// import * as React from 'react';
+// import {Box, Button, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
 import ReCAPTCHA from 'react-google-recaptcha';
-import axios from 'axios';
-import {Message} from '../Message';
-import {makeStyles} from '@material-ui/core/styles';
+// import axios from 'axios';
+import {MessageFormValues} from '../MessageFormValues';
+import {Box, Button, DialogActions, DialogContent, DialogTitle, makeStyles, styled} from "@mui/material";
+import {useCallback, useMemo} from "react";
+import axios from "axios";
+// import {makeStyles} from '@material-ui/core/styles';
 
 // https://developers.google.com/recaptcha/docs/display
 // v2
@@ -11,25 +14,35 @@ const recaptchaSiteKey = '6Ldoc7gZAAAAAK-b8CtvPI9W00OkjyouLoxmdwq1';
 
 interface Props {
 	debug?: boolean;
-	message: Message | undefined;
+	message: MessageFormValues | undefined;
 	onClose: () => void;
 	onSuccess: () => void;
 }
 
-const useStyles = makeStyles((theme) => ({
-	root: {
-		textAlign: 'center'
-	},
-	box: {
-		width: 302
-	}
+// @todo mui5
+// const useStyles = makeStyles((themeMui) => ({
+// 	root: {
+// 		textAlign: 'center'
+// 	},
+// 	box: {
+// 		width: 302
+// 	}
+// }));
+
+const StyledBox = styled(Box)(({theme}) => ({
+	width: 302
 }));
 
+const StyledDivRoot = styled('div')(({theme}) => ({
+	textAlign: 'center'
+}));
+
+
 export default function ContentRecaptcha(props: Props) {
-	const classes = useStyles();
+	// const classes = useStyles();
 	const {debug, message, onClose, onSuccess} = props;
 
-	const send = React.useCallback(() => {
+	const send = useCallback(() => {
 		// Serialize the message
 		const payload = {
 			from: message?.emailAddress,
@@ -52,13 +65,13 @@ export default function ContentRecaptcha(props: Props) {
 			});
 	}, [message, onSuccess]);
 
-	const handleReCaptchaChange = React.useCallback((value) => {
+	const handleReCaptchaChange = useCallback((value: any) => {
 		console.log('value', value);
 		send();
 	}, [send]);
 
-	const debugButtons = React.useMemo(() => {
-		if (!debug) return (<React.Fragment/>);
+	const debugButtons = useMemo(() => {
+		if (!debug) return (<></>);
 
 		return (
 			<DialogActions>
@@ -76,16 +89,16 @@ export default function ContentRecaptcha(props: Props) {
 		<div>
 			<DialogTitle id="sending-message-dialog-title">Are you a human?</DialogTitle>
 			<DialogContent>
-				<div className={classes.root}>
+				<StyledDivRoot>
 					<Box display="flex" justifyContent="center">
-						<Box className={classes.box} pb={3}>
+						<StyledBox pb={3}>
 							<ReCAPTCHA
 								onChange={handleReCaptchaChange}
 								sitekey={recaptchaSiteKey}
 							/>
-						</Box>
+						</StyledBox>
 					</Box>
-				</div>
+				</StyledDivRoot>
 			</DialogContent>
 			{debugButtons}
 		</div>

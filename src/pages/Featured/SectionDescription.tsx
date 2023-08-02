@@ -1,27 +1,29 @@
-import * as React from 'react';
-import Typography from '../../styling/Typography';
-import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../styling/Color';
+import {color} from '../../styling/Color/Color';
+import {styled, Typography} from "@mui/material";
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
-const useStyles = makeStyles((theme) => ({
-	intro: {
-		marginBottom: theme.spacing(40/8),
-		color: color.grey['700']
-	}
-}));
+// const useStyles = makeStyles((themeMui) => ({
+// 	intro: {
+// 		marginBottom: themeMui.spacing(40/8),
+// 		color: color.grey['700']
+// 	}
+// }));
+const StyledTypography = styled(Typography)(({theme}) => ({
+  marginBottom: theme.spacing(40 / 8),
+  color: color.grey['700']
+})) as typeof Typography;
 
 export default function SectionDescription(props: Props) {
-	const classes = useStyles();
+  // const classes = useStyles();
 
-	const {children} = props;
+  const {children} = props;
 
-	return (
-		<Typography className={classes.intro} group="primary" variant="body" weight="regular">
-			{children}
-		</Typography>
-	);
+  return (
+    <StyledTypography component="p" variant="primaryBody">
+      {children}
+    </StyledTypography>
+  );
 };

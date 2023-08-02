@@ -1,16 +1,21 @@
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import {Button} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
-import classNames from 'classnames';
+// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import {Button} from '@material-ui/core';
+// import {makeStyles} from '@material-ui/core/styles';
+// import classNames from 'classnames';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    marginTop: theme.spacing(24 / 8)
-  },
-  next: {
-    marginTop: theme.spacing(0 / 8),
-  }
-}));
+// @todo mui5
+// const useStyles = makeStyles((themeMui) => ({
+//   root: {
+//     marginTop: themeMui.spacing(24 / 8)
+//   },
+//   next: {
+//     marginTop: themeMui.spacing(0 / 8),
+//   }
+// }));
+
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import {Button, Link, styled} from "@mui/material";
+import {useCallback} from "react";
 
 interface Props {
   /**
@@ -33,18 +38,31 @@ const defaultProps: Props = {
   href: '',
 };
 
+const StyledButton = styled(Button)(({theme}) => ({
+  // default
+}));
+
+const StyledButtonNext = styled(StyledButton)(({theme}) => ({
+  marginTop: theme.spacing(0 / 8),
+}));
+
 export default function Download(props: Props) {
-  const classes = useStyles();
+  // const classes = useStyles();
   const {href, label, next} = {...defaultProps, ...props};
 
-  const className = classNames([
-    classes.root,
-    {[classes.next]: next},
-  ]);
+  const handleOnClick = useCallback(() => {
+    const link = document.createElement("a");
+    link.download = label ? label : '';
+    link.href = href;
+    link.target = '_blank';
+    link.click();
+  }, [href, label]);
+
+  const MyStyledButton = (next) ? StyledButtonNext : StyledButton;
 
   return (
-    <Button download className={className} endIcon={<ArrowRightIcon/>} href={href} variant="text" target="_blank">
+    <MyStyledButton endIcon={<ArrowRightIcon/>} onClick={handleOnClick} variant="text">
       {label}
-    </Button>
+    </MyStyledButton>
   );
 };
