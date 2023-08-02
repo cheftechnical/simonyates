@@ -32,7 +32,7 @@ export default function ContactForm(props: Props) {
 
   const {onSubmit} = props;
   // const {handleSubmit, control, reset} = useForm<IFormInputs>();
-  // const {control, handleSubmit, errors} = useForm<Message>();
+  // const {control, handleSubmit, errors} = useForm<MessageFormValues>();
   const {control, handleSubmit, formState: {errors}} = useForm();
 
   // const onSubmit: SubmitHandler<IFormInputs> = data => {
@@ -112,7 +112,7 @@ export default function ContactForm(props: Props) {
               multiline
               error={!!errors.body}
               helperText={errors.body?.message ? errors.body.message.toString() : undefined}
-              placeholder="Message"
+              placeholder="MessageFormValues"
               rows={7}
             />
           )}

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {ForwardedRef} from 'react';
-import {TextField} from "@mui/material";
-// import {InputAdornment, TextField} from '@material-ui/core';
-// import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import {ForwardedRef, forwardRef} from 'react';
+import {InputAdornment, TextField} from "@mui/material";
+import {ErrorOutline} from "@mui/icons-material";
+import {OutlinedInputProps} from "@mui/material/OutlinedInput";
+
 // import {InputProps as StandardInputProps} from '@material-ui/core/Input/Input';
 
 interface Props {
@@ -40,7 +40,7 @@ interface Props {
    *
    * @param newValue
    */
-  // onChange: (newValue: StandardInputProps) => void;
+  onChange: (newValue: OutlinedInputProps) => void;
 
   /**
    * Number of rows to display, requires that `multiline=true`
@@ -61,53 +61,64 @@ interface Props {
 }
 
 // REMINDER: the tpe of forwardRef is the REVERSE order that they're listed in the callback arguments?!!!
-export const MyTextField2 = React.forwardRef<HTMLInputElement, Props>((props: Props, ref: ForwardedRef<HTMLInputElement>) => {
-  // const {defaultValue, disabled, error, helperText, label, multiline, name, onChange, placeholder, rows, type, value} = props;
+export const MyTextField2 = forwardRef<HTMLInputElement, Props>((props: Props, ref: ForwardedRef<HTMLInputElement>) => {
+  const {
+    defaultValue,
+    disabled,
+    error,
+    helperText,
+    label,
+    multiline,
+    name,
+    onChange,
+    placeholder,
+    rows,
+    type,
+    value
+  } = props;
 
-  // if (error) {
-  //   return (
-  //     <TextField
-  //       error
-  //       fullWidth
-  //       defaultValue={defaultValue}
-  //       disabled={disabled}
-  //       helperText={helperText}
-  //       label={label}
-  //       multiline={multiline}
-  //       name={name}
-  //       ref={ref}
-  //       onChange={onChange}
-  //       placeholder={placeholder}
-  //       rows={rows}
-  //       type={type}
-  //       value={value}
-  //       InputProps={{
-  //         // ...InputProps,
-  //         endAdornment: <InputAdornment position="end"><ErrorOutlineIcon/></InputAdornment>
-  //       }}
-  //     />
-  //   );
-  // }
+  if (error) {
+    return (
+      <TextField
+        error
+        fullWidth
+        defaultValue={defaultValue}
+        disabled={disabled}
+        helperText={helperText}
+        label={label}
+        multiline={multiline}
+        name={name}
+        ref={ref}
+        onChange={onChange}
+        placeholder={placeholder}
+        rows={rows}
+        type={type}
+        value={value}
+        InputProps={{
+          // ...InputProps,
+          endAdornment: <InputAdornment position="end"><ErrorOutline/></InputAdornment>
+        }}
+      />
+    );
+  }
 
-  // return (
-  //   <TextField
-  //     fullWidth
-  //     defaultValue={defaultValue}
-  //     disabled={disabled}
-  //     helperText={helperText}
-  //     label={label}
-  //     multiline={multiline}
-  //     name={name}
-  //     ref={ref}
-  //     onChange={onChange}
-  //     placeholder={placeholder}
-  //     rows={rows}
-  //     type={type}
-  //     value={value}
-  //   />
-  // )
-
-  return <TextField/>
+  return (
+    <TextField
+      fullWidth
+      defaultValue={defaultValue}
+      disabled={disabled}
+      helperText={helperText}
+      label={label}
+      multiline={multiline}
+      name={name}
+      ref={ref}
+      onChange={onChange}
+      placeholder={placeholder}
+      rows={rows}
+      type={type}
+      value={value}
+    />
+  )
 });
 
 

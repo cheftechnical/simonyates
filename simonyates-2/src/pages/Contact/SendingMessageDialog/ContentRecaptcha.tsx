@@ -2,7 +2,7 @@
 // import {Box, Button, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
 import ReCAPTCHA from 'react-google-recaptcha';
 // import axios from 'axios';
-import {Message} from '../Message';
+import {MessageFormValues} from '../MessageFormValues';
 import {Box, Button, DialogActions, DialogContent, DialogTitle, makeStyles, styled} from "@mui/material";
 import {useCallback, useMemo} from "react";
 import axios from "axios";
@@ -14,7 +14,7 @@ const recaptchaSiteKey = '6Ldoc7gZAAAAAK-b8CtvPI9W00OkjyouLoxmdwq1';
 
 interface Props {
 	debug?: boolean;
-	message: Message | undefined;
+	message: MessageFormValues | undefined;
 	onClose: () => void;
 	onSuccess: () => void;
 }

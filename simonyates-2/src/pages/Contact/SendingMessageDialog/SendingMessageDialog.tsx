@@ -1,6 +1,6 @@
 // import * as React from 'react';
 // import {Dialog} from '@material-ui/core';
-import {Message} from '../Message';
+import {MessageFormValues} from '../MessageFormValues';
 import ContentRecaptcha from './ContentRecaptcha';
 import ContentSuccessful from './ContentSuccessful';
 import {useMemo, useState} from "react";
@@ -9,7 +9,7 @@ import {Dialog} from "@mui/material";
 interface Props {
 	defaultFragment?: 'recaptcha' | 'success';
 	isOpen: boolean;
-	message?: Message;
+	message?: MessageFormValues;
 	onClose: () => void;
 }
 

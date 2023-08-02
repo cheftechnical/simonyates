@@ -3,10 +3,11 @@ import {color} from '../../styling/Color/Color';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
 import ContactForm from './ContactForm';
-import {Message} from './Message';
+import {MessageFormValues} from './MessageFormValues';
 import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
 import {Grid, styled, Typography} from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
+import {FieldValues, SubmitHandler} from "react-hook-form";
 
 // @todo mui5
 // const useStyles = makeStyles((themeMui) => ({
@@ -32,13 +33,13 @@ export default function Contact() {
   // const classes = useStyles();
 
   const [isSending, setIsSending] = useState<boolean>(false);
-  const [message, setMessage] = useState<Message>();
+  const [message, setMessage] = useState<MessageFormValues>();
 
   const handleSendingDialogClose = useCallback(() => {
     setIsSending(false);
   }, []);
 
-  const handleSubmit = useCallback((value: Message) => {
+  const handleSubmit: SubmitHandler<MessageFormValues> = useCallback((value: MessageFormValues) => {
     setIsSending(true);
     setMessage(value);
   }, []);

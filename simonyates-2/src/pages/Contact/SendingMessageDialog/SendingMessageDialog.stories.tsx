@@ -1,8 +1,8 @@
 import * as React from 'react';
 import SendingMessageDialog from './SendingMessageDialog';
-import {Message} from '../Message';
+import {MessageFormValues} from '../MessageFormValues';
 
-const message: Message = {
+const message: MessageFormValues = {
 	name: 'John Doe',
 	emailAddress: 'john.doe@example.com',
 	subject: 'Subject placeholder',

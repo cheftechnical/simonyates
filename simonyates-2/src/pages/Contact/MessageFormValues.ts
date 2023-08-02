@@ -1,4 +1,4 @@
-export type Message = {
+export type MessageFormValues = {
 	name: string,
 	emailAddress: string,
 	subject: string,
