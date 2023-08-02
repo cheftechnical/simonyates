@@ -67,15 +67,6 @@ export function getImage(brand: string, variant: string): (Image | undefined) {
         },
         src: `${basePath}/${brand}/rbc--color--208x270.png`
       };
-    case 'uncharted-software':
-      return {
-        alt: 'Uncharted Software logo',
-        dimension: {
-          height: 400,
-          width: 400,
-        },
-        src: `${basePath}/${brand}/uncharted-software--color--400x400.png`
-      };
     case 'simon-yates':
       // Depending on the variant, there are two different sizes being used
       switch (variant) {
@@ -99,7 +90,18 @@ export function getImage(brand: string, variant: string): (Image | undefined) {
             src: `${basePath}/${brand}/${brand}--default.svg`
           };
       }
-
+    case 'truenorth':
+      switch (variant) {
+        default:
+          return {
+            alt: 'TrueNorth',
+            dimension: {
+              height: 30,
+              width: 30
+            },
+            src: `${basePath}/${brand}/${brand}-logo.svg`
+          };
+      }
     case 'twitter':
       return {
         alt: 'Twitter logo',
@@ -108,6 +110,15 @@ export function getImage(brand: string, variant: string): (Image | undefined) {
           width: 24,
         },
         src: `${basePath}/${brand}/${brand}--${variant}.svg`
+      };
+    case 'uncharted-software':
+      return {
+        alt: 'Uncharted Software logo',
+        dimension: {
+          height: 400,
+          width: 400,
+        },
+        src: `${basePath}/${brand}/uncharted-software--color--400x400.png`
       };
     default:
       console.warn(`Missing or invalid image: "${brand}" ${variant}`);
