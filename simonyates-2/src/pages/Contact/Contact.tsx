@@ -40,6 +40,7 @@ export default function Contact() {
   }, []);
 
   const handleSubmit: SubmitHandler<MessageFormValues> = useCallback((value: MessageFormValues) => {
+    console.log('sending');
     setIsSending(true);
     setMessage(value);
   }, []);
