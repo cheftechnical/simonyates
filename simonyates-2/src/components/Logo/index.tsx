@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {Dimension, getImage} from './getImage';
 
 interface Props {
@@ -10,6 +9,7 @@ interface Props {
     'mayo-clinic' |
     'rbc' |
     'simon-yates' |
+    'truenorth' |
     'twitter' |
     'uncharted-software';
   variant:
@@ -28,7 +28,7 @@ export default function Logo(props: Props) {
   const image = getImage(brand, variant);
 
   // If no image, return nothing
-  if (!image) return (<React.Fragment/>);
+  if (!image) return (<></>);
 
   if (typeof width === 'number') {
     // Scale the image
@@ -50,11 +50,11 @@ export default function Logo(props: Props) {
 
   // If width=100%, return same
   // if (!width || width === '100%') {
-    return <img
-      alt={image.alt}
-      src={image.src}
-      height="auto"
-      width={width}
-    />
+  return <img
+    alt={image.alt}
+    src={image.src}
+    height="auto"
+    width={width}
+  />
   // }
 };
