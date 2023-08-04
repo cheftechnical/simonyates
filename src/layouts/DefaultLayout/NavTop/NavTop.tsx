@@ -1,6 +1,5 @@
-// import {Hidden} from '@material-ui/core';
-import ForMobile from './ForMobile/ForMobile';
-import ForDesktop from './ForDesktop/ForDesktop';
+import ForMobile from './ForMobile';
+import ForDesktop from './ForDesktop';
 import {Hidden} from "@mui/material";
 
 interface Props {
@@ -22,7 +21,7 @@ export default function NavTop(props: Props) {
 
       {/*	Mobile */}
       <Hidden mdUp>
-        <ForMobile selected={selected}/>
+        <ForMobile/>
       </Hidden>
     </nav>
   );

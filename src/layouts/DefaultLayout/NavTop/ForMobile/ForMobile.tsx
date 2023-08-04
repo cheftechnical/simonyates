@@ -1,48 +1,13 @@
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
-import {Link as ReactRouterDom} from 'react-router-dom';
+import {Link as ReactRouterDomLink, useLocation, useMatch, useMatches, useNavigation} from 'react-router-dom';
 import Logo from '../../../../components/Logo';
 import Menu from './Menu';
 import {color} from '../../../../styling/Color/Color';
 import rem from '../../../../styling/rem';
 import CenterVertically from '../../../../components/CenterVertically/CenterVertically';
-import {useCallback, useState} from "react";
+import {ReactNode, useCallback, useMemo, useState} from "react";
 import {Box, IconButton, Link, styled} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-
-interface Props {
-  selected?: string;
-}
-
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {
-// 		paddingTop: themeMui.spacing(48 / 8),
-// 		paddingBottom: themeMui.spacing(24 / 8),
-// 		position: 'fixed',
-// 		backgroundColor: color.white,
-// 		// border: '1px solid magenta',
-// 		width: '100%',
-// 		top: 0,
-// 		zIndex: 999
-// 	},
-// 	selected: {
-// 		paddingRight: themeMui.spacing((16-12) / 8),
-// 		fontWeight: 'bold',
-// 		fontSize: rem(14),
-// 		lineHeight: rem(16),
-// 		letterSpacing: rem(1.25),
-// 		textTransform: 'uppercase',
-// 	},
-// 	box1: {
-// 		// backgroundColor: 'magenta'
-// 	},
-// 	box2: {
-// 		// backgroundColor: 'cyan'
-// 	},
-// 	box3: {
-// 		// backgroundColor: 'lime'
-// 	}
-// }));
 
 const StyledTypographySelected = styled(Box)(({theme}) => ({
   ...theme.typography.primaryBody,
@@ -52,6 +17,11 @@ const StyledTypographySelected = styled(Box)(({theme}) => ({
   lineHeight: rem(16),
   letterSpacing: rem(1.25),
   textTransform: 'uppercase',
+
+  '& a': {
+    color: 'inherit'
+
+  }
 })) as typeof Box;
 
 const StyledDivRoot = styled('div')(({theme}) => ({
@@ -64,10 +34,12 @@ const StyledDivRoot = styled('div')(({theme}) => ({
   zIndex: 999
 }));
 
-export default function ForMobile(props: Props) {
-  // const classes = useStyles();
-  const {selected} = props;
+interface CustomHandles {
+  breadcrumb?: ReactNode;
+}
 
+export default function ForMobile() {
+  const matches = useMatches();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const handleHideMenu = useCallback(() => {
@@ -78,6 +50,19 @@ export default function ForMobile(props: Props) {
     setIsMenuVisible(true);
   }, []);
 
+  const selected = useMemo(() => {
+    if (matches && matches[1] && matches[1].handle) {
+      const handle = matches[1].handle as CustomHandles;
+
+      if (handle.breadcrumb) {
+        return (
+          <div>{handle.breadcrumb}</div>
+        );
+      }
+    }
+
+    return <></>;
+  }, [matches]);
 
   return (
     <StyledDivRoot>
@@ -86,7 +71,7 @@ export default function ForMobile(props: Props) {
           {/* Left align */}
           <Box flexGrow={1}>
             <CenterVertically>
-              <Link component={ReactRouterDom} to="/"><Logo
+              <Link component={ReactRouterDomLink} to="/"><Logo
                 brand="simon-yates"
                 variant="default"
                 width={149}
@@ -97,9 +82,8 @@ export default function ForMobile(props: Props) {
           {/*	Right align */}
           <Box>
             <CenterVertically>
-              {/*<StyledTypographySelected variant="primaryBody">*/}
               <StyledTypographySelected>
-                {selected}[selected]
+                {selected}
               </StyledTypographySelected>
             </CenterVertically>
           </Box>
@@ -115,7 +99,6 @@ export default function ForMobile(props: Props) {
 
       <Menu
         onClose={handleHideMenu}
-        selected={selected}
         visible={isMenuVisible}
       />
     </StyledDivRoot>

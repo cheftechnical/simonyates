@@ -1,9 +1,9 @@
 import {ReactNode} from 'react';
 import {Helmet} from 'react-helmet-async';
 import rem from '../../styling/rem';
-import NavTop from './NavTop/NavTop';
-import Footer from './Footer/Footer';
-import SkipNav from './SkipNav/SkipNav';
+import NavTop from './NavTop';
+import Footer from './Footer';
+import SkipNav from './SkipNav';
 import {styled} from "@mui/material";
 import {ScrollRestoration} from "react-router-dom";
 

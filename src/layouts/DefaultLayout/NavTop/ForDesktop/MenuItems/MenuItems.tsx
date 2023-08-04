@@ -3,7 +3,7 @@ import {color} from '../../../../../styling/Color/Color';
 import rem from '../../../../../styling/rem';
 import {styled, Typography} from "@mui/material";
 import {useMemo} from "react";
-import {Link as ReactRouterDomLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 enum Variant {
   FadeIn = 'fadeIn',
@@ -23,93 +23,6 @@ export interface Props {
 }
 
 const nMilliseconds = '150ms';
-
-// @todo mui5
-// const useStyles = makeStyles((themeMui: Theme) =>
-//   createStyles({
-//
-//     ul: {
-//       listStyle: 'none',
-//       margin: '0',
-//       padding: '0',
-//
-//       display: 'flex',
-//       flexWrap: 'wrap',
-//       justifyContent: 'center',
-//     },
-//
-//     li: {
-//       // margin: '0 2rem',
-//       marginLeft: themeMui.spacing(3), // controls the spacing between each menu item
-//     },
-//
-//     liFadeIn: {},
-//
-//     liSlideIn: {
-//       // slide in
-//       '& a': {
-//         overflow: 'hidden',
-//       },
-//
-//       '& a::after': {
-//         opacity: '1',
-//
-//         // A weird glitch with Chrome will cause 1px to remain visible after the animation, but if you set the reset
-//         // to `-110%`,it will hide it
-//         transform: 'translate3d(-105%, 0, 0)',
-//       },
-//
-//       '& a:hover::after, & a:focus::after': {
-//         transform: 'translate3d(0, 0, 0)',
-//       }
-//     },
-//
-//     liCenter: {
-//       '& a::after': {
-//         opacity: '1',
-//         transform: 'scale(0)',
-//         transformOrigin: 'center',
-//       },
-//
-//       '& a:hover::after, & a:focus::after': {
-//         transform: 'scale(1)',
-//       },
-//     },
-//
-//     a: {
-//       color: 'inherit',
-//       textDecoration: 'none',
-//
-//       display: 'block',
-//       position: 'relative',
-//       // padding: '0.2em 0;',
-//       // padding: '10px 0', // Sets the distance the underline has from the text
-//       paddingTop: rem(6),
-//       paddingBottom: rem(6),
-//
-//       // FadeIn in
-//       '&::after': {
-//         content: '""',
-//         position: 'absolute',
-//         bottom: '0',
-//         left: '0',
-//         width: '100%',
-//         // height: '0.1em',
-//         height: rem(2), // Sets the thickness of the underline
-//         backgroundColor: color.grey[900],
-//         opacity: '0',
-//         transition: `opacity ${nMilliseconds}, transform ${nMilliseconds}`,
-//       },
-//
-//       '&:hover::after, &:focus::after': {
-//         opacity: '1',
-//         transform: 'translate3d(0, 0.2em, 0)',
-//       }
-//     },
-//
-//     aFadeIn: {}
-//   })
-// );
 
 const StyledLi = styled('li')(({theme}) => ({
   // margin: '0 2rem',
@@ -161,7 +74,7 @@ const StyledUl = styled('ul')(({theme}) => ({
   justifyContent: 'center',
 }))
 
-const StyledReactRouterDomLink = styled(ReactRouterDomLink)(({theme}) => ({
+const StyledReactRouterDomLink = styled(NavLink)(({theme}) => ({
   color: 'inherit',
   textDecoration: 'none',
 
@@ -189,24 +102,17 @@ const StyledReactRouterDomLink = styled(ReactRouterDomLink)(({theme}) => ({
   '&:hover::after, &:focus::after': {
     opacity: '1',
     transform: 'translate3d(0, 0.2em, 0)',
+  },
+
+  '&.active': {
+    fontWeight: 'bold',
   }
 }));
 
 const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(({theme}) => ({}));
 
 export function MenuItems(props: Props) {
-  // const classes = useStyles();
   const {selected, variant = Variant.SlideIn} = props;
-
-  // const liClassName = classNames([classes.li], {
-  //   [classes.liFadeIn]: variant === Variant.FadeIn,
-  //   [classes.liSlideIn]: variant === Variant.SlideIn,
-  //   [classes.liCenter]: variant === Variant.Center,
-  // });
-
-  // const aClassName = classNames([classes.a], {
-  //   [classes.aFadeIn]: variant === Variant.FadeIn,
-  // });
 
   const MyLi = useMemo(() => {
     switch (variant) {
