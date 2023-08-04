@@ -1,5 +1,5 @@
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
-import {Link as ReactRouterDomLink, useLocation, useMatch, useMatches, useNavigation} from 'react-router-dom';
+import {Link as ReactRouterDomLink, useMatches} from 'react-router-dom';
 import Logo from '../../../../components/Logo';
 import Menu from './Menu';
 import {color} from '../../../../styling/Color/Color';
