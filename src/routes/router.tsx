@@ -17,6 +17,7 @@ const International = lazy(() => import('../pages/International'));
 const JibDesignAndAdvertising = lazy(() => import('../pages/workAt/JibDesignAndAdvertising'));
 const Legal = lazy(() => import('../pages/Legal'));
 const MayoClinic = lazy(() => import('../pages/workAt/MayoClinic'));
+const MortgagePaymentCalculator = lazy(() => import('../pages/Math/MortgagePaymentCalculator'));
 const PageNotFound = lazy(() => import('../pages/PageNotFound'));
 const Rbc = lazy(() => import('../pages/workAt/Rbc'));
 const TrueNorth = lazy(() => import('../pages/workAt/TrueNorth'));
@@ -113,12 +114,8 @@ const router = createBrowserRouter([
         element: <International/>
       },
       {
-        path: 'figpie/trigonometry',
-        element: <FigpieTrigonometry/>,
-      },
-      {
-        path: 'figpie',
-        element: <Figpie/>,
+        path: 'math/mortgage-payment-calculator',
+        element: <MortgagePaymentCalculator/>
       },
       {
         path: 'legal',
@@ -126,6 +123,14 @@ const router = createBrowserRouter([
         handle: {
           breadcrumb: <Link component={ReactRouterDomLink} to="/legal">Legal</Link>
         }
+      },
+      {
+        path: 'figpie/trigonometry',
+        element: <FigpieTrigonometry/>,
+      },
+      {
+        path: 'figpie',
+        element: <Figpie/>,
       },
       {
         path: 'featured',
