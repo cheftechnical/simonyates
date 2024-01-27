@@ -8,9 +8,6 @@ import {HelmetProvider} from 'react-helmet-async';
 import ErrorPage from './error-page.tsx';
 import Home from './routes/Home.tsx';
 import { About } from './routes/About.tsx';
-import Contact from './routes/Contact.tsx';
-import Root from './routes/Root.tsx';
-import Experiment from './pages/Experiment/Experiment.tsx';
 import { Featured } from './routes/Featured.tsx';
 import { Figpie } from './routes/Figpie.tsx';
 import { FigpieTrigonometry } from './routes/FigpieTrigonometry.tsx';
@@ -26,6 +23,8 @@ import UnchartedSoftwarePage from './pages/workAt/UnchartedSoftwarePage/Uncharte
 import GenworthCanadaPage from './pages/workAt/GenworthCanadaPage/index.ts';
 import InfomartPage from './pages/workAt/InfomartPage/index.ts';
 import JibDesignAndAdvertisingPage from './pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx';
+import { Root } from './routes/root.tsx';
+import { Contact } from './routes/contact.tsx';
 
 const router = createBrowserRouter([
   // full height pages
@@ -102,6 +101,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: '/about',
+        element: <About />,
+      },
+      {
         path: '/',
         element: <Home />,
       },
@@ -115,11 +118,6 @@ const router = createBrowserRouter([
   //   element: <Experiment />,
   //   errorElement: <ErrorPage />,
   // },
-
-  {
-    path: 'contacts/:contactId',
-    element: <Contact />,
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
