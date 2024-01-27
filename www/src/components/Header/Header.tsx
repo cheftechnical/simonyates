@@ -1,12 +1,9 @@
-type HeaderProps = {
-  title?: string;
-};
+type HeaderProps = {};
 
 export function Header(props: HeaderProps) {
-  const {title} = props;
 
   return (
-    <div>[Header title = {title}]</div>
+    <div>[Header]</div>
   );
 };
 

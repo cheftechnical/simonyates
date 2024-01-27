@@ -15,6 +15,17 @@ import { Featured } from './routes/Featured.tsx';
 import { Figpie } from './routes/Figpie.tsx';
 import { FigpieTrigonometry } from './routes/FigpieTrigonometry.tsx';
 import International from './pages/InternationalPage/InternationalPage.tsx';
+import Legal from './routes/Legal.tsx';
+import PageNotFound from './routes/PageNotFound.tsx';
+import Work from './routes/Work.tsx';
+import WorkPage from './pages/WorkPage/WorkPage.tsx';
+import TrueNorthPage from './pages/workAt/TrueNorth/TrueNorthPage.tsx';
+import RbcPage from './pages/workAt/RbcPage/RbcPage.tsx';
+import MayoClinicPage from './pages/workAt/MayoClinicPage/MayoClinicPage.tsx';
+import UnchartedSoftwarePage from './pages/workAt/UnchartedSoftwarePage/UnchartedSoftwarePage.tsx';
+import GenworthCanadaPage from './pages/workAt/GenworthCanadaPage/index.ts';
+import InfomartPage from './pages/workAt/InfomartPage/index.ts';
+import JibDesignAndAdvertisingPage from './pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx';
 
 const router = createBrowserRouter([
   // full height pages
@@ -24,6 +35,52 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,    
     children: [
       // The following elements should be sorted in reverse-alphabetical order by path value
+      {
+        path: '/work',
+        element: <Work />,
+        children: [
+          {
+            path: '/work/uncharted-software',
+            element: <UnchartedSoftwarePage />,
+          },
+          {
+            path: '/work/truenorth',
+            element: <TrueNorthPage />,
+          },
+          {
+            path: '/work/rbc',
+            element: <RbcPage />,
+          },
+          {
+            path: '/work/mayo-clinic',
+            element: <MayoClinicPage />,
+          },
+          {
+            path: '/work/jib-design-and-advertising',
+            element: <JibDesignAndAdvertisingPage />,
+          },
+          {
+            path: '/work/infomart',
+            element: <InfomartPage />,
+          },
+          {
+            path: '/work/genworth-canada',
+            element: <GenworthCanadaPage />,
+          },
+          {
+            path: '/work',
+            element: <WorkPage />,
+          }
+        ]
+      },
+      {
+        path: '/page-not-found',
+        element: <PageNotFound/>,
+      },
+      {
+        path: '/legal',
+        element: <Legal />,
+      },
       {
         path: '/international',
         element: <International />,

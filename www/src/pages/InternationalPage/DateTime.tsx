@@ -6,7 +6,7 @@ export interface Props {
   timeZone: string;
 }
 
-export default function DateTime(props: Props) {
+export function DateTime(props: Props) {
   const {now, timeZone} = props;
 
   const zonedDate = utcToZonedTime(now, timeZone);
@@ -15,7 +15,7 @@ export default function DateTime(props: Props) {
     <Box textAlign="center">
       <Typography component="h4" variant="primaryH4">
         ({format(zonedDate, 'O', {timeZone: timeZone})})<br/>
-        {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/>*/}
+        {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/> remmed out before */}
         {timeZone}
       </Typography>
 
@@ -27,3 +27,5 @@ export default function DateTime(props: Props) {
     </Box>
   );
 }
+
+export default DateTime;
