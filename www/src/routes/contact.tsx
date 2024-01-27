@@ -1,8 +1,9 @@
-import React from 'react';
+import ContactPage from "../pages/ContactPage";
+
 
 export function Contact() {
     return (
-        <div>[Contact]</div>
+        <ContactPage/>
     )
 };
 

@@ -1,20 +1,13 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 
-
-type RootProps = {
-    /**
-    * The title of the page as it appears in the <head><title></head>
-    */
-    title?: string;
-};
 
 export function Root() {
   return (
     <>
       <header>
-        [Header]
+        <Header/>
       </header>
 
       <main>
@@ -22,7 +15,7 @@ export function Root() {
       </main>
       
       <footer>
-          <Footer/>
+        <Footer/>
       </footer>
     </>
   );

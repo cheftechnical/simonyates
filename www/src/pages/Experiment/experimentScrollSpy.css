@@ -1,0 +1,26 @@
+/*section:before {*/
+/*    height: 50px; !* determines size of gutter *!*/
+/*    content: 'filler';*/
+/*    display: block;*/
+/*    background-color: lime;*/
+/*    opacity: 0.5;*/
+/*    top: -100px;*/
+/*    position: relative;*/
+/*}*/
+
+section {
+
+}
+
+/* Set a gutter size (e.g. 50px), then
+ * move the div up by that amount to
+ * create the offset
+ */
+.section-anchor {
+    height: 50px; /* gutter size */
+    background-color: cyan;
+    opacity: 0.5;
+    top: -50px;
+    position: relative;
+    z-index: -1;
+}

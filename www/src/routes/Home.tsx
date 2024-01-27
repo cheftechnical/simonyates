@@ -1,12 +1,11 @@
-import React from 'react';
+import {Container} from "@mui/material";
+import HomePage from "../pages/HomePage";
 
 export function Home() {
   return (
-    <>
-      Hi, I&rsquo;m Simon&nbsp;Yates.<br/>
-      I couldn&rsquo;t fit everything into LinkedIn,
-      so I made a&nbsp;website.
-    </>
+    <Container sx={{border: '1px solid magenta', height: '100%'}}>
+      <HomePage />
+    </Container>
   )
 };
 
