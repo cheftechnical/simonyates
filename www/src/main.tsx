@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import {HelmetProvider} from 'react-helmet-async';
-import ErrorPage from './error-page.tsx';
 import Home from './routes/Home.tsx';
 import { About } from './routes/About.tsx';
 import { Featured } from './routes/Featured.tsx';
