@@ -1,8 +1,11 @@
+import DefaultLayout from "../layouts/DefaultLayout";
 import LegalPage from "../pages/LegalPage";
 
 export function Legal() {
   return (
-    <LegalPage />
+    <DefaultLayout>
+      <LegalPage />
+    </DefaultLayout>
   )
 };
 

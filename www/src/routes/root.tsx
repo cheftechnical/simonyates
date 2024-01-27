@@ -10,19 +10,19 @@ export function Root() {
   return (
     <ThemeProviderWrapper>
       <Suspense fallback={<LinearProgress />}>
-        <>
-          <header>
-            <Header/>
-          </header>
+        {/* <> */}
+          {/* <header> */}
+            {/* <Header/> */}
+          {/* </header> */}
 
-          <main>
+          {/* <main> */}
             <Outlet />
-          </main>
+          {/* </main> */}
           
-          <footer>
-            <Footer/>
-          </footer>
-        </>
+          {/* <footer> */}
+            {/* <Footer/> */}
+          {/* </footer> */}
+        {/* </> */}
       </Suspense>
     </ThemeProviderWrapper>
   );

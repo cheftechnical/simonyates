@@ -1,8 +1,11 @@
+import DefaultLayout from "../layouts/DefaultLayout";
 import FeaturedPage from "../pages/FeaturedPage";
 
 export function Featured() {
   return (
-    <FeaturedPage />
+    <DefaultLayout>
+      <FeaturedPage />
+    </DefaultLayout>
   )
 }
 

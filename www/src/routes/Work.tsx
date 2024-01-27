@@ -1,12 +1,11 @@
 import { Outlet } from 'react-router-dom';
+import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout';
 
 export function Work() {
   return (
-    <>
-    [Work]
-     <Outlet />
-    </>
-    
+    <DefaultLayout>
+      <Outlet />
+    </DefaultLayout>
   );
 }
 

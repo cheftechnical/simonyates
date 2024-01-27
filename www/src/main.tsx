@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement: <ErrorPage />,    
+    errorElement: <PageNotFound />,    
     children: [
       // The following elements should be sorted in reverse-alphabetical order by path value
       {
