@@ -5,7 +5,7 @@ import MyContainer from '../../styling/MyContainer/MyContainer';
 import {Link, styled, Typography} from "@mui/material";
 import PageWrapper from '../../components/PageWrapper';
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledLink = styled(Link)(() => ({
   fontWeight: 'bold',
   color: color.grey['900'],
   paddingBottom: '4px',

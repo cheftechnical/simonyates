@@ -1,4 +1,3 @@
-import * as React from 'react';
 import SendingMessageDialog from './SendingMessageDialog';
 import {MessageFormValues} from '../MessageFormValues';
 

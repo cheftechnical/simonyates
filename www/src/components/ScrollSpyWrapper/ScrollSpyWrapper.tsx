@@ -1,13 +1,13 @@
 import {SectionItem} from "../Sections/SectionItem";
-import {Scrollspy} from "@makotot/ghostui";
-import {useMemo, useRef} from "react";
+// import {Scrollspy} from "@makotot/ghostui";
+// import {useMemo, useRef} from "react";
 
 export interface Props {
   sectionItems: SectionItem[];
 }
 
-export default function ScrollSpyWrapper(props: Props) {
-  const {sectionItems} = props;
+export default function ScrollSpyWrapper(_props: Props) {
+  // const {sectionItems} = props;
 
   // const sectionRefs = sectionItems.map(() => {
   //   return useRef<HTMLDivElement>(null);

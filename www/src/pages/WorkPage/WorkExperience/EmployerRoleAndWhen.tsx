@@ -30,14 +30,14 @@ interface Props {
 //   }
 // }));
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledLink = styled(Link)(() => ({
   color: color.grey['600'],
   '&:hover': {
     color: color.grey['600'],
   }
 })) as typeof Link;
 
-const StyledSpanWhen = styled('span')(({theme}) => ({
+const StyledSpanWhen = styled('span')(() => ({
   whiteSpace: 'nowrap'
 }));
 

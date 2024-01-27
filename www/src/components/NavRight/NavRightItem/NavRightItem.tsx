@@ -52,7 +52,7 @@ const StyledLi = styled('li')(({theme}) => ({
   borderLeft: `2px solid ${color.white}`,
 }));
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledLink = styled(Link)(() => ({
   textDecoration: 'none',
   lineHeight: rem(16),
   letterSpacing: rem(0.25),
@@ -66,7 +66,7 @@ const StyledLink = styled(Link)(({theme}) => ({
 
 export default function NavRightItem(props: Props) {
   // const classes = useStyles();
-  const {className, id, name} = props;
+  const {id, name} = props;
 
   // return (
   //   <li className={`${classes.li} ${className}`}>

@@ -32,11 +32,11 @@ interface Props {
 // 	}
 // }));
 
-const StyledDivChildren = styled('div')(({theme}) => ({
+const StyledDivChildren = styled('div')(() => ({
   color: color.grey['700']
 }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   // default
 }));
 
@@ -48,11 +48,11 @@ const StyledTypographyName = styled(Typography)(({theme}) => ({
   marginBottom: theme.spacing(16 / 8),
 })) as typeof Typography;
 
-const StyledTypographyPublisher = styled(Typography)(({theme}) => ({
+const StyledTypographyPublisher = styled(Typography)(() => ({
   color: color.grey['600'],
 })) as typeof Typography;
 
-const StyledTypographyWhen = styled(Typography)(({theme}) => ({
+const StyledTypographyWhen = styled(Typography)(() => ({
   color: color.grey['600'],
 })) as typeof Typography;
 

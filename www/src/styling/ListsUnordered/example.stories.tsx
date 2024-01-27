@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Ul from './Ul/Ul';
 import Li from './Li/Li';
 

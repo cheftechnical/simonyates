@@ -23,7 +23,7 @@ interface Props {
 //     }
 // }));
 
-const StyledTypographyCaption = styled(Typography)(({theme}) => ({
+const StyledTypographyCaption = styled(Typography)(() => ({
     // marginBottom: themeMui.spacing(28/8),
     lineHeight: rem(24),
     textAlign: 'center'

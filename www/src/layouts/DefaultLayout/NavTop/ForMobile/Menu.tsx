@@ -16,7 +16,7 @@ interface Props {
 	visible: boolean;
 }
 
-const StyledContainer = styled(Container)(({theme}) => ({
+const StyledContainer = styled(Container)(() => ({
 	paddingRight: rem(22 - 12) // container.paddingLeft (22) - closeButton.paddingRight (12)
 }));
 
@@ -34,7 +34,7 @@ const StyledDivRoot = styled('div')(({theme}) => ({
 	zIndex: 100,
 }));
 
-const StyledIconButton = styled(IconButton)(({theme}) => ({
+const StyledIconButton = styled(IconButton)(() => ({
 	color: color.grey['100']
 }));
 

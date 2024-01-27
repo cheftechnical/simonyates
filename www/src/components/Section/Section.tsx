@@ -42,13 +42,13 @@ export interface Props {
 //   },
 // }));
 
-const StyledSection = styled('section')(({theme}) => ({
+const StyledSection = styled('section')(() => ({
     // for debugging only
     // backgroundColor: 'magenta',
     // border: '1px solid cyan',
 }));
 
-const StyledDivJumpToTarget = styled('div')(({theme}) => ({
+const StyledDivJumpToTarget = styled('div')(() => ({
   content: '""',
   display: 'block',
   height: '100px',

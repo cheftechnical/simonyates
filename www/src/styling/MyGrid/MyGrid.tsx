@@ -36,9 +36,9 @@ export default function MyGrid() {
 	);
 };
 
-interface ContentProps {
-	children?: any;
-}
+// interface ContentProps {
+// 	children?: any;
+// }
 
 // const useContentStyles = makeStyles(() => ({
 // 	root: {
@@ -47,12 +47,12 @@ interface ContentProps {
 // 	}
 // }));
 
-function Content(props: ContentProps) {
-	// const classes = useContentStyles();
-	const {children} = props;
+// function Content(props: ContentProps) {
+// 	// const classes = useContentStyles();
+// 	const {children} = props;
 
-	return (
-		// <div className={classes.root}>{children}</div>
-		<div>{children}</div>
-	)
-}
+// 	return (
+// 		// <div className={classes.root}>{children}</div>
+// 		<div>{children}</div>
+// 	)
+// }

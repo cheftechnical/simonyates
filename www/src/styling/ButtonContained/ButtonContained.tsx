@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {Button} from "@mui/material";
 // import {Button} from '@material-ui/core';
 
@@ -11,7 +10,8 @@ interface Props {
 }
 
 export default function ButtonContained(props: Props) {
-	const {children, className, endIcon, onClick, type} = props;
+	// const {children, className, endIcon, onClick, type} = props;
+	const {children} = props;
 
 	// return (
 	// 	<Button

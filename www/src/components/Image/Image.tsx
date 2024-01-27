@@ -15,7 +15,7 @@ interface Props {
 // 	}
 // }));
 
-const StyledImg = styled('img')(({theme}) => ({
+const StyledImg = styled('img')(() => ({
   marginBottom: rem(-4),
   width: '100%'
 }))

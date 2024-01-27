@@ -26,7 +26,7 @@ interface Props {
 // 	}
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   // default
 }));
 
@@ -39,7 +39,7 @@ const StyledTypographyHost = styled(Typography)(({theme}) => ({
   color: color.grey['600']
 })) as typeof Typography;
 
-const StyledTypographyWhen = styled(Typography)(({theme}) => ({
+const StyledTypographyWhen = styled(Typography)(() => ({
   color: color.grey['600']
 })) as typeof Typography;
 

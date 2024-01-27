@@ -35,7 +35,7 @@ export default function TemperatureConversions() {
     const thisValue = parseFloat(event.target.value);
 
     setValues(prevState => {
-      return prevState.map((current: string, index: number) => {
+      return prevState.map((_current: string, index: number) => {
         if (index === valueIndex) {
           return event.target.value;
         } else {

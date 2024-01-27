@@ -36,7 +36,7 @@ interface Props {
   top?: string;
 }
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   height: '100%'
 }));
 
@@ -47,7 +47,7 @@ const StyledMain = styled('main')(({theme}) => ({
   // color: 'red !important',
 }));
 
-const StyledMainFullHeight = styled(StyledMain)(({theme}) => ({
+const StyledMainFullHeight = styled(StyledMain)(() => ({
   marginTop: rem(fullHeightOpticalOffset),
   height: '100%',
   // color: 'green !important'
@@ -57,7 +57,7 @@ const StyledFooter = styled('footer')(({theme}) => ({
   marginTop: theme.spacing(88 / 8),
 }));
 
-const StyledFooterFullHeight = styled(StyledFooter)(({theme}) => ({
+const StyledFooterFullHeight = styled(StyledFooter)(() => ({
   marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
 }));
 
@@ -92,7 +92,7 @@ export default function DefaultLayout(props: Props) {
       </StyledDivRoot>
 
       <ScrollRestoration
-        getKey={(location, matches) => {
+        getKey={(location, _matches) => {
           return location.pathname;
         }}
       />

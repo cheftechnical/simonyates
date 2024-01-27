@@ -1,5 +1,5 @@
 import {Box} from "@mui/material";
-import {Scrollspy} from "@makotot/ghostui";
+// import {Scrollspy} from "@makotot/ghostui";
 import {useRef} from "react";
 import './experiment.css';
 

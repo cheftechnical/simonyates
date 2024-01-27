@@ -38,23 +38,23 @@ const StyledDivRoot = styled('div')(({theme}) => ({
   backgroundColor: color.grey['900']
 }));
 
-const StyledGridItemLogo = styled(Grid)(({theme}) => ({
+const StyledGridItemLogo = styled(Grid)(() => ({
   padding: 0,
 }));
 
-const StyledGridItemRight = styled(Grid)(({theme}) => ({
+const StyledGridItemRight = styled(Grid)(() => ({
   textAlign: 'right'
 }));
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledLink = styled(Link)(() => ({
   color: color.grey['400']
 })) as typeof Link;
 
-const StyledLinkSocialIcon = styled(Link)(({theme}) => ({
+const StyledLinkSocialIcon = styled(Link)(() => ({
   marginLeft: rem(24),
 }))
 
-const StyledTypography = styled(Typography)(({theme}) => ({
+const StyledTypography = styled(Typography)(() => ({
   color: color.grey['400']
 })) as typeof Typography;
 

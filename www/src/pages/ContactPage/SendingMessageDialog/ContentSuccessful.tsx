@@ -18,16 +18,16 @@ import CheckIcon from '@mui/icons-material/Check';
 //   }
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   padding: rem(40),
   textAlign: 'center'
 })) as typeof Typography;
 
-const StyledLink = styled(Link)(({theme}) => ({
+const StyledLink = styled(Link)(() => ({
   color: color.grey['900'],
 })) as typeof Link;
 
-const StyledTypographyWellChatSoon = styled(Typography)(({theme}) => ({
+const StyledTypographyWellChatSoon = styled(Typography)(() => ({
   color: color.grey['600']
 })) as typeof Typography;
 

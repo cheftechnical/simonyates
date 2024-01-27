@@ -38,7 +38,7 @@ const defaultProps: Props = {
   href: '',
 };
 
-const StyledButton = styled(Button)(({theme}) => ({
+const StyledButton = styled(Button)(() => ({
   // default
 }));
 

@@ -17,9 +17,9 @@ interface Props {
 // 	}
 // }));
 
-export default function Item(props: Props) {
+export default function Item(_props: Props) {
 	// const classes = useStyles();
-	const {href, selected, title} = props;
+	// const {href, selected, title} = props;
 
 	// if (selected) {
 	// 	return (

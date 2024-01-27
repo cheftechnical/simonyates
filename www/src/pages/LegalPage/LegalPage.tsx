@@ -1,7 +1,7 @@
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsAndConditions from './TermsAndConditions';
 import Sections from '../../components/Sections/Sections';
-import NavRight from '../../components/NavRight/NavRight';
+// import NavRight from '../../components/NavRight/NavRight';
 import Section from '../../components/Section/Section';
 import MyContainer from '../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
@@ -10,7 +10,7 @@ import {Grid} from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 
 export default function Legal() {
-  const [sections, handleSectionChange] = useSections();
+  const [_sections, handleSectionChange] = useSections();
 
   return (
     <PageWrapper title="Legal">
@@ -28,7 +28,7 @@ export default function Legal() {
           </Grid>
           <Grid item md={3}/>
           <Grid item md={3}>
-            <NavRight sections={sections}/>
+            {/* <NavRight sections={sections}/> */}
           </Grid>
         </MyGridContainer>
       </MyContainer>

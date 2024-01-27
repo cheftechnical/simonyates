@@ -11,7 +11,7 @@ interface Props {
 //   },
 // }));
 
-const StyledTypography = styled(Typography)(({theme}) => ({
+const StyledTypography = styled(Typography)(() => ({
   color: color.grey['600']
 })) as typeof Typography;
 

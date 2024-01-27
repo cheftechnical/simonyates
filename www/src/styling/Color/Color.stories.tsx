@@ -1,4 +1,3 @@
-import * as React from 'react';
 import ColorGradient from './ColorGradient';
 import {color} from './Color';
 

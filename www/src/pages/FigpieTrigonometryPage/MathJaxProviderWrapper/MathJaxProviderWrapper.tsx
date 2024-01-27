@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 // @ts-ignore
 import MathJax from "mathjax3-react";
 
@@ -7,8 +5,8 @@ interface Props {
 	children: any;
 }
 
-export default function MathJaxProviderWrapper(props: Props) {
-	const {children} = props;
+export default function MathJaxProviderWrapper(_props: Props) {
+	// const {children} = props;
 
 	// return (
 	// 	<MathJax.Provider

@@ -65,7 +65,7 @@ import {styled} from "@mui/material";
 //   }),
 // );
 
-const StyledA = styled('a')(({theme}) => ({
+const StyledA = styled('a')(() => ({
     '&:focus': {
       clip: 'auto',
       height: 'auto',
@@ -99,7 +99,7 @@ const StyledA = styled('a')(({theme}) => ({
     }
 }))
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
     border: 0,
     clip: 'rect(0 0 0 0)', // disable this line if you want to debug
     heightWidth: 1,

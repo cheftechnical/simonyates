@@ -3,7 +3,7 @@ import MyContainer from '../../../styling/MyContainer/MyContainer';
 import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
 import {Box, Grid, styled, Typography} from "@mui/material";
 
-const StyledBox = styled(Box)(({theme}) => ({
+const StyledBox = styled(Box)(() => ({
   height: '100%'
 }));
 

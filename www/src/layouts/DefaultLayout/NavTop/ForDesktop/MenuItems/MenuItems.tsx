@@ -29,7 +29,7 @@ const StyledLi = styled('li')(({theme}) => ({
   marginLeft: theme.spacing(3), // controls the spacing between each menu item
 }));
 
-const StyledLiCenter = styled(StyledLi)(({theme}) => ({
+const StyledLiCenter = styled(StyledLi)(() => ({
   '& a::after': {
     opacity: '1',
     transform: 'scale(0)',
@@ -41,11 +41,11 @@ const StyledLiCenter = styled(StyledLi)(({theme}) => ({
   },
 }));
 
-const StyledLiFadeIn = styled(StyledLi)(({theme}) => ({
+const StyledLiFadeIn = styled(StyledLi)(() => ({
   // do nothing
 }));
 
-const StyledLiSlideIn = styled(StyledLi)(({theme}) => ({
+const StyledLiSlideIn = styled(StyledLi)(() => ({
   // slide in
   '& a': {
     overflow: 'hidden',
@@ -64,7 +64,7 @@ const StyledLiSlideIn = styled(StyledLi)(({theme}) => ({
   }
 }));
 
-const StyledUl = styled('ul')(({theme}) => ({
+const StyledUl = styled('ul')(() => ({
   listStyle: 'none',
   margin: '0',
   padding: '0',
@@ -74,7 +74,7 @@ const StyledUl = styled('ul')(({theme}) => ({
   justifyContent: 'center',
 }))
 
-const StyledReactRouterDomLink = styled(NavLink)(({theme}) => ({
+const StyledReactRouterDomLink = styled(NavLink)(() => ({
   color: 'inherit',
   textDecoration: 'none',
 
@@ -109,7 +109,7 @@ const StyledReactRouterDomLink = styled(NavLink)(({theme}) => ({
   }
 }));
 
-const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(({theme}) => ({}));
+const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(() => ({}));
 
 export function MenuItems(props: Props) {
   const {selected, variant = Variant.SlideIn} = props;

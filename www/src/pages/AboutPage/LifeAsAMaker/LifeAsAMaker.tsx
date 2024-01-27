@@ -80,19 +80,19 @@ const StyledDivLifeAsAMakerImgWrapper = styled('div')(({theme}) => ({
   paddingRight: theme.spacing(88 / 8),
 }));
 
-const StyledDivTlcImgWrapper = styled('div')(({theme}) => ({
+const StyledDivTlcImgWrapper = styled('div')(() => ({
   paddingLeft: rem(88),
 }));
 
-const StyledDivGwBasicImgWrapper = styled('div')(({theme}) => ({
+const StyledDivGwBasicImgWrapper = styled('div')(() => ({
   paddingRight: rem(131),
 }));
 
-const StyledDivSouthernPacificDaylightImgWrapper = styled('div')(({theme}) => ({
+const StyledDivSouthernPacificDaylightImgWrapper = styled('div')(() => ({
   paddingLeft: rem(30),
 }))
 
-const StyledDivModelRailroaderMagazineImgWrapper = styled('div')(({theme}) => ({
+const StyledDivModelRailroaderMagazineImgWrapper = styled('div')(() => ({
   paddingLeft: rem(135),
   paddingRight: rem(88),
 }))
@@ -169,15 +169,15 @@ const StyledMyGridContainerSouthernPacificDaylight = styled(MyGridContainer)(({t
   }
 }))
 
-const StyledTypographyBody = styled(MuiTypography)(({theme}) => ({
+const StyledTypographyBody = styled(MuiTypography)(() => ({
   textAlign: 'justify'
 }));
 
-const StyledTypographyBodyNext = styled(StyledTypographyBody)(({theme}) => ({
+const StyledTypographyBodyNext = styled(StyledTypographyBody)(() => ({
   paddingTop: rem(bodyLineHeight * 2)
 }));
 
-const StyledTypographyH3 = styled(MuiTypography)(({theme}) => ({
+const StyledTypographyH3 = styled(MuiTypography)(() => ({
   paddingBottom: rem(bodyLineHeight),
 }));
 

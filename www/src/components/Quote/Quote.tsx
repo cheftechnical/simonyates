@@ -57,12 +57,12 @@ export interface Props {
 //   },
 // }));
 
-const StyledBlockquote = styled('blockquote')(({theme}) => ({
+const StyledBlockquote = styled('blockquote')(() => ({
   margin: 0,
   padding: 0,
 }))
 
-const StyledBlockquoteTypography = styled(Typography)(({theme}) => ({
+const StyledBlockquoteTypography = styled(Typography)(() => ({
   color: color.grey['800']
 })) as typeof Typography;
 
@@ -84,11 +84,11 @@ const StyledFooter = styled('footer')(({theme}) => ({
   paddingTop: theme.spacing(16 / 8),
 }));
 
-const StyledTypographyFooter = styled(Typography)(({theme}) => ({
+const StyledTypographyFooter = styled(Typography)(() => ({
   color: color.grey['600']
 })) as typeof Typography;
 
-const StyledSpan = styled('span')(({theme}) => ({
+const StyledSpan = styled('span')(() => ({
   fontFamily: `"Times New Roman"`,
   fontStyle: 'normal',
   fontWeight: 'normal',

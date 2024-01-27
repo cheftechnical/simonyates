@@ -39,7 +39,7 @@ export default function CurrencyConversions() {
     const thisValue = parseFloat(event.target.value);
 
     setValue(prevState => {
-      return prevState.map((current, index) => {
+      return prevState.map((_current, index) => {
         if (index === valueIndex) {
           return event.target.value;
         } else {

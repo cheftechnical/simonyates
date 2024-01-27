@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Sections from './Sections';
 import Section from '../Section/Section';
 import {SectionItem} from './SectionItem';

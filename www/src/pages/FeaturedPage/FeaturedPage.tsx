@@ -1,7 +1,7 @@
 import FeaturedPublication from './components/FeaturedPublication';
 import Sections from '../../components/Sections/Sections';
 import Section from '../../components/Section/Section';
-import NavRight from '../../components/NavRight/NavRight';
+// import NavRight from '../../components/NavRight/NavRight';
 import Ul from '../../styling/ListsUnordered/Ul/Ul';
 import Li from '../../styling/ListsUnordered/Li/Li';
 import SectionTitle from './SectionTitle';
@@ -35,24 +35,24 @@ import PageWrapper from '../../components/PageWrapper';
 //   }
 // }));
 
-const StyledLi = styled(Li)(({theme}) => ({
+const StyledLi = styled(Li)(() => ({
   color: color.grey['700'],
   '&:before': {
     color: color.grey['500']
   }
 }))
 
-const StyledNextSection = styled(Section)(({theme}) => ({
+const StyledNextSection = styled(Section)(() => ({
   marginTop: rem(68),
 }))
 
-const StyledTypography = styled(Typography)(({theme}) => ({
+const StyledTypography = styled(Typography)(() => ({
   color: color.grey['700']
 })) as typeof Typography;
 
 export default function Featured() {
   // const classes = useStyles();
-  const [sections, handleSectionChange] = useSections();
+  const [_sections, handleSectionChange] = useSections();
 
   return (
     <PageWrapper title="Featured">
@@ -165,7 +165,7 @@ export default function Featured() {
 
           {/* Navigation */}
           <Grid item md={3}>
-            <NavRight sections={sections}/>
+            {/* <NavRight sections={sections}/> */}
           </Grid>
         </MyGridContainer>
       </MyContainer>

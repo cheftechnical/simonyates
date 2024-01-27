@@ -12,7 +12,7 @@ interface Props {
 // 	}
 // }));
 
-const StyledUl = styled('ul')(({theme}) => ({}));
+const StyledUl = styled('ul')(() => ({}));
 
 const StyledUlNext = styled(StyledUl)(({theme}) => ({
   paddingTop: theme.spacing(24 / 8)

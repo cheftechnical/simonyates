@@ -15,11 +15,11 @@ interface Props {
   onSuccess: () => void;
 }
 
-const StyledBox = styled(Box)(({theme}) => ({
+const StyledBox = styled(Box)(() => ({
   width: 302
 }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   textAlign: 'center'
 }));
 

@@ -65,7 +65,7 @@ export class BaseVisualization implements BaseVisualizationInterface {
 	 * @param width
 	 * @param height
 	 */
-	addDotGrid(padding: number, ticksPerRadius: number, tickDistance: number, width: number, height: number) {
+	addDotGrid(_padding: number, ticksPerRadius: number, tickDistance: number, width: number, height: number) {
 		const tickCount = (ticksPerRadius * 2) + 4; // 4=fudge to give some breathing room
 		const center = {
 			x: width / 2,

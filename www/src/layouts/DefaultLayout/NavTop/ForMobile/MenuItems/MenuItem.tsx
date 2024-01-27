@@ -18,7 +18,7 @@ interface Props {
   title: string;
 }
 
-const StyledNavLink = styled(NavLink)(({theme}) => ({
+const StyledNavLink = styled(NavLink)(() => ({
   color: color.grey[100],
   textDecoration: 'none',
 

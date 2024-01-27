@@ -10,7 +10,7 @@ import {Grid, Hidden, styled} from "@mui/material";
 //   },
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled('div')(() => ({
   paddingTop: rem(24)
 }))
 

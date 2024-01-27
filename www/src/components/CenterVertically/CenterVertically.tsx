@@ -17,7 +17,7 @@ interface Props {
 // 	}
 // }));
 
-const StyledBoxRoot = styled(Box)(({theme}) => ({
+const StyledBoxRoot = styled(Box)(() => ({
 	height: '100%',
 }))
 

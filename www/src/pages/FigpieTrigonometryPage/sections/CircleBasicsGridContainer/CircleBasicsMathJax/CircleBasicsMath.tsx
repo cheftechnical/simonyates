@@ -21,7 +21,7 @@ interface Props {
 // 		color: color.grey['900'],
 // 	},
 // }));
-const StyledDiv = styled('div')(({theme}) => ({
+const StyledDiv = styled('div')(() => ({
 	color: color.grey['900'],
 }))
 

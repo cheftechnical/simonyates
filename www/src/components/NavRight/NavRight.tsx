@@ -1,11 +1,11 @@
-import {SectionItem} from '../Sections/SectionItem';
+// import {SectionItem} from '../Sections/SectionItem';
 // import {styled} from "@mui/material";
 // import {Scrollspy} from "@makotot/ghostui";
 // import {useRef} from 'react';
 
-interface Props {
-  sections?: SectionItem[];
-}
+// interface Props {
+//   sections?: SectionItem[];
+// }
 
 // @todo mui5
 // const useStyles = makeStyles(() => ({
@@ -33,7 +33,7 @@ interface Props {
 //   border: '1px solid magenta',
 // }));
 
-export default function NavRight(props: Props) {
+export default function NavRight() {
   // const classes = useStyles();
   // const {sections = []} = props;
 
