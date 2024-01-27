@@ -158,14 +158,14 @@ export function MenuItems(props: Props) {
             <MyStyledReactRouterDomLink to="/about">About</MyStyledReactRouterDomLink>
           </Typography>
         </MyLi>
-        <MyLi>
+        {/* <MyLi>
           <Typography
             fontWeight={selected === 'contact' ? 'bold' : 'regular'}
             variant="primaryButtonText"
           >
             <MyStyledReactRouterDomLink to="/contact">Contact</MyStyledReactRouterDomLink>
           </Typography>
-        </MyLi>
+        </MyLi> */}
       </StyledUl>
     </div>
   );
