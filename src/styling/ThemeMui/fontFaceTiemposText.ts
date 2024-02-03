@@ -9,6 +9,8 @@ import {CSSProperties} from "@mui/material/styles/createMixins";
 // ---[ Tiempos Text | 400 | Regular ]----------------------------------------------------------------------------------
 const TiemposTextRegularWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular.woff`;
 const TiemposTextRegularWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular.woff2`;
+const TiemposTextRegularWoffLocal = `/fonts/tiempos-text-web/tiempos-text-web-regular.woff`;
+const TiemposTextRegularWoff2Local = `/fonts/tiempos-text-web/tiempos-text-web-regular.woff2`;
 
 // ---[ Tiempos Text | 400 | Regular Italic ]---------------------------------------------------------------------------
 const TiemposTextRegularItalicWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular-italic.woff`;
@@ -40,7 +42,8 @@ const TiemposTextBoldItalicWoff2 = `${s3BasePath}/tiempos-text-web/tiempos-text-
 
 // ----[ Tiempos Text ]-------------------------------------------------------------------------------------------------
 
-export const tiemposText = `"Tiempos Text"`
+const tiemposTextFallback: string = `"Times New Roman", Times, serif`;
+export const tiemposText: string = `"Tiempos Text", ${tiemposTextFallback}`;
 
 // Tiempos Text | 400 | Regular
 export const tiemposTextRegular: CSSProperties = {
@@ -50,7 +53,10 @@ export const tiemposTextRegular: CSSProperties = {
 	fontDisplay: 'fallback',
 	src: `
 		url(${TiemposTextRegularWoff2}) format('woff2'),
-		url(${TiemposTextRegularWoff}) format('woff')
+		url(${TiemposTextRegularWoff}) format('woff'),
+		
+		url(${TiemposTextRegularWoff2Local}) format('woff2')
+		url(${TiemposTextRegularWoffLocal}) format('woff'),
 	`,
 };
 
