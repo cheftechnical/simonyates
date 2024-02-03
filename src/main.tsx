@@ -22,7 +22,7 @@ import UnchartedSoftwarePage from './pages/workAt/UnchartedSoftwarePage/Uncharte
 import GenworthCanadaPage from './pages/workAt/GenworthCanadaPage/index.ts';
 import InfomartPage from './pages/workAt/InfomartPage/index.ts';
 import JibDesignAndAdvertisingPage from './pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx';
-import { Root } from './routes/root.tsx';
+import { Root } from './routes/Root.tsx';
 import { Contact } from './routes/contact.tsx';
 
 const router = createBrowserRouter([
