@@ -90,7 +90,7 @@ export default function Featured() {
 
                     <br/>
                     <br/>
-                    <Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf"/>
+                    <Download href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"/>
                   </FeaturedPublication>
 
                   <FeaturedPublication
