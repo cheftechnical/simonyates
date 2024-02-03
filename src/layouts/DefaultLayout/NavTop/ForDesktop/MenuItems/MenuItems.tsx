@@ -1,9 +1,9 @@
-import "./index.css";
-import { color } from "../../../../../styling/Color/Color";
-import rem from "../../../../../styling/rem";
-import { styled, Typography } from "@mui/material";
 import { useMemo } from "react";
 import { NavLink } from "react-router-dom";
+import { styled, Typography } from "@mui/material";
+import color from "../../../../../styling/Color";
+import rem from "../../../../../styling/rem";
+import "./index.css";
 
 enum Variant {
   FadeIn = "fadeIn",
@@ -26,19 +26,19 @@ const nMilliseconds = "150ms";
 
 const StyledLi = styled("li")(({ theme }) => ({
   // margin: '0 2rem',
-  marginLeft: theme.spacing(3), // controls the spacing between each menu item
+  marginLeft: theme.spacing(3) // controls the spacing between each menu item
 }));
 
 const StyledLiCenter = styled(StyledLi)(() => ({
   "& a::after": {
     opacity: "1",
     transform: "scale(0)",
-    transformOrigin: "center",
+    transformOrigin: "center"
   },
 
   "& a:hover::after, & a:focus::after": {
-    transform: "scale(1)",
-  },
+    transform: "scale(1)"
+  }
 }));
 
 const StyledLiFadeIn = styled(StyledLi)(() => ({
@@ -48,7 +48,7 @@ const StyledLiFadeIn = styled(StyledLi)(() => ({
 const StyledLiSlideIn = styled(StyledLi)(() => ({
   // slide in
   "& a": {
-    overflow: "hidden",
+    overflow: "hidden"
   },
 
   "& a::after": {
@@ -56,12 +56,12 @@ const StyledLiSlideIn = styled(StyledLi)(() => ({
 
     // A weird glitch with Chrome will cause 1px to remain visible after the animation, but if you set the reset
     // to `-110%`,it will hide it
-    transform: "translate3d(-105%, 0, 0)",
+    transform: "translate3d(-105%, 0, 0)"
   },
 
   "& a:hover::after, & a:focus::after": {
-    transform: "translate3d(0, 0, 0)",
-  },
+    transform: "translate3d(0, 0, 0)"
+  }
 }));
 
 const StyledUl = styled("ul")(() => ({
@@ -71,7 +71,7 @@ const StyledUl = styled("ul")(() => ({
 
   display: "flex",
   flexWrap: "wrap",
-  justifyContent: "center",
+  justifyContent: "center"
 }));
 
 const StyledReactRouterDomLink = styled(NavLink)(() => ({
@@ -87,7 +87,7 @@ const StyledReactRouterDomLink = styled(NavLink)(() => ({
 
   // FadeIn in
   "&::after": {
-    content: '""',
+    content: "\"\"",
     position: "absolute",
     bottom: "0",
     left: "0",
@@ -96,21 +96,21 @@ const StyledReactRouterDomLink = styled(NavLink)(() => ({
     height: rem(2), // Sets the thickness of the underline
     backgroundColor: color.grey[900],
     opacity: "0",
-    transition: `opacity ${nMilliseconds}, transform ${nMilliseconds}`,
+    transition: `opacity ${nMilliseconds}, transform ${nMilliseconds}`
   },
 
   "&:hover::after, &:focus::after": {
     opacity: "1",
-    transform: "translate3d(0, 0.2em, 0)",
+    transform: "translate3d(0, 0.2em, 0)"
   },
 
   "&.active": {
-    fontWeight: "bold",
-  },
+    fontWeight: "bold"
+  }
 }));
 
 const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(
-  () => ({}),
+  () => ({})
 );
 
 export function MenuItems(props: Props) {
@@ -167,14 +167,14 @@ export function MenuItems(props: Props) {
             </MyStyledReactRouterDomLink>
           </Typography>
         </MyLi>
-        {/* <MyLi>
+        <MyLi>
           <Typography
-            fontWeight={selected === 'contact' ? 'bold' : 'regular'}
+            fontWeight={selected === "contact" ? "bold" : "regular"}
             variant="primaryButtonText"
           >
             <MyStyledReactRouterDomLink to="/contact">Contact</MyStyledReactRouterDomLink>
           </Typography>
-        </MyLi> */}
+        </MyLi>
       </StyledUl>
     </div>
   );

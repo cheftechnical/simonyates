@@ -10,7 +10,7 @@ export interface Props {
 
 const StyledDivMenuItems = styled("div")(({ theme }) => ({
   paddingTop: theme.spacing((44 - 24 - 12) / 8),
-  textAlign: "right",
+  textAlign: "right"
 }));
 
 export function MenuItems(props: Props) {
@@ -21,7 +21,7 @@ export function MenuItems(props: Props) {
       <MenuItem href="/work" onClick={onClick} title="Work" />
       <MenuItem href={"/featured"} onClick={onClick} title="Featured" />
       <MenuItem href={"/about"} onClick={onClick} title="About" />
-      {/* <MenuItem href={"/contact"} onClick={onClick} title="Contact"/> */}
+      <MenuItem href={"/contact"} onClick={onClick} title="Contact" />
     </StyledDivMenuItems>
   );
 }
