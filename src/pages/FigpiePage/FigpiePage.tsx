@@ -1,10 +1,10 @@
+import { Link, Typography } from "@mui/material";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import Li from "../../styling/ListsUnordered/Li/Li";
-import { Link, Typography } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 
-export default function Figpie() {
+export function FigpiePage() {
   return (
     <PageWrapper title="Figpie">
       <MyContainer>
@@ -62,3 +62,5 @@ export default function Figpie() {
     </PageWrapper>
   );
 }
+
+export default FigpiePage;

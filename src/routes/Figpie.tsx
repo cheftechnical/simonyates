@@ -1,7 +1,12 @@
 import FigpiePage from "../pages/FigpiePage";
+import DefaultLayout from "../layouts/DefaultLayout";
 
 export function Figpie() {
-  return <FigpiePage />;
+  return (
+    <DefaultLayout>
+      <FigpiePage />
+    </DefaultLayout>
+  );
 }
 
 export default Figpie;
