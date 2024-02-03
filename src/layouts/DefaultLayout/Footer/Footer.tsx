@@ -75,7 +75,7 @@ export default function Footer() {
         <Grid container spacing={0}>
           <StyledGridItemLeft item xs={6}>
             <StyledTypography variant="secondaryCaption">
-              &copy; 2021 Sybaris Analytics Corporation<br/>
+              &copy; 2024 Sybaris Analytics Corporation<br/>
             </StyledTypography>
             <StyledTypography variant="secondaryCaption">
               {/* @todo mui5 */}
