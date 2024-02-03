@@ -37,9 +37,9 @@ class RotationVisualization extends Component<Props> {
         backgroundColor: color.grey["50"],
         fontSize: 0, // this is very important, otherwise you'll get a weird gap at the bottom,
 
-        "& .crisp": {
-          shapeRendering: "crispEdges"
-        }
+        // "& .crisp": {
+        //   shapeRendering: "crispEdges"
+        // }
       }} />
     );
   }

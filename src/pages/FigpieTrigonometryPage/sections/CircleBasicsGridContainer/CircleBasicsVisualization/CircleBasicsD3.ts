@@ -1,8 +1,9 @@
-import * as d3 from 'd3';
-import {Visualization} from '../../../libs/Visualization';
-import {BaseVisualization, } from '../../../libs/BaseVisualization';
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+import * as d3 from "d3";
+import { Visualization } from "../../../libs/Visualization";
+import { BaseVisualization } from "../../../libs/BaseVisualization";
 import color from "../../../../../styling/Color";
-import {degToRad, radToDeg} from '../../../libs/trig';
+import { degToRad, radToDeg } from "../../../libs/trig";
 
 export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 	// Properties
@@ -241,6 +242,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 			.attr('fill', 'none');
 
 
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
 		const that = this;
 
 		function dragStarted(this: any) {
@@ -249,7 +251,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 				.attr('stroke', color.lime['500']);
 		}
 
-		function dragging(this: any, event: any, d: any) {
+    function dragging(this: any, event: any) {
 			const {height, width} = that;
 			const yAxisDirection = that.yAxisDirection;
 
