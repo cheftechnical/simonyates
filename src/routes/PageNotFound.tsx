@@ -1,6 +1,8 @@
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useRouteError } from "react-router-dom";
 import DefaultLayout from "../layouts/DefaultLayout";
 import PageNotFoundPage from "../pages/PageNotFoundPage";
-import { useRouteError } from "react-router-dom";
 import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 
 /**
@@ -18,6 +20,8 @@ export function PageNotFound() {
     <ThemeProviderWrapper>
       <DefaultLayout>
         <PageNotFoundPage />
+        <SpeedInsights />
+        <Analytics />
       </DefaultLayout>
     </ThemeProviderWrapper>
   );
