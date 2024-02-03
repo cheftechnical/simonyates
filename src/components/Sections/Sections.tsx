@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react';
-import {SectionItem} from './SectionItem';
+import { useEffect, useState } from "react";
+import { SectionItem } from "./SectionItem";
 
 export interface Props {
   /**
@@ -15,7 +15,7 @@ export interface Props {
 }
 
 export default function Sections(props: Props) {
-  const {children, onChange} = props;
+  const { children, onChange } = props;
 
   const [initialized, setInitialized] = useState(false);
 
@@ -27,7 +27,7 @@ export default function Sections(props: Props) {
       const sectionItems = children.map((item: any) => {
         return {
           id: item.props.id,
-          name: item.props.name
+          name: item.props.name,
         };
       });
 
@@ -35,15 +35,12 @@ export default function Sections(props: Props) {
     } else {
       const sectionItem = {
         id: children.props.id,
-        name: children.props.name
+        name: children.props.name,
       };
 
       onChange([sectionItem]);
     }
-
   }, [children, initialized, onChange]);
 
-  return (
-    <>{children}</>
-  );
-};
+  return <>{children}</>;
+}

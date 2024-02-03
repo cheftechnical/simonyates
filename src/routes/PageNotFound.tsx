@@ -1,11 +1,11 @@
 import DefaultLayout from "../layouts/DefaultLayout";
 import PageNotFoundPage from "../pages/PageNotFoundPage";
-import { useRouteError } from 'react-router-dom';
+import { useRouteError } from "react-router-dom";
 import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 
 export function PageNotFound() {
   const error = useRouteError();
-    console.error(error);
+  console.error(error);
 
   return (
     <ThemeProviderWrapper>
@@ -13,7 +13,7 @@ export function PageNotFound() {
         <PageNotFoundPage />
       </DefaultLayout>
     </ThemeProviderWrapper>
-  )
-};
+  );
+}
 
 export default PageNotFound;

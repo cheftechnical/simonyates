@@ -1,3 +1,3 @@
-import {default as Sections} from './Sections';
+import { default as Sections } from "./Sections";
 
 export default Sections;

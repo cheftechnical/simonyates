@@ -1,3 +1,3 @@
-import {default as ThemeMui} from './themeMui';
+import { default as ThemeMui } from "./themeMui";
 
 export default ThemeMui;

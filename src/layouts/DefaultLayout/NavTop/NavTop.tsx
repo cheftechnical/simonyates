@@ -1,6 +1,6 @@
-import ForMobile from './ForMobile';
-import ForDesktop from './ForDesktop';
-import {Hidden} from "@mui/material";
+import ForMobile from "./ForMobile";
+import ForDesktop from "./ForDesktop";
+import { Hidden } from "@mui/material";
 
 interface Props {
   /**
@@ -10,19 +10,19 @@ interface Props {
 }
 
 export default function NavTop(props: Props) {
-  const {selected} = props;
+  const { selected } = props;
 
   return (
     <nav aria-label="Global">
       {/* Desktop */}
       <Hidden smDown>
-        <ForDesktop selected={selected}/>
+        <ForDesktop selected={selected} />
       </Hidden>
 
       {/*	Mobile */}
       <Hidden mdUp>
-        <ForMobile/>
+        <ForMobile />
       </Hidden>
     </nav>
   );
-};
+}

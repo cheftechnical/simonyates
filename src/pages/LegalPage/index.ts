@@ -1,3 +1,3 @@
-import {default as LegalPage} from './LegalPage';
+import { default as LegalPage } from "./LegalPage";
 
 export default LegalPage;

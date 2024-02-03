@@ -1,13 +1,13 @@
-import {ReactElement, useMemo} from 'react';
-import CenterVertically from '../../../components/CenterVertically/CenterVertically';
+import { ReactElement, useMemo } from "react";
+import CenterVertically from "../../../components/CenterVertically/CenterVertically";
 // import NavRight from '../../../components/NavRight/NavRight';
-import {SectionItem} from '../../../components/Sections/SectionItem';
-import MyContainer from '../../../styling/MyContainer/MyContainer';
-import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
-import WorkAtEmployer from './WorkAtEmployer';
-import WorkAtRole from './WorkAtRole';
-import WorkAtWhenWhere from './WorkAtWhenWhere';
-import {Box, Grid, Hidden} from "@mui/material";
+import { SectionItem } from "../../../components/Sections/SectionItem";
+import MyContainer from "../../../styling/MyContainer/MyContainer";
+import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
+import WorkAtEmployer from "./WorkAtEmployer";
+import WorkAtRole from "./WorkAtRole";
+import WorkAtWhenWhere from "./WorkAtWhenWhere";
+import { Box, Grid, Hidden } from "@mui/material";
 
 interface Props {
   /**
@@ -50,18 +50,18 @@ interface Props {
 export default function WorkAtTemplate(props: Props) {
   // const classes = useStyles();
   // const {content, employer, logo, role, sections, when, where} = props;
-  const {content, employer, logo, role, when, where} = props;
+  const { content, employer, logo, role, when, where } = props;
 
   const renderedWorkAtEmployer = useMemo(() => {
-    return (<WorkAtEmployer employer={employer}/>);
+    return <WorkAtEmployer employer={employer} />;
   }, [employer]);
 
   const renderedWorkAtRole = useMemo(() => {
-    return (<WorkAtRole>{role}</WorkAtRole>);
+    return <WorkAtRole>{role}</WorkAtRole>;
   }, [role]);
 
   const renderedWorkAtWhenWhere = useMemo(() => {
-    return (<WorkAtWhenWhere when={when} where={where}/>);
+    return <WorkAtWhenWhere when={when} where={where} />;
   }, [when, where]);
 
   return (
@@ -76,9 +76,7 @@ export default function WorkAtTemplate(props: Props) {
         <Hidden mdUp>
           {/* Content */}
           <Grid item sm={6} xs={10}>
-            <CenterVertically>
-              {renderedWorkAtEmployer}
-            </CenterVertically>
+            <CenterVertically>{renderedWorkAtEmployer}</CenterVertically>
           </Grid>
           <Grid item sm={12} xs={12}>
             {renderedWorkAtRole}
@@ -91,19 +89,15 @@ export default function WorkAtTemplate(props: Props) {
         <Hidden smDown>
           {/* Content */}
           <Grid item sm={6} xs={10}>
-            <div>
-              {renderedWorkAtEmployer}
-            </div>
+            <div>{renderedWorkAtEmployer}</div>
             {/*<div className={classes.role}>*/}
-            <Box pt="3.5">
-              {renderedWorkAtRole}
-            </Box>
+            <Box pt="3.5">{renderedWorkAtRole}</Box>
             {renderedWorkAtWhenWhere}
             {content}
           </Grid>
 
           {/* Gutter */}
-          <Grid item md={2}/>
+          <Grid item md={2} />
 
           {/* Navigation */}
           <Grid item md={3}>
@@ -113,4 +107,4 @@ export default function WorkAtTemplate(props: Props) {
       </MyGridContainer>
     </MyContainer>
   );
-};
+}

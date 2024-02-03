@@ -1,5 +1,5 @@
-import {color} from '../../../styling/Color/Color';
-import {styled, Typography} from "@mui/material";
+import { color } from "../../../styling/Color/Color";
+import { styled, Typography } from "@mui/material";
 
 interface Props {
   children: any;
@@ -15,18 +15,18 @@ interface Props {
 //   }
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
-  marginBottom: theme.spacing(8 / 8)
+const StyledDivRoot = styled("div")(({ theme }) => ({
+  marginBottom: theme.spacing(8 / 8),
 }));
 
-const StyledTypographyDescription = styled(Typography)(({theme}) => ({
+const StyledTypographyDescription = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing((88 - 68) / 8), // 68 is margin top of section titles
-  color: color.grey['600']
+  color: color.grey["600"],
 })) as typeof Typography;
 
 export default function WorkAtDescription(props: Props) {
   // const classes = useStyles();
-  const {children} = props;
+  const { children } = props;
 
   return (
     <StyledDivRoot>
@@ -35,4 +35,4 @@ export default function WorkAtDescription(props: Props) {
       </StyledTypographyDescription>
     </StyledDivRoot>
   );
-};
+}

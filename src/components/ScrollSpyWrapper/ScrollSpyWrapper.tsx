@@ -1,4 +1,4 @@
-import {SectionItem} from "../Sections/SectionItem";
+import { SectionItem } from "../Sections/SectionItem";
 // import {Scrollspy} from "@makotot/ghostui";
 // import {useMemo, useRef} from "react";
 
@@ -16,10 +16,8 @@ export default function ScrollSpyWrapper(_props: Props) {
   return (
     // <Scrollspy sectionRefs={sectionRefs} offset={headerHeight * -1}>
     //   {({currentElementIndexInViewport}) => (
-        <div>
-          [ScrollSpyWrapper]
-        </div>
+    <div>[ScrollSpyWrapper]</div>
     //   )}
     // </Scrollspy>
-  )
+  );
 }

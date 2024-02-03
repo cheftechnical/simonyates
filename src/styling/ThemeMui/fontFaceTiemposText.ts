@@ -3,8 +3,8 @@
  * @source: https://klim.co.nz/
  * @licence: Purchased 2020-08-01
  **********************************************************************************************************************/
-import {s3BasePath} from "./config";
-import {CSSProperties} from "@mui/material/styles/createMixins";
+import { s3BasePath } from "./config";
+import { CSSProperties } from "@mui/material/styles/createMixins";
 
 // ---[ Tiempos Text | 400 | Regular ]----------------------------------------------------------------------------------
 const TiemposTextRegularWoff = `${s3BasePath}/tiempos-text-web/tiempos-text-web-regular.woff`;
@@ -47,11 +47,11 @@ export const tiemposText: string = `"Tiempos Text", ${tiemposTextFallback}`;
 
 // Tiempos Text | 400 | Regular
 export const tiemposTextRegular: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 'normal',
-	fontStyle: 'normal',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: "normal",
+  fontStyle: "normal",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextRegularWoff2}) format('woff2'),
 		url(${TiemposTextRegularWoff}) format('woff'),
 		
@@ -62,23 +62,23 @@ export const tiemposTextRegular: CSSProperties = {
 
 // Tiempos Text | 400 | Regular Italic
 export const tiemposTextRegularItalic: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 'normal',
-	fontStyle: 'italic',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: "normal",
+  fontStyle: "italic",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextRegularItalicWoff2}) format('woff2'),
 		url(${TiemposTextRegularItalicWoff}) format('woff')
-	`
+	`,
 };
 
 // Tiempos Text | 500 | Medium
 export const tiemposTextMedium: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 500,
-	fontStyle: 'normal',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: 500,
+  fontStyle: "normal",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextMediumWoff2}) format('woff2'),
 		url(${TiemposTextMediumWoff}) format('woff')
 	`,
@@ -86,11 +86,11 @@ export const tiemposTextMedium: CSSProperties = {
 
 // Tiempos Text | 500 | Medium Italic
 export const tiemposTextMediumItalic: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 500,
-	fontStyle: 'italic',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: 500,
+  fontStyle: "italic",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextMediumItalicWoff2}) format('woff2'),
 		url(${TiemposTextMediumItalicWoff}) format('woff')
 	`,
@@ -98,11 +98,11 @@ export const tiemposTextMediumItalic: CSSProperties = {
 
 // Tiempos Text | 600 | Semibold
 export const tiemposTextSemibold: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 600,
-	fontStyle: 'normal',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: 600,
+  fontStyle: "normal",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextSemiboldWoff2}) format('woff2'),
 		url(${TiemposTextSemiboldWoff}) format('woff'),
 	`,
@@ -110,11 +110,11 @@ export const tiemposTextSemibold: CSSProperties = {
 
 // Tiempos Text | 600 | Semibold Italic
 export const tiemposTextSemiboldItalic: CSSProperties = {
-	fontFamily: tiemposText,
-	fontWeight: 600,
-	fontStyle: 'italic',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontWeight: 600,
+  fontStyle: "italic",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextSemiboldItalicWoff2}) format('woff2'),
 		url(${TiemposTextSemiboldItalicWoff}) format('woff'),
 	`,
@@ -122,11 +122,11 @@ export const tiemposTextSemiboldItalic: CSSProperties = {
 
 // Tiempos Text | 700 | Bold
 export const tiemposTextBold: CSSProperties = {
-	fontFamily: tiemposText,
-	fontStyle: 'normal',
-	fontWeight: 'bold',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontStyle: "normal",
+  fontWeight: "bold",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextBoldWoff2} format('woff2'),
 		url(${TiemposTextBoldWoff} format('woff')
 	`,
@@ -134,12 +134,12 @@ export const tiemposTextBold: CSSProperties = {
 
 // Tiempos Text | 700 | Bold Italic
 export const tiemposTextBoldItalic: CSSProperties = {
-	fontFamily: tiemposText,
-	fontStyle: 'italic',
-	fontWeight: 'bold',
-	fontDisplay: 'fallback',
-	src: `
+  fontFamily: tiemposText,
+  fontStyle: "italic",
+  fontWeight: "bold",
+  fontDisplay: "fallback",
+  src: `
 		url(${TiemposTextBoldItalicWoff2} format('woff2'),
 		url(${TiemposTextBoldItalicWoff} format('woff')
 	`,
-}
+};

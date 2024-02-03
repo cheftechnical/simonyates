@@ -4,9 +4,9 @@ import HomePage from "../pages/HomePage";
 export function Home() {
   return (
     // <Container sx={{border: '1px solid magenta', height: '100%'}}>
-      <HomePage />
+    <HomePage />
     // </Container>
-  )
-};
+  );
+}
 
 export default Home;

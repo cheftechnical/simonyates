@@ -1,4 +1,4 @@
-import {Box, styled} from "@mui/material";
+import { Box, styled } from "@mui/material";
 
 /**
  * Component provides syntactic-sugar for vertically centering its content
@@ -8,7 +8,7 @@ import {Box, styled} from "@mui/material";
 // import {makeStyles} from '@material-ui/core/styles';
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
 // const useStyles = makeStyles(() => ({
@@ -18,18 +18,16 @@ interface Props {
 // }));
 
 const StyledBoxRoot = styled(Box)(() => ({
-	height: '100%',
-}))
+  height: "100%",
+}));
 
 export default function CenterVertically(props: Props) {
-	// const classes = useStyles();
-	const {children} = props;
+  // const classes = useStyles();
+  const { children } = props;
 
-	return (
-		<StyledBoxRoot alignItems="center" display="flex">
-			<Box>
-				{children}
-			</Box>
-		</StyledBoxRoot>
-	);
-};
+  return (
+    <StyledBoxRoot alignItems="center" display="flex">
+      <Box>{children}</Box>
+    </StyledBoxRoot>
+  );
+}

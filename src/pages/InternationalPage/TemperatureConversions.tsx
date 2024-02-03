@@ -1,6 +1,12 @@
-import {ChangeEvent, ReactNode, useState} from 'react';
-import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
-import {FormControl, FormHelperText, Grid, Input, InputAdornment} from "@mui/material";
+import { ChangeEvent, ReactNode, useState } from "react";
+import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
+import {
+  FormControl,
+  FormHelperText,
+  Grid,
+  Input,
+  InputAdornment,
+} from "@mui/material";
 
 interface Temperature {
   code: string;
@@ -11,30 +17,33 @@ interface Temperature {
 
 const temperatures: Temperature[] = [
   {
-    code: 'F',
+    code: "F",
     convert: (c) => {
-      return (c * 9 / 5) + 32;
+      return (c * 9) / 5 + 32;
     },
     convertFormula: <>f = (c * 9 / 5) + 32</>,
-    symbol: '° F'
+    symbol: "° F",
   },
   {
-    code: 'C',
+    code: "C",
     convert: (f) => {
-      return (f - 32) * 5 / 9;
+      return ((f - 32) * 5) / 9;
     },
     convertFormula: <>c = (f - 32) * 5 / 9</>,
-    symbol: '° C'
+    symbol: "° C",
   },
 ];
 
 export default function TemperatureConversions() {
-  const [values, setValues] = useState<string[]>(['0', '0']);
+  const [values, setValues] = useState<string[]>(["0", "0"]);
 
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>, valueIndex: number) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
+    valueIndex: number,
+  ) => {
     const thisValue = parseFloat(event.target.value);
 
-    setValues(prevState => {
+    setValues((prevState) => {
       return prevState.map((_current: string, index: number) => {
         if (index === valueIndex) {
           return event.target.value;
@@ -55,7 +64,11 @@ export default function TemperatureConversions() {
               id={`currency-${temperature.code}`}
               name={`currency-${temperature.code}`}
               onChange={(event) => handleChange(event, index)}
-              endAdornment={<InputAdornment position="start">{temperature.symbol}</InputAdornment>}
+              endAdornment={
+                <InputAdornment position="start">
+                  {temperature.symbol}
+                </InputAdornment>
+              }
               value={values[index]}
             />
             <FormHelperText>{temperature.convertFormula}</FormHelperText>

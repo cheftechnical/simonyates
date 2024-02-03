@@ -1,5 +1,5 @@
-import {Helmet} from "react-helmet-async";
-import {ReactNode} from "react";
+import { Helmet } from "react-helmet-async";
+import { ReactNode } from "react";
 
 export interface Props {
   /**
@@ -13,7 +13,7 @@ export interface Props {
 }
 
 export default function PageWrapper(props: Props) {
-  const {children, title} = props;
+  const { children, title } = props;
 
   return (
     <>
@@ -22,5 +22,5 @@ export default function PageWrapper(props: Props) {
       </Helmet>
       {children}
     </>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 // import {makeStyles} from '@material-ui/core/styles';
-import {ReactNode} from 'react';
-import {styled} from "@mui/material";
+import { ReactNode } from "react";
+import { styled } from "@mui/material";
 
 export interface Props {
   /**
@@ -42,30 +42,30 @@ export interface Props {
 //   },
 // }));
 
-const StyledSection = styled('section')(() => ({
-    // for debugging only
-    // backgroundColor: 'magenta',
-    // border: '1px solid cyan',
+const StyledSection = styled("section")(() => ({
+  // for debugging only
+  // backgroundColor: 'magenta',
+  // border: '1px solid cyan',
 }));
 
-const StyledDivJumpToTarget = styled('div')(() => ({
+const StyledDivJumpToTarget = styled("div")(() => ({
   content: '""',
-  display: 'block',
-  height: '100px',
-  marginTop: '-100px',
-  visibility: 'hidden',
+  display: "block",
+  height: "100px",
+  marginTop: "-100px",
+  visibility: "hidden",
 }));
 
 export default function Section(props: Props) {
   // const classes = useStyles();
-  const {children, className, id} = props;
+  const { children, className, id } = props;
 
   return (
     <div className={className}>
       <StyledSection id={id}>
-        <StyledDivJumpToTarget id={`${id}_link`}/>
+        <StyledDivJumpToTarget id={`${id}_link`} />
         {children}
       </StyledSection>
     </div>
   );
-};
+}

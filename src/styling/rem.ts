@@ -6,5 +6,5 @@
  * @param px
  */
 export default function rem(px: number) {
-	return (px/16) + 'rem'
-};
+  return px / 16 + "rem";
+}

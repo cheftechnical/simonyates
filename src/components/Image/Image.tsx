@@ -1,5 +1,5 @@
-import rem from '../../styling/rem';
-import {styled} from "@mui/material";
+import rem from "../../styling/rem";
+import { styled } from "@mui/material";
 
 interface Props {
   alt: string;
@@ -15,13 +15,13 @@ interface Props {
 // 	}
 // }));
 
-const StyledImg = styled('img')(() => ({
+const StyledImg = styled("img")(() => ({
   marginBottom: rem(-4),
-  width: '100%'
-}))
+  width: "100%",
+}));
 
 export default function Image(props: Props) {
-  const {alt, className, src} = props;
+  const { alt, className, src } = props;
 
   return (
     <StyledImg

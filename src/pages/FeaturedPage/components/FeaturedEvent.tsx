@@ -1,5 +1,5 @@
-import {color} from '../../../styling/Color/Color';
-import {styled, Typography} from "@mui/material";
+import { color } from "../../../styling/Color/Color";
+import { styled, Typography } from "@mui/material";
 
 interface Props {
   children?: any;
@@ -26,28 +26,28 @@ interface Props {
 // 	}
 // }));
 
-const StyledDivRoot = styled('div')(() => ({
+const StyledDivRoot = styled("div")(() => ({
   // default
 }));
 
-const StyledDivRootNext = styled(StyledDivRoot)(({theme}) => ({
-  paddingTop: theme.spacing(40 / 8)
+const StyledDivRootNext = styled(StyledDivRoot)(({ theme }) => ({
+  paddingTop: theme.spacing(40 / 8),
 }));
 
-const StyledTypographyHost = styled(Typography)(({theme}) => ({
+const StyledTypographyHost = styled(Typography)(({ theme }) => ({
   paddingTop: theme.spacing(16 / 8),
-  color: color.grey['600']
+  color: color.grey["600"],
 })) as typeof Typography;
 
 const StyledTypographyWhen = styled(Typography)(() => ({
-  color: color.grey['600']
+  color: color.grey["600"],
 })) as typeof Typography;
 
 export default function FeaturedEvent(props: Props) {
   // const classes = useStyles();
-  const {children, host, next, title, when} = props;
+  const { children, host, next, title, when } = props;
 
-  const MyStyledDivRoot = (next) ? StyledDivRoot : StyledDivRootNext;
+  const MyStyledDivRoot = next ? StyledDivRoot : StyledDivRootNext;
 
   return (
     <MyStyledDivRoot>
@@ -63,9 +63,7 @@ export default function FeaturedEvent(props: Props) {
         {when}
       </StyledTypographyWhen>
 
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </MyStyledDivRoot>
   );
-};
+}

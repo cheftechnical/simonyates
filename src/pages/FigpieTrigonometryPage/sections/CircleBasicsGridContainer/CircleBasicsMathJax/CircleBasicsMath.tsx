@@ -1,18 +1,18 @@
-import * as React from 'react';
-import {color} from '../../../../../styling/Color/Color';
-import {degToRad} from '../../../libs/trig';
+import * as React from "react";
+import { color } from "../../../../../styling/Color/Color";
+import { degToRad } from "../../../libs/trig";
 // import {makeStyles} from '@material-ui/core/styles';
-import {AxisDirection} from '../AxisDirection';
+import { AxisDirection } from "../AxisDirection";
 
 // @ts-ignore
 import MathJax from "mathjax3-react";
-import {styled} from "@mui/material";
+import { styled } from "@mui/material";
 
 const timeout = 1000;
 
 interface Props {
-	inputDegrees: number;
-	yAxisDirection: AxisDirection;
+  inputDegrees: number;
+  yAxisDirection: AxisDirection;
 }
 
 // @todo mui5
@@ -21,29 +21,29 @@ interface Props {
 // 		color: color.grey['900'],
 // 	},
 // }));
-const StyledDiv = styled('div')(() => ({
-	color: color.grey['900'],
-}))
+const StyledDiv = styled("div")(() => ({
+  color: color.grey["900"],
+}));
 
 // export default function CircleBasicsMathJax(props: Props) {
 export const CircleBasicsMathJax = React.memo(function (props: Props) {
-	// const classes = useStyles();
-	const {inputDegrees, yAxisDirection} = props;
+  // const classes = useStyles();
+  const { inputDegrees, yAxisDirection } = props;
 
-	const [formula, setFormula] = React.useState<string>();
+  const [formula, setFormula] = React.useState<string>();
 
-	const refreshEquation = React.useCallback(() => {
-		const theta = degToRad(inputDegrees);
-		const x2 = Math.cos(theta);
-		const y2 = Math.sin(theta) * yAxisDirection;
+  const refreshEquation = React.useCallback(() => {
+    const theta = degToRad(inputDegrees);
+    const x2 = Math.cos(theta);
+    const y2 = Math.sin(theta) * yAxisDirection;
 
-		const red500 = color.red['500'];
-		const blue500 = color.blue['500'];
+    const red500 = color.red["500"];
+    const blue500 = color.blue["500"];
 
-		const blue = String.raw`\color{${blue500}}`;
-		const red = String.raw`\color{${red500}}`;
+    const blue = String.raw`\color{${blue500}}`;
+    const red = String.raw`\color{${red500}}`;
 
-		const equation = String.raw`
+    const equation = String.raw`
 			{${blue}{angle}} & = ${inputDegrees}^\circ \\
 			\\
 			{${red}\theta} & = {${blue}{angle}} * (\pi / 180) \\
@@ -63,34 +63,28 @@ export const CircleBasicsMathJax = React.memo(function (props: Props) {
 				& = ${y2.toFixed(3)} \\
 		`;
 
-		setFormula(String.raw`$$					
+    setFormula(String.raw`$$					
 			\begin{equation}
 			\begin{split}
 			${equation}
 			\end{split}
 			\end{equation}
 		$$`);
-	}, [inputDegrees, yAxisDirection]);
+  }, [inputDegrees, yAxisDirection]);
 
-	const renderedFormula = React.useMemo(() => {
-		return (
-			<MathJax.Formula formula={formula}/>
-		);
-	}, [formula]);
+  const renderedFormula = React.useMemo(() => {
+    return <MathJax.Formula formula={formula} />;
+  }, [formula]);
 
-	React.useEffect(() => {
-		const timer = setTimeout(() => {
-			refreshEquation();
-		}, timeout);
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      refreshEquation();
+    }, timeout);
 
-		return () => clearTimeout(timer);
-	}, [refreshEquation, inputDegrees, yAxisDirection]);
+    return () => clearTimeout(timer);
+  }, [refreshEquation, inputDegrees, yAxisDirection]);
 
-	return (
-		<StyledDiv>
-			{renderedFormula}
-		</StyledDiv>
-	)
+  return <StyledDiv>{renderedFormula}</StyledDiv>;
 });
 
 export default CircleBasicsMathJax;

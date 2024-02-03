@@ -1,11 +1,11 @@
-import {ReactNode} from 'react';
-import {Helmet} from 'react-helmet-async';
-import rem from '../../styling/rem';
-import NavTop from './NavTop';
-import Footer from './Footer';
-import SkipNav from './SkipNav';
-import {styled} from "@mui/material";
-import {ScrollRestoration} from "react-router-dom";
+import { ReactNode } from "react";
+import { Helmet } from "react-helmet-async";
+import rem from "../../styling/rem";
+import NavTop from "./NavTop";
+import Footer from "./Footer";
+import SkipNav from "./SkipNav";
+import { styled } from "@mui/material";
+import { ScrollRestoration } from "react-router-dom";
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -15,7 +15,7 @@ import {ScrollRestoration} from "react-router-dom";
  * content sit higher on the viewport.
  */
 const fullHeightOpticalOffset = -32 - 8 - 8 - 1;
-const mainId = 'main-content';
+const mainId = "main-content";
 
 interface Props {
   /**
@@ -36,11 +36,11 @@ interface Props {
   top?: string;
 }
 
-const StyledDivRoot = styled('div')(() => ({
-  height: '100%'
+const StyledDivRoot = styled("div")(() => ({
+  height: "100%",
 }));
 
-const StyledMain = styled('main')(({theme}) => ({
+const StyledMain = styled("main")(({ theme }) => ({
   // marginTop: themeMui.spacing(162 / 8),
   paddingTop: theme.spacing(162 / 8),
 
@@ -49,11 +49,11 @@ const StyledMain = styled('main')(({theme}) => ({
 
 const StyledMainFullHeight = styled(StyledMain)(() => ({
   marginTop: rem(fullHeightOpticalOffset),
-  height: '100%',
+  height: "100%",
   // color: 'green !important'
 }));
 
-const StyledFooter = styled('footer')(({theme}) => ({
+const StyledFooter = styled("footer")(({ theme }) => ({
   marginTop: theme.spacing(88 / 8),
 }));
 
@@ -62,7 +62,7 @@ const StyledFooterFullHeight = styled(StyledFooter)(() => ({
 }));
 
 export default function DefaultLayout(props: Props) {
-  const {children, fullHeight, title, top} = props;
+  const { children, fullHeight, title, top } = props;
 
   const [MyMain, MyFooter] = fullHeight
     ? [StyledMainFullHeight, StyledFooterFullHeight]
@@ -71,14 +71,17 @@ export default function DefaultLayout(props: Props) {
   return (
     <>
       <StyledDivRoot>
-        <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
+        <Helmet
+          defaultTitle="Simon Yates"
+          titleTemplate="Simon Yates &bull; %s"
+        >
           <title>{title}</title>
         </Helmet>
 
-        <SkipNav mainId={mainId}/>
+        <SkipNav mainId={mainId} />
 
         <header>
-          <NavTop selected={top}/>
+          <NavTop selected={top} />
         </header>
 
         {/*/!* IMPORTANT: use `tabIndex=-1` when using the <SkipNav/> component *!/*/}
@@ -87,7 +90,7 @@ export default function DefaultLayout(props: Props) {
         </MyMain>
 
         <MyFooter>
-          <Footer/>
+          <Footer />
         </MyFooter>
       </StyledDivRoot>
 
@@ -98,4 +101,4 @@ export default function DefaultLayout(props: Props) {
       />
     </>
   );
-};
+}

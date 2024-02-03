@@ -1,5 +1,5 @@
-import {color} from '../../../styling/Color/Color';
-import {styled, Typography} from "@mui/material";
+import { color } from "../../../styling/Color/Color";
+import { styled, Typography } from "@mui/material";
 
 interface Props {
   employer: string;
@@ -12,14 +12,16 @@ interface Props {
 // }));
 
 const StyledTypography = styled(Typography)(() => ({
-  color: color.grey['600']
+  color: color.grey["600"],
 })) as typeof Typography;
 
 export default function WorkAtEmployer(props: Props) {
   // const classes = useStyles();
-  const {employer} = props;
+  const { employer } = props;
 
   return (
-    <StyledTypography component="h1" variant="primaryH3">{employer}</StyledTypography>
+    <StyledTypography component="h1" variant="primaryH3">
+      {employer}
+    </StyledTypography>
   );
-};
+}

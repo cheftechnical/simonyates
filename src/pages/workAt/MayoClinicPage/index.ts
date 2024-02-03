@@ -1,3 +1,3 @@
-import {default as MayoClinicPage} from './MayoClinicPage';
+import { default as MayoClinicPage } from "./MayoClinicPage";
 
 export default MayoClinicPage;

@@ -48,7 +48,6 @@ export default function NavRight() {
   //   useRef<HTMLDivElement>(null),
   // ];
 
-
   // if (!sections) return <></>;
 
   // return (
@@ -68,7 +67,6 @@ export default function NavRight() {
   //     </StyledDivRoot>
   //   </nav>
   // );
-
 
   // return (
   //   <nav aria-label="Sections">
@@ -139,5 +137,5 @@ export default function NavRight() {
   // );
 
   // @todo fix right nav
-  return (<></>);
-};
+  return <></>;
+}

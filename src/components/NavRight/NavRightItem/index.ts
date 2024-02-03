@@ -1,2 +1,2 @@
-import {default as NavRightItem} from './NavRightItem';
+import { default as NavRightItem } from "./NavRightItem";
 export default NavRightItem;

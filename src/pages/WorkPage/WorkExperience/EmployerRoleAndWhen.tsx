@@ -1,6 +1,6 @@
-import {Link as ReactRouterDom} from 'react-router-dom';
-import {color} from '../../../styling/Color/Color';
-import {Link, styled, Typography} from "@mui/material";
+import { Link as ReactRouterDom } from "react-router-dom";
+import { color } from "../../../styling/Color/Color";
+import { Link, styled, Typography } from "@mui/material";
 
 interface Props {
   employer: string;
@@ -31,22 +31,22 @@ interface Props {
 // }));
 
 const StyledLink = styled(Link)(() => ({
-  color: color.grey['600'],
-  '&:hover': {
-    color: color.grey['600'],
-  }
+  color: color.grey["600"],
+  "&:hover": {
+    color: color.grey["600"],
+  },
 })) as typeof Link;
 
-const StyledSpanWhen = styled('span')(() => ({
-  whiteSpace: 'nowrap'
+const StyledSpanWhen = styled("span")(() => ({
+  whiteSpace: "nowrap",
 }));
 
-const StyledTypographyEmployer = styled(Typography)(({theme}) => ({
-  marginBottom: theme.spacing(20 / 8)
+const StyledTypographyEmployer = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(20 / 8),
 })) as typeof Typography;
 
 export default function EmployerRollAndWhen(props: Props) {
-  const {employer, href, role, when} = props;
+  const { employer, href, role, when } = props;
 
   return (
     <StyledTypographyEmployer component="h2" variant="primaryH3">

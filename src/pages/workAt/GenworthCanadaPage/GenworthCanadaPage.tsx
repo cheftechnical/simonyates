@@ -1,7 +1,7 @@
-import WorkAtLogo from '../components/WorkAtLogo';
-import WorkAtTemplate from '../components/WorkAtTemplate';
-import Content from './Content';
-import {useSections} from '../../../components/Sections/useSections';
+import WorkAtLogo from "../components/WorkAtLogo";
+import WorkAtTemplate from "../components/WorkAtTemplate";
+import Content from "./Content";
+import { useSections } from "../../../components/Sections/useSections";
 import PageWrapper from "../../../components/PageWrapper";
 
 export default function GenworthCanada() {
@@ -10,9 +10,9 @@ export default function GenworthCanada() {
   return (
     <PageWrapper title="Work at Genworth Canada">
       <WorkAtTemplate
-        content={<Content onChange={handleSectionChange}/>}
+        content={<Content onChange={handleSectionChange} />}
         employer="Genworth Canada"
-        logo={<WorkAtLogo brand="genworth-canada" variant="default"/>}
+        logo={<WorkAtLogo brand="genworth-canada" variant="default" />}
         role="Developer"
         sections={sections}
         when="July 2014 to January 2015"
@@ -20,4 +20,4 @@ export default function GenworthCanada() {
       />
     </PageWrapper>
   );
-};
+}

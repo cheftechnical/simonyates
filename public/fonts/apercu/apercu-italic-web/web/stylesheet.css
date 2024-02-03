@@ -12,12 +12,13 @@
  */
 
 @font-face {
-    font-family: 'apercu-italic';
-    src: url('apercu-italic.eot');
-    src: url('apercu-italic.eot?#iefix') format('embedded-opentype'),
-         url('apercu-italic.woff2') format('woff2'),
-         url('apercu-italic.woff') format('woff'),
-         url('apercu-italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "apercu-italic";
+  src: url("apercu-italic.eot");
+  src:
+    url("apercu-italic.eot?#iefix") format("embedded-opentype"),
+    url("apercu-italic.woff2") format("woff2"),
+    url("apercu-italic.woff") format("woff"),
+    url("apercu-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

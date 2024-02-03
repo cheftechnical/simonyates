@@ -1,2 +1,2 @@
-import {default as Callout} from './Callout';
+import { default as Callout } from "./Callout";
 export default Callout;

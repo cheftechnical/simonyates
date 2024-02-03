@@ -1,9 +1,7 @@
 import FigpiePage from "../pages/FigpiePage";
 
 export function Figpie() {
-  return (
-    <FigpiePage />
-  )
+  return <FigpiePage />;
 }
 
 export default Figpie;

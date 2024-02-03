@@ -1,3 +1,3 @@
-import {default as ContactPage} from './ContactPage';
+import { default as ContactPage } from "./ContactPage";
 
 export default ContactPage;

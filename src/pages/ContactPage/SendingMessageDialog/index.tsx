@@ -1,2 +1,2 @@
-import {default as SendingMessageDialog} from './SendingMessageDialog';
+import { default as SendingMessageDialog } from "./SendingMessageDialog";
 export default SendingMessageDialog;

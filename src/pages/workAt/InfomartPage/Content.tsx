@@ -1,12 +1,12 @@
-import {SectionItem} from '../../../components/Sections/SectionItem';
-import Section from '../../../components/Section/Section';
-import WorkAtDescription from '../components/WorkAtDescription';
-import Callout from '../../../components/Callout/Callout';
-import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import WorkAtProject from '../components/WorkAtProject';
-import Sections from '../../../components/Sections/Sections';
-import {WorkAtContentProps} from '../WorkAtContentProps';
-import {styled, Typography} from "@mui/material";
+import { SectionItem } from "../../../components/Sections/SectionItem";
+import Section from "../../../components/Section/Section";
+import WorkAtDescription from "../components/WorkAtDescription";
+import Callout from "../../../components/Callout/Callout";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
+import WorkAtProject from "../components/WorkAtProject";
+import Sections from "../../../components/Sections/Sections";
+import { WorkAtContentProps } from "../WorkAtContentProps";
+import { styled, Typography } from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
@@ -16,85 +16,83 @@ interface Props extends WorkAtContentProps {}
 //   }
 // }));
 
-const StyledCallout = styled(Callout)(({theme}) => ({
-  marginBottom: theme.spacing(20 / 8)
+const StyledCallout = styled(Callout)(({ theme }) => ({
+  marginBottom: theme.spacing(20 / 8),
 }));
-
 
 export default function Content(props: Props) {
   // const classes = useStyles();
-  const {onChange} = props;
+  const { onChange } = props;
 
-  const handleChange = ((newValues: SectionItem[]) => {
+  const handleChange = (newValues: SectionItem[]) => {
     if (onChange) onChange(newValues);
-  });
+  };
 
   return (
     <Sections onChange={handleChange}>
       <Section id="intro" name="Intro">
         <WorkAtDescription>
-          Infomart was a division of Postmedia, the industry standard for Canadian
-          newspaper&nbsp;archiving.
+          Infomart was a division of Postmedia, the industry standard for
+          Canadian newspaper&nbsp;archiving.
         </WorkAtDescription>
         {/*<Callout className={classes.callout}>*/}
         <StyledCallout>
-          <strong>Fun Fact: </strong>Elasticsearch was still in early beta when I started
-          working with it on this project. At the time, the latest version was
-          version&nbsp;~&nbsp;0.19–0.2.x
-        {/*</Callout>*/}
+          <strong>Fun Fact: </strong>Elasticsearch was still in early beta when
+          I started working with it on this project. At the time, the latest
+          version was version&nbsp;~&nbsp;0.19–0.2.x
+          {/*</Callout>*/}
         </StyledCallout>
       </Section>
 
       <Section id="about-the-project" name="About the Project">
-        <WorkAtSectionTitle>
-          About the Project
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
         <Typography component="p" variant="primaryBody">
-          For the last 30 years, Infomart had collected over 200 million newspaper articles
-          from every major Canadian&nbsp;publisher.
+          For the last 30 years, Infomart had collected over 200 million
+          newspaper articles from every major Canadian&nbsp;publisher.
         </Typography>
         <Typography component="p" variant="primaryBodyNext">
-          The goal of this project was to enhance the search capabilities of the tool, while
-          expanding its archives to include content from leading social media platforms like
-          Twitter, Facebook, and&nbsp;YouTube.
+          The goal of this project was to enhance the search capabilities of the
+          tool, while expanding its archives to include content from leading
+          social media platforms like Twitter, Facebook, and&nbsp;YouTube.
         </Typography>
         <Typography component="p" variant="primaryBodyNext">
-          Data was originally stored in Microsoft SQL Server, but given the full text
-          requirements of the tool, Elasticsearch proved to be an ideal use-case for this
-          modernization effort. Elasticsearch was still in its early beta then
-          (~ version 0.19–0.2.x), so the documentation was a challenge, but the promise was
-          very&nbsp;high.
+          Data was originally stored in Microsoft SQL Server, but given the full
+          text requirements of the tool, Elasticsearch proved to be an ideal
+          use-case for this modernization effort. Elasticsearch was still in its
+          early beta then (~ version 0.19–0.2.x), so the documentation was a
+          challenge, but the promise was very&nbsp;high.
         </Typography>
 
-        <WorkAtProject next name="Languages & Frameworks"/>
-        <Callout list={[
-          'PHP + CakePHP',
-          'Bootstrap.js',
-          'JQuery',
-          'Highcharts',
-          'SVG',
-          'Google Maps API',
-          'OAuth 2.0',
-          'PHPUnit'
-        ]}/>
+        <WorkAtProject next name="Languages & Frameworks" />
+        <Callout
+          list={[
+            "PHP + CakePHP",
+            "Bootstrap.js",
+            "JQuery",
+            "Highcharts",
+            "SVG",
+            "Google Maps API",
+            "OAuth 2.0",
+            "PHPUnit",
+          ]}
+        />
 
-        <WorkAtProject next name="Databases & Indices"/>
-        <Callout list={[
-          'Elasticsearch',
-          'Memcache',
-          'Microsoft SQL Server',
-          'MySQL',
-        ]}/>
+        <WorkAtProject next name="Databases & Indices" />
+        <Callout
+          list={["Elasticsearch", "Memcache", "Microsoft SQL Server", "MySQL"]}
+        />
 
-        <WorkAtProject next name="Vendor Services"/>
-        <Callout list={[
-          'FQL (Facebook Query Language)',
-          'Gnip EDC',
-          'Gnip Powertrack',
-          'Twitter API',
-          'YouTube API'
-        ]}/>
+        <WorkAtProject next name="Vendor Services" />
+        <Callout
+          list={[
+            "FQL (Facebook Query Language)",
+            "Gnip EDC",
+            "Gnip Powertrack",
+            "Twitter API",
+            "YouTube API",
+          ]}
+        />
       </Section>
     </Sections>
   );
-};
+}

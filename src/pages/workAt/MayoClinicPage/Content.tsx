@@ -1,82 +1,90 @@
-import {SectionItem} from '../../../components/Sections/SectionItem';
-import Section from '../../../components/Section/Section';
-import WorkAtDescription from '../components/WorkAtDescription';
-import WorkAtSectionTitle from '../components/WorkAtSectionTitle';
-import Callout from '../../../components/Callout/Callout';
-import Ul from '../../../styling/ListsUnordered/Ul/Ul';
-import Li from '../../../styling/ListsUnordered/Li/Li';
-import WorkAtPublications from '../components/WorkAtPublications';
-import WorkAtPublication from '../components/WorkAtPublication';
-import WorkAtEvents from '../components/WorkAtEvents';
-import WorkAtEventsGroup from '../components/WorkAtEventsGroup';
-import WorkAtEvent from '../components/WorkAtEvent';
-import Figure from '../../../components/Figure/Figure';
-import Sections from '../../../components/Sections/Sections';
-import {WorkAtContentProps} from '../WorkAtContentProps';
-import {Typography} from "@mui/material";
+import { SectionItem } from "../../../components/Sections/SectionItem";
+import Section from "../../../components/Section/Section";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
+import Callout from "../../../components/Callout/Callout";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import Li from "../../../styling/ListsUnordered/Li/Li";
+import WorkAtPublications from "../components/WorkAtPublications";
+import WorkAtPublication from "../components/WorkAtPublication";
+import WorkAtEvents from "../components/WorkAtEvents";
+import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
+import WorkAtEvent from "../components/WorkAtEvent";
+import Figure from "../../../components/Figure/Figure";
+import Sections from "../../../components/Sections/Sections";
+import { WorkAtContentProps } from "../WorkAtContentProps";
+import { Typography } from "@mui/material";
 
 interface Props extends WorkAtContentProps {}
 
 export default function Content(props: Props) {
-  const {onChange} = props;
+  const { onChange } = props;
 
-  const handleChange = ((newValues: SectionItem[]) => {
+  const handleChange = (newValues: SectionItem[]) => {
     if (onChange) onChange(newValues);
-  });
+  };
 
   return (
     <Sections onChange={handleChange}>
       <Section id="intro" name="Intro">
         <WorkAtDescription>
-          Mayo Clinic is an American nonprofit academic medical center based in Rochester, MN,
-          focused on integrated patient care, education and research. It employs over 4,500
-          physicians and scientists, along with 58,400 administrative and allied
-          health&nbsp;staff.
+          Mayo Clinic is an American nonprofit academic medical center based in
+          Rochester, MN, focused on integrated patient care, education and
+          research. It employs over 4,500 physicians and scientists, along with
+          58,400 administrative and allied health&nbsp;staff.
         </WorkAtDescription>
       </Section>
 
       <Section id="patient-like-mine" name="Patient Like Mine">
-        <WorkAtSectionTitle>
-          Patient Like Mine
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>Patient Like Mine</WorkAtSectionTitle>
 
         <Typography component="p" variant="primaryBody">
-          The Patient Like Mine project was a real-time, visual analytics tool for clinical
-          decision support. The System expands the &ldquo;recall of past experience&rdquo;
-          approach that a provider (physician) uses to formulate a course of action for a
-          given patient. By utilizing Big Data techniques, we enable the provider to recall
-          all similar patients from an institution&rsquo;s electronic medical record (EMR)
-          repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect these
-          evidence-based cohorts for future statistical validation and pattern&nbsp;mining.
+          The Patient Like Mine project was a real-time, visual analytics tool
+          for clinical decision support. The System expands the &ldquo;recall of
+          past experience&rdquo; approach that a provider (physician) uses to
+          formulate a course of action for a given patient. By utilizing Big
+          Data techniques, we enable the provider to recall all similar patients
+          from an institution&rsquo;s electronic medical record (EMR)
+          repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect
+          these evidence-based cohorts for future statistical validation and
+          pattern&nbsp;mining.
         </Typography>
 
-        <Callout list={[
-          'Node.js + Express',
-          'Hapi.js',
-          'Elasticsearch',
-          'MongoDB',
-          'RabbitMQ River',
-          'Highcharts',
-          'D3',
-          'Elastic Marvel'
-        ]}/>
+        <Callout
+          list={[
+            "Node.js + Express",
+            "Hapi.js",
+            "Elasticsearch",
+            "MongoDB",
+            "RabbitMQ River",
+            "Highcharts",
+            "D3",
+            "Elastic Marvel",
+          ]}
+        />
 
         <Ul>
           <Li>Building all of the visualization tools of the&nbsp;project</Li>
-          <Li>Optimizing Elasticsearch queries to provide real-time search on very-large large datasets, which
-            included over 1 billion facts, each with over 1 thousand properties and up to 1 thousand data
-            points per&nbsp;second</Li>
-          <Li>Re-writing an internal tool used for creating complex nested Elasticsearch queries, using modern
-            ES6&nbsp;standards</Li>
-          <Li>Presenting our work at monthly <em>Lunch-and-Learn</em> workshops, where we would share our
-            progress with other teams within the Mayo&nbsp;Clinic</Li>
+          <Li>
+            Optimizing Elasticsearch queries to provide real-time search on
+            very-large large datasets, which included over 1 billion facts, each
+            with over 1 thousand properties and up to 1 thousand data points
+            per&nbsp;second
+          </Li>
+          <Li>
+            Re-writing an internal tool used for creating complex nested
+            Elasticsearch queries, using modern ES6&nbsp;standards
+          </Li>
+          <Li>
+            Presenting our work at monthly <em>Lunch-and-Learn</em> workshops,
+            where we would share our progress with other teams within the
+            Mayo&nbsp;Clinic
+          </Li>
         </Ul>
       </Section>
 
       <Section id="publications" name="Publications">
-        <WorkAtSectionTitle>
-          Publications
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>Publications</WorkAtSectionTitle>
 
         <WorkAtPublications>
           <WorkAtPublication
@@ -90,9 +98,7 @@ export default function Content(props: Props) {
       </Section>
 
       <Section id="events" name="Events">
-        <WorkAtSectionTitle>
-          Events
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>Events</WorkAtSectionTitle>
 
         <WorkAtEvents>
           <WorkAtEventsGroup
@@ -108,9 +114,7 @@ export default function Content(props: Props) {
       </Section>
 
       <Section id="recognition" name="Recognition">
-        <WorkAtSectionTitle>
-          Recognition
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
 
         <Figure
           alt="Elasticon 2016"
@@ -122,4 +126,4 @@ export default function Content(props: Props) {
       </Section>
     </Sections>
   );
-};
+}

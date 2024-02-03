@@ -1,3 +1,3 @@
-import {default as WorkExperience} from './WorkExperience';
+import { default as WorkExperience } from "./WorkExperience";
 
 export default WorkExperience;

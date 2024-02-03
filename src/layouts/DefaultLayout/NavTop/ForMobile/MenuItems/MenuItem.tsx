@@ -1,7 +1,7 @@
-import {Box, styled} from "@mui/material";
+import { Box, styled } from "@mui/material";
 import color from "../../../../../styling/Color";
 import rem from "../../../../../styling/rem";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface Props {
   /**
@@ -20,18 +20,18 @@ interface Props {
 
 const StyledNavLink = styled(NavLink)(() => ({
   color: color.grey[100],
-  textDecoration: 'none',
+  textDecoration: "none",
 
   fontSize: rem(24),
   lineHeight: rem(32),
 
-  '&.active': {
-    fontWeight: 'bold'
-  }
+  "&.active": {
+    fontWeight: "bold",
+  },
 }));
 
 export default function MenuItem(props: Props) {
-  const {href, onClick, title} = props;
+  const { href, onClick, title } = props;
 
   return (
     <Box pt={3}>

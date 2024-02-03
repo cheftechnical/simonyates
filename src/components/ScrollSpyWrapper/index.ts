@@ -1,3 +1,3 @@
-import {default as ScrollSpyWrapper} from './ScrollSpyWrapper';
+import { default as ScrollSpyWrapper } from "./ScrollSpyWrapper";
 
 export default ScrollSpyWrapper;

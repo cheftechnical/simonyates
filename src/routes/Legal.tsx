@@ -6,7 +6,7 @@ export function Legal() {
     <DefaultLayout>
       <LegalPage />
     </DefaultLayout>
-  )
-};
+  );
+}
 
 export default Legal;

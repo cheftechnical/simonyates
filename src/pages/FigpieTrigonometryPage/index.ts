@@ -1,2 +1,2 @@
-import {default as FigpieTrigonometryPage} from './FigpieTrigonometryPage';
+import { default as FigpieTrigonometryPage } from "./FigpieTrigonometryPage";
 export default FigpieTrigonometryPage;

@@ -1,5 +1,5 @@
-import Logo from '../../../components/Logo';
-import {styled} from "@mui/material";
+import Logo from "../../../components/Logo";
+import { styled } from "@mui/material";
 
 // const useStyles = makeStyles((themeMui) => ({
 // 	root: {
@@ -7,9 +7,9 @@ import {styled} from "@mui/material";
 // 	}
 // }));
 
-const StyledDivRoot = styled('div')(({theme}) => ({
+const StyledDivRoot = styled("div")(({ theme }) => ({
   paddingLeft: theme.spacing(8 / 8),
-}))
+}));
 
 interface Props {
   brand: any;
@@ -18,11 +18,11 @@ interface Props {
 
 export default function WorkAtLogo(props: Props) {
   // const classes = useStyles();
-  const {brand, variant} = props;
+  const { brand, variant } = props;
 
   return (
     <StyledDivRoot>
-      <Logo brand={brand} variant={variant} width="100%"/>
+      <Logo brand={brand} variant={variant} width="100%" />
     </StyledDivRoot>
   );
 }

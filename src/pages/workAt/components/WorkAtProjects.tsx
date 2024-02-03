@@ -1,15 +1,11 @@
-import ConditionalIndent from '../../../components/ConditionalIndent/ConditionalIndent';
+import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
 
 interface Props {
-	children?: any;
+  children?: any;
 }
 
 export default function WorkAtProjects(props: Props) {
-	const {children} = props;
+  const { children } = props;
 
-	return (
-		<ConditionalIndent>
-			{children}
-		</ConditionalIndent>
-	);
-};
+  return <ConditionalIndent>{children}</ConditionalIndent>;
+}

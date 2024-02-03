@@ -1,10 +1,10 @@
 // import * as React from 'react';
 // import {makeStyles} from '@material-ui/core/styles';
-import {color} from '../../styling/Color/Color';
-import rem from '../../styling/rem';
-import Image from '../Image/Image';
-import {ReactElement, useMemo} from 'react';
-import {Box, Link, styled} from "@mui/material";
+import { color } from "../../styling/Color/Color";
+import rem from "../../styling/rem";
+import Image from "../Image/Image";
+import { ReactElement, useMemo } from "react";
+import { Box, Link, styled } from "@mui/material";
 
 // import {Link} from '@material-ui/core';
 
@@ -44,23 +44,23 @@ interface Props {
 // 	}
 // }));
 
-const StyledFigCaption = styled('figcaption')(({theme}) => ({
+const StyledFigCaption = styled("figcaption")(({ theme }) => ({
   marginTop: theme.spacing((8 - 2) / 8), // subtract 2 for automatic spacing
 
   // @todo I hate the way I coded this — the value is coming from Typography
   fontFamily: '"Tiempos Text"',
-  fontStyle: 'normal',
-  fontWeight: 'normal',
+  fontStyle: "normal",
+  fontWeight: "normal",
   fontSize: rem(12),
   lineHeight: rem(16),
   letterSpacing: rem(0.4),
 
-  color: color.grey['700']
-}))
+  color: color.grey["700"],
+}));
 
 export default function Figure(props: Props) {
   // const classes = useStyles();
-  const {alt, callToAction, caption, href, next, src} = props;
+  const { alt, callToAction, caption, href, next, src } = props;
 
   // @todo mui5
   // const rootClassName = (next)
@@ -68,13 +68,13 @@ export default function Figure(props: Props) {
   // 	: classes.root;
 
   const renderedFigureContent = useMemo(() => {
-    const image = (
-      <Image alt={alt} src={src}/>
-    );
+    const image = <Image alt={alt} src={src} />;
 
     if (href) {
       return (
-        <Link href={href} target="_blank">{image}</Link>
+        <Link href={href} target="_blank">
+          {image}
+        </Link>
       );
     }
 
@@ -84,37 +84,33 @@ export default function Figure(props: Props) {
   const renderedFigureCaption = useMemo(() => {
     if (!caption) return;
 
-    const captionContent = (callToAction)
-      ? (
+    const captionContent = callToAction ? (
+      <div>
+        <div>{caption}</div>
         <div>
-          <div>
-            {caption}
-          </div>
-          <div>
-            <Link href={href} target="_blank">
-              Watch Video &rsaquo;
-            </Link>
-          </div>
+          <Link href={href} target="_blank">
+            Watch Video &rsaquo;
+          </Link>
         </div>
-      ) : (
-        <>
-          {caption}
-        </>
-      );
-
-    return (
-      <StyledFigCaption>
-        {captionContent}
-      </StyledFigCaption>
+      </div>
+    ) : (
+      <>{caption}</>
     );
+
+    return <StyledFigCaption>{captionContent}</StyledFigCaption>;
   }, [callToAction, caption, href]);
 
   // @todo mui5
   return (
-    <Box sx={(theme) => ({
-      paddingTop: next ? theme.spacing(5) : 0
-    })}>
-      <figure>{renderedFigureContent}{renderedFigureCaption}</figure>
+    <Box
+      sx={(theme) => ({
+        paddingTop: next ? theme.spacing(5) : 0,
+      })}
+    >
+      <figure>
+        {renderedFigureContent}
+        {renderedFigureCaption}
+      </figure>
     </Box>
   );
-};
+}

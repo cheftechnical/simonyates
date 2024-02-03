@@ -1,17 +1,17 @@
-import {Grid} from "@mui/material";
-import {ReactNode} from "react";
+import { Grid } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
-	children: NonNullable<ReactNode>;
-	className?: string | undefined;
+  children: NonNullable<ReactNode>;
+  className?: string | undefined;
 }
 
 export default function MyGridContainer(props: Props) {
-	const {children, className} = props;
+  const { children, className } = props;
 
-	return (
-		<Grid container className={className} spacing={3}>
-			{children}
-		</Grid>
-	);
-};
+  return (
+    <Grid container className={className} spacing={3}>
+      {children}
+    </Grid>
+  );
+}

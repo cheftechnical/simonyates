@@ -14,8 +14,8 @@
 // }));
 
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import {Button, styled} from "@mui/material";
-import {useCallback} from "react";
+import { Button, styled } from "@mui/material";
+import { useCallback } from "react";
 
 interface Props {
   /**
@@ -34,35 +34,39 @@ interface Props {
 }
 
 const defaultProps: Props = {
-  label: 'Download',
-  href: '',
+  label: "Download",
+  href: "",
 };
 
 const StyledButton = styled(Button)(() => ({
   // default
 }));
 
-const StyledButtonNext = styled(StyledButton)(({theme}) => ({
+const StyledButtonNext = styled(StyledButton)(({ theme }) => ({
   marginTop: theme.spacing(0 / 8),
 }));
 
 export default function Download(props: Props) {
   // const classes = useStyles();
-  const {href, label, next} = {...defaultProps, ...props};
+  const { href, label, next } = { ...defaultProps, ...props };
 
   const handleOnClick = useCallback(() => {
     const link = document.createElement("a");
-    link.download = label ? label : '';
+    link.download = label ? label : "";
     link.href = href;
-    link.target = '_blank';
+    link.target = "_blank";
     link.click();
   }, [href, label]);
 
-  const MyStyledButton = (next) ? StyledButtonNext : StyledButton;
+  const MyStyledButton = next ? StyledButtonNext : StyledButton;
 
   return (
-    <MyStyledButton endIcon={<ArrowRightIcon/>} onClick={handleOnClick} variant="text">
+    <MyStyledButton
+      endIcon={<ArrowRightIcon />}
+      onClick={handleOnClick}
+      variant="text"
+    >
       {label}
     </MyStyledButton>
   );
-};
+}

@@ -1,9 +1,9 @@
 // import * as React from 'react';
 // import {Button} from '@material-ui/core';
-import {Button, styled} from "@mui/material";
+import { Button, styled } from "@mui/material";
 // import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 // import {makeStyles} from '@material-ui/core/styles';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 interface Props {
   /**
@@ -23,17 +23,22 @@ interface Props {
 //   }
 // }));
 
-const StyledDiv = styled('div')(({theme}) => ({
-  marginTop: theme.spacing(32 / 8)
-}))
+const StyledDiv = styled("div")(({ theme }) => ({
+  marginTop: theme.spacing(32 / 8),
+}));
 
 export default function ReadFullDetails(props: Props) {
   // const classes = useStyles();
-  const {ariaLabel, href} = props;
+  const { ariaLabel, href } = props;
 
   return (
     <StyledDiv>
-      <Button aria-label={ariaLabel} endIcon={<ArrowRightIcon/>} href={href} variant="text">
+      <Button
+        aria-label={ariaLabel}
+        endIcon={<ArrowRightIcon />}
+        href={href}
+        variant="text"
+      >
         Read Full Details
       </Button>
     </StyledDiv>

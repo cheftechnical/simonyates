@@ -1,6 +1,6 @@
-import MyContainer from '../../../styling/MyContainer/MyContainer';
-import Photos from './Photos';
-import {Typography} from "@mui/material";
+import MyContainer from "../../../styling/MyContainer/MyContainer";
+import Photos from "./Photos";
+import { Typography } from "@mui/material";
 
 export default function PhotoGallery() {
   return (
@@ -10,7 +10,7 @@ export default function PhotoGallery() {
         In case you&rsquo;re curious, here are some of my photos from traveling
       </Typography>
 
-      <Photos/>
+      <Photos />
     </MyContainer>
   );
-};
+}

@@ -1,3 +1,3 @@
-import {default as InfomartPage} from './InfomartPage';
+import { default as InfomartPage } from "./InfomartPage";
 
 export default InfomartPage;

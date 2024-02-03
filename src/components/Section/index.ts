@@ -1,2 +1,2 @@
-import {default as Section} from './Section';
+import { default as Section } from "./Section";
 export default Section;

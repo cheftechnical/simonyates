@@ -1,13 +1,13 @@
-import {useCallback, useState} from 'react';
-import {color} from '../../styling/Color/Color';
-import MyContainer from '../../styling/MyContainer/MyContainer';
-import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
-import ContactForm from './ContactForm';
-import {MessageFormValues} from './MessageFormValues';
-import SendingMessageDialog from './SendingMessageDialog/SendingMessageDialog';
-import {Grid, styled, Typography} from "@mui/material";
+import { useCallback, useState } from "react";
+import { color } from "../../styling/Color/Color";
+import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
+import ContactForm from "./ContactForm";
+import { MessageFormValues } from "./MessageFormValues";
+import SendingMessageDialog from "./SendingMessageDialog/SendingMessageDialog";
+import { Grid, styled, Typography } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
-import {SubmitHandler} from "react-hook-form";
+import { SubmitHandler } from "react-hook-form";
 
 // @todo mui5
 // const useStyles = makeStyles((themeMui) => ({
@@ -20,13 +20,13 @@ import {SubmitHandler} from "react-hook-form";
 // 	}
 // }));
 
-const StyledTypographyBody = styled(Typography)(({theme}) => ({
+const StyledTypographyBody = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(40 / 8),
-  color: color.grey['700']
+  color: color.grey["700"],
 })) as typeof Typography;
 
-const StyledTypographyHeading = styled(Typography)(({theme}) => ({
-  marginBottom: theme.spacing(8 / 8)
+const StyledTypographyHeading = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(8 / 8),
 })) as typeof Typography;
 
 export default function Contact() {
@@ -39,11 +39,14 @@ export default function Contact() {
     setIsSending(false);
   }, []);
 
-  const handleSubmit: SubmitHandler<MessageFormValues> = useCallback((value: MessageFormValues) => {
-    console.log('sending');
-    setIsSending(true);
-    setMessage(value);
-  }, []);
+  const handleSubmit: SubmitHandler<MessageFormValues> = useCallback(
+    (value: MessageFormValues) => {
+      console.log("sending");
+      setIsSending(true);
+      setMessage(value);
+    },
+    [],
+  );
 
   return (
     <PageWrapper title="Contact">
@@ -60,10 +63,11 @@ export default function Contact() {
         <MyGridContainer>
           <Grid item md={6} xs={12}>
             <StyledTypographyBody component="p" variant="primaryBody">
-              I&rsquo;m always open to make new connections and chat about software&nbsp;development.
+              I&rsquo;m always open to make new connections and chat about
+              software&nbsp;development.
             </StyledTypographyBody>
 
-            <ContactForm onSubmit={handleSubmit}/>
+            <ContactForm onSubmit={handleSubmit} />
 
             {isSending && <span>Sending&hellip;</span>}
           </Grid>
@@ -77,4 +81,4 @@ export default function Contact() {
       />
     </PageWrapper>
   );
-};
+}

@@ -1,5 +1,5 @@
-import {Helmet} from "react-helmet-async";
-import {ReactNode} from "react";
+import { Helmet } from "react-helmet-async";
+import { ReactNode } from "react";
 
 type PageWrapperProps = {
   /**
@@ -10,10 +10,10 @@ type PageWrapperProps = {
    * The title of the page as it appears in the <head><title>...</title></head>
    */
   title: string;
-}
+};
 
 export function PageWrapper(props: PageWrapperProps) {
-  const {children, title} = props;
+  const { children, title } = props;
 
   return (
     <>
@@ -22,7 +22,7 @@ export function PageWrapper(props: PageWrapperProps) {
       </Helmet>
       {children}
     </>
-  )
-};
+  );
+}
 
 export default PageWrapper;

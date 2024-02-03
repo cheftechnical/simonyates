@@ -1,3 +1,3 @@
-import {default as Li} from './Li';
+import { default as Li } from "./Li";
 
 export default Li;

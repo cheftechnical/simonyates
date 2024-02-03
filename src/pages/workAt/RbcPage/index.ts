@@ -1,2 +1,2 @@
-import {default as RbcPage} from './RbcPage';
+import { default as RbcPage } from "./RbcPage";
 export default RbcPage;

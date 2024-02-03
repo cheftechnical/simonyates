@@ -6,7 +6,7 @@ export function Featured() {
     <DefaultLayout>
       <FeaturedPage />
     </DefaultLayout>
-  )
+  );
 }
 
 export default Featured;

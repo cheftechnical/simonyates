@@ -1,5 +1,5 @@
-import ContentSuccessful from './ContentSuccessful';
+import ContentSuccessful from "./ContentSuccessful";
 
-export default {title: 'Pages/Contact/SendingMessageDialog/Successful'}
+export default { title: "Pages/Contact/SendingMessageDialog/Successful" };
 
-export const _default = () => <ContentSuccessful/>;
+export const _default = () => <ContentSuccessful />;

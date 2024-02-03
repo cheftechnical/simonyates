@@ -1,7 +1,7 @@
-import WorkAtLogo from '../components/WorkAtLogo';
-import Content from './Content';
-import WorkAtTemplate from '../components/WorkAtTemplate';
-import {useSections} from '../../../components/Sections/useSections';
+import WorkAtLogo from "../components/WorkAtLogo";
+import Content from "./Content";
+import WorkAtTemplate from "../components/WorkAtTemplate";
+import { useSections } from "../../../components/Sections/useSections";
 import PageWrapper from "../../../components/PageWrapper";
 
 export default function InfomartPage() {
@@ -10,9 +10,9 @@ export default function InfomartPage() {
   return (
     <PageWrapper title="Work at Infomart">
       <WorkAtTemplate
-        content={<Content onChange={handleSectionChange}/>}
+        content={<Content onChange={handleSectionChange} />}
         employer="Infomart"
-        logo={<WorkAtLogo brand="infomart" variant="default"/>}
+        logo={<WorkAtLogo brand="infomart" variant="default" />}
         role="Architect & Lead Developer"
         sections={sections}
         when="2012–2014"
@@ -20,4 +20,4 @@ export default function InfomartPage() {
       />
     </PageWrapper>
   );
-};
+}

@@ -1,7 +1,7 @@
-import rem from '../../../styling/rem';
-import ConditionalIndent from '../../../components/ConditionalIndent/ConditionalIndent';
-import {useMemo} from 'react';
-import {Box, Link, Typography} from "@mui/material";
+import rem from "../../../styling/rem";
+import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
+import { useMemo } from "react";
+import { Box, Link, Typography } from "@mui/material";
 
 interface Props {
   children?: any;
@@ -28,7 +28,7 @@ interface Props {
 
 export default function WorkAtEventsGroup(props: Props) {
   // const classes = useStyles();
-  const {children, href, name, next} = props;
+  const { children, href, name, next } = props;
 
   // const className = (next)
   //   ? `${classes.root} ${classes.next}`
@@ -37,7 +37,9 @@ export default function WorkAtEventsGroup(props: Props) {
   const renderedName = useMemo(() => {
     if (href) {
       return (
-        <Link href={href} target="_blank">{name}</Link>
+        <Link href={href} target="_blank">
+          {name}
+        </Link>
       );
     } else {
       return <>{name}</>;
@@ -55,4 +57,4 @@ export default function WorkAtEventsGroup(props: Props) {
       </ConditionalIndent>
     </Box>
   );
-};
+}

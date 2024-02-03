@@ -1,5 +1,5 @@
-import MyGrid from './MyGrid';
+import MyGrid from "./MyGrid";
 
-export default {title: 'Style Guide/MyGrid'};
+export default { title: "Style Guide/MyGrid" };
 
-export const _default = () => <MyGrid/>;
+export const _default = () => <MyGrid />;

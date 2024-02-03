@@ -1,6 +1,12 @@
-import {FormControl, FormHelperText, Grid, Input, InputAdornment} from '@mui/material';
-import {ChangeEvent, useState} from 'react';
-import MyGridContainer from '../../styling/MyGridContainer/MyGridContainer';
+import {
+  FormControl,
+  FormHelperText,
+  Grid,
+  Input,
+  InputAdornment,
+} from "@mui/material";
+import { ChangeEvent, useState } from "react";
+import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 
 interface Currency {
   code: string;
@@ -10,40 +16,45 @@ interface Currency {
 
 const currencies: Currency[] = [
   {
-    code: 'USD',
+    code: "USD",
     exchangeRate: 1.0,
-    symbol: '$',
+    symbol: "$",
   },
   {
-    code: 'CAD',
+    code: "CAD",
     exchangeRate: 1.25,
-    symbol: '$',
+    symbol: "$",
   },
   {
-    code: 'GBP',
+    code: "GBP",
     exchangeRate: 0.73,
-    symbol: '£',
+    symbol: "£",
   },
   {
-    code: 'EUR',
+    code: "EUR",
     exchangeRate: 0.84,
-    symbol: '€',
-  }
+    symbol: "€",
+  },
 ];
 
 export default function CurrencyConversions() {
-  const [value, setValue] = useState<string[]>(['0', '0', '0', '0',]);
+  const [value, setValue] = useState<string[]>(["0", "0", "0", "0"]);
 
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>, valueIndex: number) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
+    valueIndex: number,
+  ) => {
     const thisRate = currencies[valueIndex].exchangeRate;
     const thisValue = parseFloat(event.target.value);
 
-    setValue(prevState => {
+    setValue((prevState) => {
       return prevState.map((_current, index) => {
         if (index === valueIndex) {
           return event.target.value;
         } else {
-          return ((thisValue / thisRate) * currencies[index].exchangeRate).toFixed(2).toString();
+          return ((thisValue / thisRate) * currencies[index].exchangeRate)
+            .toFixed(2)
+            .toString();
         }
       });
     });
@@ -59,14 +70,24 @@ export default function CurrencyConversions() {
               id={`currency-${currency.code}`}
               name={`currency-${currency.code}`}
               onChange={(event) => handleChange(event, index)}
-              startAdornment={<InputAdornment position="start">{currency.symbol}</InputAdornment>}
-              endAdornment={<InputAdornment position="start">{currency.code}</InputAdornment>}
+              startAdornment={
+                <InputAdornment position="start">
+                  {currency.symbol}
+                </InputAdornment>
+              }
+              endAdornment={
+                <InputAdornment position="start">
+                  {currency.code}
+                </InputAdornment>
+              }
               value={value[index]}
             />
-            <FormHelperText>USD.{currency.code} = {currency.exchangeRate}</FormHelperText>
+            <FormHelperText>
+              USD.{currency.code} = {currency.exchangeRate}
+            </FormHelperText>
           </FormControl>
         </Grid>
       ))}
     </MyGridContainer>
-  )
+  );
 }

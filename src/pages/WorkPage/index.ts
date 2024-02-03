@@ -1,3 +1,3 @@
-import {default as WorkPage} from './WorkPage'
+import { default as WorkPage } from "./WorkPage";
 
 export default WorkPage;

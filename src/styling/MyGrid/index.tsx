@@ -1,2 +1,2 @@
-import {default as MyGrid} from './MyGrid';
+import { default as MyGrid } from "./MyGrid";
 export default MyGrid;

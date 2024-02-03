@@ -9,7 +9,6 @@
 /*}*/
 
 section {
-
 }
 
 /* Set a gutter size (e.g. 50px), then
@@ -17,10 +16,10 @@ section {
  * create the offset
  */
 .section-anchor {
-    height: 50px; /* gutter size */
-    background-color: cyan;
-    opacity: 0.5;
-    top: -50px;
-    position: relative;
-    z-index: -1;
+  height: 50px; /* gutter size */
+  background-color: cyan;
+  opacity: 0.5;
+  top: -50px;
+  position: relative;
+  z-index: -1;
 }

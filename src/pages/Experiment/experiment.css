@@ -4,30 +4,30 @@ gutter: 25
 */
 
 section:before {
-    height: 100px;
-    content: '';
-    display: block;
-    top: -25px;
-    position: relative;
+  height: 100px;
+  content: "";
+  display: block;
+  top: -25px;
+  position: relative;
 
-    background-color: magenta;
-    opacity: 0.5
+  background-color: magenta;
+  opacity: 0.5;
 }
 section {
-    background-color: blue;
+  background-color: blue;
 }
 section:nth-child(0) {
-    background-color: red;
+  background-color: red;
 }
 section:nth-child(1) {
-    background-color: orange;
+  background-color: orange;
 }
 section:nth-child(2) {
-    background-color: yellow;
+  background-color: yellow;
 }
 section:nth-child(3) {
-    background-color: green;
+  background-color: green;
 }
 section:nth-child(4) {
-    background-color: blue;
+  background-color: blue;
 }

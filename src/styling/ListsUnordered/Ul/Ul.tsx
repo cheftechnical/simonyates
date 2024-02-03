@@ -1,4 +1,4 @@
-import {styled} from "@mui/material";
+import { styled } from "@mui/material";
 
 interface Props {
   children: any;
@@ -12,26 +12,22 @@ interface Props {
 // 	}
 // }));
 
-const StyledUl = styled('ul')(() => ({}));
+const StyledUl = styled("ul")(() => ({}));
 
-const StyledUlNext = styled(StyledUl)(({theme}) => ({
-  paddingTop: theme.spacing(24 / 8)
-}))
+const StyledUlNext = styled(StyledUl)(({ theme }) => ({
+  paddingTop: theme.spacing(24 / 8),
+}));
 
 export default function Ul(props: Props) {
   // const classes = useStyles();
-  const {children, next} = props;
+  const { children, next } = props;
 
   // const rootClassName = (next)
   // 	? `${classes.root} ${classes.rootNext}`
   // 	: classes.root;
   //
 
-  const MyStyledUl = (next)
-    ? StyledUlNext
-    : StyledUl;
+  const MyStyledUl = next ? StyledUlNext : StyledUl;
 
-  return (
-    <MyStyledUl>{children}</MyStyledUl>
-  );
-};
+  return <MyStyledUl>{children}</MyStyledUl>;
+}

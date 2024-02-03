@@ -1,2 +1,2 @@
-import {default as MyGridContainer} from './MyGridContainer';
+import { default as MyGridContainer } from "./MyGridContainer";
 export default MyGridContainer;

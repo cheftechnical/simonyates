@@ -1,3 +1,3 @@
-import {default as FeaturedPage} from './FeaturedPage';
+import { default as FeaturedPage } from "./FeaturedPage";
 
 export default FeaturedPage;

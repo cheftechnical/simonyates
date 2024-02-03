@@ -1,7 +1,7 @@
-import {ForwardedRef, forwardRef} from 'react';
-import {InputAdornment, TextField} from "@mui/material";
-import {ErrorOutline} from "@mui/icons-material";
-import {OutlinedInputProps} from "@mui/material/OutlinedInput";
+import { ForwardedRef, forwardRef } from "react";
+import { InputAdornment, TextField } from "@mui/material";
+import { ErrorOutline } from "@mui/icons-material";
+import { OutlinedInputProps } from "@mui/material/OutlinedInput";
 
 // import {InputProps as StandardInputProps} from '@material-ui/core/Input/Input';
 
@@ -52,7 +52,7 @@ interface Props {
    */
   placeholder?: string;
 
-  type?: 'number';
+  type?: "number";
 
   /**
    * Value of the component
@@ -61,26 +61,54 @@ interface Props {
 }
 
 // REMINDER: the tpe of forwardRef is the REVERSE order that they're listed in the callback arguments?!!!
-export const MyTextField2 = forwardRef<HTMLInputElement, Props>((props: Props, ref: ForwardedRef<HTMLInputElement>) => {
-  const {
-    defaultValue,
-    disabled,
-    error,
-    helperText,
-    label,
-    multiline,
-    name,
-    onChange,
-    placeholder,
-    rows,
-    type,
-    value
-  } = props;
+export const MyTextField2 = forwardRef<HTMLInputElement, Props>(
+  (props: Props, ref: ForwardedRef<HTMLInputElement>) => {
+    const {
+      defaultValue,
+      disabled,
+      error,
+      helperText,
+      label,
+      multiline,
+      name,
+      onChange,
+      placeholder,
+      rows,
+      type,
+      value,
+    } = props;
 
-  if (error) {
+    if (error) {
+      return (
+        <TextField
+          error
+          fullWidth
+          defaultValue={defaultValue}
+          disabled={disabled}
+          helperText={helperText}
+          label={label}
+          multiline={multiline}
+          name={name}
+          ref={ref}
+          onChange={onChange}
+          placeholder={placeholder}
+          rows={rows}
+          type={type}
+          value={value}
+          InputProps={{
+            // ...InputProps,
+            endAdornment: (
+              <InputAdornment position="end">
+                <ErrorOutline />
+              </InputAdornment>
+            ),
+          }}
+        />
+      );
+    }
+
     return (
       <TextField
-        error
         fullWidth
         defaultValue={defaultValue}
         disabled={disabled}
@@ -94,31 +122,7 @@ export const MyTextField2 = forwardRef<HTMLInputElement, Props>((props: Props, r
         rows={rows}
         type={type}
         value={value}
-        InputProps={{
-          // ...InputProps,
-          endAdornment: <InputAdornment position="end"><ErrorOutline/></InputAdornment>
-        }}
       />
     );
-  }
-
-  return (
-    <TextField
-      fullWidth
-      defaultValue={defaultValue}
-      disabled={disabled}
-      helperText={helperText}
-      label={label}
-      multiline={multiline}
-      name={name}
-      ref={ref}
-      onChange={onChange}
-      placeholder={placeholder}
-      rows={rows}
-      type={type}
-      value={value}
-    />
-  )
-});
-
-
+  },
+);

@@ -1,4 +1,4 @@
-import {styled, Typography} from "@mui/material";
+import { styled, Typography } from "@mui/material";
 
 interface Props {
   children?: any;
@@ -11,17 +11,17 @@ interface Props {
 // 	}
 // }));
 
-const StyledTypography = styled(Typography)(({theme}) => ({
+const StyledTypography = styled(Typography)(({ theme }) => ({
   marginTop: theme.spacing((80 - 12) / 8),
-  marginBottom: theme.spacing(32 / 8)
+  marginBottom: theme.spacing(32 / 8),
 })) as typeof Typography;
 
 export default function WorkAtSectionTitle(props: Props) {
-  const {children} = props;
+  const { children } = props;
 
   return (
     <StyledTypography component="h2" variant="primaryH3">
       {children}
     </StyledTypography>
   );
-};
+}

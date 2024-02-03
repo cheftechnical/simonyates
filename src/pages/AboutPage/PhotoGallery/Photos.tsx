@@ -1,8 +1,8 @@
-import Image from '../../../components/Image/Image';
-import rem from '../../../styling/rem';
-import MyGridContainer from '../../../styling/MyGridContainer/MyGridContainer';
-import Carousel from 'react-material-ui-carousel';
-import {Grid, Hidden, styled} from "@mui/material";
+import Image from "../../../components/Image/Image";
+import rem from "../../../styling/rem";
+import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
+import Carousel from "react-material-ui-carousel";
+import { Grid, Hidden, styled } from "@mui/material";
 
 // const useStyles = makeStyles(() => ({
 //   root: {
@@ -10,9 +10,9 @@ import {Grid, Hidden, styled} from "@mui/material";
 //   },
 // }));
 
-const StyledDivRoot = styled('div')(() => ({
-  paddingTop: rem(24)
-}))
+const StyledDivRoot = styled("div")(() => ({
+  paddingTop: rem(24),
+}));
 
 export default function Photos() {
   return (
@@ -21,16 +21,28 @@ export default function Photos() {
       <Hidden smDown>
         <MyGridContainer>
           <Grid item xs={3}>
-            <Image alt="Jean'is Joplin" src="/images/about/photo-gallery/jean.png"/>
+            <Image
+              alt="Jean'is Joplin"
+              src="/images/about/photo-gallery/jean.png"
+            />
           </Grid>
           <Grid item xs={3}>
-            <Image alt="Mexico" src="/images/about/photo-gallery/mexico-1.png"/>
+            <Image
+              alt="Mexico"
+              src="/images/about/photo-gallery/mexico-1.png"
+            />
           </Grid>
           <Grid item xs={3}>
-            <Image alt="Mexico" src="/images/about/photo-gallery/mexico-2.png"/>
+            <Image
+              alt="Mexico"
+              src="/images/about/photo-gallery/mexico-2.png"
+            />
           </Grid>
           <Grid item xs={3}>
-            <Image alt="Mexico" src="/images/about/photo-gallery/mexico-3.png"/>
+            <Image
+              alt="Mexico"
+              src="/images/about/photo-gallery/mexico-3.png"
+            />
           </Grid>
         </MyGridContainer>
       </Hidden>
@@ -39,19 +51,31 @@ export default function Photos() {
       <Hidden mdUp>
         <Carousel animation="slide" autoPlay={false}>
           <div>
-            <Image alt="My girlfriend looking like Janis Joplin" src="/images/about/photo-gallery/jean.png"/>
+            <Image
+              alt="My girlfriend looking like Janis Joplin"
+              src="/images/about/photo-gallery/jean.png"
+            />
           </div>
           <div>
-            <Image alt="A street in Mexico" src="/images/about/photo-gallery/mexico-1.png"/>
+            <Image
+              alt="A street in Mexico"
+              src="/images/about/photo-gallery/mexico-1.png"
+            />
           </div>
           <div>
-            <Image alt="A sunset in Mexico" src="/images/about/photo-gallery/mexico-2.png"/>
+            <Image
+              alt="A sunset in Mexico"
+              src="/images/about/photo-gallery/mexico-2.png"
+            />
           </div>
           <div>
-            <Image alt="A town square in Mexico" src="/images/about/photo-gallery/mexico-3.png"/>
+            <Image
+              alt="A town square in Mexico"
+              src="/images/about/photo-gallery/mexico-3.png"
+            />
           </div>
         </Carousel>
       </Hidden>
     </StyledDivRoot>
   );
-};
+}

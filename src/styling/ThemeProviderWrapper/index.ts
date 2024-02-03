@@ -1,3 +1,3 @@
-import {default as ThemeProviderWrapper} from './ThemeProviderWrapper';
+import { default as ThemeProviderWrapper } from "./ThemeProviderWrapper";
 
 export default ThemeProviderWrapper;

@@ -1,2 +1,2 @@
-import {default as PhotoGallery} from './PhotoGallery';
+import { default as PhotoGallery } from "./PhotoGallery";
 export default PhotoGallery;

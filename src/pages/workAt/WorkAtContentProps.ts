@@ -1,4 +1,4 @@
-import {SectionItem} from '../../components/Sections/SectionItem';
+import { SectionItem } from "../../components/Sections/SectionItem";
 
 export interface WorkAtContentProps {
   /**

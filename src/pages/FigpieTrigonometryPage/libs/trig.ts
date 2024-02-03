@@ -4,9 +4,9 @@
  * @param degrees
  */
 export function degToRad(degrees: number): number {
-	return degrees * (Math.PI / 180.0);
+  return degrees * (Math.PI / 180.0);
 }
 
 export function radToDeg(radians: number): number {
-	return radians * (180.0 / Math.PI);
+  return radians * (180.0 / Math.PI);
 }

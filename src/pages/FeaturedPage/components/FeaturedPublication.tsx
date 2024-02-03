@@ -1,6 +1,6 @@
-import {color} from '../../../styling/Color/Color';
-import FeaturedChips from './FeaturedChips';
-import {styled, Typography} from "@mui/material";
+import { color } from "../../../styling/Color/Color";
+import FeaturedChips from "./FeaturedChips";
+import { styled, Typography } from "@mui/material";
 
 interface Props {
   children: any | any[] | never[];
@@ -32,40 +32,40 @@ interface Props {
 // 	}
 // }));
 
-const StyledDivChildren = styled('div')(() => ({
-  color: color.grey['700']
+const StyledDivChildren = styled("div")(() => ({
+  color: color.grey["700"],
 }));
 
-const StyledDivRoot = styled('div')(() => ({
+const StyledDivRoot = styled("div")(() => ({
   // default
 }));
 
-const StyledDivRootNext = styled(StyledDivRoot)(({theme}) => ({
-  paddingTop: theme.spacing(40/8),
+const StyledDivRootNext = styled(StyledDivRoot)(({ theme }) => ({
+  paddingTop: theme.spacing(40 / 8),
 }));
 
-const StyledTypographyName = styled(Typography)(({theme}) => ({
+const StyledTypographyName = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(16 / 8),
 })) as typeof Typography;
 
 const StyledTypographyPublisher = styled(Typography)(() => ({
-  color: color.grey['600'],
+  color: color.grey["600"],
 })) as typeof Typography;
 
 const StyledTypographyWhen = styled(Typography)(() => ({
-  color: color.grey['600'],
+  color: color.grey["600"],
 })) as typeof Typography;
 
 export default function FeaturedPublication(props: Props) {
   // const classes = useStyles();
-  const {children, name, next, publisher, tags, when} = props;
+  const { children, name, next, publisher, tags, when } = props;
 
   // @todo mui5
   // const rootClass = (next)
   // 	? `${classes.root} ${classes.rootNext}`
   // 	: classes.root;
 
-  const MyStyledDivRoot = (next) ? StyledDivRootNext : StyledDivRoot;
+  const MyStyledDivRoot = next ? StyledDivRootNext : StyledDivRoot;
 
   return (
     <MyStyledDivRoot>
@@ -81,11 +81,9 @@ export default function FeaturedPublication(props: Props) {
         {when}
       </StyledTypographyWhen>
 
-      <FeaturedChips list={tags}/>
+      <FeaturedChips list={tags} />
 
-      <StyledDivChildren>
-        {children}
-      </StyledDivChildren>
+      <StyledDivChildren>{children}</StyledDivChildren>
     </MyStyledDivRoot>
   );
 }
