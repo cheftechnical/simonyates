@@ -10,7 +10,7 @@ export interface Props {
   /**
    * The title of the page as it appears in the <head><title>...</title></head>
    */
-  title: string;
+  title?: string;
 }
 
 export default function PageWrapper(props: Props) {
@@ -19,7 +19,9 @@ export default function PageWrapper(props: Props) {
   return (
     <>
       <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
-        <title>{title}</title>
+        {title && (
+          <title>{title}</title>
+        )}
       </Helmet>
       {children}
     </>
