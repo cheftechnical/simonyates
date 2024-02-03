@@ -1,17 +1,29 @@
+import { Box, Button, DialogActions, DialogContent, DialogTitle, styled } from "@mui/material";
+import axios from "axios";
+import { useCallback, useMemo } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { MessageFormValues } from "../MessageFormValues";
-import { Box, Button, DialogActions, DialogContent, DialogTitle, styled } from "@mui/material";
-import { useCallback, useMemo } from "react";
-import axios from "axios";
-
-// https://developers.google.com/recaptcha/docs/display
-// v2
-const recaptchaSiteKey = "6Ldoc7gZAAAAAK-b8CtvPI9W00OkjyouLoxmdwq1";
+import { recaptchaSiteKey } from "./config.ts";
 
 interface Props {
+  /**
+   * If `true`, the component will simulate a send request for testing
+   */
   debug?: boolean;
+
+  /**
+   * Attributes describing the message to send
+   */
   message: MessageFormValues | undefined;
+
+  /**
+   * Callback fired when the dialog is closed
+   */
   onClose: () => void;
+
+  /**
+   * Callback fired when the request was successful
+   */
   onSuccess: () => void;
 }
 
@@ -23,8 +35,7 @@ const StyledDivRoot = styled("div")(() => ({
   textAlign: "center"
 }));
 
-export default function ContentRecaptcha(props: Props) {
-  // const classes = useStyles();
+export function ContentRecaptcha(props: Props) {
   const { debug, message, onClose, onSuccess } = props;
 
   const send = useCallback(() => {
@@ -95,3 +106,5 @@ export default function ContentRecaptcha(props: Props) {
     </div>
   );
 }
+
+export default ContentRecaptcha;
