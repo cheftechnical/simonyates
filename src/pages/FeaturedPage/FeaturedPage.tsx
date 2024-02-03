@@ -88,6 +88,8 @@ export default function Featured() {
                       cohorts for future statistical validation and pattern&nbsp;mining.
                     </StyledTypography>
 
+                    <br/>
+                    <br/>
                     <Download href="/downloads/publications/ieee/2015/patient-like-mine.pdf"/>
                   </FeaturedPublication>
 
