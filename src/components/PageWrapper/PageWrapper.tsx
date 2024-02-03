@@ -13,7 +13,7 @@ export interface Props {
   title?: string;
 }
 
-export default function PageWrapper(props: Props) {
+export function PageWrapper(props: Props) {
   const { children, title } = props;
 
   return (
@@ -27,3 +27,5 @@ export default function PageWrapper(props: Props) {
     </>
   );
 }
+
+export default PageWrapper;
