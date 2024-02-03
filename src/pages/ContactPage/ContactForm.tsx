@@ -12,7 +12,9 @@ import { Button, styled } from "@mui/material";
 const regexEmailAddress = /\S+@\S+\.\S+/;
 
 interface Props {
-  // onSubmit: (data: MessageFormValues) => void;
+  /**
+   * Callback fired when the form is submitted
+   */
   onSubmit: SubmitHandler<MessageFormValues>;
 }
 
