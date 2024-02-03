@@ -3,6 +3,13 @@ import PageNotFoundPage from "../pages/PageNotFoundPage";
 import { useRouteError } from "react-router-dom";
 import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 
+/**
+ * The PageNotFound component is a self-contained page.
+ *
+ * It must include all styling.
+ *
+ * @constructor
+ */
 export function PageNotFound() {
   const error = useRouteError();
   console.error(error);

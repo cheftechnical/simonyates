@@ -4,7 +4,7 @@ import PhotoGallery from "./PhotoGallery/PhotoGallery";
 import Stats from "./Stats/Stats";
 import PageWrapper from "../../components/PageWrapper";
 
-export default function AboutPage() {
+export function AboutPage() {
   return (
     <PageWrapper title="About">
       <article>
@@ -16,3 +16,5 @@ export default function AboutPage() {
     </PageWrapper>
   );
 }
+
+export default AboutPage;
