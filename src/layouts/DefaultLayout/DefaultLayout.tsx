@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
-import { Helmet } from "react-helmet-async";
+import { styled } from "@mui/material";
+import { ScrollRestoration } from "react-router-dom";
 import rem from "../../styling/rem";
 import NavTop from "./NavTop";
 import Footer from "./Footer";
 import SkipNav from "./SkipNav";
-import { styled } from "@mui/material";
-import { ScrollRestoration } from "react-router-dom";
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
@@ -22,14 +21,12 @@ interface Props {
    * Child components
    */
   children: ReactNode;
+
   /**
    * If `true`, layout will use the full height of the viewport
    */
   fullHeight?: boolean;
-  /**
-   * The title of the page as it appears in the <head><title></head>
-   */
-  title?: string;
+
   /**
    * This key identifies top-nav item is selected
    */
@@ -62,7 +59,7 @@ const StyledFooterFullHeight = styled(StyledFooter)(() => ({
 }));
 
 export default function DefaultLayout(props: Props) {
-  const { children, fullHeight, title, top } = props;
+  const { children, fullHeight, top } = props;
 
   const [MyMain, MyFooter] = fullHeight
     ? [StyledMainFullHeight, StyledFooterFullHeight]
@@ -71,13 +68,6 @@ export default function DefaultLayout(props: Props) {
   return (
     <>
       <StyledDivRoot>
-        <Helmet
-          defaultTitle="Simon Yates"
-          titleTemplate="Simon Yates &bull; %s"
-        >
-          <title>{title}</title>
-        </Helmet>
-
         <SkipNav mainId={mainId} />
 
         <header>
@@ -95,7 +85,7 @@ export default function DefaultLayout(props: Props) {
       </StyledDivRoot>
 
       <ScrollRestoration
-        getKey={(location, _matches) => {
+        getKey={(location) => {
           return location.pathname;
         }}
       />

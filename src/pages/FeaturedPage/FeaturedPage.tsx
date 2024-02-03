@@ -11,7 +11,7 @@ import rem from "../../styling/rem";
 import FeaturedEvent from "./components/FeaturedEvent";
 import FeaturedEvents from "./components/FeaturedEvents";
 import FeaturedPublications from "./components/FeaturedPublications";
-import { color } from "../../styling/Color/Color";
+import color from "../../styling/Color";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
