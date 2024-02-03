@@ -1,7 +1,7 @@
 {
   "name": "simonyates",
   "private": true,
-  "version": "2024.02.01",
+  "version": "2024.02.02",
   "type": "module",
   "scripts": {
     "dev": "vite",
