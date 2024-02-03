@@ -23,7 +23,6 @@ import { Root } from "./routes/Root.tsx";
 import { Contact } from "./routes/contact.tsx";
 
 const router = createBrowserRouter([
-  // full height pages
   {
     path: "/",
     element: <Root />,
