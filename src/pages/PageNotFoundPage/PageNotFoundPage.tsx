@@ -1,4 +1,4 @@
-import { color } from "../../styling/Color/Color";
+import color from "../../styling/Color/Color";
 import { Link as ReactRouterDomLink } from "react-router-dom";
 import rem from "../../styling/rem";
 import MyContainer from "../../styling/MyContainer/MyContainer";
@@ -8,19 +8,19 @@ import PageWrapper from "../../components/PageWrapper";
 const StyledLink = styled(Link)(() => ({
   fontWeight: "bold",
   color: color.grey["900"],
-  paddingBottom: "4px",
+  paddingBottom: "4px"
 })) as typeof Link;
 
 const StyledTypographyBody = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(388 / 8),
-  color: color.grey["600"],
+  color: color.grey["600"]
 })) as typeof Typography;
 
 const StyledTypographyHeadline = styled(Typography)(({ theme }) => ({
   fontSize: rem(88),
   lineHeight: rem(88),
   marginBottom: theme.spacing(72 / 8),
-  marginTop: theme.spacing(272 / 8),
+  marginTop: theme.spacing(272 / 8)
 })) as typeof Typography;
 
 export default function PageNotFoundPage() {
