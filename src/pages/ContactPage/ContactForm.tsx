@@ -22,12 +22,12 @@ const StyledButton = styled(Button)(({ theme }) => ({
   marginTop: theme.spacing(16 / 8),
 }));
 
-export default function ContactForm(props: Props) {
+export function ContactForm(props: Props) {
   const { onSubmit } = props;
   const {
     control,
-    handleSubmit,
     formState: { errors },
+    handleSubmit,
   } = useForm<MessageFormValues>();
 
   return (
@@ -136,3 +136,5 @@ export default function ContactForm(props: Props) {
     </div>
   );
 }
+
+export default ContactForm;
