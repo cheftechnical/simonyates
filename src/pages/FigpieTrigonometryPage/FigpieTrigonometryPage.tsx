@@ -1,8 +1,8 @@
 import MathJaxProviderWrapper from "./MathJaxProviderWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-// import {BezierArcGridContainer} from './sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer';
-// import {RotationGridContainer} from './sections/RotationGridContainer/RotationGridContainer';
-import {CircleBasicsGridContainer} from './sections/CircleBasicsGridContainer/CircleBasicsGridContainer';
+import { BezierArcGridContainer } from "./sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer";
+import RotationGridContainer from "./sections/RotationGridContainer";
+import { CircleBasicsGridContainer } from "./sections/CircleBasicsGridContainer/CircleBasicsGridContainer";
 import { Typography } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 
@@ -23,12 +23,12 @@ export default function FigpieTrigonometryPage() {
           <Typography component="h2" variant="primaryH2Next">
             Cubic B&eacute;zier
           </Typography>
-          {/*<BezierArcGridContainer/>*/}
+          <BezierArcGridContainer />
 
           <Typography component="h2" variant="primaryH2Next">
             Rotation
           </Typography>
-          {/*<RotationGridContainer/>*/}
+          <RotationGridContainer />
         </MyContainer>
       </PageWrapper>
     </MathJaxProviderWrapper>

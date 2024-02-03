@@ -1,13 +1,9 @@
-// import * as React from 'react';
-import {memo, useCallback, useEffect, useMemo, useState} from "react";
-import {color} from '../../../../../styling/Color/Color';
-import {degToRad} from '../../../libs/trig';
-// import {makeStyles} from '@material-ui/core/styles';
-import {CubicBezier} from '../../../libs/CubicBezier';
-
-// @ts-ignore
-import MathJax from "mathjax3-react";
-import {styled} from "@mui/material";
+import { styled } from "@mui/material";
+import { MathJaxFormula } from "mathjax3-react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import { degToRad } from "../../../libs/trig";
+import { CubicBezier } from "../../../libs/CubicBezier";
+import color from "../../../../../styling/Color";
 
 const timeout = 1000;
 
@@ -23,7 +19,7 @@ interface Props {
 // 	},
 // }));
 
-const StyledDiv = styled('div')(({theme}) => ({
+const StyledDiv = styled("div")(() => ({
 	color: color.grey['900'],
 }))
 
@@ -34,10 +30,9 @@ const d = (value: number): string => {
 
 // export default function RotationMathJax(props: Props) {
 export const RotationMathJax = memo(function (props: Props) {
-	// const classes = useStyles();
 	const {cubicBezier, theta, variable} = props;
 
-	const [formula, setFormula] = useState<string>();
+  const [formula, setFormula] = useState<string>("");
 
 	const refreshEquation = useCallback(() => {
 		// inputs will eventually become properties, but i'm hard-coding now for dev
@@ -230,7 +225,7 @@ export const RotationMathJax = memo(function (props: Props) {
 
 	const renderedFormula = useMemo(() => {
 		return (
-			<MathJax.Formula formula={formula}/>
+      <MathJaxFormula formula={formula} />
 		);
 	}, [formula]);
 

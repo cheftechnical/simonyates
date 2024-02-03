@@ -1,12 +1,8 @@
-// import * as React from 'react';
-import {color} from '../../../../../styling/Color/Color';
-import {degToRad} from '../../../libs/trig';
-// import {makeStyles} from '@material-ui/core/styles';
-import {memo, useCallback, useEffect, useMemo, useState} from 'react';
-
-// @ts-ignore
-import MathJax from "mathjax3-react";
-import {styled} from "@mui/material";
+import { styled } from "@mui/material";
+import { MathJaxFormula } from "mathjax3-react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import color from "../../../../../styling/Color";
+import { degToRad } from "../../../libs/trig";
 
 const timeout = 1000;
 
@@ -23,7 +19,7 @@ interface Props {
 // 		color: color.grey['900'],
 // 	},
 // }));
-const StyledDiv = styled('div')(({theme}) => ({
+const StyledDiv = styled("div")(() => ({
 	color: color.grey['900'],
 }))
 
@@ -36,7 +32,7 @@ export const BezierArcMathJax = memo(function(props: Props) {
 	// const classes = useStyles();
 	const {endAngle, radius, startAngle, variable} = props;
 
-	const [formula, setFormula] = useState<string>();
+  const [formula, setFormula] = useState<string>("");
 
 	const refreshEquation = useCallback(() => {
 
@@ -185,7 +181,7 @@ export const BezierArcMathJax = memo(function(props: Props) {
 
 	const renderedFormula = useMemo(() => {
 		return (
-			<MathJax.Formula formula={formula}/>
+      <MathJaxFormula formula={formula} />
 		);
 	}, [formula]);
 

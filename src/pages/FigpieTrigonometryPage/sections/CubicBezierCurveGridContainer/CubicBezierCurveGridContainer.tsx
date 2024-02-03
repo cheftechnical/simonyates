@@ -1,11 +1,9 @@
-// import * as React from 'react';
-import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
-// import {Grid} from '@material-ui/core';
-import CubicBezierCurveVisualization from './CubicBezierCurveVisualization/CubicBezierCurveVisualization';
-import {MyTextField2} from '../../../../styling/MyTextField2/MyTextField2';
-import {BezierArcMathJax} from './CubicBezierCurveMathJax/CubicBezierCurveMath';
-import {memo, useState} from "react";
-import {Grid} from "@mui/material";
+import { Grid } from "@mui/material";
+import { ChangeEvent, memo, useState } from "react";
+import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
+import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
+import BezierArcMathJax from "./CubicBezierCurveMathJax";
+import CubicBezierCurveVisualization from "./CubicBezierCurveVisualization/CubicBezierCurveVisualization";
 
 const startAngle = 360;
 
@@ -18,45 +16,42 @@ export const BezierArcGridContainer = memo(function () {
 		setRadius(newRadius);
 	});
 
-	const handleEndAngleChange = ((event: any) => {
-		setEndAngle(event.target.value);
+  const handleEndAngleChange = ((event: ChangeEvent<HTMLInputElement>) => {
+    setEndAngle(parseFloat(event.target.value));
 	});
 
-	const handleRadiusChange = ((event: any) => {
-		setRadius(event.target.value);
+  const handleRadiusChange = ((event: ChangeEvent<HTMLInputElement>) => {
+    setRadius(parseFloat(event.target.value));
 	});
 
 	return (
 		<div>
 			<MyGridContainer>
 				<Grid item xs={6}>
-					{/* @todo mui5 */}
-					{/*<CubicBezierCurveVisualization*/}
-					{/*	onChange={handleBezierArcVisualizationChange}*/}
-					{/*/>*/}
+          <CubicBezierCurveVisualization
+            onChange={handleBezierArcVisualizationChange}
+          />
 				</Grid>
 				<Grid item xs={6}>
 					<MyGridContainer>
 						<Grid item xs={6}>
-							{/* @todo mui5 */}
-							{/*<MyTextField2*/}
-							{/*	disabled*/}
-							{/*	label="Radius"*/}
-							{/*	name="radius"*/}
-							{/*	onChange={handleRadiusChange}*/}
-							{/*	type="number"*/}
-							{/*	value={radius.toString()}*/}
-							{/*/>*/}
+              <MyTextField2
+                disabled
+                label="Radius"
+                name="radius"
+                onChange={handleRadiusChange}
+                type="number"
+                value={radius.toString()}
+              />
 						</Grid>
 						<Grid item xs={6}>
-							{/* @todo mui5 */}
-							{/*<MyTextField2*/}
-							{/*	label="End Angle"*/}
-							{/*	name="endAngle"*/}
-							{/*	onChange={handleEndAngleChange}*/}
-							{/*	type="number"*/}
-							{/*	value={endAngle.toString()}*/}
-							{/*/>*/}
+              <MyTextField2
+                label="End Angle"
+                name="endAngle"
+                onChange={handleEndAngleChange}
+                type="number"
+                value={endAngle.toString()}
+              />
 						</Grid>
 					</MyGridContainer>
 

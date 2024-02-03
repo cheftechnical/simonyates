@@ -1,12 +1,9 @@
-import { ForwardedRef, forwardRef } from "react";
+import { ChangeEvent, ForwardedRef, forwardRef } from "react";
 import { InputAdornment, TextField } from "@mui/material";
 import { ErrorOutline } from "@mui/icons-material";
-import { OutlinedInputProps } from "@mui/material/OutlinedInput";
-
-// import {InputProps as StandardInputProps} from '@material-ui/core/Input/Input';
 
 interface Props {
-  defaultValue?: any;
+  defaultValue?: string;
 
   disabled?: boolean;
 
@@ -40,7 +37,7 @@ interface Props {
    *
    * @param newValue
    */
-  onChange: (newValue: OutlinedInputProps) => void;
+  onChange: (newValue: ChangeEvent<HTMLInputElement>) => void;
 
   /**
    * Number of rows to display, requires that `multiline=true`

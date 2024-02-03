@@ -1,12 +1,10 @@
-// import * as React from 'react';
-import {memo, useState} from 'react';
-import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
-// import {Grid} from '@material-ui/core';
-import RotationVisualization from './RotationVisualization/RotationVisualization';
-import {CubicBezier} from '../../libs/CubicBezier';
-import {MyTextField2} from '../../../../styling/MyTextField2/MyTextField2';
-import {RotationMathJax} from './RotationMathJax/RotationMath';
-import {Grid} from "@mui/material";
+import { Grid } from "@mui/material";
+import { ChangeEvent, memo, useState } from "react";
+import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
+import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
+import { CubicBezier } from "../../libs/CubicBezier";
+import RotationMathJax from "./RotationMathJax";
+import RotationVisualization from "./RotationVisualization/RotationVisualization";
 
 const defaultCubicBezier: CubicBezier = {
   s: {
@@ -27,7 +25,7 @@ const defaultCubicBezier: CubicBezier = {
   }
 };
 
-export const RotationGridContainer = memo(function () {
+export const RotationGridContainer = memo(function() {
 
   // const [cubicBezier, setCubicBezier] = React.useState<CubicBezier>(defaultCubicBezier);
   const [theta, setTheta] = useState<number>(0);
@@ -36,24 +34,24 @@ export const RotationGridContainer = memo(function () {
     setTheta(newTheta);
   });
 
-  const handleThetaChange = ((event: any) => {
-    setTheta(event.target.value);
+  const handleThetaChange = ((event: ChangeEvent<HTMLInputElement>) => {
+    setTheta(parseFloat(event.target.value));
   });
 
   return (
     <div>
       <MyGridContainer>
         <Grid item xs={6}>
-          {/*<RotationVisualization onChange={handleRotationVisualizationChange}/>*/}
+          <RotationVisualization onChange={handleRotationVisualizationChange} />
         </Grid>
         <Grid item xs={6}>
-          {/*<MyTextField2*/}
-          {/*  label="Theta"*/}
-          {/*  name="theta"*/}
-          {/*  onChange={handleThetaChange}*/}
-          {/*  type="number"*/}
-          {/*  value={theta.toString()}*/}
-          {/*/>*/}
+          <MyTextField2
+            label="Theta"
+            name="theta"
+            onChange={handleThetaChange}
+            type="number"
+            value={theta.toString()}
+          />
 
           <RotationMathJax
             cubicBezier={defaultCubicBezier}
