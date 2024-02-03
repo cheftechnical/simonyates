@@ -3,6 +3,7 @@ import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 import { Suspense } from "react";
 import { LinearProgress } from "@mui/material";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export function Root() {
   return (
@@ -21,6 +22,7 @@ export function Root() {
         {/* <Footer/> */}
         {/* </footer> */}
         {/* </> */}
+        <SpeedInsights />
         <Analytics />
       </Suspense>
     </ThemeProviderWrapper>
