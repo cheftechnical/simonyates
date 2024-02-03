@@ -6,6 +6,7 @@ export interface Props {
    * Child components
    */
   children: ReactNode;
+
   /**
    * The title of the page as it appears in the <head><title>...</title></head>
    */
