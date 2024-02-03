@@ -2,11 +2,11 @@
  * Resources:
  * https://react-hook-form.com/get-started#IntegratingwithUIlibraries
  */
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { MessageFormValues } from "./MessageFormValues";
-import { MyTextField2 } from "../../styling/MyTextField2/MyTextField2";
 import SendIcon from "@mui/icons-material/Send";
 import { Button, styled } from "@mui/material";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { MyTextField2 } from "../../styling/MyTextField2/MyTextField2";
+import { MessageFormValues } from "./MessageFormValues";
 
 // @source https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 const regexEmailAddress = /\S+@\S+\.\S+/;
