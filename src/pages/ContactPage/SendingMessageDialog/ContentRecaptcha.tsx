@@ -1,13 +1,6 @@
 import ReCAPTCHA from "react-google-recaptcha";
 import { MessageFormValues } from "../MessageFormValues";
-import {
-  Box,
-  Button,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  styled,
-} from "@mui/material";
+import { Box, Button, DialogActions, DialogContent, DialogTitle, styled } from "@mui/material";
 import { useCallback, useMemo } from "react";
 import axios from "axios";
 
@@ -23,11 +16,11 @@ interface Props {
 }
 
 const StyledBox = styled(Box)(() => ({
-  width: 302,
+  width: 302
 }));
 
 const StyledDivRoot = styled("div")(() => ({
-  textAlign: "center",
+  textAlign: "center"
 }));
 
 export default function ContentRecaptcha(props: Props) {
@@ -40,13 +33,13 @@ export default function ContentRecaptcha(props: Props) {
       from: message?.emailAddress,
       name: message?.name,
       subject: message?.subject,
-      body: message?.body,
+      body: message?.body
     };
 
     axios
       .post(
         "https://5rygt2fs51.execute-api.us-east-1.amazonaws.com/default/simonyates-send-email",
-        payload,
+        payload
       )
       .then((response) => {
         console.log("response", response);
@@ -60,12 +53,10 @@ export default function ContentRecaptcha(props: Props) {
       });
   }, [message, onSuccess]);
 
-  const handleReCaptchaChange = useCallback(
-    (value: any) => {
-      console.log("value", value);
+  const handleReCaptchaChange = useCallback(() => {
       send();
     },
-    [send],
+    [send]
   );
 
   const debugButtons = useMemo(() => {

@@ -1,24 +1,13 @@
 import { useCallback, useState } from "react";
-import { color } from "../../styling/Color/Color";
+import { SubmitHandler } from "react-hook-form";
+import { Grid, styled, Typography } from "@mui/material";
+import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
+import color from "../../styling/Color";
 import ContactForm from "./ContactForm";
 import { MessageFormValues } from "./MessageFormValues";
 import SendingMessageDialog from "./SendingMessageDialog/SendingMessageDialog";
-import { Grid, styled, Typography } from "@mui/material";
-import PageWrapper from "../../components/PageWrapper";
-import { SubmitHandler } from "react-hook-form";
-
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	heading: {
-// 		marginBottom: themeMui.spacing(8/8)
-// 	},
-// 	body: {
-// 		marginBottom: themeMui.spacing(40/8),
-// 		color: color.grey['700']
-// 	}
-// }));
 
 const StyledTypographyBody = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(40 / 8),
@@ -30,8 +19,6 @@ const StyledTypographyHeading = styled(Typography)(({ theme }) => ({
 })) as typeof Typography;
 
 export default function Contact() {
-  // const classes = useStyles();
-
   const [isSending, setIsSending] = useState<boolean>(false);
   const [message, setMessage] = useState<MessageFormValues>();
 

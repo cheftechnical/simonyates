@@ -20,7 +20,7 @@ import GenworthCanadaPage from "./pages/workAt/GenworthCanadaPage/index.ts";
 import InfomartPage from "./pages/workAt/InfomartPage/index.ts";
 import JibDesignAndAdvertisingPage from "./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx";
 import { Root } from "./routes/Root.tsx";
-import { Contact } from "./routes/contact.tsx";
+import { Contact } from "./routes/Contact.tsx";
 
 const router = createBrowserRouter([
   {

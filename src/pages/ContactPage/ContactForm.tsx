@@ -37,8 +37,6 @@ export default function ContactForm(props: Props) {
           defaultValue=""
           name="name"
           render={({ field }) => {
-            // console.log('field', field);
-
             return (
               <MyTextField2
                 {...field}
