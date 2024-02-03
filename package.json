@@ -54,5 +54,8 @@
     "storybook": "^7.6.10",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
