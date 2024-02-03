@@ -1,12 +1,11 @@
-// @ts-ignore
-import MathJax from "mathjax3-react";
+import { MathJaxProvider } from "mathjax3-react";
 
 interface Props {
   children: any;
 }
 
-export default function MathJaxProviderWrapper(_props: Props) {
-  // const {children} = props;
+export function MathJaxProviderWrapper(props: Props) {
+  const {children} = props;
 
   // return (
   // 	<MathJax.Provider
@@ -28,8 +27,12 @@ export default function MathJaxProviderWrapper(_props: Props) {
   // )
 
   return (
-    <MathJax.Provider>
+    <MathJaxProvider>
       {/*<MathJax.Formula formula="$$\int x^2dx$$" />*/}
-    </MathJax.Provider>
+      {/*<MathJaxFormula formula="$$\int x^2dx$$"/>*/}
+      {children}
+    </MathJaxProvider>
   );
 }
+
+export default MathJaxProviderWrapper;

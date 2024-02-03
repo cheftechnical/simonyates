@@ -6482,6 +6482,13 @@ markdown-to-jsx@^7.1.8:
   resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-7.4.0.tgz#4606c5c549a6f6cb87604c35f5ee4f42959ffb6b"
   integrity sha512-zilc+MIkVVXPyTb4iIUTIz9yyqfcWjszGXnwF9K/aiBWcHXFcmdEMTkG01/oQhwSCH7SY1BnG6+ev5BzWmbPrg==
 
+mathjax3-react@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mathjax3-react/-/mathjax3-react-1.2.0.tgz#6e770ed2ebcc7a7551e88f0404193de14ab83429"
+  integrity sha512-1FLk0OiHEW4EdIRKIR9SgvjN/XtglnKgnNF/vF/bkkLypVkitFCTFDOneEl3cXU6fJebNI7AP0xE8ZQE5JhS1g==
+  dependencies:
+    simple-load-script "2.0.0"
+
 mdast-util-definitions@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz#c5c1a84db799173b4dcf7643cda999e440c24db2"
@@ -7795,6 +7802,11 @@ signal-exit@^4.0.1, signal-exit@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
+
+simple-load-script@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/simple-load-script/-/simple-load-script-2.0.0.tgz#e71cda185437e1042035a478f525eacaa4b5beeb"
+  integrity sha512-KYlKaZH7jW4pI5zHZxwFuERrYZZIIQDOOz+zgB70+Xt69EHoFJ4kkyyJk1PfpUvOHLRyz3PSwDAUEIlfRQKNow==
 
 sisteransi@^1.0.5:
   version "1.0.5"

@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import {Visualization} from '../../../libs/Visualization';
 import {BaseVisualization, } from '../../../libs/BaseVisualization';
-import {color} from '../../../../../styling/Color/Color';
+import color from "../../../../../styling/Color";
 import {degToRad, radToDeg} from '../../../libs/trig';
 
 export class CircleBasicsD3 extends BaseVisualization implements Visualization {
@@ -29,7 +29,6 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 
 	/**
 	 * Draw the chart
-	 * @param data
 	 */
 	drawChart() {
 		// Move (0,0) to the center of the svg element
@@ -75,7 +74,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 			.attr('stroke-width', 1)
 			.attr('stroke', color.grey['200']);
 
-		// Draw the axis ticks ticks
+		// Draw the axis ticks
 		const tickLength = 5;
 		for (let i = -10; i <= 10; i++) {
 			// X-Axis
@@ -269,7 +268,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 			const radians = Math.atan(opposite / adjacent);
 			const degrees = radToDeg(radians);
 
-			// THE FOLLOWING CRAPPY CODE WAS WRITTEN WHEN I WAS REALLY TIRED
+			// THE FOLLOWING CRAPPY CODE WAS WRITTEN WHEN I WAS EXHAUSTED
 			// I NEED TO FIX THIS DISASTER!
 
 			// If we are in negative territory, flip the values

@@ -1,12 +1,10 @@
-// import * as React from 'react';
-// import {withStyles} from '@material-ui/core';
-import {color} from '../../../../../styling/Color/Color';
+import color from "../../../../../styling/Color";
 import {AxisDirection} from '../AxisDirection';
 import {CircleBasicsD3} from './CircleBasicsD3';
 import {Component} from "react";
 
 interface Props {
-	classes: any;
+	// classes: any;
 	yAxisDirection: AxisDirection;
 	onChange: (angleDegrees: number) => void;
 	value: number;
@@ -32,7 +30,7 @@ class CircleBasicsVisualization extends Component<Props> {
 		this.state = {}
 
 		this.circleBasicsD3.onChange = (angleDegrees: number) => {
-			console.log('onChange [37]', angleDegrees);
+			// console.log('onChange [37]', angleDegrees);
 			this.props.onChange(angleDegrees);
 		};
 
@@ -43,8 +41,6 @@ class CircleBasicsVisualization extends Component<Props> {
 	 * When the component has mounted...
 	 */
 	componentDidMount() {
-		console.log('componentDidMount');
-		// this.drawChart(this.props.value);
 		this.circleBasicsD3.drawChart();
 	}
 
@@ -63,11 +59,22 @@ class CircleBasicsVisualization extends Component<Props> {
 	 * Render the component
 	 */
 	render() {
-		const {classes} = this.props;
+		// const {classes} = this.props;
 
-		return (
-			<div className={classes.root} id="sincos"/>
-		)
+		// return (
+		// 	<div className={classes.root} id="sincos"/>
+		// )
+
+    return (
+      <div id="sincos" style={{
+        backgroundColor: color.grey['50'],
+        fontSize: 0, // this is very important, otherwise you'll get a weird gap at the bottom,
+
+        '& .crisp': {
+          shapeRendering: 'crispEdges',
+        }
+      }}/>
+    )
 	}
 }
 
