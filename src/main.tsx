@@ -68,6 +68,10 @@ const router = createBrowserRouter([
         ],
       },
       {
+        path: "/trig",
+        element: <FigpieTrigonometry />
+      },
+      {
         path: "/page-not-found",
         element: <PageNotFound />,
       },
@@ -78,10 +82,6 @@ const router = createBrowserRouter([
       {
         path: "/international",
         element: <International />,
-      },
-      {
-        path: "/figpie-trigonometry",
-        element: <FigpieTrigonometry />,
       },
       {
         path: "/figpie",
