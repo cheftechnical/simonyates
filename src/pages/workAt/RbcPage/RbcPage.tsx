@@ -1,16 +1,14 @@
-import { useSections } from "../../../components/Sections/useSections";
 import WorkAtLogo from "../components/WorkAtLogo";
 import WorkAtTemplate from "../components/WorkAtTemplate";
 import Content from "./Content";
 import PageWrapper from "../../../components/PageWrapper";
+import { sections } from "./sections.tsx";
 
 export default function RbcPage() {
-  const [sections, handleSectionChange] = useSections();
-
   return (
     <PageWrapper title="Work at RBC">
       <WorkAtTemplate
-        content={<Content onChange={handleSectionChange} />}
+        content={<Content />}
         employer="RBC"
         logo={<WorkAtLogo brand="rbc" variant="default" />}
         role={

@@ -1,4 +1,3 @@
-import { SectionItem } from "../../../components/Sections/SectionItem";
 import Section from "../../../components/Section/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
@@ -7,28 +6,20 @@ import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
 import Quote from "../../../components/Quote/Quote";
 import Sections from "../../../components/Sections/Sections";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import { Typography } from "@mui/material";
+import { sections } from "./sections.ts";
 
-interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           Genworth Canada is the leading private sector supplier of mortgage
           default insurance in&nbsp;Canada.
         </WorkAtDescription>
       </Section>
 
-      <Section id="about-the-project" name="About the Project">
+      <Section id={sections.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
 
         <Typography component="p" variant="primaryBody">
@@ -68,7 +59,7 @@ export default function Content(props: Props) {
         </WorkAtProjects>
       </Section>
 
-      <Section id="recognition" name="Recognition">
+      <Section id={sections.recognition.id}>
         <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
 
         <Quote source="Michael Rossi, Product Manager, Genworth Canada">
@@ -80,3 +71,5 @@ export default function Content(props: Props) {
     </Sections>
   );
 }
+
+export default Content;

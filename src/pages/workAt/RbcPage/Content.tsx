@@ -12,32 +12,20 @@ import WorkAtEvent from "../components/WorkAtEvent";
 import WorkAtPublications from "../components/WorkAtPublications";
 import WorkAtPublication from "../components/WorkAtPublication";
 import Sections from "../../../components/Sections/Sections";
-import { SectionItem } from "../../../components/Sections/SectionItem";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import { Typography } from "@mui/material";
+import { sections } from "./sections.tsx";
 
-interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export default function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           The Royal Bank of Canada (RBC) is the largest bank in Canada by asset
           value, with over 80,000 employees&nbsp;worldwide.
         </WorkAtDescription>
       </Section>
 
-      <Section
-        id="application-development"
-        name="Application Development & Custom&nbsp;Tooling"
-      >
+      <Section id={sections.applicationDevelopment.id}>
         <WorkAtSectionTitle>
           Application Development &amp; Custom&nbsp;Tooling
         </WorkAtSectionTitle>
@@ -220,10 +208,7 @@ export default function Content(props: Props) {
         </WorkAtProjects>
       </Section>
 
-      <Section
-        id="machine-learning"
-        name="Machine Learning / Artificial&nbsp;Intelligence"
-      >
+      <Section id={sections.machineLearning.id}>
         <WorkAtSectionTitle>
           Machine Learning / Artificial Intelligence
         </WorkAtSectionTitle>
@@ -255,7 +240,7 @@ export default function Content(props: Props) {
         </Ul>
       </Section>
 
-      <Section id="budgeting" name="Budgeting">
+      <Section id={sections.budgeting.id}>
         <WorkAtSectionTitle>Budgeting</WorkAtSectionTitle>
 
         <WorkAtProjects>
@@ -298,7 +283,7 @@ export default function Content(props: Props) {
         </WorkAtProjects>
       </Section>
 
-      <Section id="events" name="Events">
+      <Section id={sections.events.id}>
         <WorkAtSectionTitle>Events</WorkAtSectionTitle>
 
         <Typography component="p" variant="primaryBody">
@@ -422,7 +407,7 @@ export default function Content(props: Props) {
         </WorkAtEvents>
       </Section>
 
-      <Section id="publications" name="Publications">
+      <Section id={sections.publications.id}>
         <WorkAtSectionTitle>Publications</WorkAtSectionTitle>
 
         <WorkAtPublications>
@@ -443,7 +428,7 @@ export default function Content(props: Props) {
         </WorkAtPublications>
       </Section>
 
-      <Section id="active-research" name="Active Research">
+      <Section id={sections.activeResearch.id}>
         <WorkAtSectionTitle>Active Research</WorkAtSectionTitle>
         <Ul>
           <Li>
@@ -453,7 +438,7 @@ export default function Content(props: Props) {
         </Ul>
       </Section>
 
-      <Section id="other-activities" name="Other Activities">
+      <Section id={sections.otherActivities.id}>
         <WorkAtSectionTitle>Other Activities</WorkAtSectionTitle>
 
         <Ul>

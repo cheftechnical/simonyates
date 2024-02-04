@@ -1,36 +1,18 @@
-import { SectionItem } from "../../../components/Sections/SectionItem";
-import Section from "../../../components/Section/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import Callout from "../../../components/Callout/Callout";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import WorkAtProject from "../components/WorkAtProject";
-import Sections from "../../../components/Sections/Sections";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import { styled, Typography } from "@mui/material";
-
-interface Props extends WorkAtContentProps {}
-
-// const useStyles = makeStyles((themeMui) => ({
-//   callout: {
-//     marginBottom: themeMui.spacing(20 / 8)
-//   }
-// }));
+import { sectionCollection } from "./sectionCollection.ts";
 
 const StyledCallout = styled(Callout)(({ theme }) => ({
   marginBottom: theme.spacing(20 / 8),
 }));
 
-export default function Content(props: Props) {
-  // const classes = useStyles();
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export default function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <div>
+      <div id={sectionCollection.intro.id}>
         <WorkAtDescription>
           Infomart was a division of Postmedia, the industry standard for
           Canadian newspaper&nbsp;archiving.
@@ -42,9 +24,9 @@ export default function Content(props: Props) {
           version was version&nbsp;~&nbsp;0.19–0.2.x
           {/*</Callout>*/}
         </StyledCallout>
-      </Section>
+      </div>
 
-      <Section id="about-the-project" name="About the Project">
+      <div id={sectionCollection.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
         <Typography component="p" variant="primaryBody">
           For the last 30 years, Infomart had collected over 200 million
@@ -92,7 +74,7 @@ export default function Content(props: Props) {
             "YouTube API",
           ]}
         />
-      </Section>
-    </Sections>
+      </div>
+    </div>
   );
 }

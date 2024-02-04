@@ -1,4 +1,3 @@
-import { SectionItem } from "../../../components/Sections/SectionItem";
 import Section from "../../../components/Section/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
@@ -12,21 +11,13 @@ import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
 import WorkAtEvent from "../components/WorkAtEvent";
 import Figure from "../../../components/Figure/Figure";
 import Sections from "../../../components/Sections/Sections";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import { Typography } from "@mui/material";
+import { sections } from "./sections.ts";
 
-interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export default function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           Mayo Clinic is an American nonprofit academic medical center based in
           Rochester, MN, focused on integrated patient care, education and
@@ -35,7 +26,7 @@ export default function Content(props: Props) {
         </WorkAtDescription>
       </Section>
 
-      <Section id="patient-like-mine" name="Patient Like Mine">
+      <Section id={sections.patientLikeMine.id}>
         <WorkAtSectionTitle>Patient Like Mine</WorkAtSectionTitle>
 
         <Typography component="p" variant="primaryBody">
@@ -83,7 +74,7 @@ export default function Content(props: Props) {
         </Ul>
       </Section>
 
-      <Section id="publications" name="Publications">
+      <Section id={sections.publications.id}>
         <WorkAtSectionTitle>Publications</WorkAtSectionTitle>
 
         <WorkAtPublications>
@@ -97,7 +88,7 @@ export default function Content(props: Props) {
         </WorkAtPublications>
       </Section>
 
-      <Section id="events" name="Events">
+      <Section id={sections.events.id}>
         <WorkAtSectionTitle>Events</WorkAtSectionTitle>
 
         <WorkAtEvents>
@@ -113,7 +104,7 @@ export default function Content(props: Props) {
         </WorkAtEvents>
       </Section>
 
-      <Section id="recognition" name="Recognition">
+      <Section id={sections.recognition.id}>
         <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
 
         <Figure

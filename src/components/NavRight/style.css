@@ -1,0 +1,16 @@
+html {
+    scroll-padding-top: 100px; /* height of your navbar */
+}
+
+.active-scroll-spy {
+    /*background-color: magenta;*/
+    /*border-radius: 15px;*/
+
+    color: #222222; /*color.grey['900'],*/
+    border-left: 2px solid #7E7E7E !important; /*`2px solid ${color.grey['500']}`*/
+}
+
+.active-scroll-spy a {
+    color: #222222;
+}
+

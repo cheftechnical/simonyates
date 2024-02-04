@@ -1,6 +1,4 @@
 import Sections from "../../../components/Sections";
-import { SectionItem } from "../../../components/Sections/SectionItem";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import Section from "../../../components/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
@@ -9,29 +7,21 @@ import { Typography } from "@mui/material";
 import Ul from "../../../styling/ListsUnordered/Ul";
 import Li from "../../../styling/ListsUnordered/Li";
 import Callout from "../../../components/Callout";
+import { sections } from "./sections.ts";
 
-export interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           TrueNorth is a platform for truckers to manage their fleet.
         </WorkAtDescription>
       </Section>
 
-      <Section id="team-leading" name="">
+      <Section id={sections.teamLeading.id}>
         <WorkAtSectionTitle>Team Leading</WorkAtSectionTitle>
 
         <WorkAtProjects>
-          {/*<WorkAtProject name="Scaling">*/}
           <Typography component="p" variant="primaryBody">
             <Ul>
               <Li>
@@ -62,18 +52,13 @@ export default function Content(props: Props) {
               <Li>Certified Scrum Master</Li>
             </Ul>
           </Typography>
-          {/*</WorkAtProject>*/}
         </WorkAtProjects>
       </Section>
 
-      <Section id="software-engineering" name="Software Engineering">
+      <Section id={sections.softwareEngineering.id}>
         <WorkAtSectionTitle>Software Engineering</WorkAtSectionTitle>
 
         <WorkAtProjects>
-          {/*<WorkAtProject name="Scaling">*/}
-          {/*<Typography component="p" variant="primaryBody">*/}
-          {/*</Typography>*/}
-
           <Callout
             list={[
               "Javascript",
@@ -82,10 +67,10 @@ export default function Content(props: Props) {
               "Typescript",
             ]}
           />
-
-          {/*</WorkAtProject>*/}
         </WorkAtProjects>
       </Section>
     </Sections>
   );
 }
+
+export default Content;

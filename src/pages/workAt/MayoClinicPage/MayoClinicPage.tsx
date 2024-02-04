@@ -1,16 +1,14 @@
 import WorkAtLogo from "../components/WorkAtLogo";
 import Content from "./Content";
 import WorkAtTemplate from "../components/WorkAtTemplate";
-import { useSections } from "../../../components/Sections/useSections";
 import PageWrapper from "../../../components/PageWrapper";
+import { sections } from "./sections.ts";
 
 export default function MayoClinicPage() {
-  const [sections, handleSectionChange] = useSections();
-
   return (
     <PageWrapper title="Work at Mayo Clinic">
       <WorkAtTemplate
-        content={<Content onChange={handleSectionChange} />}
+        content={<Content />}
         employer="Mayo Clinic"
         logo={<WorkAtLogo brand="mayo-clinic" variant="default" />}
         role="Software Engineer"

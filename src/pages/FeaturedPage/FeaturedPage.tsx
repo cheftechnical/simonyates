@@ -15,9 +15,10 @@ import color from "../../styling/Color";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import { useSections } from "../../components/Sections/useSections";
 import { Grid, styled, Typography } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
+import { sections } from "./sections.ts";
+import NavRight from "../../components/NavRight";
 
 // const useStyles = makeStyles(() => ({
 //   nextSection: {
@@ -38,30 +39,27 @@ import PageWrapper from "../../components/PageWrapper";
 const StyledLi = styled(Li)(() => ({
   color: color.grey["700"],
   "&:before": {
-    color: color.grey["500"],
-  },
+    color: color.grey["500"]
+  }
 }));
 
 const StyledNextSection = styled(Section)(() => ({
-  marginTop: rem(68),
+  marginTop: rem(68)
 }));
 
 const StyledTypography = styled(Typography)(() => ({
-  color: color.grey["700"],
+  color: color.grey["700"]
 })) as typeof Typography;
 
 export default function Featured() {
-  // const classes = useStyles();
-  const [_sections, handleSectionChange] = useSections();
-
   return (
     <PageWrapper title="Featured">
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
           <Grid item md={6} xs={12}>
-            <Sections onChange={handleSectionChange}>
-              <Section id="publications" name="Publications">
+            <Sections>
+              <Section id={sections.publications.id}>
                 <SectionTitle>Publications</SectionTitle>
 
                 <SectionDescription>
@@ -78,7 +76,7 @@ export default function Featured() {
                       "clinical decision support",
                       "real-time analytics",
                       "visual analytics",
-                      "data mining",
+                      "data mining"
                     ]}
                     when="2015"
                   >
@@ -98,7 +96,8 @@ export default function Featured() {
 
                     <br />
                     <br />
-                    <Download href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
+                    <Download
+                      href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
                   </FeaturedPublication>
 
                   <FeaturedPublication
@@ -128,7 +127,7 @@ export default function Featured() {
                 </FeaturedPublications>
               </Section>
 
-              <StyledNextSection id="events" name="Events">
+              <StyledNextSection id={sections.events.id}>
                 <SectionTitle>Events</SectionTitle>
 
                 {/*<SectionDescription>*/}
@@ -146,7 +145,7 @@ export default function Featured() {
                         "talk",
                         "workshop",
                         "machine learning",
-                        "anomaly detection",
+                        "anomaly detection"
                       ]}
                     />
 
@@ -185,7 +184,7 @@ export default function Featured() {
 
           {/* Navigation */}
           <Grid item md={3}>
-            {/* <NavRight sections={sections}/> */}
+            <NavRight sections={sections} />
           </Grid>
         </MyGridContainer>
       </MyContainer>

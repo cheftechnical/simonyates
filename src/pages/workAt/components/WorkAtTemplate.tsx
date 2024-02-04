@@ -1,13 +1,13 @@
 import { ReactElement, useMemo } from "react";
 import CenterVertically from "../../../components/CenterVertically/CenterVertically";
-// import NavRight from '../../../components/NavRight/NavRight';
-import { SectionItem } from "../../../components/Sections/SectionItem";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import WorkAtEmployer from "./WorkAtEmployer";
 import WorkAtRole from "./WorkAtRole";
 import WorkAtWhenWhere from "./WorkAtWhenWhere";
 import { Box, Grid, Hidden } from "@mui/material";
+import { Sections } from "../../../types/Sections.ts";
+import NavRight from "../../../components/NavRight";
 
 interface Props {
   /**
@@ -29,7 +29,7 @@ interface Props {
   /**
    * A collection of sections
    */
-  sections?: SectionItem[];
+  sections?: Sections;
   /**
    * When I worked here
    */
@@ -50,7 +50,15 @@ interface Props {
 export default function WorkAtTemplate(props: Props) {
   // const classes = useStyles();
   // const {content, employer, logo, role, sections, when, where} = props;
-  const { content, employer, logo, role, when, where } = props;
+  const {
+    content,
+    employer,
+    logo,
+    role,
+    sections,
+    when,
+    where
+  } = props;
 
   const renderedWorkAtEmployer = useMemo(() => {
     return <WorkAtEmployer employer={employer} />;
@@ -101,7 +109,7 @@ export default function WorkAtTemplate(props: Props) {
 
           {/* Navigation */}
           <Grid item md={3}>
-            {/* <NavRight sections={sections}/> */}
+            <NavRight sections={sections} />
           </Grid>
         </Hidden>
       </MyGridContainer>

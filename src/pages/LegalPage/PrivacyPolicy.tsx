@@ -7,9 +7,18 @@ const tradeName = "Sybaris";
 const domainName = "simonyates.ca";
 const address = "";
 
-export default function PrivacyPolicy() {
+export type PrivacyPolicyProps = {
+  /**
+   * The root ID
+   */
+  id: string;
+}
+
+export function PrivacyPolicy(props: PrivacyPolicyProps) {
+  const { id } = props;
+
   return (
-    <div>
+    <div id={id}>
       <Typography component="h1" variant="primaryH2">
         Privacy Policy
       </Typography>
@@ -259,3 +268,5 @@ export default function PrivacyPolicy() {
     </div>
   );
 }
+
+export default PrivacyPolicy;

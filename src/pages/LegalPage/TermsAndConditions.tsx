@@ -5,9 +5,18 @@ const legalName = "Sybaris Analytics Corporation";
 const tradeName = "Sybaris";
 const address = "";
 
-export default function TermsAndConditions() {
+export type TermsAndConditionsProps = {
+  /**
+   * The root ID
+   */
+  id: string;
+}
+
+export function TermsAndConditions(props: TermsAndConditionsProps) {
+  const { id } = props;
+
   return (
-    <div>
+    <div id={id}>
       <Typography component="h2" variant="primaryH2">
         Terms of Service
       </Typography>
@@ -270,3 +279,5 @@ export default function TermsAndConditions() {
     </div>
   );
 }
+
+export default TermsAndConditions;

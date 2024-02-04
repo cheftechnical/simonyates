@@ -1,16 +1,14 @@
 import WorkAtLogo from "../components/WorkAtLogo";
 import Content from "./Content";
 import WorkAtTemplate from "../components/WorkAtTemplate";
-import { useSections } from "../../../components/Sections/useSections";
 import PageWrapper from "../../../components/PageWrapper";
+import { sections } from "./sections.ts";
 
-export default function JibDesignAndAdvertisingPage() {
-  const [sections, handleSectionChange] = useSections();
-
+export function JibDesignAndAdvertisingPage() {
   return (
     <PageWrapper title="Work at Jib Design &amp; Advertising">
       <WorkAtTemplate
-        content={<Content onChange={handleSectionChange} />}
+        content={<Content />}
         employer="Jib Design & Advertising"
         logo={
           <WorkAtLogo brand="jib-design-and-advertising" variant="default" />
@@ -23,3 +21,5 @@ export default function JibDesignAndAdvertisingPage() {
     </PageWrapper>
   );
 }
+
+export default JibDesignAndAdvertisingPage;

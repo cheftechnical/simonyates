@@ -1,4 +1,3 @@
-import { SectionItem } from "../../../components/Sections/SectionItem";
 import Section from "../../../components/Section/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
@@ -6,28 +5,20 @@ import WorkAtProjects from "../components/WorkAtProjects";
 import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
 import Quote from "../../../components/Quote/Quote";
-import Sections from "../../../components/Sections/Sections";
-import { WorkAtContentProps } from "../WorkAtContentProps";
 import { Typography } from "@mui/material";
+import { sections } from "./sections.ts";
+import Sections from "../../../components/Sections";
 
-interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           Design &amp; advertising agency in&nbsp;Toronto.
         </WorkAtDescription>
       </Section>
 
-      <Section id="notable-projects" name="Notable Projects">
+      <Section id={sections.notableProjects.id}>
         <WorkAtSectionTitle>Notable Projects</WorkAtSectionTitle>
         <WorkAtProjects>
           <WorkAtProject name="Apple Canada Introduces iPhone" when="">
@@ -92,12 +83,12 @@ export default function Content(props: Props) {
             "Javascript + jQuery",
             "HTML + CSS",
             "MySQL",
-            "Moneris",
+            "Moneris"
           ]}
         />
       </Section>
 
-      <Section id="recognition" name="Recognition">
+      <Section id={sections.recognition.id}>
         <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
 
         <Quote source="Alain Brisard, Web Communications Producer, Apple Canada Inc.">
@@ -114,3 +105,5 @@ export default function Content(props: Props) {
     </Sections>
   );
 }
+
+export default Content;

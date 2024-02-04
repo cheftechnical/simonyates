@@ -1,4 +1,3 @@
-import { SectionItem } from "../../../components/Sections/SectionItem";
 import Section from "../../../components/Section/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import Callout from "../../../components/Callout/Callout";
@@ -8,20 +7,12 @@ import WorkAtProject from "../components/WorkAtProject";
 import Ul from "../../../styling/ListsUnordered/Ul/Ul";
 import Li from "../../../styling/ListsUnordered/Li/Li";
 import Sections from "../../../components/Sections/Sections";
-import { WorkAtContentProps } from "../WorkAtContentProps";
+import { sections } from "./sections.ts";
 
-interface Props extends WorkAtContentProps {}
-
-export default function Content(props: Props) {
-  const { onChange } = props;
-
-  const handleChange = (newValues: SectionItem[]) => {
-    if (onChange) onChange(newValues);
-  };
-
+export default function Content() {
   return (
-    <Sections onChange={handleChange}>
-      <Section id="intro" name="Intro">
+    <Sections>
+      <Section id={sections.intro.id}>
         <WorkAtDescription>
           Uncharted Software is a data visualization company with products used
           by government, law enforcement, financial&nbsp;industries.
@@ -33,7 +24,7 @@ export default function Content(props: Props) {
         </Callout>
       </Section>
 
-      <Section id="projects" name="Projects">
+      <Section id={sections.projects.id}>
         <WorkAtSectionTitle>Projects</WorkAtSectionTitle>
 
         <WorkAtProjects>

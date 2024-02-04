@@ -1,46 +1,22 @@
-import { useEffect, useState } from "react";
-import { SectionItem } from "./SectionItem";
+import { ReactNode, useRef } from "react";
+import ScrollSpy from "react-ui-scrollspy";
 
-export interface Props {
-  /**
-   * The content of the callout.
-   */
-  children?: any[] | any;
-  /**
-   * Callback fired when the list of sectionItems changes
-   *
-   * @param sectionItems
-   */
-  onChange: (sectionItems: SectionItem[]) => void;
+export type SectionsProps = {
+  children: ReactNode;
+};
+
+export function Sections(props: SectionsProps) {
+  const { children } = props;
+
+  const parentScrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  return (
+    <div ref={parentScrollContainerRef}>
+      <ScrollSpy activeClass="active-scroll-spy">
+        {children}
+      </ScrollSpy>
+    </div>
+  );
 }
 
-export default function Sections(props: Props) {
-  const { children, onChange } = props;
-
-  const [initialized, setInitialized] = useState(false);
-
-  useEffect(() => {
-    if (initialized) return;
-    setInitialized(true);
-
-    if (Array.isArray(children)) {
-      const sectionItems = children.map((item: any) => {
-        return {
-          id: item.props.id,
-          name: item.props.name,
-        };
-      });
-
-      onChange(sectionItems);
-    } else {
-      const sectionItem = {
-        id: children.props.id,
-        name: children.props.name,
-      };
-
-      onChange([sectionItem]);
-    }
-  }, [children, initialized, onChange]);
-
-  return <>{children}</>;
-}
+export default Sections;
