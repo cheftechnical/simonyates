@@ -21,6 +21,7 @@ import InfomartPage from "./pages/workAt/InfomartPage/index.ts";
 import JibDesignAndAdvertisingPage from "./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx";
 import { Root } from "./routes/Root.tsx";
 import { Contact } from "./routes/Contact.tsx";
+import { Webdev } from "./routes/Webdev.tsx";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: "/page-not-found",
         element: <PageNotFound />,
+      },
+      {
+        path: "/notes/webdev",
+        element: <Webdev />
       },
       {
         path: "/legal",
