@@ -1,9 +1,9 @@
-import DefaultLayout from "../layouts/DefaultLayout";
-import PageWrapper from "../components/PageWrapper";
-import MyContainer from "../styling/MyContainer";
 import { Link, Typography } from "@mui/material";
-import Ul from "../styling/ListsUnordered/Ul";
+import PageWrapper from "../components/PageWrapper";
+import DefaultLayout from "../layouts/DefaultLayout";
+import MyContainer from "../styling/MyContainer";
 import Li from "../styling/ListsUnordered/Li";
+import Ul from "../styling/ListsUnordered/Ul";
 
 export const Webdev = () => {
   return (
