@@ -22,6 +22,7 @@ import JibDesignAndAdvertisingPage from "./pages/workAt/JibDesignAndAdvertisingP
 import { Root } from "./routes/Root.tsx";
 import { Contact } from "./routes/Contact.tsx";
 import { Webdev } from "./routes/Webdev.tsx";
+import Code from "./routes/Code.tsx";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "/trig",
         element: <FigpieTrigonometry />
+      },
+      {
+        path: "/code",
+        element: <Code />
       },
       {
         path: "/page-not-found",
