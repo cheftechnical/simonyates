@@ -23,6 +23,7 @@ import { Root } from "./routes/Root.tsx";
 import { Contact } from "./routes/Contact.tsx";
 import { Webdev } from "./routes/Webdev.tsx";
 import Code from "./routes/Code.tsx";
+import FlexboxPage from "./pages/CodePage/FlexboxPage/FlexboxPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -75,7 +76,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/code",
-        element: <Code />
+        element: <Code />,
+        children: [
+          {
+            path: '/code/flexbox',
+            element: <FlexboxPage />
+          }
+        ]
       },
       {
         path: "/page-not-found",
