@@ -1,6 +1,4 @@
 import { ReactNode, useMemo } from "react";
-import { color } from "../../styling/Color/Color";
-import { styled, Typography } from "@mui/material";
 
 export interface Props {
   /**
@@ -30,27 +28,11 @@ const defaultProps = {
   variant: "default",
 };
 
-const StyledDivRoot = styled("div")(({ theme }) => ({
-  marginTop: theme.spacing(24 / 8),
-  marginBottom: theme.spacing(24 / 8),
-  padding: theme.spacing(8 / 8),
-  backgroundColor: color.limeWithOpacity["500"]["10%"],
-  textAlign: "center",
-}));
-
 interface DelimiterProps {
   index: number;
   length: number;
 }
 
-/**
- * This Delimiter component will add a bullet between items.
- *
- * The component defends against orphans.
- *
- * @param props
- * @constructor
- */
 function Delimiter(props: DelimiterProps) {
   const { index, length } = props;
 
@@ -68,15 +50,8 @@ function Delimiter(props: DelimiterProps) {
   return <span> &bull; </span>;
 }
 
-/**
- * Main callout component
- *
- * @param props
- * @constructor
- */
 export default function Callout(props: Props) {
-  // const classes = useStyles();
-  const { children, list, noBottomGutter, variant } = {
+  const { children, className, list, noBottomGutter, variant } = {
     ...defaultProps,
     ...props,
   };
@@ -92,16 +67,25 @@ export default function Callout(props: Props) {
     ));
   }, [children, list]);
 
+  const isAlert = variant === "alert";
+
+  const rootClasses = [
+    "antialiased",
+    // "min-h-16", // 64px (disabled to match observed measurement)
+    "p-2", // 8px
+    noBottomGutter ? "mt-6 mb-0" : "my-6", // 24px top/bottom
+    "text-center",
+    isAlert ? "bg-red-50" : "bg-lime-50",
+    className || "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const textClass = isAlert ? "text-red-500" : "text-gray-700";
+
   return (
-    <StyledDivRoot sx={{ marginBottom: noBottomGutter ? 0 : "" }}>
-      <Typography
-        sx={{
-          color: variant === "alert" ? color.red["400"] : color.grey["700"],
-        }}
-        variant="secondaryBody"
-      >
-        {content}
-      </Typography>
-    </StyledDivRoot>
+    <div className={rootClasses}>
+      <p className={`text-base leading-6 ${textClass}`}>{content}</p>
+    </div>
   );
 }
