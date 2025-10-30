@@ -1,72 +1,63 @@
-// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-// import {Button} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
-// import classNames from 'classnames';
-
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-//   root: {
-//     marginTop: themeMui.spacing(24 / 8)
-//   },
-//   next: {
-//     marginTop: themeMui.spacing(0 / 8),
-//   }
-// }));
-
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import { Button, styled } from "@mui/material";
 import { useCallback } from "react";
 
 interface Props {
   /**
-   * The URI of of the resource to be downloaded
+   * The URI of the resource to be downloaded.
    */
   href: string;
   /**
-   * The label of the link
+   * The label of the link. Defaults to "Download".
    */
   label?: string;
   /**
-   * If `true`, additional top padding is applied. This should be used when multiple instances of the same component
+   * If `true`, no top margin is applied. This should be used when multiple instances of the same component
    * are used in series.
    */
   next?: boolean;
 }
 
-const defaultProps: Props = {
+const defaultProps: Partial<Props> = {
   label: "Download",
-  href: "",
 };
 
-const StyledButton = styled(Button)(() => ({
-  // default
-}));
-
-const StyledButtonNext = styled(StyledButton)(({ theme }) => ({
-  marginTop: theme.spacing(0 / 8),
-}));
-
 export default function Download(props: Props) {
-  // const classes = useStyles();
   const { href, label, next } = { ...defaultProps, ...props };
 
-  const handleOnClick = useCallback(() => {
-    const link = document.createElement("a");
-    link.download = label ? label : "";
-    link.href = href;
-    link.target = "_blank";
-    link.click();
-  }, [href, label]);
-
-  const MyStyledButton = next ? StyledButtonNext : StyledButton;
+  const handleOnClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const link = document.createElement("a");
+      link.download = label ? label : "";
+      link.href = href;
+      link.target = "_blank";
+      link.click();
+    },
+    [href, label]
+  );
 
   return (
-    <MyStyledButton
-      endIcon={<ArrowRightIcon />}
-      onClick={handleOnClick}
-      variant="text"
-    >
-      {label}
-    </MyStyledButton>
+    <div className={next ? "" : "mt-8"}>
+      <a
+        className="inline-flex items-center font-normal text-sm leading-4 tracking-[1.25px] uppercase text-gray-900 pb-1.5 border-b-2 border-white hover:border-gray-900 transition-colors"
+        href={href}
+        onClick={handleOnClick}
+      >
+        {label}
+        <svg
+          className="ml-1 h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 18l6-6-6-6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
   );
 }
