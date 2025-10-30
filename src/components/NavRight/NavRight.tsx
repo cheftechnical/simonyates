@@ -69,15 +69,7 @@ export function NavRight(props: NavRightProps) {
       >
 
         {Object.entries(sections).map(([key, value]) => (
-          <>
-            {/*// <li key={key} data-to-scrollspy-id={value.id}>*/}
-            {/*<a onClick={(e) => onPress(e)} href={`#${value.id}`}>*/}
-            {/*<a href={`#${value.id}`}>*/}
-            {/*  <p data-to-scrollspy-id={value.id}>{value.title}</p>*/}
-            {/*</a>*/}
-            <NavRightItem key={key} section={value} />
-            {/*</li>*/}
-          </>
+          <NavRightItem key={key} section={value} />
         ))}
 
       </ul>
