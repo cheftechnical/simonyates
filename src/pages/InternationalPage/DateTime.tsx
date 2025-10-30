@@ -1,4 +1,4 @@
-import { format, utcToZonedTime } from "date-fns-tz";
+import { format, toZonedTime } from "date-fns-tz";
 import { Box, Typography } from "@mui/material";
 
 export interface Props {
@@ -9,7 +9,7 @@ export interface Props {
 export function DateTime(props: Props) {
   const { now, timeZone } = props;
 
-  const zonedDate = utcToZonedTime(now, timeZone);
+  const zonedDate = toZonedTime(now, timeZone);
 
   return (
     <Box textAlign="center">
