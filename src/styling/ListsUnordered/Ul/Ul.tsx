@@ -1,33 +1,18 @@
-import { styled } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
-  children: any;
-  next?: boolean | undefined;
+  /**
+   * The list items to be displayed.
+   */
+  children: ReactNode;
+  /**
+   * If `true`, applies top padding to the list.
+   */
+  next?: boolean;
 }
 
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {},
-// 	rootNext: {
-// 		paddingTop: themeMui.spacing(24 / 8)
-// 	}
-// }));
-
-const StyledUl = styled("ul")(() => ({}));
-
-const StyledUlNext = styled(StyledUl)(({ theme }) => ({
-  paddingTop: theme.spacing(24 / 8),
-}));
-
 export default function Ul(props: Props) {
-  // const classes = useStyles();
   const { children, next } = props;
 
-  // const rootClassName = (next)
-  // 	? `${classes.root} ${classes.rootNext}`
-  // 	: classes.root;
-  //
-
-  const MyStyledUl = next ? StyledUlNext : StyledUl;
-
-  return <MyStyledUl>{children}</MyStyledUl>;
+  return <ul className={next ? "pt-6" : ""}>{children}</ul>;
 }
