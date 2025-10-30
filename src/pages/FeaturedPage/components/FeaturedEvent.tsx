@@ -1,69 +1,43 @@
-import { color } from "../../../styling/Color/Color";
-import { styled, Typography } from "@mui/material";
+import { ReactNode } from "react";
+import EventTitle from "./EventTitle";
+import EventHost from "./EventHost";
+import EventWhen from "./EventWhen";
 
 interface Props {
-  children?: any;
+  /**
+   * The event content/description.
+   */
+  children?: ReactNode;
+  /**
+   * The event host name.
+   */
   host: string;
+  /**
+   * Whether this is the next event (adds top padding).
+   */
   next?: boolean;
+  /**
+   * When the event occurred.
+   */
   when: string;
+  /**
+   * The event title.
+   */
   title: string;
 }
 
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {
-//
-// 	},
-// 	rootNext: {
-// 		paddingTop: themeMui.spacing(40 / 8)
-// 	},
-// 	host: {
-// 		paddingTop: themeMui.spacing(16 / 8),
-// 		color: color.grey['600']
-// 	},
-// 	when: {
-// 		color: color.grey['600']
-// 	}
-// }));
-
-const StyledDivRoot = styled("div")(() => ({
-  // default
-}));
-
-const StyledDivRootNext = styled(StyledDivRoot)(({ theme }) => ({
-  paddingTop: theme.spacing(40 / 8),
-}));
-
-const StyledTypographyHost = styled(Typography)(({ theme }) => ({
-  paddingTop: theme.spacing(16 / 8),
-  color: color.grey["600"],
-})) as typeof Typography;
-
-const StyledTypographyWhen = styled(Typography)(() => ({
-  color: color.grey["600"],
-})) as typeof Typography;
-
 export default function FeaturedEvent(props: Props) {
-  // const classes = useStyles();
   const { children, host, next, title, when } = props;
 
-  const MyStyledDivRoot = next ? StyledDivRoot : StyledDivRootNext;
-
   return (
-    <MyStyledDivRoot>
-      <Typography component="h3" variant="primaryH4Semibold">
-        {title}
-      </Typography>
+    <div className={next ? "pt-[40px]" : ""}>
+      <EventTitle>{title}</EventTitle>
 
-      <StyledTypographyHost component="p" variant="primaryBody">
-        {host}
-      </StyledTypographyHost>
+      <EventHost>{host}</EventHost>
 
-      <StyledTypographyWhen component="p" variant="primaryBody">
-        {when}
-      </StyledTypographyWhen>
+      <EventWhen>{when}</EventWhen>
 
       <div>{children}</div>
-    </MyStyledDivRoot>
+    </div>
   );
 }
