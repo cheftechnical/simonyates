@@ -54,6 +54,7 @@
     "@typescript-eslint/parser": "^8.46.2",
     "@vitejs/plugin-react-swc": "^4.2.0",
     "eslint": "^9.38.0",
+    "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-storybook": "^10.0.2",
