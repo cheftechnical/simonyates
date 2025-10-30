@@ -15,10 +15,11 @@ import color from "../../styling/Color";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import { Grid, styled, Typography } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import { sections } from "./sections.ts";
 import NavRight from "../../components/NavRight";
+import FeaturedAbstract from "./components/FeaturedAbstract";
 
 // const useStyles = makeStyles(() => ({
 //   nextSection: {
@@ -47,9 +48,6 @@ const StyledNextSection = styled(Section)(() => ({
   marginTop: rem(68)
 }));
 
-const StyledTypography = styled(Typography)(() => ({
-  color: color.grey["700"]
-})) as typeof Typography;
 
 export default function Featured() {
   return (
@@ -80,7 +78,7 @@ export default function Featured() {
                     ]}
                     when="2015"
                   >
-                    <StyledTypography variant="primaryBody">
+                    <FeaturedAbstract>
                       Abstract &mdash; We developed a real-time, visual
                       analytics tool for clinical decision support. The system
                       expands the &ldquo;recall of past experience&rdquo;
@@ -92,7 +90,7 @@ export default function Featured() {
                       &ldquo;what-if&rdquo; scenarios, and to collect these
                       evidence-based cohorts for future statistical validation
                       and pattern&nbsp;mining.
-                    </StyledTypography>
+                    </FeaturedAbstract>
 
                     <br />
                     <br />
