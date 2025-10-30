@@ -61,4 +61,17 @@
     color: var(--color-gray-800);
     font-size: 20px;
   }
+
+  /* Featured list item bullet styling (gray-500) */
+  .list-item-featured-bullet::before {
+    content: "\2022"; /* bullet character */
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -27px;
+    top: -4px;
+    color: var(--color-gray-500);
+    font-size: 20px;
+  }
 }

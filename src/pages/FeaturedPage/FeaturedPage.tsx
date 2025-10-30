@@ -3,7 +3,7 @@ import Sections from "../../components/Sections/Sections";
 import Section from "../../components/Section/Section";
 // import NavRight from '../../components/NavRight/NavRight';
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import Li from "../../styling/ListsUnordered/Li/Li";
+import FeaturedLi from "./components/FeaturedLi";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
 import Download from "./Download";
@@ -11,7 +11,6 @@ import rem from "../../styling/rem";
 import FeaturedEvent from "./components/FeaturedEvent";
 import FeaturedEvents from "./components/FeaturedEvents";
 import FeaturedPublications from "./components/FeaturedPublications";
-import color from "../../styling/Color";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
@@ -20,29 +19,6 @@ import PageWrapper from "../../components/PageWrapper";
 import { sections } from "./sections.ts";
 import NavRight from "../../components/NavRight";
 import FeaturedAbstract from "./components/FeaturedAbstract";
-
-// const useStyles = makeStyles(() => ({
-//   nextSection: {
-//     marginTop: rem(68),
-//   },
-//   li: {
-//     color: color.grey['700'],
-//
-//     '&:before': {
-//       color: color.grey['500']
-//     }
-//   },
-//   typography: {
-//     color: color.grey['700']
-//   }
-// }));
-
-const StyledLi = styled(Li)(() => ({
-  color: color.grey["700"],
-  "&:before": {
-    color: color.grey["500"]
-  }
-}));
 
 const StyledNextSection = styled(Section)(() => ({
   marginTop: rem(68)
@@ -106,20 +82,20 @@ export default function Featured() {
                     when="June 11, 2020"
                   >
                     <Ul>
-                      <StyledLi>
+                      <FeaturedLi>
                         Interactive dashboards for
                         monitoring&nbsp;infrastructure
-                      </StyledLi>
-                      <StyledLi>
+                      </FeaturedLi>
+                      <FeaturedLi>
                         A live–view monitor shows the status of hundreds of
                         servers in real–time that became an essential tool for
                         Apigee&nbsp;upgrades
-                      </StyledLi>
-                      <StyledLi>
+                      </FeaturedLi>
+                      <FeaturedLi>
                         Real–time monitoring of critical infrastructure to
                         enable the SRE team to monitor SLAs for 99.999%
                         (five–nines)&nbsp;availability
-                      </StyledLi>
+                      </FeaturedLi>
                     </Ul>
                   </FeaturedPublication>
                 </FeaturedPublications>
@@ -148,10 +124,10 @@ export default function Featured() {
                     />
 
                     <Ul>
-                      <StyledLi>
+                      <FeaturedLi>
                         Talk + Workshop with step-by-step guide&nbsp;handout
-                      </StyledLi>
-                      <StyledLi>Demo booth featuring our&nbsp;chatbot</StyledLi>
+                      </FeaturedLi>
+                      <FeaturedLi>Demo booth featuring our&nbsp;chatbot</FeaturedLi>
                     </Ul>
                   </FeaturedEvent>
 
