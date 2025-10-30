@@ -37,7 +37,9 @@
   },
   "resolutions": {
     "form-data": "^4.0.0",
-    "braces": "^3.0.3"
+    "braces": "^3.0.3",
+    "@types/react": "18.3.7",
+    "@types/react-dom": "18.3.7"
   },
   "devDependencies": {
     "@storybook/react": "10.0.2",
@@ -45,8 +47,8 @@
     "@storybook/addon-links": "10.0.2",
     "storybook": "10.0.2",
     "@types/d3": "7",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
+    "@types/react": "18.3.7",
+    "@types/react-dom": "18.3.7",
     "@types/react-google-recaptcha": "^2.1.9",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",

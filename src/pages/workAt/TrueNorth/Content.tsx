@@ -3,7 +3,6 @@ import Section from "../../../components/Section";
 import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import WorkAtProjects from "../components/WorkAtProjects";
-import { Typography } from "@mui/material";
 import Ul from "../../../styling/ListsUnordered/Ul";
 import Li from "../../../styling/ListsUnordered/Li";
 import Callout from "../../../components/Callout";
