@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 import Quote, { Props } from "./Quote";
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: Quote,
 };
 
-const Template: Story<Props> = (args: Props) => <Quote {...args} />;
+const Template: StoryFn<Props> = (args: Props) => <Quote {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

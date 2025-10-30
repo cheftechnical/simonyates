@@ -1,4 +1,4 @@
-import { Story } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 import Callout, { Props } from "./Callout";
 
 export default {
@@ -10,7 +10,7 @@ const loremIpsumString =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra volutpat phasellus dictum eu proin. Sed lorem.";
 const loremIpsumArray = ["lorem", "ipsum", "dolor", "sit", "amet"];
 
-const Template: Story<Props> = (args: Props) => <Callout {...args} />;
+const Template: StoryFn<Props> = (args: Props) => <Callout {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
