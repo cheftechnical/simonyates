@@ -22,36 +22,28 @@ export function Content() {
         <WorkAtSectionTitle>Team Leading</WorkAtSectionTitle>
 
         <WorkAtProjects>
-          <Typography component="p" variant="primaryBody">
-            <Ul>
-              <Li>
-                Led growth of frontend engineering, scaling from 2 to 12
-                engineers across 4 teams
-              </Li>
-              <Li>
-                Developed hiring process and technical challenge for frontend
-                engineering roles
-              </Li>
-              <Li>
-                Collaborated closely with design and product teams to ensure
-                quality and accessibility
-              </Li>
-              <Li>
-                Architectured a more maintainable, scalable, and testable
-                frontend version
-              </Li>
-              <Li>
-                Procured third-party vendor solutions, documented processes, and
-                integration strategies
-              </Li>
-              <Li>
-                Conducted regular mentoring sessions in semi-month frontend
-                guilds
-              </Li>
-              <Li>Managed remote team of engineers based in South America</Li>
-              <Li>Certified Scrum Master</Li>
-            </Ul>
-          </Typography>
+          <Ul>
+            <Li>
+              Led growth of frontend engineering, scaling from 2 to 12 engineers across 4 teams
+            </Li>
+            <Li>
+              Developed hiring process and technical challenge for frontend engineering roles
+            </Li>
+            <Li>
+              Collaborated closely with design and product teams to ensure quality and accessibility
+            </Li>
+            <Li>
+              Architectured a more maintainable, scalable, and testable frontend version
+            </Li>
+            <Li>
+              Procured third-party vendor solutions, documented processes, and integration strategies
+            </Li>
+            <Li>
+              Conducted regular mentoring sessions in semi-month frontend guilds
+            </Li>
+            <Li>Managed remote team of engineers based in South America</Li>
+            <Li>Certified Scrum Master</Li>
+          </Ul>
         </WorkAtProjects>
       </Section>
 
