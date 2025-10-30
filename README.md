@@ -1,33 +1,64 @@
-# React + TypeScript + Vite
+# Simon Yates – Personal Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite project for my resume/portfolio site.
 
-Currently, two official plugins are available:
+## Requirements
+- Node.js 22 (enforced via `.nvmrc` and `"engines"`)
+  - Use nvm: `nvm install 22 && nvm use 22`
+- Yarn v1
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Install / Run
+```bash
+# install deps
+yarn install --check-files
 
-## Expanding the ESLint configuration
+# dev server
+yarn dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# typecheck + production build
+yarn build
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+# preview the production build
+yarn preview
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Storybook (minimal, v10 core)
+This repo uses a minimal Storybook 10 setup (core + links), primarily for ad‑hoc component review.
+```bash
+yarn storybook
+```
+Notes:
+- Stories are excluded from production typecheck/build.
+- Some older stories may still need v10 API cleanups; not required for prod builds.
 
-February 1, 2024
-October 30, 2025 — Start using Cursor AI
+## CI
+GitHub Actions runs on pushes/PRs:
+- Install (cached)
+- Typecheck (`tsc --noEmit`)
+- Production build (`vite build`)
+
+## Linting and Formatting
+- ESLint with `eslint-plugin-perfectionist` enforces:
+  - Sorted imports/named imports
+  - Alphabetized object keys and destructured properties (matches personal style)
+- Run:
+```bash
+yarn lint
+```
+
+## Performance
+- Vite vendor code‑splitting (`react`, `router`, `mui`, `d3`, `date-fns`)
+- Route‑level code splitting via `React.lazy` + `Suspense` in `Root`
+
+## Security hygiene
+- Resolutions to pin safe versions for transitive deps:
+  - `form-data@^4`
+  - `braces@^3.0.3`
+
+## Tech notes
+- React pinned to 18.x to align with MUI 5 (temporary). Tailwind migration planned.
+- Node 22 on Vercel; local dev also uses Node 22.
+
+## Changelog
+- 2025‑10‑30: Node 22 upgrade, dependency updates, Storybook v10 minimal, CI added, lint rules, vendor/route splitting.
+- 2024‑02‑01: Initial notes.
