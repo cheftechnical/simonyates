@@ -12,6 +12,9 @@
     "build-storybook": "storybook build",
     "start": "tsc && vite build"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
