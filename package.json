@@ -57,7 +57,6 @@
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "eslint-plugin-storybook": "^10.0.2",
     "prettier": "3.6.2",
     "typescript": "^5.9.3",
     "vite": "^7.1.12"
