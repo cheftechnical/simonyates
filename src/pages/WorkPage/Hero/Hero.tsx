@@ -1,17 +1,15 @@
-import { Hidden, Typography } from "@mui/material";
-
 export default function Hero() {
   return (
-    <Typography component="h1" variant="primaryH2">
-      <Hidden only={[/*'xs',*/ "sm", "md", "lg", "xl"]}>
+    <h1 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
+      <span className="block sm:hidden">
         Here is a glimpse of my life, mostly as a&nbsp;programmer.
-      </Hidden>
+      </span>
 
-      <Hidden only={["xs" /*'sm', 'md','lg', 'xl'*/]}>
+      <span className="hidden sm:block">
         Here is a glimpse of my life,
         <br />
         mostly as a programmer.
-      </Hidden>
-    </Typography>
+      </span>
+    </h1>
   );
 }
