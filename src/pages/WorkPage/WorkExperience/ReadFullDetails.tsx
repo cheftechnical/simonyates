@@ -1,46 +1,41 @@
-// import * as React from 'react';
-// import {Button} from '@material-ui/core';
-import { Button, styled } from "@mui/material";
-// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-// import {makeStyles} from '@material-ui/core/styles';
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-
 interface Props {
   /**
-   * aria-label
+   * aria-label for accessibility.
    */
   ariaLabel: string;
 
   /**
-   * The URL to link to when the button is clicked. If defined, an a element will be used as the root node.
+   * The URL to link to when the button is clicked.
    */
   href: string;
 }
 
-// const useStyles = makeStyles((themeMui) => ({
-//   readFullDetails: {
-//     marginTop: themeMui.spacing(32 / 8)
-//   }
-// }));
-
-const StyledDiv = styled("div")(({ theme }) => ({
-  marginTop: theme.spacing(32 / 8),
-}));
-
 export default function ReadFullDetails(props: Props) {
-  // const classes = useStyles();
   const { ariaLabel, href } = props;
 
   return (
-    <StyledDiv>
-      <Button
+    <div className="mt-8">
+      <a
         aria-label={ariaLabel}
-        endIcon={<ArrowRightIcon />}
+        className="inline-flex items-center font-normal text-sm leading-4 tracking-[1.25px] uppercase text-gray-900 pb-1.5 border-b-2 border-white hover:border-gray-900 transition-colors"
         href={href}
-        variant="text"
       >
         Read Full Details
-      </Button>
-    </StyledDiv>
+        <svg
+          className="ml-1 h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 18l6-6-6-6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
   );
 }
