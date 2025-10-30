@@ -1,89 +1,51 @@
-import { color } from "../../../styling/Color/Color";
+import { ReactNode } from "react";
 import FeaturedChips from "./FeaturedChips";
-import { styled, Typography } from "@mui/material";
+import PublicationName from "./PublicationName";
+import PublicationPublisher from "./PublicationPublisher";
+import PublicationWhen from "./PublicationWhen";
+import PublicationChildren from "./PublicationChildren";
 
 interface Props {
-  children: any | any[] | never[];
+  /**
+   * The publication content/description.
+   */
+  children: ReactNode;
+  /**
+   * The name/title of the publication.
+   */
   name: string;
+  /**
+   * Whether this is the next publication (adds top padding).
+   */
   next?: boolean;
+  /**
+   * The publisher name.
+   */
   publisher: string;
+  /**
+   * List of tags/chips to display.
+   */
   tags: string[];
+  /**
+   * When the publication was published.
+   */
   when: string;
 }
 
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {
-// 	},
-// 	rootNext: {
-// 		paddingTop: themeMui.spacing(40/8),
-// 	},
-// 	name: {
-// 		marginBottom: themeMui.spacing(16/8),
-// 	},
-// 	when: {
-// 		color: color.grey['600'],
-// 	},
-// 	children: {
-// 		color: color.grey['700']
-// 	},
-// 	publisher: {
-// 		color: color.grey['600'],
-// 	}
-// }));
-
-const StyledDivChildren = styled("div")(() => ({
-  color: color.grey["700"],
-}));
-
-const StyledDivRoot = styled("div")(() => ({
-  // default
-}));
-
-const StyledDivRootNext = styled(StyledDivRoot)(({ theme }) => ({
-  paddingTop: theme.spacing(40 / 8),
-}));
-
-const StyledTypographyName = styled(Typography)(({ theme }) => ({
-  marginBottom: theme.spacing(16 / 8),
-})) as typeof Typography;
-
-const StyledTypographyPublisher = styled(Typography)(() => ({
-  color: color.grey["600"],
-})) as typeof Typography;
-
-const StyledTypographyWhen = styled(Typography)(() => ({
-  color: color.grey["600"],
-})) as typeof Typography;
-
 export default function FeaturedPublication(props: Props) {
-  // const classes = useStyles();
   const { children, name, next, publisher, tags, when } = props;
 
-  // @todo mui5
-  // const rootClass = (next)
-  // 	? `${classes.root} ${classes.rootNext}`
-  // 	: classes.root;
-
-  const MyStyledDivRoot = next ? StyledDivRootNext : StyledDivRoot;
-
   return (
-    <MyStyledDivRoot>
-      <StyledTypographyName component="h3" variant="primaryH4Semibold">
-        {name}
-      </StyledTypographyName>
+    <div className={next ? "pt-[40px]" : ""}>
+      <PublicationName>{name}</PublicationName>
 
-      <StyledTypographyPublisher component="p" variant="primaryBody">
-        {publisher}
-      </StyledTypographyPublisher>
+      <PublicationPublisher>{publisher}</PublicationPublisher>
 
-      <StyledTypographyWhen component="p" variant="primaryBody">
-        {when}
-      </StyledTypographyWhen>
+      <PublicationWhen>{when}</PublicationWhen>
 
       <FeaturedChips list={tags} />
 
-      <StyledDivChildren>{children}</StyledDivChildren>
-    </MyStyledDivRoot>
+      <PublicationChildren>{children}</PublicationChildren>
+    </div>
   );
 }
