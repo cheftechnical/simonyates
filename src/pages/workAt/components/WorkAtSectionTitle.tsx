@@ -1,27 +1,18 @@
-import { styled, Typography } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
-  children?: any;
+  /**
+   * The content of the section title.
+   */
+  children?: ReactNode;
 }
-
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {
-// 		marginTop: themeMui.spacing((80-12) / 8),
-// 		marginBottom: themeMui.spacing(32 / 8)
-// 	}
-// }));
-
-const StyledTypography = styled(Typography)(({ theme }) => ({
-  marginTop: theme.spacing((80 - 12) / 8),
-  marginBottom: theme.spacing(32 / 8),
-})) as typeof Typography;
 
 export default function WorkAtSectionTitle(props: Props) {
   const { children } = props;
 
   return (
-    <StyledTypography component="h2" variant="primaryH3">
+    <h2 className="font-normal text-2xl leading-8 mt-[68px] mb-8">
       {children}
-    </StyledTypography>
+    </h2>
   );
 }
