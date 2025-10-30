@@ -1,27 +1,29 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Home from "./routes/Home.tsx";
-import { About } from "./routes/About.tsx";
-import { Featured } from "./routes/Featured.tsx";
-import { Figpie } from "./routes/Figpie.tsx";
-import { FigpieTrigonometry } from "./routes/FigpieTrigonometry.tsx";
-import International from "./pages/InternationalPage/InternationalPage.tsx";
-import Legal from "./routes/Legal.tsx";
-import PageNotFound from "./routes/PageNotFound.tsx";
-import Work from "./routes/Work.tsx";
-import WorkPage from "./pages/WorkPage/WorkPage.tsx";
-import TrueNorthPage from "./pages/workAt/TrueNorth/TrueNorthPage.tsx";
-import RbcPage from "./pages/workAt/RbcPage/RbcPage.tsx";
-import MayoClinicPage from "./pages/workAt/MayoClinicPage/MayoClinicPage.tsx";
-import UnchartedSoftwarePage from "./pages/workAt/UnchartedSoftwarePage/UnchartedSoftwarePage.tsx";
-import GenworthCanadaPage from "./pages/workAt/GenworthCanadaPage/index.ts";
-import InfomartPage from "./pages/workAt/InfomartPage/index.ts";
-import JibDesignAndAdvertisingPage from "./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx";
 import { Root } from "./routes/Root.tsx";
-import { Contact } from "./routes/Contact.tsx";
-import { Webdev } from "./routes/Webdev.tsx";
+
+// Lazy route components
+const Home = lazy(() => import("./routes/Home.tsx"));
+const About = lazy(() => import("./routes/About.tsx").then(m => ({ default: m.About })));
+const Featured = lazy(() => import("./routes/Featured.tsx").then(m => ({ default: m.Featured })));
+const Figpie = lazy(() => import("./routes/Figpie.tsx").then(m => ({ default: m.Figpie })));
+const FigpieTrigonometry = lazy(() => import("./routes/FigpieTrigonometry.tsx").then(m => ({ default: m.FigpieTrigonometry })));
+const International = lazy(() => import("./pages/InternationalPage/InternationalPage.tsx"));
+const Legal = lazy(() => import("./routes/Legal.tsx"));
+const PageNotFound = lazy(() => import("./routes/PageNotFound.tsx"));
+const Work = lazy(() => import("./routes/Work.tsx"));
+const WorkPage = lazy(() => import("./pages/WorkPage/WorkPage.tsx"));
+const TrueNorthPage = lazy(() => import("./pages/workAt/TrueNorth/TrueNorthPage.tsx"));
+const RbcPage = lazy(() => import("./pages/workAt/RbcPage/RbcPage.tsx"));
+const MayoClinicPage = lazy(() => import("./pages/workAt/MayoClinicPage/MayoClinicPage.tsx"));
+const UnchartedSoftwarePage = lazy(() => import("./pages/workAt/UnchartedSoftwarePage/UnchartedSoftwarePage.tsx"));
+const GenworthCanadaPage = lazy(() => import("./pages/workAt/GenworthCanadaPage/index.ts"));
+const InfomartPage = lazy(() => import("./pages/workAt/InfomartPage/index.ts"));
+const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx"));
+const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
+const Webdev = lazy(() => import("./routes/Webdev.tsx").then(m => ({ default: m.Webdev })));
 
 const router = createBrowserRouter([
   {
