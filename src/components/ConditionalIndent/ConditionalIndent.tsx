@@ -1,25 +1,22 @@
-import rem from "../../styling/rem";
-import { styled } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
-  children?: any;
+  /**
+   * The content to be conditionally indented.
+   */
+  children?: ReactNode;
+  /**
+   * Additional CSS classes.
+   */
   className?: string;
 }
 
-const StyledDiv = styled("div")(({ theme }) => ({
-  [theme.breakpoints.down("sm")]: {
-    // for mobile
-    paddingLeft: 0,
-  },
-
-  [theme.breakpoints.up("sm")]: {
-    // desktop (default)
-    paddingLeft: rem(40),
-  },
-}));
-
 export default function ConditionalIndent(props: Props) {
-  const { children } = props;
+  const { children, className } = props;
 
-  return <StyledDiv>{children}</StyledDiv>;
+  return (
+    <div className={`pl-0 sm:pl-10 ${className || ""}`}>
+      {children}
+    </div>
+  );
 }
