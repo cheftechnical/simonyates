@@ -1,5 +1,4 @@
-import { useMemo, useState } from "react";
-import { Dialog } from "@mui/material";
+import { useMemo, useState, useEffect } from "react";
 import { MessageFormValues } from "../MessageFormValues";
 import ContentRecaptcha from "./ContentRecaptcha";
 import ContentSuccessful from "./ContentSuccessful";
@@ -23,6 +22,18 @@ export default function SendingMessageDialog(props: Props) {
 
   const [content, setContent] = useState(defaultFragment);
 
+  // Prevent body scroll when dialog is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const currentContent = useMemo(() => {
     switch (content) {
       case "recaptcha":
@@ -38,15 +49,26 @@ export default function SendingMessageDialog(props: Props) {
     }
   }, [content, message, onClose]);
 
+  if (!isOpen) return null;
+
   return (
-    <Dialog
-      fullWidth
-      aria-labelledby="sending-message-dialog-title"
-      maxWidth="sm"
-      onClose={onClose}
-      open={isOpen}
+    <div
+      className="fixed inset-0 z-[1300] flex items-center justify-center"
+      onClick={onClose}
     >
-      {currentContent}
-    </Dialog>
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50" />
+      
+      {/* Dialog */}
+      <div
+        className="relative bg-white rounded-lg shadow-xl max-w-[600px] w-full max-h-[90vh] overflow-y-auto mx-4"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-labelledby="sending-message-dialog-title"
+        aria-modal="true"
+      >
+        {currentContent}
+      </div>
+    </div>
   );
 }

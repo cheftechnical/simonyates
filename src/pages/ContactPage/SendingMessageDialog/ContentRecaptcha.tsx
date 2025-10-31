@@ -1,4 +1,3 @@
-import { Box, Button, DialogActions, DialogContent, DialogTitle, styled } from "@mui/material";
 import axios from "axios";
 import { useCallback, useMemo } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -26,14 +25,6 @@ interface Props {
    */
   onSuccess: () => void;
 }
-
-const StyledBox = styled(Box)(() => ({
-  width: 302
-}));
-
-const StyledDivRoot = styled("div")(() => ({
-  textAlign: "center"
-}));
 
 export function ContentRecaptcha(props: Props) {
   const { debug, message, onClose, onSuccess } = props;
@@ -74,34 +65,40 @@ export function ContentRecaptcha(props: Props) {
     if (!debug) return <></>;
 
     return (
-      <DialogActions>
-        <Button color="primary" onClick={send} variant="contained">
+      <div className="flex justify-end gap-2 p-4">
+        <button
+          onClick={send}
+          className="px-4 py-2 bg-gray-900 text-gray-50 uppercase text-sm font-medium tracking-[1.25px] hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900"
+        >
           Test Send
-        </Button>
-        <Button color="primary" onClick={onClose}>
+        </button>
+        <button
+          onClick={onClose}
+          className="px-4 py-2 text-gray-900 uppercase text-sm font-medium tracking-[1.25px] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-900"
+        >
           Cancel
-        </Button>
-      </DialogActions>
+        </button>
+      </div>
     );
   }, [debug, onClose, send]);
 
   return (
     <div>
-      <DialogTitle id="sending-message-dialog-title">
+      <h2 id="sending-message-dialog-title" className="text-xl font-semibold p-6 pb-4">
         Are you a human?
-      </DialogTitle>
-      <DialogContent>
-        <StyledDivRoot>
-          <Box display="flex" justifyContent="center">
-            <StyledBox pb={3}>
+      </h2>
+      <div className="px-6 pb-4">
+        <div className="text-center">
+          <div className="flex justify-center">
+            <div className="w-[302px] pb-6">
               <ReCAPTCHA
                 onChange={handleReCaptchaChange}
                 sitekey={recaptchaSiteKey}
               />
-            </StyledBox>
-          </Box>
-        </StyledDivRoot>
-      </DialogContent>
+            </div>
+          </div>
+        </div>
+      </div>
       {debugButtons}
     </div>
   );

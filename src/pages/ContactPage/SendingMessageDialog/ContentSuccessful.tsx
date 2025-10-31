@@ -1,104 +1,81 @@
 import Logo from "../../../components/Logo";
-import rem from "../../../styling/rem";
-import { color } from "../../../styling/Color/Color";
-import { Box, Link, styled, Typography } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
-
-// @todo mui5
-// const useStyles = makeStyles(() => ({
-//   root: {
-//     padding: rem(40),
-//     textAlign: 'center'
-//   },
-//   link: {
-//     color: color.grey['900'],
-//   },
-//   wellChatSoon: {
-//     color: color.grey['600']
-//   }
-// }));
-
-const StyledDivRoot = styled("div")(() => ({
-  padding: rem(40),
-  textAlign: "center",
-})) as typeof Typography;
-
-const StyledLink = styled(Link)(() => ({
-  color: color.grey["900"],
-})) as typeof Link;
-
-const StyledTypographyWellChatSoon = styled(Typography)(() => ({
-  color: color.grey["600"],
-})) as typeof Typography;
 
 export default function ContentSuccessful() {
-  // const classes = useStyles();
-
   return (
-    <StyledDivRoot>
-      <Box mt={16 / 8}>
-        <CheckIcon style={{ fontSize: 104 }} />
-      </Box>
+    <div className="p-10 text-center">
+      <div className="mt-2">
+        {/* Custom SVG checkmark icon - replaced Material-UI CheckIcon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-[104px] w-[104px] mx-auto text-green-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+      </div>
 
-      <Box mt={24 / 8}>
-        <Typography component="h2" variant="primaryH3">
-          Thank you.
-        </Typography>
-      </Box>
+      <h2 className="mt-3 font-primary font-normal text-2xl leading-8">
+        Thank you.
+      </h2>
 
-      <Box mt={8 / 8}>
-        <StyledTypographyWellChatSoon component="p" variant="primaryBody">
-          We&rsquo;ll chat soon.
-        </StyledTypographyWellChatSoon>
-      </Box>
+      <p className="mt-1 font-primary font-normal text-base leading-6 tracking-[0.5px] text-[#626262]">
+        We&rsquo;ll chat soon.
+      </p>
 
-      <Box mt={88 / 8}>
-        <Typography component="p" variant="primaryBody">
-          In the meantime, let&rsquo;s connect on social media:
-        </Typography>
-      </Box>
+      <p className="mt-11 font-primary font-normal text-base leading-6 tracking-[0.5px]">
+        In the meantime, let&rsquo;s connect on social media:
+      </p>
 
-      <Box mt={32 / 8} mb={(104 - 40) / 8}>
-        <Box display="flex" justifyContent="center">
-          <Box>
-            {/* LinkedIn */}
-            <Box display="flex">
-              <Box>
-                <Logo brand="linkedin" variant="grey-500" width={24} />
-              </Box>
-              <Box ml={8 / 8}>
-                <Typography component="p" variant="secondaryBody">
-                  <StyledLink
-                    title="Find me on LinkedIn"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/simonyates/"
-                  >
-                    LinkedIn
-                  </StyledLink>
-                </Typography>
-              </Box>
-            </Box>
+      <div className="mt-4 mb-8 flex justify-center">
+        <div>
+          {/* LinkedIn */}
+          <div className="flex items-center">
+            <div>
+              <Logo brand="linkedin" variant="grey-500" width={24} />
+            </div>
+            <div className="ml-1">
+              <p className="font-secondary text-base leading-6 tracking-[0.5px]">
+                <a
+                  href="https://www.linkedin.com/in/simonyates/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Find me on LinkedIn"
+                  className="text-[#222222] no-underline hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </p>
+            </div>
+          </div>
 
-            {/*	Twitter */}
-            <Box display="flex" mt={24 / 8}>
-              <Box>
-                <Logo brand="twitter" variant="grey-500" width={24} />
-              </Box>
-              <Box ml={8 / 8}>
-                <Typography component="p" variant="secondaryBody">
-                  <StyledLink
-                    title="Follow me on Twitter"
-                    target="_blank"
-                    href="https://twitter.com/cheftechnical"
-                  >
-                    Twitter
-                  </StyledLink>
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-    </StyledDivRoot>
+          {/*	Twitter */}
+          <div className="flex items-center mt-3">
+            <div>
+              <Logo brand="twitter" variant="grey-500" width={24} />
+            </div>
+            <div className="ml-1">
+              <p className="font-secondary text-base leading-6 tracking-[0.5px]">
+                <a
+                  href="https://twitter.com/cheftechnical"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Follow me on Twitter"
+                  className="text-[#222222] no-underline hover:underline"
+                >
+                  Twitter
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
