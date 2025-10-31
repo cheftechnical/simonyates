@@ -1,47 +1,21 @@
 import Image from "../../../components/Image/Image";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
-import { Box, Grid, styled, Typography } from "@mui/material";
-
-const StyledBox = styled(Box)(() => ({
-  height: "100%",
-}));
-
-const StyledDivMyContainer = styled(MyContainer)(({ theme }) => ({
-  // mobile
-  [theme.breakpoints.down("sm")]: {
-    paddingBottom: theme.spacing(26 / 8),
-  },
-  // desktop
-  [theme.breakpoints.up("sm")]: {
-    paddingBottom: theme.spacing(80 / 8),
-  },
-}));
-
-const StyledTypography = styled(Typography)(({ theme }) => ({
-  // mobile
-  [theme.breakpoints.down("sm")]: {
-    // nothing special
-  },
-  // desktop
-  [theme.breakpoints.up("sm")]: {
-    paddingBottom: theme.spacing(72 / 8),
-  },
-})) as typeof Typography;
+import { Grid } from "@mui/material";
 
 export default function Hero() {
   return (
-    <StyledDivMyContainer>
+    <MyContainer className="pb-[26px] sm:pb-[80px]">
       <MyGridContainer>
         <Grid item md={7} xs={12}>
-          <StyledBox alignItems="flex-end" display="flex">
-            <Box>
-              <StyledTypography component="h1" variant="primaryH3">
+          <div className="flex items-end h-full">
+            <div>
+              <h1 className="font-normal text-2xl leading-8 pb-0 sm:pb-[72px]">
                 Simon Yates, <br />
                 <strong>Programmer</strong> from Toronto
-              </StyledTypography>
-            </Box>
-          </StyledBox>
+              </h1>
+            </div>
+          </div>
         </Grid>
         <Grid item md={5} xs={12}>
           <Image
@@ -50,6 +24,6 @@ export default function Hero() {
           />
         </Grid>
       </MyGridContainer>
-    </StyledDivMyContainer>
+    </MyContainer>
   );
 }
