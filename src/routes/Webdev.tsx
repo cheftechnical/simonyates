@@ -1,4 +1,3 @@
-import { Link, Typography } from "@mui/material";
 import PageWrapper from "../components/PageWrapper";
 import DefaultLayout from "../layouts/DefaultLayout";
 import MyContainer from "../styling/MyContainer";
@@ -10,15 +9,15 @@ export const Webdev = () => {
     <DefaultLayout>
       <PageWrapper title="Webdev Notes">
         <MyContainer>
-          <Typography paragraph component="h1" variant="primaryH1">
+          <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px] mb-6">
             Webdev Notes
-          </Typography>
+          </h1>
 
-          <Typography paragraph component="h2" variant="primaryH3">
+          <h2 className="font-primary font-normal text-2xl leading-8 mb-6">
             Tips &amp; Tricks
-          </Typography>
+          </h2>
 
-          <Typography paragraph component="p">
+          <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mb-6">
             <Ul>
               <Li>
                 Assigning a border color to one or more elements during development will help you see their margins
@@ -34,22 +33,24 @@ export const Webdev = () => {
                 in&nbsp;Gmail.
               </Li>
             </Ul>
-          </Typography>
+          </p>
 
-          <Typography paragraph component="h2" variant="primaryH3">
+          <h2 className="font-primary font-normal text-2xl leading-8 mb-6">
             React + Typescript
-          </Typography>
+          </h2>
 
-          <Typography paragraph component="p">
+          <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mb-6">
             Cheatsheets for experienced React developers getting started with TypeScript
-          </Typography>
+          </p>
 
-          <Link
+          <a
             href="https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets"
             target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 no-underline hover:underline"
           >
             https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets
-          </Link>
+          </a>
         </MyContainer>
       </PageWrapper>
     </DefaultLayout>
