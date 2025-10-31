@@ -1,36 +1,9 @@
 import MyContainer from "../../../../styling/MyContainer/MyContainer";
-import { Link as ReactRouterDomLink, useMatches } from "react-router-dom";
+import { NavLink, useMatches } from "react-router-dom";
 import Logo from "../../../../components/Logo";
 import Menu from "./Menu";
-import { color } from "../../../../styling/Color/Color";
-import rem from "../../../../styling/rem";
 import { ReactNode, useCallback, useMemo, useState } from "react";
-import { Box, IconButton, Link, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
-const StyledTypographySelected = styled(Box)(({ theme }) => ({
-  ...theme.typography.primaryBody,
-  paddingRight: theme.spacing((16 - 12) / 8),
-  fontWeight: "bold",
-  fontSize: rem(14),
-  lineHeight: rem(16),
-  letterSpacing: rem(1.25),
-  textTransform: "uppercase",
-
-  "& a": {
-    color: "inherit",
-  },
-})) as typeof Box;
-
-const StyledDivRoot = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing(48 / 8),
-  paddingBottom: theme.spacing(24 / 8),
-  position: "fixed",
-  backgroundColor: color.white,
-  width: "100%",
-  top: 0,
-  zIndex: 999,
-}));
 
 interface CustomHandles {
   breadcrumb?: ReactNode;
@@ -61,35 +34,41 @@ export default function ForMobile() {
   }, [matches]);
 
   return (
-    <StyledDivRoot>
+    <div className="bg-white pt-12 pb-6 fixed top-0 w-full z-[999]">
       <MyContainer>
-        <Box display="flex" justifyContent="flex-end">
+        <div className="flex justify-end">
           {/* Left align */}
-          <Box flexGrow={1}>
+          <div className="flex-grow">
             <div className="h-full flex items-center">
-              <Link component={ReactRouterDomLink} to="/">
+              <NavLink to="/">
                 <Logo brand="simon-yates" variant="default" width={149} />
-              </Link>
+              </NavLink>
             </div>
-          </Box>
+          </div>
 
           {/*	Right align */}
-          <Box>
+          <div>
             <div className="h-full flex items-center">
-              <StyledTypographySelected>{selected}</StyledTypographySelected>
+              <div className="font-bold text-sm leading-4 tracking-[1.25px] uppercase pr-1 [&_a]:text-inherit">
+                {selected}
+              </div>
             </div>
-          </Box>
-          <Box>
+          </div>
+          <div>
             <div className="h-full flex items-center">
-              <IconButton aria-label="menu" onClick={handleShowMenu}>
+              <button
+                aria-label="menu"
+                onClick={handleShowMenu}
+                className="inline-flex items-center justify-center p-2 text-inherit bg-transparent border-0 cursor-pointer rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              >
                 <MenuIcon />
-              </IconButton>
+              </button>
             </div>
-          </Box>
-        </Box>
+          </div>
+        </div>
       </MyContainer>
 
       <Menu onClose={handleHideMenu} visible={isMenuVisible} />
-    </StyledDivRoot>
+    </div>
   );
 }
