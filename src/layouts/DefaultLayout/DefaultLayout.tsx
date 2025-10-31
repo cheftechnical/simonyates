@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { ScrollRestoration } from "react-router-dom";
+import { ReactNode, useEffect } from "react";
+import { ScrollRestoration, useLocation } from "react-router-dom";
 import NavTop from "./NavTop";
 import Footer from "./Footer";
 import SkipNav from "./SkipNav";
@@ -35,6 +35,16 @@ interface Props {
 
 export default function DefaultLayout(props: Props) {
   const { children, fullHeight, top } = props;
+  const location = useLocation();
+
+  // Scroll to top on route change (but not on hash changes)
+  useEffect(() => {
+    // Only scroll to top if there's no hash in the URL
+    // If there's a hash, let the browser handle the scroll to that anchor
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [location.pathname]); // Only trigger on pathname change, not hash change
 
   // fullHeightOpticalOffset = -32 - 8 - 8 - 1 = -49px = -3.0625rem
   const footerMarginTop = fullHeight 
