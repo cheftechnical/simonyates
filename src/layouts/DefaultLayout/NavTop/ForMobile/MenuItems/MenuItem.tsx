@@ -21,7 +21,7 @@ interface Props {
 const StyledNavLink = styled(NavLink)(() => ({
   color: color.grey[100],
   textDecoration: "none",
-
+  fontWeight: "normal",
   fontSize: rem(24),
   lineHeight: rem(32),
 
