@@ -1,7 +1,4 @@
-import rem from "../../styling/rem";
-import { color } from "../../styling/Color/Color";
 import { ReactNode } from "react";
-import { Box, styled, Typography } from "@mui/material";
 
 export interface Props {
   /**
@@ -19,120 +16,40 @@ export interface Props {
   source?: string;
 }
 
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-//   rootNext: {
-//     paddingTop: themeMui.spacing(48 / 8),
-//   },
-//   boxQuote: {
-//     paddingRight: themeMui.spacing(8 / 8),
-//     fontFamily: `"Times New Roman"`,
-//     fontStyle: 'normal',
-//     fontWeight: 'normal',
-//     fontSize: rem(64),
-//     lineHeight: '100%',
-//     color: color.lime['500'],
-//   },
-//   boxContent: {
-//     paddingTop: themeMui.spacing(12 / 8),
-//   },
-//   blockquote: {
-//     margin: 0,
-//     padding: 0,
-//   },
-//   blockquoteTypography: {
-//     color: color.grey['800']
-//   },
-//   footer: {
-//     paddingTop: themeMui.spacing(16 / 8),
-//   },
-//   footerTypography: {
-//     color: color.grey['600']
-//   },
-//   span: {
-//     fontFamily: `"Times New Roman"`,
-//     fontStyle: 'normal',
-//     fontWeight: 'normal',
-//     color: color.lime['500'],
-//   },
-// }));
-
-const StyledBlockquote = styled("blockquote")(() => ({
-  margin: 0,
-  padding: 0,
-}));
-
-const StyledBlockquoteTypography = styled(Typography)(() => ({
-  color: color.grey["800"],
-})) as typeof Typography;
-
-const StyledBoxQuote = styled(Box)(({ theme }) => ({
-  paddingRight: theme.spacing(8 / 8),
-  fontFamily: `"Times New Roman"`,
-  fontStyle: "normal",
-  fontWeight: "normal",
-  fontSize: rem(64),
-  lineHeight: "100%",
-  color: color.lime["500"],
-}));
-
-const StyledBoxContent = styled(Box)(({ theme }) => ({
-  paddingTop: theme.spacing(12 / 8),
-}));
-
-const StyledFooter = styled("footer")(({ theme }) => ({
-  paddingTop: theme.spacing(16 / 8),
-}));
-
-const StyledTypographyFooter = styled(Typography)(() => ({
-  color: color.grey["600"],
-})) as typeof Typography;
-
-const StyledSpan = styled("span")(() => ({
-  fontFamily: `"Times New Roman"`,
-  fontStyle: "normal",
-  fontWeight: "normal",
-  color: color.lime["500"],
-}));
 
 export default function Quote(props: Props) {
-  // const classes = useStyles();
   const { children, next, source } = props;
 
-  // const rootClassName = classNames(
-  //   {[classes.rootNext]: next}
-  // );
-
-  const renderedEndQuote = <StyledSpan>&rdquo;</StyledSpan>;
+  const renderedEndQuote = (
+    <span className="font-['Times_New_Roman'] font-normal text-[#BDCD5D]">
+      &rdquo;
+    </span>
+  );
 
   const renderedSource = source ? (
-    <StyledFooter>
-      <StyledTypographyFooter variant="primarySubtitle">
+    <footer className="pt-4">
+      <p className="inline font-normal text-sm leading-4 tracking-[0.25px] text-[#626262]">
         {source}
-      </StyledTypographyFooter>
-    </StyledFooter>
+      </p>
+    </footer>
   ) : (
     ""
   );
 
   return (
-    <Box
-      display="flex"
-      sx={{ paddingTop: (theme) => (next ? theme.spacing(48 / 8) : 0) }}
-    >
-      <StyledBoxQuote>&ldquo;</StyledBoxQuote>
-      <StyledBoxContent flexGrow={1}>
-        <StyledBlockquote cite={source}>
-          <StyledBlockquoteTypography
-            component="blockquote"
-            variant="secondaryBodyLight"
-          >
+    <div className={`flex ${next ? "pt-6" : ""}`}>
+      <div className="pr-2 font-['Times_New_Roman'] font-normal text-[64px] leading-none text-[#BDCD5D]">
+        &ldquo;
+      </div>
+      <div className="flex-grow pt-3">
+        <blockquote cite={source} className="m-0 p-0">
+          <p className="font-secondary font-light text-base leading-6 tracking-[0.5px] text-[#3B3B3B]">
             {children}
             {renderedEndQuote}
-          </StyledBlockquoteTypography>
+          </p>
           {renderedSource}
-        </StyledBlockquote>
-      </StyledBoxContent>
-    </Box>
+        </blockquote>
+      </div>
+    </div>
   );
 }
