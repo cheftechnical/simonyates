@@ -5,8 +5,6 @@ import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import { Grid } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
-import ScrollSpy from "react-ui-scrollspy";
-import { useRef } from "react";
 import { Sections } from "../../types/Sections.ts";
 
 const sections: Sections = {
@@ -21,21 +19,13 @@ const sections: Sections = {
 };
 
 export function Legal() {
-  const parentScrollContainerRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <PageWrapper title="Legal">
       <MyContainer>
         <MyGridContainer>
           <Grid item md={6} xs={12}>
-
-            <div ref={parentScrollContainerRef}>
-              <ScrollSpy activeClass="active-scroll-spy">
-                <PrivacyPolicy id={sections.privacyPolicy.id} />
-                <TermsAndConditions id={sections.termsAndConditions.id} />
-              </ScrollSpy>
-            </div>
-
+            <PrivacyPolicy id={sections.privacyPolicy.id} />
+            <TermsAndConditions id={sections.termsAndConditions.id} />
           </Grid>
           <Grid item md={3} />
           <Grid item md={3}>

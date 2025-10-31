@@ -1,5 +1,4 @@
-import { ReactNode, useRef } from "react";
-import ScrollSpy from "react-ui-scrollspy";
+import { ReactNode } from "react";
 
 export type SectionsProps = {
   children: ReactNode;
@@ -8,13 +7,9 @@ export type SectionsProps = {
 export function Sections(props: SectionsProps) {
   const { children } = props;
 
-  const parentScrollContainerRef = useRef<HTMLDivElement | null>(null);
-
   return (
-    <div ref={parentScrollContainerRef}>
-      <ScrollSpy activeClass="active-scroll-spy">
-        {children}
-      </ScrollSpy>
+    <div>
+      {children}
     </div>
   );
 }

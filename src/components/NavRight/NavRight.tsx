@@ -31,17 +31,61 @@ export function NavRight(props: NavRightProps) {
 
     const handleScroll = () => {
       // Find the section currently in view
+      // We want to find the section whose top is closest to (but not too far above) the header offset
       let currentSectionId: string | null = null;
+      let closestDistance = Infinity;
+      let bestSectionAbove: string | null = null;
+      let bestDistanceAbove = Infinity;
 
       for (const sectionId of sectionIds) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Check if section is in viewport (accounting for header offset)
-          if (rect.top <= headerOffset + 50 && rect.bottom >= headerOffset) {
-            currentSectionId = sectionId;
+        // Handle duplicate IDs: find element with actual content
+        const allElementsWithId = document.querySelectorAll(`[id="${sectionId}"]`);
+        let element: HTMLElement | null = null;
+        
+        // Find element with dimensions/content
+        for (const el of Array.from(allElementsWithId)) {
+          const htmlEl = el as HTMLElement;
+          if (htmlEl.offsetHeight > 0 || htmlEl.scrollHeight > 0 || htmlEl.getBoundingClientRect().height > 0) {
+            element = htmlEl;
+            break;
           }
         }
+        
+        // Fallback to first element
+        if (!element && allElementsWithId.length > 0) {
+          element = allElementsWithId[0] as HTMLElement;
+        }
+        
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          
+          // Check if section is currently visible in viewport (even if scrolled past header)
+          const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+          
+          if (isInViewport) {
+            const distanceFromHeader = Math.abs(rect.top - headerOffset);
+            
+            // Prefer sections that are at or below the header offset
+            if (rect.top >= headerOffset) {
+              // Section is at or below header - prefer this
+              if (distanceFromHeader < closestDistance) {
+                closestDistance = distanceFromHeader;
+                currentSectionId = sectionId;
+              }
+            } else {
+              // Section is above header but still in viewport - track as fallback
+              if (distanceFromHeader < bestDistanceAbove) {
+                bestDistanceAbove = distanceFromHeader;
+                bestSectionAbove = sectionId;
+              }
+            }
+          }
+        }
+      }
+
+      // If no section found at/below header, use the best section above header that's still visible
+      if (currentSectionId === null && bestSectionAbove !== null) {
+        currentSectionId = bestSectionAbove;
       }
 
       // If we're near the top, select the first section
@@ -51,11 +95,27 @@ export function NavRight(props: NavRightProps) {
 
       // If we're past the last section, select the last section
       if (currentSectionId === null && sectionIds.length > 0) {
-        const lastSection = document.getElementById(sectionIds[sectionIds.length - 1]);
+        const lastSectionId = sectionIds[sectionIds.length - 1];
+        const allElementsWithId = document.querySelectorAll(`[id="${lastSectionId}"]`);
+        let lastSection: HTMLElement | null = null;
+        
+        // Find element with dimensions
+        for (const el of Array.from(allElementsWithId)) {
+          const htmlEl = el as HTMLElement;
+          if (htmlEl.offsetHeight > 0 || htmlEl.scrollHeight > 0) {
+            lastSection = htmlEl;
+            break;
+          }
+        }
+        
+        if (!lastSection && allElementsWithId.length > 0) {
+          lastSection = allElementsWithId[0] as HTMLElement;
+        }
+        
         if (lastSection) {
           const rect = lastSection.getBoundingClientRect();
           if (rect.top < window.innerHeight) {
-            currentSectionId = sectionIds[sectionIds.length - 1];
+            currentSectionId = lastSectionId;
           }
         }
       }

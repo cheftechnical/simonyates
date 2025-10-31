@@ -7,18 +7,13 @@ html {
     border-left: 2px solid transparent;
 }
 
-/* Active scrollspy state - applied by react-ui-scrollspy */
-/* The library applies this class to elements with matching IDs */
-.nav-right-item.active-scroll-spy,
-li.active-scroll-spy,
-[data-to-scrollspy-id].active-scroll-spy {
+/* Active scrollspy state - applied by our custom NavRight component */
+.nav-right-item.active-scroll-spy {
     color: var(--color-gray-900) !important;
     border-left-color: var(--color-gray-500) !important;
 }
 
-.nav-right-item.active-scroll-spy a,
-li.active-scroll-spy a,
-[data-to-scrollspy-id].active-scroll-spy a {
+.nav-right-item.active-scroll-spy a {
     color: var(--color-gray-900) !important;
 }
 
