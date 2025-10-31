@@ -1,7 +1,6 @@
 import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
-import { Grid, Hidden } from "@mui/material";
 import GwBasicImgWrapper from "./GwBasicImgWrapper";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -10,30 +9,26 @@ export default function GwBasicContent() {
   return (
     <MyGridContainer className="pb-[56px] sm:pb-[152px]">
       {/* Show for desktop */}
-      <Hidden smDown>
-        <Grid item md={6}>
-          <CenterVertically>
-            <GwBasicImgWrapper>
-              <Image
-                alt="GW Basic"
-                src="/images/about/life-as-a-maker/gw-basic.png"
-              />
-            </GwBasicImgWrapper>
-          </CenterVertically>
-        </Grid>
-      </Hidden>
+      <div className="hidden md:block md:w-1/2">
+        <CenterVertically>
+          <GwBasicImgWrapper>
+            <Image
+              alt="GW Basic"
+              src="/images/about/life-as-a-maker/gw-basic.png"
+            />
+          </GwBasicImgWrapper>
+        </CenterVertically>
+      </div>
 
       {/* Show for mobile*/}
-      <Hidden mdUp>
-        <Grid item xs={12}>
-          <Image
-            alt="GW Basic"
-            src="/images/about/life-as-a-maker/gw-basic.png"
-          />
-        </Grid>
-      </Hidden>
+      <div className="md:hidden w-full">
+        <Image
+          alt="GW Basic"
+          src="/images/about/life-as-a-maker/gw-basic.png"
+        />
+      </div>
 
-      <Grid item md={6} xs={12}>
+      <div className="w-full md:w-1/2">
         <Body>
           I started coding sheet music into the computer and playing it back.
           My mom was very confused as to why I kept playing{" "}
@@ -50,7 +45,7 @@ export default function GwBasicContent() {
             someone hadn&rsquo;t done&nbsp;before.
           </strong>
         </BodyNext>
-      </Grid>
+      </div>
     </MyGridContainer>
   );
 }

@@ -5,53 +5,24 @@ import Logo from "../../components/Logo";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import Hero from "./Hero/Hero";
-import { Grid, styled } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
-
-// const useStyles = makeStyles((themeMui) => ({
-//   employerFirst: {
-//     marginTop: themeMui.spacing(84 / 8)
-//   },
-//   employerNext: {
-//     marginTop: themeMui.spacing(79 / 8)
-//   },
-//   gridItemLogo: {
-//     paddingLeft: themeMui.spacing(8 / 8),
-//   }
-// }));
-
-const StyledMyGridContainerEmployerFirst = styled(MyGridContainer)(
-  ({ theme }) => ({
-    marginTop: theme.spacing(84 / 8),
-  }),
-);
-
-const StyledMyGridContainerEmployerNext = styled(MyGridContainer)(
-  ({ theme }) => ({
-    marginTop: theme.spacing(79 / 8),
-  }),
-);
-
-const StyledGridItemLogo = styled(Grid)(({ theme }) => ({
-  paddingLeft: theme.spacing(8 / 8),
-}));
 
 export default function WorkPage() {
   return (
     <PageWrapper title="Work">
       <MyContainer>
         <MyGridContainer>
-          <Grid item md={7} xs={12}>
+          <div className="w-full md:w-[58.333333%]">
             <Hero />
-          </Grid>
+          </div>
         </MyGridContainer>
 
         {/* TrueNorth */}
-        <StyledMyGridContainerEmployerFirst>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[84px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="truenorth" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="TrueNorth"
               href="/work/truenorth"
@@ -86,15 +57,15 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerFirst>
+          </div>
+        </MyGridContainer>
 
         {/* RBC */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="rbc" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="RBC"
               href="/work/rbc"
@@ -129,15 +100,15 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
 
         {/* Uncharted Software */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="uncharted-software" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="Uncharted Software"
               href="/work/uncharted-software"
@@ -168,15 +139,15 @@ export default function WorkPage() {
                 <Li>Converted legacy Java code to&nbsp;Scala</Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
 
         {/* Mayo Clinic */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="mayo-clinic" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="Mayo Clinic"
               href="/work/mayo-clinic"
@@ -210,15 +181,15 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
 
         {/* Genworth Canada */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="genworth-canada" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="Genworth Canada"
               href="/work/genworth-canada"
@@ -246,15 +217,15 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
 
         {/* Infomart */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo brand="infomart" variant="default" width="100%" />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="Infomart"
               href="/work/infomart"
@@ -287,19 +258,19 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
 
         {/* Jib Design & Advertising */}
-        <StyledMyGridContainerEmployerNext>
-          <StyledGridItemLogo item md={1} xs={2}>
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
             <Logo
               brand="jib-design-and-advertising"
               variant="default"
               width="100%"
             />
-          </StyledGridItemLogo>
-          <Grid item md={6} xs={10}>
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
             <WorkExperience
               employer="Jib Design & Advertising"
               href="/work/jib-design-and-advertising"
@@ -324,8 +295,8 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
-          </Grid>
-        </StyledMyGridContainerEmployerNext>
+          </div>
+        </MyGridContainer>
       </MyContainer>
     </PageWrapper>
   );

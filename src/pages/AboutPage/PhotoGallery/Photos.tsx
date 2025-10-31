@@ -1,7 +1,6 @@
 import Image from "../../../components/Image/Image";
 import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import Carousel from "react-material-ui-carousel";
-import { Grid } from "@mui/material";
 
 export default function Photos() {
   return (
@@ -9,30 +8,30 @@ export default function Photos() {
       {/* Desktop */}
       <div className="hidden sm:block">
         <MyGridContainer>
-          <Grid item xs={3}>
+          <div className="w-1/4">
             <Image
               alt="Jean'is Joplin"
               src="/images/about/photo-gallery/jean.png"
             />
-          </Grid>
-          <Grid item xs={3}>
+          </div>
+          <div className="w-1/4">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-1.png"
             />
-          </Grid>
-          <Grid item xs={3}>
+          </div>
+          <div className="w-1/4">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-2.png"
             />
-          </Grid>
-          <Grid item xs={3}>
+          </div>
+          <div className="w-1/4">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-3.png"
             />
-          </Grid>
+          </div>
         </MyGridContainer>
       </div>
 

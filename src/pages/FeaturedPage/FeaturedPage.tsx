@@ -13,7 +13,6 @@ import FeaturedPublications from "./components/FeaturedPublications";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import { Grid } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import { sections } from "./sections.ts";
 import NavRight from "../../components/NavRight";
@@ -27,7 +26,7 @@ export default function Featured() {
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
-          <Grid item md={6} xs={12}>
+          <div className="w-full md:w-1/2">
             <Sections>
               <Section id={sections.publications.id}>
                 <SectionTitle>Publications</SectionTitle>
@@ -147,15 +146,15 @@ export default function Featured() {
                 </FeaturedEvents>
               </NextSection>
             </Sections>
-          </Grid>
+          </div>
 
           {/* Gutter */}
-          <Grid item md={3} />
+          <div className="hidden md:block md:w-1/4" />
 
           {/* Navigation */}
-          <Grid item md={3}>
+          <div className="hidden md:block md:w-1/4">
             <NavRight sections={sections} />
-          </Grid>
+          </div>
         </MyGridContainer>
       </MyContainer>
     </PageWrapper>

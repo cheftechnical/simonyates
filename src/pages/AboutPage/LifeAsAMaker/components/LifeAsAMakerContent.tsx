@@ -1,7 +1,6 @@
 import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
-import { Grid, Hidden } from "@mui/material";
 import LifeAsAMakerImgWrapper from "./LifeAsAMakerImgWrapper";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -11,30 +10,28 @@ export default function LifeAsAMakerContent() {
     <>
       {/* Life as a maker*/}
       <MyGridContainer>
-        <Grid item md={6} xs={false} />
-        <Grid item md={6} xs={12}>
+        <div className="hidden md:block md:w-1/2" />
+        <div className="w-full md:w-1/2">
           <h2 className="font-normal text-[54px] leading-[88px] tracking-[0.5px]">
             Life as a Maker
           </h2>
-        </Grid>
+        </div>
       </MyGridContainer>
 
       <MyGridContainer className="pb-[139px]">
         {/* Show for desktop */}
-        <Hidden smDown>
-          <Grid item md={6}>
-            <CenterVertically>
-              <LifeAsAMakerImgWrapper>
-                <Image
-                  alt="Apple Macintosh"
-                  src="/images/about/life-as-a-maker/apple-macintosh.png"
-                />
-              </LifeAsAMakerImgWrapper>
-            </CenterVertically>
-          </Grid>
-        </Hidden>
+        <div className="hidden md:block md:w-1/2">
+          <CenterVertically>
+            <LifeAsAMakerImgWrapper>
+              <Image
+                alt="Apple Macintosh"
+                src="/images/about/life-as-a-maker/apple-macintosh.png"
+              />
+            </LifeAsAMakerImgWrapper>
+          </CenterVertically>
+        </div>
 
-        <Grid item md={6} xs={12}>
+        <div className="w-full md:w-1/2">
           <Body>
             I was 3 when I first used a computer. The year was 1984 and my dad
             was doing some interior design work for the Canadian headquarters of
@@ -57,17 +54,15 @@ export default function LifeAsAMakerContent() {
             sound card&mdash;which was state of the art at the time, and a bunch
             of educational games from The Learning Company&nbsp;(TLC).
           </BodyNext>
-        </Grid>
+        </div>
 
         {/* Show for mobile */}
-        <Hidden mdUp>
-          <Grid item xs={12}>
-            <Image
-              alt="Apple Macintosh"
-              src="/images/about/life-as-a-maker/apple-macintosh.png"
-            />
-          </Grid>
-        </Hidden>
+        <div className="md:hidden w-full">
+          <Image
+            alt="Apple Macintosh"
+            src="/images/about/life-as-a-maker/apple-macintosh.png"
+          />
+        </div>
       </MyGridContainer>
     </>
   );

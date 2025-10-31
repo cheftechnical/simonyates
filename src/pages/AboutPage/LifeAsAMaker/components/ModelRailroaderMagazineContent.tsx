@@ -1,7 +1,6 @@
 import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
-import { Grid, Hidden } from "@mui/material";
 import H3 from "./H3";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -12,17 +11,15 @@ export default function ModelRailroaderMagazineContent() {
     <>
       {/* Model Railroader Magazine */}
       <MyGridContainer>
-        <Grid item md={6} xs={12}>
+        <div className="w-full md:w-1/2">
           <H3>Model trains, Arduino</H3>
-        </Grid>
+        </div>
 
-        <Hidden smDown>
-          <Grid item md={6} />
-        </Hidden>
+        <div className="hidden md:block md:w-1/2" />
       </MyGridContainer>
 
       <MyGridContainer className="pb-0 sm:pb-[70px]">
-        <Grid item md={6} xs={12}>
+        <div className="w-full md:w-1/2">
           <Body>
             It was around this time that I also started getting into model
             trains. <em>Model Railroader Magazine</em> would often include
@@ -44,31 +41,27 @@ export default function ModelRailroaderMagazineContent() {
             of electronics through an Arduino, so stay tuned to see what I make
             with&nbsp;that.
           </BodyNext>
-        </Grid>
+        </div>
 
         {/* Show for desktop */}
-        <Hidden smDown>
-          <Grid item md={6}>
-            <CenterVertically>
-              <ModelRailroaderMagazineImgWrapper>
-                <Image
-                  alt="Model Railroader Magazine"
-                  src="/images/about/life-as-a-maker/model-railroader-magazine.png"
-                />
-              </ModelRailroaderMagazineImgWrapper>
-            </CenterVertically>
-          </Grid>
-        </Hidden>
+        <div className="hidden md:block md:w-1/2">
+          <CenterVertically>
+            <ModelRailroaderMagazineImgWrapper>
+              <Image
+                alt="Model Railroader Magazine"
+                src="/images/about/life-as-a-maker/model-railroader-magazine.png"
+              />
+            </ModelRailroaderMagazineImgWrapper>
+          </CenterVertically>
+        </div>
 
         {/* Show for mobile */}
-        <Hidden mdUp>
-          <Grid item xs={12}>
-            <Image
-              alt="Model Railroader Magazine"
-              src="/images/about/life-as-a-maker/model-railroader-magazine.png"
-            />
-          </Grid>
-        </Hidden>
+        <div className="md:hidden w-full">
+          <Image
+            alt="Model Railroader Magazine"
+            src="/images/about/life-as-a-maker/model-railroader-magazine.png"
+          />
+        </div>
       </MyGridContainer>
     </>
   );

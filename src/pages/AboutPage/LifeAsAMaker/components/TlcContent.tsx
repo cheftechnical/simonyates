@@ -1,7 +1,6 @@
 import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
-import { Grid, Hidden } from "@mui/material";
 import H3 from "./H3";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -12,14 +11,14 @@ export default function TlcContent() {
     <>
       {/* Hello, World! */}
       <MyGridContainer>
-        <Grid item md={6} xs={12}>
+        <div className="w-full md:w-1/2">
           <H3>Hello, World!</H3>
-        </Grid>
-        <Grid item md={6} />
+        </div>
+        <div className="hidden md:block md:w-1/2" />
       </MyGridContainer>
 
       <MyGridContainer className="pb-[64px]">
-        <Grid item md={6} xs={12}>
+        <div className="w-full md:w-1/2">
           <Body>
             While TLC&rsquo;s Super Solvers:{" "}
             <em>Out Numbered! and Challenge of the Ancient Empires!</em> may
@@ -39,31 +38,27 @@ export default function TlcContent() {
             at a specific frequency for a given duration. It wasn&rsquo;t
             exactly what I wanted, but it was fascinating&nbsp;stuff!
           </BodyNext>
-        </Grid>
+        </div>
 
         {/* Show for desktop */}
-        <Hidden smDown>
-          <Grid item md={6}>
-            <CenterVertically>
-              <TlcImgWrapper>
-                <Image
-                  alt="The Learning Company - Super Solvers: Out Numbered!"
-                  src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
-                />
-              </TlcImgWrapper>
-            </CenterVertically>
-          </Grid>
-        </Hidden>
+        <div className="hidden md:block md:w-1/2">
+          <CenterVertically>
+            <TlcImgWrapper>
+              <Image
+                alt="The Learning Company - Super Solvers: Out Numbered!"
+                src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
+              />
+            </TlcImgWrapper>
+          </CenterVertically>
+        </div>
 
         {/* Show for mobile */}
-        <Hidden mdUp>
-          <Grid item xs={12}>
-            <Image
-              alt="The Learning Company - Super Solvers: Out Numbered!"
-              src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
-            />
-          </Grid>
-        </Hidden>
+        <div className="md:hidden w-full">
+          <Image
+            alt="The Learning Company - Super Solvers: Out Numbered!"
+            src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
+          />
+        </div>
       </MyGridContainer>
     </>
   );

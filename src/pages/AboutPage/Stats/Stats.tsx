@@ -1,6 +1,6 @@
 import MyContainer from "../../../styling/MyContainer/MyContainer";
+import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import StatsItem from "./StatsItem";
-import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 
 interface Stat {
@@ -33,20 +33,20 @@ export default function Stats() {
       {/* Desktop */}
       <div className="hidden sm:block">
         <MyContainer>
-          <Grid container spacing={10}>
-            <Grid item xs={3}>
+          <MyGridContainer>
+            <div className="w-1/4">
               <StatsItem {...stat[0]} />
-            </Grid>
-            <Grid item xs={3}>
+            </div>
+            <div className="w-1/4">
               <StatsItem {...stat[1]} />
-            </Grid>
-            <Grid item xs={3}>
+            </div>
+            <div className="w-1/4">
               <StatsItem {...stat[2]} />
-            </Grid>
-            <Grid item xs={3}>
+            </div>
+            <div className="w-1/4">
               <StatsItem {...stat[3]} />
-            </Grid>
-          </Grid>
+            </div>
+          </MyGridContainer>
         </MyContainer>
       </div>
 

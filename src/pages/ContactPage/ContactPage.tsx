@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import { SubmitHandler } from "react-hook-form";
-import { Grid } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
@@ -30,15 +29,15 @@ export default function Contact() {
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
-          <Grid item md={12} xs={12}>
+          <div className="w-full">
             <h1 className="font-normal text-[54px] leading-[88px] tracking-[0.5px] mb-[8px]">
               Pleasure to meet you.
             </h1>
-          </Grid>
+          </div>
         </MyGridContainer>
 
         <MyGridContainer>
-          <Grid item md={6} xs={12}>
+          <div className="w-full md:w-1/2">
             <p className="font-normal text-base leading-6 tracking-[0.5px] mb-[40px] text-gray-700">
               I&rsquo;m always open to make new connections and chat about
               software&nbsp;development.
@@ -47,7 +46,7 @@ export default function Contact() {
             <ContactForm onSubmit={handleSubmit} />
 
             {isSending && <span>Sending&hellip;</span>}
-          </Grid>
+          </div>
         </MyGridContainer>
       </MyContainer>
 

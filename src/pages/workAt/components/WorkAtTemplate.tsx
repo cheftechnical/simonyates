@@ -5,7 +5,6 @@ import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import WorkAtEmployer from "./WorkAtEmployer";
 import WorkAtRole from "./WorkAtRole";
 import WorkAtWhenWhere from "./WorkAtWhenWhere";
-import { Box, Grid, Hidden } from "@mui/material";
 import { Sections } from "../../../types/Sections.ts";
 import NavRight from "../../../components/NavRight";
 
@@ -76,42 +75,35 @@ export default function WorkAtTemplate(props: Props) {
     <MyContainer>
       <MyGridContainer>
         {/* Avatar */}
-        <Grid item sm={1} xs={2}>
+        <div className="flex-shrink-0 basis-[16.666667%] sm:basis-[8.333333%] max-w-[16.666667%] sm:max-w-[8.333333%] pl-6">
           {logo}
-        </Grid>
+        </div>
 
         {/* Show for mobile (xs, sm) */}
-        <Hidden mdUp>
-          {/* Content */}
-          <Grid item sm={6} xs={10}>
-            <CenterVertically>{renderedWorkAtEmployer}</CenterVertically>
-          </Grid>
-          <Grid item sm={12} xs={12}>
-            {renderedWorkAtRole}
-            {renderedWorkAtWhenWhere}
-            {content}
-          </Grid>
-        </Hidden>
+        <div className="md:hidden w-5/6 sm:w-1/2 pl-6">
+          <CenterVertically>{renderedWorkAtEmployer}</CenterVertically>
+        </div>
+        <div className="md:hidden w-full pl-6">
+          {renderedWorkAtRole}
+          {renderedWorkAtWhenWhere}
+          {content}
+        </div>
 
         {/* Show for desktop (md, lg, xl) */}
-        <Hidden smDown>
-          {/* Content */}
-          <Grid item sm={6} xs={10}>
-            <div>{renderedWorkAtEmployer}</div>
-            {/*<div className={classes.role}>*/}
-            <Box pt="3.5">{renderedWorkAtRole}</Box>
-            {renderedWorkAtWhenWhere}
-            {content}
-          </Grid>
+        <div className="hidden md:block md:w-1/2 pl-6">
+          <div>{renderedWorkAtEmployer}</div>
+          <div>{renderedWorkAtRole}</div>
+          {renderedWorkAtWhenWhere}
+          {content}
+        </div>
 
-          {/* Gutter */}
-          <Grid item md={2} />
+        {/* Gutter */}
+        <div className="hidden md:block md:w-[16.666667%]" />
 
-          {/* Navigation */}
-          <Grid item md={3}>
-            <NavRight sections={sections} />
-          </Grid>
-        </Hidden>
+        {/* Navigation */}
+        <div className="hidden md:block md:w-1/4 pl-6">
+          <NavRight sections={sections} />
+        </div>
       </MyGridContainer>
     </MyContainer>
   );
