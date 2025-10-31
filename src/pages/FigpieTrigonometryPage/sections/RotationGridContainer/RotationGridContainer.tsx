@@ -34,8 +34,8 @@ export const RotationGridContainer = memo(function() {
     setTheta(newTheta);
   });
 
-  const handleThetaChange = ((event: ChangeEvent<HTMLInputElement>) => {
-    setTheta(parseFloat(event.target.value));
+  const handleThetaChange = ((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setTheta(parseFloat((event.target as HTMLInputElement).value));
   });
 
   return (

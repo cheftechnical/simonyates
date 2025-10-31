@@ -16,12 +16,12 @@ export const BezierArcGridContainer = memo(function () {
 		setRadius(newRadius);
 	});
 
-  const handleEndAngleChange = ((event: ChangeEvent<HTMLInputElement>) => {
-    setEndAngle(parseFloat(event.target.value));
+  const handleEndAngleChange = ((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setEndAngle(parseFloat((event.target as HTMLInputElement).value));
 	});
 
-  const handleRadiusChange = ((event: ChangeEvent<HTMLInputElement>) => {
-    setRadius(parseFloat(event.target.value));
+  const handleRadiusChange = ((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setRadius(parseFloat((event.target as HTMLInputElement).value));
 	});
 
 	return (

@@ -5,7 +5,7 @@ interface Props {
   /**
    * The content of the container.
    */
-  children: ReactNode;
+  children: NonNullable<ReactNode>;
 }
 
 export default function LifeAsAMakerContainer(props: Props) {
