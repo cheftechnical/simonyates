@@ -1,5 +1,4 @@
 import "./style.css";
-import { CSSProperties } from "@mui/material/styles/createMixins";
 import NavRightItem from "./NavRightItem";
 import { Sections } from "../../types/Sections.ts";
 
@@ -9,10 +8,6 @@ interface NavRightProps {
    */
   sections?: Sections;
 }
-
-const rootStyle: CSSProperties = {
-  position: "fixed"
-};
 
 export function NavRight(props: NavRightProps) {
   const { sections } = props;
@@ -29,49 +24,11 @@ export function NavRight(props: NavRightProps) {
   }
 
   return (
-    <div style={rootStyle}>
-
-      {/*<a onClick={(e) => onPress(e)} href={"#section-1"}>*/}
-      {/*  <div*/}
-      {/*    style={{ textAlign: "center" }}*/}
-      {/*    data-to-scrollspy-id="section-1"*/}
-      {/*    className="ss-item-demo-2"*/}
-      {/*  >*/}
-      {/*    Section 1*/}
-      {/*  </div>*/}
-      {/*</a>*/}
-      {/*<a onClick={(e) => onPress(e)} href={"#section-2"}>*/}
-      {/*  <div*/}
-      {/*    data-to-scrollspy-id="section-2"*/}
-      {/*    className="ss-item-demo-2 text-center"*/}
-      {/*  >*/}
-      {/*    Section 2*/}
-      {/*  </div>*/}
-      {/*</a>*/}
-      {/*<a onClick={(e) => onPress(e)} href={"#section-3"}>*/}
-      {/*  <div*/}
-      {/*    data-to-scrollspy-id="section-3"*/}
-      {/*    className="ss-item-demo-2 text-center"*/}
-      {/*  >*/}
-      {/*    Section 3*/}
-      {/*  </div>*/}
-      {/*</a>*/}
-
-      <ul
-        style={{
-          listStyle: "none",
-          // position: "fixed",
-          // top: 0,
-          // right: 0,
-          // backgroundColor: "#fff",
-          padding: "1rem"
-        }}
-      >
-
+    <div className="fixed">
+      <ul className="list-none p-4">
         {Object.entries(sections).map(([key, value]) => (
           <NavRightItem key={key} section={value} />
         ))}
-
       </ul>
     </div>
   );

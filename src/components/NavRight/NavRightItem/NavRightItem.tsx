@@ -1,39 +1,23 @@
-import rem from "../../../styling/rem";
-import { Link, styled } from "@mui/material";
-import color from "../../../styling/Color";
 import { Section } from "../../../types/Section.ts";
 
 type NavRightItemProps = {
   section: Section;
 }
 
-const StyledLi = styled("li")(({ theme }) => ({
-  marginBottom: theme.spacing(24 / 8),
-  paddingLeft: theme.spacing(8 / 8),
-
-  color: color.grey["500"],
-
-  borderLeft: `2px solid ${color.white}`,
-}));
-
-const StyledLink = styled(Link)(() => ({
-  textDecoration: "none",
-  lineHeight: rem(16),
-  letterSpacing: rem(0.25),
-  color: color.grey["500"],
-  borderLeft: "none !important",
-
-  "&:hover": {
-    color: color.grey["900"],
-  },
-})) as typeof Link;
-
 export default function NavRightItem(props: NavRightItemProps) {
   const { section } = props;
 
   return (
-    <StyledLi data-to-scrollspy-id={section.id}>
-      <StyledLink href={`#${section.id}`}>{section.title}</StyledLink>
-    </StyledLi>
+    <li
+      className="mb-6 pl-1 text-gray-500 border-l-2 border-white"
+      data-to-scrollspy-id={section.id}
+    >
+      <a
+        className="no-underline leading-4 tracking-[0.25px] text-gray-500 hover:text-gray-900"
+        href={`#${section.id}`}
+      >
+        {section.title}
+      </a>
+    </li>
   );
 }
