@@ -113,7 +113,7 @@ export function ContactForm(props: Props) {
                   ? errors.body.message.toString()
                   : undefined
               }
-              placeholder="MessageFormValues"
+              placeholder="Message"
               rows={7}
             />
           )}
