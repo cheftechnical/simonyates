@@ -1,6 +1,4 @@
 import { useMemo } from "react";
-import rem from "../../../styling/rem";
-import { Box, Link, Typography } from "@mui/material";
 
 interface Props {
   author?: string;
@@ -10,15 +8,6 @@ interface Props {
   title: string;
   date: string;
 }
-
-// const useStyles = makeStyles(() => ({
-// 	root: {
-// 		paddingTop: 0,
-// 	},
-// 	next: {
-// 		paddingTop: rem(16),
-// 	}
-// }));
 
 export default function WorkAtPublication(props: Props) {
   const { author, link, next, publisher, title, date } = props;
@@ -39,9 +28,9 @@ export default function WorkAtPublication(props: Props) {
       return (
         <em>
           &ldquo;
-          <Link href={link} target="_blank">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 no-underline hover:underline">
             {content}
-          </Link>
+          </a>
           &rdquo;
         </em>
       );
@@ -54,17 +43,13 @@ export default function WorkAtPublication(props: Props) {
 
   const renderedPublisher = publisher ? <>. {publisher}</> : <></>;
 
-  // const className = (next)
-  //   ? `${classes.root} ${classes.next}`
-  //   : classes.root;
-
   return (
-    <Box sx={{ paddingTop: next ? rem(16) : 0 }}>
-      <Typography component="p" variant="primaryBody">
+    <div className={next ? "pt-4" : ""}>
+      <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
         {renderedAuthor}
         {date}. {renderedTitle}
         {renderedPublisher}
-      </Typography>
-    </Box>
+      </p>
+    </div>
   );
 }

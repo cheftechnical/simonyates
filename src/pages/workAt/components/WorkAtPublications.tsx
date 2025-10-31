@@ -1,5 +1,4 @@
 import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
-import { Box } from "@mui/material";
 
 interface Props {
   children?: any;
@@ -10,12 +9,8 @@ export default function WorkAtPublications(props: Props) {
   const { children, next } = props;
 
   return (
-    <Box
-      sx={(theme) => ({
-        paddingTop: next ? theme.spacing(5) : 0,
-      })}
-    >
+    <div className={next ? "pt-10" : ""}>
       <ConditionalIndent>{children}</ConditionalIndent>
-    </Box>
+    </div>
   );
 }

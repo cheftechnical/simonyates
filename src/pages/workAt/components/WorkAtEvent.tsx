@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Box, Typography } from "@mui/material";
 
 interface Props {
   /**
@@ -17,18 +16,13 @@ interface Props {
 }
 
 export default function WorkAtEvent(props: Props) {
-  // const classes = useStyles();
   const { date, next, title } = props;
 
   return (
-    <Box
-      sx={(theme) => ({
-        paddingTop: next ? theme.spacing(2) : 0,
-      })}
-    >
-      <Typography component="p" variant="primaryBody">
+    <div className={next ? "pt-4" : ""}>
+      <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
         {date} &bull; {title}
-      </Typography>
-    </Box>
+      </p>
+    </div>
   );
 }
