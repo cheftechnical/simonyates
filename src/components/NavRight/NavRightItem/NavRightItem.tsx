@@ -9,7 +9,8 @@ export default function NavRightItem(props: NavRightItemProps) {
 
   return (
     <li
-      className="mb-6 pl-1 text-gray-500 border-l-2 border-white"
+      id={`nav-${section.id}`}
+      className="mb-6 pl-1 text-gray-500 nav-right-item"
       data-to-scrollspy-id={section.id}
     >
       <a
