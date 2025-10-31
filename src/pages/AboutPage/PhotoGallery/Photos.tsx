@@ -1,24 +1,13 @@
 import Image from "../../../components/Image/Image";
-import rem from "../../../styling/rem";
 import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import Carousel from "react-material-ui-carousel";
-import { Grid, Hidden, styled } from "@mui/material";
-
-// const useStyles = makeStyles(() => ({
-//   root: {
-//     paddingTop: rem(24)
-//   },
-// }));
-
-const StyledDivRoot = styled("div")(() => ({
-  paddingTop: rem(24),
-}));
+import { Grid } from "@mui/material";
 
 export default function Photos() {
   return (
-    <StyledDivRoot>
+    <div className="pt-[24px]">
       {/* Desktop */}
-      <Hidden smDown>
+      <div className="hidden sm:block">
         <MyGridContainer>
           <Grid item xs={3}>
             <Image
@@ -45,10 +34,10 @@ export default function Photos() {
             />
           </Grid>
         </MyGridContainer>
-      </Hidden>
+      </div>
 
       {/*	Mobile */}
-      <Hidden mdUp>
+      <div className="block sm:hidden">
         <Carousel animation="slide" autoPlay={false}>
           <div>
             <Image
@@ -75,7 +64,7 @@ export default function Photos() {
             />
           </div>
         </Carousel>
-      </Hidden>
-    </StyledDivRoot>
+      </div>
+    </div>
   );
 }

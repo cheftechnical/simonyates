@@ -1,14 +1,12 @@
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 import Photos from "./Photos";
-import { Typography } from "@mui/material";
 
 export default function PhotoGallery() {
   return (
     <MyContainer>
-      {/*<Typography group="primary" variant="body" weight="regular">*/}
-      <Typography component="p" variant="primaryBody">
+      <p className="font-normal text-base leading-6 tracking-[0.5px]">
         In case you&rsquo;re curious, here are some of my photos from traveling
-      </Typography>
+      </p>
 
       <Photos />
     </MyContainer>
