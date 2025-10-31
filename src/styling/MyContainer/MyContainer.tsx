@@ -1,40 +1,27 @@
-import { Container } from "@mui/material";
+import { ReactNode } from "react";
 
 interface Props {
-  children: NonNullable<React.ReactNode>;
-  className?: string | undefined;
+  children: NonNullable<ReactNode>;
+  className?: string;
   fullHeight?: boolean;
 }
 
-// const useStyles = makeStyles(() => ({
-// 	fullHeight: {
-// 		height: '100%'
-// 	}
-// }));
-
-export default function MyContainer(props: Props) {
-  // const classes = useStyles();
-  const { children, className, fullHeight } = props;
-
-  // const rootClassName = (fullHeight)
-  // 	? `${classes.fullHeight} ${className}`
-  // 	: className;
-
-  // return (
-  // 	<Container className={rootClassName}>
-  // 		{children}
-  // 	</Container>
-  // );
+export default function MyContainer({ children, className = "", fullHeight = false }: Props) {
+  const baseClasses = `
+    mx-auto
+    px-[22px]
+    w-full
+    max-w-full
+    sm:max-w-[600px]
+    md:max-w-[960px]
+    lg:max-w-[1076px]
+    ${fullHeight ? "h-full" : ""}
+    ${className}
+  `.trim().replace(/\s+/g, " ");
 
   return (
-    <Container
-      sx={{
-        height: fullHeight ? "100%" : "",
-        // color:  fullHeight ? 'magenta !important' : 'inherit'
-      }}
-      className={className}
-    >
+    <div className={baseClasses}>
       {children}
-    </Container>
+    </div>
   );
 }
