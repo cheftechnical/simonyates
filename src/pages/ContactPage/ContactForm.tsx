@@ -3,8 +3,8 @@
  * https://react-hook-form.com/get-started#IntegratingwithUIlibraries
  */
 import SendIcon from "@mui/icons-material/Send";
-import { Button, styled } from "@mui/material";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { MyButton } from "../../styling/MyButton";
 import { MyTextField2 } from "../../styling/MyTextField2/MyTextField2";
 import { MessageFormValues } from "./MessageFormValues";
 
@@ -17,10 +17,6 @@ interface Props {
    */
   onSubmit: SubmitHandler<MessageFormValues>;
 }
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(16 / 8),
-}));
 
 export function ContactForm(props: Props) {
   const { onSubmit } = props;
@@ -126,12 +122,13 @@ export function ContactForm(props: Props) {
           }}
         />
 
-        <StyledButton
+        <MyButton
+          className="mt-4"
           endIcon={<SendIcon style={{ fontSize: "16px" }} />}
           type="submit"
         >
           Send
-        </StyledButton>
+        </MyButton>
       </form>
     </div>
   );
