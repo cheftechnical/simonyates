@@ -1,9 +1,4 @@
-import { useMemo } from "react";
 import { NavLink } from "react-router-dom";
-import { styled, Typography } from "@mui/material";
-import color from "../../../../../styling/Color";
-import rem from "../../../../../styling/rem";
-import "./index.css";
 
 enum Variant {
   FadeIn = "fadeIn",
@@ -22,160 +17,93 @@ export interface Props {
   variant?: Variant.FadeIn | Variant.SlideIn | Variant.Center;
 }
 
-const nMilliseconds = "150ms";
-
-const StyledLi = styled("li")(({ theme }) => ({
-  // margin: '0 2rem',
-  marginLeft: theme.spacing(3) // controls the spacing between each menu item
-}));
-
-const StyledLiCenter = styled(StyledLi)(() => ({
-  "& a::after": {
-    opacity: "1",
-    transform: "scale(0)",
-    transformOrigin: "center"
-  },
-
-  "& a:hover::after, & a:focus::after": {
-    transform: "scale(1)"
-  }
-}));
-
-const StyledLiFadeIn = styled(StyledLi)(() => ({
-  // do nothing
-}));
-
-const StyledLiSlideIn = styled(StyledLi)(() => ({
-  // slide in
-  "& a": {
-    overflow: "hidden"
-  },
-
-  "& a::after": {
-    opacity: "1",
-
-    // A weird glitch with Chrome will cause 1px to remain visible after the animation, but if you set the reset
-    // to `-110%`,it will hide it
-    transform: "translate3d(-105%, 0, 0)"
-  },
-
-  "& a:hover::after, & a:focus::after": {
-    transform: "translate3d(0, 0, 0)"
-  }
-}));
-
-const StyledUl = styled("ul")(() => ({
-  listStyle: "none",
-  margin: "0",
-  padding: "0",
-
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center"
-}));
-
-const StyledReactRouterDomLink = styled(NavLink)(() => ({
-  color: "inherit",
-  textDecoration: "none",
-
-  display: "block",
-  position: "relative",
-  // padding: '0.2em 0;',
-  // padding: '10px 0', // Sets the distance the underline has from the text
-  paddingTop: rem(6),
-  paddingBottom: rem(6),
-
-  // FadeIn in
-  "&::after": {
-    content: "\"\"",
-    position: "absolute",
-    bottom: "0",
-    left: "0",
-    width: "100%",
-    // height: '0.1em',
-    height: rem(2), // Sets the thickness of the underline
-    backgroundColor: color.grey[900],
-    opacity: "0",
-    transition: `opacity ${nMilliseconds}, transform ${nMilliseconds}`
-  },
-
-  "&:hover::after, &:focus::after": {
-    opacity: "1",
-    transform: "translate3d(0, 0.2em, 0)"
-  },
-
-  "&.active": {
-    fontWeight: "bold"
-  }
-}));
-
-const StyledReactRouterDomLinkFadeIn = styled(StyledReactRouterDomLink)(
-  () => ({})
-);
-
 export function MenuItems(props: Props) {
   const { selected, variant = Variant.SlideIn } = props;
 
-  const MyLi = useMemo(() => {
+  // Base classes for list items
+  const getLiClasses = () => {
+    const baseClasses = "ml-12"; // theme.spacing(3) = 24px = ml-12
+    
     switch (variant) {
       case Variant.Center:
-        return StyledLiCenter;
-      case Variant.FadeIn:
-        return StyledLiFadeIn;
+        return `${baseClasses} [&>a::after]:opacity-100 [&>a::after]:scale-0 [&>a::after]:origin-center [&>a:hover::after]:scale-100 [&>a:focus::after]:scale-100`;
       case Variant.SlideIn:
-        return StyledLiSlideIn;
+        return `${baseClasses} [&>a]:overflow-hidden [&>a::after]:opacity-100 [&>a::after]:translate-x-[-105%] [&>a:hover::after]:translate-x-0 [&>a:focus::after]:translate-x-0`;
+      case Variant.FadeIn:
       default:
-        throw new Error(`"${variant}" is not a valid variant for "MenuItems"`);
+        return baseClasses;
     }
-  }, [variant]);
+  };
 
-  const MyStyledReactRouterDomLink =
-    variant === Variant.FadeIn
-      ? StyledReactRouterDomLinkFadeIn
-      : StyledReactRouterDomLink;
+  // Base classes for NavLink
+  const getLinkClasses = () => {
+    const baseClasses = "text-inherit no-underline block relative py-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#222222] after:transition-all after:duration-150";
+    
+    if (variant === Variant.FadeIn) {
+      // FadeIn: starts invisible, fades in and moves down on hover
+      return `${baseClasses} after:opacity-0 hover:after:opacity-100 hover:after:translate-y-1 focus:after:opacity-100 focus:after:translate-y-1`;
+    }
+    
+    // For SlideIn and Center, opacity is already set to 1 in li classes
+    // Don't override it here - just use base classes
+    return baseClasses;
+  };
+
+  const liClasses = getLiClasses();
+  const linkClasses = getLinkClasses();
 
   return (
     <div role="navigation">
-      <StyledUl>
-        <MyLi>
-          <Typography
-            fontWeight={selected === "work" ? "bold" : "regular"}
-            variant="primaryButtonText"
+      <ul className="list-none m-0 p-0 flex flex-wrap justify-center">
+        <li className={liClasses}>
+          <NavLink
+            to="/work"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "work" ? "font-bold" : "font-normal"
+              }`
+            }
           >
-            <MyStyledReactRouterDomLink to="/work">
-              Work
-            </MyStyledReactRouterDomLink>
-          </Typography>
-        </MyLi>
-        <MyLi>
-          <Typography
-            fontWeight={selected === "featured" ? "bold" : "regular"}
-            variant="primaryButtonText"
+            Work
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
+            to="/featured"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "featured" ? "font-bold" : "font-normal"
+              }`
+            }
           >
-            <MyStyledReactRouterDomLink to="/featured">
-              Featured
-            </MyStyledReactRouterDomLink>
-          </Typography>
-        </MyLi>
-        <MyLi>
-          <Typography
-            fontWeight={selected === "about" ? "bold" : "regular"}
-            variant="primaryButtonText"
+            Featured
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "about" ? "font-bold" : "font-normal"
+              }`
+            }
           >
-            <MyStyledReactRouterDomLink to="/about">
-              About
-            </MyStyledReactRouterDomLink>
-          </Typography>
-        </MyLi>
-        <MyLi>
-          <Typography
-            fontWeight={selected === "contact" ? "bold" : "regular"}
-            variant="primaryButtonText"
+            About
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "contact" ? "font-bold" : "font-normal"
+              }`
+            }
           >
-            <MyStyledReactRouterDomLink to="/contact">Contact</MyStyledReactRouterDomLink>
-          </Typography>
-        </MyLi>
-      </StyledUl>
+            Contact
+          </NavLink>
+        </li>
+      </ul>
     </div>
   );
 }
