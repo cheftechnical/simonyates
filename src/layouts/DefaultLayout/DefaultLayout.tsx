@@ -50,20 +50,14 @@ const StyledMainFullHeight = styled(StyledMain)(() => ({
   // color: 'green !important'
 }));
 
-const StyledFooter = styled("footer")(({ theme }) => ({
-  marginTop: theme.spacing(88 / 8),
-}));
-
-const StyledFooterFullHeight = styled(StyledFooter)(() => ({
-  marginTop: rem(0 - fullHeightOpticalOffset), // remove the margin so that the footer fits nicely out of frame
-}));
 
 export default function DefaultLayout(props: Props) {
   const { children, fullHeight, top } = props;
 
-  const [MyMain, MyFooter] = fullHeight
-    ? [StyledMainFullHeight, StyledFooterFullHeight]
-    : [StyledMain, StyledFooter];
+  const MyMain = fullHeight ? StyledMainFullHeight : StyledMain;
+  const footerMarginTop = fullHeight 
+    ? rem(0 - fullHeightOpticalOffset) 
+    : "88px"; // theme.spacing(88 / 8) = 11 * 8px = 88px
 
   return (
     <>
@@ -79,9 +73,9 @@ export default function DefaultLayout(props: Props) {
           {children}
         </MyMain>
 
-        <MyFooter>
+        <footer className="w-full" style={{ marginTop: footerMarginTop }}>
           <Footer />
-        </MyFooter>
+        </footer>
       </StyledDivRoot>
 
       <ScrollRestoration
