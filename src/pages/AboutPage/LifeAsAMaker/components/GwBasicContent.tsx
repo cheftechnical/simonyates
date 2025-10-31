@@ -1,4 +1,3 @@
-import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import GwBasicImgWrapper from "./GwBasicImgWrapper";
@@ -10,14 +9,14 @@ export default function GwBasicContent() {
     <MyGridContainer className="pb-[56px] sm:pb-[152px]">
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/2">
-        <CenterVertically>
+        <div className="h-full flex items-center">
           <GwBasicImgWrapper>
             <Image
               alt="GW Basic"
               src="/images/about/life-as-a-maker/gw-basic.png"
             />
           </GwBasicImgWrapper>
-        </CenterVertically>
+        </div>
       </div>
 
       {/* Show for mobile*/}

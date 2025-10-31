@@ -1,5 +1,4 @@
 import { ReactElement, useMemo } from "react";
-import CenterVertically from "../../../components/CenterVertically/CenterVertically";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import WorkAtEmployer from "./WorkAtEmployer";
@@ -81,7 +80,7 @@ export default function WorkAtTemplate(props: Props) {
 
         {/* Show for mobile (xs, sm) */}
         <div className="md:hidden w-5/6 sm:w-1/2 pl-6">
-          <CenterVertically>{renderedWorkAtEmployer}</CenterVertically>
+          <div className="h-full flex items-center">{renderedWorkAtEmployer}</div>
         </div>
         <div className="md:hidden w-full pl-6">
           {renderedWorkAtRole}

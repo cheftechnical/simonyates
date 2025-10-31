@@ -1,11 +1,9 @@
 /**
  * This component will render the welcome text and consider widows/orphans at various viewport sizes.
  */
-import CenterVertically from "../../components/CenterVertically/CenterVertically";
-
 export default function Content() {
   return (
-    <CenterVertically>
+    <div className="h-full flex items-center">
       <h1 className="font-normal text-[54px] leading-[88px] tracking-[0.5px]">
         {/* xs only */}
         <span className="block sm:hidden">
@@ -37,6 +35,6 @@ export default function Content() {
           so I made a&nbsp;website.
         </span>
       </h1>
-    </CenterVertically>
+    </div>
   );
 }

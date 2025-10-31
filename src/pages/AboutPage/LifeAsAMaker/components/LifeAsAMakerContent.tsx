@@ -1,4 +1,3 @@
-import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import LifeAsAMakerImgWrapper from "./LifeAsAMakerImgWrapper";
@@ -21,14 +20,14 @@ export default function LifeAsAMakerContent() {
       <MyGridContainer className="pb-[139px]">
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
-          <CenterVertically>
+          <div className="h-full flex items-center">
             <LifeAsAMakerImgWrapper>
               <Image
                 alt="Apple Macintosh"
                 src="/images/about/life-as-a-maker/apple-macintosh.png"
               />
             </LifeAsAMakerImgWrapper>
-          </CenterVertically>
+          </div>
         </div>
 
         <div className="w-full md:w-1/2">

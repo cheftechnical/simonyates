@@ -4,7 +4,6 @@ import Logo from "../../../../components/Logo";
 import Menu from "./Menu";
 import { color } from "../../../../styling/Color/Color";
 import rem from "../../../../styling/rem";
-import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import { ReactNode, useCallback, useMemo, useState } from "react";
 import { Box, IconButton, Link, styled } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -67,25 +66,25 @@ export default function ForMobile() {
         <Box display="flex" justifyContent="flex-end">
           {/* Left align */}
           <Box flexGrow={1}>
-            <CenterVertically>
+            <div className="h-full flex items-center">
               <Link component={ReactRouterDomLink} to="/">
                 <Logo brand="simon-yates" variant="default" width={149} />
               </Link>
-            </CenterVertically>
+            </div>
           </Box>
 
           {/*	Right align */}
           <Box>
-            <CenterVertically>
+            <div className="h-full flex items-center">
               <StyledTypographySelected>{selected}</StyledTypographySelected>
-            </CenterVertically>
+            </div>
           </Box>
           <Box>
-            <CenterVertically>
+            <div className="h-full flex items-center">
               <IconButton aria-label="menu" onClick={handleShowMenu}>
                 <MenuIcon />
               </IconButton>
-            </CenterVertically>
+            </div>
           </Box>
         </Box>
       </MyContainer>

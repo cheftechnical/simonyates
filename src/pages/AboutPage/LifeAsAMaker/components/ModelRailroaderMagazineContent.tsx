@@ -1,4 +1,3 @@
-import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import H3 from "./H3";
@@ -45,14 +44,14 @@ export default function ModelRailroaderMagazineContent() {
 
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
-          <CenterVertically>
+          <div className="h-full flex items-center">
             <ModelRailroaderMagazineImgWrapper>
               <Image
                 alt="Model Railroader Magazine"
                 src="/images/about/life-as-a-maker/model-railroader-magazine.png"
               />
             </ModelRailroaderMagazineImgWrapper>
-          </CenterVertically>
+          </div>
         </div>
 
         {/* Show for mobile */}

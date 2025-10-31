@@ -1,4 +1,3 @@
-import CenterVertically from "../../../../components/CenterVertically/CenterVertically";
 import Image from "../../../../components/Image/Image";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import H3 from "./H3";
@@ -42,14 +41,14 @@ export default function TlcContent() {
 
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
-          <CenterVertically>
+          <div className="h-full flex items-center">
             <TlcImgWrapper>
               <Image
                 alt="The Learning Company - Super Solvers: Out Numbered!"
                 src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
               />
             </TlcImgWrapper>
-          </CenterVertically>
+          </div>
         </div>
 
         {/* Show for mobile */}
