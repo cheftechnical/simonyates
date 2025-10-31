@@ -1,6 +1,5 @@
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import Li from "../../styling/ListsUnordered/Li/Li";
-import { Typography } from "@mui/material";
 
 const legalName = "Sybaris Analytics Corporation";
 const tradeName = "Sybaris";
@@ -19,38 +18,38 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
   return (
     <div id={id}>
-      <Typography component="h1" variant="primaryH2">
+      <h1 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
         Privacy Policy
-      </Typography>
+      </h1>
 
-      <Typography component="p" variant="primarySubtitleNext">
+      <p className="font-normal text-[14px] leading-4 tracking-[0.25px] mt-4">
         This Privacy Policy applies to all of the products, services and
         websites of {legalName}, or its subsidiaries or
         affiliated&nbsp;companies.
-      </Typography>
+      </p>
 
-      <Typography component="p" variant="primarySubtitleNext">
+      <p className="font-normal text-[14px] leading-4 tracking-[0.25px] mt-4">
         If you have any questions about this Privacy Policy, please feel free to
         contact us trough our website, or write to us&nbsp;at:
-      </Typography>
+      </p>
 
       <address>
-        <Typography component="p" variant="primaryBodyNext">
+        <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
           Privacy Matters
           <br />
           c/o {legalName}
           <br />
           {address}
-        </Typography>
+        </p>
       </address>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Information we collect, and how we use&nbsp;it:
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         We may collect the following types of&nbsp;information:
-      </Typography>
+      </p>
 
       <Ul next>
         <Li>
@@ -121,9 +120,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         In addition to the above, we may use the information we collect&nbsp;to:
-      </Typography>
+      </p>
 
       <Ul next>
         <Li>
@@ -135,27 +134,27 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <Typography component="p" variant="primaryBody">
+      <p className="font-normal text-base leading-6 tracking-[0.5px]">
         If we use this information in a manner different than the purpose for
         which it was collected, then we will ask for your consent prior to
         such&nbsp;use.
-      </Typography>
+      </p>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         {tradeName} process personal information on our services in the Canada
         and other countries. In some cases, we process personal information out
         of your own&nbsp;country.
-      </Typography>
+      </p>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Information Sharing
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         {legalName} only shares personal information with other companies or
         individuals outside of {legalName}
         in the following limited&nbsp;circumstances:
-      </Typography>
+      </p>
 
       <Ul next>
         <Li>
@@ -192,32 +191,32 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Information Security
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         We take appropriate security measures to protect against unauthorized
         access to, or unauthorized alteration, disclosure or destruction of
         data. These include internal reviews of our data collection, storage and
         processing practices and security measures, including appropriate
         encryption and physical security measures to guard against unauthorized
         access to systems where we store personal&nbsp;data.
-      </Typography>
+      </p>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         We restrict access to personal information to {legalName} employees,
         contractors and agents who need to know that information in order to
         process it on our behalf. These individuals are bound by confidentiality
         obligations and may be subject to discipline, including termination and
         criminal prosecution, if they fail to meet these&nbsp;obligations.
-      </Typography>
+      </p>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Accessing and updating personal&nbsp;information
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         When you use {tradeName} services, we make good faith efforts to provide
         you with access to your personal information and either correct this
         data if it is inaccurate or delete such data at your request if it is
@@ -236,13 +235,13 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         make take a period of time before they are deleted from our active
         servers and may remain in our backup systems. Please review the services
         Help Centers for more&nbsp;information.
-      </Typography>
+      </p>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Enforcement
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         {tradeName} regularly reviews its compliance with this Privacy Policy.
         When we receive formal written complaints, it is {tradeName}&rsquo;s
         policy to contact the complaining user regarding his or her concerns. We
@@ -250,13 +249,13 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         local data protection authorities, to resolve any complains regarding
         the transfer of personal data that cannot be resolved between{" "}
         {legalName} and an&nbsp;individual.
-      </Typography>
+      </p>
 
-      <Typography component="h2" variant="primaryH3Next">
+      <h2 className="font-normal text-2xl leading-8 mt-8">
         Changes to this Privacy&nbsp;Policy
-      </Typography>
+      </h2>
 
-      <Typography component="p" variant="primaryBodyNext">
+      <p className="font-normal text-base leading-6 tracking-[0.5px] mt-6">
         Please note that this Privacy Policy may change from time to time. We
         will not reduce your rights under this Privacy Policy without your
         explicit consent. We will post any Privacy Policy changes on this page
@@ -264,7 +263,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         notice (including, for certain services, email notification of Privacy
         Policy changes). We will also keep prior versions of this Privacy Policy
         in an archive for your&nbsp;review.
-      </Typography>
+      </p>
     </div>
   );
 }
