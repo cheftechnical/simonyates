@@ -1,12 +1,5 @@
-// import * as React from 'react';
-// import {makeStyles} from '@material-ui/core/styles';
-import { color } from "../../styling/Color/Color";
-import rem from "../../styling/rem";
 import Image from "../Image/Image";
 import { ReactElement, useMemo } from "react";
-import { Box, Link, styled } from "@mui/material";
-
-// import {Link} from '@material-ui/core';
 
 interface Props {
   alt: string;
@@ -17,64 +10,18 @@ interface Props {
   src: string;
 }
 
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	root: {
-//
-// 	},
-// 	rootNext: {
-// 		paddingTop: themeMui.spacing(40/8),
-// 	},
-//
-// 	caption: {
-// 		marginTop: themeMui.spacing((8-2) /8), // subtract 2 for automatic spacing
-//
-// 		// @todo I hate the way I coded this — the value is coming from Typography
-// 		fontFamily: '"Tiempos Text"',
-// 		fontStyle: 'normal',
-// 		fontWeight: 'normal',
-// 		fontSize: rem(12),
-// 		lineHeight: rem(16),
-// 		letterSpacing: rem(0.4),
-//
-// 		color: color.grey['700']
-// 	},
-// 	image: {
-//
-// 	}
-// }));
-
-const StyledFigCaption = styled("figcaption")(({ theme }) => ({
-  marginTop: theme.spacing((8 - 2) / 8), // subtract 2 for automatic spacing
-
-  // @todo I hate the way I coded this — the value is coming from Typography
-  fontFamily: '"Tiempos Text"',
-  fontStyle: "normal",
-  fontWeight: "normal",
-  fontSize: rem(12),
-  lineHeight: rem(16),
-  letterSpacing: rem(0.4),
-
-  color: color.grey["700"],
-}));
 
 export default function Figure(props: Props) {
-  // const classes = useStyles();
   const { alt, callToAction, caption, href, next, src } = props;
-
-  // @todo mui5
-  // const rootClassName = (next)
-  // 	? `${classes.root} ${classes.rootNext}`
-  // 	: classes.root;
 
   const renderedFigureContent = useMemo(() => {
     const image = <Image alt={alt} src={src} />;
 
     if (href) {
       return (
-        <Link href={href} target="_blank">
+        <a href={href} target="_blank" rel="noopener noreferrer">
           {image}
-        </Link>
+        </a>
       );
     }
 
@@ -88,29 +35,33 @@ export default function Figure(props: Props) {
       <div>
         <div>{caption}</div>
         <div>
-          <Link href={href} target="_blank">
+          <a 
+            href={href} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-500 no-underline hover:underline"
+          >
             Watch Video &rsaquo;
-          </Link>
+          </a>
         </div>
       </div>
     ) : (
       <>{caption}</>
     );
 
-    return <StyledFigCaption>{captionContent}</StyledFigCaption>;
+    return (
+      <figcaption className="mt-1.5 font-primary font-normal text-xs leading-4 tracking-[0.4px] text-[#515151]">
+        {captionContent}
+      </figcaption>
+    );
   }, [callToAction, caption, href]);
 
-  // @todo mui5
   return (
-    <Box
-      sx={(theme) => ({
-        paddingTop: next ? theme.spacing(5) : 0,
-      })}
-    >
+    <div className={next ? "pt-10" : ""}>
       <figure>
         {renderedFigureContent}
         {renderedFigureCaption}
       </figure>
-    </Box>
+    </div>
   );
 }
