@@ -7,22 +7,18 @@ import FeaturedLi from "./components/FeaturedLi";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
 import Download from "./Download";
-import rem from "../../styling/rem";
 import FeaturedEvent from "./components/FeaturedEvent";
 import FeaturedEvents from "./components/FeaturedEvents";
 import FeaturedPublications from "./components/FeaturedPublications";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import { Grid, styled } from "@mui/material";
+import { Grid } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import { sections } from "./sections.ts";
 import NavRight from "../../components/NavRight";
 import FeaturedAbstract from "./components/FeaturedAbstract";
-
-const StyledNextSection = styled(Section)(() => ({
-  marginTop: rem(68)
-}));
+import NextSection from "./components/NextSection";
 
 
 export default function Featured() {
@@ -101,7 +97,7 @@ export default function Featured() {
                 </FeaturedPublications>
               </Section>
 
-              <StyledNextSection id={sections.events.id}>
+              <NextSection id={sections.events.id}>
                 <SectionTitle>Events</SectionTitle>
 
                 {/*<SectionDescription>*/}
@@ -149,7 +145,7 @@ export default function Featured() {
                     />
                   </FeaturedEvent>
                 </FeaturedEvents>
-              </StyledNextSection>
+              </NextSection>
             </Sections>
           </Grid>
 
