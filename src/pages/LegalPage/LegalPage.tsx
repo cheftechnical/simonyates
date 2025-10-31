@@ -3,7 +3,6 @@ import TermsAndConditions from "./TermsAndConditions";
 import NavRight from "../../components/NavRight/NavRight";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import { Grid } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import { Sections } from "../../types/Sections.ts";
 
@@ -23,16 +22,19 @@ export function Legal() {
     <PageWrapper title="Legal">
       <MyContainer>
         <MyGridContainer>
-          <Grid item md={6} xs={12}>
+          {/* Content */}
+          <div className="w-full md:w-1/2">
             <PrivacyPolicy id={sections.privacyPolicy.id} />
             <TermsAndConditions id={sections.termsAndConditions.id} />
-          </Grid>
-          <Grid item md={3} />
-          <Grid item md={3}>
+          </div>
 
+          {/* Gutter */}
+          <div className="hidden md:block md:w-1/4" />
+
+          {/* Navigation */}
+          <div className="hidden md:block md:w-1/4">
             <NavRight sections={sections} />
-
-          </Grid>
+          </div>
         </MyGridContainer>
       </MyContainer>
     </PageWrapper>
