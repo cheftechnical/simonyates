@@ -1,8 +1,19 @@
 import { ReactNode } from "react";
 
 interface Props {
+  /**
+   * The content to be displayed inside the container
+   */
   children: NonNullable<ReactNode>;
+  
+  /**
+   * Additional CSS classes to apply to the container
+   */
   className?: string;
+  
+  /**
+   * If true, the container will take the full height of its parent
+   */
   fullHeight?: boolean;
 }
 
