@@ -1,26 +1,7 @@
-// import {Grid, Hidden} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
-// import Carousel from 'react-material-ui-carousel';
-import { color } from "../../../styling/Color/Color";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 import StatsItem from "./StatsItem";
-import { Grid, Hidden, styled } from "@mui/material";
+import { Grid } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
-
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-//   root: {
-//     paddingTop: themeMui.spacing(60 / 8),
-//     paddingBottom: themeMui.spacing(36 / 8),
-//     backgroundColor: color.grey['50']
-//   },
-// }));
-
-const StyledDivRoot = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing(60 / 8),
-  paddingBottom: theme.spacing(36 / 8),
-  backgroundColor: color.grey["50"],
-}));
 
 interface Stat {
   caption: string;
@@ -48,9 +29,9 @@ const stat: Stat[] = [
 
 export default function Stats() {
   return (
-    <StyledDivRoot>
+    <div className="pt-[60px] pb-[36px] bg-gray-50">
       {/* Desktop */}
-      <Hidden smDown>
+      <div className="hidden sm:block">
         <MyContainer>
           <Grid container spacing={10}>
             <Grid item xs={3}>
@@ -67,10 +48,10 @@ export default function Stats() {
             </Grid>
           </Grid>
         </MyContainer>
-      </Hidden>
+      </div>
 
-      {/*	Mobile */}
-      <Hidden mdUp>
+      {/* Mobile */}
+      <div className="block sm:hidden">
         <Carousel animation="slide" autoPlay={false}>
           <div>
             <StatsItem {...stat[0]} />
@@ -85,7 +66,7 @@ export default function Stats() {
             <StatsItem {...stat[3]} />
           </div>
         </Carousel>
-      </Hidden>
-    </StyledDivRoot>
+      </div>
+    </div>
   );
 }
