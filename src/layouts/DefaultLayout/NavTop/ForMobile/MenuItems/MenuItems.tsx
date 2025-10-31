@@ -1,4 +1,3 @@
-import { styled } from "@mui/material";
 import MenuItem from "./MenuItem";
 
 export interface Props {
@@ -8,21 +7,16 @@ export interface Props {
   onClick: () => void;
 }
 
-const StyledDivMenuItems = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing((44 - 24 - 12) / 8),
-  textAlign: "right"
-}));
-
 export function MenuItems(props: Props) {
   const { onClick } = props;
 
   return (
-    <StyledDivMenuItems>
+    <div className="pt-2 text-right">
       <MenuItem href="/work" onClick={onClick} title="Work" />
       <MenuItem href={"/featured"} onClick={onClick} title="Featured" />
       <MenuItem href={"/about"} onClick={onClick} title="About" />
       <MenuItem href={"/contact"} onClick={onClick} title="Contact" />
-    </StyledDivMenuItems>
+    </div>
   );
 }
 
