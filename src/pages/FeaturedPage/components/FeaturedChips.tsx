@@ -1,37 +1,21 @@
-// import * as React from 'react';
-// import {Chip} from '@material-ui/core';
-// import {makeStyles} from '@material-ui/core/styles';
-import rem from "../../../styling/rem";
-import { Chip, styled } from "@mui/material";
-
 interface Props {
   list: string[];
 }
 
-// @todo mui5
-// const useStyles = makeStyles((themeMui) => ({
-// 	chips: {
-// 		paddingTop: themeMui.spacing(24 / 8),
-// 		paddingBottom: themeMui.spacing(24 / 8),
-// 		lineHeight: rem(48 - 4), // less 4 for the border thickness
-// 	},
-// }));
-
-const StyledDivChips = styled("div")(({ theme }) => ({
-  paddingTop: theme.spacing(24 / 8),
-  paddingBottom: theme.spacing(24 / 8),
-  lineHeight: rem(48 - 4), // less 4 for the border thickness
-}));
-
 export default function FeaturedChips(props: Props) {
-  // const classes = useStyles();
   const { list } = props;
 
   return (
-    <StyledDivChips>
+    <div className="pt-6 pb-6 leading-[44px]">
       {list.map((item, index) => (
-        <Chip key={index} label={item} />
+        <span
+          key={index}
+          className="inline-block mr-2 font-normal text-sm leading-4 tracking-[0.25px] text-[#3B3B3B] bg-[#F8FAEF] border-[1.5px] border-solid border-[#DDE7B1] px-3 py-1 rounded-full"
+          style={{ fontFamily: '"Apercu", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' }}
+        >
+          {item}
+        </span>
       ))}
-    </StyledDivChips>
+    </div>
   );
 }
