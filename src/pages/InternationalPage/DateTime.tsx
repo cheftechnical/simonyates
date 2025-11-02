@@ -1,5 +1,4 @@
 import { format, toZonedTime } from "date-fns-tz";
-import { Box, Typography } from "@mui/material";
 
 export interface Props {
   now: Date;
@@ -12,22 +11,22 @@ export function DateTime(props: Props) {
   const zonedDate = toZonedTime(now, timeZone);
 
   return (
-    <Box textAlign="center">
-      <Typography component="h4" variant="primaryH4">
+    <div className="text-center">
+      <h4 className="font-primary font-medium text-base leading-6 tracking-[0.5px]">
         ({format(zonedDate, "O", { timeZone: timeZone })})<br />
         {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/> remmed out before */}
         {timeZone}
-      </Typography>
+      </h4>
 
-      <Typography component="p" variant="primaryBody">
+      <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
         {format(zonedDate, "EEEE, MMMM d, yyyy")}
         <br />
         {format(zonedDate, "HH:mm:ss")}
         <br />
         {format(zonedDate, "hh:mm:ss aaa")}
         <br />
-      </Typography>
-    </Box>
+      </p>
+    </div>
   );
 }
 

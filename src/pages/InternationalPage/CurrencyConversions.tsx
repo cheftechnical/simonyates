@@ -1,10 +1,3 @@
-import {
-  FormControl,
-  FormHelperText,
-  Grid,
-  Input,
-  InputAdornment,
-} from "@mui/material";
 import { ChangeEvent, useState } from "react";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 
@@ -63,30 +56,29 @@ export default function CurrencyConversions() {
   return (
     <MyGridContainer>
       {currencies.map((currency: Currency, index: number) => (
-        <Grid item key={index} xs={6}>
-          <FormControl fullWidth>
-            {/*<InputLabel htmlFor={`currency-${currency.code}`}>Amount</InputLabel>*/}
-            <Input
-              id={`currency-${currency.code}`}
-              name={`currency-${currency.code}`}
-              onChange={(event) => handleChange(event, index)}
-              startAdornment={
-                <InputAdornment position="start">
-                  {currency.symbol}
-                </InputAdornment>
-              }
-              endAdornment={
-                <InputAdornment position="start">
-                  {currency.code}
-                </InputAdornment>
-              }
-              value={value[index]}
-            />
-            <FormHelperText>
+        <div key={index} className="px-3 w-1/2">
+          <div className="w-full">
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600">
+                {currency.symbol}
+              </span>
+              <input
+                id={`currency-${currency.code}`}
+                name={`currency-${currency.code}`}
+                onChange={(event) => handleChange(event, index)}
+                value={value[index]}
+                type="number"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent pl-8 pr-16"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600">
+                {currency.code}
+              </span>
+            </div>
+            <p className="mt-1 text-xs text-gray-600">
               USD.{currency.code} = {currency.exchangeRate}
-            </FormHelperText>
-          </FormControl>
-        </Grid>
+            </p>
+          </div>
+        </div>
       ))}
     </MyGridContainer>
   );

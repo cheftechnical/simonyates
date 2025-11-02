@@ -1,12 +1,5 @@
 import { ChangeEvent, ReactNode, useState } from "react";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import {
-  FormControl,
-  FormHelperText,
-  Grid,
-  Input,
-  InputAdornment,
-} from "@mui/material";
 
 interface Temperature {
   code: string;
@@ -57,23 +50,24 @@ export default function TemperatureConversions() {
   return (
     <MyGridContainer>
       {temperatures.map((temperature: Temperature, index: number) => (
-        <Grid item key={index} xs={6}>
-          <FormControl fullWidth>
-            {/*<InputLabel htmlFor={`temperature-${temperature.code}`}>Temperature</InputLabel>*/}
-            <Input
-              id={`currency-${temperature.code}`}
-              name={`currency-${temperature.code}`}
-              onChange={(event) => handleChange(event, index)}
-              endAdornment={
-                <InputAdornment position="start">
-                  {temperature.symbol}
-                </InputAdornment>
-              }
-              value={values[index]}
-            />
-            <FormHelperText>{temperature.convertFormula}</FormHelperText>
-          </FormControl>
-        </Grid>
+        <div key={index} className="px-3 w-1/2">
+          <div className="w-full">
+            <div className="relative">
+              <input
+                id={`temperature-${temperature.code}`}
+                name={`temperature-${temperature.code}`}
+                onChange={(event) => handleChange(event, index)}
+                value={values[index]}
+                type="number"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent pr-12"
+              />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600">
+                {temperature.symbol}
+              </span>
+            </div>
+            <p className="mt-1 text-xs text-gray-600">{temperature.convertFormula}</p>
+          </div>
+        </div>
       ))}
     </MyGridContainer>
   );

@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import CurrencyConversions from "./CurrencyConversions";
@@ -9,15 +8,15 @@ export default function International() {
   return (
     <PageWrapper>
       <MyContainer>
-        <Box>
+        <div>
           <TimeConversions />
-        </Box>
-        <Box mt={6}>
+        </div>
+        <div className="mt-6">
           <CurrencyConversions />
-        </Box>
-        <Box mt={6}>
+        </div>
+        <div className="mt-6">
           <TemperatureConversions />
-        </Box>
+        </div>
       </MyContainer>
     </PageWrapper>
   );
