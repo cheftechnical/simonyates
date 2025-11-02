@@ -1,5 +1,4 @@
 import Image from "../../../components/Image/Image";
-import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import Carousel from "react-material-ui-carousel";
 
 export default function Photos() {
@@ -7,43 +6,31 @@ export default function Photos() {
     <div className="pt-[24px]">
       {/* Desktop */}
       <div className="hidden sm:block">
-        <MyGridContainer>
-          <div className="w-1/4">
-            <Image
-              alt="Jean'is Joplin"
-              src="/images/about/photo-gallery/jean.png"
-            />
-          </div>
-          <div className="w-1/4">
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-1/3">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-1.png"
             />
           </div>
-          <div className="w-1/4">
+          <div className="w-1/3">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-2.png"
             />
           </div>
-          <div className="w-1/4">
+          <div className="w-1/3">
             <Image
               alt="Mexico"
               src="/images/about/photo-gallery/mexico-3.png"
             />
           </div>
-        </MyGridContainer>
+        </div>
       </div>
 
       {/*	Mobile */}
       <div className="block sm:hidden">
         <Carousel animation="slide" autoPlay={false}>
-          <div>
-            <Image
-              alt="My girlfriend looking like Janis Joplin"
-              src="/images/about/photo-gallery/jean.png"
-            />
-          </div>
           <div>
             <Image
               alt="A street in Mexico"
