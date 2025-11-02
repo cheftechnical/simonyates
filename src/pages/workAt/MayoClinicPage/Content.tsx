@@ -11,7 +11,6 @@ import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
 import WorkAtEvent from "../components/WorkAtEvent";
 import Figure from "../../../components/Figure/Figure";
 import Sections from "../../../components/Sections/Sections";
-import { Typography } from "@mui/material";
 import { sections } from "./sections.ts";
 
 export default function Content() {
@@ -29,7 +28,7 @@ export default function Content() {
       <Section id={sections.patientLikeMine.id}>
         <WorkAtSectionTitle>Patient Like Mine</WorkAtSectionTitle>
 
-        <Typography component="p" variant="primaryBody">
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
           The Patient Like Mine project was a real-time, visual analytics tool
           for clinical decision support. The System expands the &ldquo;recall of
           past experience&rdquo; approach that a provider (physician) uses to
@@ -39,7 +38,7 @@ export default function Content() {
           repository, to explore &ldquo;what-if&rdquo; scenarios, and to collect
           these evidence-based cohorts for future statistical validation and
           pattern&nbsp;mining.
-        </Typography>
+        </p>
 
         <Callout
           list={[
