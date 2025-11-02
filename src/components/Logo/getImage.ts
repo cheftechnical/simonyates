@@ -58,6 +58,15 @@ export function getImage(brand: string, variant: string): Image | undefined {
         },
         src: `${basePath}/${brand}/mayo-clinic--color--200x200.png`,
       };
+    case "philips-lighting":
+      return {
+        alt: "Philips Lighting logo",
+        dimension: {
+          height: 100,
+          width: 66,
+        },
+        src: `${basePath}/${brand}/${brand}--color.svg`,
+      };
     case "rbc":
       return {
         alt: "Royal Bank of Canada (RBC) logo",
