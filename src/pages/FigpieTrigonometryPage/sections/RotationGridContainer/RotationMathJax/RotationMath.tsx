@@ -1,5 +1,6 @@
 import { MathJaxFormula } from "mathjax3-react";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import color from "../../../../../styling/Color";
 import { degToRad } from "../../../libs/trig";
 import { CubicBezier } from "../../../libs/CubicBezier";
 
@@ -22,7 +23,21 @@ export const RotationMathJax = memo(function (props: Props) {
 
   const [formula, setFormula] = useState<string>("");
 
+	// Convert hex color to normalized RGB (0-1) for MathJax compatibility
+	const hexToRgbNormalized = (hex: string): string => {
+		const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+		if (!result) return "0,0,0";
+		const r = (parseInt(result[1], 16) / 255).toFixed(3);
+		const g = (parseInt(result[2], 16) / 255).toFixed(3);
+		const b = (parseInt(result[3], 16) / 255).toFixed(3);
+		return `${r},${g},${b}`;
+	};
+
 	const refreshEquation = useCallback(() => {
+		const blue500 = color.blue["500"];
+
+		// Convert hex to normalized RGB format for MathJax (avoids # character issue)
+		const blueRgb = hexToRgbNormalized(blue500);
 		// inputs will eventually become properties, but i'm hard-coding now for dev
 		// const point = {
 		// 	s: {
@@ -76,18 +91,20 @@ export const RotationMathJax = memo(function (props: Props) {
 		const eX = eXTimesCosTheta - eYTimesSinTheta;
 		const eY = eXTimesSinTheta + eYTimesCosTheta;
 
-		const equation = ((): string => {
+		const formula = ((): string => {
 			switch (variable) {
 				case 'S':
-					return String.raw`
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
 						S & = \begin{bmatrix}
-						          x cos(\theta) - y sin(\theta) \\
-						          x sin(\theta) + y cos(\theta)
+						          x cos(\textcolor[rgb]{${blueRgb}}{\theta}) - y sin(\textcolor[rgb]{${blueRgb}}{\theta}) \\
+						          x sin(\textcolor[rgb]{${blueRgb}}{\theta}) + y cos(\textcolor[rgb]{${blueRgb}}{\theta})
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.s.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.s.y)} sin(${d(thetaRad)}) \\
-						          ${d(cubicBezier.s.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.s.y)} cos(${d(thetaRad)})
+						          ${d(cubicBezier.s.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.s.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
+						          ${d(cubicBezier.s.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.s.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -103,18 +120,22 @@ export const RotationMathJax = memo(function (props: Props) {
 					      & = \begin{bmatrix}
 					             ${d(sX)} \\
 					             ${d(sY)}
-					          \end{bmatrix} 
-					`;
+					          \end{bmatrix}
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'C1':
-					return String.raw`
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
 						C_1 & = \begin{bmatrix}
-						            x cos(\theta) - y sin(\theta) \\
-						            x sin(\theta) + y cos(\theta)
+						            x cos(\textcolor[rgb]{${blueRgb}}{\theta}) - y sin(\textcolor[rgb]{${blueRgb}}{\theta}) \\
+						            x sin(\textcolor[rgb]{${blueRgb}}{\theta}) + y cos(\textcolor[rgb]{${blueRgb}}{\theta})
 						        \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.c1.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.c1.y)} sin(${d(thetaRad)}) \\
-						          ${d(cubicBezier.c1.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.c1.y)} cos(${d(thetaRad)})
+						          ${d(cubicBezier.c1.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.c1.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
+						          ${d(cubicBezier.c1.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.c1.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -130,18 +151,22 @@ export const RotationMathJax = memo(function (props: Props) {
 					      & = \begin{bmatrix}
 					             ${d(c1X)} \\
 					             ${d(c1Y)}
-					          \end{bmatrix} 
-					`;
+					          \end{bmatrix}
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'C2':
-					return String.raw`
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
 						C_2 & = \begin{bmatrix}
-						            x cos(\theta) - y sin(\theta) \\
-						            x sin(\theta) + y cos(\theta)
+						            x cos(\textcolor[rgb]{${blueRgb}}{\theta}) - y sin(\textcolor[rgb]{${blueRgb}}{\theta}) \\
+						            x sin(\textcolor[rgb]{${blueRgb}}{\theta}) + y cos(\textcolor[rgb]{${blueRgb}}{\theta})
 						         \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.c2.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.c2.y)} sin(${d(thetaRad)}) \\
-						          ${d(cubicBezier.c2.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.c2.y)} cos(${d(thetaRad)})
+						          ${d(cubicBezier.c2.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.c2.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
+						          ${d(cubicBezier.c2.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.c2.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -157,18 +182,22 @@ export const RotationMathJax = memo(function (props: Props) {
 					      & = \begin{bmatrix}
 					             ${d(c2X)} \\
 					             ${d(c2Y)}
-					          \end{bmatrix} 
-					`;
+					          \end{bmatrix}
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'E':
-					return String.raw`
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
 						E & = \begin{bmatrix}
-						          x cos(\theta) - y sin(\theta) \\
-						          x sin(\theta) + y cos(\theta)
+						          x cos(\textcolor[rgb]{${blueRgb}}{\theta}) - y sin(\textcolor[rgb]{${blueRgb}}{\theta}) \\
+						          x sin(\textcolor[rgb]{${blueRgb}}{\theta}) + y cos(\textcolor[rgb]{${blueRgb}}{\theta})
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.e.x)} \times cos(${d(thetaRad)}) - ${d(cubicBezier.e.y)} sin(${d(thetaRad)}) \\
-						          ${d(cubicBezier.e.x)} \times sin(${d(thetaRad)}) + ${d(cubicBezier.e.y)} cos(${d(thetaRad)})
+						          ${d(cubicBezier.e.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.e.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
+						          ${d(cubicBezier.e.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.e.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -184,11 +213,15 @@ export const RotationMathJax = memo(function (props: Props) {
 					      & = \begin{bmatrix}
 					             ${d(eX)} \\
 					             ${d(eY)}
-					          \end{bmatrix} 
-					`;
+					          \end{bmatrix}
+						\end{split}
+						\end{equation}
+					$$`;
 				default:
-					return String.raw`
-						\theta & = ${theta}^\circ \\
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						\textcolor[rgb]{${blueRgb}}{\theta} & = \textcolor[rgb]{${blueRgb}}{${theta}}^\circ \\
 						\\
 						S & = (${cubicBezier.s.x}, ${cubicBezier.s.y}) \\
 						\\
@@ -196,18 +229,14 @@ export const RotationMathJax = memo(function (props: Props) {
 						\\
 						C_2 & = (${cubicBezier.c2.x}, ${cubicBezier.c2.y}) \\
 						\\
-						E & = (${cubicBezier.e.x}, ${cubicBezier.e.y}) \\
-					`;
+						E & = (${cubicBezier.e.x}, ${cubicBezier.e.y})
+						\end{split}
+						\end{equation}
+					$$`;
 			}
 		})();
 
-		setFormula(String.raw`$$
-			\begin{equation}
-			\begin{split}
-			${equation}
-			\end{split}
-			\end{equation}
-		$$`);
+		setFormula(formula);
 
 	}, [cubicBezier, theta, variable]);
 
