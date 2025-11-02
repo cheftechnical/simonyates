@@ -38,6 +38,10 @@ const sections: Sections = {
     id: "jib-design-and-advertising",
     title: "Jib Design & Advertising",
   },
+  philipsLighting: {
+    id: "philips-lighting",
+    title: "Philips Lighting",
+  },
 };
 
 export default function WorkPage() {
@@ -344,6 +348,35 @@ export default function WorkPage() {
                 <Li>
                   Reverse-engineered Google PageRank for improved
                   SEO&nbsp;strategies
+                </Li>
+              </Ul>
+            </WorkExperience>
+            </div>
+          </div>
+        </MyGridContainer>
+
+        {/* Philips Lighting */}
+        <MyGridContainer className="mt-[79px]">
+          <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
+            <Logo brand="philips-lighting" variant="default" width="100%" />
+          </div>
+          <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
+            <div id="philips-lighting">
+              <WorkExperience
+                employer="Philips Lighting"
+                href="/work/philips-lighting"
+                role="Retail Sales & Business Data Analyst"
+                when="2002–2006"
+              >
+              <Ul>
+                <Li>
+                  Transitioned from Consumer Goods to Lighting division; served as <strong>Walmart Category Captain</strong> for automotive lighting.
+                </Li>
+                <Li>
+                  Automated internal reporting processes through custom-built software, reducing manual workload by 18&ndash;22 hours per week.
+                </Li>
+                <Li>
+                  <strong>Developed an automated pricing catalogue generator</strong> producing branded, customer-specific Excel and PDF workbooks with up-to-date product pricing &mdash; transforming a multi-week process into a task completed in minutes.
                 </Li>
               </Ul>
             </WorkExperience>

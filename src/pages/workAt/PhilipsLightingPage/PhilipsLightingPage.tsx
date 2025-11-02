@@ -11,7 +11,7 @@ export function PhilipsLightingPage() {
         content={<Content />}
         employer="Philips Lighting"
         logo={
-          <WorkAtLogo brand="philips" variant="default" />
+          <WorkAtLogo brand="philips-lighting" variant="default" />
         }
         role="Retail Sales & Business Data Analyst"
         sections={sections}

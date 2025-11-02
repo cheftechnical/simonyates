@@ -8,6 +8,7 @@ interface Props {
     | "linkedin"
     | "mayo-clinic"
     | "philips"
+    | "philips-lighting"
     | "rbc"
     | "simon-yates"
     | "truenorth"

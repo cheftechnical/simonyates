@@ -58,14 +58,14 @@ export function getImage(brand: string, variant: string): Image | undefined {
         },
         src: `${basePath}/${brand}/mayo-clinic--color--200x200.png`,
       };
-    case "philips":
+    case "philips-lighting":
       return {
         alt: "Philips Lighting logo",
         dimension: {
           height: 320,
           width: 253,
         },
-        src: `${basePath}/${brand}/philips-2013--color--253x320.png`,
+        src: `${basePath}/${brand}/philips-lighting-2013--color--253x320.png`,
       };
     case "rbc":
       return {
