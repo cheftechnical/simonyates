@@ -1,106 +1,55 @@
-import Section from "../../../components/Section/Section.tsx";
-import WorkAtDescription from "../components/WorkAtDescription.tsx";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle.tsx";
-import WorkAtProjects from "../components/WorkAtProjects.tsx";
-import WorkAtProject from "../components/WorkAtProject.tsx";
 import Callout from "../../../components/Callout/Callout.tsx";
-import Quote from "../../../components/Quote/Quote.tsx";
-import { sections } from "./sections.ts";
+import Section from "../../../components/Section/Section.tsx";
 import Sections from "../../../components/Sections/index.ts";
+import Li from "../../../styling/ListsUnordered/Li/Li.tsx";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul.tsx";
+import WorkAtDescription from "../components/WorkAtDescription.tsx";
+import WorkAtProjects from "../components/WorkAtProjects.tsx";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle.tsx";
+import { sections } from "./sections.ts";
 
 export function Content() {
   return (
     <Sections>
       <Section id={sections.intro.id}>
         <WorkAtDescription>
-          Design &amp; advertising agency in&nbsp;Toronto.
+          World leader in lighting solutions.
         </WorkAtDescription>
       </Section>
 
-      <Section id={sections.notableProjects.id}>
-        <WorkAtSectionTitle>Notable Projects</WorkAtSectionTitle>
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+        
         <WorkAtProjects>
-          <WorkAtProject name="Apple Canada Introduces iPhone" when="">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
-              When Apple launched the original iPhone in Canada, they partnered
-              with the Montreal Gazette to feature their online newspaper in its
-              live press demo. This was an extremely high-profile event for
-              Apple, and they couldn&rsquo;t risk any hiccups from a poorly
-              rendering page view. So I built their replica website for
-              this&nbsp;demo.
-            </p>
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
-              As a show of thanks, the partners of Jib gave me an iPhone&mdash;6
-              months before it was available in Canada. Although I don&rsquo;t
-              use it anymore, I still have it (box included). They&rsquo;re
-              quite a collector&rsquo;s item&nbsp;now.
-            </p>
-          </WorkAtProject>
-
-          <WorkAtProject next name="Apple Canada's Online Store for Students">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
-              Apple supports students with special pricing through its Apple
-              Education Store. Access to this store required users to register
-              their student ID with Apple to verity their eligibility. This
-              feature was originally written in WebObjects, and I was tasked
-              with re-writing everything in PHP to support modern &ldquo;Web
-              2.0&rdquo;&nbsp;features.
-            </p>
-          </WorkAtProject>
-
-          <WorkAtProject next name="http://www.delaila.co.uk">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
-              Development of an online jewelry store with a custom e-commerce
-              engine that integrated with HSBC and managed through a
-              custom–built content management system&nbsp;(CMS).
-            </p>
-          </WorkAtProject>
-
-          <WorkAtProject next name="http://www.eloundabeach.gr">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
-              Elounda Beach is a luxury hotel in Greece, with a single
-              night&rsquo;s stay costing upwards of $5,000. I built a custom,
-              multi-lingual CMS and integrated a third-party
-              reservation&nbsp;system.
-            </p>
-          </WorkAtProject>
-
-          <WorkAtProject next name="http://www.verity.ca">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
-              Verity is an exclusive women's club in Toronto, that provides
-              support for the advancement of women through professional, social
-              and personal opportunities. I built the website and the
-              supporting&nbsp;CMS.
-            </p>
-          </WorkAtProject>
+          <Ul>
+            <Li>Transitioned from Consumer Goods to Lighting division; served as <strong>Walmart Category Captain</strong> for automotive lighting.</Li>
+            <Li>Automated internal reporting processes through custom-built software, reducing manual workload by 18&ndash;22 hours per week.</Li>
+            <Li><strong>Developed an automated pricing catalogue generator</strong> producing branded, customer-specific Excel and PDF workbooks with up-to-date product pricing &mdash; transforming a multi-week process into a task completed in minutes.</Li>
+            <Li>System automatically compiled data, generated distribution emails, and eliminated pricing errors &mdash; redefining the department&apos;s workflow.</Li>
+            <Li>Created analytical tools to evaluate <strong>planogram profitability</strong> and optimize retail shelf layouts.</Li>
+            <Li>Designed a loyalty reward system that contributed to the team winning an <strong>international Quality Improvement award</strong>.</Li>
+            <Li><strong>Mapped and streamlined all SAP product maintenance workflows</strong> using UML diagrams to reduce human error and inefficiency; documentation later adopted for training and process standardization.</Li>
+            <Li>Represented Philips on the Market Intelligence Think Tank Committee, maintaining national market-share data and contributing insights to strategic planning.</Li>
+            <Li>Authored detailed operational manuals to reduce administrative errors and improve cross-departmental consistency.</Li>
+            <Li>Early demonstration of <strong>systemic problem-solving</strong> &mdash; using data, automation, and process modelling to streamline real-world operations before formal transition into software engineering.</Li>
+          </Ul>
         </WorkAtProjects>
 
         <Callout
           noBottomGutter
           list={[
-            "PHP",
-            "Javascript + jQuery",
-            "HTML + CSS",
-            "MySQL",
-            "Moneris"
+            "Business Objects",
+            "Microsoft Access",
+            "Microsoft Excel",
+            "Microsoft SQL Server .NET",
+            "SAP",
+            "VB.NET",
+            "VBA",
+            "UML diagrams"
           ]}
         />
       </Section>
 
-      <Section id={sections.recognition.id}>
-        <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
-
-        <Quote source="Alain Brisard, Web Communications Producer, Apple Canada Inc.">
-          I do appreciate the good work you&rsquo;ve done. I am very pleased
-          with the application and your coding. Logical. Commented. Made it much
-          easier to go&nbsp;through.
-        </Quote>
-
-        <Quote next source="Martin Yeung, Marketing Manager, Verity Prop Ltd.">
-          Thanks for your help, much appreciated. Now the website will in a
-          higher gear and better for us admins and members to&nbsp;use.
-        </Quote>
-      </Section>
     </Sections>
   );
 }

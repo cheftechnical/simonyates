@@ -13,10 +13,10 @@ export function PhilipsLightingPage() {
         logo={
           <WorkAtLogo brand="philips-lighting" variant="default" />
         }
-        role="Technical Director"
+        role="Retail Sales & Business Data Analyst"
         sections={sections}
-        when="2007–2008"
-        where="Toronto, ON, Canada"
+        when="2002–2006"
+        where="Markham, ON, Canada"
       />
     </PageWrapper>
   );
