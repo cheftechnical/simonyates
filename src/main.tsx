@@ -25,6 +25,7 @@ const UnchartedSoftwarePage = lazy(() => import("./pages/workAt/UnchartedSoftwar
 const GenworthCanadaPage = lazy(() => import("./pages/workAt/GenworthCanadaPage/index.ts"));
 const InfomartPage = lazy(() => import("./pages/workAt/InfomartPage/index.ts"));
 const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx"));
+const PhilipsLightingPage = lazy(() => import("./pages/workAt/PhilipsLightingPage/PhilipsLightingPage.tsx"));
 const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
 const Webdev = lazy(() => import("./routes/Webdev.tsx").then(m => ({ default: m.Webdev })));
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
           {
             path: "/work/rbc",
             element: <RbcPage />,
+          },
+          {
+            path: "/work/philips-lighting",
+            element: <PhilipsLightingPage />,
           },
           {
             path: "/work/mayo-clinic",

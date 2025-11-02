@@ -7,7 +7,7 @@ interface Props {
     | "jib-design-and-advertising"
     | "linkedin"
     | "mayo-clinic"
-    | "philips-lighting"
+    | "philips"
     | "rbc"
     | "simon-yates"
     | "truenorth"
