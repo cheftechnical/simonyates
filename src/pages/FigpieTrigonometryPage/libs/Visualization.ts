@@ -1,3 +1,3 @@
 export interface Visualization {
-  drawChart: () => void;
+  drawChart: (container: HTMLElement) => void;
 }

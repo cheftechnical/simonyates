@@ -84,7 +84,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
     y: 0,
   };
 
-  onChange = (endAngle: number, rotatedCubicBezier: CubicBezier) => {
+  onChange = (_endAngle: number, _rotatedCubicBezier: CubicBezier) => {
     // This will be assigned from RotationVisualization
   };
 
