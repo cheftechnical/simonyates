@@ -2,9 +2,10 @@ import color from "../../../../../styling/Color";
 import { RotationD3 } from "./RotationD3";
 import { Component, createRef } from "react";
 import * as d3 from "d3";
+import { CubicBezier } from "../../../libs/CubicBezier";
 
 interface Props {
-	onChange: (endAngle: number) => void;
+	onChange: (endAngle: number, rotatedCubicBezier: CubicBezier) => void;
 }
 
 class RotationVisualization extends Component<Props> {
@@ -14,8 +15,8 @@ class RotationVisualization extends Component<Props> {
 	constructor(props: Props) {
 		super(props);
 
-		this.rotationD3.onChange = (endAngle: number) => {
-			this.props.onChange(endAngle);
+		this.rotationD3.onChange = (endAngle: number, rotatedCubicBezier: CubicBezier) => {
+			this.props.onChange(endAngle, rotatedCubicBezier);
 		}
 	}
 

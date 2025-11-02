@@ -3,6 +3,7 @@ import { BaseVisualization } from "../../../libs/BaseVisualization";
 import { Visualization } from "../../../libs/Visualization";
 import { color } from "../../../../../styling/Color/Color";
 import { degToRad, radToDeg } from "../../../libs/trig";
+import { CubicBezier } from "../../../libs/CubicBezier";
 
 export class RotationD3 extends BaseVisualization implements Visualization {
   color = {
@@ -83,8 +84,8 @@ export class RotationD3 extends BaseVisualization implements Visualization {
     y: 0,
   };
 
-  onChange = (endAngle: number) => {
-    this.onChange(endAngle);
+  onChange = (endAngle: number, rotatedCubicBezier: CubicBezier) => {
+    // This will be assigned from RotationVisualization
   };
 
   drawChart(container: HTMLElement) {
@@ -333,6 +334,9 @@ export class RotationD3 extends BaseVisualization implements Visualization {
           .on("end", dragEnded),
       );
 
+    // Initialize the chart with the initial rotation (0 degrees)
+    this.updateChart(0);
+
     const that = this;
 
     function dragStarted(this: any) {
@@ -376,9 +380,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
 
     function dragEnded(this: any) {
       that.resetDragTouchPoint();
-
-      // Raise the onChange event
-      that.onChange(that.endAngle);
+      // onChange is already called from updateChart, so no need to call it here
     }
   }
 
@@ -454,6 +456,9 @@ export class RotationD3 extends BaseVisualization implements Visualization {
         y: this.point.e.x * Math.sin(theta) + this.point.e.y * Math.cos(theta),
       },
     };
+
+    // Raise the onChange event with rotated cubicBezier
+    this.onChange(endAngle, this.pointUpdated);
 
     this.elementNodeS
       .attr("cx", this.pointUpdated.s.x)

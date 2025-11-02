@@ -17,6 +17,48 @@ const d = (value: number): string => {
 	return (Math.round(value * 10000) / 10000).toString();
 }
 
+// Format a subtraction expression, handling negative values properly
+const formatSubtraction = (a: number, b: number): string => {
+	const aStr = d(a);
+	const bStr = d(Math.abs(b));
+	if (b < 0) {
+		return `${aStr} + ${bStr}`;
+	}
+	return `${aStr} - ${bStr}`;
+}
+
+// Format an addition expression, handling negative values properly
+const formatAddition = (a: number, b: number): string => {
+	const aStr = d(a);
+	const bStr = d(Math.abs(b));
+	if (b < 0) {
+		return `${aStr} - ${bStr}`;
+	}
+	return `${aStr} + ${bStr}`;
+}
+
+// Format a subtraction expression with multiplication, handling negative values properly
+// e.g., "x × cos(θ) - y × sin(θ)" where y might be negative
+const formatSubtractionWithMult = (x: number, y: number, cosPart: string, sinPart: string): string => {
+	const xStr = d(x);
+	const yStr = d(Math.abs(y));
+	if (y < 0) {
+		return `${xStr} \\times ${cosPart} + ${yStr} ${sinPart}`;
+	}
+	return `${xStr} \\times ${cosPart} - ${yStr} ${sinPart}`;
+}
+
+// Format an addition expression with multiplication, handling negative values properly
+// e.g., "x × sin(θ) + y × cos(θ)" where y might be negative
+const formatAdditionWithMult = (x: number, y: number, sinPart: string, cosPart: string): string => {
+	const xStr = d(x);
+	const yStr = d(Math.abs(y));
+	if (y < 0) {
+		return `${xStr} \\times ${sinPart} - ${yStr} ${cosPart}`;
+	}
+	return `${xStr} \\times ${sinPart} + ${yStr} ${cosPart}`;
+}
+
 // export default function RotationMathJax(props: Props) {
 export const RotationMathJax = memo(function (props: Props) {
 	const {cubicBezier, theta, variable} = props;
@@ -103,18 +145,18 @@ export const RotationMathJax = memo(function (props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.s.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.s.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
-						          ${d(cubicBezier.s.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.s.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
+						          ${formatSubtractionWithMult(cubicBezier.s.x, cubicBezier.s.y, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)} \\
+						          ${formatAdditionWithMult(cubicBezier.s.x, cubicBezier.s.y, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(cubicBezier.s.x)} \times ${d(cosTheta)} - ${d(cubicBezier.s.y)} \times ${d(sinTheta)} \\
-					              ${d(cubicBezier.s.x)} \times ${d(sinTheta)} + ${d(cubicBezier.s.y)} \times ${d(cosTheta)} \\
+					              ${formatSubtraction(cubicBezier.s.x * cosTheta, cubicBezier.s.y * sinTheta)} \\
+					              ${formatAddition(cubicBezier.s.x * sinTheta, cubicBezier.s.y * cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(sXTimesCosTheta)} - ${d(sYTimesSinTheta)} \\
-					              ${d(sXTimesSinTheta)} + ${d(sYTimesCosTheta)}
+					              ${formatSubtraction(sXTimesCosTheta, sYTimesSinTheta)} \\
+					              ${formatAddition(sXTimesSinTheta, sYTimesCosTheta)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -134,18 +176,18 @@ export const RotationMathJax = memo(function (props: Props) {
 						        \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.c1.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.c1.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
-						          ${d(cubicBezier.c1.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.c1.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
+						          ${formatSubtractionWithMult(cubicBezier.c1.x, cubicBezier.c1.y, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)} \\
+						          ${formatAdditionWithMult(cubicBezier.c1.x, cubicBezier.c1.y, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(cubicBezier.c1.x)} \times ${d(cosTheta)} - ${d(cubicBezier.c1.y)} \times ${d(sinTheta)} \\
-					              ${d(cubicBezier.c1.x)} \times ${d(sinTheta)} + ${d(cubicBezier.c1.y)} \times ${d(cosTheta)} \\
+					              ${formatSubtraction(cubicBezier.c1.x * cosTheta, cubicBezier.c1.y * sinTheta)} \\
+					              ${formatAddition(cubicBezier.c1.x * sinTheta, cubicBezier.c1.y * cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(c1XTimesCosTheta)} - ${d(c1YTimesSinTheta)} \\
-					              ${d(c1XTimesSinTheta)} + ${d(c1YTimesCosTheta)}
+					              ${formatSubtraction(c1XTimesCosTheta, c1YTimesSinTheta)} \\
+					              ${formatAddition(c1XTimesSinTheta, c1YTimesCosTheta)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -165,18 +207,18 @@ export const RotationMathJax = memo(function (props: Props) {
 						         \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.c2.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.c2.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
-						          ${d(cubicBezier.c2.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.c2.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
+						          ${formatSubtractionWithMult(cubicBezier.c2.x, cubicBezier.c2.y, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)} \\
+						          ${formatAdditionWithMult(cubicBezier.c2.x, cubicBezier.c2.y, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(cubicBezier.c2.x)} \times ${d(cosTheta)} - ${d(cubicBezier.c2.y)} \times ${d(sinTheta)} \\
-					              ${d(cubicBezier.c2.x)} \times ${d(sinTheta)} + ${d(cubicBezier.c2.y)} \times ${d(cosTheta)} \\
+					              ${formatSubtraction(cubicBezier.c2.x * cosTheta, cubicBezier.c2.y * sinTheta)} \\
+					              ${formatAddition(cubicBezier.c2.x * sinTheta, cubicBezier.c2.y * cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(c2XTimesCosTheta)} - ${d(c2YTimesSinTheta)} \\
-					              ${d(c2XTimesSinTheta)} + ${d(c2YTimesCosTheta)}
+					              ${formatSubtraction(c2XTimesCosTheta, c2YTimesSinTheta)} \\
+					              ${formatAddition(c2XTimesSinTheta, c2YTimesCosTheta)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
@@ -196,18 +238,18 @@ export const RotationMathJax = memo(function (props: Props) {
 						      \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-						          ${d(cubicBezier.e.x)} \times cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) - ${d(cubicBezier.e.y)} sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) \\
-						          ${d(cubicBezier.e.x)} \times sin(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}}) + ${d(cubicBezier.e.y)} cos(\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})
+						          ${formatSubtractionWithMult(cubicBezier.e.x, cubicBezier.e.y, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)} \\
+						          ${formatAdditionWithMult(cubicBezier.e.x, cubicBezier.e.y, `sin(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`, `cos(\\textcolor[rgb]{${blueRgb}}{${d(thetaRad)}})`)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(cubicBezier.e.x)} \times ${d(cosTheta)} - ${d(cubicBezier.e.y)} \times ${d(sinTheta)} \\
-					              ${d(cubicBezier.e.x)} \times ${d(sinTheta)} + ${d(cubicBezier.e.y)} \times ${d(cosTheta)} \\
+					              ${formatSubtraction(cubicBezier.e.x * cosTheta, cubicBezier.e.y * sinTheta)} \\
+					              ${formatAddition(cubicBezier.e.x * sinTheta, cubicBezier.e.y * cosTheta)} \\
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}
-					              ${d(eXTimesCosTheta)} - ${d(eYTimesSinTheta)} \\
-					              ${d(eXTimesSinTheta)} + ${d(eYTimesCosTheta)}
+					              ${formatSubtraction(eXTimesCosTheta, eYTimesSinTheta)} \\
+					              ${formatAddition(eXTimesSinTheta, eYTimesCosTheta)}
 					          \end{bmatrix} \\
 					    \\
 					      & = \begin{bmatrix}

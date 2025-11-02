@@ -29,9 +29,11 @@ export const RotationGridContainer = memo(function() {
 
   // const [cubicBezier, setCubicBezier] = React.useState<CubicBezier>(defaultCubicBezier);
   const [theta, setTheta] = useState<number>(0);
+  const [rotatedCubicBezier, setRotatedCubicBezier] = useState<CubicBezier>(defaultCubicBezier);
 
-  const handleRotationVisualizationChange = ((newTheta: number) => {
+  const handleRotationVisualizationChange = ((newTheta: number, newRotatedCubicBezier: CubicBezier) => {
     setTheta(newTheta);
+    setRotatedCubicBezier(newRotatedCubicBezier);
   });
 
   const handleThetaChange = ((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,7 +56,7 @@ export const RotationGridContainer = memo(function() {
           />
 
           <RotationMathJax
-            cubicBezier={defaultCubicBezier}
+            cubicBezier={rotatedCubicBezier}
             theta={theta}
           />
         </MyGridItem>
@@ -63,28 +65,28 @@ export const RotationGridContainer = memo(function() {
       <MyGridContainer>
         <MyGridItem xs={6}>
           <RotationMathJax
-            cubicBezier={defaultCubicBezier}
+            cubicBezier={rotatedCubicBezier}
             theta={theta}
             variable="S"
           />
         </MyGridItem>
         <MyGridItem xs={6}>
           <RotationMathJax
-            cubicBezier={defaultCubicBezier}
+            cubicBezier={rotatedCubicBezier}
             theta={theta}
             variable="C1"
           />
         </MyGridItem>
         <MyGridItem xs={6}>
           <RotationMathJax
-            cubicBezier={defaultCubicBezier}
+            cubicBezier={rotatedCubicBezier}
             theta={theta}
             variable="C2"
           />
         </MyGridItem>
         <MyGridItem xs={6}>
           <RotationMathJax
-            cubicBezier={defaultCubicBezier}
+            cubicBezier={rotatedCubicBezier}
             theta={theta}
             variable="E"
           />
