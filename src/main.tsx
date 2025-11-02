@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Root } from "./routes/Root.tsx";
 import "./styles/tailwind.css";
+import "./styles/fonts.css";
 
 // Lazy route components
 const Home = lazy(() => import("./routes/Home.tsx"));

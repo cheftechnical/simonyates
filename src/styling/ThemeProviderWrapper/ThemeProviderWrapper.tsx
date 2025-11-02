@@ -1,7 +1,5 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import themeMui from "../ThemeMui";
-import "../ThemeMui/global.css";
 import { ReactNode } from "react";
+import "../ThemeMui/global.css";
 
 interface Props {
   children: ReactNode;
@@ -10,10 +8,8 @@ interface Props {
 export default function ThemeProviderWrapper(props: Props) {
   const { children } = props;
 
-  return (
-    <ThemeProvider theme={themeMui}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
-  );
+  // No longer using MUI ThemeProvider or CssBaseline
+  // Fonts are loaded via fonts.css, global styles via global.css
+  // Tailwind's preflight handles CSS reset
+  return <>{children}</>;
 }

@@ -5,6 +5,12 @@
     font-family: "Tiempos Text", "Times New Roman", Times, serif;
   }
 
+  body {
+    color: var(--color-gray-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   :root {
     /* Gray */
     --color-gray-50: #F7F7F7;
