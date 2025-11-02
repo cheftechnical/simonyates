@@ -1,5 +1,6 @@
 import { MathJaxFormula } from "mathjax3-react";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
+import color from "../../../../../styling/Color";
 import { degToRad } from "../../../libs/trig";
 
 const timeout = 1000;
@@ -22,7 +23,23 @@ export const BezierArcMathJax = memo(function(props: Props) {
 
   const [formula, setFormula] = useState<string>("");
 
+	// Convert hex color to normalized RGB (0-1) for MathJax compatibility
+	const hexToRgbNormalized = (hex: string): string => {
+		const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+		if (!result) return "0,0,0";
+		const r = (parseInt(result[1], 16) / 255).toFixed(3);
+		const g = (parseInt(result[2], 16) / 255).toFixed(3);
+		const b = (parseInt(result[3], 16) / 255).toFixed(3);
+		return `${r},${g},${b}`;
+	};
+
 	const refreshEquation = useCallback(() => {
+		const blue500 = color.blue["500"];
+		const red500 = color.red["500"];
+
+		// Convert hex to normalized RGB format for MathJax (avoids # character issue)
+		const blueRgb = hexToRgbNormalized(blue500);
+		const redRgb = hexToRgbNormalized(red500);
 
 		const angleDelta = startAngle - endAngle;
 		const varPhi = degToRad(angleDelta);
@@ -43,33 +60,39 @@ export const BezierArcMathJax = memo(function(props: Props) {
 		const sinVarPhiMinusFCosVarPhi = sinVarPhi - fCosVarPhi;
 		const sinVarPhiMinusFCosVarPhiTimesRadius = sinVarPhiMinusFCosVarPhi * radius;
 
-		const equation = (() => {
+		const formula = (() => {
 			switch (variable) {
 				case 'S':
-					return String.raw`
-						S & = r \begin{bmatrix}
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						S & = \textcolor[rgb]{${blueRgb}}{r} \begin{bmatrix}
 								  1 \\
 								  0 \\
 							  \end{bmatrix} \\
 						\\
-						  & = ${d(radius)} \begin{bmatrix}
+						  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 								  1 \\
 								  0 \\
 							  \end{bmatrix} \\
 						\\
 						  & = \begin{bmatrix}
-								  ${d(radius)} \\
+								  \textcolor[rgb]{${blueRgb}}{${d(radius)}} \\
 								  0 \\
 							  \end{bmatrix}
-					`;
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'E':
-					return String.raw`
-						E & = r \begin{bmatrix}
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						E & = \textcolor[rgb]{${blueRgb}}{r} \begin{bmatrix}
 								  cos(\varphi) \\
 								  sin(\varphi) \\
 							  \end{bmatrix} \\
 						\\
-						  & = ${d(radius)} \begin{bmatrix}
+						  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 								  ${d(cosVarPhi)} \\
 								  ${d(sinVarPhi)} \\
 							  \end{bmatrix} \\
@@ -78,52 +101,60 @@ export const BezierArcMathJax = memo(function(props: Props) {
 								  ${d(cosVarPhiTimesRadius)} \\
 								  ${d(sinVarPhiTimesRadius)} \\
 							  \end{bmatrix}
-					`;
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'C1':
-					return String.raw`
-						C_{1} & = r \begin{bmatrix}
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						C_{1} & = \textcolor[rgb]{${blueRgb}}{r} \begin{bmatrix}
 									  1 \\
 									  f \\
 								  \end{bmatrix} \\
 						\\
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									  1 \\
 									  ${d(f)} \\
 								  \end{bmatrix} \\
 						\\
 							  & = \begin{bmatrix}
-									 ${d(radius)} \\
+									 \textcolor[rgb]{${blueRgb}}{${d(radius)}} \\
 									 ${d(fTimesRadius)} \\
 								  \end{bmatrix}
-					`;
+						\end{split}
+						\end{equation}
+					$$`;
 				case 'C2':
-					return String.raw`
-						C_{2} & = r \begin{bmatrix}
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						C_{2} & = \textcolor[rgb]{${blueRgb}}{r} \begin{bmatrix}
 									  cos(\varphi) + f sin(\varphi) \\
 									  sin(\varphi) - f cos(\varphi) \\
 								  \end{bmatrix} \\
 						\\
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									  cos(${d(varPhi)}) + f sin(${d(varPhi)}) \\
 									  sin(${d(varPhi)}) - f cos(${d(varPhi)}) \\
 								  \end{bmatrix} \\
 						\\
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									 ${d(cosVarPhi)} + f (${d(sinVarPhi)}) \\
 									 ${d(sinVarPhi)} - f (${d(cosVarPhi)}) \\
 								  \end{bmatrix} \\
 						\\      
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									 ${d(cosVarPhi)} + ${d(f)} \times ${d(sinVarPhi)} \\
 									 ${d(sinVarPhi)} - ${d(f)} \times ${d(cosVarPhi)} \\
 								  \end{bmatrix} \\
 						\\
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									 ${d(cosVarPhi)} + ${d(fSinVarPhi)} \\
 									 ${d(sinVarPhi)} - ${d(fCosVarPhi)} \\
 								  \end{bmatrix} \\
 						\\
-							  & = ${d(radius)} \begin{bmatrix}
+							  & = \textcolor[rgb]{${blueRgb}}{${d(radius)}} \begin{bmatrix}
 									 ${d(cosVarPhiPlusFSinVarPhi)} \\
 									 ${d(sinVarPhiMinusFCosVarPhi)} \\
 								  \end{bmatrix} \\
@@ -132,15 +163,19 @@ export const BezierArcMathJax = memo(function(props: Props) {
 									 ${d(cosVarPhiPlusFSinVarPhiTimesRadius)} \\
 									 ${d(sinVarPhiMinusFCosVarPhiTimesRadius)} \\
 								  \end{bmatrix}
-					`;
+						\end{split}
+						\end{equation}
+					$$`;
 				default:
-					return String.raw`
-						r & = ${d(radius)}, 
+					return String.raw`$$
+						\begin{equation}
+						\begin{split}
+						\textcolor[rgb]{${blueRgb}}{r} & = \textcolor[rgb]{${blueRgb}}{${d(radius)}}, 
 						\measuredangle_0 = ${d(startAngle)}^\circ, 
-						\measuredangle_1 = ${d(endAngle)}^\circ \\
+						\textcolor[rgb]{${redRgb}}{\measuredangle_1} = \textcolor[rgb]{${redRgb}}{${d(endAngle)}}^\circ \\
 						\\
-						\varphi & = (\measuredangle_0 - \measuredangle_1) \times (\pi / 180) \\
-								& = (${d(startAngle)} - ${d(endAngle)}) \times (\pi / 180) \\
+						\varphi & = (\measuredangle_0 - \textcolor[rgb]{${redRgb}}{\measuredangle_1}) \times (\pi / 180) \\
+								& = (${d(startAngle)} - \textcolor[rgb]{${redRgb}}{${d(endAngle)}}) \times (\pi / 180) \\
 								& = ${d(angleDelta)} \times (\pi / 180) \\
 								& = ${d(varPhi)} \\
 						\\
@@ -153,17 +188,13 @@ export const BezierArcMathJax = memo(function(props: Props) {
 						  & = ${d(fourThirds)} \times ${d(tanVarPhiDiv4)} \\
 						\\
 						  & = ${d(f)} \\
-					`;
+						\end{split}
+						\end{equation}
+					$$`;
 			}
 		})();
 
-		setFormula(String.raw`$$
-			\begin{equation}
-			\begin{split}  
-			${equation}
-			\end{split}
-			\end{equation}	
-		$$`);
+		setFormula(formula);
 
 	}, [endAngle, radius, startAngle, variable]);
 
