@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-wrap">
           <div className="pt-4 w-1/2 basis-1/2 max-w-1/2">
             <p className="font-secondary text-[12px] text-[#9E9E9E]">
-              &copy; 2024 Sybaris Analytics Corporation
+              &copy; 2025 Sybaris Analytics Corporation
               <br />
             </p>
             <p className="font-secondary text-[12px] text-[#9E9E9E]">
