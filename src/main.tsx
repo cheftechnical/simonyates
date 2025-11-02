@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Root } from "./routes/Root.tsx";
 import "./styles/tailwind.css";
 import "./styles/fonts.css";
+import "./styles/global.css";
 
 // Lazy route components
 const Home = lazy(() => import("./routes/Home.tsx"));

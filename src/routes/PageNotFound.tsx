@@ -3,7 +3,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useRouteError } from "react-router-dom";
 import DefaultLayout from "../layouts/DefaultLayout";
 import PageNotFoundPage from "../pages/PageNotFoundPage";
-import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 
 /**
  * The PageNotFound component is a self-contained page.
@@ -17,13 +16,11 @@ export function PageNotFound() {
   console.error(error);
 
   return (
-    <ThemeProviderWrapper>
-      <DefaultLayout>
-        <PageNotFoundPage />
-        <SpeedInsights />
-        <Analytics />
-      </DefaultLayout>
-    </ThemeProviderWrapper>
+    <DefaultLayout>
+      <PageNotFoundPage />
+      <SpeedInsights />
+      <Analytics />
+    </DefaultLayout>
   );
 }
 

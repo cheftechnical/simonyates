@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import ThemeProviderWrapper from "../styling/ThemeProviderWrapper";
 
 // Custom loading progress bar - replaced Material-UI LinearProgress
 function LoadingProgress() {
@@ -33,13 +32,11 @@ function LoadingProgress() {
 
 export function Root() {
   return (
-    <ThemeProviderWrapper>
-      <Suspense fallback={<LoadingProgress />}>
-        <Outlet />
-        <SpeedInsights />
-        <Analytics />
-      </Suspense>
-    </ThemeProviderWrapper>
+    <Suspense fallback={<LoadingProgress />}>
+      <Outlet />
+      <SpeedInsights />
+      <Analytics />
+    </Suspense>
   );
 }
 
