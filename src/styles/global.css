@@ -1,9 +1,5 @@
 /**
- * Aug 3, 2023 — For some reason, these properties only work in dev mode, but not in a production
- * build when included in themeMui.ts -> MuiCssBaseline.
- *
- * I've replicated the part that isn't working here, but it would be nice to get the theme file to
- * work fully.
+ * Global styles for scroll behavior, height, and list styling.
  */
 html {
   scroll-behavior: smooth;
@@ -19,7 +15,6 @@ body {
 }
 
 ul {
-  /*todo, check if this section is still needed in mui5 marginTop: 0,*/
   margin-left: 0;
   padding-left: 15px;
 }

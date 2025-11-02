@@ -43,7 +43,4 @@ class BezierArcVisualization extends Component<Props> {
 	}
 }
 
-// @todo mui5
-// export default withStyles(styles)(BezierArcVisualization);
-
 export default BezierArcVisualization;

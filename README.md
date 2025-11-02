@@ -47,7 +47,7 @@ yarn lint
 ```
 
 ## Performance
-- Vite vendor code‑splitting (`react`, `router`, `mui`, `d3`, `date-fns`)
+- Vite vendor code‑splitting (`react`, `router`, `d3`, `date-fns`)
 - Route‑level code splitting via `React.lazy` + `Suspense` in `Root`
 
 ## Tailwind color tokens (single source of truth)
@@ -88,7 +88,7 @@ This keeps hex values in one place (CSS), while Tailwind utilities reference tho
   - `braces@^3.0.3`
 
 ## Tech notes
-- React pinned to 18.x to align with MUI 5 (temporary). Tailwind migration planned.
+- React 19 with Tailwind CSS (MUI removed)
 - Node 22 on Vercel; local dev also uses Node 22.
 
 ## Changelog
