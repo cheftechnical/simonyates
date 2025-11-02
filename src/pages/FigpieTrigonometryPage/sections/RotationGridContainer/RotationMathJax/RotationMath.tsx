@@ -1,9 +1,7 @@
-import { styled } from "@mui/material";
 import { MathJaxFormula } from "mathjax3-react";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { degToRad } from "../../../libs/trig";
 import { CubicBezier } from "../../../libs/CubicBezier";
-import color from "../../../../../styling/Color";
 
 const timeout = 1000;
 
@@ -12,16 +10,6 @@ interface Props {
 	theta: number;
 	variable?: 'S' | 'C1' | 'C2' | 'E';
 }
-
-// const useStyles = makeStyles(() => ({
-// 	root: {
-// 		color: color.grey['900'],
-// 	},
-// }));
-
-const StyledDiv = styled("div")(() => ({
-	color: color.grey['900'],
-}))
 
 // @todo make this common (currently duplicate with Bezier Arc)
 const d = (value: number): string => {
@@ -238,9 +226,9 @@ export const RotationMathJax = memo(function (props: Props) {
 	}, [refreshEquation, variable]);
 
 	return (
-		<StyledDiv>
+		<div className="text-gray-900">
 			{renderedFormula}
-		</StyledDiv>
+		</div>
 	)
 });
 

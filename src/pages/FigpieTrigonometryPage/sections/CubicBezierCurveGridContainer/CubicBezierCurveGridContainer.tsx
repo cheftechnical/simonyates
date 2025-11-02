@@ -1,6 +1,6 @@
-import { Grid } from "@mui/material";
 import { ChangeEvent, memo, useState } from "react";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
+import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
 import BezierArcMathJax from "./CubicBezierCurveMathJax";
 import CubicBezierCurveVisualization from "./CubicBezierCurveVisualization/CubicBezierCurveVisualization";
@@ -27,14 +27,14 @@ export const BezierArcGridContainer = memo(function () {
 	return (
 		<div>
 			<MyGridContainer>
-				<Grid item xs={6}>
+				<MyGridItem xs={6}>
           <CubicBezierCurveVisualization
             onChange={handleBezierArcVisualizationChange}
           />
-				</Grid>
-				<Grid item xs={6}>
+				</MyGridItem>
+				<MyGridItem xs={6}>
 					<MyGridContainer>
-						<Grid item xs={6}>
+						<MyGridItem xs={6}>
               <MyTextField2
                 disabled
                 label="Radius"
@@ -43,8 +43,8 @@ export const BezierArcGridContainer = memo(function () {
                 type="number"
                 value={radius.toString()}
               />
-						</Grid>
-						<Grid item xs={6}>
+						</MyGridItem>
+						<MyGridItem xs={6}>
               <MyTextField2
                 label="End Angle"
                 name="endAngle"
@@ -52,7 +52,7 @@ export const BezierArcGridContainer = memo(function () {
                 type="number"
                 value={endAngle.toString()}
               />
-						</Grid>
+						</MyGridItem>
 					</MyGridContainer>
 
 					<BezierArcMathJax
@@ -60,41 +60,41 @@ export const BezierArcGridContainer = memo(function () {
 						startAngle={startAngle}
 						endAngle={endAngle}
 					/>
-				</Grid>
+				</MyGridItem>
 			</MyGridContainer>
 			<MyGridContainer>
-				<Grid item xs={2}>
+				<MyGridItem xs={2}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
 						variable="S"
 					/>
-				</Grid>
-				<Grid item xs={3}>
+				</MyGridItem>
+				<MyGridItem xs={3}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
 						variable="C1"
 					/>
-				</Grid>
-				<Grid item xs={4}>
+				</MyGridItem>
+				<MyGridItem xs={4}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
 						variable="C2"
 					/>
-				</Grid>
-				<Grid item xs={3}>
+				</MyGridItem>
+				<MyGridItem xs={3}>
 					<BezierArcMathJax
 						radius={radius}
 						startAngle={startAngle}
 						endAngle={endAngle}
 						variable="E"
 					/>
-				</Grid>
+				</MyGridItem>
 			</MyGridContainer>
 		</div>
 	)

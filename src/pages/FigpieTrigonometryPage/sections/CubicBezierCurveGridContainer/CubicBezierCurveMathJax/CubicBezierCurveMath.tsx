@@ -1,7 +1,5 @@
-import { styled } from "@mui/material";
 import { MathJaxFormula } from "mathjax3-react";
 import { memo, useCallback, useEffect, useMemo, useState } from "react";
-import color from "../../../../../styling/Color";
 import { degToRad } from "../../../libs/trig";
 
 const timeout = 1000;
@@ -12,16 +10,6 @@ interface Props {
 	startAngle: number;
 	variable?: 'S' | 'E' | 'C1' | 'C2';
 }
-
-// @todo mui5
-// const useStyles = makeStyles(() => ({
-// 	root: {
-// 		color: color.grey['900'],
-// 	},
-// }));
-const StyledDiv = styled("div")(() => ({
-	color: color.grey['900'],
-}))
 
 const d = (value: number): string => {
 	return (Math.round(value * 10000) / 10000).toString();
@@ -194,9 +182,9 @@ export const BezierArcMathJax = memo(function(props: Props) {
 	}, [refreshEquation, endAngle, radius, startAngle, variable])
 
 	return (
-		<StyledDiv>
+		<div className="text-gray-900">
 			{renderedFormula}
-		</StyledDiv>
+		</div>
 	)
 });
 

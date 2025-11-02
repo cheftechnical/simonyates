@@ -87,7 +87,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
     this.onChange(endAngle);
   };
 
-  drawChart() {
+  drawChart(container: HTMLElement) {
     // (0,0) should be the center
     this.zeroAt = {
       x: this.width / 2,
@@ -99,7 +99,7 @@ export class RotationD3 extends BaseVisualization implements Visualization {
     this.point = this.calculatePoints(360, 270);
 
     // Create the chart
-    this.createChart("#RotationD3", this.width, this.height);
+    this.createChart(container, this.width, this.height);
 
     // Add the background
     this.addBackground();

@@ -1,6 +1,6 @@
-import { Grid } from "@mui/material";
 import { ChangeEvent, memo, useState } from "react";
 import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
+import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
 import { CubicBezier } from "../../libs/CubicBezier";
 import RotationMathJax from "./RotationMathJax";
@@ -41,10 +41,10 @@ export const RotationGridContainer = memo(function() {
   return (
     <div>
       <MyGridContainer>
-        <Grid item xs={6}>
+        <MyGridItem xs={6}>
           <RotationVisualization onChange={handleRotationVisualizationChange} />
-        </Grid>
-        <Grid item xs={6}>
+        </MyGridItem>
+        <MyGridItem xs={6}>
           <MyTextField2
             label="Theta"
             name="theta"
@@ -57,38 +57,38 @@ export const RotationGridContainer = memo(function() {
             cubicBezier={defaultCubicBezier}
             theta={theta}
           />
-        </Grid>
+        </MyGridItem>
       </MyGridContainer>
 
       <MyGridContainer>
-        <Grid item xs={6}>
+        <MyGridItem xs={6}>
           <RotationMathJax
             cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="S"
           />
-        </Grid>
-        <Grid item xs={6}>
+        </MyGridItem>
+        <MyGridItem xs={6}>
           <RotationMathJax
             cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="C1"
           />
-        </Grid>
-        <Grid item xs={6}>
+        </MyGridItem>
+        <MyGridItem xs={6}>
           <RotationMathJax
             cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="C2"
           />
-        </Grid>
-        <Grid item xs={6}>
+        </MyGridItem>
+        <MyGridItem xs={6}>
           <RotationMathJax
             cubicBezier={defaultCubicBezier}
             theta={theta}
             variable="E"
           />
-        </Grid>
+        </MyGridItem>
       </MyGridContainer>
     </div>
   );

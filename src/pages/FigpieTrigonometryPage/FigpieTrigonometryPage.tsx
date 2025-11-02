@@ -3,7 +3,6 @@ import MyContainer from "../../styling/MyContainer/MyContainer";
 import { BezierArcGridContainer } from "./sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer";
 import RotationGridContainer from "./sections/RotationGridContainer";
 import { CircleBasicsGridContainer } from "./sections/CircleBasicsGridContainer/CircleBasicsGridContainer";
-import { Typography } from "@mui/material";
 import PageWrapper from "../../components/PageWrapper";
 
 export default function FigpieTrigonometryPage() {
@@ -11,23 +10,23 @@ export default function FigpieTrigonometryPage() {
     <MathJaxProviderWrapper>
       <PageWrapper title="How it Works">
         <MyContainer>
-          <Typography component="h1" variant="primaryH1">
+          <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px]">
             How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
-          </Typography>
+          </h1>
 
-          <Typography component="h2" variant="primaryH2Next">
+          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
             Circle Basics
-          </Typography>
+          </h2>
           <CircleBasicsGridContainer/>
 
-          <Typography component="h2" variant="primaryH2Next">
+          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
             Cubic B&eacute;zier
-          </Typography>
+          </h2>
           <BezierArcGridContainer />
 
-          <Typography component="h2" variant="primaryH2Next">
+          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
             Rotation
-          </Typography>
+          </h2>
           <RotationGridContainer />
         </MyContainer>
       </PageWrapper>

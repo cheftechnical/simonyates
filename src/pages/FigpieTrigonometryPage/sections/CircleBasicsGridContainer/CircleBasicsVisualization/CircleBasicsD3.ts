@@ -31,7 +31,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 	/**
 	 * Draw the chart
 	 */
-	drawChart() {
+	drawChart(container: HTMLElement) {
 		// Move (0,0) to the center of the svg element
 		const translate = {
 			x: this.width / 2,
@@ -42,7 +42,7 @@ export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 		const ticksPerRadius = 10;
 
 		// Create the new chart
-		this.createChart('#sincos', this.width, this.height);
+		this.createChart(container, this.width, this.height);
 
 		// Draw the dot grid
 		this.angleLineDistance = this.tickDistance * 1.5;

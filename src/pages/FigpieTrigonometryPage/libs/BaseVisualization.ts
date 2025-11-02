@@ -33,13 +33,16 @@ export class BaseVisualization implements BaseVisualizationInterface {
   /**
    * Creates a D3 svg element
    *
-   * @param selector
+   * @param container - DOM element or selector string
    * @param width
    * @param height
    */
-  createChart(selector: string, width: number, height: number): any {
-    this.svg = d3
-      .select(selector)
+  createChart(container: HTMLElement | string, width: number, height: number): any {
+    const selection = d3.select(container as any);
+    // Clear any existing SVG elements to prevent duplicates
+    selection.selectAll("svg").remove();
+    // Create new SVG
+    this.svg = selection
       .append("svg")
       .attr("width", width)
       .attr("height", height);

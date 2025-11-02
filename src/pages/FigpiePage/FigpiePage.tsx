@@ -1,4 +1,3 @@
-import { Link, Typography } from "@mui/material";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import Li from "../../styling/ListsUnordered/Li/Li";
@@ -8,24 +7,24 @@ export function FigpiePage() {
   return (
     <PageWrapper title="Figpie">
       <MyContainer>
-        <Typography component="h1" variant="primaryH1">
+        <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px]">
           Figpie
-        </Typography>
-        <Typography component="p" variant="primaryH3Next">
+        </h1>
+        <p className="font-primary font-normal text-2xl leading-8 mt-8">
           <strong>Figpie</strong> creates beautiful pie charts in Figma.
-        </Typography>
-        <Typography component="p" variant="primaryBodyNext">
+        </p>
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
           Creating pie charts in Figma is hard. Working with vectors can be
           challenging, and creating a chart that lines up correctly is more
           tricky than it sounds!
-        </Typography>
-        <Typography component="p" variant="primaryBodyNext">
+        </p>
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
           I created Figpie to be as simple and intuitive as possible. It is a
           tool for designers.
-        </Typography>
-        <Typography component="p" variant="primaryBodyNext">
+        </p>
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
           Key Features:
-        </Typography>
+        </p>
         <Ul next>
           <Li>Creates a pie chart from your data</Li>
           <Li>Vectors are clean and easy to work with</Li>
@@ -41,23 +40,24 @@ export function FigpiePage() {
             they&rsquo;re just vectors after all
           </Li>
         </Ul>
-        <Typography component="p" variant="primaryBodyNext">
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
           And it&rsquo;s 100% free!
-        </Typography>
+        </p>
 
-        <Typography component="h2" variant="primaryH2Next">
+        <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
           Support
-        </Typography>
-        <Typography component="p" variant="primaryBodyNext">
+        </h2>
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
           Found a bug or have a feature request? Message me on Twitter{" "}
-          <Link
+          <a
             href="https://twitter.com/cheftechnical"
-            rel="external"
+            rel="external noopener noreferrer"
             target="_blank"
+            className="text-blue-500 no-underline hover:underline"
           >
             @ChefTechnical
-          </Link>
-        </Typography>
+          </a>
+        </p>
       </MyContainer>
     </PageWrapper>
   );

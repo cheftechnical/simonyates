@@ -56,7 +56,7 @@ export class MyBezierArcD3
     this.onChange(endAngle, radius);
   };
 
-  drawChart() {
+  drawChart(container: HTMLElement) {
     // Calculate the radius
     this.radius = this.width - 3 * this.padding;
 
@@ -76,7 +76,7 @@ export class MyBezierArcD3
     const transform = `translate(${this.zeroAt.x}, ${this.zeroAt.y})`;
 
     // Create the chart
-    this.createChart("#BezierArc", this.width, this.height);
+    this.createChart(container, this.width, this.height);
 
     // Add the background
     this.addBackground();

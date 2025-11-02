@@ -1,6 +1,7 @@
 import color from "../../../../../styling/Color";
 import { RotationD3 } from "./RotationD3";
-import { Component } from "react";
+import { Component, createRef } from "react";
+import * as d3 from "d3";
 
 interface Props {
 	onChange: (endAngle: number) => void;
@@ -8,6 +9,7 @@ interface Props {
 
 class RotationVisualization extends Component<Props> {
 	rotationD3 = new RotationD3();
+	containerRef = createRef<HTMLDivElement>();
 
 	constructor(props: Props) {
 		super(props);
@@ -18,28 +20,23 @@ class RotationVisualization extends Component<Props> {
 	}
 
 	componentDidMount() {
-		this.rotationD3.drawChart();
+		if (this.containerRef.current) {
+			this.rotationD3.drawChart(this.containerRef.current);
+		}
 	}
 
-  // componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>, snapshot?: any) {
-  //
-  // }
+	componentWillUnmount() {
+		// Cleanup: remove any SVG elements
+		if (this.containerRef.current) {
+			d3.select(this.containerRef.current).selectAll("svg").remove();
+		}
+	}
 
 	render() {
-    // const {classes} = this.props;
-
-    // return (
-    // 	<div className={classes.root} id="RotationD3"/>
-    // )
-
     return (
-      <div id="RotationD3" style={{
+      <div ref={this.containerRef} style={{
         backgroundColor: color.grey["50"],
         fontSize: 0, // this is very important, otherwise you'll get a weird gap at the bottom,
-
-        // "& .crisp": {
-        //   shapeRendering: "crispEdges"
-        // }
       }} />
     );
   }

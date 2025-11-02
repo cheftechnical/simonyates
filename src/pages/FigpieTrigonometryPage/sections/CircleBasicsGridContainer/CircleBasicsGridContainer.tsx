@@ -7,7 +7,7 @@ import {AxisDirection} from './AxisDirection';
 // import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';
 import {memo, useState} from "react";
 import MyGridContainer from "../../../../styling/MyGridContainer";
-import { Grid } from "@mui/material";
+import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import MyTextField2 from "../../../../styling/MyTextField2";
 import CircleBasicsMathJax from "./CircleBasicsMathJax/CircleBasicsMath.tsx";
 import color from "../../../../styling/Color";
@@ -38,15 +38,15 @@ export const CircleBasicsGridContainer = memo(function () {
 
   return (
     <MyGridContainer>
-      <Grid item xs={6}>
+      <MyGridItem xs={6}>
         <SinCos
           onChange={handleSinCosChange}
           value={inputDegrees}
           yAxisDirection={defaultYAxisDirection}
         />
         {/*{yAxisDirection}*/}
-      </Grid>
-      <Grid item xs={6}>
+      </MyGridItem>
+      <MyGridItem xs={6}>
         <MyTextField2
           label="Input Degrees"
           name="degrees"
@@ -60,7 +60,7 @@ export const CircleBasicsGridContainer = memo(function () {
             yAxisDirection={defaultYAxisDirection}
           />
         </div>
-      </Grid>
+      </MyGridItem>
     </MyGridContainer>
   );
 });

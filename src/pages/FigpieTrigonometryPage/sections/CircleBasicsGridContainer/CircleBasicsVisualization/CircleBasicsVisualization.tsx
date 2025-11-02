@@ -1,7 +1,8 @@
 import color from "../../../../../styling/Color";
 import { AxisDirection } from "../AxisDirection";
 import { CircleBasicsD3 } from "./CircleBasicsD3";
-import { Component } from "react";
+import { Component, createRef } from "react";
+import * as d3 from "d3";
 
 interface Props {
 	yAxisDirection: AxisDirection;
@@ -11,6 +12,7 @@ interface Props {
 
 class CircleBasicsVisualization extends Component<Props> {
 	circleBasicsD3 = new CircleBasicsD3();
+	containerRef = createRef<HTMLDivElement>();
 
 	constructor(props: Props) {
 		super(props);
@@ -29,13 +31,21 @@ class CircleBasicsVisualization extends Component<Props> {
 	 * When the component has mounted...
 	 */
 	componentDidMount() {
-		this.circleBasicsD3.drawChart();
+		if (this.containerRef.current) {
+			this.circleBasicsD3.drawChart(this.containerRef.current);
+		}
+	}
+
+	componentWillUnmount() {
+		// Cleanup: remove any SVG elements
+		if (this.containerRef.current) {
+			d3.select(this.containerRef.current).selectAll("svg").remove();
+		}
 	}
 
 	/**
 	 * When the component updates...
 	 */
-  // componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>, snapshot?: any) {
   componentDidUpdate(prevProps: Readonly<Props>) {
 		if (this.props.value !== prevProps.value) {
 			// this.updateChart(this.props.value);
@@ -48,20 +58,10 @@ class CircleBasicsVisualization extends Component<Props> {
 	 * Render the component
 	 */
 	render() {
-		// const {classes} = this.props;
-
-		// return (
-		// 	<div className={classes.root} id="sincos"/>
-		// )
-
     return (
-      <div id="sincos" style={{
+      <div ref={this.containerRef} style={{
         backgroundColor: color.grey['50'],
         fontSize: 0, // this is very important, otherwise you'll get a weird gap at the bottom,
-
-        // '& .crisp': {
-        //   shapeRendering: 'crispEdges',
-        // }
       }}/>
     )
 	}
