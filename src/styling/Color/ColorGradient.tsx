@@ -1,8 +1,3 @@
-// import * as React from 'react';
-// import {Grid} from '@material-ui/core';
-
-import { Grid } from "@mui/material";
-
 type ColorStyle = {
   50: string;
   100: string;
@@ -31,26 +26,26 @@ function ColorGradientBar(colorGradientProps: ColorGradientProps) {
 
   if (!hex) {
     return (
-      <Grid container>
-        <Grid item xs={9}>
+      <div className="flex">
+        <div className="basis-9/12">
           {name}
-        </Grid>
-        <Grid item xs={3}>
+        </div>
+        <div className="basis-3/12">
           &ndash;
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     );
   }
 
   return (
-    <Grid container>
-      <Grid item xs={9} style={{ backgroundColor: hex }}>
+    <div className="flex">
+      <div className="basis-9/12" style={{ backgroundColor: hex }}>
         {name}
-      </Grid>
-      <Grid item xs={3}>
+      </div>
+      <div className="basis-3/12">
         {hex}
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
 
@@ -59,14 +54,14 @@ export default function ColorGradient(props: Props) {
 
   return (
     <div>
-      <Grid container>
-        <Grid item style={{ backgroundColor: style["500"] }} xs={9}>
+      <div className="flex">
+        <div className="basis-9/12" style={{ backgroundColor: style["500"] }}>
           {name}
           <br />
           500*
-        </Grid>
-      </Grid>
-      <div style={{ width: "100%" }}>
+        </div>
+      </div>
+      <div className="w-full">
         {Object.entries(style).map((item, index) => (
           <ColorGradientBar hex={item[1]} key={index} name={item[0]} />
         ))}
