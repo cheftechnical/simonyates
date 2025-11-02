@@ -6,7 +6,6 @@ import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
 import Quote from "../../../components/Quote/Quote";
 import Sections from "../../../components/Sections/Sections";
-import { Typography } from "@mui/material";
 import { sections } from "./sections.ts";
 
 export function Content() {
@@ -22,28 +21,28 @@ export function Content() {
       <Section id={sections.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
 
-        <Typography component="p" variant="primaryBody">
+        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
           Genworth Canada was leading a North American initiative to move their
           application system to Elasticsearch. The goal of this new system: make
           it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of
           fraud from customer&nbsp;applications.
-        </Typography>
+        </p>
 
         <WorkAtProjects>
           <WorkAtProject next name="Finding Duplicates">
-            <Typography component="p" variant="primaryBodyNext">
+            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
               I was hired based on my previous experience with Elasticsearch,
               but finding ways of removing dependencies on vendor services was
               not something I was expected to do. It was only after I got
               involved in the project and learned about their use case that I
               saw an opportunity to suggest a better way of doing&nbsp;things.
-            </Typography>
-            <Typography component="p" variant="primaryBodyNext">
+            </p>
+            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
               Using several state-of-the-art features of Elasticsearch, I was
               able to prototype a solution that effectively replaced a
               dependency on one of their key data analytics vendors, saving
               Genworth 10&rdquo;s of thousands of dollars&nbsp;annually!
-            </Typography>
+            </p>
 
             <Callout
               noBottomGutter
