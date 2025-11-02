@@ -1,12 +1,14 @@
-import Section from "../../../components/Section/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import WorkAtProjects from "../components/WorkAtProjects";
-import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
 import Quote from "../../../components/Quote/Quote";
-import { sections } from "./sections.ts";
+import Section from "../../../components/Section/Section";
 import Sections from "../../../components/Sections";
+import Li from "../../../styling/ListsUnordered/Li/Li";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtProject from "../components/WorkAtProject";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
+import { sections } from "./sections.ts";
 
 export function Content() {
   return (
@@ -15,6 +17,22 @@ export function Content() {
         <WorkAtDescription>
           Design &amp; advertising agency in&nbsp;Toronto.
         </WorkAtDescription>
+      </Section>
+
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+
+        <WorkAtProjects>
+          <Ul>
+            <Li>Led digital production for boutique Toronto agency serving premium clients, including <strong>Apple Canada</strong>.</Li>
+            <Li><strong>Built an interactive replica of the Montreal Gazette</strong> for Apple&apos;s iPhone launch campaign, ensuring flawless performance on early iOS hardware and non-Flash devices.</Li>
+            <Li><strong>Invented and developed &ldquo;Workflow&rdquo;</strong>, an internal collaboration platform allowing designers and clients to share, comment on, and approve work directly &mdash; eliminating email bottlenecks and reducing miscommunication.</Li>
+            <Li>Developed the <strong>Apple Education Store&apos;s university registration system</strong> and localized HTML email campaigns for national marketing initiatives.</Li>
+            <Li>Designed and implemented internal asset-management tools to streamline creative operations.</Li>
+            <Li>Reverse-engineered early <strong>Google PageRank</strong> algorithms to inform SEO and content strategy.</Li>
+            <Li>Collaborated closely with designers to deliver technically precise, visually consistent digital experiences &mdash; bridging creative vision with engineering execution.</Li>
+          </Ul>
+        </WorkAtProjects>
       </Section>
 
       <Section id={sections.notableProjects.id}>

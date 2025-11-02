@@ -335,19 +335,13 @@ export default function WorkPage() {
               >
               <Ul>
                 <Li>
-                  Wrote the university registration system for the Apple
-                  Education Store on&nbsp;apple.ca
+                  Led digital production for boutique Toronto agency serving premium clients, including <strong>Apple Canada</strong>.
                 </Li>
                 <Li>
-                  Wrote and deployed all HTML emails for Apple&nbsp;Canada
+                  <strong>Built an interactive replica of the Montreal Gazette</strong> for Apple&apos;s iPhone launch campaign, ensuring flawless performance on early iOS hardware and non-Flash devices.
                 </Li>
                 <Li>
-                  Conceptualized, designed, and wrote internal software for
-                  managing client&nbsp;assets
-                </Li>
-                <Li>
-                  Reverse-engineered Google PageRank for improved
-                  SEO&nbsp;strategies
+                  <strong>Invented and developed &ldquo;Workflow&rdquo;</strong>, an internal collaboration platform allowing designers and clients to share, comment on, and approve work directly &mdash; eliminating email bottlenecks and reducing miscommunication.
                 </Li>
               </Ul>
             </WorkExperience>
