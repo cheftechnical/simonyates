@@ -23,8 +23,8 @@
     "date-fns": "4.1.0",
     "date-fns-tz": "3.2.0",
     "mathjax3-react": "^1.2.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-google-recaptcha": "^3.1.0",
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.66.0",
@@ -36,8 +36,8 @@
   "resolutions": {
     "form-data": "^4.0.4",
     "braces": "^3.0.3",
-    "@types/react": "18.3.7",
-    "@types/react-dom": "18.3.7"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   },
   "devDependencies": {
     "@storybook/addon-links": "10.0.2",
@@ -45,8 +45,8 @@
     "@storybook/react-vite": "10.0.2",
     "@tailwindcss/vite": "^4.1.16",
     "@types/d3": "7",
-    "@types/react": "18.3.7",
-    "@types/react-dom": "18.3.7",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "@types/react-google-recaptcha": "^2.1.9",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
