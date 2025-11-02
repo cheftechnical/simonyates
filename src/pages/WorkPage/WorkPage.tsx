@@ -6,6 +6,39 @@ import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import Hero from "./Hero/Hero";
 import PageWrapper from "../../components/PageWrapper";
+import NavRight from "../../components/NavRight";
+import { Sections } from "../../types/Sections.ts";
+
+const sections: Sections = {
+  truenorth: {
+    id: "truenorth",
+    title: "TrueNorth",
+  },
+  rbc: {
+    id: "rbc",
+    title: "RBC",
+  },
+  unchartedSoftware: {
+    id: "uncharted-software",
+    title: "Uncharted Software",
+  },
+  mayoClinic: {
+    id: "mayo-clinic",
+    title: "Mayo Clinic",
+  },
+  genworthCanada: {
+    id: "genworth-canada",
+    title: "Genworth Canada",
+  },
+  infomart: {
+    id: "infomart",
+    title: "Infomart",
+  },
+  jibDesignAndAdvertising: {
+    id: "jib-design-and-advertising",
+    title: "Jib Design & Advertising",
+  },
+};
 
 export default function WorkPage() {
   return (
@@ -15,6 +48,12 @@ export default function WorkPage() {
           <div className="w-full md:w-[58.333333%]">
             <Hero />
           </div>
+          {/* Gutter */}
+          <div className="hidden md:block md:w-[16.666667%]" />
+          {/* Navigation */}
+          <div className="hidden md:block md:w-1/4 pl-6">
+            <NavRight sections={sections} />
+          </div>
         </MyGridContainer>
 
         {/* TrueNorth */}
@@ -23,7 +62,8 @@ export default function WorkPage() {
             <Logo brand="truenorth" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
+            <div id="truenorth">
+              <WorkExperience
               employer="TrueNorth"
               href="/work/truenorth"
               role="Team Lead & Staff Frontend Software Engineer"
@@ -57,6 +97,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -66,12 +107,13 @@ export default function WorkPage() {
             <Logo brand="rbc" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="RBC"
-              href="/work/rbc"
-              role="Product Manager / Lead Software Engineer"
-              when="2018–2021"
-            >
+            <div id="rbc">
+              <WorkExperience
+                employer="RBC"
+                href="/work/rbc"
+                role="Product Manager / Lead Software Engineer"
+                when="2018–2021"
+              >
               <Ul>
                 <Li>
                   Successfully influenced a critical change to the new product,
@@ -100,6 +142,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -109,12 +152,13 @@ export default function WorkPage() {
             <Logo brand="uncharted-software" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="Uncharted Software"
-              href="/work/uncharted-software"
-              role="Senior Software Architect"
-              when="2015–2018"
-            >
+            <div id="uncharted-software">
+              <WorkExperience
+                employer="Uncharted Software"
+                href="/work/uncharted-software"
+                role="Senior Software Architect"
+                when="2015–2018"
+              >
               <Ul>
                 <Li>
                   Worked with data scientists to develop early prototypes of a
@@ -136,9 +180,10 @@ export default function WorkPage() {
                   Improved performance and search results by optimizing
                   Elasticsearch schemas and&nbsp;queries
                 </Li>
-                <Li>Converted legacy Java code to&nbsp;Scala</Li>
+                <Li>Converted legacy Java code to&nbsp;Scala                </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -148,12 +193,13 @@ export default function WorkPage() {
             <Logo brand="mayo-clinic" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="Mayo Clinic"
-              href="/work/mayo-clinic"
-              role="Software Engineer"
-              when="2014–2015"
-            >
+            <div id="mayo-clinic">
+              <WorkExperience
+                employer="Mayo Clinic"
+                href="/work/mayo-clinic"
+                role="Software Engineer"
+                when="2014–2015"
+              >
               <Ul>
                 <Li>
                   Co-authored{" "}
@@ -181,6 +227,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -190,12 +237,13 @@ export default function WorkPage() {
             <Logo brand="genworth-canada" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="Genworth Canada"
-              href="/work/genworth-canada"
-              role="Developer"
-              when="2014–2015"
-            >
+            <div id="genworth-canada">
+              <WorkExperience
+                employer="Genworth Canada"
+                href="/work/genworth-canada"
+                role="Developer"
+                when="2014–2015"
+              >
               <Ul>
                 <Li>
                   Designed system to automatically detect names and addresses
@@ -217,6 +265,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -226,12 +275,13 @@ export default function WorkPage() {
             <Logo brand="infomart" variant="default" width="100%" />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="Infomart"
-              href="/work/infomart"
-              role="Architect & Lead Developer"
-              when="2012–2014"
-            >
+            <div id="infomart">
+              <WorkExperience
+                employer="Infomart"
+                href="/work/infomart"
+                role="Architect & Lead Developer"
+                when="2012–2014"
+              >
               <Ul>
                 <Li>
                   Designed the software and data architecture that replaced
@@ -258,6 +308,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
 
@@ -271,12 +322,13 @@ export default function WorkPage() {
             />
           </div>
           <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-            <WorkExperience
-              employer="Jib Design & Advertising"
-              href="/work/jib-design-and-advertising"
-              role="Technical Director"
-              when="2007–2008"
-            >
+            <div id="jib-design-and-advertising">
+              <WorkExperience
+                employer="Jib Design & Advertising"
+                href="/work/jib-design-and-advertising"
+                role="Technical Director"
+                when="2007–2008"
+              >
               <Ul>
                 <Li>
                   Wrote the university registration system for the Apple
@@ -295,6 +347,7 @@ export default function WorkPage() {
                 </Li>
               </Ul>
             </WorkExperience>
+            </div>
           </div>
         </MyGridContainer>
       </MyContainer>
