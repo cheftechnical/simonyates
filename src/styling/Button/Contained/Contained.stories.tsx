@@ -1,4 +1,4 @@
-/* @deprecated, use ButtonContained */
+/* @deprecated */
 
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
