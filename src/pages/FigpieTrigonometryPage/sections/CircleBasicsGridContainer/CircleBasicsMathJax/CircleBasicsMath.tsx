@@ -16,6 +16,16 @@ export const CircleBasicsMathJax = memo(function(props: Props) {
 
   const [formula, setFormula] = useState<string>('');
 
+  // Convert hex color to normalized RGB (0-1) for MathJax compatibility
+  const hexToRgbNormalized = (hex: string): string => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    if (!result) return "0,0,0";
+    const r = (parseInt(result[1], 16) / 255).toFixed(3);
+    const g = (parseInt(result[2], 16) / 255).toFixed(3);
+    const b = (parseInt(result[3], 16) / 255).toFixed(3);
+    return `${r},${g},${b}`;
+  };
+
   const refreshEquation = useCallback(() => {
     const theta = degToRad(inputDegrees);
     const x2 = Math.cos(theta);
@@ -24,36 +34,35 @@ export const CircleBasicsMathJax = memo(function(props: Props) {
     const red500 = color.red["500"];
     const blue500 = color.blue["500"];
 
-    const blue = String.raw`\color{${blue500}}`;
-    const red = String.raw`\color{${red500}}`;
+    // Convert hex to normalized RGB format for MathJax (avoids # character issue)
+    const blueRgb = hexToRgbNormalized(blue500);
+    const redRgb = hexToRgbNormalized(red500);
 
-    const equation = String.raw`
-			{${blue}{angle}} & = ${inputDegrees}^\circ \\
+    const formula = String.raw`$$					
+			\begin{equation}
+			\begin{split}
+			\textcolor[rgb]{${blueRgb}}{angle} & = ${inputDegrees}^\circ \\
 			\\
-			{${red}\theta} & = {${blue}{angle}} * (\pi / 180) \\
-				   & = {${blue}${inputDegrees}} * (\pi / 180) \\
+			\textcolor[rgb]{${redRgb}}{\theta} & = \textcolor[rgb]{${blueRgb}}{angle} * (\pi / 180) \\
+				   & = \textcolor[rgb]{${blueRgb}}{${inputDegrees}} * (\pi / 180) \\
 				   & = ${theta.toFixed(3)} \\
 			\\
 			x_1 & = 0 \\
 			\\
 			y_1 & = 0 \\
 			\\
-			x_2 & = cos({${red}\theta}) \\ 
-				& = cos({${red}${theta.toFixed(3)}}) \\
+			x_2 & = cos(\textcolor[rgb]{${redRgb}}{\theta}) \\ 
+				& = cos(\textcolor[rgb]{${redRgb}}{${theta.toFixed(3)}}) \\
 				& = ${x2.toFixed(3)} \\
 			\\    
-			y_2 & = sin({${red}\theta}) \\ 
-				& = sin({${red}${theta.toFixed(3)}}) \\
+			y_2 & = sin(\textcolor[rgb]{${redRgb}}{\theta}) \\ 
+				& = sin(\textcolor[rgb]{${redRgb}}{${theta.toFixed(3)}}) \\
 				& = ${y2.toFixed(3)} \\
-		`;
-
-    setFormula(String.raw`$$					
-			\begin{equation}
-			\begin{split}
-			${equation}
 			\end{split}
 			\end{equation}
-		$$`);
+		$$`;
+
+    setFormula(formula);
   }, [inputDegrees, yAxisDirection]);
 
   const renderedFormula = useMemo(() => {
