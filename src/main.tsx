@@ -18,7 +18,7 @@ const Legal = lazy(() => import("./routes/Legal.tsx"));
 const PageNotFound = lazy(() => import("./routes/PageNotFound.tsx"));
 const Work = lazy(() => import("./routes/Work.tsx"));
 const WorkPage = lazy(() => import("./pages/WorkPage/WorkPage.tsx"));
-const TrueNorthPage = lazy(() => import("./pages/workAt/TrueNorth/TrueNorthPage.tsx"));
+const TrueNorthPage = lazy(() => import("./pages/workAt/TrueNorthPage/TrueNorthPage.tsx"));
 const RbcPage = lazy(() => import("./pages/workAt/RbcPage/RbcPage.tsx"));
 const MayoClinicPage = lazy(() => import("./pages/workAt/MayoClinicPage/MayoClinicPage.tsx"));
 const UnchartedSoftwarePage = lazy(() => import("./pages/workAt/UnchartedSoftwarePage/UnchartedSoftwarePage.tsx"));
