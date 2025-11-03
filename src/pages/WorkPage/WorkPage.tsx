@@ -165,26 +165,14 @@ export default function WorkPage() {
               >
               <Ul>
                 <Li>
-                  Worked with data scientists to develop early prototypes of a
-                  new causal graph&mdash;including all visualization. This tool
-                  was used by the data scientists to refine their models and
-                  product designers to refine their&nbsp;architecture.
+                  Partnered with data scientists and designers to build early prototypes of a <strong>causal-graph visualization tool</strong>, translating complex relationships into clear, interactive visuals used for model refinement and product design.
                 </Li>
                 <Li>
-                  Implemented state-of-the-art Natural Language Processing (NLP)
-                  technologies to perform Named-Entity Recognition (NER) and
-                  feature extraction of unstructured and
-                  semi-structured&nbsp;data
+                  Implemented <strong>Natural Language Processing (NLP)</strong> systems to perform Named Entity Recognition (NER) and extract features from unstructured and semi-structured data.
                 </Li>
                 <Li>
-                  Extended capabilities of critical data pipelines built in
-                  Scala, Spark, HBase, Hadoop, and&nbsp;Elasticsearch
+                  <strong>Explored emerging NLP technologies</strong> such as spaCy and Word2Vec to model relationships between entities &mdash; foundational experience that later informed an intuitive understanding of modern LLM-based systems.
                 </Li>
-                <Li>
-                  Improved performance and search results by optimizing
-                  Elasticsearch schemas and&nbsp;queries
-                </Li>
-                <Li>Converted legacy Java code to&nbsp;Scala                </Li>
               </Ul>
             </WorkExperience>
             </div>
