@@ -24,8 +24,8 @@ export default function Footer() {
               &copy; 2025 Sybaris Analytics Corporation
               <br />
             </p>
-            <p className="font-secondary text-[12px] text-[#9E9E9E]">
-              <ReactRouterDomLink to="/legal" className="text-[#9E9E9E]">
+            <p className="font-secondary text-[12px] text-gray-400">
+              <ReactRouterDomLink to="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
                 Legal
               </ReactRouterDomLink>
             </p>

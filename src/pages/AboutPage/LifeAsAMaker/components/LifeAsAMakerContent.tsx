@@ -41,7 +41,7 @@ export default function LifeAsAMakerContent() {
           <BodyNext>
             I vividly remember sitting on my dad&rsquo;s lap and playing with
             MacPaint, but can&rsquo;t recall what exactly I drew, it was
-            probably a house&mdash;either way, I was&nbsp;hooked!
+            probably a house&nbsp;&ndash;&nbsp;either way, I was&nbsp;hooked!
           </BodyNext>
           <BodyNext>
             For the next few years of my childhood, I had dreams of my dad
@@ -50,7 +50,7 @@ export default function LifeAsAMakerContent() {
           <BodyNext>
             It was an 80386SX with a 40 MB HDD, and (I think) 4 MB of RAM.
             Pre-installed with DOS 4.01, it came equipped with a SoundBlaster
-            sound card&mdash;which was state of the art at the time, and a bunch
+            sound card&nbsp;&ndash;&nbsp;which was state of the art at the time, and a bunch
             of educational games from The Learning Company&nbsp;(TLC).
           </BodyNext>
         </div>
