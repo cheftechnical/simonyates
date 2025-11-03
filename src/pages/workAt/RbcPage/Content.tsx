@@ -1,17 +1,17 @@
-import Section from "../../../components/Section/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import WorkAtProjects from "../components/WorkAtProjects";
-import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
-import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import Section from "../../../components/Section/Section";
+import Sections from "../../../components/Sections/Sections";
 import Li from "../../../styling/ListsUnordered/Li/Li";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtEvent from "../components/WorkAtEvent";
 import WorkAtEvents from "../components/WorkAtEvents";
 import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
-import WorkAtEvent from "../components/WorkAtEvent";
-import WorkAtPublications from "../components/WorkAtPublications";
+import WorkAtProject from "../components/WorkAtProject";
+import WorkAtProjects from "../components/WorkAtProjects";
 import WorkAtPublication from "../components/WorkAtPublication";
-import Sections from "../../../components/Sections/Sections";
+import WorkAtPublications from "../components/WorkAtPublications";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import { sections } from "./sections.tsx";
 
 export default function Content() {
@@ -22,6 +22,22 @@ export default function Content() {
           The Royal Bank of Canada (RBC) is the largest bank in Canada by asset
           value, with over 80,000 employees&nbsp;worldwide.
         </WorkAtDescription>
+      </Section>
+
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+        <WorkAtProjects>
+          <Ul>
+            <Li>Joined during the formation of the SRE team (six months old at the time) to build visibility and reporting infrastructure.</Li>
+            <Li>Designed and developed <strong>Global Dashboard</strong>, a bespoke reporting platform providing secure, filtered visibility into operational data across the bank.</Li>
+            <Li>Ensured data isolation to prevent sensitive information from leaking outside the SRE team while enabling safe, organization-wide access to key metrics.</Li>
+            <Li>Reduced incident-response time by streamlining access to critical operational insights and eliminating the need for manual log filtering.</Li>
+            <Li><strong>Flagged and resolved a critical data-management flaw in the &ldquo;Seven-Year Transaction History&rdquo;</strong> project, preventing multi-month delays and the scrapping of nationwide marketing campaigns &mdash; enabling RBC to become the first Canadian bank to offer customers complete seven-year transaction visibility.</Li>
+            <Li>Operated with a high degree of independence and trust, identifying opportunities and building solutions proactively to support SRE and internal stakeholders.</Li>
+            <Li>Collaborated directly with internal customers to prioritize and deliver new dashboard features, effectively acting as technical product owner for the platform.</Li>
+            <Li>Created complementary tools including an <strong>anomaly-detection</strong> model (scikit-learn) and an <strong>internal chatbot</strong> that reduced time spent responding to customer inquiries.</Li>
+          </Ul>
+        </WorkAtProjects>
       </Section>
 
       <Section id={sections.applicationDevelopment.id}>
