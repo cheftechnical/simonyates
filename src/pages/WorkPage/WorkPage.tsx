@@ -250,22 +250,13 @@ export default function WorkPage() {
               >
               <Ul>
                 <Li>
-                  Designed system to automatically detect names and addresses
-                  which may refer to the same subject, but use
-                  different&nbsp;spelling
+                  Designed an intelligent matching system to detect names and addresses referring to the same entity, even with different spellings.
                 </Li>
                 <Li>
-                  Hosted regular company-wide Lunch-and-Learn&rsquo;s on
-                  Elasticsearch and demonstrated its&nbsp;applications
+                  Led company-wide <strong>Lunch &amp; Learn</strong> sessions on Elasticsearch, raising technical literacy and promoting sustainable in-house expertise.
                 </Li>
                 <Li>
-                  Saved the company multi-thousand dollars of annual
-                  expenditures by identifying an area of improvement&mdash;it
-                  eliminated the need for a third-party vendor&nbsp;service
-                </Li>
-                <Li>
-                  Became the &ldquo;go-to-guy&rdquo; on all
-                  things&nbsp;Elasticsearch
+                  Identified redundancies that eliminated the need for a third-party vendor, saving significant annual costs.
                 </Li>
               </Ul>
             </WorkExperience>

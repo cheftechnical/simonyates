@@ -1,11 +1,13 @@
-import Section from "../../../components/Section/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import WorkAtProjects from "../components/WorkAtProjects";
-import WorkAtProject from "../components/WorkAtProject";
 import Callout from "../../../components/Callout/Callout";
 import Quote from "../../../components/Quote/Quote";
+import Section from "../../../components/Section/Section";
 import Sections from "../../../components/Sections/Sections";
+import Li from "../../../styling/ListsUnordered/Li/Li";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtProject from "../components/WorkAtProject";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import { sections } from "./sections.ts";
 
 export function Content() {
@@ -16,6 +18,18 @@ export function Content() {
           Genworth Canada is the leading private sector supplier of mortgage
           default insurance in&nbsp;Canada.
         </WorkAtDescription>
+      </Section>
+
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+        <WorkAtProjects>
+          <Ul>
+            <Li>Designed an intelligent matching system to detect names and addresses referring to the same entity, even with different spellings.</Li>
+            <Li>Led company-wide <strong>Lunch &amp; Learn</strong> sessions on Elasticsearch, raising technical literacy and promoting sustainable in-house expertise.</Li>
+            <Li>Identified redundancies that eliminated the need for a third-party vendor, saving significant annual costs.</Li>
+            <Li>Recognized internally as the <strong>go-to resource</strong> for Elasticsearch optimization and search performance.</Li>
+          </Ul>
+        </WorkAtProjects>
       </Section>
 
       <Section id={sections.aboutTheProject.id}>
