@@ -29,7 +29,7 @@ const stat: Stat[] = [
 
 export default function Stats() {
   return (
-    <div className="pt-[60px] pb-[36px] bg-gray-50">
+    <div className="pt-[60px] pb-[36px] bg-gray-25">
       {/* Desktop */}
       <div className="hidden sm:block">
         <MyContainer>

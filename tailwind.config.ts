@@ -16,6 +16,7 @@ export default {
         800: 'var(--color-blue-800)',
       },
       gray: {
+        25: 'var(--color-gray-25)',
         50: 'var(--color-gray-50)',
         100: 'var(--color-gray-100)',
         200: 'var(--color-gray-200)',
