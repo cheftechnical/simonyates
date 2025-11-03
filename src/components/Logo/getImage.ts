@@ -22,6 +22,15 @@ export function getImage(brand: string, variant: string): Image | undefined {
         },
         src: `${basePath}/${brand}/genworth-canada--color--598x598.jpg`,
       };
+    case "hellofresh":
+      return {
+        alt: "HelloFresh logo",
+        dimension: {
+          height: 430,
+          width: 502,
+        },
+        src: `${basePath}/${brand}/hellofresh-lime--color.png`,
+      };
     case "infomart":
       return {
         alt: "Infomart logo",

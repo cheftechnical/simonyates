@@ -1,22 +1,22 @@
-import WorkAtLogo from "../components/WorkAtLogo";
-import Content from "./Content";
-import WorkAtTemplate from "../components/WorkAtTemplate";
 import PageWrapper from "../../../components/PageWrapper";
-import { sectionCollection } from "./sections.ts";
+import WorkAtTemplate from "../components/WorkAtTemplate";
+import Content from "./Content";
+import WorkAtLogo from "../components/WorkAtLogo";
+import { sections } from "./sections.ts";
 import { getWorkExperienceBySectionId } from "../../../data/workExperience";
 
-export function InfomartPage() {
-  const workData = getWorkExperienceBySectionId("infomart");
-  if (!workData) throw new Error("Work experience data not found for Infomart");
+export function HelloFreshPage() {
+  const workData = getWorkExperienceBySectionId("hellofresh");
+  if (!workData) throw new Error("Work experience data not found for HelloFresh");
 
   return (
-    <PageWrapper title="Work at Infomart">
+    <PageWrapper title="Work at HelloFresh">
       <WorkAtTemplate
         content={<Content />}
         employer={workData.employer}
         logo={<WorkAtLogo brand={workData.brand} variant="default" />}
         role={typeof workData.role === "string" ? workData.role : <>{workData.role}</>}
-        sections={sectionCollection}
+        sections={sections}
         when={workData.when}
         where={workData.where}
       />
@@ -24,4 +24,5 @@ export function InfomartPage() {
   );
 }
 
-export default InfomartPage;
+export default HelloFreshPage;
+

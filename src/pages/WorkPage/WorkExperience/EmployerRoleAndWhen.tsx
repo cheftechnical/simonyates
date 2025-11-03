@@ -25,7 +25,9 @@ export default function EmployerRollAndWhen(props: Props) {
   return (
     <h2 className="font-normal text-2xl leading-8 mb-[20px]">
       <ReactRouterDom to={href} className="text-gray-600 hover:text-gray-600 hover:underline">
-        {employer}, {role}, <span className="whitespace-nowrap">{when}</span>
+        {employer}<br />
+        {role}<br />
+        <span className="whitespace-nowrap">{when}</span>
       </ReactRouterDom>
     </h2>
   );

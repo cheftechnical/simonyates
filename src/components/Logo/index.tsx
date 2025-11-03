@@ -3,6 +3,7 @@ import { Dimension, getImage } from "./getImage";
 interface Props {
   brand:
     | "genworth-canada"
+    | "hellofresh"
     | "infomart"
     | "jib-design-and-advertising"
     | "linkedin"

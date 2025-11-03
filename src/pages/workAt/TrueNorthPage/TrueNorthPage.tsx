@@ -3,18 +3,22 @@ import WorkAtTemplate from "../components/WorkAtTemplate";
 import Content from "./Content";
 import WorkAtLogo from "../components/WorkAtLogo";
 import { sections } from "./sections.ts";
+import { getWorkExperienceBySectionId } from "../../../data/workExperience";
 
 export function TrueNorthPage() {
+  const workData = getWorkExperienceBySectionId("truenorth");
+  if (!workData) throw new Error("Work experience data not found for TrueNorth");
+
   return (
     <PageWrapper title="Work at TrueNorth">
       <WorkAtTemplate
         content={<Content />}
-        employer="TrueNorth Technologies"
-        logo={<WorkAtLogo brand="truenorth" variant="default" />}
-        role={<>Team Lead & Staff Frontend Software Engineer</>}
+        employer={workData.employer}
+        logo={<WorkAtLogo brand={workData.brand} variant="default" />}
+        role={typeof workData.role === "string" ? workData.role : <>{workData.role}</>}
         sections={sections}
-        when="March 2021 to March 2023"
-        where="San Francisco, CA, USA"
+        when={workData.when}
+        where={workData.where}
       />
     </PageWrapper>
   );
