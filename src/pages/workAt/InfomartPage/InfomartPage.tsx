@@ -2,7 +2,7 @@ import WorkAtLogo from "../components/WorkAtLogo";
 import Content from "./Content";
 import WorkAtTemplate from "../components/WorkAtTemplate";
 import PageWrapper from "../../../components/PageWrapper";
-import { sectionCollection } from "./sectionCollection.ts";
+import { sectionCollection } from "./sections.ts";
 
 export function InfomartPage() {
   return (
