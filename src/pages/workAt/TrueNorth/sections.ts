@@ -5,6 +5,10 @@ export const sections: Sections = {
     id: "intro",
     title: "Intro"
   },
+  highlights: {
+    id: "highlights",
+    title: "Highlights"
+  },
   teamLeading: {
     id: "team-leading",
     title: "Team Leading"

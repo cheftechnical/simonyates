@@ -1,11 +1,11 @@
-import Sections from "../../../components/Sections";
-import Section from "../../../components/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import WorkAtProjects from "../components/WorkAtProjects";
-import Ul from "../../../styling/ListsUnordered/Ul";
-import Li from "../../../styling/ListsUnordered/Li";
 import Callout from "../../../components/Callout";
+import Section from "../../../components/Section";
+import Sections from "../../../components/Sections";
+import Li from "../../../styling/ListsUnordered/Li";
+import Ul from "../../../styling/ListsUnordered/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import { sections } from "./sections.ts";
 
 export function Content() {
@@ -15,6 +15,19 @@ export function Content() {
         <WorkAtDescription>
           TrueNorth is a platform for truckers to manage their fleet.
         </WorkAtDescription>
+      </Section>
+
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+        <WorkAtProjects>
+          <Ul>
+            <Li>Scaled frontend engineering from 2 to 12 engineers across four teams, establishing hiring processes, mentorship, and accessibility standards.</Li>
+            <Li>Partnered closely with design and product to ensure quality, inclusivity, and maintainability in all releases.</Li>
+            <Li>Introduced scalable, testable architecture improving reliability and developer experience.</Li>
+            <Li><strong>Designed an approachable, pattern-based frontend architecture</strong> that empowered engineers of all experience levels to onboard quickly and contribute confidently; led guild mentorship on accessibility and maintainable development.</Li>
+            <Li>Managed remote international teams and coordinated delivery across multiple time zones.</Li>
+          </Ul>
+        </WorkAtProjects>
       </Section>
 
       <Section id={sections.teamLeading.id}>
