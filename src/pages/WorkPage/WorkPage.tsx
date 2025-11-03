@@ -288,27 +288,13 @@ export default function WorkPage() {
               >
               <Ul>
                 <Li>
-                  Designed the software and data architecture that replaced
-                  Microsoft SQL Server with&nbsp;Elasticsearch
+                  Re-architected Canada&apos;s largest newspaper archive (200 billion+ articles) for modern search performance and scalability &mdash; replacing Microsoft SQL Server with <strong>Elasticsearch</strong> (then in beta, v0.19).
                 </Li>
                 <Li>
-                  Designed Elasticsearch document schemas and wrote
-                  all&nbsp;queries
+                  Designed all document schemas, indexing strategies, and search algorithms to optimize retrieval speed and relevance.
                 </Li>
                 <Li>
-                  Built the development team from the ground up&mdash;managed
-                  the hiring process from writing job descriptions and
-                  interviewing candidates to selecting finalists. Once hired, I
-                  would onboard them and designate scopes of work for which they
-                  would be responsible&nbsp;for.
-                </Li>
-                <Li>
-                  Wrote the development style guide and best practices for
-                  the&nbsp;team
-                </Li>
-                <Li>
-                  Built custom data visualization charts in SVG to meet specific
-                  design requirements of the&nbsp;software
+                  Built and led a new engineering team, managing the full hiring, onboarding, and mentoring process.
                 </Li>
               </Ul>
             </WorkExperience>

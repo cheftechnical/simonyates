@@ -1,8 +1,12 @@
-import WorkAtDescription from "../components/WorkAtDescription";
 import Callout from "../../../components/Callout/Callout";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
+import Section from "../../../components/Section/Section";
+import Li from "../../../styling/ListsUnordered/Li/Li";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtProject from "../components/WorkAtProject";
-import { sectionCollection } from "./sectionCollection.ts";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
+import { sectionCollection } from "./sections.ts";
 
 export default function Content() {
   return (
@@ -18,6 +22,20 @@ export default function Content() {
           version was version&nbsp;~&nbsp;0.19–0.2.x
         </Callout>
       </div>
+
+      <Section id={sectionCollection.highlights.id}>
+        <WorkAtSectionTitle>{sectionCollection.highlights.title}</WorkAtSectionTitle>
+        <WorkAtProjects>
+          <Ul>
+            <Li>Re-architected Canada&apos;s largest newspaper archive (200 billion+ articles) for modern search performance and scalability &mdash; replacing Microsoft SQL Server with <strong>Elasticsearch</strong> (then in beta, v0.19).</Li>
+            <Li>Designed all document schemas, indexing strategies, and search algorithms to optimize retrieval speed and relevance.</Li>
+            <Li>Built and led a new engineering team, managing the full hiring, onboarding, and mentoring process.</Li>
+            <Li>Authored the internal <strong>development style guide</strong> and best practices for long-term maintainability.</Li>
+            <Li>Created custom <strong>SVG-based visualizations</strong> to meet unique editorial and analytics needs.</Li>
+            <Li>Established the foundation for search-driven content systems that later influenced work across finance, healthcare, and accessibility domains.</Li>
+          </Ul>
+        </WorkAtProjects>
+      </Section>
 
       <div id={sectionCollection.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
