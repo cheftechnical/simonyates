@@ -8,7 +8,6 @@ import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtEvent from "../components/WorkAtEvent";
 import WorkAtEvents from "../components/WorkAtEvents";
 import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
-import WorkAtProject from "../components/WorkAtProject";
 import WorkAtProjects from "../components/WorkAtProjects";
 import WorkAtPublication from "../components/WorkAtPublication";
 import WorkAtPublications from "../components/WorkAtPublications";
