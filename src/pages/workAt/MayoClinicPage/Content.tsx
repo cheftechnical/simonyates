@@ -1,16 +1,18 @@
-import Section from "../../../components/Section/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import Callout from "../../../components/Callout/Callout";
-import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import Figure from "../../../components/Figure/Figure";
+import Section from "../../../components/Section/Section";
+import Sections from "../../../components/Sections/Sections";
 import Li from "../../../styling/ListsUnordered/Li/Li";
-import WorkAtPublications from "../components/WorkAtPublications";
-import WorkAtPublication from "../components/WorkAtPublication";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtEvent from "../components/WorkAtEvent";
 import WorkAtEvents from "../components/WorkAtEvents";
 import WorkAtEventsGroup from "../components/WorkAtEventsGroup";
-import WorkAtEvent from "../components/WorkAtEvent";
-import Figure from "../../../components/Figure/Figure";
-import Sections from "../../../components/Sections/Sections";
+import WorkAtProject from "../components/WorkAtProject";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtPublication from "../components/WorkAtPublication";
+import WorkAtPublications from "../components/WorkAtPublications";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import { sections } from "./sections.ts";
 
 export default function Content() {
@@ -23,6 +25,20 @@ export default function Content() {
           research. It employs over 4,500 physicians and scientists, along with
           58,400 administrative and allied health&nbsp;staff.
         </WorkAtDescription>
+      </Section>
+
+      <Section id={sections.highlights.id}>
+        <WorkAtSectionTitle>{sections.highlights.title}</WorkAtSectionTitle>
+        <WorkAtProjects>
+          <Ul>
+            <Li>Co-authored <em>&ldquo;Patient-Like-Mine: A Real-Time Visual Analytics Tool for Clinical Decision Support&rdquo;</em> (IEEE International Conference on Big Data, 2015)</Li>
+            <Li>Collaborated with physicians and data scientists to develop a <strong>real-time visual analytics platform</strong> helping clinicians identify similar patient profiles and improve treatment decisions.</Li>
+            <Li>Engineered data pipelines transforming HL7 V2 RIM and FHIR medical schemas into hierarchical Elasticsearch documents, enabling high-speed patient similarity searches.</Li>
+            <Li>Rewrote experimental prototypes for <strong>production reliability and speed</strong>.</Li>
+            <Li>Optimized query performance for large-scale datasets to support responsive clinical workflows.</Li>
+            <Li>Strengthened data integrity and patient-privacy practices &mdash; balancing innovation with ethical responsibility in health data visualization.</Li>
+          </Ul>
+        </WorkAtProjects>
       </Section>
 
       <Section id={sections.patientLikeMine.id}>

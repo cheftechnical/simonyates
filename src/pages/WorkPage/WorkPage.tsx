@@ -206,28 +206,13 @@ export default function WorkPage() {
               >
               <Ul>
                 <Li>
-                  Co-authored{" "}
-                  <em>
-                    &ldquo;Patient-Like-Mine: A Real Time, Visual Analytics Tool
-                    for Clinical Decision Support&rdquo;
-                  </em>{" "}
-                  and poster presentation for the 2015 IEEE International
-                  Conference on Big&nbsp;Data
+                  Co-authored <em>&ldquo;Patient-Like-Mine: A Real-Time Visual Analytics Tool for Clinical Decision Support&rdquo;</em> (IEEE International Conference on Big Data, 2015)
                 </Li>
                 <Li>
-                  Built software to visualize and analyze patient medical data
-                  for clinical decision&nbsp;support
+                  Collaborated with physicians and data scientists to develop a <strong>real-time visual analytics platform</strong> helping clinicians identify similar patient profiles and improve treatment decisions.
                 </Li>
                 <Li>
-                  Built pipeline to transform data from HL7 V2 RIM and FHIR
-                  schemas to parent/child Elasticsearch&nbsp;documents
-                </Li>
-                <Li>
-                  Re-wrote experimental prototype software for&nbsp;production
-                </Li>
-                <Li>
-                  Optimized Elasticsearch queries for speed
-                  and&nbsp;searchability
+                  Engineered data pipelines transforming HL7 V2 RIM and FHIR medical schemas into hierarchical Elasticsearch documents, enabling high-speed patient similarity searches.
                 </Li>
               </Ul>
             </WorkExperience>
