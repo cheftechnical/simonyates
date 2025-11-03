@@ -6,7 +6,7 @@ import WorkAtDescription from "../components/WorkAtDescription";
 import WorkAtProject from "../components/WorkAtProject";
 import WorkAtProjects from "../components/WorkAtProjects";
 import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import { sectionCollection } from "./sections";
+import { sectionCollection } from "./sections.ts";
 
 export default function Content() {
   return (
