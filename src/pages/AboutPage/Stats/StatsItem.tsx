@@ -12,7 +12,7 @@ export default function StatsItem(props: Props) {
         {value}
       </p>
 
-      <p className="font-normal text-base leading-6 tracking-[0.5px] text-center">
+      <p className="font-normal text-base leading-normal tracking-[0.5px] text-center">
         {caption}
       </p>
     </div>

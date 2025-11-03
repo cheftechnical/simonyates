@@ -85,7 +85,7 @@ export default function Callout(props: Props) {
 
   return (
     <div className={rootClasses}>
-      <p className={`text-base leading-6 ${textClass}`}>{content}</p>
+      <p className={`text-base leading-normal ${textClass}`}>{content}</p>
     </div>
   );
 }

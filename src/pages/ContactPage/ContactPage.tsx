@@ -38,7 +38,7 @@ export default function Contact() {
 
         <MyGridContainer>
           <div className="w-full md:w-1/2">
-            <p className="font-normal text-base leading-6 tracking-[0.5px] mb-[40px] text-gray-700">
+            <p className="font-normal text-base leading-normal tracking-[0.5px] mb-[40px] text-gray-700">
               I&rsquo;m always open to make new connections and chat about
               software&nbsp;development.
             </p>

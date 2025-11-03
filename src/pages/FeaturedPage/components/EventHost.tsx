@@ -11,7 +11,7 @@ export default function EventHost(props: Props) {
   const { children } = props;
 
   return (
-    <p className="font-normal text-base leading-6 tracking-[0.5px] pt-[16px] text-gray-600">
+    <p className="font-normal text-base leading-normal tracking-[0.5px] pt-[16px] text-gray-600">
       {children}
     </p>
   );

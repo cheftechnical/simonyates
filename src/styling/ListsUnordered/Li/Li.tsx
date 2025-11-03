@@ -17,7 +17,7 @@ export default function Li(props: Props) {
   const classes = [
     "font-normal",
     "text-base",
-    "leading-6",
+    "leading-normal",
     "tracking-[0.5px]",
     "mb-4",
     "ml-[21px]",

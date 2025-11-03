@@ -11,7 +11,7 @@ export default function Body(props: Props) {
   const { children } = props;
 
   return (
-    <p className="font-normal text-base leading-6 tracking-[0.5px] text-justify">
+    <p className="font-normal text-base leading-normal tracking-[0.5px] text-justify">
       {children}
     </p>
   );

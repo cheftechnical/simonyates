@@ -12,13 +12,13 @@ export function DateTime(props: Props) {
 
   return (
     <div className="text-center">
-      <h4 className="font-primary font-medium text-base leading-6 tracking-[0.5px]">
+      <h4 className="font-primary font-medium text-base leading-normal tracking-[0.5px]">
         ({format(zonedDate, "O", { timeZone: timeZone })})<br />
         {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/> remmed out before */}
         {timeZone}
       </h4>
 
-      <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+      <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
         {format(zonedDate, "EEEE, MMMM d, yyyy")}
         <br />
         {format(zonedDate, "HH:mm:ss")}

@@ -25,11 +25,11 @@ export default function ContentSuccessful() {
         Thank you.
       </h2>
 
-      <p className="mt-1 font-primary font-normal text-base leading-6 tracking-[0.5px] text-[#626262]">
+      <p className="mt-1 font-primary font-normal text-base leading-normal tracking-[0.5px] text-[#626262]">
         We&rsquo;ll chat soon.
       </p>
 
-      <p className="mt-11 font-primary font-normal text-base leading-6 tracking-[0.5px]">
+      <p className="mt-11 font-primary font-normal text-base leading-normal tracking-[0.5px]">
         In the meantime, let&rsquo;s connect on social media:
       </p>
 
@@ -41,7 +41,7 @@ export default function ContentSuccessful() {
               <Logo brand="linkedin" variant="grey-500" width={24} />
             </div>
             <div className="ml-1">
-              <p className="font-secondary text-base leading-6 tracking-[0.5px]">
+              <p className="font-secondary text-base leading-normal tracking-[0.5px]">
                 <a
                   href="https://www.linkedin.com/in/simonyates/"
                   target="_blank"
@@ -61,7 +61,7 @@ export default function ContentSuccessful() {
               <Logo brand="twitter" variant="grey-500" width={24} />
             </div>
             <div className="ml-1">
-              <p className="font-secondary text-base leading-6 tracking-[0.5px]">
+              <p className="font-secondary text-base leading-normal tracking-[0.5px]">
                 <a
                   href="https://twitter.com/cheftechnical"
                   target="_blank"

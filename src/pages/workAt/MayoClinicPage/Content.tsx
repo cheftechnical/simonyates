@@ -43,7 +43,7 @@ export default function Content() {
       <Section id={sections.patientLikeMine.id}>
         <WorkAtSectionTitle>Patient Like Mine</WorkAtSectionTitle>
 
-        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
           The Patient Like Mine project was a real-time, visual analytics tool
           for clinical decision support. The System expands the &ldquo;recall of
           past experience&rdquo; approach that a provider (physician) uses to

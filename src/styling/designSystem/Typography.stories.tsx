@@ -54,12 +54,12 @@ export const _default = () => (
         <tr>
           <td>Headline 4</td>
           <td>
-            <span className="font-primary font-medium text-base leading-6 tracking-[0.5px]">
+            <span className="font-primary font-medium text-base leading-normal tracking-[0.5px]">
               H4 &ndash; Medium 16
             </span>
           </td>
           <td>
-            <span className="font-primary font-semibold text-base leading-6 tracking-[0.5px]">
+            <span className="font-primary font-semibold text-base leading-normal tracking-[0.5px]">
               H4 &ndash; Semibold
             </span>
           </td>
@@ -68,12 +68,12 @@ export const _default = () => (
         <tr>
           <td>Body</td>
           <td>
-            <span className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <span className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               Body &ndash; Regular 16
             </span>
           </td>
           <td>
-            <span className="font-primary font-semibold text-base leading-6 tracking-[0.5px]">
+            <span className="font-primary font-semibold text-base leading-normal tracking-[0.5px]">
               Body &ndash; Semibold 16
             </span>
           </td>
@@ -134,7 +134,7 @@ export const _default = () => (
         <tr>
           <td>Body</td>
           <td>
-            <span className="font-secondary font-normal text-base leading-6 tracking-[0.5px]">
+            <span className="font-secondary font-normal text-base leading-normal tracking-[0.5px]">
               Body &ndash; Regular 16
             </span>
           </td>

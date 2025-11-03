@@ -17,7 +17,7 @@ export const Webdev = () => {
             Tips &amp; Tricks
           </h2>
 
-          <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mb-6">
+          <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mb-6">
             <Ul>
               <Li>
                 Assigning a border color to one or more elements during development will help you see their margins
@@ -39,7 +39,7 @@ export const Webdev = () => {
             React + Typescript
           </h2>
 
-          <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mb-6">
+          <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mb-6">
             Cheatsheets for experienced React developers getting started with TypeScript
           </p>
 

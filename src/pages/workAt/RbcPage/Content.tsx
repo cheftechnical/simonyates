@@ -47,7 +47,7 @@ export default function Content() {
 
         <WorkAtProjects>
           <WorkAtProject name="SRE Global Dashboard" when="2019–Present">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               The <em>SRE Global Dashboard</em> is a collection of dashboards
               that were designed to be accessed by everyone within RBC.
               Directors, product managers and engineers rely on this data to
@@ -55,7 +55,7 @@ export default function Content() {
               and&nbsp;applications.
             </p>
 
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
               I conceptualized the idea of this project after we (the SRE team)
               exhausted the capabilities of the Elastic Kibana platform. Kibana
               is great for rapid visualization of data, but there are
@@ -99,7 +99,7 @@ export default function Content() {
             name="Seven Years of Transaction Data"
             when="2019–Present"
           >
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               Before this software project began, I fought for certain
               architectural changes that would ensure Elasticsearch could
               function at scale. The project was already well underway before I
@@ -145,7 +145,7 @@ export default function Content() {
           </WorkAtProject>
 
           <WorkAtProject next name="Chatbot" when="2019–Present">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               The SRE team receives dozens of emails every day, many of which
               are internal customers asking the same general questions, but are
               specific to their APIs. These customers expected an immediate
@@ -153,14 +153,14 @@ export default function Content() {
               immediate&nbsp;response.
             </p>
 
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
               RBC&rsquo;s official Chatbot vendor (the one you'll use on
               rbc.com), was not capable of providing real-time answers from
               different sources and could only respond with
               pre-composed&nbsp;messages.
             </p>
 
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
               I built the chatbot from the ground-up to respond to these
               questions, and answers were sourced from a variety of APIs to
               provide real-time metrics in its&nbsp;response.
@@ -194,14 +194,14 @@ export default function Content() {
             name="OAuth Client Creator for RBC Capital Markets"
             when="2020–Present"
           >
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               PingFederate&rsquo;s API system does not support access control
               layers which are necessary to control who can manage OAuth client
               IDs. I built a system to provide this level of control over-top of
               PingFederate&rsquo;s existing core&nbsp;APIs.
             </p>
 
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
               This application allowed RBC to:
             </p>
 
@@ -228,7 +228,7 @@ export default function Content() {
           Machine Learning / Artificial Intelligence
         </WorkAtSectionTitle>
 
-        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
           I used machine learning libraries in Python to automate some of the
           activities supported by the SRE team. Many of these uses are described
           above, but some of the key highlights&nbsp;include:
@@ -260,7 +260,7 @@ export default function Content() {
 
         <WorkAtProjects>
           <WorkAtProject name="Cost Chargeback Model" when="2019–Present">
-            <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
               In 2020, the SRE team moved to a chargeback costing model. Costs
               for the services supported by the team were often a mix of direct
               and shared costs. The pricing model I designed used API request
@@ -301,7 +301,7 @@ export default function Content() {
       <Section id={sections.events.id}>
         <WorkAtSectionTitle>Events</WorkAtSectionTitle>
 
-        <p className="font-primary font-normal text-base leading-6 tracking-[0.5px]">
+        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
           I frequently create presentations about the different projects that
           I&rdquo;m working on for our bi-weekly town hall. In 2019, I also
           hosted an interactive workshop in partnership with Elastic on machine
