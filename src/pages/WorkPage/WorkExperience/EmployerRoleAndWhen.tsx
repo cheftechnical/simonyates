@@ -23,12 +23,18 @@ export default function EmployerRollAndWhen(props: Props) {
   const { employer, href, role, when } = props;
 
   return (
-    <h2 className="font-normal text-2xl leading-8 mb-[20px]">
-      <ReactRouterDom to={href} className="text-gray-600 hover:text-gray-600 hover:underline">
-        {employer}<br />
-        {role}<br />
+    <>
+      <h2 className="font-normal text-2xl leading-normal">
+        <ReactRouterDom to={href} className="text-gray-900 hover:text-gray-600 hover:underline">
+          {employer}  
+        </ReactRouterDom>
+      </h2>
+      <p className="font-normal text-base leading-normal tracking-[0.5px] mt-3 text-gray-500">
+        {role}
+      </p>
+      <p className="font-normal text-base leading-normal tracking-[0.5px]  mt-3 mb-8 text-gray-700">
         <span className="whitespace-nowrap">{when}</span>
-      </ReactRouterDom>
-    </h2>
+      </p>
+    </>
   );
 }
