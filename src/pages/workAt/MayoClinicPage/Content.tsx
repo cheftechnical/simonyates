@@ -122,7 +122,7 @@ export default function Content() {
         <WorkAtSectionTitle>Recognition</WorkAtSectionTitle>
 
         <Figure
-          alt="Elasticon 2016"
+          alt="Dr. Peter Li stands at the podium of Elasticon 2016. His presentation on Patient Like Mine fills the background while listing the project's contributors. The names listed include Simon Yates, Sybaris, Toronto, Ontario; Jenna Lovely, PharmD, BCPS, Mayo Clinic, Rochester, MN; David Larson, MD, MBA, Mayo Clinic, Rochester, MN; many EASE Program staff members; and IT staff at Mayo Clinic."
           caption="Dr. Peter Li acknowledges my help at 43 minutes."
           href="https://www.elastic.co/elasticon/conf/2016/sf/bringing-healthcare-analytics-to-the-point-of-care-at-mayo-clinic"
           callToAction={<>Watch Video &rsaquo;</>}
