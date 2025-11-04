@@ -137,6 +137,7 @@ export function ContactForm(props: Props) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                transform="rotate(90 12 12)"
               />
             </svg>
           }
