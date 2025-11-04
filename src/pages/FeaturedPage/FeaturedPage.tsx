@@ -9,6 +9,7 @@ import SectionDescription from "./SectionDescription";
 import Download from "./Download";
 import FeaturedEvent from "./components/FeaturedEvent";
 import FeaturedEvents from "./components/FeaturedEvents";
+import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublications from "./components/FeaturedPublications";
 import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
@@ -18,6 +19,8 @@ import { sections } from "./sections.ts";
 import NavRight from "../../components/NavRight";
 import FeaturedAbstract from "./components/FeaturedAbstract";
 import NextSection from "./components/NextSection";
+import Li from "../../styling/ListsUnordered/Li/Li.tsx";
+import { Link } from "react-router-dom";
 
 
 export default function Featured() {
@@ -144,6 +147,26 @@ export default function Featured() {
                     />
                   </FeaturedEvent>
                 </FeaturedEvents>
+              </NextSection>
+
+              <NextSection id={sections.projects.id}>
+                <SectionTitle>Projects</SectionTitle>
+
+                <FeaturedProjects>
+                  {/* Projects content will go here */}
+                  <Ul>
+                    <Li>
+                      <Link to="/figpie" className="text-blue-500 no-underline hover:underline">
+                        Figpie: A Figma plugin for making pie charts.
+                      </Link>
+                    </Li>
+                    <Li>
+                      <Link to="/trig" className="text-blue-500 no-underline hover:underline">
+                        How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
+                      </Link>
+                    </Li>
+                  </Ul>
+                </FeaturedProjects>
               </NextSection>
             </Sections>
           </div>
