@@ -23,7 +23,7 @@ export default function LifeAsAMakerContent() {
           <div className="h-full flex items-center">
             <LifeAsAMakerImgWrapper>
               <Image
-                alt="Apple Macintosh"
+                alt="A collage of Apple nostalgia, including an original Apple Macintosh from 1984 and a screenshot of the running girl from their famous 1984 television commercial."
                 src="/images/about/life-as-a-maker/apple-macintosh.png"
               />
             </LifeAsAMakerImgWrapper>
@@ -58,7 +58,7 @@ export default function LifeAsAMakerContent() {
         {/* Show for mobile */}
         <div className="md:hidden w-full">
           <Image
-            alt="Apple Macintosh"
+            alt="A collage of Apple nostalgia, including an original Apple Macintosh from 1984 and a screenshot of the running girl from their famous 1984 television commercial."
             src="/images/about/life-as-a-maker/apple-macintosh.png"
           />
         </div>

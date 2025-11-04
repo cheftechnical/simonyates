@@ -10,7 +10,7 @@ export default function SouthernPacificDaylightContent() {
       <div className="w-full md:w-3/4">
         <SouthernPacificDaylightImgWrapper>
           <Image
-            alt="Southern Pacific Daylight"
+            alt="An HO scale model of the Southern Pacific Daylight steam locomotive."
             src="/images/about/life-as-a-maker/southern-pacific-daylight.png"
           />
         </SouthernPacificDaylightImgWrapper>

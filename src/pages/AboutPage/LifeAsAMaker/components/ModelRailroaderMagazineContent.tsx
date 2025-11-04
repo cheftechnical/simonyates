@@ -47,7 +47,7 @@ export default function ModelRailroaderMagazineContent() {
           <div className="h-full flex items-center">
             <ModelRailroaderMagazineImgWrapper>
               <Image
-                alt="Model Railroader Magazine"
+                alt="A copy of Model Railroader Magazine from 1992, featuring a picture of two steam locomotives passing through a tunnel.Model Railroader Magazine"
                 src="/images/about/life-as-a-maker/model-railroader-magazine.png"
               />
             </ModelRailroaderMagazineImgWrapper>
@@ -57,7 +57,7 @@ export default function ModelRailroaderMagazineContent() {
         {/* Show for mobile */}
         <div className="md:hidden w-full">
           <Image
-            alt="Model Railroader Magazine"
+            alt="A copy of Model Railroader Magazine from 1992, featuring a picture of two steam locomotives passing through a tunnel."
             src="/images/about/life-as-a-maker/model-railroader-magazine.png"
           />
         </div>

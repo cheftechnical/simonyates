@@ -44,7 +44,7 @@ export default function TlcContent() {
           <div className="h-full flex items-center">
             <TlcImgWrapper>
               <Image
-                alt="The Learning Company - Super Solvers: Out Numbered!"
+                alt="A box of Super Solvers: Out Numbered by The Learning Company, an educational game from the early 90s and some sheet music for &quot;When the Saints Go Marching In&quot;."
                 src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
               />
             </TlcImgWrapper>
@@ -54,7 +54,7 @@ export default function TlcContent() {
         {/* Show for mobile */}
         <div className="md:hidden w-full">
           <Image
-            alt="The Learning Company - Super Solvers: Out Numbered!"
+            alt="A box of Super Solvers: Out Numbered by The Learning Company, an educational game from the early 90s and some sheet music for &quot;When the Saints Go Marching In&quot;."
             src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
           />
         </div>

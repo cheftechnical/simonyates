@@ -1,6 +1,9 @@
 interface Props {
+  /** Alternative text for the image, used for accessibility and when the image cannot be displayed */
   alt: string;
+  /** Optional additional CSS classes to apply to the image */
   className?: string;
+  /** The source URL or path of the image */
   src: string;
 }
 
@@ -11,7 +14,6 @@ export default function Image(props: Props) {
     <img
       alt={alt}
       className={`-mb-1 w-full ${className}`}
-      // src={process.env.PUBLIC_URL + src} @todo <!---- this needs to be set
       src={src}
     />
   );

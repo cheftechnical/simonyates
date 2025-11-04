@@ -12,7 +12,7 @@ export default function GwBasicContent() {
         <div className="h-full flex items-center">
           <GwBasicImgWrapper>
             <Image
-              alt="GW Basic"
+              alt="A screenshot of the GW Basic editor from DOS 4.01"
               src="/images/about/life-as-a-maker/gw-basic.png"
             />
           </GwBasicImgWrapper>
@@ -22,7 +22,7 @@ export default function GwBasicContent() {
       {/* Show for mobile*/}
       <div className="md:hidden w-full">
         <Image
-          alt="GW Basic"
+          alt="A screenshot of the GW Basic editor from DOS 4.01"
           src="/images/about/life-as-a-maker/gw-basic.png"
         />
       </div>
