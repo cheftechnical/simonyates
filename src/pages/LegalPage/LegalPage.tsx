@@ -1,5 +1,5 @@
 import PrivacyPolicy from "./PrivacyPolicy";
-import TermsAndConditions from "./TermsAndConditions";
+import TermsOfService from "./TermsOfService.tsx";
 import NavRight from "../../components/NavRight/NavRight";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
@@ -11,9 +11,9 @@ const sections: Sections = {
     id: "privacy-policy",
     title: "Privacy Policy"
   },
-  termsAndConditions: {
-    id: "terms-and-conditions",
-    title: "Terms & Conditions"
+  termsOfService: {
+    id: "terms-of-service",
+    title: "Terms of Service"
   }
 };
 
@@ -25,7 +25,7 @@ export function Legal() {
           {/* Content */}
           <div className="w-full md:w-1/2">
             <PrivacyPolicy id={sections.privacyPolicy.id} />
-            <TermsAndConditions id={sections.termsAndConditions.id} />
+            <TermsOfService id={sections.termsOfService.id} />
           </div>
 
           {/* Gutter */}

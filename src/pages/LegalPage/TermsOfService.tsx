@@ -4,23 +4,23 @@ const legalName = "Sybaris Analytics Corporation";
 const tradeName = "Sybaris";
 const address = "";
 
-export type TermsAndConditionsProps = {
+export type TermsOfServiceProps = {
   /**
    * The root ID
    */
   id: string;
 }
 
-export function TermsAndConditions(props: TermsAndConditionsProps) {
+export function TermsOfService(props: TermsOfServiceProps) {
   const { id } = props;
 
   return (
     <div id={id}>
-      <h2 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
+      <h2 className="font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
         Terms of Service
       </h2>
 
-      <p className="font-normal text-[14px] leading-4 tracking-[0.25px] mt-4">
+      <p className="font-normal text-[14px] leading-normal tracking-[0.25px] mt-4">
         Thanks for using our products and services (&ldquo;Services&rdquo;). The
         Services are provided by
         {legalName}, located&nbsp;at:
@@ -283,4 +283,4 @@ export function TermsAndConditions(props: TermsAndConditionsProps) {
   );
 }
 
-export default TermsAndConditions;
+export default TermsOfService;
