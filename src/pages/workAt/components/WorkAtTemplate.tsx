@@ -73,36 +73,41 @@ export default function WorkAtTemplate(props: Props) {
   return (
     <MyContainer>
       <MyGridContainer>
-        {/* Avatar */}
-        <div className="flex-shrink-0 basis-[16.666667%] sm:basis-[8.333333%] max-w-[16.666667%] sm:max-w-[8.333333%] pl-6">
-          {logo}
-        </div>
+        
+          {/* Avatar */}
+          {/* <div className="flex-shrink-0 basis-[16.666667%] sm:basis-[8.333333%] max-w-[16.666667%] sm:max-w-[8.333333%] pl-6 border-1 border-magenta"> */}
+          {/* maxWidth = 2.0 rem = 32 px * 1.5 lineHeight = 48 px + pl-6 = 48 px + 24 px = */}
+          <div className="flex-shrink-0 max-h-[48px] max-w-[72px] flex items-center justify-center pl-6">
+            {logo}
+            {/* <img alt="HelloFresh Logo" src="/logos/hellofresh/hellofresh-lime--color.png" /> */}
+          </div>
 
-        {/* Show for mobile (xs, sm) */}
-        <div className="md:hidden w-5/6 sm:w-1/2 pl-6">
-          <div className="h-full flex items-center">{renderedWorkAtEmployer}</div>
-        </div>
-        <div className="md:hidden w-full pl-6">
-          {renderedWorkAtRole}
-          {renderedWorkAtWhenWhere}
-          {content}
-        </div>
+          {/* Show for mobile (xs, sm) */}
+          <div className="md:hidden w-5/6 sm:w-1/2 pl-6">
+            <div className="h-full flex items-center">{renderedWorkAtEmployer}</div>
+          </div>
+          <div className="md:hidden w-full pl-6">
+            {renderedWorkAtRole}
+            {renderedWorkAtWhenWhere}
+            {content}
+          </div>
 
-        {/* Show for desktop (md, lg, xl) */}
-        <div className="hidden md:block md:w-1/2 pl-6">
-          <div>{renderedWorkAtEmployer}</div>
-          <div>{renderedWorkAtRole}</div>
-          {renderedWorkAtWhenWhere}
-          {content}
-        </div>
+          {/* Show for desktop (md, lg, xl) */}
+          <div className="hidden md:block md:w-1/2 pl-6">
+            <div>{renderedWorkAtEmployer}</div>
+            <div>{renderedWorkAtRole}</div>
+            {renderedWorkAtWhenWhere}
+            {content}
+          </div>
 
-        {/* Gutter */}
-        <div className="hidden md:block md:w-[16.666667%]" />
+          {/* Gutter */}
+          <div className="hidden md:block md:w-[16.666667%]" />
 
-        {/* Navigation */}
-        <div className="hidden md:block md:w-1/4 pl-6">
-          <NavRight sections={sections} />
-        </div>
+          {/* Navigation */}
+          <div className="hidden md:block md:w-1/4 pl-6">
+            <NavRight sections={sections} />
+          </div>
+        
       </MyGridContainer>
     </MyContainer>
   );
