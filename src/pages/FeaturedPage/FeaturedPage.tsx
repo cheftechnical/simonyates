@@ -1,26 +1,25 @@
-import FeaturedPublication from "./components/FeaturedPublication";
-import Sections from "../../components/Sections/Sections";
+import { Link } from "react-router-dom";
+import NavRight from "../../components/NavRight";
+import PageWrapper from "../../components/PageWrapper";
 import Section from "../../components/Section/Section";
-// import NavRight from '../../components/NavRight/NavRight';
+import Sections from "../../components/Sections/Sections";
+import Li from "../../styling/ListsUnordered/Li/Li.tsx";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import FeaturedLi from "./components/FeaturedLi";
-import SectionTitle from "./SectionTitle";
-import SectionDescription from "./SectionDescription";
-import Download from "./Download";
-import FeaturedEvent from "./components/FeaturedEvent";
-import FeaturedEvents from "./components/FeaturedEvents";
-import FeaturedProjects from "./components/FeaturedProjects";
-import FeaturedPublications from "./components/FeaturedPublications";
-import FeaturedChips from "./components/FeaturedChips";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
-import PageWrapper from "../../components/PageWrapper";
-import { sections } from "./sections.ts";
-import NavRight from "../../components/NavRight";
 import FeaturedAbstract from "./components/FeaturedAbstract";
+import FeaturedChips from "./components/FeaturedChips";
+import FeaturedEvent from "./components/FeaturedEvent";
+import FeaturedEvents from "./components/FeaturedEvents";
+import FeaturedLi from "./components/FeaturedLi";
+import FeaturedProjects from "./components/FeaturedProjects";
+import FeaturedPublication from "./components/FeaturedPublication";
+import FeaturedPublications from "./components/FeaturedPublications";
+import Download from "./Download";
 import NextSection from "./components/NextSection";
-import Li from "../../styling/ListsUnordered/Li/Li.tsx";
-import { Link } from "react-router-dom";
+import SectionDescription from "./SectionDescription";
+import SectionTitle from "./SectionTitle";
+import { sections } from "./sections.ts";
 
 
 export default function Featured() {
