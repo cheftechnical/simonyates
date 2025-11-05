@@ -7,10 +7,10 @@ import Li from "../../styling/ListsUnordered/Li/Li.tsx";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
+import ConditionalIndent from "../../components/ConditionalIndent/ConditionalIndent";
 import FeaturedAbstract from "./components/FeaturedAbstract";
 import FeaturedChips from "./components/FeaturedChips";
 import FeaturedEvent from "./components/FeaturedEvent";
-import FeaturedEvents from "./components/FeaturedEvents";
 import FeaturedLi from "./components/FeaturedLi";
 import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublication from "./components/FeaturedPublication";
@@ -37,7 +37,7 @@ export default function Featured() {
                 {/*	I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.*/}
                 {/*</SectionDescription>*/}
 
-                <FeaturedEvents>
+                <ConditionalIndent>
                   <FeaturedEvent
                     title="Starting and Building a Career in Software Engineering"
                     host="BrainStation Toronto"
@@ -242,7 +242,7 @@ export default function Featured() {
                       label="Download Program Schedule"
                     />
                   </FeaturedEvent>
-                </FeaturedEvents>
+                </ConditionalIndent>
               </Section>
 
               <NextSection id={sections.publications.id}>
