@@ -26,7 +26,7 @@ interface Props {
   title: string;
 }
 
-export default function FeaturedEvent(props: Props) {
+export default function Appearance(props: Props) {
   const { children, host, next, title, when } = props;
 
   return (
@@ -42,3 +42,4 @@ export default function FeaturedEvent(props: Props) {
     </div>
   );
 }
+

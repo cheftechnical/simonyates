@@ -10,7 +10,7 @@ import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import ConditionalIndent from "../../components/ConditionalIndent/ConditionalIndent";
 import FeaturedAbstract from "./components/FeaturedAbstract";
 import FeaturedChips from "./components/FeaturedChips";
-import FeaturedEvent from "./components/FeaturedEvent";
+import Appearance from "./components/Appearance";
 import FeaturedLi from "./components/FeaturedLi";
 import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublication from "./components/FeaturedPublication";
@@ -38,7 +38,7 @@ export default function Featured() {
                 {/*</SectionDescription>*/}
 
                 <ConditionalIndent>
-                  <FeaturedEvent
+                  <Appearance
                     title="Starting and Building a Career in Software Engineering"
                     host="BrainStation Toronto"
                     when="September 17, 2024"
@@ -68,11 +68,11 @@ export default function Featured() {
                         </svg>
                       </a>
                     </div>
-                  </FeaturedEvent>
+                  </Appearance>
 
                   {/* ------------ */}
 
-                  <FeaturedEvent
+                  <Appearance
                     next
                     title="Starting and Building a Career in Software Engineering"
                     host="BrainStation Toronto"
@@ -103,11 +103,11 @@ export default function Featured() {
                         </svg>
                       </a>
                     </div>
-                  </FeaturedEvent>
+                  </Appearance>
 
                   {/* ------------ */}
 
-                  <FeaturedEvent
+                  <Appearance
                     next
                     title="Starting and Building a Career in Tech"
                     host="BrainStation Toronto"
@@ -138,11 +138,11 @@ export default function Featured() {
                         </svg>
                       </a>
                     </div>
-                  </FeaturedEvent>
+                  </Appearance>
 
                   {/* ------------ */}
 
-                  <FeaturedEvent
+                  <Appearance
                     next
                     title="Starting and Building a Career in Tech"
                     host="BrainStation Toronto"
@@ -197,11 +197,11 @@ export default function Featured() {
                       </svg>
                     </a>
                       </div>
-                  </FeaturedEvent>
+                  </Appearance>
 
                   {/* ------------ */}
 
-                  <FeaturedEvent
+                  <Appearance
                     next
                     title="Anomaly Detection with Elasticsearch"
                     host="Catalyst RBC Tech Expo / Collision"
@@ -222,11 +222,11 @@ export default function Featured() {
                       </FeaturedLi>
                       <FeaturedLi>Demo booth featuring our&nbsp;chatbot</FeaturedLi>
                     </Ul>
-                  </FeaturedEvent>
+                  </Appearance>
 
                   {/* ------------ */}
 
-                  <FeaturedEvent
+                  <Appearance
                     next
                     title="Patient-Like-Mine"
                     host="IEEE International Conference on Big Data"
@@ -241,7 +241,7 @@ export default function Featured() {
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
                       label="Download Program Schedule"
                     />
-                  </FeaturedEvent>
+                  </Appearance>
                 </ConditionalIndent>
               </Section>
 
