@@ -13,7 +13,9 @@ export function Content() {
     <Sections>
       <Section id={sections.intro.id}>
         <WorkAtDescription>
-          HelloFresh is a meal kit company.
+          HelloFresh is a meal kit company headquartered in Berlin, Germany.
+          It is the most popular meal kit company in the world, with over 1 billion meals delivered in 2024.<br/><br/>
+          Brands include HelloFresh, Green Chef, EveryPlate, Chefs Plate, Factor, Youfoodz, The Pets Table, and Good Chop.
         </WorkAtDescription>
       </Section>
 

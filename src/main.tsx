@@ -28,6 +28,7 @@ const InfomartPage = lazy(() => import("./pages/workAt/InfomartPage/index.ts"));
 const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx"));
 const PhilipsLightingPage = lazy(() => import("./pages/workAt/PhilipsLightingPage/PhilipsLightingPage.tsx"));
 const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
+const DesignSystem = lazy(() => import("./routes/DesignSystem.tsx").then(m => ({ default: m.DesignSystem })));
 const Webdev = lazy(() => import("./routes/Webdev.tsx").then(m => ({ default: m.Webdev })));
 
 const router = createBrowserRouter([
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
       {
         path: "/featured",
         element: <Featured />,
+      },
+      {
+        path: "/design-system",
+        element: <DesignSystem />,
       },
       {
         path: "/contact",

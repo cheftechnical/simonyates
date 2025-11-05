@@ -6,13 +6,21 @@ interface Props {
    */
   children: ReactNode;
   /**
+   * Additional CSS classes.
+   */
+  className?: string;
+  /**
    * If `true`, applies top padding to the list.
    */
   next?: boolean;
 }
 
 export default function Ul(props: Props) {
-  const { children, next } = props;
+  const { children, className, next } = props;
 
-  return <ul className={next ? "pt-6" : ""}>{children}</ul>;
+  const classes = [next ? "pt-6" : "", className || ""]
+    .filter(Boolean)
+    .join(" ");
+
+  return <ul className={classes || undefined}>{children}</ul>;
 }
