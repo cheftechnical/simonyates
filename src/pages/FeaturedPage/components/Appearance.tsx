@@ -23,7 +23,7 @@ interface Props {
   /**
    * The event title.
    */
-  title: string;
+  title: ReactNode;
 }
 
 export default function Appearance(props: Props) {
