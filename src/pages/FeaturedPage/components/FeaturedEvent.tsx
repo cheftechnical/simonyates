@@ -30,7 +30,8 @@ export default function FeaturedEvent(props: Props) {
   const { children, host, next, title, when } = props;
 
   return (
-    <div className={next ? "pt-[40px]" : ""}>
+    // 16 px * 1.5 lineHeight = 24 px * 2 = 48 px
+    <div className={next ? "pt-12" : ""}>
       <EventTitle>{title}</EventTitle>
 
       <EventHost>{host}</EventHost>

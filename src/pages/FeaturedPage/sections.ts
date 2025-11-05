@@ -1,13 +1,13 @@
 import { Sections } from "../../types/Sections.ts";
 
 export const sections: Sections = {
+  events: {
+    id: "events",
+    title: "Appearances"
+  },
   publications: {
     id: "publications",
     title: "Publications"
-  },
-  events: {
-    id: "events",
-    title: "Events"
   },
   projects: {
     id: "projects",

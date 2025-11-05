@@ -30,8 +30,153 @@ export default function Featured() {
           {/* Content */}
           <div className="w-full md:w-1/2">
             <Sections>
-              <Section id={sections.publications.id}>
-                <SectionTitle>Publications</SectionTitle>
+              <Section id={sections.events.id}>
+                <SectionTitle>{sections.events.title}</SectionTitle>
+
+                {/*<SectionDescription>*/}
+                {/*	I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.*/}
+                {/*</SectionDescription>*/}
+
+                <FeaturedEvents>
+                  <FeaturedEvent
+                    title="Starting and Building a Career in Tech"
+                    host="BrainStation Toronto"
+                    when="March 21, 2024"
+                  >
+                    <div className="mt-4">                    
+                      <a
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7176553397511233536/"
+                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        LinkedIn Post
+                        <svg
+                          className="ml-1 h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </FeaturedEvent>
+
+                  {/* ------------ */}
+
+                  <FeaturedEvent
+                    next
+                    title="Starting and Building a Career in Tech"
+                    host="BrainStation Toronto"
+                    when="February 22, 2024"
+                  >
+                    <div className="mt-4" >
+                      <a
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7166213687731499009/"
+                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        LinkedIn Post
+                        <svg
+                          className="ml-1 h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                      <br/>
+                    <a
+                      href="https://www.linkedin.com/feed/update/urn:li:activity:7166974594984108033/"
+                      className="text-blue-500 no-underline hover:underline inline-flex items-center"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Feedback Post
+                      <svg
+                        className="ml-1 h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+                      </div>
+                  </FeaturedEvent>
+
+                  {/* ------------ */}
+
+                  <FeaturedEvent
+                    next
+                    title="Anomaly Detection with Elasticsearch"
+                    host="Catalyst RBC Tech Expo / Collision"
+                    when="September 25, 2019"
+                  >
+                    <FeaturedChips
+                      list={[
+                        "talk",
+                        "workshop",
+                        "machine learning",
+                        "anomaly detection"
+                      ]}
+                    />
+
+                    <Ul>
+                      <FeaturedLi>
+                        Talk + Workshop with step-by-step guide&nbsp;handout
+                      </FeaturedLi>
+                      <FeaturedLi>Demo booth featuring our&nbsp;chatbot</FeaturedLi>
+                    </Ul>
+                  </FeaturedEvent>
+
+                  {/* ------------ */}
+
+                  <FeaturedEvent
+                    next
+                    title="Patient-Like-Mine"
+                    host="IEEE International Conference on Big Data"
+                    when="October 29 to November 1, 2015"
+                  >
+                    <Download
+                      href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"
+                      label="Download Paper"
+                    />
+                    <Download
+                      next
+                      href="https://s3.amazonaws.com/simonyates.ca-downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
+                      label="Download Program Schedule"
+                    />
+                  </FeaturedEvent>
+                </FeaturedEvents>
+              </Section>
+
+              <NextSection id={sections.publications.id}>
+                <SectionTitle>{sections.publications.title}</SectionTitle>
 
                 <SectionDescription>
                   I&rsquo;ve been incredibly lucky to work along some of the
@@ -96,60 +241,10 @@ export default function Featured() {
                     </Ul>
                   </FeaturedPublication>
                 </FeaturedPublications>
-              </Section>
-
-              <NextSection id={sections.events.id}>
-                <SectionTitle>Events</SectionTitle>
-
-                {/*<SectionDescription>*/}
-                {/*	I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.*/}
-                {/*</SectionDescription>*/}
-
-                <FeaturedEvents>
-                  <FeaturedEvent
-                    title="Anomaly Detection with Elasticsearch"
-                    host="Catalyst/Collision"
-                    when="Sep 25, 2019"
-                  >
-                    <FeaturedChips
-                      list={[
-                        "talk",
-                        "workshop",
-                        "machine learning",
-                        "anomaly detection"
-                      ]}
-                    />
-
-                    <Ul>
-                      <FeaturedLi>
-                        Talk + Workshop with step-by-step guide&nbsp;handout
-                      </FeaturedLi>
-                      <FeaturedLi>Demo booth featuring our&nbsp;chatbot</FeaturedLi>
-                    </Ul>
-                  </FeaturedEvent>
-
-                  <FeaturedEvent
-                    next
-                    title="Patient-Like-Mine"
-                    host="IEEE International Conference on Big Data"
-                    when="Oct 29 – Nov 1, 2015"
-                  >
-                    <Download
-                      href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"
-                      label="Download Paper"
-                    />
-                    <br />
-                    <Download
-                      next
-                      href="https://s3.amazonaws.com/simonyates.ca-downloads/events/2015/ieee-international-conference-on-big-data/program-schedule.pdf"
-                      label="Download Program Schedule"
-                    />
-                  </FeaturedEvent>
-                </FeaturedEvents>
               </NextSection>
 
               <NextSection id={sections.projects.id}>
-                <SectionTitle>Projects</SectionTitle>
+                <SectionTitle>{sections.projects.title}</SectionTitle>
 
                 <FeaturedProjects>
                   {/* Projects content will go here */}
