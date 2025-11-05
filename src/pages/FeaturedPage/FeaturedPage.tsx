@@ -11,6 +11,7 @@ import ConditionalIndent from "../../components/ConditionalIndent/ConditionalInd
 import FeaturedAbstract from "./components/FeaturedAbstract";
 import FeaturedChips from "./components/FeaturedChips";
 import Appearance from "./components/Appearance";
+import AppearanceLink from "./components/AppearanceLink";
 import FeaturedLi from "./components/FeaturedLi";
 import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublication from "./components/FeaturedPublication";
@@ -44,29 +45,12 @@ export default function Featured() {
                     when="September 17, 2024"
                   >
                     <div className="mt-4">
-                      <a
-                        href="https://www.linkedin.com/events/startingandbuildingacareerinsof7240068930323587072/"
-                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <AppearanceLink
+                        url="https://www.linkedin.com/events/startingandbuildingacareerinsof7240068930323587072/"
+                        external={true}
                       >
                         LinkedIn Event
-                        <svg
-                          className="ml-1 h-4 w-4"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
+                      </AppearanceLink>
                     </div>
                   </Appearance>
 
@@ -79,29 +63,12 @@ export default function Featured() {
                     when="August 22, 2024"
                   >
                     <div className="mt-4">
-                      <a
-                        href="https://www.linkedin.com/events/startingandbuildingacareerinsof7227696764244373506/"
-                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <AppearanceLink
+                        url="https://www.linkedin.com/events/startingandbuildingacareerinsof7227696764244373506/"
+                        external={true}
                       >
                         LinkedIn Event
-                        <svg
-                          className="ml-1 h-4 w-4"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
+                      </AppearanceLink>
                     </div>
                   </Appearance>
 
@@ -114,29 +81,12 @@ export default function Featured() {
                     when="March 21, 2024"
                   >
                     <div className="mt-4">                    
-                      <a
-                        href="https://www.linkedin.com/feed/update/urn:li:activity:7176553397511233536/"
-                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <AppearanceLink
+                        url="https://www.linkedin.com/feed/update/urn:li:activity:7176553397511233536/"
+                        external={true}
                       >
                         LinkedIn Post
-                        <svg
-                          className="ml-1 h-4 w-4"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
+                      </AppearanceLink>
                     </div>
                   </Appearance>
 
@@ -149,53 +99,19 @@ export default function Featured() {
                     when="February 22, 2024"
                   >
                     <div className="mt-4" >
-                      <a
-                        href="https://www.linkedin.com/feed/update/urn:li:activity:7166213687731499009/"
-                        className="text-blue-500 no-underline hover:underline inline-flex items-center"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <AppearanceLink
+                        url="https://www.linkedin.com/feed/update/urn:li:activity:7166213687731499009/"
+                        external={true}
                       >
                         LinkedIn Post
-                        <svg
-                          className="ml-1 h-4 w-4"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
+                      </AppearanceLink>
                       <br/>
-                    <a
-                      href="https://www.linkedin.com/feed/update/urn:li:activity:7166974594984108033/"
-                      className="text-blue-500 no-underline hover:underline inline-flex items-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Feedback Post
-                      <svg
-                        className="ml-1 h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
+                      <AppearanceLink
+                        url="https://www.linkedin.com/feed/update/urn:li:activity:7166974594984108033/"
+                        external={true}
                       >
-                        <path
-                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </a>
+                        Feedback Post
+                      </AppearanceLink>
                       </div>
                   </Appearance>
 
