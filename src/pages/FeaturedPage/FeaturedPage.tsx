@@ -31,8 +31,8 @@ export default function Featured() {
           {/* Content */}
           <div className="w-full md:w-1/2">
             <Sections>
-              <Section id={sections.events.id}>
-                <SectionTitle>{sections.events.title}</SectionTitle>
+              <Section id={sections.appearances.id}>
+                <SectionTitle>{sections.appearances.title}</SectionTitle>
 
                 {/*<SectionDescription>*/}
                 {/*	I frequently create presentations about the different projects that I'm working on for our bi-weekly town hall. In 2019, I also hosted an interactive workshop in partnership with Elastic on machine learning for Catalyst, which is an RBC–specific event taking place during the week of Toronto's popular technology event: Collision.*/}
