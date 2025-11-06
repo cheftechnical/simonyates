@@ -40,16 +40,6 @@ export default function Footer() {
             >
               <Logo brand="linkedin" variant="grey-300" width={24} />
             </a>
-
-            <a
-              rel="noopener"
-              title="Follow me on Twitter"
-              target="_blank"
-              href="https://twitter.com/cheftechnical"
-              className="ml-6"
-            >
-              <Logo brand="twitter" variant="grey-300" width={24} />
-            </a>
           </div>
         </div>
       </MyContainer>
