@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import EventHost from "./EventHost";
 import EventWhen from "./EventWhen";
 
 interface Props {
@@ -39,7 +38,9 @@ export default function Appearance(props: Props) {
         {title}
       </h3>
 
-      <EventHost>{host}</EventHost>
+      <p className="font-normal text-base leading-normal tracking-[0.5px] pt-[16px] text-gray-600">
+        {host}
+      </p>
 
       <EventWhen>{when}</EventWhen>
 
