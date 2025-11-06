@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import EventTitle from "./EventTitle";
 import EventHost from "./EventHost";
 import EventWhen from "./EventWhen";
 
@@ -21,6 +20,10 @@ interface Props {
    */
   when: string;
   /**
+   * Where the event occurred.
+   */
+  where: string;
+  /**
    * The event title.
    */
   title: ReactNode;
@@ -32,7 +35,9 @@ export default function Appearance(props: Props) {
   return (
     // 16 px * 1.5 lineHeight = 24 px * 2 = 48 px
     <div className={next ? "pt-12" : ""}>
-      <EventTitle>{title}</EventTitle>
+      <h3 className="font-semibold text-base leading-normal tracking-[0.5px]">
+        {title}
+      </h3>
 
       <EventHost>{host}</EventHost>
 
