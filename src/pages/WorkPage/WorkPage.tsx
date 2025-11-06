@@ -4,7 +4,6 @@ import Li from "../../styling/ListsUnordered/Li/Li";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import Logo from "../../components/Logo";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import Hero from "./Hero/Hero";
 import PageWrapper from "../../components/PageWrapper";
 import NavRight from "../../components/NavRight";
@@ -27,45 +26,50 @@ export default function WorkPage() {
   return (
     <PageWrapper title="Work">
       <MyContainer>
-        <MyGridContainer>
-          <div className="w-full md:w-[58.333333%]">
+        <div className="flex flex-wrap">
+          {/* pr-32 = 128 or 3 visual octaves */}
+          <div className="w-full md:w-9/12 md:pr-32 xborder-1 border-[magenta] xbg-[pink]">
             <Hero />
+
+            {workExperienceData.map((work, index) => {
+              // Get highlights for each employer
+              const highlights = getHighlights(work.sectionId);
+
+              return (
+                <div
+                  key={work.sectionId}
+                  className={`flex flex-wrap ${index === 0 ? "mt-[84px]" : "mt-[79px]"}`}
+                >
+                  <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pt-6">
+                    <Logo brand={work.brand} variant="default" width="100%" />
+                  </div>
+                  {/* <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6"> */}
+                  <div className="flex-shrink-0 basis-[83.333333%] pl-6 pt-6">
+                    <div id={work.sectionId}>
+                      <WorkExperience
+                        employer={work.employer}
+                        href={work.href}
+                        role={typeof work.role === "string" ? work.role : String(work.role)}
+                        when={formatDateForWorkPage(work.when)}
+                      >
+                        {highlights}
+                      </WorkExperience>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
           </div>
           {/* Gutter */}
-          <div className="hidden md:block md:w-[16.666667%]" />
+          {/* <div className="hidden md:block md:w-1/12 border-1 border-[lime]" /> */}
           {/* Navigation */}
-          <div className="hidden md:block md:w-1/4 pl-6">
+          <div className="hidden md:block md:w-3/12 xborder-1 border-[blue]">
             <NavRight sections={sections} />
           </div>
-        </MyGridContainer>
+        </div>
 
-        {workExperienceData.map((work, index) => {
-          // Get highlights for each employer
-          const highlights = getHighlights(work.sectionId);
-
-          return (
-            <MyGridContainer
-              key={work.sectionId}
-              className={index === 0 ? "mt-[84px]" : "mt-[79px]"}
-            >
-              <div className="flex-shrink-0 basis-[16.666667%] md:basis-[8.333333%] max-w-[16.666667%] md:max-w-[8.333333%] pl-6 pt-6">
-                <Logo brand={work.brand} variant="default" width="100%" />
-              </div>
-              <div className="flex-shrink-0 basis-[83.333333%] md:basis-[50%] max-w-[83.333333%] md:max-w-[50%] pl-6 pt-6">
-                <div id={work.sectionId}>
-                  <WorkExperience
-                    employer={work.employer}
-                    href={work.href}
-                    role={typeof work.role === "string" ? work.role : String(work.role)}
-                    when={formatDateForWorkPage(work.when)}
-                  >
-                    {highlights}
-                  </WorkExperience>
-                </div>
-              </div>
-            </MyGridContainer>
-          );
-        })}
+        
       </MyContainer>
     </PageWrapper>
   );

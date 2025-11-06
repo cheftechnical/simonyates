@@ -13,10 +13,12 @@ interface Props {
 }
 
 export default function MyGridContainer({ children, className = "" }: Props) {
+
+  // /* -mx-3 */
   const baseClasses = `
     flex
     flex-wrap
-    -mx-3
+    
     ${className}
   `.trim().replace(/\s+/g, " ");
 

@@ -29,7 +29,8 @@ export default function Featured() {
       <MyContainer>
         <MyGridContainer>
           {/* Content */}
-          <div className="w-full md:w-1/2">
+          {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
+          <div className="w-full md:w-9/12 md:pr-48 xborder-1 border-[magenta] ">
             <Sections>
               <Section id={sections.appearances.id}>
                 <SectionTitle>{sections.appearances.title}</SectionTitle>
@@ -252,10 +253,10 @@ export default function Featured() {
           </div>
 
           {/* Gutter */}
-          <div className="hidden md:block md:w-1/4" />
+          {/* <div className="border-1 border-[lime] hidden md:block md:w-2/12" /> */}
 
           {/* Navigation */}
-          <div className="hidden md:block md:w-1/4">
+          <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
             <NavRight sections={sections} />
           </div>
         </MyGridContainer>
