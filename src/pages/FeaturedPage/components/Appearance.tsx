@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import EventWhen from "./EventWhen";
 
 interface Props {
   /**
@@ -29,7 +28,7 @@ interface Props {
 }
 
 export default function Appearance(props: Props) {
-  const { children, host, next, title, when } = props;
+  const { children, host, next, title, when, where } = props;
 
   return (
     // 16 px * 1.5 lineHeight = 24 px * 2 = 48 px
@@ -42,7 +41,13 @@ export default function Appearance(props: Props) {
         {host}
       </p>
 
-      <EventWhen>{when}</EventWhen>
+      <p className="font-normal text-base leading-normal tracking-[0.5px] text-gray-600">
+        {where}
+      </p>
+
+      <p className="font-normal text-base leading-normal tracking-[0.5px] text-gray-600">
+        {when}
+      </p>
 
       <div>{children}</div>
     </div>
