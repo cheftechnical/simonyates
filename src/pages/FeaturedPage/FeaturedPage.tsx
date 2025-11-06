@@ -40,9 +40,10 @@ export default function Featured() {
 
                 <ConditionalIndent>
                   <Appearance
+                    host="BrainStation"
                     title={<>Starting and Building a Career in Software&nbsp;Engineering</>}
-                    host="BrainStation Toronto"
                     when="September 17, 2024"
+                    where="Toronto, ON, Canada"
                   >
                     <div className="mt-4">
                       <AppearanceLink
@@ -58,9 +59,10 @@ export default function Featured() {
 
                   <Appearance
                     next
+                    host="BrainStation"
                     title={<>Starting and Building a Career in Software&nbsp;Engineering</>}
-                    host="BrainStation Toronto"
                     when="August 22, 2024"
+                    where="Toronto, ON, Canada"
                   >
                     <div className="mt-4">
                       <AppearanceLink
@@ -76,9 +78,10 @@ export default function Featured() {
 
                   <Appearance
                     next
+                    host="BrainStation"
                     title={<>Starting and Building a Career in&nbsp;Tech</>}
-                    host="BrainStation Toronto"
                     when="March 21, 2024"
+                    where="Toronto, ON, Canada"
                   >
                     <div className="mt-4">                    
                       <AppearanceLink
@@ -94,9 +97,10 @@ export default function Featured() {
 
                   <Appearance
                     next
+                    host="BrainStation"
                     title={<>Starting and Building a Career in&nbsp;Tech</>}
-                    host="BrainStation Toronto"
                     when="February 22, 2024"
+                    where="Toronto, ON, Canada"
                   >
                     <div className="mt-4" >
                       <AppearanceLink
@@ -119,9 +123,10 @@ export default function Featured() {
 
                   <Appearance
                     next
-                    title={<>Anomaly Detection with&nbsp;Elasticsearch</>}
                     host="Catalyst RBC Tech Expo / Collision"
+                    title={<>Anomaly Detection with&nbsp;Elasticsearch</>}
                     when="September 25, 2019"
+                    where="Toronto, ON, Canada"
                   >
                     <FeaturedChips
                       list={[
@@ -144,9 +149,10 @@ export default function Featured() {
 
                   <Appearance
                     next
-                    title={<>Patient-Like-Mine</>}
                     host="IEEE International Conference on Big Data"
+                    title={<>Patient-Like-Mine</>}
                     when="October 29 to November 1, 2015"
+                    where="Santa Clara, CA, USA"
                   >
                     <Download
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf"
