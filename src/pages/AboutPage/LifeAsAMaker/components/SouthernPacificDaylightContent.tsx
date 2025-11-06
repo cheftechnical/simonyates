@@ -1,10 +1,9 @@
 import Image from "../../../../components/Image/Image";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import SouthernPacificDaylightImgWrapper from "./SouthernPacificDaylightImgWrapper";
 
 export default function SouthernPacificDaylightContent() {
   return (
-    <MyGridContainer className="pb-[109px] sm:pb-[258px]">
+    <div className="flex flex-wrap pb-[109px] sm:pb-[258px]">
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/4" />
       <div className="w-full md:w-3/4">
@@ -15,7 +14,7 @@ export default function SouthernPacificDaylightContent() {
           />
         </SouthernPacificDaylightImgWrapper>
       </div>
-    </MyGridContainer>
+    </div>
   );
 }
 

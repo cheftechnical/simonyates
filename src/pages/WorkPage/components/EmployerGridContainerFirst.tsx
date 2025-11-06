@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 
 interface Props {
   /**
@@ -15,6 +14,6 @@ export default function EmployerGridContainerFirst(props: Props) {
     return null;
   }
 
-  return <MyGridContainer className="!mt-[84px]">{children}</MyGridContainer>;
+  return <div className="flex flex-wrap !mt-[84px]">{children}</div>;
 }
 

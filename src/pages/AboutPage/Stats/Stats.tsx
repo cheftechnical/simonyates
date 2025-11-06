@@ -1,5 +1,4 @@
 import MyContainer from "../../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 import StatsItem from "./StatsItem";
 import Carousel from "react-material-ui-carousel";
 
@@ -33,7 +32,7 @@ export default function Stats() {
       {/* Desktop */}
       <div className="hidden sm:block">
         <MyContainer>
-          <MyGridContainer>
+          <div className="flex flex-wrap">
             <div className="w-1/4">
               <StatsItem {...stat[0]} />
             </div>
@@ -46,7 +45,7 @@ export default function Stats() {
             <div className="w-1/4">
               <StatsItem {...stat[3]} />
             </div>
-          </MyGridContainer>
+          </div>
         </MyContainer>
       </div>
 

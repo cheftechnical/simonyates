@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import DateTime from "./DateTime";
 
 interface Region {
@@ -44,7 +43,7 @@ export default function TimeConversions() {
 
   return (
     <>
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         {/* Zulu time is always top and center */}
         <div className="px-3 w-1/4" />
         <div className="px-3 w-1/2">
@@ -58,7 +57,7 @@ export default function TimeConversions() {
             <DateTime now={now} timeZone={region.timeZone} />
           </div>
         ))}
-      </MyGridContainer>
+      </div>
     </>
   );
 }

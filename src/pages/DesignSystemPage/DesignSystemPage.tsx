@@ -1,6 +1,5 @@
 import NavRight from "../../components/NavRight";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import PageWrapper from "../../components/PageWrapper";
 import { sections } from "./sections.ts";
 
@@ -8,7 +7,7 @@ export function DesignSystem() {
   return (
     <PageWrapper title="Design System">
       <MyContainer>
-        <MyGridContainer>
+        <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-3/5">
             {/* Content will go here */}
@@ -396,7 +395,7 @@ export function DesignSystem() {
           <div className="hidden md:block md:w-1/4">
             <NavRight sections={sections} />
           </div>
-        </MyGridContainer>
+        </div>
       </MyContainer>
     </PageWrapper>
   );

@@ -6,7 +6,6 @@ import SinCos from './CircleBasicsVisualization/CircleBasicsVisualization';
 import {AxisDirection} from './AxisDirection';
 // import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';
 import {memo, useState} from "react";
-import MyGridContainer from "../../../../styling/MyGridContainer";
 import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import MyTextField2 from "../../../../styling/MyTextField2";
 import CircleBasicsMathJax from "./CircleBasicsMathJax/CircleBasicsMath.tsx";
@@ -37,7 +36,7 @@ export const CircleBasicsGridContainer = memo(function () {
   });
 
   return (
-    <MyGridContainer>
+    <div className="flex flex-wrap">
       <MyGridItem xs={6}>
         <SinCos
           onChange={handleSinCosChange}
@@ -61,7 +60,7 @@ export const CircleBasicsGridContainer = memo(function () {
           />
         </div>
       </MyGridItem>
-    </MyGridContainer>
+    </div>
   );
 });
 

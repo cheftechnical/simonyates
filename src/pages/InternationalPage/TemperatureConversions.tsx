@@ -1,5 +1,4 @@
 import { ChangeEvent, ReactNode, useState } from "react";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 
 interface Temperature {
   code: string;
@@ -48,7 +47,7 @@ export default function TemperatureConversions() {
   };
 
   return (
-    <MyGridContainer>
+    <div className="flex flex-wrap">
       {temperatures.map((temperature: Temperature, index: number) => (
         <div key={index} className="px-3 w-1/2">
           <div className="w-full">
@@ -69,6 +68,6 @@ export default function TemperatureConversions() {
           </div>
         </div>
       ))}
-    </MyGridContainer>
+    </div>
   );
 }

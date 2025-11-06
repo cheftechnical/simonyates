@@ -1,11 +1,10 @@
 import Image from "../../../components/Image/Image";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../../styling/MyGridContainer/MyGridContainer";
 
 export default function Hero() {
   return (
     <MyContainer className="pb-[26px] sm:pb-[80px]">
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <div className="w-full md:w-[58.333333%]">
           <div className="flex items-end h-full">
             <div>
@@ -22,7 +21,7 @@ export default function Hero() {
             src="/images/about/hero/simon-yates.png"
           />
         </div>
-      </MyGridContainer>
+      </div>
     </MyContainer>
   );
 }

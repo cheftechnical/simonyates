@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import H3 from "./H3";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -9,14 +8,14 @@ export default function TlcContent() {
   return (
     <>
       {/* Hello, World! */}
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <div className="w-full md:w-1/2">
           <H3>Hello, World!</H3>
         </div>
         <div className="hidden md:block md:w-1/2" />
-      </MyGridContainer>
+      </div>
 
-      <MyGridContainer className="pb-[64px]">
+      <div className="flex flex-wrap pb-[64px]">
         <div className="w-full md:w-1/2">
           <Body>
             While TLC&rsquo;s Super Solvers:{" "}
@@ -58,7 +57,7 @@ export default function TlcContent() {
             src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
           />
         </div>
-      </MyGridContainer>
+      </div>
     </>
   );
 }

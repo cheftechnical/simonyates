@@ -1,12 +1,11 @@
 import Image from "../../../../components/Image/Image";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import GwBasicImgWrapper from "./GwBasicImgWrapper";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
 
 export default function GwBasicContent() {
   return (
-    <MyGridContainer className="pb-[56px] sm:pb-[152px]">
+    <div className="flex flex-wrap pb-[56px] sm:pb-[152px]">
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/2">
         <div className="h-full flex items-center">
@@ -45,7 +44,7 @@ export default function GwBasicContent() {
           </strong>
         </BodyNext>
       </div>
-    </MyGridContainer>
+    </div>
   );
 }
 

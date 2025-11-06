@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import LifeAsAMakerImgWrapper from "./LifeAsAMakerImgWrapper";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -8,16 +7,16 @@ export default function LifeAsAMakerContent() {
   return (
     <>
       {/* Life as a maker*/}
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <div className="hidden md:block md:w-1/2" />
         <div className="w-full md:w-1/2">
           <h2 className="font-normal text-[54px] leading-[88px] tracking-[0.5px]">
             Life as a Maker
           </h2>
         </div>
-      </MyGridContainer>
+      </div>
 
-      <MyGridContainer className="pb-[139px]">
+      <div className="flex flex-wrap pb-[139px]">
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
           <div className="h-full flex items-center">
@@ -62,7 +61,7 @@ export default function LifeAsAMakerContent() {
             src="/images/about/life-as-a-maker/apple-macintosh.png"
           />
         </div>
-      </MyGridContainer>
+      </div>
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { ChangeEvent, memo, useState } from "react";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
 import BezierArcMathJax from "./CubicBezierCurveMathJax";
@@ -26,14 +25,14 @@ export const BezierArcGridContainer = memo(function () {
 
 	return (
 		<div>
-			<MyGridContainer>
+			<div className="flex flex-wrap">
 				<MyGridItem xs={6}>
           <CubicBezierCurveVisualization
             onChange={handleBezierArcVisualizationChange}
           />
 				</MyGridItem>
 				<MyGridItem xs={6}>
-					<MyGridContainer>
+					<div className="flex flex-wrap">
 						<MyGridItem xs={6}>
               <MyTextField2
                 disabled
@@ -53,7 +52,7 @@ export const BezierArcGridContainer = memo(function () {
                 value={endAngle.toString()}
               />
 						</MyGridItem>
-					</MyGridContainer>
+					</div>
 
 					<BezierArcMathJax
 						radius={radius}
@@ -61,8 +60,8 @@ export const BezierArcGridContainer = memo(function () {
 						endAngle={endAngle}
 					/>
 				</MyGridItem>
-			</MyGridContainer>
-			<MyGridContainer>
+			</div>
+			<div className="flex flex-wrap">
 				<MyGridItem xs={2}>
 					<BezierArcMathJax
 						radius={radius}
@@ -95,7 +94,7 @@ export const BezierArcGridContainer = memo(function () {
 						variable="E"
 					/>
 				</MyGridItem>
-			</MyGridContainer>
+			</div>
 		</div>
 	)
 });

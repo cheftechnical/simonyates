@@ -6,7 +6,6 @@ import Sections from "../../components/Sections/Sections";
 import Li from "../../styling/ListsUnordered/Li/Li.tsx";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import ConditionalIndent from "../../components/ConditionalIndent/ConditionalIndent";
 import FeaturedAbstract from "./components/FeaturedAbstract";
 import FeaturedChips from "./components/FeaturedChips";
@@ -27,7 +26,7 @@ export default function Featured() {
   return (
     <PageWrapper title="Featured">
       <MyContainer>
-        <MyGridContainer>
+        <div className="flex flex-wrap">
           {/* Content */}
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
           <div className="w-full md:w-9/12 md:pr-48 xborder-1 border-[magenta] ">
@@ -259,7 +258,7 @@ export default function Featured() {
           <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
             <NavRight sections={sections} />
           </div>
-        </MyGridContainer>
+        </div>
       </MyContainer>
     </PageWrapper>
   );

@@ -2,7 +2,6 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService.tsx";
 import NavRight from "../../components/NavRight/NavRight";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 import PageWrapper from "../../components/PageWrapper";
 import { Sections } from "../../types/Sections.ts";
 
@@ -21,7 +20,7 @@ export function Legal() {
   return (
     <PageWrapper title="Legal">
       <MyContainer>
-        <MyGridContainer>
+        <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-1/2">
             <PrivacyPolicy id={sections.privacyPolicy.id} />
@@ -35,7 +34,7 @@ export function Legal() {
           <div className="hidden md:block md:w-1/4">
             <NavRight sections={sections} />
           </div>
-        </MyGridContainer>
+        </div>
       </MyContainer>
     </PageWrapper>
   );

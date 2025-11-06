@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import H3 from "./H3";
 import Body from "./Body";
 import BodyNext from "./BodyNext";
@@ -9,15 +8,15 @@ export default function ModelRailroaderMagazineContent() {
   return (
     <>
       {/* Model Railroader Magazine */}
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <div className="w-full md:w-1/2">
           <H3>Model trains, Arduino</H3>
         </div>
 
         <div className="hidden md:block md:w-1/2" />
-      </MyGridContainer>
+      </div>
 
-      <MyGridContainer className="pb-0 sm:pb-[70px]">
+      <div className="flex flex-wrap pb-0 sm:pb-[70px]">
         <div className="w-full md:w-1/2">
           <Body>
             It was around this time that I also started getting into model
@@ -61,7 +60,7 @@ export default function ModelRailroaderMagazineContent() {
             src="/images/about/life-as-a-maker/model-railroader-magazine.png"
           />
         </div>
-      </MyGridContainer>
+      </div>
     </>
   );
 }

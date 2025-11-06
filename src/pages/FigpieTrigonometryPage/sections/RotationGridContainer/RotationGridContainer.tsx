@@ -1,5 +1,4 @@
 import { ChangeEvent, memo, useState } from "react";
-import MyGridContainer from "../../../../styling/MyGridContainer/MyGridContainer";
 import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
 import { CubicBezier } from "../../libs/CubicBezier";
@@ -42,7 +41,7 @@ export const RotationGridContainer = memo(function() {
 
   return (
     <div>
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <MyGridItem xs={6}>
           <RotationVisualization onChange={handleRotationVisualizationChange} />
         </MyGridItem>
@@ -60,9 +59,9 @@ export const RotationGridContainer = memo(function() {
             theta={theta}
           />
         </MyGridItem>
-      </MyGridContainer>
+      </div>
 
-      <MyGridContainer>
+      <div className="flex flex-wrap">
         <MyGridItem xs={6}>
           <RotationMathJax
             cubicBezier={rotatedCubicBezier}
@@ -91,7 +90,7 @@ export const RotationGridContainer = memo(function() {
             variable="E"
           />
         </MyGridItem>
-      </MyGridContainer>
+      </div>
     </div>
   );
 });

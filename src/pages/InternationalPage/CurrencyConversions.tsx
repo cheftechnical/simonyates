@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from "react";
-import MyGridContainer from "../../styling/MyGridContainer/MyGridContainer";
 
 interface Currency {
   code: string;
@@ -54,7 +53,7 @@ export default function CurrencyConversions() {
   };
 
   return (
-    <MyGridContainer>
+    <div className="flex flex-wrap">
       {currencies.map((currency: Currency, index: number) => (
         <div key={index} className="px-3 w-1/2">
           <div className="w-full">
@@ -80,6 +79,6 @@ export default function CurrencyConversions() {
           </div>
         </div>
       ))}
-    </MyGridContainer>
+    </div>
   );
 }
