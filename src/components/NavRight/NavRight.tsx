@@ -2,6 +2,7 @@ import "./style.css";
 import NavRightItem from "./NavRightItem";
 import { Sections } from "../../types/Sections.ts";
 import { useEffect, useState } from "react";
+import { HEADER_OFFSET, findElementById } from "./utils";
 
 interface NavRightProps {
   /**
@@ -27,7 +28,6 @@ export function NavRight(props: NavRightProps) {
 
   useEffect(() => {
     const sectionIds = Object.values(sections).map((s) => s.id);
-    const headerOffset = 100; // matches scroll-padding-top
 
     const handleScroll = () => {
       // Find the section currently in view
@@ -38,23 +38,7 @@ export function NavRight(props: NavRightProps) {
       let bestDistanceAbove = Infinity;
 
       for (const sectionId of sectionIds) {
-        // Handle duplicate IDs: find element with actual content
-        const allElementsWithId = document.querySelectorAll(`[id="${sectionId}"]`);
-        let element: HTMLElement | null = null;
-        
-        // Find element with dimensions/content
-        for (const el of Array.from(allElementsWithId)) {
-          const htmlEl = el as HTMLElement;
-          if (htmlEl.offsetHeight > 0 || htmlEl.scrollHeight > 0 || htmlEl.getBoundingClientRect().height > 0) {
-            element = htmlEl;
-            break;
-          }
-        }
-        
-        // Fallback to first element
-        if (!element && allElementsWithId.length > 0) {
-          element = allElementsWithId[0] as HTMLElement;
-        }
+        const element = findElementById(sectionId);
         
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -63,10 +47,10 @@ export function NavRight(props: NavRightProps) {
           const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
           
           if (isInViewport) {
-            const distanceFromHeader = Math.abs(rect.top - headerOffset);
+            const distanceFromHeader = Math.abs(rect.top - HEADER_OFFSET);
             
             // Prefer sections that are at or below the header offset
-            if (rect.top >= headerOffset) {
+            if (rect.top >= HEADER_OFFSET) {
               // Section is at or below header - prefer this
               if (distanceFromHeader < closestDistance) {
                 closestDistance = distanceFromHeader;
@@ -96,21 +80,7 @@ export function NavRight(props: NavRightProps) {
       // If we're past the last section, select the last section
       if (currentSectionId === null && sectionIds.length > 0) {
         const lastSectionId = sectionIds[sectionIds.length - 1];
-        const allElementsWithId = document.querySelectorAll(`[id="${lastSectionId}"]`);
-        let lastSection: HTMLElement | null = null;
-        
-        // Find element with dimensions
-        for (const el of Array.from(allElementsWithId)) {
-          const htmlEl = el as HTMLElement;
-          if (htmlEl.offsetHeight > 0 || htmlEl.scrollHeight > 0) {
-            lastSection = htmlEl;
-            break;
-          }
-        }
-        
-        if (!lastSection && allElementsWithId.length > 0) {
-          lastSection = allElementsWithId[0] as HTMLElement;
-        }
+        const lastSection = findElementById(lastSectionId);
         
         if (lastSection) {
           const rect = lastSection.getBoundingClientRect();

@@ -1,4 +1,5 @@
 import { Section } from "../../../types/Section.ts";
+import { HEADER_OFFSET, findElementById } from "../utils";
 
 type NavRightItemProps = {
   section: Section;
@@ -12,24 +13,7 @@ export default function NavRightItem(props: NavRightItemProps) {
     const targetId = section.id;
     e.preventDefault();
     
-    // Handle duplicate IDs: find the element that actually has content
-    const allElementsWithId = document.querySelectorAll(`[id="${targetId}"]`);
-    
-    // Find the element with actual dimensions/content
-    let targetElement: HTMLElement | null = null;
-    for (const element of Array.from(allElementsWithId)) {
-      const el = element as HTMLElement;
-      // Prefer element with content (has height or scrollHeight)
-      if (el.offsetHeight > 0 || el.scrollHeight > 0 || el.getBoundingClientRect().height > 0) {
-        targetElement = el;
-        break;
-      }
-    }
-    
-    // Fallback to first element if none have dimensions
-    if (!targetElement && allElementsWithId.length > 0) {
-      targetElement = allElementsWithId[0] as HTMLElement;
-    }
+    const targetElement = findElementById(targetId);
 
     if (!targetElement) {
       console.warn('Target element not found:', targetId);
@@ -44,8 +28,7 @@ export default function NavRightItem(props: NavRightItemProps) {
       // If element has valid dimensions, scroll to it
       if (rect.height > 0 || rect.top !== rect.bottom) {
         const absoluteTop = rect.top + currentScrollY;
-        const headerOffset = 100;
-        const targetScrollPosition = Math.max(0, absoluteTop - headerOffset);
+        const targetScrollPosition = Math.max(0, absoluteTop - HEADER_OFFSET);
         
         window.scrollTo({
           top: targetScrollPosition,
@@ -87,7 +70,7 @@ export default function NavRightItem(props: NavRightItemProps) {
           
           if (elementTop > 0) {
             window.scrollTo({
-              top: Math.max(0, elementTop - 100),
+              top: Math.max(0, elementTop - HEADER_OFFSET),
               behavior: "auto"
             });
           } else {

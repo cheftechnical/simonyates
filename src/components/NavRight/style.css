@@ -1,5 +1,5 @@
 html {
-    scroll-padding-top: 100px; /* height of your navbar */
+    scroll-padding-top: 112px; /* matches HEADER_OFFSET in utils.ts */
 }
 
 /* Default state - transparent border */
