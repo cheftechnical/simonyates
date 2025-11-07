@@ -41,9 +41,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.applicationDevelopment.id}>
-        <WorkAtSectionTitle>
-          Application Development &amp; Custom&nbsp;Tooling
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.applicationDevelopment.title}</WorkAtSectionTitle>
 
         <WorkAtProjects>
           <WorkAtProject name="SRE Global Dashboard" when="2019–Present">
@@ -224,9 +222,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.machineLearning.id}>
-        <WorkAtSectionTitle>
-          Machine Learning / Artificial Intelligence
-        </WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.machineLearning.title}</WorkAtSectionTitle>
 
         <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
           I used machine learning libraries in Python to automate some of the
@@ -256,7 +252,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.budgeting.id}>
-        <WorkAtSectionTitle>Budgeting</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.budgeting.title}</WorkAtSectionTitle>
 
         <WorkAtProjects>
           <WorkAtProject name="Cost Chargeback Model" when="2019–Present">
@@ -299,7 +295,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.events.id}>
-        <WorkAtSectionTitle>Events</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.events.title}</WorkAtSectionTitle>
 
         <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
           I frequently create presentations about the different projects that
@@ -423,7 +419,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.publications.id}>
-        <WorkAtSectionTitle>Publications</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.publications.title}</WorkAtSectionTitle>
 
         <WorkAtPublications>
           <WorkAtPublication
@@ -444,7 +440,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.activeResearch.id}>
-        <WorkAtSectionTitle>Active Research</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.activeResearch.title}</WorkAtSectionTitle>
         <Ul>
           <Li>
             Optimized feature embedding to reduce terabytes to a few gigs for
@@ -454,7 +450,7 @@ export default function Content() {
       </Section>
 
       <Section id={sections.otherActivities.id}>
-        <WorkAtSectionTitle>Other Activities</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.otherActivities.title}</WorkAtSectionTitle>
 
         <Ul>
           <Li>
