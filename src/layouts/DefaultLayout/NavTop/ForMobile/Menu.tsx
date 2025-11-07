@@ -36,7 +36,7 @@ export default function Menu(props: Props) {
             </div>
 
             {/*	Right align */}
-            <div>adf
+            <div>
               <button
                 aria-label="close"
                 onClick={handleClose}
