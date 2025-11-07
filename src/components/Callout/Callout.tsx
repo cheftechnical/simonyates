@@ -43,7 +43,7 @@ function Delimiter(props: DelimiterProps) {
 
   // Prevent orphan of 2nd-last item
   if (index === length - 2) {
-    return <>&nbsp;&bull;&nbsp;</>;
+    return <>&ensp;&bull;&ensp;</>;
   }
 
   // Render all other items normally
