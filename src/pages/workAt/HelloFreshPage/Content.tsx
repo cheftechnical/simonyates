@@ -33,7 +33,7 @@ export function Content() {
       </Section>
 
       <Section id={sections.softwareEngineering.id}>
-        <WorkAtSectionTitle>Software Engineering</WorkAtSectionTitle>
+        <WorkAtSectionTitle>{sections.softwareEngineering.title}</WorkAtSectionTitle>
 
         <WorkAtProjects>
           <Callout
