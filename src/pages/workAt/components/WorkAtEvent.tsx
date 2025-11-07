@@ -21,7 +21,8 @@ export default function WorkAtEvent(props: Props) {
   return (
     <div className={next ? "pt-4" : ""}>
       <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
-        {date} &bull; {title}
+        {/* I felt that emsp was too much space, so I used ensp instead */}
+        {date}&ensp;&bull;&ensp;{title}
       </p>
     </div>
   );

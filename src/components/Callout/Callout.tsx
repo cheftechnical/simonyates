@@ -47,7 +47,8 @@ function Delimiter(props: DelimiterProps) {
   }
 
   // Render all other items normally
-  return <span> &bull; </span>;
+  // I felt that emsp was too much space, so I used ensp instead
+  return <span>&ensp;&bull;&ensp;</span>;
 }
 
 export default function Callout(props: Props) {
