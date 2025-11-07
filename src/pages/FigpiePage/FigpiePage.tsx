@@ -10,7 +10,7 @@ export function FigpiePage() {
         <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px]">
           Figpie
         </h1>
-        <p className="font-primary font-normal text-2xl leading-8 mt-8">
+        <p className="font-primary font-normal text-xl leading-8 mt-8">
           <strong>Figpie</strong> creates beautiful pie charts in Figma.
         </p>
         <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">

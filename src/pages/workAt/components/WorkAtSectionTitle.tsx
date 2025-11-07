@@ -11,7 +11,7 @@ export default function WorkAtSectionTitle(props: Props) {
   const { children } = props;
 
   return (
-    <h2 className="font-normal text-2xl leading-8 mt-[68px] mb-8">
+    <h2 className="font-normal text-xl leading-8 mt-[68px] mb-8">
       {children}
     </h2>
   );

@@ -27,8 +27,8 @@ export default function Quote(props: Props) {
   );
 
   const renderedSource = source ? (
-    <footer className="pt-4">
-      <p className="inline font-normal text-sm leading-4 tracking-[0.25px] text-[#626262]">
+    <footer className="pt-3">
+      <p className="inline font-normal text-sm leading-4 tracking-[0.25px] text-gray-600">
         {source}
       </p>
     </footer>
@@ -43,7 +43,7 @@ export default function Quote(props: Props) {
       </div>
       <div className="flex-grow pt-3">
         <blockquote cite={source} className="m-0 p-0">
-          <p className="font-secondary font-light text-base leading-normal tracking-[0.5px] text-[#3B3B3B]">
+          <p className="font-secondary font-light text-base leading-normal tracking-[0.5px] text-gray-800">
             {children}
             {renderedEndQuote}
           </p>

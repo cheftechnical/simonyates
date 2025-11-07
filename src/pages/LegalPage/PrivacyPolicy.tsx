@@ -43,7 +43,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </p>
       </address>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Information we collect, and how we use&nbsp;it:
       </h2>
 
@@ -146,7 +146,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         of your own&nbsp;country.
       </p>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Information Sharing
       </h2>
 
@@ -191,7 +191,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Information Security
       </h2>
 
@@ -212,7 +212,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         criminal prosecution, if they fail to meet these&nbsp;obligations.
       </p>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Accessing and updating personal&nbsp;information
       </h2>
 
@@ -237,7 +237,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Help Centers for more&nbsp;information.
       </p>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Enforcement
       </h2>
 
@@ -251,7 +251,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         {legalName} and an&nbsp;individual.
       </p>
 
-      <h2 className="font-normal text-2xl leading-8 mt-8">
+      <h2 className="font-normal text-xl leading-8 mt-8">
         Changes to this Privacy&nbsp;Policy
       </h2>
 

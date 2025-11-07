@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="w-full md:w-[58.333333%]">
           <div className="flex items-end h-full">
             <div>
-              <h1 className="font-normal text-2xl leading-8 pb-0 sm:pb-[72px]">
+              <h1 className="font-normal text-xl leading-8 pb-0 sm:pb-[72px]">
                 Simon Yates, <br />
                 <strong>Programmer</strong> from Toronto
               </h1>

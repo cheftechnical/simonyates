@@ -13,7 +13,7 @@ export const Webdev = () => {
             Webdev Notes
           </h1>
 
-          <h2 className="font-primary font-normal text-2xl leading-8 mb-6">
+          <h2 className="font-primary font-normal text-xl leading-8 mb-6">
             Tips &amp; Tricks
           </h2>
 
@@ -35,7 +35,7 @@ export const Webdev = () => {
             </Ul>
           </p>
 
-          <h2 className="font-primary font-normal text-2xl leading-8 mb-6">
+          <h2 className="font-primary font-normal text-xl leading-8 mb-6">
             React + Typescript
           </h2>
 

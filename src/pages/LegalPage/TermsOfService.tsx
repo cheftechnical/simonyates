@@ -39,7 +39,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         them&nbsp;carefully.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Using our&nbsp;Services
       </h3>
 
@@ -84,7 +84,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         opt out of some of those&nbsp;communications.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Privacy and Copyright Protection
       </h3>
 
@@ -133,7 +133,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         that expressly override some of these&nbsp;terms.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Modifying and Terminating our&nbsp;Services
       </h3>
 
@@ -156,7 +156,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         information out of that&nbsp;Service.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Our Warranties and&nbsp;Disclaimers
       </h3>
 
@@ -182,7 +182,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         ALL&nbsp;WARRANTIES.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Liability for our&nbsp;Services
       </h3>
 
@@ -207,7 +207,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         REASONABLY&nbsp;FORESEEABLE.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Business uses of our&nbsp;Services
       </h3>
 
@@ -221,7 +221,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         attorneys&rsquo;&nbsp;fees.
       </p>
 
-      <h3 className="font-normal text-2xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         About these Terms
       </h3>
 

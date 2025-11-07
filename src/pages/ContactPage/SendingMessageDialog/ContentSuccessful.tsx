@@ -21,7 +21,7 @@ export default function ContentSuccessful() {
         </svg>
       </div>
 
-      <h2 className="mt-3 font-primary font-normal text-2xl leading-8">
+      <h2 className="mt-3 font-primary font-normal text-xl leading-8">
         Thank you.
       </h2>
 

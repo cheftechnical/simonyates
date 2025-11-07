@@ -24,7 +24,7 @@ export default function EmployerRollAndWhen(props: Props) {
 
   return (
     <>
-      <h2 className="font-normal text-2xl leading-normal">
+      <h2 className="font-normal text-xl leading-normal">
         <ReactRouterDom to={href} className="text-gray-900 hover:text-gray-600 hover:underline">
           {employer}  
         </ReactRouterDom>
