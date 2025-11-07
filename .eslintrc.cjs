@@ -11,11 +11,7 @@ module.exports = {
     'react-hooks',
     'perfectionist',
   ],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended'],
   settings: {
     react: { version: 'detect' },
   },
