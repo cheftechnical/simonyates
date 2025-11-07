@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <h1 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
+    <h1 className="font-normal text-2xl leading-relaxed tracking-[0.25px]">
       <span className="block sm:hidden">
         Here is a glimpse of my life, mostly as a&nbsp;programmer.
       </span>
