@@ -50,7 +50,7 @@ export default function Figure(props: Props) {
     );
 
     return (
-      <figcaption className="mt-1.5 font-primary font-normal text-xs leading-4 tracking-[0.4px] text-gray-600">
+      <figcaption className="font-primary font-normal leading-normal mt-3 text-sm tracking-[0.4px] text-gray-600">
         {captionContent}
       </figcaption>
     );
