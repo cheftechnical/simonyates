@@ -60,6 +60,9 @@ export default {
           'sans-serif',
         ],
       },
+      fontSize: {
+        sm: '0.7937rem',
+      },
     },
   },
 } satisfies Config
