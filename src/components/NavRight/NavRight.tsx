@@ -2,13 +2,14 @@ import "./style.css";
 import NavRightItem from "./NavRightItem";
 import { Sections } from "../../types/Sections.ts";
 import { useEffect, useState } from "react";
+import React from "react";
 import { HEADER_OFFSET, findElementById } from "./utils";
 
 interface NavRightProps {
   /**
-   * The sections on the page
+   * The sections on the page - can be a single Sections object or an array of Sections objects
    */
-  sections?: Sections;
+  sections?: Sections | Sections[];
 }
 
 export function NavRight(props: NavRightProps) {
@@ -26,8 +27,14 @@ export function NavRight(props: NavRightProps) {
     );
   }
 
+  // Normalize to array format
+  const sectionsArray = Array.isArray(sections) ? sections : [sections];
+
+  // Collect all section IDs for scroll spy
+  const allSectionIds = sectionsArray.flatMap(s => Object.values(s).map(sec => sec.id));
+
   useEffect(() => {
-    const sectionIds = Object.values(sections).map((s) => s.id);
+    const sectionIds = allSectionIds;
 
     const handleScroll = () => {
       // Find the section currently in view
@@ -102,7 +109,7 @@ export function NavRight(props: NavRightProps) {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("hashchange", handleScroll);
     };
-  }, [sections]);
+  }, [allSectionIds]);
 
   // Calculate width based on container max-widths: 3/12 (25%) of each breakpoint
   // sm: 600px * 0.25 = 150px
@@ -117,15 +124,22 @@ export function NavRight(props: NavRightProps) {
   
   return (
     <div className="fixed sm:w-[137px] md:w-[227px] lg:w-[256px] overflow-hidden xbg-[pink]">
-      <ul className="list-none xp-4 break-words">
-        {Object.entries(sections).map(([key, value]) => (
-          <NavRightItem
-            key={key}
-            section={value}
-            isActive={activeSectionId === value.id}
-          />
-        ))}
-      </ul>
+      {sectionsArray.map((sectionGroup, groupIndex) => (
+        <React.Fragment key={groupIndex}>
+          {groupIndex > 0 && (
+            <div className="border-t border-gray-100 my-6"></div>
+          )}
+          <ul className="list-none xp-4 break-words">
+            {Object.entries(sectionGroup).map(([key, value]) => (
+              <NavRightItem
+                key={key}
+                section={value}
+                isActive={activeSectionId === value.id}
+              />
+            ))}
+          </ul>
+        </React.Fragment>
+      ))}
     </div>
   );
 }

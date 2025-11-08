@@ -14,13 +14,21 @@ import {
 } from "../../data/workExperience";
 
 // Generate sections object from work experience data
-const sections: Sections = workExperienceData.reduce((acc, work) => {
+const workSections: Sections = workExperienceData.reduce((acc, work) => {
   acc[work.sectionId as keyof Sections] = {
     id: work.sectionId,
     title: work.employer,
   };
   return acc;
 }, {} as Sections);
+
+// Entrepreneurship sections
+const entrepreneurshipSections: Sections = {
+  entrepreneurship: {
+    id: "entrepreneurship",
+    title: "Entrepreneurship",
+  },
+};
 
 export default function WorkPage() {
   return (
@@ -59,17 +67,14 @@ export default function WorkPage() {
                 </div>
               );
             })}
-
           </div>
-          {/* Gutter */}
-          {/* <div className="hidden md:block md:w-1/12 border-1 border-[lime]" /> */}
+          
           {/* Navigation */}
           <div className="hidden md:block md:w-3/12 xborder-1 border-[blue]">
-            <NavRight sections={sections} />
+            <NavRight sections={[workSections, entrepreneurshipSections]} />
           </div>
         </div>
 
-        
       </MyContainer>
     </PageWrapper>
   );
