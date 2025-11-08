@@ -8,6 +8,10 @@ interface Props {
   isOpen: boolean;
   message?: MessageFormValues;
   onClose: () => void;
+  /**
+   * Callback fired when the success state is reached
+   */
+  onSuccess?: () => void;
 }
 
 const defaultProps = {
@@ -15,12 +19,19 @@ const defaultProps = {
 };
 
 export default function SendingMessageDialog(props: Props) {
-  const { defaultFragment, isOpen, message, onClose } = {
+  const { defaultFragment, isOpen, message, onClose, onSuccess } = {
     ...defaultProps,
     ...props
   };
 
   const [content, setContent] = useState(defaultFragment);
+
+  // Reset content when dialog closes
+  useEffect(() => {
+    if (!isOpen) {
+      setContent(defaultFragment);
+    }
+  }, [isOpen, defaultFragment]);
 
   // Prevent body scroll when dialog is open
   useEffect(() => {
@@ -41,13 +52,16 @@ export default function SendingMessageDialog(props: Props) {
           <ContentRecaptcha
             message={message}
             onClose={onClose}
-            onSuccess={() => setContent("success")}
+            onSuccess={() => {
+              setContent("success");
+              onSuccess?.();
+            }}
           />
         );
       case "success":
-        return <ContentSuccessful />;
+        return <ContentSuccessful onClose={onClose} />;
     }
-  }, [content, message, onClose]);
+  }, [content, message, onClose, onSuccess]);
 
   if (!isOpen) return null;
 

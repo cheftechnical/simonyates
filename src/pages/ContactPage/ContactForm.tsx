@@ -2,6 +2,7 @@
  * Resources:
  * https://react-hook-form.com/get-started#IntegratingwithUIlibraries
  */
+import { forwardRef, useImperativeHandle } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { MyButton } from "../../styling/MyButton";
 import { MyTextField2 } from "../../styling/MyTextField2/MyTextField2";
@@ -17,13 +18,28 @@ interface Props {
   onSubmit: SubmitHandler<MessageFormValues>;
 }
 
-export function ContactForm(props: Props) {
-  const { onSubmit } = props;
-  const {
-    control,
-    formState: { errors },
-    handleSubmit,
-  } = useForm<MessageFormValues>();
+export interface ContactFormHandle {
+  /**
+   * Resets the form to its default values
+   */
+  reset: () => void;
+}
+
+export const ContactForm = forwardRef<ContactFormHandle, Props>(
+  function ContactForm(props, ref) {
+    const { onSubmit } = props;
+    const {
+      control,
+      formState: { errors },
+      handleSubmit,
+      reset,
+    } = useForm<MessageFormValues>();
+
+    useImperativeHandle(ref, () => ({
+      reset: () => {
+        reset();
+      },
+    }));
 
   return (
     <div>
@@ -148,6 +164,7 @@ export function ContactForm(props: Props) {
       </form>
     </div>
   );
-}
+  },
+);
 
 export default ContactForm;
