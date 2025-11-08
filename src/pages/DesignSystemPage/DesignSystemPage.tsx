@@ -16,11 +16,11 @@ export function DesignSystem() {
             </h1>
 
             <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[calc(1.5874rem*2)]">
-              Harmoneous design is fundamental to&nbsp;me.
+              Harmonious design is foundational to&nbsp;me.
             </p>
 
             <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[1.5874rem]">
-              Everything I produce follows a design aesthetic. For personal work, I have distilled that aesthetic into a set of&nbsp;rules.
+              Everything I produce follows a design aesthetic. I have distilled that aesthetic into a set of&nbsp;rules.
             </p>
 
             <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[1.5874rem]">
@@ -32,39 +32,39 @@ export function DesignSystem() {
             </h2>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-[calc(1.0rem*1)]">
-              To begin, I had to decide on a scale that resonated with me. I wanted the information hierarchy to be easy to navigate. Too many levels and the user would get lost; too few, and there wouldn&rsquo;t be sufficient granularity to structure the data.
+              To begin, I had to decide on a scale that resonated with me. I wanted the information hierarchy to be easy to navigate. Too many levels and the user would get lost; too few, and there wouldn&rsquo;t be sufficient granularity to structure the&nbsp;data.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              Triangulating with a 3-level hierarchy felt like a perfect balance, so I settled on that.
+              Triangulating with a 3-level hierarchy felt like a perfect balance, so I settled on&nbsp;that.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              After exploring several ratios and proportions, I settled on a pure tritonic (also called &ldquo;tritonic modular&rdquo;) scale for text, and the Fibonacci sequence for mostly everything else.
+              After exploring several ratios and proportions, I settled on a pure tritonic (also called &ldquo;tritonic modular&rdquo;) scale for text, and the Fibonacci sequence for mostly everything&nbsp;else.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              The tritonic scale is derived by dividing an octave (2:1) into 3 equal steps. It means 3 steps up, and the base size doubles (visual octave), while 3 steps down halves the base size (visual sub-octave).
+              The tritonic scale is derived by dividing an octave (2:1) into 3 equal steps. It means 3 steps up, and the base size doubles (visual octave), while 3 steps down halves the base size (visual&nbsp;sub-octave).
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              My design system includes both digital and print media, each with its own set of constraints.
+              My design system includes both digital and print media, each with its own set of&nbsp;constraints.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              To establish my type scale, I first had to decide on my base font size.
+              To establish my type scale, I first had to decide on my base font&nbsp;size.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              For digital, a popular size is 16 px. I saw no objection and agreed to use the same.
+              For digital, a popular size is 16 px. I saw no objection and agreed to use the&nbsp;same.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              For print, a standard type size is 12 pt. Again, I saw no objection and agreed to use the same.
+              For print, a standard type size is 12 pt. Again, I saw no objection and agreed to use the&nbsp;same.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              I then calculated a scale for each media base using the tritonic scale and this formula:
+              I then calculated a scale for each media base using the tritonic scale and this&nbsp;formula:
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-2 ml-4">
@@ -89,39 +89,39 @@ export function DesignSystem() {
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              Since we&rsquo;ve already decided that 16 px will be our base size, we can set it to 1 rem and label the next 3 parents as h3, h2, and h1 relative to it.
+              Since we&rsquo;ve already decided that 16 px will be our base size, we can set it to 1 rem and label the next 3 parents as h3, h2, and h1 relative to&nbsp;it.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              For sizes smaller than our base, we can label them small, extra small, and so on, but since we have already set our floor at 12 px, our system doesn&rsquo;t support anything smaller than a &ldquo;small&rdquo;, so that&rsquo;s all we&rsquo;ll include.
+              For sizes smaller than our base, we can label them small, extra small, and so on, but since we have already set our floor at 12 px, our system doesn&rsquo;t support anything smaller than a &ldquo;small&rdquo;, so that&rsquo;s all we&rsquo;ll&nbsp;include.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              The benefit of this system is that it decouples the HTML elements (e.g., h1, h2, h3, body) and the programming/implementation concept from our design scale.
+              The benefit of this system is that it decouples the HTML elements (e.g., h1, h2, h3, body) and the programming/implementation concept from our design&nbsp;scale.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              We are also not limited to the maximum size of whatever h1 is. This gives us the freedom to use larger text sizes without forcing exceptions. We can expand the system at any time to include larger font sizes without breaking our naming pattern.
+              We are also not limited to the maximum size of whatever h1 is set to. This gives us the freedom to use larger text sizes without forcing exceptions. We can expand the system at any time to include larger font sizes without breaking our naming&nbsp;pattern.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              A great example of this is with 404 pages.
+              A great example of this is with 404&nbsp;pages.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              It is not uncommon for the &ldquo;404&rdquo; to be printed very large. The number itself is the primary content of the page and is therefore displayed in a font size typically much larger than a standard h1 HTML element. To achieve this, however, the design would need to specify an exception if they are relying on a conventional h1 name within the design tool, even though it may in fact be coded as an HTML h1 element; the treatment would differ.
+              It is not uncommon for the &ldquo;404&rdquo; to be printed very large. The number itself is the primary content of the page and is therefore displayed in a font size typically much larger than a standard h1 HTML element. To achieve this, however, the design would need to specify an exception if they are relying on a conventional h1 name within the design tool, even though it may in fact be coded as an HTML h1 element; the treatment would&nbsp;differ.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              The &ldquo;Step&rdquo; system avoids this entirely. The designer picks the font size best suited to their use case, and the engineer decides which HTML element is appropriate. Each person on the project can focus on the core skills they are most familiar with.
+              The &ldquo;Step&rdquo; system avoids this entirely. The designer picks the font size best suited to their use case, and the engineer decides which HTML element is appropriate. Each person on the project can focus on the core skills they are most familiar&nbsp;with.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              Likewise, deciding how a proportional subhierarchy should appear &ndash; for example, &ldquo;Page Not Found&rdquo; and &ldquo;Here are some helpful links to help you find what you were looking for&rdquo; &ndash; is already scaled and proportioned.
+              Likewise, deciding how a proportional subhierarchy should appear &ndash; for example, &ldquo;Page Not Found&rdquo; and &ldquo;Here are some helpful links to help you find what you were looking for&rdquo; &ndash; is already scaled and&nbsp;proportioned.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              In the following table, I&rsquo;ve listed 3 visual octaves and 1 visual sub-octave. The common h1&ndash;3, body, and small body sizes have been labelled and highlighted to show where they sit within the overall scale.
+              In the following table, I&rsquo;ve listed 3 visual octaves and 1 visual sub-octave. The standard h1&ndash;3, body, and small body sizes have been labelled and highlighted to show where they sit within the overall&nbsp;scale.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
@@ -254,23 +254,23 @@ export function DesignSystem() {
             </h2>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              For colour, I wanted to start with a balanced grayscale system before introducing hues.
+              For colour, I wanted to start with a balanced grayscale system before introducing&nbsp;hues.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              Many digital colouring systems try to capture all available luminance and hues into equally spaced samples, but that&rsquo;s not how our human eye perceives light. Our eyes are more sensitive to some types of light than others.
+              Many digital colouring systems try to capture all available luminance and hues into equally spaced samples, but that&rsquo;s not how our human eye perceives light. Our eyes are more sensitive to some types of light than&nbsp;others.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              After exploring 6 methods to create a simplified 5-value system, I settled on #757575 as my middle gray. Thankfully, when this shade is used to render text on a white background, it is also AA accessible, so that made the rest of my work much easier.
+              After exploring 6 methods to create a simplified 5-value system, I settled on #757575 as my middle gray. Thankfully, when this shade is used to render text on a white background, it is also AA accessible, so that made the rest of my work much&nbsp;easier.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              For digital, I felt black (#000000) was too harsh and contrasty for my taste, so I chose a very dark gray (#222222) to use as a soft black. This became my dark anchor.
+              For digital, I felt black (#000000) was too harsh and contrasty for my taste, so I chose a very dark gray (#222222) to use as a soft black. This became my dark&nbsp;anchor.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              I then computed a stepped scale that crossed over middle gray (#757575) and terminated at our soft black (#222222) using the OKLab L-spacing colour system. This produced a scale that accounts for biases in the human eye&rsquo;s perception of light.
+              I then computed a stepped scale that crossed over middle gray (#757575) and terminated at our soft black (#222222) using the OKLab L-spacing colour system. This produced a scale that accounts for biases in the human eye&rsquo;s perception of&nbsp;light.
             </p>
 
             <div className="flex mt-8">
@@ -300,12 +300,10 @@ export function DesignSystem() {
               <li className="list-disc list-inside mt-4">Text in grays darker than middle gray (&ge; 500) works on white (#FFFFFF) backgrounds</li>
               <li className="list-disc list-inside mt-4">Gray-25 on soft black (#222222) appears as bright white</li>
               <li className="list-disc list-inside mt-4">Gray-50 on soft black (#222222) appears as white</li>
-            </ul>
-
-            
+            </ul>            
 
             <table className="border-gray-700 border-2 mt-8 w-full">
-            <thead>
+              <thead>
                 <tr>
                     <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Shade</th>
                     <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Hex</th>
@@ -314,8 +312,8 @@ export function DesignSystem() {
                     <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">AA on White</th>
                     <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">AA on #222222</th>
                 </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
                 <tr>
                     <td className="border-gray-100 border-1 p-1 text-center">gray 25</td>
                     <td className="border-gray-100 border-1 p-1 text-center">#F7F7F7</td>
@@ -404,11 +402,16 @@ export function DesignSystem() {
                     <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
                     <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
                 </tr>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
 
-          
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-8">
+              For print, I take a more contrasty approach. Blacks are <em>black</em>, whites are crisp, and middle gray is rarely used. No other semi-tones exist. Instead, line weights and negative space are used strategically to create&nbsp;depth.
+            </p>
 
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
+              Why? Black ink is cheaper, and grays on my laser printer can look washed out. And it looks&nbsp;cool!
+            </p>
           </div>
                   
           {/* Gutter */}
