@@ -11,23 +11,27 @@ export function DesignSystem() {
           {/* Content */}
           <div className="w-full md:w-3/5">
             {/* Content will go here */}
-            <h1 className="text-[2.0rem] leading-normal tracking-[0.5px]">
+            <h1 className="text-[2.0rem] leading-relaxed tracking-[0.5px]">
               How I Designed My Personal Design&nbsp;System
             </h1>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-normal tracking-[0.5px] mt-16">
-              Harmoneous design is fundamental to me.
+            <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[calc(1.5874rem*2)]">
+              Harmoneous design is fundamental to&nbsp;me.
             </p>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-normal tracking-[0.5px] mt-8">
-              Everything I produce follows a design aesthetic. For personal work, I have distilled that aesthetic into a set of rules.
+            <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[1.5874rem]">
+              Everything I produce follows a design aesthetic. For personal work, I have distilled that aesthetic into a set of&nbsp;rules.
             </p>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-normal tracking-[0.5px] mt-8">
-              This is my personal design system.
+            <p className="text-[1.5874rem] text-gray-500 leading-relaxed tracking-[0.5px] mt-[1.5874rem]">
+              This is my personal design&nbsp;system.
             </p>
 
-            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-16">
+            <h2 className="text-[1.2599rem] font-normal leading-normal tracking-[0.5px] mt-[calc(1.2599rem*3)]">
+              Typographic Scale
+            </h2>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-[calc(1.0rem*1)]">
               To begin, I had to decide on a scale that resonated with me. I wanted the information hierarchy to be easy to navigate. Too many levels and the user would get lost; too few, and there wouldn&rsquo;t be sufficient granularity to structure the data.
             </p>
 
@@ -245,23 +249,11 @@ export function DesignSystem() {
 
 
             {/* color paragraphs here */}
+            <h2 className="text-[1.2599rem] font-normal leading-normal tracking-[0.5px] mt-[calc(1.2599rem*3)]">
+              Luminance Scale
+            </h2>
 
-            <div className="flex mt-8">
-                <div className="bg-gray-25 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-50 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-100 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-200 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-300 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-400 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-500 h-[32px] w-1/12 border-black border-1">&nbsp;</div>
-                <div className="bg-gray-600 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-700 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-800 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-900 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-black h-[32px] w-1/12">&nbsp;</div>
-            </div>
-
-            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-8">
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
               For colour, I wanted to start with a balanced grayscale system before introducing hues.
             </p>
 
@@ -281,7 +273,22 @@ export function DesignSystem() {
               I then computed a stepped scale that crossed over middle gray (#757575) and terminated at our soft black (#222222) using the OKLab L-spacing colour system. This produced a scale that accounts for biases in the human eye&rsquo;s perception of light.
             </p>
 
-            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
+            <div className="flex mt-8">
+                <div className="bg-gray-25 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-50 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-100 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-200 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-300 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-400 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-500 h-[32px] w-1/12 border-black border-1">&nbsp;</div>
+                <div className="bg-gray-600 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-700 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-800 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-gray-900 h-[32px] w-1/12">&nbsp;</div>
+                <div className="bg-black h-[32px] w-1/12">&nbsp;</div>
+            </div>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-8">
               This produced a scale where:
             </p>
 
@@ -294,6 +301,8 @@ export function DesignSystem() {
               <li className="list-disc list-inside mt-4">Gray-25 on soft black (#222222) appears as bright white</li>
               <li className="list-disc list-inside mt-4">Gray-50 on soft black (#222222) appears as white</li>
             </ul>
+
+            
 
             <table className="border-gray-700 border-2 mt-8 w-full">
             <thead>
