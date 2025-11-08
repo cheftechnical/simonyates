@@ -38,7 +38,8 @@ export function getImage(brand: string, variant: string): Image | undefined {
           height: 82,
           width: 400,
         },
-        src: `${basePath}/${brand}/infomart--color--400x82.png`,
+        // src: `${basePath}/${brand}/infomart--color--400x82.png`,
+        src: `${basePath}/${brand}/infomart-i--reproduction--color.svg`,
       };
     case "jib-design-and-advertising":
       return {
