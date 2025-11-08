@@ -10,21 +10,21 @@ export default function FigpieTrigonometryPage() {
     <MathJaxProviderWrapper>
       <PageWrapper title="How it Works">
         <MyContainer>
-          <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px]">
+          <h1 className="font-primary font-normal text-4xl leading-relaxed tracking-[0.5px]">
             How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
           </h1>
 
-          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
+          <h2 className="font-primary font-normal text-2xl leading-relaxed tracking-[0.25px] mt-[4.0rem]">
             Circle Basics
           </h2>
           <CircleBasicsGridContainer/>
 
-          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
+          <h2 className="font-primary font-normal text-2xl leading-relaxed tracking-[0.25px] mt-[4.0rem]">
             Cubic B&eacute;zier
           </h2>
           <BezierArcGridContainer />
 
-          <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
+          <h2 className="font-primary font-normal text-2xl leading-relaxed tracking-[0.25px] mt-[4.0rem]">
             Rotation
           </h2>
           <RotationGridContainer />
