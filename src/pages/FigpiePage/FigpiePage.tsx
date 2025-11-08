@@ -7,7 +7,7 @@ export function FigpiePage() {
   return (
     <PageWrapper title="Figpie">
       <MyContainer>
-        <h1 className="font-primary font-normal text-[54px] leading-[88px] tracking-[0.5px]">
+        <h1 className="font-primary font-normal text-4xl leading-relaxed tracking-[0.5px]">
           Figpie
         </h1>
         <p className="font-primary font-normal text-xl leading-8 mt-8">
@@ -44,7 +44,7 @@ export function FigpiePage() {
           And it&rsquo;s 100% free!
         </p>
 
-        <h2 className="font-primary font-normal text-[34px] leading-[56px] tracking-[0.25px] mt-[56px]">
+        <h2 className="font-primary font-normal leading-relaxed text-2xl tracking-[0.25px] mt-[4.0rem]">
           Support
         </h2>
         <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
