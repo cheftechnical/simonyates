@@ -133,9 +133,9 @@ export function DesignSystem() {
                 <thead>
                     <tr>
                         <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Step</th>
-                        <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Tailwinds Size</th>
                         <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">EM Size</th>
                         <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Pixel Size</th>
+                        <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Tailwinds Size</th>
                         <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Name</th>
                         <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Example</th>
                     </tr>
@@ -143,105 +143,105 @@ export function DesignSystem() {
                 <tbody>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a9</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-8xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">8.0rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">128px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-8xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[8.0rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a8</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-7xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">6.3496rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">101.5936px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-7xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[6.3496rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a7</td> 
-                        <td className="border-gray-100 border-1 p-1 text-center">text-6xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">5.0396rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">80.6336px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-6xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[5.0396rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a6</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-5xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">4.0rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">64px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-5xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[4.0rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a5</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-4xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">3.1748rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">50.7968px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-4xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[3.1748rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-a4</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-3xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">2.5198rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">40.3168px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-3xl</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[2.5198rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr className="bg-gray-50">
                         <td className="border-gray-200 border-1 p-1 text-center">step-a3</td>
-                        <td className="border-gray-200 border-1 p-1 text-center">text-2xl</td>
                         <td className="border-gray-200 border-1 p-1 text-center">2.0rem</td>
                         <td className="border-gray-200 border-1 p-1 text-center">32px</td>
+                        <td className="border-gray-200 border-1 p-1 text-center">text-2xl</td>
                         <td className="border-gray-200 border-1 p-1 text-center">Heading 1</td>
                         <td className="border-gray-200 border-1 p-1 text-center text-[2.0rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr className="bg-gray-50">
                         <td className="border-gray-200 border-1 p-1 text-center">step-a2</td>
-                        <td className="border-gray-200 border-1 p-1 text-center">text-xl</td>
                         <td className="border-gray-200 border-1 p-1 text-center">1.5874rem</td>
                         <td className="border-gray-200 border-1 p-1 text-center">25.3984px</td>
+                        <td className="border-gray-200 border-1 p-1 text-center">text-xl</td>
                         <td className="border-gray-200 border-1 p-1 text-center">Heading 2</td>
                         <td className="border-gray-200 border-1 p-1 text-center text-[1.5874rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr className="bg-gray-50">
                         <td className="border-gray-200 border-1 p-1 text-center">step-a1</td>
-                        <td className="border-gray-200 border-1 p-1 text-center">text-lg</td>
                         <td className="border-gray-200 border-1 p-1 text-center">1.2599rem</td>
                         <td className="border-gray-200 border-1 p-1 text-center">20.1584px</td>
+                        <td className="border-gray-200 border-1 p-1 text-center">text-lg</td>
                         <td className="border-gray-200 border-1 p-1 text-center">Heading 3</td>
                         <td className="border-gray-200 border-1 p-1 text-center text-[1.2599rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr className="bg-gray-50">
                         <td className="border-gray-200 border-1 p-1 text-center">step-0</td>
-                        <td className="border-gray-200 border-1 p-1 text-center">text-base</td>
                         <td className="border-gray-200 border-1 p-1 text-center">1.0rem</td>
                         <td className="border-gray-200 border-1 p-1 text-center">16px</td>
+                        <td className="border-gray-200 border-1 p-1 text-center">text-base</td>
                         <td className="border-gray-200 border-1 p-1 text-center">Body</td>
                         <td className="border-gray-200 border-1 p-1 text-center text-[1.0rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr className="bg-gray-50">
                         <td className="border-gray-200 border-1 p-1 text-center">step-z1</td>
-                        <td className="border-gray-200 border-1 p-1 text-center">text-sm</td>
                         <td className="border-gray-200 border-1 p-1 text-center">0.7937rem</td>
                         <td className="border-gray-200 border-1 p-1 text-center">12.6992px</td>
+                        <td className="border-gray-200 border-1 p-1 text-center">text-sm</td>
                         <td className="border-gray-200 border-1 p-1 text-center">Small</td>
                         <td className="border-gray-200 border-1 p-1 text-center text-[0.7937rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-z2</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">text-xs</td>
                         <td className="border-gray-100 border-1 p-1 text-center">0.63rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">10.08px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">text-xs</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[0.63rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
                     <tr>
                         <td className="border-gray-100 border-1 p-1 text-center">step-z3</td>
-                        <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center">0.5rem</td>
                         <td className="border-gray-100 border-1 p-1 text-center">8px</td>
+                        <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center">&nbsp;</td>
                         <td className="border-gray-100 border-1 p-1 text-center text-[0.5rem] leading-normal tracking-[0.5px]">M</td>
                     </tr>
