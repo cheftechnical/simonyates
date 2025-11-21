@@ -1,6 +1,7 @@
 import NavRight from "../../components/NavRight";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import PageWrapper from "../../components/PageWrapper";
+import Callout from "../../components/Callout/Callout";
 import { sections } from "./sections.ts";
 
 export function DesignSystem() {
@@ -81,7 +82,7 @@ export function DesignSystem() {
             </ul>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
-              This naming convention scales indefinitely in both directions, but the media naturally enforces constraints. Unless I was making a billboard to hang off the side of a building, it wouldn&rsquo;t be practical to use a &ldquo;step-a100&rdquo;, for example. That said, I would establish a different base for such a use case, but you get the idea.
+              This naming convention scales indefinitely in both directions, but the media naturally enforces constraints. Unless I was making a billboard to hang off the side of a building, it wouldn&rsquo;t be practical to use a &ldquo;step-a100&rdquo;, for example. That said, I would likely establish a different base for such a use case, but you get the idea.
             </p>
 
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
@@ -412,13 +413,110 @@ export function DesignSystem() {
             <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
               Why? Black ink is cheaper, and grays on my laser printer can look washed out. And it looks&nbsp;cool!
             </p>
+
+            <h2 className="text-[1.2599rem] font-normal leading-normal tracking-[0.5px] mt-[calc(1.2599rem*3)]">
+              Proximity Scale
+            </h2>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-[calc(1.0rem*1)]">
+              At this point, it&rsquo;s worth discussing the Proximity Scale and how it can be used to build relationships and establish a comprehensive information&nbsp;hierarchy.
+            </p>
+
+            <table className="border-gray-700 border-2 mt-8 w-full">
+              <thead>
+                <tr>
+                  <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Level</th>
+                  <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Proximity</th>
+                  <th className="bg-gray-700 border-gray-700 border-1 p-2 text-left text-gray-50">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                  <td className="border-gray-100 border-1 p-2 text-center">0</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">Unity</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">
+                    Content is a continuation of the previous level. Elements feel &ldquo;bound&rdquo;.
+                  </td>
+                </tr> 
+                <tr>
+                  <td className="border-gray-100 border-1 p-2 text-center">1</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">Close</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">
+                    For tight visual grouping. Think heading + paragraph.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-gray-100 border-1 p-2 text-center">2</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">Moderate</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">
+                    Separation of related sub-headings within a section.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-gray-100 border-1 p-2 text-center">3</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">Discrete</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">
+                    Separation of similar headings within a broader theme. Signals change of sections.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-gray-100 border-1 p-2 text-center">5</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">Unrelated</td>
+                  <td className="border-gray-100 border-1 p-2 text-left">
+                    Separation of unrelated things. Signals a complete break from the previous content.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-8">
+              There are several ways this scale can be used, depending on how I want to present the information. Again, the goal of this system is to articulate and conceptualize broader themes while not limiting creative flexibility. An overly strict system would be too &ldquo;templaty&rdquo;, and that&rsquo;s not&nbsp;interesting.
+            </p>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
+              These levels can either be used as a multiplier of the current font size to determine the top margin, or the number of shades, steps or visual octaves from the current text to use. Both methods produce different results, and both are&nbsp;valid.
+            </p>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
+              In the case of shades, one extra rule is added,&nbsp;however:
+            </p>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4 ml-4">
+              <em>&ldquo;No two shade levels should appear next to each&nbsp;other.&rdquo;</em>
+            </p>
+
+            <p className="text-[1.0rem] leading-normal tracking-[0.5px] mt-4">
+              There is not enough visual contrast within the scale to perceive the difference without it appearing as an error. When counting shade levels, always skip the first&nbsp;one.
+            </p>
+
+            <ul className="text-[1.0rem] leading-normal tracking-[0.5px] mt-8" style={{ paddingLeft: '2rem' }}>
+              <li className="list-disc mt-4">
+                <strong>Example #1:</strong> This copy is written in soft black (#222222), and the above table is dark gray (#464646). The table has a &ldquo;Close&rdquo; proximity to the copy &ndash; but it&rsquo;s not the copy, so it needs visual separation. Using the Luminance Scale, we start at gray-900 (#222222), skip the first shade (#333333), then one level up to gray-700 (#464646) &ndash; the exact colour of the table border and header&nbsp;background.
+              </li>
+              <li className="list-disc mt-4">
+                <strong>Example #2:</strong> This copy (#222222) has a discrete separation from the side navigation. It&rsquo;s a shift in cognitive processing from reading this text to navigating. Starting from gray-900 (#222222), skipping the first value, then up 3 levels gives us gray-500 (#757575) &ndash; the exact colour of our navigation&nbsp;text.
+              </li>
+              <li className="list-disc mt-4">
+                <strong>Example #3:</strong> The Typographic, Luminance, and Proximity Scale headings are all discrete topics within a broader theme. They could be referenced independently. Each of those headings has a top margin that is 3x the font size of the heading, and each subsequent paragraph has a top margin that is 1x the font size to show that it is closely related to that&nbsp;heading.
+              </li>
+            </ul>
+
+            <Callout align="left">
+              <p>
+                <strong>Pro tip:</strong> If you haven&rsquo;t already noticed, I&rsquo;m always setting the top margin for a style, never the bottom. This is&nbsp;intentional.
+              </p>
+              <p className="tracking-[0.5px] mt-4">
+                By setting only a top margin, you&rsquo;re always building on what exists, not on what could be. In the world of HTML/CSS, an overly ambitious bottom margin may need to be compensated with a subsequent negative top margin. If you only ever set top margins, you&rsquo;ll rarely need a negative margin &mdash; ever. While modern browsers have improved significantly, negative margins have historically been a problem for cross-browser compatibility. Avoiding them entirely is the best&nbsp;remedy.
+              </p>
+              <p className="tracking-[0.5px] mt-4">
+                Typically, I set a bottom margin or padding only when I&rsquo;m dealing with a container and want to ensure a consistent space around its&nbsp;perimeter.
+              </p>
+            </Callout>
+
           </div>
-                  
-          {/* Gutter */}
-          <div className="hidden md:block md:w-1/4" />
 
           {/* Navigation */}
-          <div className="hidden md:block md:w-1/4">
+          <div className="hidden md:block md:w-3/12">
             <NavRight sections={sections} />
           </div>
         </div>

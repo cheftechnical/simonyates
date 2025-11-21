@@ -18,9 +18,11 @@ export default function Content() {
           by government, law enforcement, financial&nbsp;industries.
         </WorkAtDescription>
 
-        <Callout noBottomGutter variant="alert">
-          Due to the sensitivity of work involved, certain details listed below
-          have been obfuscated or&nbsp;redacted.
+        <Callout noBottomGutter align="center" variant="alert">
+          <p>
+            Due to the sensitivity of work involved, certain details listed below
+            have been obfuscated or&nbsp;redacted.
+          </p>
         </Callout>
       </Section>
 

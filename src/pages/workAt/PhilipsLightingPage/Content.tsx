@@ -36,7 +36,6 @@ export function Content() {
         </WorkAtProjects>
 
         <Callout
-          noBottomGutter
           list={[
             "Business Objects",
             "Microsoft Access",

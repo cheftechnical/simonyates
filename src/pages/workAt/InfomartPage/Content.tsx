@@ -16,10 +16,12 @@ export default function Content() {
           Infomart was a division of Postmedia, the industry standard for
           Canadian newspaper&nbsp;archiving.
         </WorkAtDescription>
-        <Callout className="mb-5">
-          <strong>Fun Fact: </strong>Elasticsearch was still in early beta when
-          I started working with it on this project. At the time, the latest
-          version was version&nbsp;~&nbsp;0.19–0.2.x
+        <Callout align="center" className="mb-5">
+          <p>
+            <strong>Fun Fact: </strong>Elasticsearch was still in early beta when
+            I started working with it on this project. At the time, the latest
+            version was version&nbsp;~&nbsp;0.19–0.2.x
+          </p>
         </Callout>
       </div>
 

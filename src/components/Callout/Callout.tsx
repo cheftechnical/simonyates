@@ -2,6 +2,11 @@ import { ReactNode, useMemo } from "react";
 
 export interface Props {
   /**
+   * Text alignment for the callout content.
+   * @default "center"
+   */
+  align?: "left" | "center";
+  /**
    * The content of the callout.
    */
   children?: ReactNode;
@@ -24,8 +29,9 @@ export interface Props {
 }
 
 const defaultProps = {
+  align: "center" as const,
   noBottomGutter: false,
-  variant: "default",
+  variant: "default" as const,
 };
 
 interface DelimiterProps {
@@ -52,7 +58,7 @@ function Delimiter(props: DelimiterProps) {
 }
 
 export default function Callout(props: Props) {
-  const { children, className, list, noBottomGutter, variant } = {
+  const { align, children, className, list, noBottomGutter, variant } = {
     ...defaultProps,
     ...props,
   };
@@ -73,9 +79,9 @@ export default function Callout(props: Props) {
   const rootClasses = [
     "antialiased",
     // "min-h-16", // 64px (disabled to match observed measurement)
-    "p-2", // 8px
+    "p-[1.0rem]", // 8px
     noBottomGutter ? "mt-6 mb-0" : "my-6", // 24px top/bottom
-    "text-center",
+    align === "left" ? "text-left" : "text-center",
     isAlert ? "bg-red-50" : "bg-lime-50",
     className || "",
   ]
@@ -84,9 +90,15 @@ export default function Callout(props: Props) {
 
   const textClass = isAlert ? "text-red-500" : "text-gray-700";
 
-  return (
-    <div className={rootClasses}>
-      <p className={`text-base leading-normal ${textClass}`}>{content}</p>
-    </div>
-  );
+  // For backward compatibility: if content is a string, wrap it in a <p> tag
+  // If content is React elements (like multiple <p> tags), render them directly
+  const renderContent = () => {
+    if (typeof content === "string") {
+      return <p className={`text-base leading-normal ${textClass}`}>{content}</p>;
+    }
+    // Render React elements directly (supports multiple paragraphs)
+    return <div className={`text-base leading-normal ${textClass}`}>{content}</div>;
+  };
+
+  return <div className={rootClasses}>{renderContent()}</div>;
 }

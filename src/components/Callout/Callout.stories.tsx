@@ -14,7 +14,8 @@ const Template: StoryFn<Props> = (args: Props) => <Callout {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: <>{loremIpsumString}</>,
+  align: "center",
+  children: <p>{loremIpsumString}</p>,
 };
 
 export const DefaultList = Template.bind({});
@@ -24,7 +25,8 @@ DefaultList.args = {
 
 export const Alert = Template.bind({});
 Alert.args = {
-  children: <>{loremIpsumString}</>,
+  align: "center",
+  children: <p>{loremIpsumString}</p>,
   variant: "alert",
 };
 
