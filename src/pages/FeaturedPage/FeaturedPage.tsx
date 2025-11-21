@@ -242,6 +242,11 @@ export default function Featured() {
                   {/* Projects content will go here */}
                   <Ul>
                     <Li>
+                      <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
+                        Design System: My personal design system and design&nbsp;aesthetic.
+                      </Link>
+                    </Li>
+                    <Li>
                       <Link to="/figpie" className="text-blue-500 no-underline hover:underline">
                         Figpie: A Figma plugin for making pie charts.
                       </Link>
@@ -251,7 +256,7 @@ export default function Featured() {
                         How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
                       </Link>
                     </Li>
-                  </Ul>
+                    </Ul>
                 </FeaturedProjects>
               </NextSection>
             </Sections>
