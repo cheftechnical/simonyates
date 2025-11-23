@@ -1,5 +1,6 @@
 export default function ShapePage() {
-  const debug = false; // Set to true to show reference lines, q-numbers, p-numbers, circle, and center cross
+  const debug = true; // Set to true to show reference lines, q-numbers, p-numbers, circle, and center cross
+  const variant: "single" | "communal" = "single"; // Variant type: "single" or "communal"
   const radius = 250; // Circle radius in pixels
   const diameter = radius * 2; // Circle diameter
   // SVG size needs to accommodate grid lines extending 2r beyond circle
@@ -122,6 +123,384 @@ export default function ShapePage() {
     ...line,
     number: index,
   }));
+
+  // Calculate q0 position (top grid line end point)
+  const q0 = { x: topGridLine.x2, y: topGridLine.y2 };
+  // Calculate q12 position (opposite end of top grid line)
+  const q12 = { x: topGridLine.x1, y: topGridLine.y1 };
+  
+  // Find grid line at 150° to get q8 and q20 positions
+  const gridLine150 = gridLines.find(line => line.angle === 150)!;
+  const q8 = { x: gridLine150.x1, y: gridLine150.y1 };
+  const q20 = { x: gridLine150.x2, y: gridLine150.y2 };
+  
+  // Find grid line at 210° to get q4 and q16 positions
+  const gridLine210 = gridLines.find(line => line.angle === 210)!;
+  const q4 = { x: gridLine210.x1, y: gridLine210.y1 };
+  const q16 = { x: gridLine210.x2, y: gridLine210.y2 };
+  
+  // Find line for intersection calculation (line1to3 is already declared above)
+  const line5to2 = findVertexLine(5, 2); // q10-q23 line
+  
+  // Calculate intersection point of q3-q17 (line 1-3) and q10-q23 (line 5-2)
+  // This is q0L
+  let q0L = { x: 0, y: 0 };
+  if (line1to3 && line5to2) {
+    // Line 1: through (x1, y1) and (x2, y2) of line1to3
+    const x1_1 = line1to3.x1;
+    const y1_1 = line1to3.y1;
+    const x2_1 = line1to3.x2;
+    const y2_1 = line1to3.y2;
+    
+    // Line 2: through (x1, y1) and (x2, y2) of line5to2
+    const x1_2 = line5to2.x1;
+    const y1_2 = line5to2.y1;
+    const x2_2 = line5to2.x2;
+    const y2_2 = line5to2.y2;
+    
+    // Use parametric line intersection formula to handle vertical lines
+    // Line 1: P = P1 + t * (P2 - P1)
+    // Line 2: Q = Q1 + s * (Q2 - Q1)
+    // Solve for t and s where P = Q
+    
+    const dx1 = x2_1 - x1_1;
+    const dy1 = y2_1 - y1_1;
+    const dx2 = x2_2 - x1_2;
+    const dy2 = y2_2 - y1_2;
+    
+    const denominator = dx1 * dy2 - dy1 * dx2;
+    
+    if (Math.abs(denominator) > 0.0001) { // Lines are not parallel
+      const t = ((x1_2 - x1_1) * dy2 - (y1_2 - y1_1) * dx2) / denominator;
+      const x = x1_1 + t * dx1;
+      const y = y1_1 + t * dy1;
+      q0L = { x, y };
+    }
+  }
+  
+  // Create a new reference line parallel to q0-q12 (vertical) through q0L
+  // q0-q12 is the top grid line at 90°, which is vertical (x constant, y varies)
+  const q0LLineLength = lineLength; // Same length as other grid lines
+  const q0LLine = {
+    x1: q0L.x,
+    y1: q0L.y - q0LLineLength,
+    x2: q0L.x,
+    y2: q0L.y + q0LLineLength,
+    angle: 90, // Vertical, same as q0-q12
+    type: 'reference' as const,
+  };
+  
+  // Find lines for q0R intersection calculation
+  const line1to4 = findVertexLine(1, 4); // q2-q14 line
+  const line0to2 = findVertexLine(0, 2); // q7-q21 line
+  
+  // Calculate intersection point of q2-q14 (line 1-4) and q7-q21 (line 0-2)
+  // This is q0R
+  let q0R = { x: 0, y: 0 };
+  if (line1to4 && line0to2) {
+    // Line 1: through (x1, y1) and (x2, y2) of line1to4
+    const x1_1 = line1to4.x1;
+    const y1_1 = line1to4.y1;
+    const x2_1 = line1to4.x2;
+    const y2_1 = line1to4.y2;
+    
+    // Line 2: through (x1, y1) and (x2, y2) of line0to2
+    const x1_2 = line0to2.x1;
+    const y1_2 = line0to2.y1;
+    const x2_2 = line0to2.x2;
+    const y2_2 = line0to2.y2;
+    
+    // Use parametric line intersection formula to handle vertical lines
+    const dx1 = x2_1 - x1_1;
+    const dy1 = y2_1 - y1_1;
+    const dx2 = x2_2 - x1_2;
+    const dy2 = y2_2 - y1_2;
+    
+    const denominator = dx1 * dy2 - dy1 * dx2;
+    
+    if (Math.abs(denominator) > 0.0001) { // Lines are not parallel
+      const t = ((x1_2 - x1_1) * dy2 - (y1_2 - y1_1) * dx2) / denominator;
+      const x = x1_1 + t * dx1;
+      const y = y1_1 + t * dy1;
+      q0R = { x, y };
+    }
+  }
+  
+  // Create a new reference line parallel to q0-q12 (vertical) through q0R
+  const q0RLine = {
+    x1: q0R.x,
+    y1: q0R.y - q0LLineLength,
+    x2: q0R.x,
+    y2: q0R.y + q0LLineLength,
+    angle: 90, // Vertical, same as q0-q12
+    type: 'reference' as const,
+  };
+  
+  // Create a new reference line parallel to q4-q16 (210°) through q0R
+  // q0R is the intersection of q7-q21 and q2-q14
+  // q4L is the line that passes through q0R and is parallel to q4-q16
+  const q4LLineLength = lineLength; // Same length as other grid lines
+  const q4LLine = {
+    x1: q0R.x - q4LLineLength * Math.cos((210 * Math.PI) / 180),
+    y1: q0R.y + q4LLineLength * Math.sin((210 * Math.PI) / 180),
+    x2: q0R.x + q4LLineLength * Math.cos((210 * Math.PI) / 180),
+    y2: q0R.y - q4LLineLength * Math.sin((210 * Math.PI) / 180),
+    angle: 210, // Same as q4-q16
+    type: 'reference' as const,
+  };
+  
+  // Find lines for q4R intersection calculation
+  const line5to3 = findVertexLine(5, 3); // q9-q19 line
+  // line1to4 is already defined above (q2-q14 line)
+  
+  // Calculate intersection point of q9-q19 (line 5-3) and q2-q14 (line 1-4)
+  // This is q4R
+  let q4R = { x: 0, y: 0 };
+  if (line5to3 && line1to4) {
+    // Line 1: through (x1, y1) and (x2, y2) of line5to3
+    const x1_1 = line5to3.x1;
+    const y1_1 = line5to3.y1;
+    const x2_1 = line5to3.x2;
+    const y2_1 = line5to3.y2;
+    
+    // Line 2: through (x1, y1) and (x2, y2) of line1to4
+    const x1_2 = line1to4.x1;
+    const y1_2 = line1to4.y1;
+    const x2_2 = line1to4.x2;
+    const y2_2 = line1to4.y2;
+    
+    // Use parametric line intersection formula to handle vertical lines
+    const dx1 = x2_1 - x1_1;
+    const dy1 = y2_1 - y1_1;
+    const dx2 = x2_2 - x1_2;
+    const dy2 = y2_2 - y1_2;
+    
+    const denominator = dx1 * dy2 - dy1 * dx2;
+    
+    if (Math.abs(denominator) > 0.0001) { // Lines are not parallel
+      const t = ((x1_2 - x1_1) * dy2 - (y1_2 - y1_1) * dx2) / denominator;
+      const x = x1_1 + t * dx1;
+      const y = y1_1 + t * dy1;
+      q4R = { x, y };
+    }
+  }
+  
+  // Create a new reference line parallel to q4-q16 (210°) through q4R
+  const q4RLineLength = lineLength; // Same length as other grid lines
+  const q4RLine = {
+    x1: q4R.x - q4RLineLength * Math.cos((210 * Math.PI) / 180),
+    y1: q4R.y + q4RLineLength * Math.sin((210 * Math.PI) / 180),
+    x2: q4R.x + q4RLineLength * Math.cos((210 * Math.PI) / 180),
+    y2: q4R.y - q4RLineLength * Math.sin((210 * Math.PI) / 180),
+    angle: 210, // Same as q4-q16
+    type: 'reference' as const,
+  };
+  
+  // Calculate intersection point of q3-q17 (line 1-3) and q10-q22 (line 5-2)
+  // This is q8L
+  // line1to3 and line5to2 are already defined above
+  let q8L = { x: 0, y: 0 };
+  if (line1to3 && line5to2) {
+    // Line 1: through (x1, y1) and (x2, y2) of line1to3
+    const x1_1 = line1to3.x1;
+    const y1_1 = line1to3.y1;
+    const x2_1 = line1to3.x2;
+    const y2_1 = line1to3.y2;
+    
+    // Line 2: through (x1, y1) and (x2, y2) of line5to2
+    const x1_2 = line5to2.x1;
+    const y1_2 = line5to2.y1;
+    const x2_2 = line5to2.x2;
+    const y2_2 = line5to2.y2;
+    
+    // Use parametric line intersection formula to handle vertical lines
+    const dx1 = x2_1 - x1_1;
+    const dy1 = y2_1 - y1_1;
+    const dx2 = x2_2 - x1_2;
+    const dy2 = y2_2 - y1_2;
+    
+    const denominator = dx1 * dy2 - dy1 * dx2;
+    
+    if (Math.abs(denominator) > 0.0001) { // Lines are not parallel
+      const t = ((x1_2 - x1_1) * dy2 - (y1_2 - y1_1) * dx2) / denominator;
+      const x = x1_1 + t * dx1;
+      const y = y1_1 + t * dy1;
+      q8L = { x, y };
+    }
+  }
+  
+  // Create a new reference line parallel to q8-q20 (150°) through q8L
+  const q8LLineLength = lineLength; // Same length as other grid lines
+  const q8LLine = {
+    x1: q8L.x - q8LLineLength * Math.cos((150 * Math.PI) / 180),
+    y1: q8L.y + q8LLineLength * Math.sin((150 * Math.PI) / 180),
+    x2: q8L.x + q8LLineLength * Math.cos((150 * Math.PI) / 180),
+    y2: q8L.y - q8LLineLength * Math.sin((150 * Math.PI) / 180),
+    angle: 150, // Same as q8-q20
+    type: 'reference' as const,
+  };
+  
+  // Calculate intersection point of q5-q15 (line 0-4) and q10-q22 (line 5-2)
+  // This is q8R
+  // line0to4 and line5to2 are already defined above
+  let q8R = { x: 0, y: 0 };
+  if (line0to4 && line5to2) {
+    // Line 1: through (x1, y1) and (x2, y2) of line0to4
+    const x1_1 = line0to4.x1;
+    const y1_1 = line0to4.y1;
+    const x2_1 = line0to4.x2;
+    const y2_1 = line0to4.y2;
+    
+    // Line 2: through (x1, y1) and (x2, y2) of line5to2
+    const x1_2 = line5to2.x1;
+    const y1_2 = line5to2.y1;
+    const x2_2 = line5to2.x2;
+    const y2_2 = line5to2.y2;
+    
+    // Use parametric line intersection formula to handle vertical lines
+    const dx1 = x2_1 - x1_1;
+    const dy1 = y2_1 - y1_1;
+    const dx2 = x2_2 - x1_2;
+    const dy2 = y2_2 - y1_2;
+    
+    const denominator = dx1 * dy2 - dy1 * dx2;
+    
+    if (Math.abs(denominator) > 0.0001) { // Lines are not parallel
+      const t = ((x1_2 - x1_1) * dy2 - (y1_2 - y1_1) * dx2) / denominator;
+      const x = x1_1 + t * dx1;
+      const y = y1_1 + t * dy1;
+      q8R = { x, y };
+    }
+  }
+  
+  // Create a new reference line parallel to q8-q20 (150°) through q8R
+  const q8RLineLength = lineLength; // Same length as other grid lines
+  const q8RLine = {
+    x1: q8R.x - q8RLineLength * Math.cos((150 * Math.PI) / 180),
+    y1: q8R.y + q8RLineLength * Math.sin((150 * Math.PI) / 180),
+    x2: q8R.x + q8RLineLength * Math.cos((150 * Math.PI) / 180),
+    y2: q8R.y - q8RLineLength * Math.sin((150 * Math.PI) / 180),
+    angle: 150, // Same as q8-q20
+    type: 'reference' as const,
+  };
+  
+  // Calculate arc from p1 to p2 with center at q0 and radius 2r (for single variant)
+  const p0 = vertices[0];
+  const p1 = vertices[1];
+  const p2 = vertices[2];
+  const p3 = vertices[3];
+  const p4 = vertices[4];
+  const p5 = vertices[5];
+  const arcRadius = 2 * radius; // 2r
+  
+  // Calculate angles from center q0 to p1 and p2
+  const angle1 = Math.atan2(p1.y - q0.y, p1.x - q0.x) * (180 / Math.PI);
+  const angle2 = Math.atan2(p2.y - q0.y, p2.x - q0.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle = angle2 - angle1;
+  if (sweepAngle < 0) sweepAngle += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag = sweepAngle > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  // Since we're going from p1 to p2, and p1 is at 60° and p2 is at 120°, we go clockwise
+  const sweepFlag = 1;
+  
+  // Create arc path from p1 to p2
+  const arcPath1 = variant === "single" 
+    ? `M ${p1.x} ${p1.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag} ${sweepFlag} ${p2.x} ${p2.y}`
+    : "";
+  
+  // Calculate arc from p2 to p3 with center at q20 and radius 2r (for single variant)
+  const angle2_q20 = Math.atan2(p2.y - q20.y, p2.x - q20.x) * (180 / Math.PI);
+  const angle3_q20 = Math.atan2(p3.y - q20.y, p3.x - q20.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle_q20 = angle3_q20 - angle2_q20;
+  if (sweepAngle_q20 < 0) sweepAngle_q20 += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag_q20 = sweepAngle_q20 > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  const sweepFlag_q20 = 1;
+  
+  // Create arc path from p2 to p3
+  const arcPath2 = variant === "single" 
+    ? `M ${p2.x} ${p2.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag_q20} ${sweepFlag_q20} ${p3.x} ${p3.y}`
+    : "";
+  
+  // Calculate arc from p3 to p4 with center at q16 and radius 2r (for single variant)
+  const angle3_q16 = Math.atan2(p3.y - q16.y, p3.x - q16.x) * (180 / Math.PI);
+  const angle4_q16 = Math.atan2(p4.y - q16.y, p4.x - q16.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle_q16 = angle4_q16 - angle3_q16;
+  if (sweepAngle_q16 < 0) sweepAngle_q16 += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag_q16 = sweepAngle_q16 > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  const sweepFlag_q16 = 1;
+  
+  // Create arc path from p3 to p4
+  const arcPath3 = variant === "single" 
+    ? `M ${p3.x} ${p3.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag_q16} ${sweepFlag_q16} ${p4.x} ${p4.y}`
+    : "";
+  
+  // Calculate arc from p4 to p5 with center at q12 and radius 2r (for single variant)
+  const angle4_q12 = Math.atan2(p4.y - q12.y, p4.x - q12.x) * (180 / Math.PI);
+  const angle5_q12 = Math.atan2(p5.y - q12.y, p5.x - q12.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle_q12 = angle5_q12 - angle4_q12;
+  if (sweepAngle_q12 < 0) sweepAngle_q12 += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag_q12 = sweepAngle_q12 > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  const sweepFlag_q12 = 1;
+  
+  // Create arc path from p4 to p5
+  const arcPath4 = variant === "single" 
+    ? `M ${p4.x} ${p4.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag_q12} ${sweepFlag_q12} ${p5.x} ${p5.y}`
+    : "";
+  
+  // Calculate arc from p5 to p0 with center at q8 and radius 2r (for single variant)
+  const angle5_q8 = Math.atan2(p5.y - q8.y, p5.x - q8.x) * (180 / Math.PI);
+  const angle0_q8 = Math.atan2(p0.y - q8.y, p0.x - q8.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle_q8 = angle0_q8 - angle5_q8;
+  if (sweepAngle_q8 < 0) sweepAngle_q8 += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag_q8 = sweepAngle_q8 > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  const sweepFlag_q8 = 1;
+  
+  // Create arc path from p5 to p0
+  const arcPath5 = variant === "single" 
+    ? `M ${p5.x} ${p5.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag_q8} ${sweepFlag_q8} ${p0.x} ${p0.y}`
+    : "";
+  
+  // Calculate arc from p0 to p1 with center at q4 and radius 2r (for single variant)
+  const angle0_q4 = Math.atan2(p0.y - q4.y, p0.x - q4.x) * (180 / Math.PI);
+  const angle1_q4 = Math.atan2(p1.y - q4.y, p1.x - q4.x) * (180 / Math.PI);
+  
+  // Calculate arc sweep (difference in angles)
+  let sweepAngle_q4 = angle1_q4 - angle0_q4;
+  if (sweepAngle_q4 < 0) sweepAngle_q4 += 360;
+  
+  // Determine large-arc-flag (1 if sweep > 180°, 0 otherwise)
+  const largeArcFlag_q4 = sweepAngle_q4 > 180 ? 1 : 0;
+  // Determine sweep-flag (1 for clockwise, 0 for counterclockwise)
+  const sweepFlag_q4 = 1;
+  
+  // Create arc path from p0 to p1
+  const arcPath6 = variant === "single" 
+    ? `M ${p0.x} ${p0.y} A ${arcRadius} ${arcRadius} 0 ${largeArcFlag_q4} ${sweepFlag_q4} ${p1.x} ${p1.y}`
+    : "";
 
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -594,8 +973,218 @@ export default function ShapePage() {
             )}
           </g>
         ))}
+        {/* New reference line parallel to q0 through q0L */}
+        {debug && (
+          <>
+            <line
+              x1={q0LLine.x1}
+              y1={q0LLine.y1}
+              x2={q0LLine.x2}
+              y2={q0LLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q0LLine.x1}
+              y={q0LLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q0L
+            </text>
+          </>
+        )}
+        {/* New reference line parallel to q0-q12 through q0R */}
+        {debug && (
+          <>
+            <line
+              x1={q0RLine.x1}
+              y1={q0RLine.y1}
+              x2={q0RLine.x2}
+              y2={q0RLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q0RLine.x1}
+              y={q0RLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q0R
+            </text>
+          </>
+        )}
+        {/* New reference line parallel to q4-q16 through q4L */}
+        {debug && (
+          <>
+            <line
+              x1={q4LLine.x1}
+              y1={q4LLine.y1}
+              x2={q4LLine.x2}
+              y2={q4LLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q4LLine.x1}
+              y={q4LLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q4L
+            </text>
+          </>
+        )}
+        {/* New reference line parallel to q4-q16 through q4R */}
+        {debug && (
+          <>
+            <line
+              x1={q4RLine.x1}
+              y1={q4RLine.y1}
+              x2={q4RLine.x2}
+              y2={q4RLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q4RLine.x1}
+              y={q4RLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q4R
+            </text>
+          </>
+        )}
+        {/* New reference line parallel to q8-q20 through q8L */}
+        {debug && (
+          <>
+            <line
+              x1={q8LLine.x1}
+              y1={q8LLine.y1}
+              x2={q8LLine.x2}
+              y2={q8LLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q8LLine.x1}
+              y={q8LLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q8L
+            </text>
+          </>
+        )}
+        {/* New reference line parallel to q8-q20 through q8R */}
+        {debug && (
+          <>
+            <line
+              x1={q8RLine.x1}
+              y1={q8RLine.y1}
+              x2={q8RLine.x2}
+              y2={q8RLine.y2}
+              stroke="currentColor"
+              strokeWidth="1"
+              className="text-gray-50"
+            />
+            <text
+              x={q8RLine.x1}
+              y={q8RLine.y1}
+              fontSize="16"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="currentColor"
+              className="text-gray-200"
+            >
+              q8R
+            </text>
+          </>
+        )}
         {debug && <circle cx={centerX} cy={centerY} r={radius} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />}
         <polygon points={points} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />
+        {/* Arc from p1 to p2 with center at q0, radius 2r (single variant) */}
+        {variant === "single" && arcPath1 && (
+          <path
+            d={arcPath1}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
+        {/* Arc from p2 to p3 with center at q20, radius 2r (single variant) */}
+        {variant === "single" && arcPath2 && (
+          <path
+            d={arcPath2}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
+        {/* Arc from p3 to p4 with center at q16, radius 2r (single variant) */}
+        {variant === "single" && arcPath3 && (
+          <path
+            d={arcPath3}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
+        {/* Arc from p4 to p5 with center at q12, radius 2r (single variant) */}
+        {variant === "single" && arcPath4 && (
+          <path
+            d={arcPath4}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
+        {/* Arc from p5 to p0 with center at q8, radius 2r (single variant) */}
+        {variant === "single" && arcPath5 && (
+          <path
+            d={arcPath5}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
+        {/* Arc from p0 to p1 with center at q4, radius 2r (single variant) */}
+        {variant === "single" && arcPath6 && (
+          <path
+            d={arcPath6}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            className="text-gray-900"
+          />
+        )}
         {/* Vertex numbers */}
         {debug && vertices.map((vertex, index) => (
           <text
