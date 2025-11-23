@@ -1124,7 +1124,7 @@ export default function ShapePage() {
           </>
         )}
         {debug && <circle cx={centerX} cy={centerY} r={radius} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />}
-        <polygon points={points} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />
+        <polygon points={points} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-200" />
         {/* Arc from p1 to p2 with center at q0, radius 2r (single variant) */}
         {variant === "single" && arcPath1 && (
           <path
