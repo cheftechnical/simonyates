@@ -29,6 +29,7 @@ const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignA
 const PhilipsLightingPage = lazy(() => import("./pages/workAt/PhilipsLightingPage/PhilipsLightingPage.tsx"));
 const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
 const DesignSystem = lazy(() => import("./routes/DesignSystem.tsx").then(m => ({ default: m.DesignSystem })));
+const Shape = lazy(() => import("./routes/Shape.tsx").then(m => ({ default: m.Shape })));
 const Webdev = lazy(() => import("./routes/Webdev.tsx").then(m => ({ default: m.Webdev })));
 
 const router = createBrowserRouter([
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "/trig",
         element: <FigpieTrigonometry />
+      },
+      {
+        path: "/shape",
+        element: <Shape />
       },
       {
         path: "/page-not-found",
