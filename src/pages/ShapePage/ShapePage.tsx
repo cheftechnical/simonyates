@@ -1,4 +1,5 @@
 export default function ShapePage() {
+  const debug = false; // Set to true to show reference lines, q-numbers, p-numbers, circle, and center cross
   const radius = 250; // Circle radius in pixels
   const diameter = radius * 2; // Circle diameter
   // SVG size needs to accommodate grid lines extending 2r beyond circle
@@ -126,7 +127,7 @@ export default function ShapePage() {
     <div className="flex items-center justify-center min-h-screen">
       <svg width={svgSize} height={svgSize} viewBox={`-0.5 -0.5 ${svgSize + 1} ${svgSize + 1}`}>
         {/* All reference lines */}
-        {allLines.map((line, index) => (
+        {debug && allLines.map((line, index) => (
           <g key={index}>
             {/* Render gray line for all lines except the ones we're marking separately */}
             {!('vertexPair' in line && (
@@ -593,10 +594,10 @@ export default function ShapePage() {
             )}
           </g>
         ))}
-        <circle cx={centerX} cy={centerY} r={radius} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />
+        {debug && <circle cx={centerX} cy={centerY} r={radius} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />}
         <polygon points={points} fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-900" />
         {/* Vertex numbers */}
-        {vertices.map((vertex, index) => (
+        {debug && vertices.map((vertex, index) => (
           <text
             key={index}
             x={vertex.x}
@@ -610,8 +611,12 @@ export default function ShapePage() {
             p{vertex.number}
           </text>
         ))}
-        <line x1={centerX - 5} y1={centerY} x2={centerX + 5} y2={centerY} stroke="magenta" strokeWidth="1" />
-        <line x1={centerX} y1={centerY - 5} x2={centerX} y2={centerY + 5} stroke="magenta" strokeWidth="1" />
+        {debug && (
+          <>
+            <line x1={centerX - 5} y1={centerY} x2={centerX + 5} y2={centerY} stroke="magenta" strokeWidth="1" />
+            <line x1={centerX} y1={centerY - 5} x2={centerX} y2={centerY + 5} stroke="magenta" strokeWidth="1" />
+          </>
+        )}
       </svg>
     </div>
   );
