@@ -1,18 +1,61 @@
 import PageWrapper from "../../components/PageWrapper";
 import Image from "../../components/Image";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import Li from "../../styling/ListsUnordered/Li/Li";
+import NavRight from "../../components/NavRight";
+import { Sections } from "../../types/Sections";
+
+const sections: Sections = {
+  intro: {
+    id: "intro",
+    title: "Intro"
+  },
+  whatAltTextIs: {
+    id: "what-alt-text-is",
+    title: "What Alt-Text Actually Is"
+  },
+  imaginationGap: {
+    id: "imagination-gap",
+    title: "The Imagination Gap"
+  },
+  whyHumanValidation: {
+    id: "why-human-validation",
+    title: "Why Human Validation Isn't Enough"
+  },
+  theInsight: {
+    id: "the-insight",
+    title: "The Insight: AI as a Reverse Alt-Text Engine"
+  },
+  theMethod: {
+    id: "the-method",
+    title: "The Method"
+  },
+  demonstration: {
+    id: "demonstration",
+    title: "A Demonstration: Closing the Imagination Gap Through Iteration"
+  },
+  ethicalConsiderations: {
+    id: "ethical-considerations",
+    title: "Ethical Considerations"
+  },
+  humaneSystemsDesign: {
+    id: "humane-systems-design",
+    title: "Why This Matters for Humane Systems Design"
+  },
+  conclusion: {
+    id: "conclusion",
+    title: "Conclusion"
+  }
+};
 
 export function TheImaginationGapAltTextAiPage() {
   return (
-    <PageWrapper title="The Imagination Gap: Alt Text & AI">
+    <PageWrapper title="Using AI to See Through Someone Else's Eyes: Validating Alt-Text with Image Generation">
       <article>
         <MyContainer>
           <div className="flex flex-wrap">
             {/* Content */}
-            <div className="w-full md:w-3/5">
-              <h1 className="font-normal text-2xl leading-relaxed">
+            <div className="w-full md:w-9/12 md:pr-48">
+              <h1 id="intro" className="font-normal text-2xl leading-relaxed">
                 Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
               </h1>
 
@@ -32,12 +75,13 @@ export function TheImaginationGapAltTextAiPage() {
             By regenerating an image <em>solely</em> from the alt-text written to describe it, we can examine how much meaning is preserved, how much is lost, and where ambiguity lives. The goal is not to automate alt-text or replace human expertise; it is to reveal the limits of our language so we can write with greater clarity and&nbsp;intention.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="what-alt-text-is" className="font-normal text-xl leading-8 mt-12">
             What Alt-Text Actually&nbsp;Is
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
             For readers outside the accessibility space:
+            <br />
             <strong> alt-text is a written description of an image that can be read aloud by assistive technologies</strong> such as screen readers. It ensures that people who cannot see the image still have access to the same&nbsp;information.
           </p>
 
@@ -49,7 +93,7 @@ export function TheImaginationGapAltTextAiPage() {
             But meaning is subjective. And when we describe an image, we are guided by our own assumptions, visual context, and background knowledge—none of which the reader necessarily&nbsp;shares.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="imagination-gap" className="font-normal text-xl leading-8 mt-12">
             The Imagination&nbsp;Gap
           </h2>
 
@@ -73,12 +117,12 @@ export function TheImaginationGapAltTextAiPage() {
             If I say &ldquo;a red notebook,&rdquo; what do you&nbsp;imagine?
           </p>
 
-          <Ul className="mt-6">
-            <Li>Bright red? Deep red? Brown-red?</Li>
-            <Li>Hardcover? Softcover? Leather? Cloth?</Li>
-            <Li>Large? Small? Tall? Wide?</Li>
-            <Li>New? Worn? Handmade? Factory-made?</Li>
-          </Ul>
+          <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <li className="mb-1 ml-[21px]">Bright red? Deep red? Brown-red?</li>
+            <li className="mb-1 ml-[21px]">Hardcover? Softcover? Leather? Cloth?</li>
+            <li className="mb-1 ml-[21px]">Large? Small? Tall? Wide?</li>
+            <li className="mb-1 ml-[21px]">New? Worn? Handmade? Factory-made?</li>
+          </ul>
 
           <p className="font-normal text-base leading-normal mt-6">
             Every reader fills in the blanks differently.
@@ -88,7 +132,7 @@ export function TheImaginationGapAltTextAiPage() {
             This is the Imagination Gap—<strong>the invisible distance between the writer&rsquo;s intention and the reader&rsquo;s interpretation</strong>. It is especially critical in accessibility, where clarity is not a luxury but a&nbsp;necessity.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="why-human-validation" className="font-normal text-xl leading-8 mt-12">
             Why Human Validation Isn&rsquo;t Enough
           </h2>
 
@@ -108,13 +152,9 @@ export function TheImaginationGapAltTextAiPage() {
 
           <p className="font-normal text-base leading-normal mt-6">
             The artist knows the image in their&nbsp;mind.
-          </p>
-
-          <p className="font-normal text-base leading-normal mt-6">
+            <br />
             The reviewer knows the image in&nbsp;theirs.
-          </p>
-
-          <p className="font-normal text-base leading-normal mt-6">
+            <br />
             Neither can see the gap between&nbsp;them.
           </p>
 
@@ -122,14 +162,14 @@ export function TheImaginationGapAltTextAiPage() {
             AI image generation offers a third perspective—one that exposes ambiguity without taxing the community we are trying to&nbsp;support.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="the-insight" className="font-normal text-xl leading-8 mt-12">
             The Insight: AI as a Reverse Alt-Text&nbsp;Engine
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            An image generator can serve as a literal interpreter of your&nbsp;description.
+            An image generator can serve as a <strong>literal interpreter</strong> of your&nbsp;description.
             <br />
-            If you give it only your alt-text, without the original image, and ask it to generate exactly what the text describes, the output reveals how your words function when stripped of&nbsp;context.
+            If you give it only your alt-text, without the original image, and ask it to generate <em>exactly</em> what the text describes, the output reveals how your words function when stripped of&nbsp;context.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -155,7 +195,7 @@ export function TheImaginationGapAltTextAiPage() {
             This reveals where the Imagination Gap appears.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="the-method" className="font-normal text-xl leading-8 mt-12">
             The&nbsp;Method
           </h2>
 
@@ -163,36 +203,43 @@ export function TheImaginationGapAltTextAiPage() {
             The workflow is&nbsp;simple:
           </p>
 
-          <ol className="font-normal text-base leading-normal mt-6 ml-6 list-decimal space-y-4">
-            <li className="mb-4">
+          <ol className="font-normal text-base leading-normal mt-6 ml-6 list-decimal space-y-4 marker:font-bold">
+            <li className="mb-6">
               <strong>Write your alt-text normally.</strong>
-              <br />
-              Describe the image as you intend it.
+              <div className="mt-2">
+                Describe the image as you intend it.
+              </div>
             </li>
-            <li className="mb-4">
+            <li className="mb-6">
               <strong>Copy only the text.</strong>
-              <br />
-              No filenames, captions, or visual hints.
+              <div className="mt-2">
+                No filenames, captions, or visual hints.
+              </div>
             </li>
-            <li className="mb-4">
+            <li className="mb-6">
               <strong>Paste it into the image generator with a literal-interpretation instruction.</strong>
             </li>
-            <li className="mb-4">
+            <li className="mb-6">
               <strong>Compare the generated image to the original.</strong>
-              <br />
-              Where does it match?
-              Where does it drift?
-              What details did you assume were obvious?
+              <div className="mt-2">
+                Where does it match?
+                <br />
+                Where does it drift?
+                <br />
+                What details did you assume were obvious?
+              </div>
             </li>
-            <li className="mb-4">
+            <li className="mb-6">
               <strong>Refine the alt-text.</strong>
-              <br />
-              Add clarity where ambiguity appeared.
+              <div className="mt-2">
+                Add clarity where ambiguity appeared.
+              </div>
             </li>
-            <li className="mb-4">
+            <li className="mb-6">
               <strong>Generate the second reconstruction.</strong>
-              <br />
-              Confirm whether the meaning is now more faithfully conveyed.
+              <div className="mt-2">
+                Confirm whether the meaning is now more faithfully conveyed.
+              </div>
             </li>
           </ol>
 
@@ -200,7 +247,7 @@ export function TheImaginationGapAltTextAiPage() {
             This process takes minutes—and the insight is&nbsp;immediate.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="demonstration" className="font-normal text-xl leading-8 mt-12">
             A Demonstration: Closing the Imagination Gap Through&nbsp;Iteration
           </h2>
 
@@ -269,13 +316,13 @@ export function TheImaginationGapAltTextAiPage() {
             The model interpreted the scene as:
           </p>
 
-          <Ul className="mt-6">
-            <Li>a smooth, symmetrical commercial notebook</Li>
-            <Li>flat red leather with no tonal variation</Li>
-            <Li>a background whose wood grain differs subtly</Li>
-            <Li>proportions that don&rsquo;t quite match</Li>
-            <Li>a pen orientation that is approximate rather than specific</Li>
-          </Ul>
+          <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <li className="mb-1 ml-[21px]">a smooth, symmetrical commercial notebook</li>
+            <li className="mb-1 ml-[21px]">flat red leather with no tonal variation</li>
+            <li className="mb-1 ml-[21px]">a background whose wood grain differs subtly</li>
+            <li className="mb-1 ml-[21px]">proportions that don&rsquo;t quite match</li>
+            <li className="mb-1 ml-[21px]">a pen orientation that is approximate rather than specific</li>
+          </ul>
 
           <p className="font-normal text-base leading-normal mt-6">
             These are not mistakes—they are <strong>interpretations in the absence of explicit detail.</strong>
@@ -315,13 +362,13 @@ export function TheImaginationGapAltTextAiPage() {
             Immediately, we&nbsp;see:
           </p>
 
-          <Ul className="mt-6">
-            <Li>the asymmetrical flap appears</Li>
-            <Li>the leather shows richer tonal variation</Li>
-            <Li>the sheen is more accurate</Li>
-            <Li>proportions are closer</Li>
-            <Li>the pen is centered and clearly oriented</Li>
-          </Ul>
+          <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <li className="mb-1 ml-[21px]">the asymmetrical flap appears</li>
+            <li className="mb-1 ml-[21px]">the leather shows richer tonal variation</li>
+            <li className="mb-1 ml-[21px]">the sheen is more accurate</li>
+            <li className="mb-1 ml-[21px]">proportions are closer</li>
+            <li className="mb-1 ml-[21px]">the pen is centered and clearly oriented</li>
+          </ul>
 
           <p className="font-normal text-base leading-normal mt-6">
             It is still not identical to the original—and it never should&nbsp;be.
@@ -337,13 +384,14 @@ export function TheImaginationGapAltTextAiPage() {
             That is the purpose of this&nbsp;exercise.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="ethical-considerations" className="font-normal text-xl leading-8 mt-12">
             Ethical Considerations
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            AI cannot replace blind users.
-            Human judgment is irreplaceable, especially when describing emotion, context, or cultural meaning.
+            AI cannot replace blind&nbsp;users.
+            <br />
+            Human judgment is irreplaceable, especially when describing emotion, context, or cultural&nbsp;meaning.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -400,7 +448,7 @@ export function TheImaginationGapAltTextAiPage() {
             And sometimes, in a small way, it creates&nbsp;harmony.
           </p>
 
-          <h2 className="font-normal text-xl leading-8 mt-12">
+          <h2 id="conclusion" className="font-normal text-xl leading-8 mt-12">
             Conclusion
           </h2>
 
@@ -425,6 +473,11 @@ export function TheImaginationGapAltTextAiPage() {
           <p className="font-normal text-base leading-normal mt-6">
             A small act of harmony in a system that touches millions every&nbsp;day.
           </p>
+            </div>
+
+            {/* Navigation */}
+            <div className="hidden md:block md:w-3/12">
+              <NavRight sections={sections} />
             </div>
           </div>
         </MyContainer>
