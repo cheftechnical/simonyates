@@ -12,5 +12,9 @@ export const sections: Sections = {
   projects: {
     id: "projects",
     title: "Projects"
+  },
+  essays: {
+    id: "essays",
+    title: "Essays"
   }
 };

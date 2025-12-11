@@ -259,6 +259,20 @@ export default function Featured() {
                     </Ul>
                 </FeaturedProjects>
               </NextSection>
+
+              <NextSection id={sections.essays.id}>
+                <SectionTitle>{sections.essays.title}</SectionTitle>
+
+                <FeaturedProjects>
+                  <Ul>
+                    <Li>
+                      <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
+                        Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
+                      </Link>
+                    </Li>
+                  </Ul>
+                </FeaturedProjects>
+              </NextSection>
             </Sections>
           </div>
 
