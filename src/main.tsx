@@ -29,6 +29,7 @@ const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignA
 const PhilipsLightingPage = lazy(() => import("./pages/workAt/PhilipsLightingPage/PhilipsLightingPage.tsx"));
 const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
 const DesignSystem = lazy(() => import("./routes/DesignSystem.tsx").then(m => ({ default: m.DesignSystem })));
+const EssayTheImaginationGapAltTextAi = lazy(() => import("./routes/EssayTheImaginationGapAltTextAi.tsx").then(m => ({ default: m.EssayTheImaginationGapAltTextAi })));
 const Webdev = lazy(() => import("./routes/Webdev.tsx").then(m => ({ default: m.Webdev })));
 
 const router = createBrowserRouter([
@@ -111,6 +112,10 @@ const router = createBrowserRouter([
       {
         path: "/featured",
         element: <Featured />,
+      },
+      {
+        path: "/essays/the-imagination-gap-alt-text-ai",
+        element: <EssayTheImaginationGapAltTextAi />,
       },
       {
         path: "/design-system",
