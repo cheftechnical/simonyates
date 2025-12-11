@@ -1056,9 +1056,8 @@ export default function ShapePage() {
               y1={q4RLine.y1}
               x2={q4RLine.x2}
               y2={q4RLine.y2}
-              stroke="currentColor"
+              stroke="red"
               strokeWidth="1"
-              className="text-gray-50"
             />
             <text
               x={q4RLine.x1}
@@ -1180,9 +1179,8 @@ export default function ShapePage() {
           <path
             d={arcPath6}
             fill="none"
-            stroke="currentColor"
+            stroke="blue"
             strokeWidth="1"
-            className="text-gray-900"
           />
         )}
         {/* Vertex numbers */}
