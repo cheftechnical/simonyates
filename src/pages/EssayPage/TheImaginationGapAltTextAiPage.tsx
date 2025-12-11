@@ -55,6 +55,9 @@ export function TheImaginationGapAltTextAiPage() {
           <div className="flex flex-wrap">
             {/* Content */}
             <div className="w-full md:w-9/12 md:pr-48">
+              <div className="text-sm uppercase mb-6">
+                December 11, 2025
+              </div>
               <h1 id="intro" className="font-normal text-2xl leading-relaxed">
                 Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
               </h1>
