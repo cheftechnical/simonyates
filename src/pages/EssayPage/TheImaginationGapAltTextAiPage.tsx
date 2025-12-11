@@ -42,7 +42,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Good alt-text is not simply a list of objects; it conveys the essential meaning of the image.
+            Good alt-text is not simply a list of objects; it conveys the essential meaning of the&nbsp;image.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -70,7 +70,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            If I say &ldquo;a red notebook,&rdquo; what do you imagine?
+            If I say &ldquo;a red notebook,&rdquo; what do you&nbsp;imagine?
           </p>
 
           <Ul className="mt-6">
@@ -93,7 +93,7 @@ export function TheImaginationGapAltTextAiPage() {
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            We often assume the solution is simple: ask blind users to validate alt-text.
+            We often assume the solution is simple: ask blind users to validate&nbsp;alt-text.
             <br />
             But this is unfair and&nbsp;unsustainable.
           </p>
@@ -103,7 +103,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Human review is invaluable, but it is not exhaustive.
+            Human review is invaluable, but it is not&nbsp;exhaustive.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -115,7 +115,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Neither can see the gap between them.
+            Neither can see the gap between&nbsp;them.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -127,7 +127,8 @@ export function TheImaginationGapAltTextAiPage() {
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            An image generator can serve as a literal interpreter of your description.
+            An image generator can serve as a literal interpreter of your&nbsp;description.
+            <br />
             If you give it only your alt-text, without the original image, and ask it to generate exactly what the text describes, the output reveals how your words function when stripped of&nbsp;context.
           </p>
 
@@ -140,7 +141,7 @@ export function TheImaginationGapAltTextAiPage() {
           </blockquote>
 
           <p className="font-normal text-base leading-normal mt-6">
-            That phrasing forces the model to treat your text like documentation rather than inspiration.
+            That phrasing forces the model to treat your text like documentation rather than&nbsp;inspiration.
             <br />
             It mirrors the purpose of alt-text: factual, unembellished&nbsp;communication.
           </p>
@@ -204,13 +205,14 @@ export function TheImaginationGapAltTextAiPage() {
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            To illustrate how this works, I staged a simple photograph using objects from my own desk:
+            To illustrate how this works, I staged a simple photograph using objects from my own&nbsp;desk:
             <br />
             a handmade red leather notebook cover and a black fountain&nbsp;pen.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            At first glance, it&rsquo;s an uncomplicated scene.
+            At first glance, it&rsquo;s an uncomplicated&nbsp;scene.
+            <br />
             But simplicity often hides&nbsp;ambiguity.
           </p>
 
@@ -310,7 +312,7 @@ export function TheImaginationGapAltTextAiPage() {
           />
 
           <p className="font-normal text-base leading-normal mt-6">
-            Immediately, we see:
+            Immediately, we&nbsp;see:
           </p>
 
           <Ul className="mt-6">
@@ -322,7 +324,7 @@ export function TheImaginationGapAltTextAiPage() {
           </Ul>
 
           <p className="font-normal text-base leading-normal mt-6">
-            It is still not identical to the original—and it never should be.
+            It is still not identical to the original—and it never should&nbsp;be.
             <br />
             Language cannot encode the exact experience of hand-dyed leather or the tactile nuance of&nbsp;craftsmanship.
           </p>
@@ -353,7 +355,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Transparency matters: this technique is a tool for clarity, not automation.
+            Transparency matters: this technique is a tool for clarity, not&nbsp;automation.
             <br />
             Alt-text must remain an act of human&nbsp;communication.
           </p>
@@ -363,7 +365,7 @@ export function TheImaginationGapAltTextAiPage() {
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Accessibility is often framed as compliance.
+            Accessibility is often framed as&nbsp;compliance.
             <br />
             But humane systems design asks a deeper&nbsp;question:
           </p>
@@ -387,8 +389,10 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            By reflecting what our words truly communicate, it helps us design with care, precision, and empathy.
-            It turns ambiguity into awareness.
+            By reflecting what our words truly communicate, it helps us design with care, precision, and&nbsp;empathy.
+            <br />
+            It turns ambiguity into&nbsp;awareness.
+            <br />
             It reveals the system behind the&nbsp;surface.
           </p>
 
@@ -401,7 +405,7 @@ export function TheImaginationGapAltTextAiPage() {
           </h2>
 
           <p className="font-normal text-base leading-normal mt-6">
-            Alt-text asks us to describe what we see so that someone else can understand it. But understanding is never guaranteed. Between intention and experience lies the Imagination Gap.
+            Alt-text asks us to describe what we see so that someone else can understand it. But understanding is never guaranteed. Between intention and experience lies the Imagination&nbsp;Gap.
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
@@ -409,7 +413,7 @@ export function TheImaginationGapAltTextAiPage() {
           </p>
 
           <p className="font-normal text-base leading-normal mt-6">
-            This method is not about automation or efficiency.
+            This method is not about automation or&nbsp;efficiency.
             <br />
             It is about&nbsp;awareness.
           </p>
