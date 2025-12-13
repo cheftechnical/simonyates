@@ -5,7 +5,7 @@ import AppearanceLink from "./AppearanceLink";
 import FeaturedChips from "./FeaturedChips";
 import FeaturedLi from "./FeaturedLi";
 import Ul from "../../../styling/ListsUnordered/Ul/Ul";
-import Download from "../Download";
+import Download from "./Download";
 import SectionTitle from "../SectionTitle";
 import { sections } from "../sections.ts";
 

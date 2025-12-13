@@ -11,7 +11,7 @@ import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublication from "./components/FeaturedPublication";
 import FeaturedPublications from "./components/FeaturedPublications";
 import FeaturedAppearances from "./components/FeaturedAppearances";
-import Download from "./Download";
+import Download from "./components/Download";
 import NextSection from "./components/NextSection";
 import SectionDescription from "./SectionDescription";
 import SectionTitle from "./SectionTitle";
