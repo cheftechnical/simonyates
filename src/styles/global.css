@@ -1,0 +1,20 @@
+/**
+ * Global styles for scroll behavior, height, and list styling.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 15px;
+}

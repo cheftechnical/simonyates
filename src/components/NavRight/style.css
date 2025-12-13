@@ -1,0 +1,19 @@
+html {
+    scroll-padding-top: 112px; /* matches HEADER_OFFSET in utils.ts */
+}
+
+/* Default state - transparent border */
+.nav-right-item {
+    border-left: 2px solid transparent;
+}
+
+/* Active scrollspy state - applied by our custom NavRight component */
+.nav-right-item.active-scroll-spy {
+    color: var(--color-gray-900) !important;
+    border-left-color: var(--color-gray-500) !important;
+}
+
+.nav-right-item.active-scroll-spy a {
+    color: var(--color-gray-900) !important;
+}
+

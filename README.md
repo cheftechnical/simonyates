@@ -1,54 +1,96 @@
-# Personal Website of Simon Yates
+# Simon Yates – Personal Site
 
-This is the persona website of Simon Yates (aka @ChefTechnical).
-
-I chose to open-source the website for anyone curious to see how I built it.
-
-The website was built with React + Typescript, is hosted on an AWS S3 bucket, and is proxied through Cloudflare; design follows the Google Material design system. Although most of the design elements rely on components from the React Material-UI framework, I had to write my own `Typography` component as the one bundled with the framework was far too limiting.
-
-Component prototyping is handled with Storybook, and is divided into three parts: 
-
-1. Components — which represent common components used throughout the site
-2. Pages — which allow me to test each page of the site without directly navigating to the page. Typically this might be a little excessive, but this site is very text-heavy, and managing the pages this way is just easier for me.
-3. Style Guide — is a collection of core design elements that may be inherited by other components or pages—think color, logos and stuff.
+A React + TypeScript + Vite project for my resume/portfolio site.
 
 ## Requirements
+- Node.js 22 (enforced via `.nvmrc` and `"engines"`)
+  - Use nvm: `nvm install 22 && nvm use 22`
+- Yarn v1
 
-If you want to run a copy of this site, you'll require the following:
-
-- Node.js, v12.18.0 LTS
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Maintenance
-
-### Upgrading Storybook
-
+## Install / Run
 ```bash
-yarn upgrade-interactive --latest
+# install deps
+yarn install --check-files
+
+# dev server
+yarn dev
+
+# typecheck + production build
+yarn build
+
+# preview the production build
+yarn preview
 ```
+
+## Storybook (minimal, v10 core)
+This repo uses a minimal Storybook 10 setup (core + links), primarily for ad‑hoc component review.
+```bash
+yarn storybook
+```
+Notes:
+- Stories are excluded from production typecheck/build.
+- Some older stories may still need v10 API cleanups; not required for prod builds.
+
+## CI
+GitHub Actions runs on pushes/PRs:
+- Install (cached)
+- Typecheck (`tsc --noEmit`)
+- Production build (`vite build`)
+
+## Linting and Formatting
+- ESLint with `eslint-plugin-perfectionist` enforces:
+  - Sorted imports/named imports
+  - Alphabetized object keys and destructured properties (matches personal style)
+- Run:
+```bash
+yarn lint
+```
+
+## Performance
+- Vite vendor code‑splitting (`react`, `router`, `d3`, `date-fns`)
+- Route‑level code splitting via `React.lazy` + `Suspense` in `Root`
+
+## Tailwind color tokens (single source of truth)
+- Define brand colors once as CSS variables in `src/styles/tailwind.css`:
+```css
+@layer base {
+  :root {
+    --color-gray-700: #515151;
+    --color-red-500: #A93030;
+    --color-lime-50: #F8FAEF;
+    /* ... */
+  }
+}
+```
+- Reference those variables in `tailwind.config.ts` so utilities use the same values:
+```ts
+// tailwind.config.ts
+export default {
+  theme: {
+    colors: {
+      gray: { 700: 'var(--color-gray-700)' },
+      red: { 500: 'var(--color-red-500)' },
+      lime: { 50: 'var(--color-lime-50)' },
+      // ...
+    },
+  },
+};
+```
+- Use standard utilities in components:
+```tsx
+<div className="text-gray-700 bg-lime-50">Content</div>
+```
+This keeps hex values in one place (CSS), while Tailwind utilities reference those tokens everywhere.
+
+## Security hygiene
+- Resolutions to pin safe versions for transitive deps:
+  - `form-data@^4`
+  - `braces@^3.0.3`
+
+## Tech notes
+- React 19 with Tailwind CSS (MUI removed)
+- Node 22 on Vercel; local dev also uses Node 22.
+
+## Changelog
+- 2025‑10‑30: Node 22 upgrade, dependency updates, Storybook v10 minimal, CI added, lint rules, vendor/route splitting.
+- 2024‑02‑01: Initial notes.

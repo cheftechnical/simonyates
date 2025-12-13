@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gray-25: #f7f7f7;
+  --text-xs: 0.63rem;
+  --text-sm: 0.7937rem;
+  --text-base: 1rem;
+  --text-lg: 1.2599rem;
+  --text-xl: 1.5874rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5198rem;
+  --text-4xl: 3.1748rem;
+  --text-5xl: 4rem;
+  --text-6xl: 5.0396rem;
+  --text-7xl: 6.3496rem;
+  --text-8xl: 8rem;
+  --text-9xl: 8rem;
+}
+
+@layer base {
+  html {
+    font-family: "Tiempos Text", "Times New Roman", Times, serif;
+  }
+
+  body {
+    color: var(--color-gray-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure <em> tags are italic only, not bold+italic */
+  /* Use !important to override browser font matching to local BoldItalic variants */
+  /* Explicitly set font-weight to 400 (normal) to match the regular italic font-face */
+  /* font-synthesis: none prevents browser from synthesizing bold when using corrupted local fonts */
+  em {
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-synthesis: none !important;
+  }
+
+  :root {
+    /* Gray */
+    /* --color-gray-50: #F7F7F7;
+    --color-gray-100: #E1E1E1;
+    --color-gray-200: #CFCFCF;
+    --color-gray-300: #B1B1B1;
+    --color-gray-400: #9E9E9E;
+    --color-gray-500: #7E7E7E;
+    --color-gray-600: #626262;
+    --color-gray-700: #515151;
+    --color-gray-800: #3B3B3B;
+    --color-gray-900: #222222; */
+    --color-gray-25:  #F7F7F7;
+    --color-gray-50:  #EEEEEE;
+    --color-gray-100: #DADADA;
+    --color-gray-200: #BFBFBF;
+    --color-gray-300: #A4A4A4;
+    --color-gray-400: #8B8B8B;
+    --color-gray-500: #757575;
+    --color-gray-600: #5E5E5E;
+    --color-gray-700: #464646;
+    --color-gray-800: #333333;
+    --color-gray-900: #222222;
+
+
+    /* Red */
+    --color-red-50: #FFF1F1; /* optional, for bg-red-50 parity */
+    --color-red-400: #B64F4F;
+    --color-red-500: #A93030;
+
+    /* Lime */
+    --color-lime-50: #F8FAEF;
+    --color-lime-300: #DDE7B1;
+    --color-lime-400: #CBDB81;
+    --color-lime-500: #BDCD5D;
+    --color-lime-700: #92A90C;
+    --color-lime-900: #627203;
+
+    /* Blue */
+    --color-blue-500: #1767B0;
+    --color-blue-800: #0D4A97;
+
+    /* Core */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+  }
+}
+
+@layer components {
+  .prose {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5; /* 24px */
+    letter-spacing: 0.5px;
+    color: var(--color-gray-700);
+  }
+
+  /* Custom bullet styling for list items */
+  .list-item-custom-bullet::before {
+    content: "\2022"; /* bullet character */
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -27px;
+    top: -4px;
+    color: var(--color-gray-800);
+    font-size: 20px;
+  }
+
+  /* Featured list item bullet styling (gray-500) */
+  .list-item-featured-bullet::before {
+    content: "\2022"; /* bullet character */
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -27px;
+    top: -4px;
+    color: var(--color-gray-500);
+    font-size: 20px;
+  }
+}

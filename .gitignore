@@ -1,12 +1,25 @@
-# IDE files
-/.idea
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Application dependencies
-/node_modules/
-#/src/styling/fonts/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Production files
-build/
-
-# Development files
-yarn-error.log
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules/

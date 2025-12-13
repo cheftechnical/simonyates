@@ -12,12 +12,13 @@
  */
 
 @font-face {
-    font-family: 'apercu-bold';
-    src: url('apercu-bold.eot');
-    src: url('apercu-bold.eot?#iefix') format('embedded-opentype'),
-         url('apercu-bold.woff2') format('woff2'),
-         url('apercu-bold.woff') format('woff'),
-         url('apercu-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "apercu-bold";
+  src: url("apercu-bold.eot");
+  src:
+    url("apercu-bold.eot?#iefix") format("embedded-opentype"),
+    url("apercu-bold.woff2") format("woff2"),
+    url("apercu-bold.woff") format("woff"),
+    url("apercu-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
