@@ -129,8 +129,10 @@ export default function Featured() {
                   <Ul>
                     <Li>
                       <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
-                        Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
+                        The Imagination&nbsp;Gap
                       </Link>
+                      <br />
+                      Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
                     </Li>
                   </Ul>
                 </FeaturedProjects>
