@@ -17,7 +17,7 @@ import SectionDescription from "./SectionDescription";
 import SectionTitle from "./SectionTitle";
 import { sections } from "./sections.ts";
 
-
+// featured
 export default function Featured() {
   return (
     <PageWrapper title="Featured">
