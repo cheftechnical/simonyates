@@ -39,7 +39,7 @@ export function Content() {
         <WorkAtSectionTitle>Notable Projects</WorkAtSectionTitle>
         <WorkAtProjects>
           <WorkAtProject name="Apple Canada Introduces iPhone" when="">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal">
               When Apple launched the original iPhone in Canada, they partnered
               with the Montreal Gazette to feature their online newspaper in its
               live press demo. This was an extremely high-profile event for
@@ -47,7 +47,7 @@ export function Content() {
               rendering page view. So I built their replica website for
               this&nbsp;demo.
             </p>
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal mt-6">
               As a show of thanks, the partners of Jib gave me an iPhone&mdash;6
               months before it was available in Canada. Although I don&rsquo;t
               use it anymore, I still have it (box included). They&rsquo;re
@@ -56,7 +56,7 @@ export function Content() {
           </WorkAtProject>
 
           <WorkAtProject next name="Apple Canada's Online Store for Students">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal">
               Apple supports students with special pricing through its Apple
               Education Store. Access to this store required users to register
               their student ID with Apple to verity their eligibility. This
@@ -67,7 +67,7 @@ export function Content() {
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.delaila.co.uk">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal">
               Development of an online jewelry store with a custom e-commerce
               engine that integrated with HSBC and managed through a
               custom–built content management system&nbsp;(CMS).
@@ -75,7 +75,7 @@ export function Content() {
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.eloundabeach.gr">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal">
               Elounda Beach is a luxury hotel in Greece, with a single
               night&rsquo;s stay costing upwards of $5,000. I built a custom,
               multi-lingual CMS and integrated a third-party
@@ -84,7 +84,7 @@ export function Content() {
           </WorkAtProject>
 
           <WorkAtProject next name="http://www.verity.ca">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+            <p className="font-primary font-normal text-base leading-normal">
               Verity is an exclusive women's club in Toronto, that provides
               support for the advancement of women through professional, social
               and personal opportunities. I built the website and the

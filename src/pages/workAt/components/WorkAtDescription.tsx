@@ -12,7 +12,7 @@ export default function WorkAtDescription(props: Props) {
 
   return (
     <div className="mb-1">
-      <p className="font-normal text-base leading-normal text-gray-700 tracking-[0.5px] mt-16 mb-[20px]">
+      <p className="font-normal text-base leading-normal text-gray-700 mt-16 mb-[20px]">
         <em>{children}</em>
       </p>
     </div>

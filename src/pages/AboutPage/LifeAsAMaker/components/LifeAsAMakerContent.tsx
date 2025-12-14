@@ -10,7 +10,7 @@ export default function LifeAsAMakerContent() {
       <div className="flex flex-wrap">
         <div className="hidden md:block md:w-1/2" />
         <div className="w-full md:w-1/2">
-          <h2 className="font-normal text-[54px] leading-[88px] tracking-[0.5px]">
+          <h2 className="font-normal text-[54px] leading-[88px]">
             Life as a Maker
           </h2>
         </div>

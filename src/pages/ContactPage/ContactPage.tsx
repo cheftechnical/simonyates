@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full">
-            <h1 className="font-normal leading-relaxed text-4xl tracking-[0.5px] mb-2">
+            <h1 className="font-normal leading-relaxed text-4xl mb-2">
               Pleasure to meet you.
             </h1>
           </div>
@@ -44,7 +44,7 @@ export default function Contact() {
 
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2">
-            <p className="font-normal leading-normal text-base tracking-[0.5px] mb-[40px] text-gray-700">
+            <p className="font-normal leading-normal text-base mb-[40px] text-gray-700">
               I&rsquo;m always open to make new connections and chat about
               software&nbsp;development.
             </p>

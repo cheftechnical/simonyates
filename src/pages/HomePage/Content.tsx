@@ -4,7 +4,7 @@
 export default function Content() {
   return (
     <div className="h-full flex items-center">
-      <h1 className="font-normal text-4xl leading-relaxed tracking-[0.5px]">
+      <h1 className="font-normal text-4xl leading-relaxed">
         {/* xs only */}
         <span className="block sm:hidden">
           Hi, I&rsquo;m Simon&nbsp;Yates.

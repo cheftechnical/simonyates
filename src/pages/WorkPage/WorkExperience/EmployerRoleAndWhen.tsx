@@ -29,10 +29,10 @@ export default function EmployerRollAndWhen(props: Props) {
           {employer}  
         </ReactRouterDom>
       </h2>
-      <p className="font-normal text-base leading-normal tracking-[0.5px] mt-3 text-gray-500">
+      <p className="font-normal text-base leading-normal mt-3 text-gray-500">
         {role}
       </p>
-      <p className="font-normal text-base leading-normal tracking-[0.5px]  mt-3 mb-8 text-gray-700">
+      <p className="font-normal text-base leading-normal  mt-3 mb-8 text-gray-700">
         <span className="whitespace-nowrap">{when}</span>
       </p>
     </>
