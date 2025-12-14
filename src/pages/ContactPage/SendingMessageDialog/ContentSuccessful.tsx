@@ -38,11 +38,11 @@ export default function ContentSuccessful(props: Props) {
         Thank you.
       </h2>
 
-      <p className="mt-1 font-primary font-normal text-base leading-normal tracking-[0.5px] text-gray-600">
+      <p className="mt-1 font-primary font-normal text-base leading-normal text-gray-600">
         We&rsquo;ll chat soon.
       </p>
 
-      <p className="mt-8 font-primary font-normal text-base leading-normal tracking-[0.5px]">
+      <p className="mt-8 font-primary font-normal text-base leading-normal">
         In the meantime, let&rsquo;s connect on social media:
       </p>
 
@@ -53,7 +53,7 @@ export default function ContentSuccessful(props: Props) {
             <Logo brand="linkedin" variant="grey-500" width={24} />
           </div>
           <div className="ml-1">
-            <p className="font-secondary text-base leading-normal tracking-[0.5px]">
+            <p className="font-secondary text-base leading-normal">
               <a
                 href="https://www.linkedin.com/in/simonyates/"
                 target="_blank"

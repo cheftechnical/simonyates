@@ -12,7 +12,7 @@ export default function WorkAtProject(props: Props) {
 
   return (
     <div className={next ? "mt-14" : ""}>
-      <h3 className="font-primary font-semibold text-base leading-normal tracking-[0.5px] mb-6 text-[#626262]">
+      <h3 className="font-primary font-semibold text-base leading-normal mb-6 text-[#626262]">
         {name}
         {optionalWhen}
       </h3>

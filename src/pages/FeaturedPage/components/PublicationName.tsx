@@ -11,7 +11,7 @@ export default function PublicationName(props: Props) {
   const { children } = props;
 
   return (
-    <h3 className="font-semibold text-base leading-normal tracking-[0.5px] mb-[16px]">
+    <h3 className="font-semibold text-base leading-normal mb-[16px]">
       {children}
     </h3>
   );

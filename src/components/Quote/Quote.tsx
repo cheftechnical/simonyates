@@ -43,7 +43,7 @@ export default function Quote(props: Props) {
       </div>
       <div className="flex-grow pt-3">
         <blockquote cite={source} className="m-0 p-0">
-          <p className="font-secondary font-light text-base leading-normal tracking-[0.5px] text-gray-800">
+          <p className="font-secondary font-light text-base leading-normal text-gray-800">
             {children}
             {renderedEndQuote}
           </p>

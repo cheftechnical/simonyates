@@ -35,7 +35,7 @@ export function Content() {
       <Section id={sections.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
 
-        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+        <p className="font-primary font-normal text-base leading-normal">
           Genworth Canada was leading a North American initiative to move their
           application system to Elasticsearch. The goal of this new system: make
           it easier for Genworth to detect &ldquo;red-flag&rdquo; indicators of
@@ -44,14 +44,14 @@ export function Content() {
 
         <WorkAtProjects>
           <WorkAtProject next name="Finding Duplicates">
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal mt-6">
               I was hired based on my previous experience with Elasticsearch,
               but finding ways of removing dependencies on vendor services was
               not something I was expected to do. It was only after I got
               involved in the project and learned about their use case that I
               saw an opportunity to suggest a better way of doing&nbsp;things.
             </p>
-            <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
+            <p className="font-primary font-normal text-base leading-normal mt-6">
               Using several state-of-the-art features of Elasticsearch, I was
               able to prototype a solution that effectively replaced a
               dependency on one of their key data analytics vendors, saving

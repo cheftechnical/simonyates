@@ -45,7 +45,7 @@ export default function WorkAtPublication(props: Props) {
 
   return (
     <div className={next ? "pt-4" : ""}>
-      <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+      <p className="font-primary font-normal text-base leading-normal">
         {renderedAuthor}
         {date}. {renderedTitle}
         {renderedPublisher}

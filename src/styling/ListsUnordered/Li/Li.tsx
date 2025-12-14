@@ -18,7 +18,6 @@ export default function Li(props: Props) {
     "font-normal",
     "text-base",
     "leading-normal",
-    "tracking-[0.5px]",
     "mb-4",
     "ml-[21px]",
     "pl-0",

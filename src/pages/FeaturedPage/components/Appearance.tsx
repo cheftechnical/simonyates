@@ -33,19 +33,19 @@ export default function Appearance(props: Props) {
   return (
     // 16 px * 1.5 lineHeight = 24 px * 2 = 48 px
     <div className={next ? "pt-12" : ""}>
-      <h3 className="font-semibold text-base leading-normal tracking-[0.5px]">
+      <h3 className="font-semibold text-base leading-normal">
         {title}
       </h3>
 
-      <p className="font-normal text-base leading-normal tracking-[0.5px] pt-[16px] text-gray-600">
+      <p className="font-normal text-base leading-normal pt-[16px] text-gray-600">
         {host}
       </p>
 
-      <p className="font-normal text-base leading-normal tracking-[0.5px] text-gray-600">
+      <p className="font-normal text-base leading-normal text-gray-600">
         {where}
       </p>
 
-      <p className="font-normal text-base leading-normal tracking-[0.5px] text-gray-600">
+      <p className="font-normal text-base leading-normal text-gray-600">
         {when}
       </p>
 

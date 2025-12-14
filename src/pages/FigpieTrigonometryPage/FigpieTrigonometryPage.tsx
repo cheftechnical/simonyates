@@ -10,7 +10,7 @@ export default function FigpieTrigonometryPage() {
     <MathJaxProviderWrapper>
       <PageWrapper title="How it Works">
         <MyContainer>
-          <h1 className="font-primary font-normal text-4xl leading-relaxed tracking-[0.5px]">
+          <h1 className="font-primary font-normal text-4xl leading-relaxed">
             How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
           </h1>
 

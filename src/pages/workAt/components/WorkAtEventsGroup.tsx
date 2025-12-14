@@ -35,7 +35,7 @@ export default function WorkAtEventsGroup(props: Props) {
   return (
     <div className={next ? "pt-10" : ""}>
       <ConditionalIndent>
-        <h3 className="font-primary font-semibold text-base leading-normal tracking-[0.5px]">
+        <h3 className="font-primary font-semibold text-base leading-normal">
           {renderedName}
         </h3>
         <div>{children}</div>

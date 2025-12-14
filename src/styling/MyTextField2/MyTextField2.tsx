@@ -77,7 +77,7 @@ export const MyTextField2 = forwardRef<HTMLInputElement | HTMLTextAreaElement, P
     const inputId = `textfield-${id}`;
     const helperTextId = helperText ? `helper-${id}` : undefined;
 
-    const baseInputClasses = `w-full py-[14px] px-[14px] font-normal text-base leading-normal tracking-[0.5px] bg-transparent border-0 rounded outline-none ${
+    const baseInputClasses = `w-full py-[14px] px-[14px] font-normal text-base leading-normal bg-transparent border-0 rounded outline-none ${
       error ? "text-red-500" : "text-gray-900"
     } ${disabled ? "text-gray-200 cursor-not-allowed" : ""} placeholder:text-gray-400`;
 

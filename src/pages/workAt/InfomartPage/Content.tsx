@@ -41,16 +41,16 @@ export default function Content() {
 
       <div id={sectionCollection.aboutTheProject.id}>
         <WorkAtSectionTitle>About the Project</WorkAtSectionTitle>
-        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px]">
+        <p className="font-primary font-normal text-base leading-normal">
           For the last 30 years, Infomart had collected over 200 million
           newspaper articles from every major Canadian&nbsp;publisher.
         </p>
-        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
+        <p className="font-primary font-normal text-base leading-normal mt-6">
           The goal of this project was to enhance the search capabilities of the
           tool, while expanding its archives to include content from leading
           social media platforms like Twitter, Facebook, and&nbsp;YouTube.
         </p>
-        <p className="font-primary font-normal text-base leading-normal tracking-[0.5px] mt-6">
+        <p className="font-primary font-normal text-base leading-normal mt-6">
           Data was originally stored in Microsoft SQL Server, but given the full
           text requirements of the tool, Elasticsearch proved to be an ideal
           use-case for this modernization effort. Elasticsearch was still in its
