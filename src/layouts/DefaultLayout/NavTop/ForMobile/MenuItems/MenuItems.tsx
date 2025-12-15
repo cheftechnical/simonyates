@@ -12,8 +12,8 @@ export function MenuItems(props: Props) {
 
   return (
     <div className="pt-2 text-right">
-      <MenuItem href="/work" onClick={onClick} title="Work" />
       <MenuItem href={"/featured"} onClick={onClick} title="Featured" />
+      <MenuItem href="/work" onClick={onClick} title="Work" />
       <MenuItem href={"/appearances"} onClick={onClick} title="Appearances" />
       <MenuItem href={"/studies"} onClick={onClick} title="Studies" />
       <MenuItem href={"/about"} onClick={onClick} title="About" />

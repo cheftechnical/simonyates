@@ -57,18 +57,6 @@ export function MenuItems(props: Props) {
       <ul className="list-none m-0 p-0 flex flex-wrap justify-center">
         <li className={liClasses}>
           <NavLink
-            to="/work"
-            className={({ isActive }) =>
-              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
-                isActive || selected === "work" ? "font-bold" : "font-normal"
-              }`
-            }
-          >
-            Work
-          </NavLink>
-        </li>
-        <li className={liClasses}>
-          <NavLink
             to="/featured"
             className={({ isActive }) =>
               `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
@@ -77,6 +65,18 @@ export function MenuItems(props: Props) {
             }
           >
             Featured
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
+            to="/work"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "work" ? "font-bold" : "font-normal"
+              }`
+            }
+          >
+            Work
           </NavLink>
         </li>
         <li className={liClasses}>
