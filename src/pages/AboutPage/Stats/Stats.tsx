@@ -4,31 +4,31 @@ import Carousel from "react-material-ui-carousel";
 
 interface Stat {
   caption: string;
-  value: number;
+  value: string;
 }
 
 const stat: Stat[] = [
   {
-    caption: "years programming",
-    value: 25,
+    caption: "First production system built",
+    value: "1997",
   },
   {
-    caption: "when I started programming",
-    value: 10,
+    caption: "Retail role → trusted software",
+    value: "Age 16",
   },
   {
-    caption: "software projects completed",
-    value: 200,
+    caption: "Repetitive work automated",
+    value: "2h → 20m",
   },
   {
-    caption: "figma plugin",
-    value: 1,
+    caption: "First manager who trusted me",
+    value: "Still in touch",
   },
 ];
 
 export default function Stats() {
   return (
-    <div className="pt-[60px] pb-[36px] bg-gray-25">
+    <div className="pt-[36px] pb-[36px] bg-gray-25">
       {/* Desktop */}
       <div className="hidden sm:block">
         <MyContainer>

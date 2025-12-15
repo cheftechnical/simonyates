@@ -3,7 +3,7 @@ import SouthernPacificDaylightImgWrapper from "./SouthernPacificDaylightImgWrapp
 
 export default function SouthernPacificDaylightContent() {
   return (
-    <div className="flex flex-wrap pb-[109px] sm:pb-[258px]">
+    <div className="flex flex-wrap">
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/4" />
       <div className="w-full md:w-3/4">
