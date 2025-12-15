@@ -12,7 +12,7 @@ export default function LifeAsAMakerContainer(props: Props) {
   const { children } = props;
 
   return (
-    <MyContainer className="pt-[80px] sm:pt-[120px]">
+    <MyContainer>
       {children}
     </MyContainer>
   );

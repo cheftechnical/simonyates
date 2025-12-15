@@ -1,41 +1,38 @@
 import Image from "../../../../components/Image/Image";
-import H3 from "./H3";
-import Body from "./Body";
-import BodyNext from "./BodyNext";
 import TlcImgWrapper from "./TlcImgWrapper";
 
 export default function TlcContent() {
   return (
     <>
       {/* Hello, World! */}
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap pt-[6.3496rem]">
         <div className="w-full md:w-1/2">
-          <H3>Hello, World!</H3>
+          <h3 className="font-medium text-xl leading-normal">Hello, World!</h3>
         </div>
         <div className="hidden md:block md:w-1/2" />
       </div>
 
-      <div className="flex flex-wrap pb-[64px]">
+      <div className="flex flex-wrap">
         <div className="w-full md:w-1/2">
-          <Body>
+          <p className="font-normal text-base leading-normal text-justify pt-6">
             While TLC&rsquo;s Super Solvers:{" "}
             <em>Out Numbered! and Challenge of the Ancient Empires!</em> may
             have kept me busy during summer break, it was this synthesized
             musical keyboard game that came bundled with the SoundBlaster that I
             really wanted to play&nbsp;with.
-          </Body>
-          <BodyNext>
+          </p>
+          <p className="font-normal text-base leading-normal text-justify pt-6">
             Determined to play music with the computer, I started digging
             through different files and stacks of owners manuals that were the
             size of tax law books to try and find any mention of this&nbsp;game.
-          </BodyNext>
-          <BodyNext>
+          </p>
+          <p className="font-normal text-base leading-normal text-justify pt-6">
             A few days later, I stumbled onto this program called GW BASIC. It
             didn&rsquo;t turn my computer keyboard into a MIDI keyboard, but
             with a few lines of code, I could have the computer produce a sound
             at a specific frequency for a given duration. It wasn&rsquo;t
             exactly what I wanted, but it was fascinating&nbsp;stuff!
-          </BodyNext>
+          </p>
         </div>
 
         {/* Show for desktop */}
