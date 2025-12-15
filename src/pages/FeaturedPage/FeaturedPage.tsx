@@ -2,17 +2,8 @@ import { Link } from "react-router-dom";
 import NavRight from "../../components/NavRight";
 import PageWrapper from "../../components/PageWrapper";
 import Sections from "../../components/Sections/Sections";
-import Li from "../../styling/ListsUnordered/Li/Li.tsx";
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import FeaturedAbstract from "./components/FeaturedAbstract";
-import FeaturedLi from "./components/FeaturedLi";
-import FeaturedProjects from "./components/FeaturedProjects";
-import FeaturedPublication from "./components/FeaturedPublication";
-import FeaturedPublications from "./components/FeaturedPublications";
 import Download from "../../components/Download";
-import NextSection from "./components/NextSection";
-import SectionTitle from "./SectionTitle";
 import { sections } from "./sections.ts";
 
 // featured
@@ -24,49 +15,69 @@ export default function Featured() {
           {/* Content */}
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
           <div className="w-full md:w-9/12 md:pr-48 ">
+            <h1 className="sr-only">Featured</h1>
             <Sections>
-              <NextSection id={sections.essays.id}>
-                <SectionTitle>{sections.essays.title}</SectionTitle>
+              <div id={sections.essays.id}>
+                {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                <h2 className="font-normal text-2xl leading-relaxed mb-6">
+                  {sections.essays.title}
+                </h2>
 
-                <FeaturedProjects>
-                  <Ul>
-                    <Li>
-                      <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
-                        The Imagination&nbsp;Gap
-                      </Link>
-                      <br />
-                      Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
-                    </Li>
-                  </Ul>
-                </FeaturedProjects>
-              </NextSection>
+                <div className="pl-0 sm:pl-10">
+                  <h3 className="font-normal text-lg leading-normal">
+                    <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
+                      The Imagination&nbsp;Gap
+                    </Link>
+                  </h3>
+                  <p className="mt-3">
+                    Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
+                  </p>
+                </div>
+              </div>
 
-              <NextSection id={sections.systems.id}>
-                <SectionTitle>{sections.systems.title}</SectionTitle>
+              <div className="mt-[3.7797rem]">
+                <div id={sections.systems.id}>
+                  {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                  {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                  <h2 className="font-normal text-2xl leading-relaxed mb-6">
+                    {sections.systems.title}
+                  </h2>
 
-                <FeaturedProjects>
+                <div className="pl-0 sm:pl-10">
                   {/* Projects content will go here */}
-                  <Ul>
-                    <Li>
-                      <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
-                        Design System: My personal design system and design&nbsp;aesthetic.
-                      </Link>
-                    </Li>
-                    </Ul>
-                </FeaturedProjects>
-              </NextSection>
+                  <h3 className="font-normal text-lg leading-normal">
+                    <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
+                      Design System
+                    </Link>
+                  </h3>
+                  <p className="mt-3">
+                    A living system that defines how I design, build, and reason about interfaces — from typography and layout to accessibility, structure, and&nbsp;intent.
+                  </p>
+                </div>
+                </div>
+              </div>
 
-              <NextSection id={sections.publications.id}>
-                <SectionTitle>{sections.publications.title}</SectionTitle>
+              <div className="mt-[3.7797rem]">
+                <div id={sections.publications.id}>
+                  {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                  {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                  <h2 className="font-normal text-2xl leading-relaxed">
+                    {sections.publications.title}
+                  </h2>
 
-                <FeaturedPublications>
-                  <FeaturedPublication
-                    name="Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support"
-                    publisher="IEEE Big Data"
-                    when="2015"
-                  >
-                    <FeaturedAbstract>
-                      Abstract &mdash; We developed a real-time, visual
+                <div className="pl-0 sm:pl-10">
+                  <div>
+                    <h3 className="font-normal text-lg leading-normal mt-6">
+                      Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision&nbsp;Support
+                    </h3>
+
+                    <p className="font-normal text-base leading-normal text-gray-600 mt-6" style={{ letterSpacing: '0.01em' }}>
+                      IEEE International Conference on Big Data<span style={{ padding: '0 0.25ch' }}>&middot;</span>October&nbsp;29–November&nbsp;1,&nbsp;2015<span style={{ padding: '0 0.25ch' }}>&middot;</span>Santa&nbsp;Clara,&nbsp;CA,&nbsp;USA
+                    </p>
+
+                    <p className="font-normal text-base leading-normal text-gray-900 mt-6">
+                      We developed a real-time, visual
                       analytics tool for clinical decision support. The system
                       expands the &ldquo;recall of past experience&rdquo;
                       approach that a provider (physician) uses to formulate a
@@ -77,18 +88,16 @@ export default function Featured() {
                       &ldquo;what-if&rdquo; scenarios, and to collect these
                       evidence-based cohorts for future statistical validation
                       and pattern&nbsp;mining.
-                    </FeaturedAbstract>
+                    </p>
                   
                     <Download
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
-                  </FeaturedPublication>
-                </FeaturedPublications>
-              </NextSection>
+                  </div>
+                </div>
+                </div>
+              </div>
             </Sections>
           </div>
-
-          {/* Gutter */}
-          {/* <div className="border-1 border-[lime] hidden md:block md:w-2/12" /> */}
 
           {/* Navigation */}
           <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
