@@ -26,6 +26,37 @@ export default function Featured() {
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
           <div className="w-full md:w-9/12 md:pr-48 ">
             <Sections>
+              <NextSection id={sections.essays.id}>
+                <SectionTitle>{sections.essays.title}</SectionTitle>
+
+                <FeaturedProjects>
+                  <Ul>
+                    <Li>
+                      <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
+                        The Imagination&nbsp;Gap
+                      </Link>
+                      <br />
+                      Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
+                    </Li>
+                  </Ul>
+                </FeaturedProjects>
+              </NextSection>
+
+              <NextSection id={sections.systems.id}>
+                <SectionTitle>{sections.systems.title}</SectionTitle>
+
+                <FeaturedProjects>
+                  {/* Projects content will go here */}
+                  <Ul>
+                    <Li>
+                      <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
+                        Design System: My personal design system and design&nbsp;aesthetic.
+                      </Link>
+                    </Li>
+                    </Ul>
+                </FeaturedProjects>
+              </NextSection>
+
               <NextSection id={sections.publications.id}>
                 <SectionTitle>{sections.publications.title}</SectionTitle>
 
@@ -65,37 +96,6 @@ export default function Featured() {
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
                   </FeaturedPublication>
                 </FeaturedPublications>
-              </NextSection>
-
-              <NextSection id={sections.projects.id}>
-                <SectionTitle>{sections.projects.title}</SectionTitle>
-
-                <FeaturedProjects>
-                  {/* Projects content will go here */}
-                  <Ul>
-                    <Li>
-                      <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
-                        Design System: My personal design system and design&nbsp;aesthetic.
-                      </Link>
-                    </Li>
-                    </Ul>
-                </FeaturedProjects>
-              </NextSection>
-
-              <NextSection id={sections.essays.id}>
-                <SectionTitle>{sections.essays.title}</SectionTitle>
-
-                <FeaturedProjects>
-                  <Ul>
-                    <Li>
-                      <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
-                        The Imagination&nbsp;Gap
-                      </Link>
-                      <br />
-                      Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
-                    </Li>
-                  </Ul>
-                </FeaturedProjects>
               </NextSection>
             </Sections>
           </div>
