@@ -4,6 +4,7 @@ import TlcContent from "./components/TlcContent";
 import GwBasicContent from "./components/GwBasicContent";
 import ModelRailroaderMagazineContent from "./components/ModelRailroaderMagazineContent";
 import SouthernPacificDaylightContent from "./components/SouthernPacificDaylightContent";
+import ComputerCityContent from "./components/ComputerCityContent";
 
 export default function LifeAsAMaker() {
   return (
@@ -26,6 +27,11 @@ export default function LifeAsAMaker() {
       {/* ---------------------------------------------------------------------------------------------------- */}
 
       <SouthernPacificDaylightContent />
+
+      {/* ---------------------------------------------------------------------------------------------------- */}
+
+      {/* Computer City */}
+      <ComputerCityContent />
     </LifeAsAMakerContainer>
   );
 }
