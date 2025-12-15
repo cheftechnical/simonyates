@@ -65,7 +65,7 @@ export function TheImaginationGapAltTextAiPage() {
                 Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
               </p>
 
-              <p className="font-normal text-base leading-normal mt-6">
+              <p className="font-normal text-base leading-normal mt-16">
                 Alt-text is one of the simplest accessibility practices to describe, and one of the hardest to do well. It asks us to translate an image into language so that someone who cannot see the image can still understand it. But between what we intend and what someone else understands lies a space where the meaning can&nbsp;drift.
               </p>
 
