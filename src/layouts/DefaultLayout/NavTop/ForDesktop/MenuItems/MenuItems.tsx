@@ -57,6 +57,18 @@ export function MenuItems(props: Props) {
       <ul className="list-none m-0 p-0 flex flex-wrap justify-center">
         <li className={liClasses}>
           <NavLink
+            to="/featured"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "featured" ? "font-bold" : "font-normal"
+              }`
+            }
+          >
+            Featured
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
             to="/work"
             className={({ isActive }) =>
               `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
@@ -69,14 +81,26 @@ export function MenuItems(props: Props) {
         </li>
         <li className={liClasses}>
           <NavLink
-            to="/featured"
+            to="/studies"
             className={({ isActive }) =>
               `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
-                isActive || selected === "featured" ? "font-bold" : "font-normal"
+                isActive || selected === "studies" ? "font-bold" : "font-normal"
               }`
             }
           >
-            Featured
+            Studies
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
+            to="/appearances"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "appearances" ? "font-bold" : "font-normal"
+              }`
+            }
+          >
+            Appearances
           </NavLink>
         </li>
         <li className={liClasses}>

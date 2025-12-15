@@ -2,19 +2,8 @@ import { Link } from "react-router-dom";
 import NavRight from "../../components/NavRight";
 import PageWrapper from "../../components/PageWrapper";
 import Sections from "../../components/Sections/Sections";
-import Li from "../../styling/ListsUnordered/Li/Li.tsx";
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import FeaturedAbstract from "./components/FeaturedAbstract";
-import FeaturedLi from "./components/FeaturedLi";
-import FeaturedProjects from "./components/FeaturedProjects";
-import FeaturedPublication from "./components/FeaturedPublication";
-import FeaturedPublications from "./components/FeaturedPublications";
-import FeaturedAppearances from "./components/FeaturedAppearances";
 import Download from "../../components/Download";
-import NextSection from "./components/NextSection";
-import SectionDescription from "./SectionDescription";
-import SectionTitle from "./SectionTitle";
 import { sections } from "./sections.ts";
 
 // featured
@@ -25,33 +14,70 @@ export default function Featured() {
         <div className="flex flex-wrap">
           {/* Content */}
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
-          <div className="w-full md:w-9/12 md:pr-48 xborder-1 border-[magenta] ">
+          <div className="w-full md:w-9/12 md:pr-48 ">
+            <h1 className="sr-only">Featured</h1>
             <Sections>
-              <FeaturedAppearances />
+              <div id={sections.essays.id}>
+                {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                <h2 className="font-normal text-2xl leading-relaxed mb-6">
+                  {sections.essays.title}
+                </h2>
 
-              <NextSection id={sections.publications.id}>
-                <SectionTitle>{sections.publications.title}</SectionTitle>
+                <div className="pl-0 sm:pl-10">
+                  <h3 className="font-normal text-lg leading-normal">
+                    <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
+                      The Imagination&nbsp;Gap
+                    </Link>
+                  </h3>
+                  <p className="mt-3">
+                    Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
+                  </p>
+                </div>
+              </div>
 
-                <SectionDescription>
-                  I&rsquo;ve been incredibly lucky to work along some of the
-                  brightest minds of North&nbsp;America
-                </SectionDescription>
+              <div className="mt-[3.7797rem]">
+                <div id={sections.systems.id}>
+                  {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                  {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                  <h2 className="font-normal text-2xl leading-relaxed mb-6">
+                    {sections.systems.title}
+                  </h2>
 
-                <FeaturedPublications>
-                  <FeaturedPublication
-                    name="Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support"
-                    publisher="IEEE Big Data"
-                    tags={[
-                      "electronic medical record",
-                      "clinical decision support",
-                      "real-time analytics",
-                      "visual analytics",
-                      "data mining"
-                    ]}
-                    when="2015"
-                  >
-                    <FeaturedAbstract>
-                      Abstract &mdash; We developed a real-time, visual
+                <div className="pl-0 sm:pl-10">
+                  {/* Projects content will go here */}
+                  <h3 className="font-normal text-lg leading-normal">
+                    <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
+                      Design System
+                    </Link>
+                  </h3>
+                  <p className="mt-3">
+                    A living system that defines how I design, build, and reason about interfaces — from typography and layout to accessibility, structure, and&nbsp;intent.
+                  </p>
+                </div>
+                </div>
+              </div>
+
+              <div className="mt-[3.7797rem]">
+                <div id={sections.publications.id}>
+                  {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
+                  {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
+                  <h2 className="font-normal text-2xl leading-relaxed">
+                    {sections.publications.title}
+                  </h2>
+
+                <div className="pl-0 sm:pl-10">
+                  <div>
+                    <h3 className="font-normal text-lg leading-normal mt-6">
+                      Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision&nbsp;Support
+                    </h3>
+
+                    <p className="font-normal text-base leading-normal text-gray-600 mt-6" style={{ letterSpacing: '0.01em' }}>
+                      IEEE International Conference on Big Data<span style={{ padding: '0 0.25ch' }}>&middot;</span>October&nbsp;29–November&nbsp;1,&nbsp;2015<span style={{ padding: '0 0.25ch' }}>&middot;</span>Santa&nbsp;Clara,&nbsp;CA,&nbsp;USA
+                    </p>
+
+                    <p className="font-normal text-base leading-normal text-gray-900 mt-6">
+                      We developed a real-time, visual
                       analytics tool for clinical decision support. The system
                       expands the &ldquo;recall of past experience&rdquo;
                       approach that a provider (physician) uses to formulate a
@@ -62,86 +88,16 @@ export default function Featured() {
                       &ldquo;what-if&rdquo; scenarios, and to collect these
                       evidence-based cohorts for future statistical validation
                       and pattern&nbsp;mining.
-                    </FeaturedAbstract>
-
-                    <br />
-                    <br />
+                    </p>
+                  
                     <Download
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
-                  </FeaturedPublication>
-
-                  <FeaturedPublication
-                    next
-                    name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-                    publisher="RBC"
-                    tags={["automation", "custom tooling", "elasticsearch"]}
-                    when="June 11, 2020"
-                  >
-                    <Ul>
-                      <FeaturedLi>
-                        Interactive dashboards for
-                        monitoring&nbsp;infrastructure
-                      </FeaturedLi>
-                      <FeaturedLi>
-                        A live–view monitor shows the status of hundreds of
-                        servers in real–time that became an essential tool for
-                        Apigee&nbsp;upgrades
-                      </FeaturedLi>
-                      <FeaturedLi>
-                        Real–time monitoring of critical infrastructure to
-                        enable the SRE team to monitor SLAs for 99.999%
-                        (five–nines)&nbsp;availability
-                      </FeaturedLi>
-                    </Ul>
-                  </FeaturedPublication>
-                </FeaturedPublications>
-              </NextSection>
-
-              <NextSection id={sections.projects.id}>
-                <SectionTitle>{sections.projects.title}</SectionTitle>
-
-                <FeaturedProjects>
-                  {/* Projects content will go here */}
-                  <Ul>
-                    <Li>
-                      <Link to="/design-system" className="text-blue-500 no-underline hover:underline">
-                        Design System: My personal design system and design&nbsp;aesthetic.
-                      </Link>
-                    </Li>
-                    <Li>
-                      <Link to="/figpie" className="text-blue-500 no-underline hover:underline">
-                        Figpie: A Figma plugin for making pie charts.
-                      </Link>
-                    </Li>
-                    <Li>
-                      <Link to="/trig" className="text-blue-500 no-underline hover:underline">
-                        How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
-                      </Link>
-                    </Li>
-                    </Ul>
-                </FeaturedProjects>
-              </NextSection>
-
-              <NextSection id={sections.essays.id}>
-                <SectionTitle>{sections.essays.title}</SectionTitle>
-
-                <FeaturedProjects>
-                  <Ul>
-                    <Li>
-                      <Link to="/essays/the-imagination-gap-alt-text-ai" className="text-blue-500 no-underline hover:underline">
-                        The Imagination&nbsp;Gap
-                      </Link>
-                      <br />
-                      Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
-                    </Li>
-                  </Ul>
-                </FeaturedProjects>
-              </NextSection>
+                  </div>
+                </div>
+                </div>
+              </div>
             </Sections>
           </div>
-
-          {/* Gutter */}
-          {/* <div className="border-1 border-[lime] hidden md:block md:w-2/12" /> */}
 
           {/* Navigation */}
           <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
