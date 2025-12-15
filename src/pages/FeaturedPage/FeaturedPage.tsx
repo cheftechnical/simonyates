@@ -10,7 +10,6 @@ import FeaturedLi from "./components/FeaturedLi";
 import FeaturedProjects from "./components/FeaturedProjects";
 import FeaturedPublication from "./components/FeaturedPublication";
 import FeaturedPublications from "./components/FeaturedPublications";
-import FeaturedAppearances from "./components/FeaturedAppearances";
 import Download from "../../components/Download";
 import NextSection from "./components/NextSection";
 import SectionDescription from "./SectionDescription";
@@ -27,8 +26,6 @@ export default function Featured() {
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
           <div className="w-full md:w-9/12 md:pr-48 xborder-1 border-[magenta] ">
             <Sections>
-              <FeaturedAppearances />
-
               <NextSection id={sections.publications.id}>
                 <SectionTitle>{sections.publications.title}</SectionTitle>
 
