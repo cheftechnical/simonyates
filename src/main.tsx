@@ -27,6 +27,7 @@ const GenworthCanadaPage = lazy(() => import("./pages/workAt/GenworthCanadaPage/
 const InfomartPage = lazy(() => import("./pages/workAt/InfomartPage/index.ts"));
 const JibDesignAndAdvertisingPage = lazy(() => import("./pages/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage.tsx"));
 const PhilipsLightingPage = lazy(() => import("./pages/workAt/PhilipsLightingPage/PhilipsLightingPage.tsx"));
+const Appearances = lazy(() => import("./routes/Appearances.tsx").then(m => ({ default: m.Appearances })));
 const Contact = lazy(() => import("./routes/Contact.tsx").then(m => ({ default: m.Contact })));
 const DesignSystem = lazy(() => import("./routes/DesignSystem.tsx").then(m => ({ default: m.DesignSystem })));
 const EssayTheImaginationGapAltTextAi = lazy(() => import("./routes/EssayTheImaginationGapAltTextAi.tsx").then(m => ({ default: m.EssayTheImaginationGapAltTextAi })));
@@ -124,6 +125,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/appearances",
+        element: <Appearances />,
       },
       {
         path: "/about",
