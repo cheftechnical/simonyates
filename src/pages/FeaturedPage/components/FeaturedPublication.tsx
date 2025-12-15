@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import FeaturedChips from "./FeaturedChips";
 import PublicationName from "./PublicationName";
 import PublicationPublisher from "./PublicationPublisher";
 import PublicationWhen from "./PublicationWhen";
@@ -23,17 +22,13 @@ interface Props {
    */
   publisher: string;
   /**
-   * List of tags/chips to display.
-   */
-  tags: string[];
-  /**
    * When the publication was published.
    */
   when: string;
 }
 
 export default function FeaturedPublication(props: Props) {
-  const { children, name, next, publisher, tags, when } = props;
+  const { children, name, next, publisher, when } = props;
 
   return (
     <div className={next ? "pt-[40px]" : ""}>
@@ -42,8 +37,6 @@ export default function FeaturedPublication(props: Props) {
       <PublicationPublisher>{publisher}</PublicationPublisher>
 
       <PublicationWhen>{when}</PublicationWhen>
-
-      <FeaturedChips list={tags} />
 
       <PublicationChildren>{children}</PublicationChildren>
     </div>

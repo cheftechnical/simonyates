@@ -12,7 +12,6 @@ import FeaturedPublication from "./components/FeaturedPublication";
 import FeaturedPublications from "./components/FeaturedPublications";
 import Download from "../../components/Download";
 import NextSection from "./components/NextSection";
-import SectionDescription from "./SectionDescription";
 import SectionTitle from "./SectionTitle";
 import { sections } from "./sections.ts";
 
@@ -60,22 +59,10 @@ export default function Featured() {
               <NextSection id={sections.publications.id}>
                 <SectionTitle>{sections.publications.title}</SectionTitle>
 
-                <SectionDescription>
-                  I&rsquo;ve been incredibly lucky to work along some of the
-                  brightest minds of North&nbsp;America
-                </SectionDescription>
-
                 <FeaturedPublications>
                   <FeaturedPublication
                     name="Patient-Like-Mine: A Real Time, Visual Analytics Tool for Clinical Decision Support"
                     publisher="IEEE Big Data"
-                    tags={[
-                      "electronic medical record",
-                      "clinical decision support",
-                      "real-time analytics",
-                      "visual analytics",
-                      "data mining"
-                    ]}
                     when="2015"
                   >
                     <FeaturedAbstract>
