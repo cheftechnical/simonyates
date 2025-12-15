@@ -78,16 +78,6 @@ export default function Featured() {
                         Design System: My personal design system and design&nbsp;aesthetic.
                       </Link>
                     </Li>
-                    <Li>
-                      <Link to="/figpie" className="text-blue-500 no-underline hover:underline">
-                        Figpie: A Figma plugin for making pie charts.
-                      </Link>
-                    </Li>
-                    <Li>
-                      <Link to="/trig" className="text-blue-500 no-underline hover:underline">
-                        How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
-                      </Link>
-                    </Li>
                     </Ul>
                 </FeaturedProjects>
               </NextSection>
