@@ -93,6 +93,18 @@ export function MenuItems(props: Props) {
         </li>
         <li className={liClasses}>
           <NavLink
+            to="/studies"
+            className={({ isActive }) =>
+              `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${
+                isActive || selected === "studies" ? "font-bold" : "font-normal"
+              }`
+            }
+          >
+            Studies
+          </NavLink>
+        </li>
+        <li className={liClasses}>
+          <NavLink
             to="/about"
             className={({ isActive }) =>
               `${linkClasses} text-sm leading-4 tracking-[1.25px] uppercase ${

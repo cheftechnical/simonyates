@@ -24,7 +24,7 @@ export default function Featured() {
         <div className="flex flex-wrap">
           {/* Content */}
           {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
-          <div className="w-full md:w-9/12 md:pr-48 xborder-1 border-[magenta] ">
+          <div className="w-full md:w-9/12 md:pr-48 ">
             <Sections>
               <NextSection id={sections.publications.id}>
                 <SectionTitle>{sections.publications.title}</SectionTitle>
@@ -60,36 +60,9 @@ export default function Featured() {
                       evidence-based cohorts for future statistical validation
                       and pattern&nbsp;mining.
                     </FeaturedAbstract>
-
-                    <br />
-                    <br />
+                  
                     <Download
                       href="https://s3.amazonaws.com/simonyates.ca-downloads/publications/ieee/2015/patient-like-mine.pdf" />
-                  </FeaturedPublication>
-
-                  <FeaturedPublication
-                    next
-                    name="Using Natural Language Processing to Analyze Enterprise–Wide Incident Reports"
-                    publisher="RBC"
-                    tags={["automation", "custom tooling", "elasticsearch"]}
-                    when="June 11, 2020"
-                  >
-                    <Ul>
-                      <FeaturedLi>
-                        Interactive dashboards for
-                        monitoring&nbsp;infrastructure
-                      </FeaturedLi>
-                      <FeaturedLi>
-                        A live–view monitor shows the status of hundreds of
-                        servers in real–time that became an essential tool for
-                        Apigee&nbsp;upgrades
-                      </FeaturedLi>
-                      <FeaturedLi>
-                        Real–time monitoring of critical infrastructure to
-                        enable the SRE team to monitor SLAs for 99.999%
-                        (five–nines)&nbsp;availability
-                      </FeaturedLi>
-                    </Ul>
                   </FeaturedPublication>
                 </FeaturedPublications>
               </NextSection>

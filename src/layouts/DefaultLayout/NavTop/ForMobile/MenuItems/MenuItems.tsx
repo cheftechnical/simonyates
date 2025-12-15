@@ -15,6 +15,7 @@ export function MenuItems(props: Props) {
       <MenuItem href="/work" onClick={onClick} title="Work" />
       <MenuItem href={"/featured"} onClick={onClick} title="Featured" />
       <MenuItem href={"/appearances"} onClick={onClick} title="Appearances" />
+      <MenuItem href={"/studies"} onClick={onClick} title="Studies" />
       <MenuItem href={"/about"} onClick={onClick} title="About" />
       <MenuItem href={"/contact"} onClick={onClick} title="Contact" />
     </div>
