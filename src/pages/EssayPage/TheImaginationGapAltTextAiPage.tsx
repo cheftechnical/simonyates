@@ -52,9 +52,15 @@ export function TheImaginationGapAltTextAiPage() {
   return (
     <PageWrapper title="The Imagination Gap">
       <Helmet>
+        <meta property="og:title" content="The Imagination Gap" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai" />
+        <meta property="og:description" content="Using AI to See Through Someone Else's Eyes: Validating Alt-Text with Image Generation" />
         <meta property="og:image" content="https://www.simonyates.ca/images/essays/the-imagination-gap-alt-text-ai/og-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Imagination Gap" />
+        <meta name="twitter:description" content="Using AI to See Through Someone Else's Eyes: Validating Alt-Text with Image Generation" />
         <meta name="twitter:image" content="https://www.simonyates.ca/images/essays/the-imagination-gap-alt-text-ai/og-image.png" />
       </Helmet>
       <article>
