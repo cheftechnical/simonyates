@@ -1,4 +1,0 @@
-import {default as Experiment} from './ExperimentScrollSpy.tsx';
-
-export default Experiment;
-
