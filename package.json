@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/prerender.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -40,6 +40,7 @@
     "@types/react-dom": "19.2.2"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "10.0.6",
     "@storybook/addon-links": "10.0.6",
     "@storybook/react-vite": "10.0.6",
     "@tailwindcss/vite": "^4.1.16",
@@ -56,14 +57,14 @@
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-storybook": "10.0.6",
     "postcss": "^8.5.6",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
+    "puppeteer": "^24.33.0",
     "storybook": "10.0.6",
     "typescript": "^5.9.3",
-    "vite": "^7.1.12",
-    "eslint-plugin-storybook": "10.0.6",
-    "@storybook/addon-docs": "10.0.6"
+    "vite": "^7.1.12"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
