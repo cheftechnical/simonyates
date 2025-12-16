@@ -3,6 +3,7 @@ import Image from "../../components/Image";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import NavRight from "../../components/NavRight";
 import { Sections } from "../../types/Sections";
+import { Helmet } from "react-helmet-async";
 
 const sections: Sections = {
   intro: {
@@ -50,6 +51,12 @@ const sections: Sections = {
 export function TheImaginationGapAltTextAiPage() {
   return (
     <PageWrapper title="The Imagination Gap">
+      <Helmet>
+        <meta property="og:image" content="https://www.simonyates.ca/images/essays/the-imagination-gap-alt-text-ai/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://www.simonyates.ca/images/essays/the-imagination-gap-alt-text-ai/og-image.png" />
+      </Helmet>
       <article>
         <MyContainer>
           <div className="flex flex-wrap">
