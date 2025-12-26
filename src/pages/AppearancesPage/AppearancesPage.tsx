@@ -13,9 +13,9 @@ export default function AppearancesPage() {
           <Section id="appearances">
               {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
               {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
-              <h2 className="font-normal text-2xl leading-relaxed">
+              <h1 className="font-normal text-2xl leading-relaxed">
                 Appearances
-              </h2>
+              </h1>
 
               <table className="border-gray-700 border-2 mt-6 w-full">
                 <thead>
