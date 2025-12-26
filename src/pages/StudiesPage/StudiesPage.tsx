@@ -26,11 +26,13 @@ export default function StudiesPage() {
                   </Link>
                 </h2>
                 <div className="mt-3 w-1/2 border-gray-700 border-1 p-1">
-                  <Image
-                    alt="Figpie Figma plugin interface showing pie chart controls and preview"
-                    src="/images/studies/figpie-screenshot.png"
-                    className="grayscale"
-                  />
+                  <Link to="/figpie">
+                    <Image
+                      alt="Figpie Figma plugin interface showing pie chart controls and preview"
+                      src="/images/studies/figpie-screenshot.png"
+                      className="grayscale"
+                    />
+                  </Link>
                 </div>
                 <p className="mt-3">
                   A production-grade Figma plugin for generating pie&nbsp;charts.
@@ -49,11 +51,13 @@ export default function StudiesPage() {
                   </Link>
                 </h3>
                 <div className="mt-3 w-1/2 border-gray-700 border-1 p-1">
-                  <Image
-                    alt="Cubic Bézier curve diagram illustrating circular arc approximation"
-                    src="/images/studies/bezier-curve-example.png"
-                    className="grayscale"
-                  />
+                  <Link to="/trig">
+                    <Image
+                      alt="Cubic Bézier curve diagram illustrating circular arc approximation"
+                      src="/images/studies/bezier-curve-example.png"
+                      className="grayscale"
+                    />
+                  </Link>
                 </div>
                 <p className="mt-3">
                   An interactive mathematical exploration of how cubic B&eacute;zier curves approximate circular arcs, with live equations rendered in LaTeX and visually bound to&nbsp;geometry.
