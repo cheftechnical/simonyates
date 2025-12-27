@@ -96,7 +96,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         <ReactRouterDomLink
           to="/legal#privacy-policy"
           target="_blank"
-          className="underline"
+          className="text-blue-500 no-underline hover:underline"
         >
           privacy&nbsp;policies
         </ReactRouterDomLink>
@@ -273,7 +273,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
         <ReactRouterDomLink
           to="/contact"
           target="_blank"
-          className="underline"
+          className="text-blue-500 no-underline hover:underline"
         >
           contact&nbsp;page
         </ReactRouterDomLink>
