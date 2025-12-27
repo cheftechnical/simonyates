@@ -505,10 +505,10 @@ export function DesignSystem() {
               <p>
                 <strong>Pro tip:</strong> If you haven&rsquo;t already noticed, I&rsquo;m always setting the top margin for a style, never the bottom. This is&nbsp;intentional.
               </p>
-              <p className="mt-4">
+              <p className="mt-6">
                 By setting only a top margin, you&rsquo;re always building on what exists, not on what could be. In the world of HTML/CSS, an overly ambitious bottom margin may need to be compensated with a subsequent negative top margin. If you only ever set top margins, you&rsquo;ll rarely need a negative margin &mdash; ever. While modern browsers have improved significantly, negative margins have historically been a problem for cross-browser compatibility. Avoiding them entirely is the best&nbsp;remedy.
               </p>
-              <p className="mt-4">
+              <p className="mt-6">
                 Typically, I set a bottom margin or padding only when I&rsquo;m dealing with a container and want to ensure a consistent space around its&nbsp;perimeter.
               </p>
             </Callout>
