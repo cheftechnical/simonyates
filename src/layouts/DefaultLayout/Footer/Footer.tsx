@@ -29,6 +29,10 @@ export default function Footer() {
                 Legal
               </ReactRouterDomLink>
               {" "}&middot;{" "}
+              <ReactRouterDomLink to="/about" className="text-gray-400 hover:underline hover:text-gray-50">
+                About
+              </ReactRouterDomLink>
+              {" "}&middot;{" "}
               <ReactRouterDomLink to="/contact" className="text-gray-400 hover:underline hover:text-gray-50">
                 Contact
               </ReactRouterDomLink>
