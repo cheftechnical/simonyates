@@ -1,3 +1,5 @@
+'use client';
+
 import { ChangeEvent, ReactNode, useState } from "react";
 
 interface Temperature {

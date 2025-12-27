@@ -1,5 +1,3 @@
-'use client';
-
 import Link from "next/link";
 import NavRight from "../../components/NavRight";
 import PageWrapper from "../../components/PageWrapper";

@@ -1,5 +1,3 @@
-'use client';
-
 import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import CurrencyConversions from "./CurrencyConversions";
