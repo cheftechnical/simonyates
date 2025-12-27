@@ -43,9 +43,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </p>
       </address>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Information we collect, and how we use&nbsp;it:
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         We may collect the following types of&nbsp;information:
@@ -146,9 +146,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         of your own&nbsp;country.
       </p>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Information Sharing
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         {legalName} only shares personal information with other companies or
@@ -191,9 +191,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Information Security
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         We take appropriate security measures to protect against unauthorized
@@ -212,9 +212,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         criminal prosecution, if they fail to meet these&nbsp;obligations.
       </p>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Accessing and updating personal&nbsp;information
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         When you use {tradeName} services, we make good faith efforts to provide
@@ -237,9 +237,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Help Centers for more&nbsp;information.
       </p>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Enforcement
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         {tradeName} regularly reviews its compliance with this Privacy Policy.
@@ -251,9 +251,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         {legalName} and an&nbsp;individual.
       </p>
 
-      <h2 className="font-normal text-xl leading-8 mt-8">
+      <h3 className="font-normal text-xl leading-8 mt-8">
         Changes to this Privacy&nbsp;Policy
-      </h2>
+      </h3>
 
       <p className="font-normal text-base leading-normal mt-6">
         Please note that this Privacy Policy may change from time to time. We
