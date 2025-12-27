@@ -16,7 +16,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
 
   return (
     <div id={id}>
-      <h2 className="font-normal text-[34px] leading-[56px] mt-[56px]">
+      <h2 className="font-normal text-2xl leading-relaxed mt-[56px]">
         Terms of Service
       </h2>
 
