@@ -1,2 +1,2 @@
-import { default as NavTop } from "./NavTop";
+import { default as NavTop } from "./NavTopNext";
 export default NavTop;

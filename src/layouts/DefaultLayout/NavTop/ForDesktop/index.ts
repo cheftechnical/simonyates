@@ -1,2 +1,2 @@
-import { default as ForDesktop } from "./ForDesktop";
+import { default as ForDesktop } from "./ForDesktopNext";
 export default ForDesktop;
