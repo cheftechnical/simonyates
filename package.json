@@ -2,6 +2,7 @@
   "name": "simonyates",
   "private": true,
   "version": "2024.02.02",
+  "packageManager": "npm@10.9.4",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -33,16 +34,16 @@
     "react-ui-scrollspy": "^2.3.0",
     "tailwindcss": "^4.1.16"
   },
-  "resolutions": {
+  "overrides": {
     "form-data": "^4.0.4",
     "braces": "^3.0.3",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "10.0.6",
-    "@storybook/addon-links": "10.0.6",
-    "@storybook/react-vite": "10.0.6",
+    "@storybook/addon-docs": "10.1.10",
+    "@storybook/addon-links": "10.1.10",
+    "@storybook/react-vite": "10.1.10",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.16",
     "@testing-library/react": "^16.3.0",
@@ -59,11 +60,11 @@
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
-    "eslint-plugin-storybook": "10.0.6",
+    "eslint-plugin-storybook": "10.1.10",
     "postcss": "^8.5.6",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "storybook": "10.0.6",
+    "storybook": "10.1.10",
     "typescript": "^5.9.3",
     "vite": "^7.1.12"
   },

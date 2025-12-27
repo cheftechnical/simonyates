@@ -5,27 +5,27 @@ A React + TypeScript + Vite project for my resume/portfolio site.
 ## Requirements
 - Node.js 22 (enforced via `.nvmrc` and `"engines"`)
   - Use nvm: `nvm install 22 && nvm use 22`
-- Yarn v1
+- npm (recommended for Next.js)
 
 ## Install / Run
 ```bash
 # install deps
-yarn install --check-files
+npm install
 
 # dev server
-yarn dev
+npm run dev
 
 # typecheck + production build
-yarn build
+npm run build
 
 # preview the production build
-yarn preview
+npm run preview
 ```
 
 ## Storybook (minimal, v10 core)
 This repo uses a minimal Storybook 10 setup (core + links), primarily for ad‑hoc component review.
 ```bash
-yarn storybook
+npm run storybook
 ```
 Notes:
 - Stories are excluded from production typecheck/build.
@@ -43,7 +43,7 @@ GitHub Actions runs on pushes/PRs:
   - Alphabetized object keys and destructured properties (matches personal style)
 - Run:
 ```bash
-yarn lint
+npm run lint
 ```
 
 ## Performance
