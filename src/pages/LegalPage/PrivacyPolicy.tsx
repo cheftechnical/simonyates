@@ -22,13 +22,13 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Privacy Policy
       </h2>
 
-      <p className="font-normal text-[14px] leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-4">
         This Privacy Policy applies to all of the products, services and
         websites of {legalName}, or its subsidiaries or
         affiliated&nbsp;companies.
       </p>
 
-      <p className="font-normal text-[14px] leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-4">
         If you have any questions about this Privacy Policy, please feel free to
         contact us trough our website, or write to us&nbsp;at:
       </p>
