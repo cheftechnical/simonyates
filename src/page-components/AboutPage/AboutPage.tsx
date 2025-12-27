@@ -1,5 +1,3 @@
-'use client';
-
 import LifeAsAMaker from "./LifeAsAMaker/LifeAsAMaker";
 import Hero from "./Hero/Hero";
 import Stats from "./Stats/Stats";
