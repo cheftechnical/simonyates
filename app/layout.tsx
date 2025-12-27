@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'Product & engineering leader building accessible, ethical, human-centred systems.',
     url: 'https://simonyates.ca',
     siteName: 'Simon Yates',
-    locale: 'en_US',
+    locale: 'en_CA',
     type: 'website',
   },
   twitter: {
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-CA">
       <body>
         {children}
         <SpeedInsights />
