@@ -3,7 +3,6 @@ import Image from "../../components/Image";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import NavRight from "../../components/NavRight";
 import { Sections } from "../../types/Sections";
-// Helmet is replaced by Next.js metadata
 
 const sections: Sections = {
   intro: {
