@@ -10,11 +10,13 @@ export const metadata: Metadata = {
     template: '%s | Simon Yates',
     default: 'Simon Yates',
   },
-  description: 'Simon Yates - Product Designer, Developer, and Strategist',
+  description:
+    'Product & Engineering Leader building accessible, ethical, human-centred systems.',
   metadataBase: new URL('https://simonyates.ca'),
   openGraph: {
     title: 'Simon Yates',
-    description: 'Product Designer, Developer, and Strategist',
+    description:
+      'Product & Engineering Leader building accessible, ethical, human-centred systems.',
     url: 'https://simonyates.ca',
     siteName: 'Simon Yates',
     locale: 'en_US',
@@ -23,7 +25,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Simon Yates',
-    description: 'Product Designer, Developer, and Strategist',
+    description:
+      'Product & Engineering Leader building accessible, ethical, human-centred systems.',
   },
   robots: {
     index: true,
