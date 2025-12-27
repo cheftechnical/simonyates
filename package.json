@@ -68,6 +68,10 @@
     "typescript": "^5.9.3",
     "vite": "^7.1.12"
   },
+  "optionalDependencies": {
+    "lightningcss-linux-x64-gnu": "1.30.2",
+    "lightningcss-linux-x64-musl": "1.30.2"
+  },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   }
