@@ -1,8 +1,9 @@
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import Li from "../../styling/ListsUnordered/Li/Li";
-
 const legalName = "Sybaris Analytics Corporation";
 const domainName = "simonyates.ca";
+
+const ulClasses = "pt-6";
+const liClasses =
+  "font-normal text-base leading-normal mb-4 ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
 
 export type PrivacyPolicyProps = {
   /**
@@ -63,26 +64,28 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         aggregate usage of the site, such as:
       </p>
 
-      <Ul next>
-        <Li>pages visited</Li>
-        <Li>referring sites</Li>
-        <Li>general geographic region</Li>
-      </Ul>
+      <ul className={ulClasses}>
+        <li className={liClasses}>pages visited</li>
+        <li className={liClasses}>referring sites</li>
+        <li className={liClasses}>general geographic region</li>
+      </ul>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.5*1)]">
         This analytics data:
       </p>
 
-      <Ul next>
-        <Li>
+      <ul className={ulClasses}>
+        <li className={liClasses}>
           does <strong>not</strong> use cookies
-        </Li>
-        <Li>
+        </li>
+        <li className={liClasses}>
           does <strong>not</strong> use third-party advertising identifiers
-        </Li>
-        <Li>is collected in an anonymized, aggregated form</Li>
-        <Li>is used solely to understand site usage and improve performance</Li>
-      </Ul>
+        </li>
+        <li className={liClasses}>is collected in an anonymized, aggregated form</li>
+        <li className={liClasses}>
+          is used solely to understand site usage and improve performance
+        </li>
+      </ul>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         Like most websites, our hosting provider may also collect standard server
@@ -110,17 +113,19 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Information may be shared only in the following limited circumstances:
       </p>
 
-      <Ul next>
-        <Li>
+      <ul className={ulClasses}>
+        <li className={liClasses}>
           with service providers (such as hosting and analytics) strictly for
           operating the site
-        </Li>
-        <Li>when required to comply with applicable law or legal process</Li>
-        <Li>
+        </li>
+        <li className={liClasses}>
+          when required to comply with applicable law or legal process
+        </li>
+        <li className={liClasses}>
           to protect the rights, property, or safety of <strong>{legalName}</strong>{" "}
           or others
-        </Li>
-      </Ul>
+        </li>
+      </ul>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
         Information Security
