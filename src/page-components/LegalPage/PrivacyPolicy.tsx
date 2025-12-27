@@ -1,9 +1,8 @@
-const legalName = "Sybaris Analytics Corporation";
 const domainName = "simonyates.ca";
 
 const ulClasses = "pt-6";
 const liClasses =
-  "font-normal text-base leading-normal mb-4 ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
+  "font-normal text-base leading-normal mb-[calc(1.0rem)] ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
 
 export type PrivacyPolicyProps = {
   /**
@@ -17,17 +16,17 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
   return (
     <div id={id}>
-      <div className="text-sm uppercase text-gray-600">
+      <div className="text-sm uppercase text-gray-600 xb-[calc(1.2599rem)]">
         Last updated: December 27, 2025
       </div>
 
-      <h2 className="font-normal text-2xl leading-relaxed mt-[calc(2.0rem)]">
+      <h2 className="font-normal text-2xl leading-relaxed my-[calc(1.2599rem*1.0)]">
         Privacy Policy
       </h2>
 
-      <p className="font-normal text-lg leading-relaxed mt-[calc(1.2599rem)] text-gray-600">
+      <p className="font-normal text-lg leading-relaxed xmt-[calc(1.2599rem)] text-gray-600">
         This Privacy Policy applies to the website <strong>{domainName}</strong>,
-        operated by <strong>{legalName}</strong>.
+        operated by <strong>Sybaris Analytics Corporation</strong>.
       </p>
 
       <p className="font-normal text-lg leading-relaxed mt-[calc(1.2599rem)] text-gray-600">
@@ -87,7 +86,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </li>
       </ul>
 
-      <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
+      <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.5)]">
         Like most websites, our hosting provider may also collect standard server
         log information (such as IP address, browser type, and request time) for
         security, reliability, and performance monitoring.
@@ -122,8 +121,8 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
           when required to comply with applicable law or legal process
         </li>
         <li className={liClasses}>
-          to protect the rights, property, or safety of <strong>{legalName}</strong>{" "}
-          or others
+          to protect the rights, property, or safety of{" "}
+          Sybaris Analytics Corporation or others
         </li>
       </ul>
 
