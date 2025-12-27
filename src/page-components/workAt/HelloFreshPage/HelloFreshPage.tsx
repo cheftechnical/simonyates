@@ -1,9 +1,9 @@
 import PageWrapper from "../../../components/PageWrapper";
+import { getWorkExperienceBySectionId } from "../../../data/workExperience";
+import WorkAtLogo from "../components/WorkAtLogo";
 import WorkAtTemplate from "../components/WorkAtTemplate";
 import Content from "./Content";
-import WorkAtLogo from "../components/WorkAtLogo";
 import { sections } from "./sections";
-import { getWorkExperienceBySectionId } from "../../../data/workExperience";
 
 export function HelloFreshPage() {
   const workData = getWorkExperienceBySectionId("hellofresh");

@@ -1,7 +1,7 @@
-import PageWrapper from "../../components/PageWrapper";
 import Image from "../../components/Image";
-import MyContainer from "../../styling/MyContainer/MyContainer";
 import NavRight from "../../components/NavRight";
+import PageWrapper from "../../components/PageWrapper";
+import MyContainer from "../../styling/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 
 const sections: Sections = {

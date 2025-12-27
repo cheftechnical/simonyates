@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
-import NavTop from './NavTop/NavTopNext';
 import Footer from './Footer';
+import NavTop from './NavTop/NavTopNext';
 import SkipNav from './SkipNav';
+import { ReactNode } from 'react';
 
 /**
  * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the

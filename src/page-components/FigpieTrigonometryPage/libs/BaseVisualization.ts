@@ -1,7 +1,7 @@
-import * as d3 from "d3";
 import { color } from "../../../styling/Color/Color";
-import { degToRad } from "./trig";
 import { Coordinate } from "./Coordinate";
+import { degToRad } from "./trig";
+import * as d3 from "d3";
 
 interface BaseVisualizationInterface {
   // onChange?: <T>() => any;

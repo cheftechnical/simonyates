@@ -1,8 +1,8 @@
+import { MessageFormValues } from "../MessageFormValues";
+import { recaptchaSiteKey } from "./config";
 import axios from "axios";
 import { useCallback, useMemo } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { MessageFormValues } from "../MessageFormValues";
-import { recaptchaSiteKey } from "./config";
 
 interface Props {
   /**

@@ -1,8 +1,8 @@
 import color from "../../../../../styling/Color";
 import { AxisDirection } from "../AxisDirection";
 import { CircleBasicsD3 } from "./CircleBasicsD3";
-import { Component, createRef } from "react";
 import * as d3 from "d3";
+import { Component, createRef } from "react";
 
 interface Props {
 	yAxisDirection: AxisDirection;

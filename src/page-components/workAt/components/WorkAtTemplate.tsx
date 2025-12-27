@@ -1,10 +1,10 @@
-import { ReactElement, useMemo } from "react";
+import NavRight from "../../../components/NavRight";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
+import { Sections } from "../../../types/Sections";
 import WorkAtEmployer from "./WorkAtEmployer";
 import WorkAtRole from "./WorkAtRole";
 import WorkAtWhenWhere from "./WorkAtWhenWhere";
-import { Sections } from "../../../types/Sections";
-import NavRight from "../../../components/NavRight";
+import { ReactElement, useMemo } from "react";
 
 interface Props {
   /**

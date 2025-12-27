@@ -1,13 +1,11 @@
 import js from '@eslint/js';
-import globals from 'globals';
-
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
-
-import reactHooks from 'eslint-plugin-react-hooks';
 import perfectionist from 'eslint-plugin-perfectionist';
+import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
-const enableSorting = process.env.ESLINT_SORTING === '1';
+const enableImportSorting = process.env.ESLINT_SORTING === '1';
 
 export default [
   {
@@ -50,8 +48,9 @@ export default [
       'react-hooks/rules-of-hooks': 'off',
       'react-hooks/set-state-in-effect': 'off',
 
-      // Optional: enforce consistent (alphabetical-ish) ordering when explicitly enabled.
-      ...(enableSorting
+      // Optional: enforce consistent (alphabetical-ish) import ordering when explicitly enabled.
+      // Note: we intentionally do NOT enable object-key sorting here to keep blast radius small.
+      ...(enableImportSorting
         ? {
             'perfectionist/sort-imports': [
               'error',
@@ -62,10 +61,6 @@ export default [
               { type: 'natural', order: 'asc' },
             ],
             'perfectionist/sort-named-exports': [
-              'error',
-              { type: 'natural', order: 'asc' },
-            ],
-            'perfectionist/sort-objects': [
               'error',
               { type: 'natural', order: 'asc' },
             ],

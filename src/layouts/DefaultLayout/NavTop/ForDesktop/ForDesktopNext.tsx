@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import Logo from '../../../../components/Logo';
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
 import MenuItems from './MenuItems/MenuItemsNext';
+import Link from 'next/link';
 
 interface Props {
   /**

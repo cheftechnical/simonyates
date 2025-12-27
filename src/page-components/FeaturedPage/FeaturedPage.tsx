@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Download from "../../components/Download";
 import NavRight from "../../components/NavRight";
 import PageWrapper from "../../components/PageWrapper";
 import Sections from "../../components/Sections/Sections";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import Download from "../../components/Download";
 import { sections } from "./sections";
+import Link from "next/link";
 
 // featured
 export default function Featured() {

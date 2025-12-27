@@ -1,6 +1,6 @@
-import Content from "./Content";
-import MyContainer from "../../styling/MyContainer/MyContainer";
 import PageWrapper from "../../components/PageWrapper";
+import MyContainer from "../../styling/MyContainer/MyContainer";
+import Content from "./Content";
 
 export function Home() {
   return (

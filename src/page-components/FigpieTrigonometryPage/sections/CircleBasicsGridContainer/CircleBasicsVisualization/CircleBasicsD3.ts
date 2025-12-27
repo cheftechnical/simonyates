@@ -1,9 +1,9 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-import * as d3 from "d3";
-import { Visualization } from "../../../libs/Visualization";
-import { BaseVisualization } from "../../../libs/BaseVisualization";
 import color from "../../../../../styling/Color";
+import { BaseVisualization } from "../../../libs/BaseVisualization";
+import { Visualization } from "../../../libs/Visualization";
 import { degToRad, radToDeg } from "../../../libs/trig";
+import * as d3 from "d3";
 
 export class CircleBasicsD3 extends BaseVisualization implements Visualization {
 	// Properties

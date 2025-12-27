@@ -1,12 +1,12 @@
-import Section from "../../../components/Section/Section";
-import WorkAtDescription from "../components/WorkAtDescription";
 import Callout from "../../../components/Callout/Callout";
-import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
-import WorkAtProjects from "../components/WorkAtProjects";
-import WorkAtProject from "../components/WorkAtProject";
-import Ul from "../../../styling/ListsUnordered/Ul/Ul";
-import Li from "../../../styling/ListsUnordered/Li/Li";
+import Section from "../../../components/Section/Section";
 import Sections from "../../../components/Sections/Sections";
+import Li from "../../../styling/ListsUnordered/Li/Li";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import WorkAtDescription from "../components/WorkAtDescription";
+import WorkAtProject from "../components/WorkAtProject";
+import WorkAtProjects from "../components/WorkAtProjects";
+import WorkAtSectionTitle from "../components/WorkAtSectionTitle";
 import { sections } from "./sections";
 
 export default function Content() {

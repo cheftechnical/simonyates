@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from "react";
 import DateTime from "./DateTime";
+import { useEffect, useState } from "react";
 
 interface Region {
   timeZone: string;

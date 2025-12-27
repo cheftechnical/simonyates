@@ -1,10 +1,10 @@
 'use client';
 
-import "./style.css";
-import NavRightItem from "./NavRightItem";
 import { Sections } from "../../types/Sections";
-import { useEffect, useState } from "react";
+import NavRightItem from "./NavRightItem";
+import "./style.css";
 import { HEADER_OFFSET, findElementById } from "./utils";
+import { useEffect, useState } from "react";
 
 interface NavRightProps {
   /**

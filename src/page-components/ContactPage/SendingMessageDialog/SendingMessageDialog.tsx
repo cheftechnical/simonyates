@@ -1,7 +1,7 @@
-import { useMemo, useState, useEffect } from "react";
 import { MessageFormValues } from "../MessageFormValues";
 import ContentRecaptcha from "./ContentRecaptcha";
 import ContentSuccessful from "./ContentSuccessful";
+import { useEffect, useMemo, useState } from "react";
 
 interface Props {
   defaultFragment?: "recaptcha" | "success";

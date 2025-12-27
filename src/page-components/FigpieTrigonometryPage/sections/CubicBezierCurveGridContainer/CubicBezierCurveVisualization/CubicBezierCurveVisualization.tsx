@@ -1,7 +1,7 @@
-import { Component, createRef } from "react";
-import { MyBezierArcD3 } from "./MyBezierArcD3";
 import color from "../../../../../styling/Color";
+import { MyBezierArcD3 } from "./MyBezierArcD3";
 import * as d3 from "d3";
+import { Component, createRef } from "react";
 
 interface Props {
 	onChange: (endAngle: number, radius: number) => void;

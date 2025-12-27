@@ -1,10 +1,10 @@
+import ComputerCityContent from "./components/ComputerCityContent";
+import GwBasicContent from "./components/GwBasicContent";
 import LifeAsAMakerContainer from "./components/LifeAsAMakerContainer";
 import LifeAsAMakerContent from "./components/LifeAsAMakerContent";
-import TlcContent from "./components/TlcContent";
-import GwBasicContent from "./components/GwBasicContent";
 import ModelRailroaderMagazineContent from "./components/ModelRailroaderMagazineContent";
 import SouthernPacificDaylightContent from "./components/SouthernPacificDaylightContent";
-import ComputerCityContent from "./components/ComputerCityContent";
+import TlcContent from "./components/TlcContent";
 
 export default function LifeAsAMaker() {
   return (

@@ -1,10 +1,10 @@
 'use client';
 
-import MyContainer from '../../../../styling/MyContainer/MyContainer';
-import Link from 'next/link';
 import Logo from '../../../../components/Logo';
-import { useCallback } from 'react';
+import MyContainer from '../../../../styling/MyContainer/MyContainer';
 import MenuItems from './MenuItems/MenuItemsNext';
+import Link from 'next/link';
+import { useCallback } from 'react';
 
 interface Props {
   /**

@@ -1,8 +1,8 @@
-import { ChangeEvent, memo, useState } from "react";
 import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import { MyTextField2 } from "../../../../styling/MyTextField2/MyTextField2";
 import BezierArcMathJax from "./CubicBezierCurveMathJax";
 import CubicBezierCurveVisualization from "./CubicBezierCurveVisualization/CubicBezierCurveVisualization";
+import { ChangeEvent, memo, useState } from "react";
 
 const startAngle = 360;
 

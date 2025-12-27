@@ -1,8 +1,8 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import PageWrapper from '../../../src/components/PageWrapper';
-import MyContainer from '../../../src/styling/MyContainer';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import Li from '../../../src/styling/ListsUnordered/Li';
 import Ul from '../../../src/styling/ListsUnordered/Ul';
+import MyContainer from '../../../src/styling/MyContainer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

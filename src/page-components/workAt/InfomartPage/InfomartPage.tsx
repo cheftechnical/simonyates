@@ -1,9 +1,9 @@
-import WorkAtLogo from "../components/WorkAtLogo";
-import Content from "./Content";
-import WorkAtTemplate from "../components/WorkAtTemplate";
 import PageWrapper from "../../../components/PageWrapper";
-import { sectionCollection } from "./sections";
 import { getWorkExperienceBySectionId } from "../../../data/workExperience";
+import WorkAtLogo from "../components/WorkAtLogo";
+import WorkAtTemplate from "../components/WorkAtTemplate";
+import Content from "./Content";
+import { sectionCollection } from "./sections";
 
 export function InfomartPage() {
   const workData = getWorkExperienceBySectionId("infomart");

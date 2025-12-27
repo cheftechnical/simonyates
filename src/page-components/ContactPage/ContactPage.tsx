@@ -1,12 +1,12 @@
 'use client';
 
-import { useCallback, useRef, useState } from "react";
-import { SubmitHandler } from "react-hook-form";
 import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import ContactForm, { ContactFormHandle } from "./ContactForm";
 import { MessageFormValues } from "./MessageFormValues";
 import SendingMessageDialog from "./SendingMessageDialog/SendingMessageDialog";
+import { useCallback, useRef, useState } from "react";
+import { SubmitHandler } from "react-hook-form";
 
 export default function Contact() {
   const [isSending, setIsSending] = useState<boolean>(false);

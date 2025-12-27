@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import PublicationChildren from "./PublicationChildren";
 import PublicationName from "./PublicationName";
 import PublicationPublisher from "./PublicationPublisher";
 import PublicationWhen from "./PublicationWhen";
-import PublicationChildren from "./PublicationChildren";
+import { ReactNode } from "react";
 
 interface Props {
   /**

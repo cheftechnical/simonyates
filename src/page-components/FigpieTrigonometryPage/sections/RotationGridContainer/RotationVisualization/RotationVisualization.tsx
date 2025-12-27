@@ -1,8 +1,8 @@
 import color from "../../../../../styling/Color";
-import { RotationD3 } from "./RotationD3";
-import { Component, createRef } from "react";
-import * as d3 from "d3";
 import { CubicBezier } from "../../../libs/CubicBezier";
+import { RotationD3 } from "./RotationD3";
+import * as d3 from "d3";
+import { Component, createRef } from "react";
 
 interface Props {
 	onChange: (endAngle: number, rotatedCubicBezier: CubicBezier) => void;

@@ -1,9 +1,9 @@
-import { BaseVisualization } from "../../../libs/BaseVisualization";
 import { color } from "../../../../../styling/Color/Color";
-import * as d3 from "d3";
-import { degToRad, radToDeg } from "../../../libs/trig";
-import { Visualization } from "../../../libs/Visualization";
+import { BaseVisualization } from "../../../libs/BaseVisualization";
 import { Coordinate } from "../../../libs/Coordinate";
+import { Visualization } from "../../../libs/Visualization";
+import { degToRad, radToDeg } from "../../../libs/trig";
+import * as d3 from "d3";
 
 interface MyArc {
   // onChange: (endAngle: number, radius: number) => any;

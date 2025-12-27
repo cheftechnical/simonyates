@@ -1,9 +1,9 @@
-import WorkAtLogo from "../components/WorkAtLogo";
-import Content from "./Content";
-import WorkAtTemplate from "../components/WorkAtTemplate";
 import PageWrapper from "../../../components/PageWrapper/index";
-import { sections } from "./sections";
 import { getWorkExperienceBySectionId } from "../../../data/workExperience";
+import WorkAtLogo from "../components/WorkAtLogo";
+import WorkAtTemplate from "../components/WorkAtTemplate";
+import Content from "./Content";
+import { sections } from "./sections";
 
 export function PhilipsLightingPage() {
   const workData = getWorkExperienceBySectionId("philips-lighting");

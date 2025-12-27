@@ -1,9 +1,9 @@
+import NavRight from "../../components/NavRight/NavRight";
+import PageWrapper from "../../components/PageWrapper";
+import MyContainer from "../../styling/MyContainer/MyContainer";
+import { Sections } from "../../types/Sections";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
-import NavRight from "../../components/NavRight/NavRight";
-import MyContainer from "../../styling/MyContainer/MyContainer";
-import PageWrapper from "../../components/PageWrapper";
-import { Sections } from "../../types/Sections";
 
 const sections: Sections = {
   privacyPolicy: {

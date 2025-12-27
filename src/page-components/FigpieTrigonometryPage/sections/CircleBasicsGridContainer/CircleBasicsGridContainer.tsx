@@ -2,14 +2,14 @@ import SinCos from './CircleBasicsVisualization/CircleBasicsVisualization';
 // import {Grid} from '@material-ui/core';
 // import {makeStyles} from '@material-ui/core/styles';
 // import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
-// import {color} from '../../../../styling/Color/Color';
-import {AxisDirection} from './AxisDirection';
-// import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';
-import {memo, useState} from "react";
+import color from "../../../../styling/Color";
 import { MyGridItem } from "../../../../styling/MyGridItem/MyGridItem";
 import MyTextField2 from "../../../../styling/MyTextField2";
+// import {color} from '../../../../styling/Color/Color';
+import {AxisDirection} from './AxisDirection';
 import CircleBasicsMathJax from "./CircleBasicsMathJax/CircleBasicsMath";
-import color from "../../../../styling/Color";
+// import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';
+import {memo, useState} from "react";
 
 // https://github.com/asnunes/mathjax3-react <-- vastuly superior
 

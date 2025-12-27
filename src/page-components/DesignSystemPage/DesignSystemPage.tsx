@@ -1,7 +1,7 @@
-import NavRight from "../../components/NavRight";
-import MyContainer from "../../styling/MyContainer/MyContainer";
-import PageWrapper from "../../components/PageWrapper";
 import Callout from "../../components/Callout/Callout";
+import NavRight from "../../components/NavRight";
+import PageWrapper from "../../components/PageWrapper";
+import MyContainer from "../../styling/MyContainer/MyContainer";
 import { sections } from "./sections";
 
 export function DesignSystem() {

@@ -1,8 +1,8 @@
 import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import CurrencyConversions from "./CurrencyConversions";
-import TimeConversions from "./TimeConversions";
 import TemperatureConversions from "./TemperatureConversions";
+import TimeConversions from "./TimeConversions";
 
 export default function International() {
   return (

@@ -1,13 +1,13 @@
-import Section from "../../../components/Section/Section";
 import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
+import Download from "../../../components/Download";
+import Section from "../../../components/Section/Section";
+import Ul from "../../../styling/ListsUnordered/Ul/Ul";
+import SectionTitle from "../SectionTitle";
+import { sections } from "../sections";
 import Appearance from "./Appearance";
 import AppearanceLink from "./AppearanceLink";
 import FeaturedChips from "./FeaturedChips";
 import FeaturedLi from "./FeaturedLi";
-import Ul from "../../../styling/ListsUnordered/Ul/Ul";
-import Download from "../../../components/Download";
-import SectionTitle from "../SectionTitle";
-import { sections } from "../sections";
 
 export default function FeaturedAppearances() {
   return (

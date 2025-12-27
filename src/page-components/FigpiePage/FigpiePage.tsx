@@ -1,7 +1,7 @@
-import MyContainer from "../../styling/MyContainer/MyContainer";
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import Li from "../../styling/ListsUnordered/Li/Li";
 import PageWrapper from "../../components/PageWrapper";
+import Li from "../../styling/ListsUnordered/Li/Li";
+import Ul from "../../styling/ListsUnordered/Ul/Ul";
+import MyContainer from "../../styling/MyContainer/MyContainer";
 
 export function FigpiePage() {
   return (

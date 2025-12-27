@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Logo from "../../../components/Logo";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
+import Link from "next/link";
 
 export default function Footer() {
   return (

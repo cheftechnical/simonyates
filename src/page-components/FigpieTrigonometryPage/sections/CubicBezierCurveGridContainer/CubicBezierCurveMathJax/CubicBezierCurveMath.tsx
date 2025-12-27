@@ -1,7 +1,7 @@
-import { MathJaxFormula } from "mathjax3-react";
-import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import color from "../../../../../styling/Color";
 import { degToRad } from "../../../libs/trig";
+import { MathJaxFormula } from "mathjax3-react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
 
 const timeout = 1000;
 

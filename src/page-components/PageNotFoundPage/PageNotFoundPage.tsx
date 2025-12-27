@@ -1,6 +1,6 @@
-import Link from "next/link";
-import MyContainer from "../../styling/MyContainer/MyContainer";
 import PageWrapper from "../../components/PageWrapper";
+import MyContainer from "../../styling/MyContainer/MyContainer";
+import Link from "next/link";
 
 export default function PageNotFoundPage() {
   return (

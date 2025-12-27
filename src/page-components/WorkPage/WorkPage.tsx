@@ -1,17 +1,17 @@
-import React from "react";
-import WorkExperience from "./WorkExperience/WorkExperience";
+import Logo from "../../components/Logo";
+import NavRight from "../../components/NavRight";
+import PageWrapper from "../../components/PageWrapper";
+import {
+  formatDateForWorkPage,
+  workExperienceData,
+} from "../../data/workExperience";
 import Li from "../../styling/ListsUnordered/Li/Li";
 import Ul from "../../styling/ListsUnordered/Ul/Ul";
-import Logo from "../../components/Logo";
 import MyContainer from "../../styling/MyContainer/MyContainer";
-import Hero from "./Hero/Hero";
-import PageWrapper from "../../components/PageWrapper";
-import NavRight from "../../components/NavRight";
 import { Sections } from "../../types/Sections";
-import {
-  workExperienceData,
-  formatDateForWorkPage,
-} from "../../data/workExperience";
+import Hero from "./Hero/Hero";
+import WorkExperience from "./WorkExperience/WorkExperience";
+import React from "react";
 
 // Generate sections object from work experience data
 const sections: Sections = workExperienceData.reduce((acc, work) => {

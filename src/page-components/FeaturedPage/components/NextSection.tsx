@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import Section from "../../../components/Section/Section";
+import { ReactNode } from "react";
 
 interface Props {
   /**
