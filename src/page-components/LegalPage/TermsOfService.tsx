@@ -12,22 +12,23 @@ export function TermsOfService(props: TermsOfServiceProps) {
 
   return (
     <div id={id}>
-    <div className="text-sm uppercase text-gray-600 mt-[calc(2.0rem*3)]">
+      <div className="text-sm uppercase text-gray-600 mt-[calc(2.0rem*3)]">
         Last updated: December 27, 2025
-     </div>
+      </div>
 
       <h2 className="font-normal text-2xl leading-relaxed my-[calc(1.2599rem*1.0)]">
         Terms of&nbsp;Service
       </h2>
 
       <p className="font-normal text-lg leading-relaxed mt-[calc(1.2599rem)] text-gray-600">
-        These Terms of Service apply to the website <strong>{domainName}</strong>,
-        operated by <strong>Sybaris&nbsp;Analytics&nbsp;Corporation</strong>.
+        These Terms of Service apply to the website{" "}
+        <strong>{domainName}</strong>, operated by{" "}
+        <strong>Sybaris&nbsp;Analytics&nbsp;Corporation</strong>.
       </p>
 
       <p className="font-normal text-lg leading-relaxed mt-[calc(1.2599rem)] text-gray-600">
-        By accessing or using this website, you agree to these&nbsp;Terms. If you do
-        not agree, you should not use the&nbsp;site.
+        By accessing or using this website, you agree to these&nbsp;Terms. If
+        you do not agree, you should not use the&nbsp;site.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -53,15 +54,15 @@ export function TermsOfService(props: TermsOfServiceProps) {
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         Unless otherwise stated, all content on this website — including text,
         images, illustrations, and design — is the property of{" "}
-        Sybaris&nbsp;Analytics&nbsp;Corporation or its licensors
-        and is protected by applicable copyright and intellectual property&nbsp;laws.
+        Sybaris&nbsp;Analytics&nbsp;Corporation or its licensors and is
+        protected by applicable copyright and intellectual property&nbsp;laws.
       </p>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         You may view, read, and share links to content on this site for personal
-        or informational&nbsp;purposes. You may not reproduce, modify, distribute, or
-        use site content for commercial purposes without prior written
-        permission, unless otherwise permitted by&nbsp;law.
+        or informational&nbsp;purposes. You may not reproduce, modify,
+        distribute, or use site content for commercial purposes without prior
+        written permission, unless otherwise permitted by&nbsp;law.
       </p>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
@@ -87,15 +88,14 @@ export function TermsOfService(props: TermsOfServiceProps) {
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         The website and its content are provided{" "}
         <strong>&ldquo;as is&rdquo;</strong> and{" "}
-        <strong>&ldquo;as available.&rdquo;</strong> While we strive for accuracy
-        and quality, we make no guarantees regarding the completeness,
+        <strong>&ldquo;as available.&rdquo;</strong> While we strive for
+        accuracy and quality, we make no guarantees regarding the completeness,
         reliability, or availability of the site or its&nbsp;content.
       </p>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        To the extent permitted by law,{" "}
-        Sybaris&nbsp;Analytics&nbsp;Corporation disclaims all
-        warranties, express or&nbsp;implied.
+        To the extent permitted by law, Sybaris&nbsp;Analytics&nbsp;Corporation
+        disclaims all warranties, express or&nbsp;implied.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -103,10 +103,10 @@ export function TermsOfService(props: TermsOfServiceProps) {
       </h3>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        To the extent permitted by law,{" "}
-        Sybaris&nbsp;Analytics&nbsp;Corporation will not be
-        liable for any indirect, incidental, consequential, or special damages
-        arising out of or related to your use of this&nbsp;website.
+        To the extent permitted by law, Sybaris&nbsp;Analytics&nbsp;Corporation
+        will not be liable for any indirect, incidental, consequential, or
+        special damages arising out of or related to your use of
+        this&nbsp;website.
       </p>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
@@ -132,9 +132,9 @@ export function TermsOfService(props: TermsOfServiceProps) {
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         These Terms are governed by the laws of{" "}
         <strong>Ontario,&nbsp;Canada,</strong> excluding conflict of law
-        principles. Any disputes arising from or related to
-        these Terms or the website will be subject to the exclusive jurisdiction
-        of the courts located in Toronto, Ontario,&nbsp;Canada.
+        principles. Any disputes arising from or related to these Terms or the
+        website will be subject to the exclusive jurisdiction of the courts
+        located in Toronto, Ontario,&nbsp;Canada.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -142,12 +142,11 @@ export function TermsOfService(props: TermsOfServiceProps) {
       </h3>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        For questions about these Terms, please contact us through the&nbsp;website.
+        For questions about these Terms, please contact us through
+        the&nbsp;website.
       </p>
     </div>
   );
 }
 
 export default TermsOfService;
-
-
