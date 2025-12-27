@@ -21,12 +21,19 @@ export const metadata: Metadata = {
     siteName: 'Simon Yates',
     locale: 'en_CA',
     type: 'website',
+    images: [
+      {
+        url: '/images/home/og-image.png',
+        alt: 'A magpie is perched on a branch (ink sketch).',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Simon Yates',
     description:
       'Product & engineering leader building accessible, ethical, human-centred systems.',
+    images: ['/images/home/og-image.png'],
   },
   robots: {
     index: true,
