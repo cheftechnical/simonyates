@@ -1,3 +1,5 @@
+'use client';
+
 import ForMobile from './ForMobile/ForMobileNext';
 import ForDesktop from './ForDesktop/ForDesktopNext';
 

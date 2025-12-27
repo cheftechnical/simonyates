@@ -1,5 +1,3 @@
-'use client';
-
 import PageWrapper from "../../components/PageWrapper";
 import Image from "../../components/Image";
 import MyContainer from "../../styling/MyContainer/MyContainer";

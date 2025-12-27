@@ -1,5 +1,3 @@
-'use client';
-
 import { ReactNode } from 'react';
 import NavTop from './NavTop/NavTopNext';
 import Footer from './Footer';
