@@ -23,7 +23,7 @@ export function Legal() {
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-1/2">
-            <div className="text-sm uppercase mb-6">
+            <div className="text-sm xuppercase mb-6">
               Last updated: January 2010 (reviewed January 2025)
             </div>
             <h1 className="sr-only">Legal</h1>
