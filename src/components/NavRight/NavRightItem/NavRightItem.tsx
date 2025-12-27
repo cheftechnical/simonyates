@@ -1,4 +1,4 @@
-import { Section } from "../../../types/Section.ts";
+import { Section } from "../../../types/Section";
 import { HEADER_OFFSET, findElementById } from "../utils";
 
 type NavRightItemProps = {

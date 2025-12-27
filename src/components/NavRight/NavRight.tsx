@@ -1,6 +1,8 @@
+'use client';
+
 import "./style.css";
 import NavRightItem from "./NavRightItem";
-import { Sections } from "../../types/Sections.ts";
+import { Sections } from "../../types/Sections";
 import { useEffect, useState } from "react";
 import { HEADER_OFFSET, findElementById } from "./utils";
 

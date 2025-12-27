@@ -1,4 +1,4 @@
-import { Link as ReactRouterDomLink } from "react-router-dom";
+import Link from "next/link";
 import Logo from "../../../components/Logo";
 import MyContainer from "../../../styling/MyContainer/MyContainer";
 
@@ -12,9 +12,9 @@ export default function Footer() {
       <MyContainer>
         <div className="flex flex-wrap">
           <div className="p-0 w-full basis-full max-w-full">
-            <ReactRouterDomLink to="/">
+            <Link href="/">
               <Logo brand="simon-yates" variant="grey-100" width={128} />
-            </ReactRouterDomLink>
+            </Link>
           </div>
         </div>
 
@@ -25,17 +25,17 @@ export default function Footer() {
               <br />
             </p>
             <p className="font-secondary text-[12px] text-gray-400">
-              <ReactRouterDomLink to="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
+              <Link href="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
                 Legal
-              </ReactRouterDomLink>
+              </Link>
               {" "}&middot;{" "}
-              <ReactRouterDomLink to="/about" className="text-gray-400 hover:underline hover:text-gray-50">
+              <Link href="/about" className="text-gray-400 hover:underline hover:text-gray-50">
                 About
-              </ReactRouterDomLink>
+              </Link>
               {" "}&middot;{" "}
-              <ReactRouterDomLink to="/contact" className="text-gray-400 hover:underline hover:text-gray-50">
+              <Link href="/contact" className="text-gray-400 hover:underline hover:text-gray-50">
                 Contact
-              </ReactRouterDomLink>
+              </Link>
             </p>
           </div>
           <div className="flex justify-end w-1/2 basis-1/2 max-w-1/2">

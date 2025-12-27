@@ -1,4 +1,4 @@
-import { Section } from "./Section.ts";
+import { Section } from "./Section";
 
 /**
  * A collection of sections

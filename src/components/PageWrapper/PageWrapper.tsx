@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { ReactNode } from "react";
 
 export interface Props {
@@ -8,24 +7,16 @@ export interface Props {
   children: ReactNode;
 
   /**
-   * The title of the page as it appears in the <head><title>...</title></head>
+   * The title of the page (handled by Next.js metadata at page level)
    */
   title?: string;
 }
 
 export function PageWrapper(props: Props) {
-  const { children, title } = props;
+  const { children } = props;
 
-  return (
-    <>
-      <Helmet defaultTitle="Simon Yates" titleTemplate="Simon Yates &bull; %s">
-        {title && (
-          <title>{title}</title>
-        )}
-      </Helmet>
-      {children}
-    </>
-  );
+  // In Next.js, metadata is handled at the page level, so we just return children
+  return <>{children}</>;
 }
 
 export default PageWrapper;
