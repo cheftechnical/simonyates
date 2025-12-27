@@ -21,8 +21,8 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       </h2>
 
       <p className="font-normal text-base leading-normal mt-4">
-        This Privacy Policy applies to the website {domainName}, operated by{" "}
-        {legalName}.
+        This Privacy Policy applies to the website <strong>{domainName}</strong>,
+        operated by <strong>{legalName}</strong>.
       </p>
 
       <p className="font-normal text-base leading-normal mt-4">
@@ -109,7 +109,8 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
         <Li>when required to comply with applicable law or legal process</Li>
         <Li>
-          to protect the rights, property, or safety of {legalName} or others
+          to protect the rights, property, or safety of <strong>{legalName}</strong>{" "}
+          or others
         </Li>
       </Ul>
 
