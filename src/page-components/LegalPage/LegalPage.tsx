@@ -22,17 +22,14 @@ export function Legal() {
       <MyContainer>
         <div className="flex flex-wrap">
           {/* Content */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-9/12 md:pr-48">
             <h1 className="sr-only">Legal</h1>
             <PrivacyPolicy id={sections.privacyPolicy.id} />
             <TermsOfService id={sections.termsOfService.id} />
           </div>
 
-          {/* Gutter */}
-          <div className="hidden md:block md:w-1/4" />
-
           {/* Navigation */}
-          <div className="hidden md:block md:w-1/4">
+          <div className="hidden md:block md:w-3/12">
             <NavRight sections={sections} />
           </div>
         </div>

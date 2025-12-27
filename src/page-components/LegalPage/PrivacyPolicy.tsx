@@ -1,3 +1,7 @@
+// I've set the styling of this page to be used as a reference. Notice how the h2 has a mirrored margin to that of the subsequent paragraph.
+// I've also set p mt values to 1x base, not 1.5 for the paragraph + line height. I find this tighter spacing is more balanced.
+// I'm also using spaces based on actual type sizes, not stepped values, which is more harmoneous with the typography.
+// Par particular attention to how I did the UL/LI spacing, using the mt-[calc(1.0rem)] pattern.
 const domainName = "simonyates.ca";
 
 const ulClasses = "xpt-6";
