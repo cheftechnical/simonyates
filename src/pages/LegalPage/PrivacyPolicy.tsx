@@ -18,9 +18,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
   return (
     <div id={id}>
-      <h1 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
+      <h2 className="font-normal text-[34px] leading-[56px] tracking-[0.25px]">
         Privacy Policy
-      </h1>
+      </h2>
 
       <p className="font-normal text-[14px] leading-normal tracking-[0.25px] mt-4">
         This Privacy Policy applies to all of the products, services and

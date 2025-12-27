@@ -23,6 +23,7 @@ export function Legal() {
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-1/2">
+            <h1 className="sr-only">Legal</h1>
             <PrivacyPolicy id={sections.privacyPolicy.id} />
             <TermsOfService id={sections.termsOfService.id} />
           </div>
