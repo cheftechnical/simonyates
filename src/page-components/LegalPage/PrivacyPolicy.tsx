@@ -1,8 +1,8 @@
 const domainName = "simonyates.ca";
 
-const ulClasses = "pt-6";
+const ulClasses = "xpt-6";
 const liClasses =
-  "font-normal text-base leading-normal mb-[calc(1.0rem)] ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
+  "font-normal text-base leading-normal mt-[calc(1.0rem)] ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
 
 export type PrivacyPolicyProps = {
   /**
@@ -21,17 +21,17 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       </div>
 
       <h2 className="font-normal text-2xl leading-relaxed my-[calc(1.2599rem*1.0)]">
-        Privacy Policy
+        Privacy&nbsp;Policy
       </h2>
 
       <p className="font-normal text-lg leading-relaxed xmt-[calc(1.2599rem)] text-gray-600">
         This Privacy Policy applies to the website <strong>{domainName}</strong>,
-        operated by <strong>Sybaris Analytics Corporation</strong>.
+        operated by <strong>Sybaris&nbsp;Analytics&nbsp;Corporation</strong>.
       </p>
 
       <p className="font-normal text-lg leading-relaxed mt-[calc(1.2599rem)] text-gray-600">
         If you have any questions about this Privacy Policy, you may contact us
-        through the website.
+        through the&nbsp;website.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -40,7 +40,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
       <p className="font-normal text-base leading-normal mt-4">
         We collect <strong>very limited information</strong>, only to operate and
-        understand the basic use of the site.
+        understand the basic use of the&nbsp;site.
       </p>
 
       <h4 className="font-normal text-lg leading-normal mt-[calc(1.2599rem*2)]">
@@ -60,35 +60,37 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         We use <strong>Vercel Web Analytics</strong> to understand basic,
-        aggregate usage of the site, such as:
+        aggregate usage of the site, such&nbsp;as:
       </p>
 
       <ul className={ulClasses}>
         <li className={liClasses}>pages visited</li>
-        <li className={liClasses}>referring sites</li>
-        <li className={liClasses}>general geographic region</li>
+        <li className={liClasses}>referring&nbsp;sites</li>
+        <li className={liClasses}>general geographic&nbsp;region</li>
       </ul>
 
-      <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.5*1)]">
+      <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.0*1)]">
         This analytics data:
       </p>
 
       <ul className={ulClasses}>
         <li className={liClasses}>
-          does <strong>not</strong> use cookies
+          does <strong>not</strong> use&nbsp;cookies
         </li>
         <li className={liClasses}>
-          does <strong>not</strong> use third-party advertising identifiers
+          does <strong>not</strong> use third-party advertising&nbsp;identifiers
         </li>
-        <li className={liClasses}>is collected in an anonymized, aggregated form</li>
         <li className={liClasses}>
-          is used solely to understand site usage and improve performance
+          is collected in an anonymized, aggregated&nbsp;form
+        </li>
+        <li className={liClasses}>
+          is used solely to understand site usage and improve&nbsp;performance
         </li>
       </ul>
 
-      <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.5)]">
+      <p className="font-normal text-base leading-normal mt-[calc(1.0rem*1.0)]">
         Like most websites, our hosting provider may also collect standard server
-        log information (such as IP address, browser type, and request time) for
+        log&nbsp;information (such as IP address, browser type, and request time) for
         security, reliability, and performance monitoring.
       </p>
 
@@ -97,7 +99,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       </h3>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        This website does <strong>not</strong> use cookies.
+        This website does <strong>not</strong> use&nbsp;cookies.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -105,24 +107,24 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       </h3>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        We do not sell, rent, or trade personal information.
+        We do not sell, rent, or trade personal&nbsp;information.
       </p>
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
-        Information may be shared only in the following limited circumstances:
+        Information may be shared only in the following limited&nbsp;circumstances:
       </p>
 
       <ul className={ulClasses}>
         <li className={liClasses}>
           with service providers (such as hosting and analytics) strictly for
-          operating the site
+          operating the&nbsp;site
         </li>
         <li className={liClasses}>
-          when required to comply with applicable law or legal process
+          when required to comply with applicable law or legal&nbsp;process
         </li>
         <li className={liClasses}>
           to protect the rights, property, or safety of{" "}
-          Sybaris Analytics Corporation or others
+          Sybaris Analytics&nbsp;Corporation or&nbsp;others
         </li>
       </ul>
 
@@ -133,7 +135,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         We take reasonable measures to protect information against unauthorized
         access, disclosure, or destruction. Access to information is limited to
-        those who need it for site operation or correspondence.
+        those who need it for site operation or&nbsp;correspondence.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -142,9 +144,9 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         If you have contacted us and wish to request correction or deletion of
-        your information, you may do so by contacting us through the website. We
+        your information, you may do so by contacting us through the&nbsp;website. We
         will make reasonable efforts to comply, subject to legal and operational
-        requirements.
+        operational&nbsp;requirements.
       </p>
 
       <h3 className="font-normal text-xl leading-relaxed mt-[calc(1.2599rem*3)]">
@@ -153,7 +155,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
 
       <p className="font-normal text-base leading-normal mt-[calc(1.0rem)]">
         This Privacy Policy may be updated from time to time. Any changes will
-        be posted on this page. Changes will not reduce your rights without
+        be posted on this&nbsp;page. Changes will not reduce your rights without
         notice.
       </p>
     </div>
