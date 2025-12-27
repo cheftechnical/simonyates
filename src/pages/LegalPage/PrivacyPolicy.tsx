@@ -34,7 +34,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
       </p>
 
       <address>
-        <p className="font-normal text-base leading-normal mt-4">
+        <p className="font-normal text-base leading-normal mt-6">
           Privacy Matters
           <br />
           c/o {legalName}
@@ -47,7 +47,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Information we collect, and how we use&nbsp;it:
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         We may collect the following types of&nbsp;information:
       </p>
 
@@ -120,7 +120,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         </Li>
       </Ul>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         In addition to the above, we may use the information we collect&nbsp;to:
       </p>
 
@@ -140,7 +140,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         such&nbsp;use.
       </p>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         {tradeName} process personal information on our services in the Canada
         and other countries. In some cases, we process personal information out
         of your own&nbsp;country.
@@ -150,7 +150,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Information Sharing
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         {legalName} only shares personal information with other companies or
         individuals outside of {legalName}
         in the following limited&nbsp;circumstances:
@@ -195,7 +195,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Information Security
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         We take appropriate security measures to protect against unauthorized
         access to, or unauthorized alteration, disclosure or destruction of
         data. These include internal reviews of our data collection, storage and
@@ -204,7 +204,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         access to systems where we store personal&nbsp;data.
       </p>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         We restrict access to personal information to {legalName} employees,
         contractors and agents who need to know that information in order to
         process it on our behalf. These individuals are bound by confidentiality
@@ -216,7 +216,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Accessing and updating personal&nbsp;information
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         When you use {tradeName} services, we make good faith efforts to provide
         you with access to your personal information and either correct this
         data if it is inaccurate or delete such data at your request if it is
@@ -241,7 +241,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Enforcement
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         {tradeName} regularly reviews its compliance with this Privacy Policy.
         When we receive formal written complaints, it is {tradeName}&rsquo;s
         policy to contact the complaining user regarding his or her concerns. We
@@ -255,7 +255,7 @@ export function PrivacyPolicy(props: PrivacyPolicyProps) {
         Changes to this Privacy&nbsp;Policy
       </h3>
 
-      <p className="font-normal text-base leading-normal mt-4">
+      <p className="font-normal text-base leading-normal mt-6">
         Please note that this Privacy Policy may change from time to time. We
         will not reduce your rights under this Privacy Policy without your
         explicit consent. We will post any Privacy Policy changes on this page
