@@ -5,6 +5,9 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
 import reactHooks from 'eslint-plugin-react-hooks';
+import perfectionist from 'eslint-plugin-perfectionist';
+
+const enableSorting = process.env.ESLINT_SORTING === '1';
 
 export default [
   {
@@ -38,6 +41,7 @@ export default [
     },
     plugins: {
       'react-hooks': reactHooks,
+      perfectionist,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -45,6 +49,28 @@ export default [
       // Legacy codebase: keep hooks guidance out of the "lint must pass" gate for now.
       'react-hooks/rules-of-hooks': 'off',
       'react-hooks/set-state-in-effect': 'off',
+
+      // Optional: enforce consistent (alphabetical-ish) ordering when explicitly enabled.
+      ...(enableSorting
+        ? {
+            'perfectionist/sort-imports': [
+              'error',
+              { type: 'natural', order: 'asc' },
+            ],
+            'perfectionist/sort-named-imports': [
+              'error',
+              { type: 'natural', order: 'asc' },
+            ],
+            'perfectionist/sort-named-exports': [
+              'error',
+              { type: 'natural', order: 'asc' },
+            ],
+            'perfectionist/sort-objects': [
+              'error',
+              { type: 'natural', order: 'asc' },
+            ],
+          }
+        : {}),
     },
   },
 

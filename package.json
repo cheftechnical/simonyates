@@ -9,6 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
+    "lint:sorted": "ESLINT_SORTING=1 eslint . --max-warnings=0",
+    "lint:sorted:fix": "ESLINT_SORTING=1 eslint . --fix",
     "format": "prettier --write . --ignore-unknown",
     "format:check": "prettier --check . --ignore-unknown",
     "storybook": "storybook dev -p 6006",
