@@ -23,13 +23,7 @@ export function Legal() {
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-1/2">
-            <div className="text-sm xuppercase mb-6">
-              Last updated: January 2010 (reviewed January 2025)
-            </div>
             <h1 className="sr-only">Legal</h1>
-            <p className="font-normal text-xl leading-relaxed mt-4 text-gray-600 mb-6">
-              This policy governs professional services and websites operated by Sybaris&nbsp;Analytics Corporation, including&nbsp;simonyates.ca.
-            </p>
             <PrivacyPolicy id={sections.privacyPolicy.id} />
             <TermsOfService id={sections.termsOfService.id} />
           </div>
