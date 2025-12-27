@@ -12,19 +12,19 @@ export function DesignSystem() {
           {/* Content */}
           <div className="w-full md:w-3/5">
             {/* Content will go here */}
-            <h1 className="text-[2.0rem] leading-relaxed">
+            <h1 className="font-normal text-[2.0rem] leading-relaxed">
               How I Designed My Personal Design&nbsp;System
             </h1>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-relaxed mt-[calc(1.5874rem*2)]">
+            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[calc(1.5874rem*1)]">
               Harmonious design is foundational to&nbsp;me.
             </p>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-relaxed mt-[1.5874rem]">
+            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[1.5874rem]">
               Everything I produce follows a design aesthetic. I have distilled that aesthetic into a set of&nbsp;rules.
             </p>
 
-            <p className="text-[1.5874rem] text-gray-500 leading-relaxed mt-[1.5874rem]">
+            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[1.5874rem]">
               This is my personal design&nbsp;system.
             </p>
 
