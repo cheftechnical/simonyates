@@ -22,8 +22,7 @@ export function TermsOfService(props: TermsOfServiceProps) {
 
       <p className="font-normal text-base leading-normal mt-4">
         Thanks for using our products and services (&ldquo;Services&rdquo;). The
-        Services are provided by
-        {legalName}, located&nbsp;at:
+        Services are provided by {legalName}, located&nbsp;at:
       </p>
 
       <address>
