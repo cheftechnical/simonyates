@@ -1,5 +1,4 @@
 import Image from "../../components/Image/Image";
-import PageWrapper from "../../components/PageWrapper";
 import Section from "../../components/Section/Section";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import Link from "next/link";
@@ -7,16 +6,13 @@ import Link from "next/link";
 // This page is a focused exploration where implementation, mathematics, or structure is the primary language — not narrative.
 export default function StudiesPage() {
   return (
-    <PageWrapper title="Studies">
-      <MyContainer>
-        <div className="flex flex-wrap">
-          {/* Content */}
-          {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
-          <div className="w-full md:w-9/12 md:pr-48 ">
-            <Section id="studies">
-            <h1 className="font-normal text-2xl leading-relaxed">
-              Studies
-            </h1>
+    <MyContainer>
+      <div className="flex flex-wrap">
+        {/* Content */}
+        {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
+        <div className="w-full md:w-9/12 md:pr-48 ">
+          <Section id="studies">
+            <h1 className="font-normal text-2xl leading-relaxed">Studies</h1>
 
             <div className="mt-8">
               <section>
@@ -65,9 +61,8 @@ export default function StudiesPage() {
               </section>
             </div>
           </Section>
-          </div>
         </div>
-      </MyContainer>
-    </PageWrapper>
+      </div>
+    </MyContainer>
   );
 }
