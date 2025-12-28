@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Featured',
-  description: 'Featured work and projects by Simon Yates',
+  description:
+    'A curated selection of ideas, systems, and projects across product, engineering, and design.',
 };
 
 export default function Featured() {
