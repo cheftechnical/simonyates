@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Appearances',
-  description: 'Public appearances, talks, and presentations by Simon Yates',
+  description:
+    'Invited talks and presentations for organisations including BrainStation, RBC, and IEEE, covering product, engineering, accessibility, and health-focused systems.',
 };
 
 export default function Appearances() {
