@@ -1,13 +1,26 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
-import TrueNorthPage from '../../../src/page-components/workAt/TrueNorthPage/TrueNorthPage';
-import { workCompanyMetadata } from '../companyMetadata';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
-export const metadata = workCompanyMetadata('TrueNorth');
+const newPath = '/work/truenorth-technologies';
 
-export default function TrueNorth() {
+export const metadata: Metadata = {
+  title: 'Moved',
+  robots: { index: false, follow: true },
+};
+
+export default function TrueNorthRedirect() {
   return (
-    <DefaultLayout>
-      <TrueNorthPage />
-    </DefaultLayout>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.location.replace(${JSON.stringify(newPath)});`,
+        }}
+      />
+      <p>
+        This page has moved to <Link href={newPath}>{newPath}</Link>.
+      </p>
+    </>
   );
 }
+
+

@@ -61,7 +61,7 @@ export const workExperienceData: WorkExperienceData[] = [
     role: "Team Lead & Staff Frontend Software Engineer",
     when: "March 2021 to March 2023",
     where: "San Francisco, CA, USA",
-    href: "/work/truenorth",
+    href: "/work/truenorth-technologies",
     sectionId: "truenorth",
   },
   {
