@@ -1,6 +1,5 @@
 import Download from "../../components/Download";
 import NavRight from "../../components/NavRight";
-import PageWrapper from "../../components/PageWrapper";
 import Sections from "../../components/Sections/Sections";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import { sections } from "./sections";
@@ -9,14 +8,13 @@ import Link from "next/link";
 // featured
 export default function Featured() {
   return (
-    <PageWrapper title="Featured">
-      <MyContainer>
-        <div className="flex flex-wrap">
-          {/* Content */}
-          {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
-          <div className="w-full md:w-9/12 md:pr-48 ">
-            <h1 className="sr-only">Featured</h1>
-            <Sections>
+    <MyContainer>
+      <div className="flex flex-wrap">
+        {/* Content */}
+        {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
+        <div className="w-full md:w-9/12 md:pr-48 ">
+          <h1 className="sr-only">Featured</h1>
+          <Sections>
               <div id={sections.essays.id}>
                 {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
                 {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
@@ -96,15 +94,14 @@ export default function Featured() {
                 </div>
                 </div>
               </div>
-            </Sections>
-          </div>
-
-          {/* Navigation */}
-          <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
-            <NavRight sections={sections} />
-          </div>
+          </Sections>
         </div>
-      </MyContainer>
-    </PageWrapper>
+
+        {/* Navigation */}
+        <div className="hidden md:block md:w-3/12 xborder-1 border-[blue] ">
+          <NavRight sections={sections} />
+        </div>
+      </div>
+    </MyContainer>
   );
 }
