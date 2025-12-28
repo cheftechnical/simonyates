@@ -3,8 +3,9 @@ import FigpieTrigonometryPage from '../../src/page-components/FigpieTrigonometry
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Figpie Trigonometry',
-  description: 'Trigonometry behind Figpie pie charts',
+  title: 'How to Build a Pie Chart with Cubic Bézier Curves',
+  description:
+    'A mathematical exploration of constructing pie charts using cubic Bézier curves, presented through diagrams and formulas.',
 };
 
 export default function FigpieTrigonometry() {
