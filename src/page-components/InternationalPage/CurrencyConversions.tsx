@@ -26,7 +26,13 @@ const currencies: Currency[] = [
   },
 ];
 
-export default function CurrencyConversions() {
+interface Props {
+  onRatesStatusChange?: (status: "loading" | "live" | "fallback") => void;
+  onRatesUpdatedOnChange?: (updatedOn: string | null) => void;
+}
+
+export default function CurrencyConversions(props: Props) {
+  const { onRatesStatusChange, onRatesUpdatedOnChange } = props;
   const [value, setValue] = useState<string[]>(["0", "0", "0", "0"]);
   const [rates, setRates] = useState<Record<string, number>>({
     USD: 1.0,
@@ -34,7 +40,6 @@ export default function CurrencyConversions() {
     GBP: 0.73,
     EUR: 0.84,
   });
-  const [ratesUpdatedOn, setRatesUpdatedOn] = useState<string | null>(null);
 
   const currencyCodes = useMemo(() => currencies.map((c) => c.code), []);
 
@@ -42,6 +47,11 @@ export default function CurrencyConversions() {
     let cancelled = false;
 
     async function loadRates() {
+      if (!cancelled) {
+        onRatesStatusChange?.("loading");
+        onRatesUpdatedOnChange?.(null);
+      }
+
       try {
         const to = currencyCodes.filter((c) => c !== "USD").join(",");
         const res = await fetch(
@@ -49,7 +59,10 @@ export default function CurrencyConversions() {
           { cache: "no-store" },
         );
 
-        if (!res.ok) return;
+        if (!res.ok) {
+          if (!cancelled) onRatesStatusChange?.("fallback");
+          return;
+        }
 
         const data: unknown = await res.json();
         if (
@@ -58,6 +71,7 @@ export default function CurrencyConversions() {
           !("rates" in data) ||
           typeof (data as any).rates !== "object"
         ) {
+          if (!cancelled) onRatesStatusChange?.("fallback");
           return;
         }
 
@@ -74,12 +88,14 @@ export default function CurrencyConversions() {
 
         if (!cancelled) {
           setRates((prev) => ({ ...prev, ...nextRates }));
-          setRatesUpdatedOn(
+          onRatesStatusChange?.("live");
+          onRatesUpdatedOnChange?.(
             typeof (data as any).date === "string" ? (data as any).date : null,
           );
         }
       } catch {
         // Swallow errors; keep fallback hard-coded rates.
+        if (!cancelled) onRatesStatusChange?.("fallback");
       }
     }
 
@@ -88,7 +104,7 @@ export default function CurrencyConversions() {
     return () => {
       cancelled = true;
     };
-  }, [currencyCodes]);
+  }, [currencyCodes, onRatesStatusChange, onRatesUpdatedOnChange]);
 
   const handleChange = (
     event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -142,12 +158,6 @@ export default function CurrencyConversions() {
         </div>
       ))}
 
-      <div className="px-3 w-full">
-        <p className="text-xs text-gray-500">
-          Rates from Frankfurter (ECB).{" "}
-          {ratesUpdatedOn ? `Updated ${ratesUpdatedOn}.` : "Updating…"}
-        </p>
-      </div>
     </div>
   );
 }
