@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Legal',
-  description: 'Privacy Policy and Terms of Service',
+  description: 'Privacy Policy and Terms of Service governing the use of this site.',
 };
 
 export default function Legal() {
