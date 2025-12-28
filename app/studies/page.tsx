@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Studies',
-  description: 'Case studies and design explorations by Simon Yates',
+  description:
+    'Explorations and case studies examining ideas, tools, and systems across product, engineering, and design.',
 };
 
 export default function Studies() {
