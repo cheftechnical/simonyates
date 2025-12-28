@@ -113,12 +113,12 @@ export function getImage(brand: string, variant: string): Image | undefined {
       switch (variant) {
         default:
           return {
-            alt: "TrueNorth",
+            alt: "TrueNorth Technologies",
             dimension: {
               height: 30,
               width: 30,
             },
-            src: `${basePath}/${brand}/${brand}-logo.svg`,
+            src: `${basePath}/truenorth-technologies/truenorth-logo.svg`,
           };
       }
     case "twitter":
