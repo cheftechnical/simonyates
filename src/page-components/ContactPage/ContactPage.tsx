@@ -47,8 +47,7 @@ export default function Contact() {
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2">
             <p className="font-normal leading-normal text-base mb-[40px] text-gray-700">
-              I&rsquo;m always open to make new connections and chat about
-              software&nbsp;development.
+              If you take the time to write, I&rsquo;ll reply in&nbsp;kind.
             </p>
 
             <ContactForm ref={formRef} onSubmit={handleSubmit} />
