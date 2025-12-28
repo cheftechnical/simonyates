@@ -1,6 +1,5 @@
 import Image from "../../components/Image";
 import NavRight from "../../components/NavRight";
-import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 
@@ -49,22 +48,19 @@ const sections: Sections = {
 
 export function TheImaginationGapAltTextAiPage() {
   return (
-    <PageWrapper title="The Imagination Gap">
-      {/* Metadata is now handled at the page level in Next.js */}
-      <article>
-        <MyContainer>
-          <div className="flex flex-wrap">
-            {/* Content */}
-            <div className="w-full md:w-9/12 md:pr-48">
-              <div className="text-sm uppercase mb-6">
-                December 11, 2025
-              </div>
-              <h1 id="intro" className="font-normal text-2xl leading-relaxed">
-                The Imagination&nbsp;Gap
-              </h1>
-              <p className="font-normal text-xl leading-relaxed mt-4 text-gray-600">
-                Using AI to See Through Someone Else&rsquo;s Eyes: Validating Alt-Text with Image&nbsp;Generation
-              </p>
+    <article>
+      <MyContainer>
+        <div className="flex flex-wrap">
+          {/* Content */}
+          <div className="w-full md:w-9/12 md:pr-48">
+            <div className="text-sm uppercase mb-6">December 11, 2025</div>
+            <h1 id="intro" className="font-normal text-2xl leading-relaxed">
+              The Imagination&nbsp;Gap
+            </h1>
+            <p className="font-normal text-xl leading-relaxed mt-4 text-gray-600">
+              Using AI to See Through Someone Else&rsquo;s Eyes: Validating
+              Alt-Text with Image&nbsp;Generation
+            </p>
 
               <p className="font-normal text-base leading-normal mt-16">
                 Alt-text is one of the simplest accessibility practices to describe, and one of the hardest to do well. It asks us to translate an image into language so that someone who cannot see the image can still understand it. But between what we intend and what someone else understands lies a space where the meaning can&nbsp;drift.
@@ -482,14 +478,13 @@ export function TheImaginationGapAltTextAiPage() {
               </p>
             </div>
 
-            {/* Navigation */}
-            <div className="hidden md:block md:w-3/12">
-              <NavRight sections={sections} />
-            </div>
+          {/* Navigation */}
+          <div className="hidden md:block md:w-3/12">
+            <NavRight sections={sections} />
           </div>
-        </MyContainer>
-      </article>
-    </PageWrapper>
+        </div>
+      </MyContainer>
+    </article>
   );
 }
 
