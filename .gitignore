@@ -17,6 +17,9 @@ dist-ssr
 out/
 next-env.d.ts
 
+# TypeScript incremental build info
+*.tsbuildinfo
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

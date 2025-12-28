@@ -1,4 +1,4 @@
-import { color } from "../../../styling/Color/Color";
+import { color } from "@/styling/Color/Color";
 import { Coordinate } from "./Coordinate";
 import { degToRad } from "./trig";
 import * as d3 from "d3";

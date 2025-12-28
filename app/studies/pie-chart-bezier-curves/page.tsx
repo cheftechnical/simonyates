@@ -1,5 +1,5 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
-import FigpieTrigonometryPage from '../../../src/page-components/FigpieTrigonometryPage';
+import PieChartBezierCurvesPage from '../../../src/page-components/StudiesPage/PieChartBezierCurvesPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PieChartBezierCurvesStudy() {
   return (
     <DefaultLayout>
-      <FigpieTrigonometryPage />
+      <PieChartBezierCurvesPage />
     </DefaultLayout>
   );
 }

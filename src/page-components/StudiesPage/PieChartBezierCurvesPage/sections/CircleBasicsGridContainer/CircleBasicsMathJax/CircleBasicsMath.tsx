@@ -1,4 +1,4 @@
-import color from "../../../../../styling/Color";
+import color from "@/styling/Color";
 import { degToRad } from "../../../libs/trig";
 import { AxisDirection } from "../AxisDirection";
 import { MathJaxFormula } from "mathjax3-react";

@@ -1,4 +1,4 @@
-import color from "../../../../../styling/Color";
+import color from "@/styling/Color";
 import { CubicBezier } from "../../../libs/CubicBezier";
 import { RotationD3 } from "./RotationD3";
 import * as d3 from "d3";
