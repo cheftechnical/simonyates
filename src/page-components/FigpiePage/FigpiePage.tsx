@@ -13,7 +13,7 @@ export function FigpiePage() {
         <h1 className="font-primary font-normal text-4xl leading-relaxed">
           Figpie
         </h1>
-        <p className="font-primary font-normal text-xl leading-8 mt-[calc(1.0rem)] text-gray-600">
+        <p className="font-primary font-normal text-xl leading-relaxed mt-[calc(1.0rem)] text-gray-600">
           <strong>Figpie</strong> is a Figma plugin for creating clean,
           well-structured pie&nbsp;charts.
         </p>
