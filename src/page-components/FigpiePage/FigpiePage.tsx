@@ -13,11 +13,11 @@ export function FigpiePage() {
         <h1 className="font-primary font-normal text-4xl leading-relaxed">
           Figpie
         </h1>
-        <p className="font-primary font-normal text-xl leading-relaxed my-[calc(1.5874rem)] text-gray-600">
+        <p className="font-primary font-normal text-xl leading-relaxed mt-[calc(1.0rem*1)] text-gray-600">
           <strong>Figpie</strong> is a Figma plugin for creating clean,
           well-structured pie&nbsp;charts.
         </p>
-        <p className="font-primary font-normal text-base leading-normal xmt-[calc(1.0rem*3)]">
+        <p className="font-primary font-normal text-base leading-normal mt-[calc(1.0rem*2)]">
           Creating pie charts in Figma is harder than it should be. Working
           directly with vectors can be fiddly, and getting angles, alignment and
           proportions right is more complex than it&nbsp;sounds.
