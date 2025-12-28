@@ -1,17 +1,24 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
-import FigpieTrigonometryPage from '../../src/page-components/FigpieTrigonometryPage';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+
+const newPath = '/studies/pie-chart-bezier-curves';
 
 export const metadata: Metadata = {
-  title: 'How to Build a Pie Chart with Cubic Bézier Curves',
-  description:
-    'A mathematical exploration of constructing pie charts using cubic Bézier curves, presented through diagrams and formulas.',
+  title: 'Moved',
+  robots: { index: false, follow: true },
 };
 
-export default function FigpieTrigonometry() {
+export default function TrigRedirect() {
   return (
-    <DefaultLayout>
-      <FigpieTrigonometryPage />
-    </DefaultLayout>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.location.replace(${JSON.stringify(newPath)});`,
+        }}
+      />
+      <p>
+        This page has moved to <Link href={newPath}>{newPath}</Link>.
+      </p>
+    </>
   );
 }

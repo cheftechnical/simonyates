@@ -42,12 +42,15 @@ export default function StudiesPage() {
                   Pie Charts &amp;&nbsp;Geometry
                 </h2>
                 <h3 className="font-normal text-lg leading-normal mt-3 w-1/2">
-                  <Link href="/trig" className="text-blue-500 no-underline hover:underline">
-                    How to Build a Pie Chart with Cubic B&eacute;zier Curves
+                  <Link
+                    href="/studies/pie-chart-bezier-curves"
+                    className="text-blue-500 no-underline hover:underline"
+                  >
+                    A Mathematical Construction of Pie Charts Using Cubic B&eacute;zier Curves
                   </Link>
                 </h3>
                 <div className="mt-3 w-1/2 border-gray-700 border-1 p-1">
-                  <Link href="/trig">
+                  <Link href="/studies/pie-chart-bezier-curves">
                     <Image
                       alt="Cubic Bézier curve diagram illustrating circular arc approximation"
                       src="/images/studies/bezier-curve-example.png"

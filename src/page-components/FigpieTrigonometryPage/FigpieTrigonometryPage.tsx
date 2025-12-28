@@ -11,21 +11,21 @@ export default function FigpieTrigonometryPage() {
     <MathJaxProviderWrapper>
       <MyContainer>
         <h1 className="font-primary font-normal text-4xl leading-relaxed">
-          How to Build a Pie Chart With Cubic B&eacute;zier&nbsp;Curves
+          A Mathematical Construction of Pie Charts Using Cubic B&eacute;zier&nbsp;Curves
         </h1>
 
         <h2 className="font-primary font-normal text-2xl leading-relaxed mt-[4.0rem]">
-          Circle Basics
+          Circle Primitives
         </h2>
         <CircleBasicsGridContainer />
 
         <h2 className="font-primary font-normal text-2xl leading-relaxed mt-[4.0rem]">
-          Cubic B&eacute;zier
+          Cubic B&eacute;zier Construction
         </h2>
         <BezierArcGridContainer />
 
         <h2 className="font-primary font-normal text-2xl leading-relaxed mt-[4.0rem]">
-          Rotation
+          Rotation and Composition
         </h2>
         <RotationGridContainer />
       </MyContainer>
