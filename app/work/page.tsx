@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Professional work experience and portfolio',
+  description:
+    'Professional experience across companies, with detailed records of roles, projects, and contributions.',
 };
 
 export default function Work() {
