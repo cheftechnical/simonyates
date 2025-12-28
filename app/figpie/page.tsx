@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Figpie',
-  description: 'Figpie - Figma plugin for creating pie charts',
+  description: 'A Figma plugin for creating clean, editable pie charts from data.',
 };
 
 export default function Figpie() {
