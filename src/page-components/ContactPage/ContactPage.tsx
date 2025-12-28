@@ -1,6 +1,5 @@
 'use client';
 
-import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import ContactForm, { ContactFormHandle } from "./ContactForm";
 import { MessageFormValues } from "./MessageFormValues";
@@ -33,7 +32,7 @@ export default function Contact() {
   );
 
   return (
-    <PageWrapper title="Contact">
+    <>
       <MyContainer>
         <div className="flex flex-wrap">
           {/* Content */}
@@ -63,6 +62,6 @@ export default function Contact() {
         onClose={handleSendingDialogClose}
         onSuccess={() => setHasReachedSuccess(true)}
       />
-    </PageWrapper>
+    </>
   );
 }
