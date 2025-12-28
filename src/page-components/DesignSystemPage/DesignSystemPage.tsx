@@ -1,20 +1,18 @@
 import Callout from "../../components/Callout/Callout";
 import NavRight from "../../components/NavRight";
-import PageWrapper from "../../components/PageWrapper";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import { sections } from "./sections";
 
 export function DesignSystem() {
   return (
-    <PageWrapper title="Design System">
-      <MyContainer>
-        <div className="flex flex-wrap">
-          {/* Content */}
-          <div className="w-full md:w-3/5">
-            {/* Content will go here */}
-            <h1 className="font-normal text-[2.0rem] leading-relaxed">
-              How I Designed My Personal Design&nbsp;System
-            </h1>
+    <MyContainer>
+      <div className="flex flex-wrap">
+        {/* Content */}
+        <div className="w-full md:w-3/5">
+          {/* Content will go here */}
+          <h1 className="font-normal text-[2.0rem] leading-relaxed">
+            How I Designed My Personal Design&nbsp;System
+          </h1>
 
             <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[calc(1.5874rem*1)]">
               Harmonious design is foundational to&nbsp;me.
@@ -515,13 +513,12 @@ export function DesignSystem() {
 
           </div>
 
-          {/* Navigation */}
-          <div className="hidden md:block md:w-3/12">
-            <NavRight sections={sections} />
-          </div>
+        {/* Navigation */}
+        <div className="hidden md:block md:w-3/12">
+          <NavRight sections={sections} />
         </div>
-      </MyContainer>
-    </PageWrapper>
+      </div>
+    </MyContainer>
   );
 }
 
