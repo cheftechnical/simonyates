@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Simon Yates',
+  description:
+    'How to get in touch with Simon Yates regarding talks, collaboration, or general enquiries.',
 };
 
 export default function Contact() {
