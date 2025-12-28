@@ -57,7 +57,7 @@ export default function CurrencyConversions() {
   return (
     <div className="flex flex-wrap">
       {currencies.map((currency: Currency, index: number) => (
-        <div key={index} className="px-3 w-1/2">
+        <div key={index} className="px-3 w-1/2 py-3">
           <div className="w-full">
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600">

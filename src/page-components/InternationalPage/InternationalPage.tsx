@@ -9,10 +9,10 @@ export default function International() {
       <div>
         <TimeConversions />
       </div>
-      <div className="mt-6">
+      <div className="">
         <CurrencyConversions />
       </div>
-      <div className="mt-6">
+      <div className="">
         <TemperatureConversions />
       </div>
     </MyContainer>

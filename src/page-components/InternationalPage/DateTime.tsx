@@ -11,7 +11,7 @@ export function DateTime(props: Props) {
   const zonedDate = toZonedTime(now, timeZone);
 
   return (
-    <div className="text-center">
+    <div className="text-center py-3">
       <h4 className="font-primary font-medium text-base leading-normal">
         ({format(zonedDate, "O", { timeZone: timeZone })})<br />
         {/*{format(zonedDate, 'zzzz', {timeZone: timeZone})}<br/> remmed out before */}

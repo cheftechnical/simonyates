@@ -51,7 +51,7 @@ export default function TemperatureConversions() {
   return (
     <div className="flex flex-wrap">
       {temperatures.map((temperature: Temperature, index: number) => (
-        <div key={index} className="px-3 w-1/2">
+        <div key={index} className="px-3 w-1/2 py-3">
           <div className="w-full">
             <div className="relative">
               <input
