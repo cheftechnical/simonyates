@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Design System',
-  description: 'Personal design system and design principles by Simon Yates',
+  description:
+    'Principles, typography, layout, and structural decisions that govern the design of this site.',
 };
 
 export default function DesignSystem() {
