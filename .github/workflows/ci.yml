@@ -22,13 +22,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'yarn'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --check-files
+        run: npm ci
 
-      - name: Typecheck
-        run: yarn tsc --noEmit
+      - name: Lint
+        run: npm run lint
 
       - name: Build
-        run: yarn build
+        run: npm run build
