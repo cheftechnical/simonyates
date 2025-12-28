@@ -1,11 +1,8 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import HelloFreshPage from '../../../src/page-components/workAt/HelloFreshPage/HelloFreshPage';
-import type { Metadata } from 'next';
+import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata: Metadata = {
-  title: 'HelloFresh',
-  description: 'Work experience at HelloFresh',
-};
+export const metadata = workCompanyMetadata('HelloFresh');
 
 export default function HelloFresh() {
   return (

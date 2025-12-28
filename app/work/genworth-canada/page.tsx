@@ -1,11 +1,8 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import GenworthCanadaPage from '../../../src/page-components/workAt/GenworthCanadaPage';
-import type { Metadata } from 'next';
+import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata: Metadata = {
-  title: 'Genworth Canada',
-  description: 'Work experience at Genworth Canada',
-};
+export const metadata = workCompanyMetadata('Genworth Canada');
 
 export default function GenworthCanada() {
   return (

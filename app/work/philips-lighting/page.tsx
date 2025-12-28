@@ -1,11 +1,8 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import PhilipsLightingPage from '../../../src/page-components/workAt/PhilipsLightingPage/PhilipsLightingPage';
-import type { Metadata } from 'next';
+import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata: Metadata = {
-  title: 'Philips Lighting',
-  description: 'Work experience at Philips Lighting',
-};
+export const metadata = workCompanyMetadata('Philips Lighting');
 
 export default function PhilipsLighting() {
   return (

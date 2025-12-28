@@ -1,11 +1,8 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import TrueNorthPage from '../../../src/page-components/workAt/TrueNorthPage/TrueNorthPage';
-import type { Metadata } from 'next';
+import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata: Metadata = {
-  title: 'TrueNorth',
-  description: 'Work experience at TrueNorth',
-};
+export const metadata = workCompanyMetadata('TrueNorth');
 
 export default function TrueNorth() {
   return (

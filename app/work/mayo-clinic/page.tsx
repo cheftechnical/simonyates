@@ -1,11 +1,8 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
 import MayoClinicPage from '../../../src/page-components/workAt/MayoClinicPage/MayoClinicPage';
-import type { Metadata } from 'next';
+import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata: Metadata = {
-  title: 'Mayo Clinic',
-  description: 'Work experience at Mayo Clinic',
-};
+export const metadata = workCompanyMetadata('Mayo Clinic');
 
 export default function MayoClinic() {
   return (
