@@ -3,8 +3,9 @@ import AboutPage from '../../src/page-components/AboutPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'About Simon Yates - Product Designer, Developer, and Strategist',
+  title: 'About Simon Yates',
+  description:
+    'Background, experience, and approach to building accessible, ethical, human-centred systems across product and engineering.',
 };
 
 export default function About() {
