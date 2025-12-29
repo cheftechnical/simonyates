@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import PieChartBezierCurvesPage from '../../../src/page-components/StudiesPage/PieChartBezierCurvesPage';
 import type { Metadata } from 'next';
 

@@ -1,4 +1,4 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayout';
 import StudiesPage from '../../src/page-components/StudiesPage';
 import type { Metadata } from 'next';
 

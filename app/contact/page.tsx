@@ -1,4 +1,4 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayout';
 import ContactPage from '../../src/page-components/ContactPage';
 import type { Metadata } from 'next';
 

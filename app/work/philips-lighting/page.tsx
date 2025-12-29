@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import PhilipsLightingPage from '../../../src/page-components/workAt/PhilipsLightingPage/PhilipsLightingPage';
 import { workCompanyMetadata } from '../companyMetadata';
 

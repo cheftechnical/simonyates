@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import UnchartedSoftwarePage from '../../../src/page-components/workAt/UnchartedSoftwarePage/UnchartedSoftwarePage';
 import { workCompanyMetadata } from '../companyMetadata';
 

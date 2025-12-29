@@ -1,4 +1,4 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayout';
 import AppearancesPage from '../../src/page-components/AppearancesPage';
 import type { Metadata } from 'next';
 

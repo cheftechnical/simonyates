@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import TheImaginationGapAltTextAiPage from '../../../src/page-components/EssayPage';
 import type { Metadata } from 'next';
 

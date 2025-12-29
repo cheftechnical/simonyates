@@ -1,2 +1,2 @@
-import { default as Default } from "./DefaultLayoutNext";
+import { default as Default } from "./DefaultLayout";
 export default Default;

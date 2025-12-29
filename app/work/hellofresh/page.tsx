@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import HelloFreshPage from '../../../src/page-components/workAt/HelloFreshPage/HelloFreshPage';
 import { workCompanyMetadata } from '../companyMetadata';
 

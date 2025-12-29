@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import JibDesignAndAdvertisingPage from '../../../src/page-components/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage';
 import { workCompanyMetadata } from '../companyMetadata';
 

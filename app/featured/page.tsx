@@ -1,4 +1,4 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayout';
 import FeaturedPage from '../../src/page-components/FeaturedPage';
 import type { Metadata } from 'next';
 

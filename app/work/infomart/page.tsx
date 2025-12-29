@@ -1,4 +1,4 @@
-import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import InfomartPage from '../../../src/page-components/workAt/InfomartPage';
 import { workCompanyMetadata } from '../companyMetadata';
 

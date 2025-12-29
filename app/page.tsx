@@ -1,4 +1,4 @@
-import DefaultLayout from '../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../src/layouts/DefaultLayout/DefaultLayout';
 import HomePage from '../src/page-components/HomePage/HomePage';
 
 export default function Home() {

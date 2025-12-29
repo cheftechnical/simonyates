@@ -1,4 +1,4 @@
-import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayoutNext';
+import DefaultLayout from '../../src/layouts/DefaultLayout/DefaultLayout';
 import FigpiePage from '../../src/page-components/FigpiePage';
 import type { Metadata } from 'next';
 
