@@ -1,4 +1,4 @@
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import Content from "./Content";
 
 export function Home() {

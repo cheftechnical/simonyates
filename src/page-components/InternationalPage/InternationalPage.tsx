@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import CurrencyConversions from "./CurrencyConversions";
 import TemperatureConversions from "./TemperatureConversions";
 import TimeConversions from "./TimeConversions";

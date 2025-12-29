@@ -6,7 +6,7 @@ import {
 } from "../../data/workExperience";
 import Li from "../../components/ListsUnordered/Li/Li";
 import Ul from "../../components/ListsUnordered/Ul/Ul";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 import Hero from "./Hero/Hero";
 import WorkExperience from "./WorkExperience/WorkExperience";

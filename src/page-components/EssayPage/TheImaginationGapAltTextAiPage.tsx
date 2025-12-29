@@ -1,6 +1,6 @@
 import Image from "../../components/Image";
 import NavRight from "../../components/NavRight";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 
 const sections: Sections = {

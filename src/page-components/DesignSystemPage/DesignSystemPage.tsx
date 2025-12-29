@@ -1,6 +1,6 @@
 import Callout from "../../components/Callout/Callout";
 import NavRight from "../../components/NavRight";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import { sections } from "./sections";
 
 export function DesignSystem() {

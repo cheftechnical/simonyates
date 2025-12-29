@@ -1,7 +1,7 @@
 import Download from "../../components/Download";
 import NavRight from "../../components/NavRight";
 import Sections from "../../components/Sections/Sections";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import { sections } from "./sections";
 import Link from "next/link";
 

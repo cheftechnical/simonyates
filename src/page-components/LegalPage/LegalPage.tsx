@@ -1,5 +1,5 @@
 import NavRight from "../../components/NavRight/NavRight";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";

@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import ContactForm, { ContactFormHandle } from "./ContactForm";
 import { MessageFormValues } from "./MessageFormValues";
 import SendingMessageDialog from "./SendingMessageDialog/SendingMessageDialog";

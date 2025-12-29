@@ -1,5 +1,5 @@
 import Section from "../../components/Section/Section";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import appearancesData from "./appearances";
 
 export default function AppearancesPage() {

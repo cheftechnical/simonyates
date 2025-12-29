@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from '../../../../components/Logo';
-import MyContainer from '../../../../styling/MyContainer/MyContainer';
+import MyContainer from '../../../../components/MyContainer/MyContainer';
 import MenuItems from './MenuItems/MenuItems';
 import Link from 'next/link';
 import { useCallback } from 'react';

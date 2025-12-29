@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "@/styling/MyContainer/MyContainer";
+import MyContainer from "@/components/MyContainer/MyContainer";
 import MathJaxProviderWrapper from "./MathJaxProviderWrapper";
 import { CircleBasicsGridContainer } from "./sections/CircleBasicsGridContainer/CircleBasicsGridContainer";
 import { BezierArcGridContainer } from "./sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer";

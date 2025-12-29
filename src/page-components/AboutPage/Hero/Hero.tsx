@@ -1,5 +1,5 @@
 import Image from "../../../components/Image/Image";
-import MyContainer from "../../../styling/MyContainer/MyContainer";
+import MyContainer from "../../../components/MyContainer/MyContainer";
 
 export default function Hero() {
   return (

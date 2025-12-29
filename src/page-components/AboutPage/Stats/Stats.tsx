@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "../../../styling/MyContainer/MyContainer";
+import MyContainer from "../../../components/MyContainer/MyContainer";
 import StatsItem from "./StatsItem";
 import Carousel from "react-material-ui-carousel";
 

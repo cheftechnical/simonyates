@@ -1,6 +1,6 @@
 import Image from "../../components/Image/Image";
 import Section from "../../components/Section/Section";
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 import Link from "next/link";
 
 // This page is a focused exploration where implementation, mathematics, or structure is the primary language — not narrative.

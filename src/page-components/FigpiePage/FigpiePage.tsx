@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import MyContainer from "../../styling/MyContainer/MyContainer";
+import MyContainer from "../../components/MyContainer/MyContainer";
 
 export function FigpiePage() {
   const ulClasses = "mt-[calc(1.0rem)]";
