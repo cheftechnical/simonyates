@@ -4,8 +4,8 @@ import {
   formatDateForWorkPage,
   workExperienceData,
 } from "../../data/workExperience";
-import Li from "../../styling/ListsUnordered/Li/Li";
-import Ul from "../../styling/ListsUnordered/Ul/Ul";
+import Li from "../../components/ListsUnordered/Li/Li";
+import Ul from "../../components/ListsUnordered/Ul/Ul";
 import MyContainer from "../../styling/MyContainer/MyContainer";
 import { Sections } from "../../types/Sections";
 import Hero from "./Hero/Hero";
