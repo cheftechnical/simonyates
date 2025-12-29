@@ -1,5 +1,5 @@
 import Logo from "../../../components/Logo";
-import { MyButton } from "../../../components/MyButton";
+import { Button } from "../../../components/Button";
 
 /**
  * Props for the ContentSuccessful component
@@ -69,9 +69,9 @@ export default function ContentSuccessful(props: Props) {
       </div>
 
       <div className="flex justify-center mt-12">
-        <MyButton onClick={onClose}>
+        <Button onClick={onClose}>
           Close
-        </MyButton>
+        </Button>
       </div>
     </div>
   );

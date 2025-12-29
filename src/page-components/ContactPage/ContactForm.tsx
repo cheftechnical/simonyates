@@ -1,6 +1,6 @@
 'use client';
 
-import { MyButton } from "../../components/MyButton";
+import { Button } from "../../components/Button";
 import { TextField } from "../../components/TextField/TextField";
 import { MessageFormValues } from "./MessageFormValues";
 /**
@@ -140,7 +140,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
         />
 
         {/* Custom SVG send icon - replaced Material-UI SendIcon */}
-        <MyButton
+        <Button
           className="mt-4"
           endIcon={
             <svg
@@ -162,7 +162,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
           type="submit"
         >
           Send
-        </MyButton>
+        </Button>
       </form>
     </div>
   );

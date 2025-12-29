@@ -32,7 +32,7 @@ interface Props {
   type?: "button" | "submit" | "reset";
 }
 
-export function MyButton({
+export function Button({
   children,
   className = "",
   disabled = false,
