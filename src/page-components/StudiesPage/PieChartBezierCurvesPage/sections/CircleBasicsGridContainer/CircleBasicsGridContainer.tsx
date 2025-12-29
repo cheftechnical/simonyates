@@ -4,7 +4,7 @@ import SinCos from './CircleBasicsVisualization/CircleBasicsVisualization';
 // import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
 import color from "../../libs/Color";
 import { MyGridItem } from "../../components/MyGridItem";
-import MyTextField2 from "@/components/MyTextField2";
+import TextField from "@/components/TextField";
 import {AxisDirection} from './AxisDirection';
 import CircleBasicsMathJax from "./CircleBasicsMathJax/CircleBasicsMath";
 // import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';
@@ -45,7 +45,7 @@ export const CircleBasicsGridContainer = memo(function () {
         {/*{yAxisDirection}*/}
       </MyGridItem>
       <MyGridItem xs={6}>
-        <MyTextField2
+        <TextField
           label="Input Degrees"
           name="degrees"
           onChange={handleInputDegreesChange}

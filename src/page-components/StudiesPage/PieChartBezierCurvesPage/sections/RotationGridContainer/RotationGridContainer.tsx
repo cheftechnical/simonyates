@@ -1,5 +1,5 @@
 import { MyGridItem } from "../../components/MyGridItem";
-import { MyTextField2 } from "@/components/MyTextField2/MyTextField2";
+import { TextField } from "@/components/TextField/TextField";
 import { CubicBezier } from "../../libs/CubicBezier";
 import RotationMathJax from "./RotationMathJax";
 import RotationVisualization from "./RotationVisualization/RotationVisualization";
@@ -46,7 +46,7 @@ export const RotationGridContainer = memo(function() {
           <RotationVisualization onChange={handleRotationVisualizationChange} />
         </MyGridItem>
         <MyGridItem xs={6}>
-          <MyTextField2
+          <TextField
             label="Theta"
             name="theta"
             onChange={handleThetaChange}

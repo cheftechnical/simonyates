@@ -1,5 +1,5 @@
 import { MyGridItem } from "../../components/MyGridItem";
-import { MyTextField2 } from "@/components/MyTextField2/MyTextField2";
+import { TextField } from "@/components/TextField/TextField";
 import BezierArcMathJax from "./CubicBezierCurveMathJax";
 import CubicBezierCurveVisualization from "./CubicBezierCurveVisualization/CubicBezierCurveVisualization";
 import { ChangeEvent, memo, useState } from "react";
@@ -34,7 +34,7 @@ export const BezierArcGridContainer = memo(function () {
 				<MyGridItem xs={6}>
 					<div className="flex flex-wrap">
 						<MyGridItem xs={6}>
-              <MyTextField2
+              <TextField
                 disabled
                 label="Radius"
                 name="radius"
@@ -44,7 +44,7 @@ export const BezierArcGridContainer = memo(function () {
               />
 						</MyGridItem>
 						<MyGridItem xs={6}>
-              <MyTextField2
+              <TextField
                 label="End Angle"
                 name="endAngle"
                 onChange={handleEndAngleChange}

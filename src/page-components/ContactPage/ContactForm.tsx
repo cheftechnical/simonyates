@@ -1,7 +1,7 @@
 'use client';
 
 import { MyButton } from "../../components/MyButton";
-import { MyTextField2 } from "../../components/MyTextField2/MyTextField2";
+import { TextField } from "../../components/TextField/TextField";
 import { MessageFormValues } from "./MessageFormValues";
 /**
  * Resources:
@@ -53,7 +53,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
           name="name"
           render={({ field }) => {
             return (
-              <MyTextField2
+              <TextField
                 {...field}
                 error={!!errors.name}
                 helperText={
@@ -75,7 +75,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
           defaultValue=""
           name="emailAddress"
           render={({ field }) => (
-            <MyTextField2
+              <TextField
               {...field}
               error={!!errors.emailAddress}
               helperText={
@@ -100,7 +100,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
           defaultValue=""
           name="subject"
           render={({ field }) => (
-            <MyTextField2
+            <TextField
               {...field}
               error={!!errors.subject}
               helperText={
@@ -121,7 +121,7 @@ export const ContactForm = forwardRef<ContactFormHandle, Props>(
           defaultValue=""
           name="body"
           render={({ field }) => (
-            <MyTextField2
+            <TextField
               {...field}
               multiline
               error={!!errors.body}

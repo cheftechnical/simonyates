@@ -56,7 +56,7 @@ interface Props {
 }
 
 // REMINDER: the tpe of forwardRef is the REVERSE order that they're listed in the callback arguments?!!!
-export const MyTextField2 = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
+export const TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
   (props: Props, ref: ForwardedRef<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       defaultValue,
