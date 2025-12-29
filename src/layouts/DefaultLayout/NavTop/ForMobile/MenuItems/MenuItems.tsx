@@ -1,4 +1,4 @@
-import MenuItem from './MenuItemNext';
+import MenuItem from './MenuItem';
 
 export interface Props {
   /**
