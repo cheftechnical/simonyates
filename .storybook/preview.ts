@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/react-vite";
+import type { Preview } from "@storybook/nextjs";
 import "../src/styles/tailwind.css";
 
 const preview: Preview = {
