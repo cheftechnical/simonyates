@@ -1,4 +1,4 @@
-import { color } from "@/styling/Color/Color";
+import { color } from "../../../libs/Color";
 import { BaseVisualization } from "../../../libs/BaseVisualization";
 import { Coordinate } from "../../../libs/Coordinate";
 import { Visualization } from "../../../libs/Visualization";

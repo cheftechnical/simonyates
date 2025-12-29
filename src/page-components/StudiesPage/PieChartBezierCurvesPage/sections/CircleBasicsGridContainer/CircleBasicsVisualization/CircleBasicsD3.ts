@@ -1,5 +1,5 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-import color from "@/styling/Color";
+import color from "../../../libs/Color";
 import { BaseVisualization } from "../../../libs/BaseVisualization";
 import { Visualization } from "../../../libs/Visualization";
 import { degToRad, radToDeg } from "../../../libs/trig";

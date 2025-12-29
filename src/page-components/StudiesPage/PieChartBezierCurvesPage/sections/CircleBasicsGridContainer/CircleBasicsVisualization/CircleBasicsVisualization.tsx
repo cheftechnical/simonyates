@@ -1,4 +1,4 @@
-import color from "@/styling/Color";
+import color from "../../../libs/Color";
 import { AxisDirection } from "../AxisDirection";
 import { CircleBasicsD3 } from "./CircleBasicsD3";
 import * as d3 from "d3";

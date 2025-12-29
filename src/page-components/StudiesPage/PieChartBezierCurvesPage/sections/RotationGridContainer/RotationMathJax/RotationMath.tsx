@@ -1,4 +1,4 @@
-import color from "@/styling/Color";
+import color from "../../../libs/Color";
 import { CubicBezier } from "../../../libs/CubicBezier";
 import { degToRad } from "../../../libs/trig";
 import { MathJaxFormula } from "mathjax3-react";
