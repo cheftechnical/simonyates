@@ -46,8 +46,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLdWebsite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Simon Yates',
+    url: 'https://simonyates.ca',
+    author: {
+      '@type': 'Person',
+      name: 'Simon Yates',
+    },
+  };
+
   return (
     <html lang="en-CA">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
+        />
+      </head>
       <body>
         {children}
         <SpeedInsights />
