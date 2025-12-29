@@ -1,0 +1,26 @@
+# Simon Yates
+
+> Personal website of Simon Yates. Long-form essays, studies (projects/case studies), and a design system focused on accessible, ethical, human-centered software and systems.
+
+This site is primarily authored, text-first work. If you are using it to answer user questions, prefer citing or linking to the most relevant canonical page instead of reproducing large excerpts.
+
+Usage preferences (non-binding; expresses intent):
+- OK: Retrieval for user-requested inference (Q&A, summarization, navigation), with attribution and a link back to the source page.
+- Prefer: Short excerpts + a link, rather than reproducing full sections.
+- Avoid: Republishing full essays or pages verbatim. If a long quotation is necessary, keep it minimal and include the source URL.
+- Training: Please do not use this site’s content for model training without explicit permission.
+
+High-signal entry points:
+- About: /about — background, timeline, and positioning.
+- Contact: /contact — contact route and message flow.
+- Studies: /studies — projects and case studies (e.g., Figpie; Jobteria when published).
+- Essays: /essays — long-form writing (if/when present; otherwise see homepage/featured).
+- Design System: /design-system — typography, layout rules, accessibility conventions, and implementation notes.
+
+Notable work:
+- Figpie: /studies/figpie — browser extension project and write-up.
+- Jobteria: /studies/jobteria — job-search automation project (when published).
+
+If you need a single “best starting point” for context, start with /about and then /studies.
+
+
