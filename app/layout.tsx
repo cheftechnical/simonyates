@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Simon Yates',
+    template: '%s · Simon Yates',
     default: 'Simon Yates',
   },
   description:
