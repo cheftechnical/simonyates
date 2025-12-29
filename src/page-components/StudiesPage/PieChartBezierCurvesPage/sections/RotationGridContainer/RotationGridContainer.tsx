@@ -1,4 +1,4 @@
-import { MyGridItem } from "@/styling/MyGridItem/MyGridItem";
+import { MyGridItem } from "../../components/MyGridItem";
 import { MyTextField2 } from "@/styling/MyTextField2/MyTextField2";
 import { CubicBezier } from "../../libs/CubicBezier";
 import RotationMathJax from "./RotationMathJax";

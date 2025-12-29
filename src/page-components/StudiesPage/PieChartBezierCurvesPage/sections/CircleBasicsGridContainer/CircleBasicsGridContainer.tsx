@@ -3,7 +3,7 @@ import SinCos from './CircleBasicsVisualization/CircleBasicsVisualization';
 // import {makeStyles} from '@material-ui/core/styles';
 // import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
 import color from "@/styling/Color";
-import { MyGridItem } from "@/styling/MyGridItem";
+import { MyGridItem } from "../../components/MyGridItem";
 import MyTextField2 from "@/styling/MyTextField2";
 // import {color} from '../../../../styling/Color/Color';
 import {AxisDirection} from './AxisDirection';
