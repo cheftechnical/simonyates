@@ -4,7 +4,7 @@ import SinCos from './CircleBasicsVisualization/CircleBasicsVisualization';
 // import MyGridContainer from '../../../../styling/MyGridContainer/MyGridContainer';
 import color from "../../libs/Color";
 import { MyGridItem } from "../../components/MyGridItem";
-import MyTextField2 from "@/styling/MyTextField2";
+import MyTextField2 from "@/components/MyTextField2";
 import {AxisDirection} from './AxisDirection';
 import CircleBasicsMathJax from "./CircleBasicsMathJax/CircleBasicsMath";
 // import {CircleBasicsMathJax} from './CircleBasicsMathJax/CircleBasicsMath';

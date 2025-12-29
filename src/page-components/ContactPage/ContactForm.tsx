@@ -1,7 +1,7 @@
 'use client';
 
 import { MyButton } from "../../components/MyButton";
-import { MyTextField2 } from "../../styling/MyTextField2/MyTextField2";
+import { MyTextField2 } from "../../components/MyTextField2/MyTextField2";
 import { MessageFormValues } from "./MessageFormValues";
 /**
  * Resources:

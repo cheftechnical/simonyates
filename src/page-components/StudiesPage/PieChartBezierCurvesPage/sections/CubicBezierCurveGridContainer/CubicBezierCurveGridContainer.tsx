@@ -1,5 +1,5 @@
 import { MyGridItem } from "../../components/MyGridItem";
-import { MyTextField2 } from "@/styling/MyTextField2/MyTextField2";
+import { MyTextField2 } from "@/components/MyTextField2/MyTextField2";
 import BezierArcMathJax from "./CubicBezierCurveMathJax";
 import CubicBezierCurveVisualization from "./CubicBezierCurveVisualization/CubicBezierCurveVisualization";
 import { ChangeEvent, memo, useState } from "react";

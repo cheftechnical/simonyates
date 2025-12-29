@@ -1,5 +1,5 @@
 import { MyGridItem } from "../../components/MyGridItem";
-import { MyTextField2 } from "@/styling/MyTextField2/MyTextField2";
+import { MyTextField2 } from "@/components/MyTextField2/MyTextField2";
 import { CubicBezier } from "../../libs/CubicBezier";
 import RotationMathJax from "./RotationMathJax";
 import RotationVisualization from "./RotationVisualization/RotationVisualization";
