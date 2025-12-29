@@ -3,7 +3,7 @@ import ContactPage from '../../src/page-components/ContactPage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: { absolute: 'Contact Simon Yates' },
   description:
     'How to get in touch with Simon Yates regarding talks, collaboration, or general enquiries.',
 };
