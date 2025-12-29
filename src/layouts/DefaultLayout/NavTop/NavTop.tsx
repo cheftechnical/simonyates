@@ -1,7 +1,7 @@
 'use client';
 
 import ForDesktop from './ForDesktop/ForDesktop';
-import ForMobile from './ForMobile/ForMobileNext';
+import ForMobile from './ForMobile/ForMobile';
 
 interface Props {
   /**

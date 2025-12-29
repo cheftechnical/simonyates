@@ -1,2 +1,2 @@
-import { default as ForMobile } from "./ForMobileNext";
+import { default as ForMobile } from "./ForMobile";
 export default ForMobile;
