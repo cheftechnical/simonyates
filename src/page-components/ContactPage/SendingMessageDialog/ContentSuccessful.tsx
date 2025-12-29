@@ -1,5 +1,5 @@
 import Logo from "../../../components/Logo";
-import { MyButton } from "../../../styling/MyButton";
+import { MyButton } from "../../../components/MyButton";
 
 /**
  * Props for the ContentSuccessful component
