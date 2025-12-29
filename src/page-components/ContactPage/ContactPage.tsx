@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import ContactForm, { ContactFormHandle } from "./ContactForm";
 import { MessageFormValues } from "./MessageFormValues";
 import SendingMessageDialog from "./SendingMessageDialog/SendingMessageDialog";
@@ -33,7 +33,7 @@ export default function Contact() {
 
   return (
     <>
-      <MyContainer>
+      <Container>
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full">
@@ -54,7 +54,7 @@ export default function Contact() {
             {isSending && <span>Sending&hellip;</span>}
           </div>
         </div>
-      </MyContainer>
+      </Container>
 
       <SendingMessageDialog
         isOpen={isSending}

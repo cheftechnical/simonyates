@@ -1,12 +1,12 @@
 import Section from "../../components/Section/Section";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import appearancesData from "./appearances";
 
 export default function AppearancesPage() {
   const appearances = appearancesData;
 
   return (
-    <MyContainer>
+    <Container>
       <div className="w-full">
         <Section id="appearances">
           {/* mb-6 = 16 px (child font size)  * 1.5 (1x row separaration for related content) = 24 px */}
@@ -124,6 +124,6 @@ export default function AppearancesPage() {
           </table>
         </Section>
       </div>
-    </MyContainer>
+    </Container>
   );
 }

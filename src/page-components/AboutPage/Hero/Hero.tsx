@@ -1,9 +1,9 @@
 import Image from "../../../components/Image/Image";
-import MyContainer from "../../../components/MyContainer/MyContainer";
+import Container from "../../../components/Container/Container";
 
 export default function Hero() {
   return (
-    <MyContainer className="pb-[26px] sm:pb-[80px]">
+    <Container className="pb-[26px] sm:pb-[80px]">
       <div className="flex flex-wrap">
         <div className="w-full md:w-[58.333333%]">
           <div className="flex items-end h-full">
@@ -22,6 +22,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </MyContainer>
+    </Container>
   );
 }

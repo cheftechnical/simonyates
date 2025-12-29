@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from '../../../../components/Logo';
-import MyContainer from '../../../../components/MyContainer/MyContainer';
+import Container from '../../../../components/Container/Container';
 import MenuItems from './MenuItems/MenuItems';
 import Link from 'next/link';
 import { useCallback } from 'react';
@@ -28,7 +28,7 @@ export default function Menu(props: Props) {
   return (
     <div className="bg-[#222222] pt-12 fixed top-0 left-0 w-full h-full z-[100]">
       <div className="pr-[10px]">
-        <MyContainer>
+        <Container>
           <div className="flex justify-end">
             {/* Left align */}
             <div className="flex-grow">
@@ -58,11 +58,11 @@ export default function Menu(props: Props) {
               </button>
             </div>
           </div>
-        </MyContainer>
+        </Container>
       </div>
-      <MyContainer>
+      <Container>
         <MenuItems onClick={handleClose} />
-      </MyContainer>
+      </Container>
     </div>
   );
 }

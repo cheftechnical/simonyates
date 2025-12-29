@@ -1,5 +1,5 @@
 import NavRight from "../../../components/NavRight";
-import MyContainer from "../../../components/MyContainer/MyContainer";
+import Container from "../../../components/Container/Container";
 import { Sections } from "../../../types/Sections";
 import WorkAtEmployer from "./WorkAtEmployer";
 import WorkAtRole from "./WorkAtRole";
@@ -61,7 +61,7 @@ export default function WorkAtTemplate(props: Props) {
   }, [when, where]);
 
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
         <div className="w-full md:w-9/12 md:pr-48 xborder-1 xborder-[magenta] xbg-[pink]">
@@ -113,6 +113,6 @@ export default function WorkAtTemplate(props: Props) {
         </div>
                  
       </div>
-    </MyContainer>
+    </Container>
   );
 }

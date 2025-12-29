@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import CurrencyConversions from "./CurrencyConversions";
 import TemperatureConversions from "./TemperatureConversions";
 import TimeConversions from "./TimeConversions";
@@ -13,7 +13,7 @@ export default function International() {
   const [ratesUpdatedOn, setRatesUpdatedOn] = useState<string | null>(null);
 
   return (
-    <MyContainer>
+    <Container>
       <div>
         <TimeConversions />
       </div>
@@ -37,6 +37,6 @@ export default function International() {
               : "Updating…"}
         </p>
       </div>
-    </MyContainer>
+    </Container>
   );
 }

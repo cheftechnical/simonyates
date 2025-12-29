@@ -1,5 +1,5 @@
 import Logo from "../../../components/Logo";
-import MyContainer from "../../../components/MyContainer/MyContainer";
+import Container from "../../../components/Container/Container";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
       aria-label="Site Directory"
       role="navigation"
     >
-      <MyContainer>
+      <Container>
         <div className="flex flex-wrap">
           <div className="p-0 w-full basis-full max-w-full">
             <Link href="/">
@@ -50,7 +50,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </MyContainer>
+      </Container>
     </div>
   );
 }

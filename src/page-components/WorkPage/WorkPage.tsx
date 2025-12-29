@@ -6,7 +6,7 @@ import {
 } from "../../data/workExperience";
 import Li from "../../components/ListsUnordered/Li/Li";
 import Ul from "../../components/ListsUnordered/Ul/Ul";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import { Sections } from "../../types/Sections";
 import Hero from "./Hero/Hero";
 import WorkExperience from "./WorkExperience/WorkExperience";
@@ -23,7 +23,7 @@ const sections: Sections = workExperienceData.reduce((acc, work) => {
 
 export default function WorkPage() {
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* pr-32 = 128 or 3 visual octaves */}
         <div className="w-full md:w-9/12 md:pr-32 xborder-1 border-[magenta] xbg-[pink]">
@@ -67,7 +67,7 @@ export default function WorkPage() {
         </div>
 
       </div>
-    </MyContainer>
+    </Container>
   );
 }
 

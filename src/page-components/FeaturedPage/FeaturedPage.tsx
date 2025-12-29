@@ -1,14 +1,14 @@
 import Download from "../../components/Download";
 import NavRight from "../../components/NavRight";
 import Sections from "../../components/Sections/Sections";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import { sections } from "./sections";
 import Link from "next/link";
 
 // featured
 export default function Featured() {
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* Content */}
         {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
@@ -102,6 +102,6 @@ export default function Featured() {
           <NavRight sections={sections} />
         </div>
       </div>
-    </MyContainer>
+    </Container>
   );
 }

@@ -1,11 +1,11 @@
 import Callout from "../../components/Callout/Callout";
 import NavRight from "../../components/NavRight";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import { sections } from "./sections";
 
 export function DesignSystem() {
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* Content */}
         <div className="w-full md:w-3/5">
@@ -518,7 +518,7 @@ export function DesignSystem() {
           <NavRight sections={sections} />
         </div>
       </div>
-    </MyContainer>
+    </Container>
   );
 }
 

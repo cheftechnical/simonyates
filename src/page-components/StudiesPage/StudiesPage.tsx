@@ -1,12 +1,12 @@
 import Image from "../../components/Image/Image";
 import Section from "../../components/Section/Section";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import Link from "next/link";
 
 // This page is a focused exploration where implementation, mathematics, or structure is the primary language — not narrative.
 export default function StudiesPage() {
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* Content */}
         {/* pr-32 = 128 or 3 visual octaves * 1.5 line height = pr-48 192 */}
@@ -66,6 +66,6 @@ export default function StudiesPage() {
           </Section>
         </div>
       </div>
-    </MyContainer>
+    </Container>
   );
 }

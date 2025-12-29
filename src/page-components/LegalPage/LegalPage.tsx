@@ -1,5 +1,5 @@
 import NavRight from "../../components/NavRight/NavRight";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import { Sections } from "../../types/Sections";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
@@ -17,7 +17,7 @@ const sections: Sections = {
 
 export function Legal() {
   return (
-    <MyContainer>
+    <Container>
       <div className="flex flex-wrap">
         {/* Content */}
         <div className="w-full md:w-9/12 md:pr-48">
@@ -31,7 +31,7 @@ export function Legal() {
           <NavRight sections={sections} />
         </div>
       </div>
-    </MyContainer>
+    </Container>
   );
 }
 

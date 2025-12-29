@@ -17,7 +17,7 @@ interface Props {
   fullHeight?: boolean;
 }
 
-export default function MyContainer({ children, className = "", fullHeight = false }: Props) {
+export default function Container({ children, className = "", fullHeight = false }: Props) {
   const baseClasses = `
     mx-auto
     px-[22px]

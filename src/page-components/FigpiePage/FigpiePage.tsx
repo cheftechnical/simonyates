@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 
 export function FigpiePage() {
   const ulClasses = "mt-[calc(1.0rem)]";
@@ -8,7 +8,7 @@ export function FigpiePage() {
     "font-normal text-base leading-normal mt-[calc(1.0rem)] first:mt-0 ml-[21px] pl-0 list-none text-gray-900 list-item-custom-bullet";
 
   return (
-    <MyContainer>
+    <Container>
       <div className="w-full md:w-2/3">
         <h1 className="font-primary font-normal text-4xl leading-relaxed">
           Figpie
@@ -82,7 +82,7 @@ export function FigpiePage() {
           .
         </p>
       </div>
-    </MyContainer>
+    </Container>
   );
 }
 

@@ -1,6 +1,6 @@
 import Image from "../../components/Image";
 import NavRight from "../../components/NavRight";
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import { Sections } from "../../types/Sections";
 
 const sections: Sections = {
@@ -49,7 +49,7 @@ const sections: Sections = {
 export function TheImaginationGapAltTextAiPage() {
   return (
     <article>
-      <MyContainer>
+      <Container>
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-9/12 md:pr-48">
@@ -622,7 +622,7 @@ export function TheImaginationGapAltTextAiPage() {
             <NavRight sections={sections} />
           </div>
         </div>
-      </MyContainer>
+      </Container>
     </article>
   );
 }

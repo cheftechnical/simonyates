@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "@/components/MyContainer/MyContainer";
+import Container from "@/components/Container/Container";
 import MathJaxProviderWrapper from "./MathJaxProviderWrapper";
 import { CircleBasicsGridContainer } from "./sections/CircleBasicsGridContainer/CircleBasicsGridContainer";
 import { BezierArcGridContainer } from "./sections/CubicBezierCurveGridContainer/CubicBezierCurveGridContainer";
@@ -9,7 +9,7 @@ import RotationGridContainer from "./sections/RotationGridContainer";
 export default function PieChartBezierCurvesPage() {
   return (
     <MathJaxProviderWrapper>
-      <MyContainer>
+      <Container>
         <h1 className="font-primary font-normal text-4xl leading-relaxed">
           A Mathematical Construction of Pie Charts Using Cubic B&eacute;zier&nbsp;Curves
         </h1>
@@ -28,7 +28,7 @@ export default function PieChartBezierCurvesPage() {
           Rotation and Composition
         </h2>
         <RotationGridContainer />
-      </MyContainer>
+      </Container>
     </MathJaxProviderWrapper>
   );
 }

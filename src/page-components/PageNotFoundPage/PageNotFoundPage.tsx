@@ -1,9 +1,9 @@
-import MyContainer from "../../components/MyContainer/MyContainer";
+import Container from "../../components/Container/Container";
 import Link from "next/link";
 
 export default function PageNotFoundPage() {
   return (
-    <MyContainer>
+    <Container>
       <h1 className="font-normal leading-none mt-[272px] text-7xl">404</h1>
       <p className="font-normal leading-relaxed mb-[388px] mt-[3.1748rem] text-gray-600 text-xl">
         This page does&nbsp;not exist.
@@ -20,6 +20,6 @@ export default function PageNotFoundPage() {
         </Link>
         .
       </p>
-    </MyContainer>
+    </Container>
   );
 }

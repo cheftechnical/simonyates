@@ -1,4 +1,4 @@
-import MyContainer from "../../../../components/MyContainer/MyContainer";
+import Container from "../../../../components/Container/Container";
 import { ReactNode } from "react";
 
 interface Props {
@@ -12,9 +12,9 @@ export default function LifeAsAMakerContainer(props: Props) {
   const { children } = props;
 
   return (
-    <MyContainer>
+    <Container>
       {children}
-    </MyContainer>
+    </Container>
   );
 }
 

@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from '../../../../components/Logo';
-import MyContainer from '../../../../components/MyContainer/MyContainer';
+import Container from '../../../../components/Container/Container';
 import Menu from './Menu';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
@@ -19,7 +19,7 @@ export default function ForMobile() {
 
   return (
     <div className="bg-white pt-12 pb-6 fixed top-0 w-full z-[999]">
-      <MyContainer>
+      <Container>
         <div className="flex justify-end">
           {/* Left align */}
           <div className="flex-grow">
@@ -60,7 +60,7 @@ export default function ForMobile() {
             </div>
           </div>
         </div>
-      </MyContainer>
+      </Container>
 
       <Menu onClose={handleHideMenu} visible={isMenuVisible} />
     </div>

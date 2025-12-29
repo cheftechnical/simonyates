@@ -1,6 +1,6 @@
 'use client';
 
-import MyContainer from "../../../components/MyContainer/MyContainer";
+import Container from "../../../components/Container/Container";
 import StatsItem from "./StatsItem";
 import Carousel from "react-material-ui-carousel";
 
@@ -33,7 +33,7 @@ export default function Stats() {
     <div className="pt-[36px] pb-[36px] bg-gray-25">
       {/* Desktop */}
       <div className="hidden sm:block">
-        <MyContainer>
+        <Container>
           <div className="flex flex-wrap">
             <div className="w-1/4">
               <StatsItem {...stat[0]} />
@@ -48,7 +48,7 @@ export default function Stats() {
               <StatsItem {...stat[3]} />
             </div>
           </div>
-        </MyContainer>
+        </Container>
       </div>
 
       {/* Mobile */}
