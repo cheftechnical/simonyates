@@ -1,5 +1,5 @@
 import Footer from './Footer';
-import NavTop from './NavTop/NavTopNext';
+import NavTop from './NavTop/NavTop';
 import SkipNav from './SkipNav';
 import { ReactNode } from 'react';
 
