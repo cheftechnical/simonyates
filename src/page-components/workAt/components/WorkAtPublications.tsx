@@ -1,4 +1,4 @@
-import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
+import ConditionalIndent from "./ConditionalIndent/ConditionalIndent";
 
 interface Props {
   children?: any;

@@ -1,4 +1,4 @@
-import ConditionalIndent from "../../../components/ConditionalIndent/ConditionalIndent";
+import ConditionalIndent from "./ConditionalIndent/ConditionalIndent";
 import { useMemo } from "react";
 
 interface Props {
