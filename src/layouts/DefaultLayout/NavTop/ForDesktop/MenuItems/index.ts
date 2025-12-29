@@ -1,2 +1,2 @@
-import { default as MenuItems } from "./MenuItemsNext";
+import { default as MenuItems } from "./MenuItems";
 export default MenuItems;
