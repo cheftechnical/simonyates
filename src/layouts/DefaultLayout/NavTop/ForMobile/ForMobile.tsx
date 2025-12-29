@@ -2,7 +2,7 @@
 
 import Logo from '../../../../components/Logo';
 import MyContainer from '../../../../styling/MyContainer/MyContainer';
-import Menu from './MenuNext';
+import Menu from './Menu';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
 
