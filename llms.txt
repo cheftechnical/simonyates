@@ -13,14 +13,10 @@ Usage preferences (non-binding; expresses intent):
 High-signal entry points:
 - About: /about — background, timeline, and positioning.
 - Contact: /contact — contact route and message flow.
-- Studies: /studies — projects and case studies (e.g., Figpie; Jobteria when published).
-- Essays: /essays — long-form writing (if/when present; otherwise see homepage/featured).
+- Studies: /studies — projects and case studies (e.g., Figpie).
 - Design System: /design-system — typography, layout rules, accessibility conventions, and implementation notes.
 
 Notable work:
-- Figpie: /studies/figpie — browser extension project and write-up.
-- Jobteria: /studies/jobteria — job-search automation project (when published).
+- Figpie: /figpie — Figma plugin project and write-up.
 
 If you need a single “best starting point” for context, start with /about and then /studies.
-
-
