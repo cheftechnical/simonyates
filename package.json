@@ -58,6 +58,7 @@
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "@vitejs/plugin-react-swc": "^4.2.0",
+    "ajv": "8.17.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.39.0",
     "eslint-plugin-perfectionist": "^2.11.0",
