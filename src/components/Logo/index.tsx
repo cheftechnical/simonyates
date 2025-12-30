@@ -11,6 +11,7 @@ interface Props {
     | "philips"
     | "philips-lighting"
     | "rbc"
+    | "rss"
     | "simon-yates"
     | "truenorth"
     | "twitter"

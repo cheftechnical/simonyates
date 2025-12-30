@@ -15,7 +15,7 @@ export default function ContentSuccessful(props: Props) {
   const { onClose } = props;
   return (
     <div className="p-10 text-center">
-      <div className="mt-0">
+      <div className="border-1 border-[magenta]">
         {/* Custom SVG checkmark icon - replaced Material-UI CheckIcon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,41 +34,55 @@ export default function ContentSuccessful(props: Props) {
       </div>
 
       {/* font-size (24) / 2 = 12 */}
-      <h2 className="mt-3 font-primary font-normal text-xl leading-8">
+      <h2 className="mt-[1.5874rem] text-2xl leading-none border-1 border-[magenta]">
         Thank you.
       </h2>
 
-      <p className="mt-1 font-primary font-normal text-base leading-normal text-gray-600">
+      <p className="mt-[1.5874rem] text-base leading-normal text-gray-600 border-1 border-[magenta]">
         We&rsquo;ll chat soon.
       </p>
 
-      <p className="mt-8 font-primary font-normal text-base leading-normal">
-        In the meantime, let&rsquo;s connect on social media:
+      <p className="mt-[1.5874rem] text-base leading-normal border-1 border-[magenta]">
+        Other ways to connect:
       </p>
 
-      <div className="mt-4 flex justify-center">
+      <div className="mt-[1.0rem] border-1 border-[magenta] flex items-center w-full">
         {/* LinkedIn */}
-        <div className="flex items-center">
-          <div>
-            <Logo brand="linkedin" variant="grey-500" width={24} />
-          </div>
-          <div className="ml-1">
-            <p className="font-secondary text-base leading-normal">
-              <a
-                href="https://www.linkedin.com/in/simonyates/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Find me on LinkedIn"
-                className="text-gray-900 no-underline hover:underline"
-              >
-                LinkedIn
-              </a>
-            </p>
-          </div>
-        </div>          
-      </div>
+        <div className="w-1/2 border-1 border-[red] flex flex-col items-center text-center">
+          <Logo brand="linkedin" variant="grey-500" width={24} />
+          <p className="mt-2 font-secondary text-base leading-normal">
+            <a
+              href="https://www.linkedin.com/in/simonyates/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Find me on LinkedIn"
+              className="text-gray-900 no-underline hover:underline"
+            >
+              LinkedIn<br />
+              for professional contact
+            </a>
+          </p>
+        </div>
 
-      <div className="flex justify-center mt-12">
+        {/* RSS */}
+        <div className="w-1/2 border-1 border-[green] flex flex-col items-center text-center">
+          <Logo brand="rss" variant="grey-500" width={24} />
+          <p className="mt-2 font-secondary text-base leading-normal">
+            <a
+              href="https://www.linkedin.com/in/simonyates/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="RSS"
+              className="text-gray-900 no-underline hover:underline"
+            >
+              RSS<br />
+              for updates to writing and work
+            </a>
+          </p>
+        </div>
+      </div>
+    
+      <div className="mt-[1.5874rem] flex justify-center border-1 border-[magenta]">
         <Button onClick={onClose}>
           Close
         </Button>

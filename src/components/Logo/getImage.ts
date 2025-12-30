@@ -86,6 +86,15 @@ export function getImage(brand: string, variant: string): Image | undefined {
         },
         src: `${basePath}/${brand}/rbc--color--208x270.png`,
       };
+    case "rss":
+      return {
+        alt: "RSS feed",
+        dimension: {
+          height: 24,
+          width: 24,
+        },
+        src: `${basePath}/${brand}/feed-icon.svg`,
+      };
     case "simon-yates":
       // Depending on the variant, there are two different sizes being used
       switch (variant) {
