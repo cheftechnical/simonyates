@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/nextjs";
+import "../src/styles/fonts.css";
 import "../src/styles/tailwind.css";
 
 const preview: Preview = {
