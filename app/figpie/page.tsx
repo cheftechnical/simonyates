@@ -8,8 +8,25 @@ export const metadata: Metadata = {
 };
 
 export default function Figpie() {
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Figpie',
+    author: {
+      '@type': 'Person',
+      name: 'Simon Yates',
+    },
+    datePublished: '2021-04-13',
+    dateModified: '2021-04-13',
+    url: 'https://www.simonyates.ca/figpie',
+  };
+
   return (
     <DefaultLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
       <FigpiePage />
     </DefaultLayout>
   );

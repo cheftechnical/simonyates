@@ -64,6 +64,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Simon Yates · Writing &amp; Work"
+          href="/rss.xml"
+        />
       </head>
       <body>
         {children}

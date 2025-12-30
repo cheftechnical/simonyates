@@ -24,8 +24,25 @@ export const metadata: Metadata = {
 };
 
 export default function EssayTheImaginationGapAltTextAi() {
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The Imagination Gap: Alt Text & AI',
+    author: {
+      '@type': 'Person',
+      name: 'Simon Yates',
+    },
+    datePublished: '2025-12-11',
+    dateModified: '2025-12-11',
+    url: 'https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai',
+  };
+
   return (
     <DefaultLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
       <TheImaginationGapAltTextAiPage />
     </DefaultLayout>
   );

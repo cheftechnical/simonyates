@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+  version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+>
+  <channel>
+    <title>Simon Yates · Writing &amp; Work</title>
+    <link>https://www.simonyates.ca/</link>
+    <description>
+      Personal website of Simon Yates: essays, studies (case studies), and a design system focused on accessible, ethical, human-centred systems.
+    </description>
+    <language>en</language>
+    <atom:link href="https://www.simonyates.ca/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 GMT</lastBuildDate>
+
+    <!--
+      This feed is intentionally calm (low-frequency) and includes only major essays and case studies.
+      Canonical URLs match those already present in /sitemap.xml.
+    -->
+
+    <!-- Newest → Oldest -->
+
+    <item>
+      <title>The Imagination Gap: Alt Text &amp; AI</title>
+      <link>https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai</link>
+      <guid isPermaLink="true">https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai</guid>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+An essay exploring the gap between human imagination and AI-generated alt text, and how iterative prompting can make that gap visible.
+      ]]></description>
+      <content:encoded><![CDATA[
+<article>
+  <p><strong>The Imagination Gap</strong> is the space between what a writer intends and what a reader can actually reconstruct—especially when the reader is relying on alt-text. This essay uses that idea to evaluate AI-assisted alt-text workflows.</p>
+
+  <p>The core theme: if you can’t reliably imagine the image from the text, then the text isn’t doing the accessibility job it claims to be doing. AI can help, but only if we treat the process as iterative validation (not “generate once and ship”).</p>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li>Defines the “Imagination Gap” and why it matters for accessibility.</li>
+    <li>Shows an iterative approach to writing and validating alt-text using image generation as feedback.</li>
+    <li>Emphasizes attribution and accountability: assistive tooling can’t replace inclusive review.</li>
+  </ul>
+
+  <p>Read the canonical page (with images and full context): <a href="https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai">https://www.simonyates.ca/essays/the-imagination-gap-alt-text-ai</a></p>
+</article>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Figpie</title>
+      <link>https://www.simonyates.ca/figpie</link>
+      <guid isPermaLink="true">https://www.simonyates.ca/figpie</guid>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+A Figma plugin for creating clean, editable pie charts from data.
+      ]]></description>
+      <content:encoded><![CDATA[
+<article>
+  <p><strong>Figpie</strong> is a Figma plugin that helps you turn data into pie charts that stay clean and editable in design files.</p>
+
+  <h2>What this case study covers</h2>
+  <ul>
+    <li>Why chart tooling inside design workflows matters.</li>
+    <li>How data-to-visual output can remain editable (not “baked in”).</li>
+    <li>Practical UX considerations for small “everyday” tools.</li>
+  </ul>
+
+  <p>Read the canonical page: <a href="https://www.simonyates.ca/figpie">https://www.simonyates.ca/figpie</a></p>
+</article>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>A Mathematical Construction of Pie Charts Using Cubic Bézier Curves</title>
+      <link>https://www.simonyates.ca/studies/pie-chart-bezier-curves</link>
+      <guid isPermaLink="true">https://www.simonyates.ca/studies/pie-chart-bezier-curves</guid>
+      <pubDate>Sat, 25 Dec 2020 00:00:00 GMT</pubDate>
+      <description><![CDATA[
+A mathematical exploration of constructing pie charts using cubic Bézier curves, presented through diagrams and formulas.
+      ]]></description>
+      <content:encoded><![CDATA[
+<article>
+  <p>This study walks through a <strong>mathematical construction of pie charts</strong> using <strong>cubic Bézier curves</strong>, with supporting diagrams and formulas.</p>
+
+  <h2>What you’ll find</h2>
+  <ul>
+    <li>Geometric intuition for circular arcs and their approximations.</li>
+    <li>How cubic Bézier control points relate to curvature and arc fitting.</li>
+    <li>Worked examples and visualizations intended to make the math legible.</li>
+  </ul>
+
+  <p>Read the canonical page (interactive/visual version): <a href="https://www.simonyates.ca/studies/pie-chart-bezier-curves">https://www.simonyates.ca/studies/pie-chart-bezier-curves</a></p>
+</article>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
+
+

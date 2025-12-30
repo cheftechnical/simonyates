@@ -53,7 +53,9 @@ export function TheImaginationGapAltTextAiPage() {
         <div className="flex flex-wrap">
           {/* Content */}
           <div className="w-full md:w-9/12 md:pr-48">
-            <div className="text-sm uppercase mb-6">December 11, 2025</div>
+            <div className="text-sm uppercase mb-6">
+              <time dateTime="2025-12-11">December 11, 2025</time>
+            </div>
             <h1 id="intro" className="font-normal text-2xl leading-relaxed">
               The Imagination&nbsp;Gap
             </h1>

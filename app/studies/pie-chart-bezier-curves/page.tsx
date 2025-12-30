@@ -9,8 +9,25 @@ export const metadata: Metadata = {
 };
 
 export default function PieChartBezierCurvesStudy() {
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'A Mathematical Construction of Pie Charts Using Cubic Bézier Curves',
+    author: {
+      '@type': 'Person',
+      name: 'Simon Yates',
+    },
+    datePublished: '2020-12-25',
+    dateModified: '2020-12-25',
+    url: 'https://www.simonyates.ca/studies/pie-chart-bezier-curves',
+  };
+
   return (
     <DefaultLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
+      />
       <PieChartBezierCurvesPage />
     </DefaultLayout>
   );
