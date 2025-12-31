@@ -4,7 +4,7 @@ import WorkAtTemplate from "../components/WorkAtTemplate";
 import Content from "./Content";
 import { sections } from "./sections";
 
-export function TrueNorthPage() {
+export function TrueNorthTechnologiesPage() {
   const workData = getWorkExperienceBySectionId("truenorth");
   if (!workData) throw new Error("Work experience data not found for TrueNorth");
 
@@ -21,4 +21,4 @@ export function TrueNorthPage() {
   );
 }
 
-export default TrueNorthPage;
+export default TrueNorthTechnologiesPage;

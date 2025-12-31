@@ -1,5 +1,5 @@
 import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
-import TrueNorthPage from '../../../src/page-components/workAt/TrueNorthPage/TrueNorthPage';
+import TrueNorthTechnologiesPage from '../../../src/page-components/workAt/TrueNorthTechnologiesPage/TrueNorthTechnologiesPage';
 import { workCompanyMetadata } from '../companyMetadata';
 
 export const metadata = workCompanyMetadata('TrueNorth Technologies', 'truenorth-technologies');
@@ -7,7 +7,7 @@ export const metadata = workCompanyMetadata('TrueNorth Technologies', 'truenorth
 export default function TrueNorthTechnologies() {
   return (
     <DefaultLayout>
-      <TrueNorthPage />
+      <TrueNorthTechnologiesPage />
     </DefaultLayout>
   );
 }
