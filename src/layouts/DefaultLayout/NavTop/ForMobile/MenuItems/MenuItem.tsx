@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { isNavItemActive } from '../../isNavItemActive';
 
 interface Props {
   /**
@@ -21,7 +22,7 @@ interface Props {
 export default function MenuItem(props: Props) {
   const { href, onClick, title } = props;
   const pathname = usePathname();
-  const isActive = pathname === href || pathname?.startsWith(href + '/');
+  const isActive = isNavItemActive({ pathname, href });
 
   return (
     <div className="pt-6">

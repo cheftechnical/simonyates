@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { isNavItemActive } from '../../isNavItemActive';
 
 enum Variant {
   FadeIn = 'fadeIn',
@@ -57,17 +58,7 @@ export function MenuItems(props: Props) {
   const liClasses = getLiClasses();
   const linkClasses = getLinkClasses();
 
-  const isActive = (path: string) => {
-    if (!pathname) return false;
-
-    // Aliases: treat certain routes as belonging to a nav section.
-    // Example: Figpie is a "Study" even though it lives at the root level.
-    if (path === '/studies' && (pathname === '/figpie' || pathname.startsWith('/figpie/'))) {
-      return true;
-    }
-
-    return pathname === path || pathname.startsWith(path + '/');
-  };
+  const isActive = (href: string) => isNavItemActive({ pathname, href });
 
   return (
     <div role="navigation">
