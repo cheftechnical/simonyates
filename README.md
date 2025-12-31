@@ -94,3 +94,14 @@ This keeps hex values in one place (CSS), while Tailwind utilities reference tho
 ## Changelog
 - 2025‑10‑30: Node 22 upgrade, dependency updates, Storybook v10 minimal, CI added, lint rules, vendor/route splitting.
 - 2024‑02‑01: Initial notes.
+
+
+
+## Favicon
+```bash
+python3 - << 'EOF'
+from PIL import Image
+imgs = [Image.open("favicon-16x16.png"), Image.open("favicon-32x32.png")]
+imgs[0].save("favicon.ico", sizes=[(16,16),(32,32)])
+EOF
+```

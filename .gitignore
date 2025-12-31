@@ -34,3 +34,5 @@ node_modules/
 
 # Affinity Photo files
 *.afphoto~lock~
+# Affinity Designer files
+*.afdesign~lock~
