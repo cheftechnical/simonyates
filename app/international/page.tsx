@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'International',
+  alternates: { canonical: '/international' },
   description: 'International work and projects',
 };
 

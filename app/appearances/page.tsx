@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Appearances',
+  alternates: { canonical: '/appearances' },
   description:
     'Invited talks and presentations for organisations including BrainStation, RBC, and IEEE, covering product, engineering, accessibility, and health-focused systems.',
 };

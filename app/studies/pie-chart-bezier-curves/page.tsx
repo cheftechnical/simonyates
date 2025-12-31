@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'A Mathematical Construction of Pie Charts Using Cubic Bézier Curves',
+  alternates: { canonical: '/studies/pie-chart-bezier-curves' },
   description:
     'A mathematical exploration of constructing pie charts using cubic Bézier curves, presented through diagrams and formulas.',
 };

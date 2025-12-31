@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Design System',
+  alternates: { canonical: '/design-system' },
   description:
     'Principles, typography, layout, and structural decisions that govern the design of this site.',
 };

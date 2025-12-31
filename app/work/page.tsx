@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Work',
+  alternates: { canonical: '/work' },
   description:
     'Professional experience across companies, with detailed records of roles, projects, and contributions.',
 };

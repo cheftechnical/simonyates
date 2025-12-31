@@ -5,6 +5,7 @@ const newPath = '/studies/pie-chart-bezier-curves';
 
 export const metadata: Metadata = {
   title: 'Moved',
+  alternates: { canonical: newPath },
   robots: { index: false, follow: true },
 };
 

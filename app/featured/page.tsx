@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Featured',
+  alternates: { canonical: '/featured' },
   description:
     'A curated selection of ideas, systems, and projects across product, engineering, and design.',
 };

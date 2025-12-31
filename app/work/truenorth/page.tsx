@@ -5,6 +5,7 @@ const newPath = '/work/truenorth-technologies';
 
 export const metadata: Metadata = {
   title: 'Moved',
+  alternates: { canonical: newPath },
   robots: { index: false, follow: true },
 };
 

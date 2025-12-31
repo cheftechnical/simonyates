@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'The Imagination Gap: Alt Text & AI',
+  alternates: { canonical: '/essays/the-imagination-gap-alt-text-ai' },
   description: 'An essay exploring the gap between human imagination and AI-generated alt text',
   openGraph: {
     title: 'The Imagination Gap: Alt Text & AI',

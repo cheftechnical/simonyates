@@ -2,7 +2,7 @@ import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import JibDesignAndAdvertisingPage from '../../../src/page-components/workAt/JibDesignAndAdvertisingPage/JibDesignAndAdvertisingPage';
 import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata = workCompanyMetadata('Jib Design and Advertising');
+export const metadata = workCompanyMetadata('Jib Design and Advertising', 'jib-design-and-advertising');
 
 export default function JibDesignAndAdvertising() {
   return (

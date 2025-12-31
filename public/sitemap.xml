@@ -9,7 +9,7 @@
     </url>
 
     <url>
-        <loc>https://www.simonyates.ca/work/</loc>
+        <loc>https://www.simonyates.ca/work</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -75,7 +75,7 @@
     </url>
 
     <url>
-        <loc>https://www.simonyates.ca/featured/</loc>
+        <loc>https://www.simonyates.ca/featured</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -105,19 +105,19 @@
     </url>
 
     <url>
-        <loc>https://www.simonyates.ca/about/</loc>
+        <loc>https://www.simonyates.ca/about</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://www.simonyates.ca/contact/</loc>
+        <loc>https://www.simonyates.ca/contact</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://www.simonyates.ca/legal/</loc>
+        <loc>https://www.simonyates.ca/legal</loc>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>

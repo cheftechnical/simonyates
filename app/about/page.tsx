@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: { absolute: 'About Simon Yates' },
+  alternates: { canonical: '/about' },
   description:
     'Background, experience, and approach to building accessible, ethical, human-centred systems across product and engineering.',
 };

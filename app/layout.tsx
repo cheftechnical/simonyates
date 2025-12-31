@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   },
   description:
     'Product & engineering leader building accessible, ethical, human-centred systems.',
-  metadataBase: new URL('https://simonyates.ca'),
+  metadataBase: new URL('https://www.simonyates.ca'),
   openGraph: {
     title: 'Simon Yates',
     description:
       'Product & engineering leader building accessible, ethical, human-centred systems.',
-    url: 'https://simonyates.ca',
+    url: 'https://www.simonyates.ca',
     siteName: 'Simon Yates',
     locale: 'en_CA',
     type: 'website',
@@ -50,7 +50,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Simon Yates',
-    url: 'https://simonyates.ca',
+    url: 'https://www.simonyates.ca',
     author: {
       '@type': 'Person',
       name: 'Simon Yates',

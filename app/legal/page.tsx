@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Legal',
+  alternates: { canonical: '/legal' },
   description: 'Privacy Policy and Terms of Service governing the use of this site.',
 };
 

@@ -2,7 +2,7 @@ import DefaultLayout from '../../../src/layouts/DefaultLayout/DefaultLayout';
 import TrueNorthPage from '../../../src/page-components/workAt/TrueNorthPage/TrueNorthPage';
 import { workCompanyMetadata } from '../companyMetadata';
 
-export const metadata = workCompanyMetadata('TrueNorth Technologies');
+export const metadata = workCompanyMetadata('TrueNorth Technologies', 'truenorth-technologies');
 
 export default function TrueNorthTechnologies() {
   return (
