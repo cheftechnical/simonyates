@@ -17,7 +17,7 @@ export default function ComputerCityContent() {
       </div>
 
       {/* Show for mobile*/}
-      <div className="md:hidden w-full">
+      <div className="md:hidden w-full mb-6">
         <Image
           alt="Computer City store"
           src="/images/about/life-as-a-maker/computer-city.png"
