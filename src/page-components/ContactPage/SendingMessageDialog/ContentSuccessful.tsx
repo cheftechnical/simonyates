@@ -53,11 +53,11 @@ export default function ContentSuccessful(props: Props) {
             href="https://www.linkedin.com/in/simonyates/"
             target="_blank"
             rel="noopener noreferrer"
-            title="Find me on LinkedIn"
+            title="Simon Yates on LinkedIn"
             className="text-gray-900 no-underline hover:underline"
           >
             <div className="flex flex-col items-center text-center">
-              <Logo brand="linkedin" variant="grey-500" width={24} />
+              <Logo brand="linkedin" variant="757575" width={24} />
               <div className="mt-2 font-secondary text-base leading-normal">
                 LinkedIn<br />
                 {/* for professional contact */}
@@ -69,15 +69,15 @@ export default function ContentSuccessful(props: Props) {
         {/* RSS */}
         <div className="w-1/2 xborder-1 xborder-[green] flex flex-col items-center text-center">
           <a
-            aria-label="RSS (open in new tab)"
+            aria-label="RSS feed — long-form writing, essays, and project notes (open in new tab)"
             href="/rss.xml"
             target="_blank"
             rel="noopener"
-            title="RSS"
+            title="RSS feed — long-form writing, essays, and project notes"
             className="text-gray-900 no-underline hover:underline"
           >
             <div className="flex flex-col items-center text-center">
-              <Logo brand="rss" variant="grey-500" width={24} />
+              <Logo brand="rss" variant="757575" width={24} />
               <div className="mt-2 font-secondary text-base leading-normal">
                 RSS<br />
                 {/* for updates to writing and work */}
