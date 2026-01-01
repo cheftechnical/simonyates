@@ -10,41 +10,38 @@ export default function Footer() {
       role="navigation"
     >
       <Container>
-        <div className="flex flex-wrap">
-          <div className="p-0 w-full basis-full max-w-full">
+        <div className="grid grid-cols-[1fr_auto] gap-6 items-start">
+          {/* Left column */}
+          <div className="min-w-0">
             <Link href="/">
               <Logo brand="simon-yates" variant="eeeeee" width={130} />
             </Link>
-          </div>
-        </div>
 
-        <div className="flex flex-wrap">
-          <div className="pt-2 w-1/2 basis-1/2 max-w-1/2">
-            <p className="text-sm text-gray-400">
-              &copy; 2026 Sybaris Analytics Corporation
-              <br />
-            </p>
-            <p className="text-sm text-gray-400">
-              <Link href="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
-                Legal
-              </Link>
-              {" "}&middot;{" "}
-              <Link href="/about" className="text-gray-400 hover:underline hover:text-gray-50">
-                About
-              </Link>
-              {" "}&middot;{" "}
-              <Link href="/contact" className="text-gray-400 hover:underline hover:text-gray-50">
-                Contact
-              </Link>
-            </p>
+            <div className="pt-2">
+              <p className="text-sm text-gray-400">&copy; 2026 Sybaris Analytics Corporation</p>
+              <p className="text-sm text-gray-400">
+                <Link href="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
+                  Legal
+                </Link>
+                {' '}&middot;{' '}
+                <Link href="/about" className="text-gray-400 hover:underline hover:text-gray-50">
+                  About
+                </Link>
+                {' '}&middot;{' '}
+                <Link href="/contact" className="text-gray-400 hover:underline hover:text-gray-50">
+                  Contact
+                </Link>
+              </p>
+            </div>
           </div>
-          <div className="flex justify-end w-1/2 basis-1/2 max-w-1/2">
+
+          {/* Right column */}
+          <div className="justify-self-end self-center">
             <a
               rel="noopener"
               title="Find me on LinkedIn"
               target="_blank"
               href="https://www.linkedin.com/in/simonyates/"
-              className="ml-6"
             >
               <Logo brand="linkedin" variant="grey-300" width={24} />
             </a>
