@@ -10,8 +10,30 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const jsonLdWebPage = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://www.simonyates.ca/about#webpage',
+        url: 'https://www.simonyates.ca/about',
+        name: 'About Simon Yates',
+        about: {
+          '@id': 'https://www.simonyates.ca/#simon-yates',
+        },
+        isPartOf: {
+          '@id': 'https://www.simonyates.ca/#website',
+        },
+      },
+    ],
+  };
+
   return (
     <DefaultLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
+      />
       <AboutPage />
     </DefaultLayout>
   );

@@ -48,13 +48,28 @@ export default function RootLayout({
 }) {
   const jsonLdWebsite = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Simon Yates',
-    url: 'https://www.simonyates.ca',
-    author: {
-      '@type': 'Person',
-      name: 'Simon Yates',
-    },
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': 'https://www.simonyates.ca/#simon-yates',
+        name: 'Simon Yates',
+        url: 'https://www.simonyates.ca',
+        image: 'https://www.simonyates.ca/images/about/hero/simon-yates.png',
+        sameAs: [
+          'https://www.linkedin.com/in/simonyates/',
+          'https://github.com/cheftechnical/',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://www.simonyates.ca/#website',
+        name: 'Simon Yates',
+        url: 'https://www.simonyates.ca',
+        author: {
+          '@id': 'https://www.simonyates.ca/#simon-yates',
+        },
+      },
+    ],
   };
 
   return (
