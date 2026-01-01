@@ -14,7 +14,7 @@ export default function StudiesPage() {
           <Section id="studies">
             <h1 className="font-normal text-2xl leading-relaxed">Studies</h1>
 
-            <div className="mt-8">
+            <div className="mt-6 pl-0 sm:pl-10">
               <section>
                 <h2 className="font-normal text-xl leading-relaxed w-1/2">
                   <Link href="/figpie" className="text-blue-500 no-underline hover:underline">
@@ -34,21 +34,21 @@ export default function StudiesPage() {
                   A production-grade Figma plugin for generating pie&nbsp;charts.
                 </p>
                 <p className="mt-3">
-                  Design, engineering, and long-term maintenance of a focused visualization tool with 100k+&nbsp;installs.
+                  Design, engineering, and long-term maintenance of a focused visualization tool with <strong>100k+&nbsp;installs.</strong>
                 </p>
               </section>
               <section>
                 <h2 className="font-normal text-xl leading-relaxed pt-16">
-                  Pie Charts &amp;&nbsp;Geometry
-                </h2>
-                <h3 className="font-normal text-lg leading-normal mt-3 w-1/2">
                   <Link
                     href="/studies/pie-chart-bezier-curves"
                     className="text-blue-500 no-underline hover:underline"
                   >
-                    A Mathematical Construction of Pie Charts Using Cubic B&eacute;zier Curves
+                    Pie Charts &amp;&nbsp;Geometry
                   </Link>
-                </h3>
+                </h2>
+                <p className="font-normal text-lg leading-normal xmt-3 w-1/2 text-gray-600">
+                  A Mathematical Construction of Pie Charts Using Cubic B&eacute;zier Curves
+                </p>
                 <div className="mt-3 w-1/2 border-gray-700 border-1 p-1">
                   <Link href="/studies/pie-chart-bezier-curves">
                     <Image
