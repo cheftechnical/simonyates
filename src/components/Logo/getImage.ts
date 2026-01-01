@@ -51,13 +51,25 @@ export function getImage(brand: string, variant: string): Image | undefined {
         src: `${basePath}/${brand}/${brand}--color.svg`,
       };
     case "linkedin":
-      return {
-        alt: "LinkedIn logo",
-        dimension: {
-          height: 24,
-          width: 24,
-        },
-        src: `${basePath}/${brand}/${brand}--${variant}.svg`,
+      switch (variant) {
+        case "bfbfbf":
+          return {
+            alt: "LinkedIn logo",
+            dimension: {
+              height: 24,
+              width: 24,
+            },
+            src: `${basePath}/${brand}/${brand}---${variant}.svg`,
+          };
+        default:
+          return {
+            alt: "LinkedIn logo",
+            dimension: {
+              height: 24,
+              width: 24,
+            },
+            src: `${basePath}/${brand}/${brand}--${variant}.svg`,
+          };
       };
     case "mayo-clinic":
       return {
@@ -87,13 +99,25 @@ export function getImage(brand: string, variant: string): Image | undefined {
         src: `${basePath}/${brand}/rbc--color--208x270.png`,
       };
     case "rss":
-      return {
-        alt: "RSS feed",
-        dimension: {
-          height: 24,
-          width: 24,
-        },
-        src: `${basePath}/${brand}/feed-icon.svg`,
+      switch (variant) {
+        case "bfbfbf":
+          return {
+            alt: "RSS feed",
+            dimension: {
+              height: 24,
+              width: 24,
+            },
+            src: `${basePath}/${brand}/rss---bfbfbf.svg`,
+          };
+        default:
+          return {
+            alt: "RSS feed",
+            dimension: {
+              height: 24,
+              width: 24,
+            },
+            src: `${basePath}/${brand}/feed-icon.svg`,
+          };
       };
     case "simon-yates":
       // Depending on the variant, there are two different sizes being used
