@@ -20,11 +20,11 @@ export default function Footer() {
 
         <div className="flex flex-wrap">
           <div className="pt-2 w-1/2 basis-1/2 max-w-1/2">
-            <p className="font-secondary text-[12px] text-[#9E9E9E]">
-              &copy; 2025 Sybaris Analytics Corporation
+            <p className="text-sm text-gray-400">
+              &copy; 2026 Sybaris Analytics Corporation
               <br />
             </p>
-            <p className="font-secondary text-[12px] text-gray-400">
+            <p className="text-sm text-gray-400">
               <Link href="/legal" className="text-gray-400 hover:underline hover:text-gray-50">
                 Legal
               </Link>
