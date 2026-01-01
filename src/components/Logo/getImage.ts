@@ -52,6 +52,7 @@ export function getImage(brand: string, variant: string): Image | undefined {
       };
     case "linkedin":
       switch (variant) {
+        case "a4a4a4":
         case "bfbfbf":
           return {
             alt: "LinkedIn logo",
@@ -100,6 +101,15 @@ export function getImage(brand: string, variant: string): Image | undefined {
       };
     case "rss":
       switch (variant) {
+        case "a4a4a4":
+          return {
+            alt: "RSS feed",
+            dimension: {
+              height: 24,
+              width: 24,
+            },
+            src: `${basePath}/${brand}/rss---a4a4a4.svg`,
+          };
         case "bfbfbf":
           return {
             alt: "RSS feed",
