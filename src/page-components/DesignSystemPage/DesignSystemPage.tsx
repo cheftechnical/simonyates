@@ -69,9 +69,12 @@ export function DesignSystem() {
               I then calculated a scale for each media base using the tritonic scale and this&nbsp;formula:
             </p>
 
-            <p className="text-[1.0rem] leading-normal mt-2 ml-4">
+            <div
+              className="border-gray-900 border-2 mt-6 p-6 w-full flex items-center justify-center"
+              aria-label="Tritonic scale ratio per step: cube root of two, approximately 1.259921."
+            >
               <code>ratioPerStep = ∛2 ≅ 1.259921</code>
-            </p>
+            </div>
 
             <p className="text-[1.0rem] leading-normal mt-6">
               For each step, we assign a system-wide name.
