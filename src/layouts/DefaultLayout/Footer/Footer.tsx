@@ -36,17 +36,22 @@ export default function Footer() {
           </div>
 
           {/* Right column */}
-          <div className="justify-self-end self-center flex items-center gap-4">
+          <div className="justify-self-end self-center flex items-center">
             <a
               rel="noopener"
               title="Find me on LinkedIn"
               target="_blank"
               href="https://www.linkedin.com/in/simonyates/"
+              className="inline-flex items-center justify-center p-[10px]"
             >
               <Logo brand="linkedin" variant="bfbfbf" width={24} />
             </a>
 
-            <a href="/rss.xml" title="RSS feed">
+            <a
+              href="/rss.xml"
+              title="RSS feed"
+              className="inline-flex items-center justify-center p-[10px]"
+            >
               <Logo brand="rss" variant="bfbfbf" width={24} />
             </a>
           </div>
