@@ -8,7 +8,7 @@ export function DesignSystem() {
     <Container>
       <div className="flex flex-wrap">
         {/* Content */}
-        <div className="w-full md:w-3/5">
+        <div className="w-full md:w-9/12 md:pr-48">
           {/* Content will go here */}
           <h1 className="font-normal text-[2.0rem] leading-relaxed">
             How I Designed My Personal Design&nbsp;System
@@ -26,7 +26,10 @@ export function DesignSystem() {
               This is my personal design&nbsp;system.
             </p>
 
-            <h2 className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]">
+            <h2
+              id={sections.typographicScale.id}
+              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+            >
               Typographic Scale
             </h2>
 
@@ -248,7 +251,10 @@ export function DesignSystem() {
 
 
             {/* color paragraphs here */}
-            <h2 className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]">
+            <h2
+              id={sections.luminanceScale.id}
+              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+            >
               Luminance Scale
             </h2>
 
@@ -412,7 +418,10 @@ export function DesignSystem() {
               Why? Black ink is cheaper, and grays on my laser printer can look washed out. And it looks&nbsp;cool!
             </p>
 
-            <h2 className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]">
+            <h2
+              id={sections.proximityScale.id}
+              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+            >
               Proximity Scale
             </h2>
 

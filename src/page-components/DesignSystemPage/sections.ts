@@ -1,6 +1,17 @@
 import { Sections } from "../../types/Sections";
 
 export const sections: Sections = {
-  // Sections will be added here
+  typographicScale: {
+    id: "typographic-scale",
+    title: "Typographic Scale",
+  },
+  luminanceScale: {
+    id: "luminance-scale",
+    title: "Luminance Scale",
+  },
+  proximityScale: {
+    id: "proximity-scale",
+    title: "Proximity Scale",
+  },
 };
 
