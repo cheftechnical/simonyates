@@ -99,7 +99,7 @@ function getHighlights(sectionId: string): React.ReactElement {
           </Li>
         </Ul>
       );
-    case "truenorth":
+    case "truenorth-technologies":
       return (
         <Ul>
           <Li>

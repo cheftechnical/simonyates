@@ -27,7 +27,7 @@ export interface WorkExperienceData {
     | "mayo-clinic"
     | "philips-lighting"
     | "rbc"
-    | "truenorth"
+    | "truenorth-technologies"
     | "uncharted-software";
   /**
    * The role performed at this employer
@@ -71,12 +71,12 @@ export const workExperienceData: WorkExperienceData[] = [
   },
   {
     employer: "TrueNorth Technologies",
-    brand: "truenorth",
+    brand: "truenorth-technologies",
     role: preventOrphan("Team Lead & Staff Frontend Software Engineer"),
     when: "March 2021 to March 2023",
     where: "San Francisco, CA, USA",
     href: "/work/truenorth-technologies",
-    sectionId: "truenorth",
+    sectionId: "truenorth-technologies",
   },
   {
     employer: "RBC",

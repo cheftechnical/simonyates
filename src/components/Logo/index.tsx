@@ -13,7 +13,7 @@ interface Props {
     | "rbc"
     | "rss"
     | "simon-yates"
-    | "truenorth"
+    | "truenorth-technologies"
     | "twitter"
     | "uncharted-software";
   variant: "default" | "grey-100" | "grey-300" | "grey-500" | "222222" | "eeeeee";

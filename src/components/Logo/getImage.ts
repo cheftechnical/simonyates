@@ -136,7 +136,7 @@ export function getImage(brand: string, variant: string): Image | undefined {
             src: `${basePath}/${brand}/${brand}--default.svg`,
           };
       }
-    case "truenorth":
+    case "truenorth-technologies":
       switch (variant) {
         default:
           return {
@@ -145,7 +145,7 @@ export function getImage(brand: string, variant: string): Image | undefined {
               height: 30,
               width: 30,
             },
-            src: `${basePath}/truenorth-technologies/truenorth-logo.svg`,
+            src: `${basePath}/truenorth-technologies/truenorth-technologies-logo.svg`,
           };
       }
     case "twitter":

@@ -5,7 +5,7 @@ import Content from "./Content";
 import { sections } from "./sections";
 
 export function TrueNorthTechnologiesPage() {
-  const workData = getWorkExperienceBySectionId("truenorth");
+  const workData = getWorkExperienceBySectionId("truenorth-technologies");
   if (!workData) throw new Error("Work experience data not found for TrueNorth");
 
   return (
