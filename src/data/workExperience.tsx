@@ -1,5 +1,16 @@
 import { ReactElement } from "react";
 
+function preventOrphan(text: string, keepLastWords: number = 2): string {
+  // Replace the last N-1 spaces with non-breaking spaces so the final N words stay attached.
+  // Example: keepLastWords=3 => "Inclusive\u00A0Design\u00A0Advocate"
+  const parts = text.split(" ");
+  if (parts.length <= keepLastWords) return text;
+
+  const head = parts.slice(0, -keepLastWords).join(" ");
+  const tail = parts.slice(-keepLastWords).join("\u00A0");
+  return head ? `${head} ${tail}` : tail;
+}
+
 export interface WorkExperienceData {
   /**
    * The name of the employer
@@ -49,7 +60,10 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "HelloFresh",
     brand: "hellofresh",
-    role: "Senior Frontend Staff Engineer / Accessibility & Inclusive Design Advocate",
+    role: preventOrphan(
+      "Senior Frontend Staff Engineer / Accessibility & Inclusive Design Advocate",
+      3
+    ),
     when: "September 2023 to September 2025",
     where: "Toronto, ON, Canada",
     href: "/work/hellofresh",
@@ -58,7 +72,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "TrueNorth Technologies",
     brand: "truenorth",
-    role: "Team Lead & Staff Frontend Software Engineer",
+    role: preventOrphan("Team Lead & Staff Frontend Software Engineer"),
     when: "March 2021 to March 2023",
     where: "San Francisco, CA, USA",
     href: "/work/truenorth-technologies",
@@ -67,7 +81,10 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "RBC",
     brand: "rbc",
-    role: "Lead Software Engineer (Contract, Site Reliability Engineering)",
+    role: preventOrphan(
+      "Lead Software Engineer (Contract, Site Reliability Engineering)",
+      3
+    ),
     when: "July 2018 to March 2021",
     where: "Toronto, ON, Canada",
     href: "/work/rbc",
@@ -76,7 +93,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Uncharted Software",
     brand: "uncharted-software",
-    role: "Senior Software Architect",
+    role: preventOrphan("Senior Software Architect"),
     when: "May 2016 to 2018",
     where: "Toronto, ON, Canada",
     href: "/work/uncharted-software",
@@ -85,7 +102,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Mayo Clinic",
     brand: "mayo-clinic",
-    role: "Software Engineer (Clinical Decision Support Systems)",
+    role: preventOrphan("Software Engineer (Clinical Decision Support Systems)"),
     when: "October 2014 to October 2015",
     where: "Rochester, MN, USA",
     href: "/work/mayo-clinic",
@@ -94,7 +111,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Genworth Canada",
     brand: "genworth-canada",
-    role: "Developer (Data Search & Optimization)",
+    role: preventOrphan("Developer (Data Search & Optimization)"),
     when: "July 2014 to January 2015",
     where: "Oakville, ON, Canada",
     href: "/work/genworth-canada",
@@ -103,7 +120,9 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Infomart",
     brand: "infomart",
-    role: "Architect & Lead Developer (Media Archive Re-Architecture)",
+    role: preventOrphan(
+      "Architect & Lead Developer (Media Archive Re-Architecture)"
+    ),
     when: "2012–2014",
     where: "Toronto, ON, Canada",
     href: "/work/infomart",
@@ -112,7 +131,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Jib Design & Advertising",
     brand: "jib-design-and-advertising",
-    role: "Technical Director (Digital Media Production)",
+    role: preventOrphan("Technical Director (Digital Media Production)"),
     when: "2007–2008",
     where: "Toronto, ON, Canada",
     href: "/work/jib-design-and-advertising",
@@ -121,7 +140,7 @@ export const workExperienceData: WorkExperienceData[] = [
   {
     employer: "Philips Lighting",
     brand: "philips-lighting",
-    role: "Product & Business Data Analyst",
+    role: preventOrphan("Product & Business Data Analyst"),
     when: "2002–2006",
     where: "Markham, ON, Canada",
     href: "/work/philips-lighting",
