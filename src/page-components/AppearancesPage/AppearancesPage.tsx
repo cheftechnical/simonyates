@@ -13,7 +13,7 @@ export default function AppearancesPage() {
           {/* between each appearance, 48 px or (2x 24 px) for separation of similar but distinct items */}
           <h1 className="font-normal text-2xl leading-relaxed">Appearances</h1>
 
-          <table className="border-gray-700 border-2 mt-6 w-full">
+          <table className="border-gray-700 border-2 mt-3 w-full">
             <thead>
               <tr>
                 <th className="bg-gray-700 border-gray-700 border-1 p-2 text-right text-gray-50 text-sm">
