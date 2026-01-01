@@ -106,20 +106,9 @@ export function NavRight(props: NavRightProps) {
     };
   }, [sections]);
 
-  // Calculate width based on container max-widths: 3/12 (25%) of each breakpoint
-  // sm: 600px * 0.25 = 150px
-  // md: 960px * 0.25 = 240px
-  // lg: 1076px * 0.25 = 269px (rounded from 268.33...)
-  // 
-  // Empirical adjustment: Subtract 13px from each to account for browser subpixel
-  // rounding and flexbox calculation differences between percentage-based widths
-  // and fixed pixel widths when using position: fixed. This was determined by
-  // measuring overflow from a bordered div, which may introduce a ±2px variance
-  // (1px border on each side).
-  
   return (
-    <div className="fixed sm:w-[137px] md:w-[227px] lg:w-[256px] overflow-hidden xbg-[pink]">
-      <ul className="list-none xp-4 break-words">
+    <div className="sticky top-[112px]">
+      <ul className="list-none break-words">
         {Object.entries(sections).map(([key, value]) => (
           <NavRightItem
             key={key}

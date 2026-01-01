@@ -3,14 +3,6 @@ import NavTop from './NavTop/NavTop';
 import SkipNav from './SkipNav';
 import { ReactNode } from 'react';
 
-/**
- * When the layout is in `fullScreen` mode, the content needs to be offset to compensate for the visual weight of the
- * header logo and nav bar.
- *
- * By increasing this number, you will shift the content down by that amount. Conversely, a smaller number will make the
- * content sit higher on the viewport.
- */
-const fullHeightOpticalOffset = -32 - 8 - 8 - 1;
 const mainId = 'main-content';
 
 interface Props {
@@ -33,13 +25,22 @@ interface Props {
 export default function DefaultLayout(props: Props) {
   const { children, fullHeight, top } = props;
 
-  // fullHeightOpticalOffset = -32 - 8 - 8 - 1 = -49px = -3.0625rem
-  const footerMarginTop = fullHeight
-    ? `${(0 - fullHeightOpticalOffset) / 16}rem` // rem(0 - fullHeightOpticalOffset) = rem(49) = 3.0625rem
-    : '88px'; // theme.spacing(88 / 8) = 11 * 8px = 88px
+  const mainClasses = [
+    'pt-[162px]',
+    'pb-30', // 60px minimum whitespace before footer
+    fullHeight
+      ? // For fullHeight pages, give <main> an explicit viewport-based height so
+        // children using `h-full` (e.g. HomePage) can vertically center. The top
+        // padding then pushes the footer below the initial viewport.
+        // We also compensate for the -49px optical offset so the footer stays
+        // entirely below the fold (otherwise ~49px can "peek" into the viewport).
+        'mt-[-49px] h-[calc(100vh+49px)]'
+      : // For normal pages, allow main to grow and keep footer at bottom when content is short.
+        'flex-1',
+  ].join(' ');
 
   return (
-    <div className="h-full">
+    <div className="min-h-screen flex flex-col">
       <SkipNav mainId={mainId} />
 
       <header>
@@ -50,12 +51,12 @@ export default function DefaultLayout(props: Props) {
       <main
         id={mainId}
         tabIndex={-1}
-        className={`simon pt-[162px] ${fullHeight ? `mt-[-49px] h-full` : ''}`}
+        className={mainClasses}
       >
         {children}
       </main>
 
-      <footer className="w-full" style={{ marginTop: footerMarginTop }}>
+      <footer className="w-full mt-auto">
         <Footer />
       </footer>
     </div>
