@@ -15,7 +15,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[41.666667%]">
+        <div className="w-full mt-[22px] md:mt-0 md:w-[41.666667%]">
           <Image
             alt="Black and white headshot of a Caucasian male in his 40s. He is clean-shaven with a long, angular face, high cheekbones, and a sharp, prominent nose. His hair is voluminous, medium-long, and slightly messy — extending outward with visible body and texture, similar to a naturally thick or full style. He wears round glasses and has a large, natural smile. The lighting is soft and even, with a plain light gray studio background. The composition is realistic and documentary-style, without artistic embellishments."
             src="/images/about/hero/simon-yates.png"

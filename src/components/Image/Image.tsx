@@ -13,7 +13,7 @@ export default function Image(props: Props) {
   return (
     <img
       alt={alt}
-      className={`-mb-1 w-full ${className}`}
+      className={`block w-full ${className}`}
       src={src}
     />
   );
