@@ -49,7 +49,7 @@ export default function Footer() {
                   <Logo brand="linkedin" variant="a4a4a4" width={24} />
                 </span>
                 <span className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                  <Logo brand="linkedin" variant="bfbfbf" width={24} />
+                  <Logo brand="linkedin" variant="dadada" width={24} />
                 </span>
               </span>
             </a>
@@ -64,7 +64,7 @@ export default function Footer() {
                   <Logo brand="rss" variant="a4a4a4" width={24} />
                 </span>
                 <span className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                  <Logo brand="rss" variant="bfbfbf" width={24} />
+                  <Logo brand="rss" variant="dadada" width={24} />
                 </span>
               </span>
             </a>
