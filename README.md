@@ -1,6 +1,6 @@
 # Simon Yates – Personal Site
 
-A React + TypeScript + Vite project for my resume/portfolio site.
+A Next.js (App Router) + React + TypeScript project for my resume/portfolio site.
 
 ## Requirements
 - Node.js 22 (enforced via `.nvmrc` and `"engines"`)
@@ -15,11 +15,11 @@ npm install
 # dev server
 npm run dev
 
-# typecheck + production build
+# production build
 npm run build
 
-# preview the production build
-npm run preview
+# run the production server (after build)
+npm run start
 ```
 
 ## Storybook (minimal, v10 core)
@@ -31,12 +31,6 @@ Notes:
 - Stories are excluded from production typecheck/build.
 - Some older stories may still need v10 API cleanups; not required for prod builds.
 
-## CI
-GitHub Actions runs on pushes/PRs:
-- Install (cached)
-- Typecheck (`tsc --noEmit`)
-- Production build (`vite build`)
-
 ## Linting and Formatting
 - ESLint with `eslint-plugin-perfectionist` enforces:
   - Sorted imports/named imports
@@ -47,8 +41,8 @@ npm run lint
 ```
 
 ## Performance
-- Vite vendor code‑splitting (`react`, `router`, `d3`, `date-fns`)
-- Route‑level code splitting via `React.lazy` + `Suspense` in `Root`
+- Next.js handles route-level code splitting automatically.
+- Keep heavy dependencies (e.g. `d3`, MathJax) localized to pages/components that need them.
 
 ## Tailwind color tokens (single source of truth)
 - Define brand colors once as CSS variables in `src/styles/tailwind.css`:
@@ -101,7 +95,7 @@ This keeps hex values in one place (CSS), while Tailwind utilities reference tho
 ```bash
 python3 - << 'EOF'
 from PIL import Image
-imgs = [Image.open("favicon-16x16.png"), Image.open("favicon-32x32.png")]
-imgs[0].save("favicon.ico", sizes=[(16,16),(32,32)])
+imgs = [Image.open("public/favicon-16x16.png"), Image.open("public/favicon-32x32.png")]
+imgs[0].save("public/favicon.ico", sizes=[(16,16),(32,32)])
 EOF
 ```
