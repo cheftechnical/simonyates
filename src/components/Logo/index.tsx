@@ -16,7 +16,7 @@ interface Props {
     | "truenorth"
     | "twitter"
     | "uncharted-software";
-  variant: "default" | "grey-100" | "grey-300" | "grey-500";
+  variant: "default" | "grey-100" | "grey-300" | "grey-500" | "222222" | "eeeeee";
 
   width?: number | string;
   // width?: number | '100%';

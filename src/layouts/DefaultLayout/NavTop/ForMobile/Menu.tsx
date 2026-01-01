@@ -29,11 +29,11 @@ export default function Menu(props: Props) {
     <div className="bg-[#222222] pt-12 fixed top-0 left-0 w-full h-full z-[100]">
       <div className="pr-[10px]">
         <Container>
-          <div className="flex justify-end">
+          <div className="flex items-center justify-end">
             {/* Left align */}
             <div className="flex-grow">
               <Link href="/">
-                <Logo brand="simon-yates" variant="grey-100" width={149} />
+                <Logo brand="simon-yates" variant="eeeeee" width={149} />
               </Link>
             </div>
 

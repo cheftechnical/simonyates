@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div
-      className="w-full pt-8 pb-6 bg-[#222222]"
+      className="w-full py-8 bg-[#222222]"
       aria-label="Site Directory"
       role="navigation"
     >
@@ -13,13 +13,13 @@ export default function Footer() {
         <div className="flex flex-wrap">
           <div className="p-0 w-full basis-full max-w-full">
             <Link href="/">
-              <Logo brand="simon-yates" variant="grey-100" width={128} />
+              <Logo brand="simon-yates" variant="eeeeee" width={130} />
             </Link>
           </div>
         </div>
 
         <div className="flex flex-wrap">
-          <div className="pt-4 w-1/2 basis-1/2 max-w-1/2">
+          <div className="pt-2 w-1/2 basis-1/2 max-w-1/2">
             <p className="font-secondary text-[12px] text-[#9E9E9E]">
               &copy; 2025 Sybaris Analytics Corporation
               <br />

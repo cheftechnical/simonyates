@@ -50,7 +50,7 @@ export default function DefaultLayout(props: Props) {
       <main
         id={mainId}
         tabIndex={-1}
-        className={`pt-[162px] ${fullHeight ? `mt-[-49px] h-full` : ''}`}
+        className={`simon pt-[162px] ${fullHeight ? `mt-[-49px] h-full` : ''}`}
       >
         {children}
       </main>

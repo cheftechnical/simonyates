@@ -18,11 +18,11 @@ export default function ForDesktop(props: Props) {
   return (
     <div className="bg-white pt-12 pb-6 fixed top-0 w-full z-[999]">
       <Container>
-        <div className="flex justify-end">
+        <div className="flex items-center justify-end">
           {/* Left align */}
           <div className="flex-grow">
             <Link href="/">
-              <Logo brand="simon-yates" variant="default" width={149} />
+              <Logo brand="simon-yates" variant="222222" width={149} />
             </Link>
           </div>
 

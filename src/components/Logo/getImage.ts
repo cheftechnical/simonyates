@@ -98,6 +98,24 @@ export function getImage(brand: string, variant: string): Image | undefined {
     case "simon-yates":
       // Depending on the variant, there are two different sizes being used
       switch (variant) {
+        case "222222":
+          return {
+            alt: "Simon Yates",
+            dimension: {
+              height: 29,
+              width: 130,
+            },
+            src: `${basePath}/${brand}/${brand}---222222.svg`,
+          };
+        case "eeeeee":
+          return {
+            alt: "Simon Yates",
+            dimension: {
+              height: 29,
+              width: 130,
+            },
+            src: `${basePath}/${brand}/${brand}---eeeeee.svg`,
+          };
         case "grey-100":
           return {
             alt: "Simon Yates",

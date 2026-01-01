@@ -22,11 +22,11 @@ export default function ForMobile() {
       {/* Match the open-menu header layout so logo + icon stay aligned between states */}
       <div className="pr-[10px]">
         <Container>
-          <div className="flex justify-end">
+          <div className="flex items-center justify-end">
             {/* Left align */}
             <div className="flex-grow">
               <Link href="/">
-                <Logo brand="simon-yates" variant="default" width={149} />
+                <Logo brand="simon-yates" variant="222222" width={149} />
               </Link>
             </div>
 
