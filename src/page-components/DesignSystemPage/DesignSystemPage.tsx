@@ -14,17 +14,29 @@ export function DesignSystem() {
             How I Designed My Personal Design&nbsp;System
           </h1>
 
-            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[calc(1.5874rem*1)]">
+            <p className="font-normal text-[1.2599rem] text-gray-600 leading-relaxed mt-[1.2599rem]">
               Harmonious design is foundational to&nbsp;me.
             </p>
 
-            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[1.5874rem]">
+            <p className="font-normal text-[1.2599rem] text-gray-600 leading-relaxed mt-[1.2599rem]">
               Everything I produce follows a design aesthetic. I have distilled that aesthetic into a set of&nbsp;rules.
             </p>
 
-            <p className="font-normal text-[1.5874rem] text-gray-600 leading-relaxed mt-[1.5874rem]">
+            <p className="font-normal text-[1.2599rem] text-gray-600 leading-relaxed mt-[1.2599rem] mb-[calc(1.2599rem*3)]">
               This is my personal design&nbsp;system.
             </p>
+
+            <Callout align="left">
+              <figure className="m-0">
+                <blockquote className="font-normal text-[1.0rem] leading-normal italic border-l-4 border-gray-300 pl-4">
+                  Nothing is arbitrary.
+                </blockquote>
+                <figcaption className="mt-3 text-sm text-gray-700">
+                  <cite className="not-italic"><strong>Gottfried Semper,</strong> c.&nbsp;1850s</cite>
+                </figcaption>
+              </figure>
+            </Callout>
+            
 
             <h2
               id={sections.typographicScale.id}
