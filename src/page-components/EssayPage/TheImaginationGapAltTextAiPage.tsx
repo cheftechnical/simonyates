@@ -345,9 +345,13 @@ export function TheImaginationGapAltTextAiPage() {
               But simplicity often hides&nbsp;ambiguity.
             </p>
 
-            <h4 className="font-semibold text-base leading-normal mt-8">
+            {/* 
+              NOTE: This is intentionally styled like our h4 labels, but coded as an h3.
+              This is an exception to keep the heading tree structure valid and navigable.
+            */}
+            <h3 className="font-semibold text-base leading-normal mt-8">
               Original image:
-            </h4>
+            </h3>
 
             <figure className="mt-4">
               <Image
