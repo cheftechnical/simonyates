@@ -99,3 +99,10 @@ imgs = [Image.open("public/favicon-16x16.png"), Image.open("public/favicon-32x32
 imgs[0].save("public/favicon.ico", sizes=[(16,16),(32,32)])
 EOF
 ```
+
+### Iconography design direction
+Yeah, the direction being: the frame thickness matches the thickness of the head/tail of the "S" curve (1:1).
+
+This is true for the 16 px version where I literally just extend from the horizontal line outwards to the edge of the canvas, and for the 72 px vector, which is conveniently 2 pt thick.
+
+For the vector, I had a 1 pt outline stroke on the "S", which overshoots the frame by 1 pt on either end. The canvas is then the size of the frame + 1 pt in all directions from centre.
