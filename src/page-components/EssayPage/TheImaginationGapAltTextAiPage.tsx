@@ -73,19 +73,19 @@ export function TheImaginationGapAltTextAiPage() {
               can&nbsp;drift.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               That space is what I call the <strong>Imagination Gap</strong>—the
               distance between the mental image a writer believes they are
               conveying and the one a reader constructs from the
               words&nbsp;alone.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               AI image generation offers a novel way to make that
               gap&nbsp;visible.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               By regenerating an image <em>solely</em> from the alt-text written
               to describe it, we can examine how much meaning is preserved, how
               much is lost, and where ambiguity lives. The goal is not to
@@ -101,7 +101,7 @@ export function TheImaginationGapAltTextAiPage() {
               What Alt-Text Actually&nbsp;Is
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               For readers outside the accessibility space:
               <br />
               <strong>
@@ -113,12 +113,12 @@ export function TheImaginationGapAltTextAiPage() {
               image still have access to the same&nbsp;information.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Good alt-text is not simply a list of objects; it conveys the
               essential meaning of the&nbsp;image.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               But meaning is subjective. And when we describe an image, we are
               guided by our own assumptions, visual context, and background
               knowledge—none of which the reader necessarily&nbsp;shares.
@@ -131,7 +131,7 @@ export function TheImaginationGapAltTextAiPage() {
               The Imagination&nbsp;Gap
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               When we write alt-text, we picture the original image in our
               minds.
               <br />
@@ -140,21 +140,21 @@ export function TheImaginationGapAltTextAiPage() {
               expression on a face&nbsp;implies.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               But the reader does&nbsp;not.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               They receive only the words.
               <br />
               And words, even simple ones, are&nbsp;incomplete.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               If I say &ldquo;a red notebook,&rdquo; what do you&nbsp;imagine?
             </p>
 
-            <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <ul className="font-normal text-base leading-normal mt-4 list-disc space-y-4">
               <li className="mb-1 ml-[21px]">
                 Bright red? Deep red? Brown-red?
               </li>
@@ -167,11 +167,11 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
             </ul>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Every reader fills in the blanks differently.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This is the Imagination Gap—
               <strong>
                 the invisible distance between the writer&rsquo;s intention and
@@ -185,17 +185,17 @@ export function TheImaginationGapAltTextAiPage() {
               id="why-human-validation"
               className="font-normal text-xl leading-8 mt-12"
             >
-              Why Human Validation Isn&rsquo;t Enough
+              Why Human Validation Isn&rsquo;t&nbsp;Enough
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               We often assume the solution is simple: ask blind users to
               validate&nbsp;alt-text.
               <br />
               But this is unfair and&nbsp;unsustainable.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Blind reviewers are constantly asked to validate, test, and
               correct accessibility work—often unpaid and often at scale. And
               even when human review is in place, communication bias creeps in.
@@ -205,11 +205,11 @@ export function TheImaginationGapAltTextAiPage() {
               considered&nbsp;essential.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Human review is invaluable, but it is not&nbsp;exhaustive.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               The artist knows the image in their&nbsp;mind.
               <br />
               The reviewer knows the image in&nbsp;theirs.
@@ -217,7 +217,7 @@ export function TheImaginationGapAltTextAiPage() {
               Neither can see the gap between&nbsp;them.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               AI image generation offers a third perspective—one that exposes
               ambiguity without taxing the community we are trying
               to&nbsp;support.
@@ -230,7 +230,7 @@ export function TheImaginationGapAltTextAiPage() {
               The Insight: AI as a Reverse Alt-Text&nbsp;Engine
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               An image generator can serve as a{" "}
               <strong>literal interpreter</strong> of your&nbsp;description.
               <br />
@@ -240,20 +240,20 @@ export function TheImaginationGapAltTextAiPage() {
               of&nbsp;context.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               When I first attempted this, I had almost no experience with image
               generation tools. I didn&rsquo;t even realize one was built into
               ChatGPT. I simply explained what I wanted to test, and the model
               suggested I prepend my prompt with the following&nbsp;instruction:
             </p>
 
-            <blockquote className="font-normal text-base leading-normal mt-6 italic border-l-4 border-gray-300 pl-4 ml-6">
+            <blockquote className="font-normal text-base leading-normal mt-4 italic border-l-4 border-gray-300 pl-4 ml-6">
               &ldquo;Generate a literal, documentary-style image based strictly
               on this description. Do not add or infer artistic elements beyond
               what is explicitly stated.&rdquo;
             </blockquote>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               That phrasing forces the model to treat your text like
               documentation rather than&nbsp;inspiration.
               <br />
@@ -261,13 +261,13 @@ export function TheImaginationGapAltTextAiPage() {
               unembellished&nbsp;communication.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               With modern models, the exact wording matters less than the
               principle:
               <strong> ask the AI to interpret your alt-text literally.</strong>
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This reveals where the Imagination Gap appears.
             </p>
 
@@ -275,28 +275,28 @@ export function TheImaginationGapAltTextAiPage() {
               The&nbsp;Method
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               The workflow is&nbsp;simple:
             </p>
 
-            <ol className="font-normal text-base leading-normal mt-6 ml-6 list-decimal space-y-4 marker:font-bold">
-              <li className="mb-6">
+            <ol className="font-normal text-base leading-normal mt-4 ml-6 list-decimal space-y-4 marker:font-bold">
+              <li className="mb-4">
                 <strong>Write your alt-text normally.</strong>
                 <div className="mt-2">Describe the image as you intend it.</div>
               </li>
-              <li className="mb-6">
+              <li className="mb-4">
                 <strong>Copy only the text.</strong>
                 <div className="mt-2">
                   No filenames, captions, or visual hints.
                 </div>
               </li>
-              <li className="mb-6">
+              <li className="mb-4">
                 <strong>
                   Paste it into the image generator with a
                   literal-interpretation instruction.
                 </strong>
               </li>
-              <li className="mb-6">
+              <li className="mb-4">
                 <strong>Compare the generated image to the original.</strong>
                 <div className="mt-2">
                   Where does it match?
@@ -306,13 +306,13 @@ export function TheImaginationGapAltTextAiPage() {
                   What details did you assume were obvious?
                 </div>
               </li>
-              <li className="mb-6">
+              <li className="mb-4">
                 <strong>Refine the alt-text.</strong>
                 <div className="mt-2">
                   Add clarity where ambiguity appeared.
                 </div>
               </li>
-              <li className="mb-6">
+              <li className="mb-4">
                 <strong>Generate the second reconstruction.</strong>
                 <div className="mt-2">
                   Confirm whether the meaning is now more faithfully conveyed.
@@ -320,7 +320,7 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
             </ol>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This process takes minutes—and the insight is&nbsp;immediate.
             </p>
 
@@ -332,24 +332,24 @@ export function TheImaginationGapAltTextAiPage() {
               Through&nbsp;Iteration
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               To illustrate how this works, I staged a simple photograph using
               objects from my own&nbsp;desk:
               <br />a handmade red leather notebook cover and a black
               fountain&nbsp;pen.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               At first glance, it&rsquo;s an uncomplicated&nbsp;scene.
               <br />
               But simplicity often hides&nbsp;ambiguity.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
-              <strong>Original image:</strong>
-            </p>
+            <h4 className="font-semibold text-base leading-normal mt-6">
+              Original image:
+            </h4>
 
-            <figure className="mt-6">
+            <figure className="mt-4">
               <Image
                 alt="A handmade red leather notebook cover lies closed on a light wood surface. The cover is dyed in varied deep red and brown tones and features a distinctive asymmetrical front flap that folds over from the right side. A black fountain pen with silver accents rests diagonally across the notebook from upper left to lower right. The leather shows visible texture and natural tonal variation, with subtle highlights from the overhead lighting."
                 src="/images/essays/the-imagination-gap-alt-text-ai/original.png"
@@ -378,40 +378,40 @@ export function TheImaginationGapAltTextAiPage() {
               Version 1: A Reasonable First&nbsp;Attempt
             </h3>
 
-            <p className="font-normal text-base leading-normal mt-6">
-              <strong>Alt-text (Version 1):</strong>
-            </p>
+            <h4 className="font-semibold text-base leading-normal mt-6">
+              Alt-text (Version 1):
+            </h4>
 
-            <blockquote className="font-normal text-base leading-normal mt-6 italic border-l-4 border-gray-300 pl-4 ml-6">
+            <blockquote className="font-normal text-base leading-normal mt-4 italic border-l-4 border-gray-300 pl-4 ml-6">
               &ldquo;A black fountain pen rests diagonally across a closed red
               leather notebook on a light wood surface.&rdquo;
             </blockquote>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This description is common: correct in a general sense,
               serviceable, and typical of what appears on product pages
               and&nbsp;blogs.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
-              <strong>AI reconstruction (Version 1):</strong>
-            </p>
+            <h4 className="font-semibold text-base leading-normal mt-6">
+              AI reconstruction (Version 1):
+            </h4>
 
             <Image
               alt="A black fountain pen rests diagonally across a closed red leather notebook on a light wood surface."
               src="/images/essays/the-imagination-gap-alt-text-ai/alt-text-version-1.png"
-              className="mt-6"
+              className="mt-4"
             />
 
             <p className="font-normal text-base leading-normal mt-6">
               The result is surprisingly close—but not quite&nbsp;right.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               The model interpreted the scene as:
             </p>
 
-            <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <ul className="font-normal text-base leading-normal mt-4 list-disc space-y-4">
               <li className="mb-1 ml-[21px]">
                 a smooth, symmetrical commercial notebook
               </li>
@@ -429,14 +429,14 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
             </ul>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               These are not mistakes—they are{" "}
               <strong>
                 interpretations in the absence of explicit detail.
               </strong>
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This is the Imagination Gap made&nbsp;visible.
             </p>
 
@@ -444,16 +444,16 @@ export function TheImaginationGapAltTextAiPage() {
               Version 2: Clarifying&nbsp;Intention
             </h3>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Using what the reconstruction revealed, I rewrote the alt-text
               more&nbsp;intentionally:
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
-              <strong>Alt-text (Version 2):</strong>
-            </p>
+            <h4 className="font-semibold text-base leading-normal mt-6">
+              Alt-text (Version 2):
+            </h4>
 
-            <blockquote className="font-normal text-base leading-normal mt-6 italic border-l-4 border-gray-300 pl-4 ml-6">
+            <blockquote className="font-normal text-base leading-normal mt-4 italic border-l-4 border-gray-300 pl-4 ml-6">
               &ldquo;A handmade red leather notebook cover with an asymmetrical
               front flap lies closed on a light wood table. The leather shows
               deep red and brown tones with a natural waxed sheen. A black
@@ -461,21 +461,21 @@ export function TheImaginationGapAltTextAiPage() {
               center of the notebook.&rdquo;
             </blockquote>
 
-            <p className="font-normal text-base leading-normal mt-6">
-              <strong>AI reconstruction (Version 2):</strong>
-            </p>
+            <h4 className="font-semibold text-base leading-normal mt-6">
+              AI reconstruction (Version 2):
+            </h4>
 
             <Image
               alt="A handmade red leather notebook cover with an asymmetrical front flap lies closed on a light wood table. The leather shows deep red and brown tones with a natural waxed sheen. A black fountain pen with silver accents rests diagonally across the center of the notebook."
               src="/images/essays/the-imagination-gap-alt-text-ai/alt-text-version-2.png"
-              className="mt-6"
+              className="mt-4"
             />
 
             <p className="font-normal text-base leading-normal mt-6">
               Immediately, we&nbsp;see:
             </p>
 
-            <ul className="font-normal text-base leading-normal mt-6 list-disc space-y-4">
+            <ul className="font-normal text-base leading-normal mt-4 list-disc space-y-4">
               <li className="mb-1 ml-[21px]">the asymmetrical flap appears</li>
               <li className="mb-1 ml-[21px]">
                 the leather shows richer tonal variation
@@ -487,7 +487,7 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
             </ul>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               It is still not identical to the original—and it never
               should&nbsp;be.
               <br />
@@ -495,12 +495,12 @@ export function TheImaginationGapAltTextAiPage() {
               or the tactile nuance of&nbsp;craftsmanship.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               But the distance between intention and interpretation has
               narrowed&nbsp;significantly.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               That is the purpose of this&nbsp;exercise.
             </p>
 
@@ -511,26 +511,26 @@ export function TheImaginationGapAltTextAiPage() {
               Ethical Considerations
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               AI cannot replace blind&nbsp;users.
               <br />
               Human judgment is irreplaceable, especially when describing
               emotion, context, or cultural&nbsp;meaning.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               AI also carries the biases and limitations of its training data. A
               divergence may reflect ambiguity in the text—or bias in
               the&nbsp;model.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This method should <strong>reduce</strong>, not increase, the
               burden on blind reviewers by helping writers resolve avoidable
               ambiguity before passing content along for human&nbsp;validation.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Transparency matters: this technique is a tool for clarity,
               not&nbsp;automation.
               <br />
@@ -541,36 +541,36 @@ export function TheImaginationGapAltTextAiPage() {
               Why This Matters for Humane Systems&nbsp;Design
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Accessibility is often framed as&nbsp;compliance.
               <br />
               But humane systems design asks a deeper&nbsp;question:
             </p>
 
-            <blockquote className="font-normal text-base leading-normal mt-6 italic border-l-4 border-gray-300 pl-4 ml-6">
+            <blockquote className="font-normal text-base leading-normal mt-4 italic border-l-4 border-gray-300 pl-4 ml-6">
               Does this system create harmony between intention and experience?
             </blockquote>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Alt-text sits at the intersection of language, perception, and
               meaning. When it fails, it reveals where a system assumes sight is
               universal. When it succeeds, it becomes an act of&nbsp;inclusion.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Using AI in this way transforms alt-text from an afterthought into
               an intentional moment of clarity. It externalizes the assumptions
               we make unconsciously, allowing us to see our own language with
               new&nbsp;eyes.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               AI is not the&nbsp;author.
               <br />
               It is the&nbsp;mirror.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               By reflecting what our words truly communicate, it helps us design
               with care, precision, and&nbsp;empathy.
               <br />
@@ -579,7 +579,7 @@ export function TheImaginationGapAltTextAiPage() {
               It reveals the system behind the&nbsp;surface.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               And sometimes, in a small way, it creates&nbsp;harmony.
             </p>
 
@@ -587,33 +587,33 @@ export function TheImaginationGapAltTextAiPage() {
               Conclusion
             </h2>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Alt-text asks us to describe what we see so that someone else can
               understand it. But understanding is never guaranteed. Between
               intention and experience lies the Imagination&nbsp;Gap.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               Using AI to reconstruct an image from alt-text doesn&rsquo;t close
               that gap—it illuminates it. It shows us the interpretive space our
               words create. It reveals where meaning drifts. And it allows us to
               refine our language with greater&nbsp;intention.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               This method is not about automation or&nbsp;efficiency.
               <br />
               It is about&nbsp;awareness.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               By making ambiguity visible, we can write alt-text that is
               clearer, more honest, and more human. We can respect the cognitive
               labor of blind users. And we can build digital systems that better
               align intention with&nbsp;experience.
             </p>
 
-            <p className="font-normal text-base leading-normal mt-6">
+            <p className="font-normal text-base leading-normal mt-4">
               A small act of harmony in a system that touches millions
               every&nbsp;day.
             </p>
