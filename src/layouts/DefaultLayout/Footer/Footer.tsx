@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-[1fr_auto] gap-6 items-start">
           {/* Left column */}
           <div className="min-w-0">
-            <Link href="/">
+            <Link href="/" title="Home">
               <Logo brand="simon-yates" variant="eeeeee" width={130} />
             </Link>
 

@@ -32,7 +32,7 @@ export default function Menu(props: Props) {
           <div className="flex items-center justify-end">
             {/* Left align */}
             <div className="flex-grow">
-              <Link href="/">
+              <Link href="/" title="Home">
                 <Logo brand="simon-yates" variant="eeeeee" width={149} />
               </Link>
             </div>
