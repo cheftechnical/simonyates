@@ -323,74 +323,10 @@ export function DesignSystem() {
               </thead>
               <tbody>
                 <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 25</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#F7F7F7</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.07</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">14.85</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 50</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#EEEEEE</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.16</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">13.71</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 100</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#DADADA</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.4</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">11.38</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 200</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#BFBFBF</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.84</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">8.65</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 300</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#A4A4A4</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">2.49</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">6.38</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 400</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#8B8B8B</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">3.41</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">4.67</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 500</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#757575</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">4.61</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">3.45</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 600</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#5E5E5E</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">6.48</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">2.45</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
-                </tr>
-                <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 700</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#464646</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">9.44</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.69</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 900</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#222222</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">15.91</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.0</td>
                     <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
                     <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
                 </tr>
@@ -403,12 +339,76 @@ export function DesignSystem() {
                     <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
                 </tr>
                 <tr>
-                    <td className="border-gray-100 border-1 p-1 text-center">gray 900</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">#222222</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">15.91</td>
-                    <td className="border-gray-100 border-1 p-1 text-center">1.0</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 700</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#464646</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">9.44</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.69</td>
                     <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
                     <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 600</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#5E5E5E</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">6.48</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">2.45</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 500</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#757575</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">4.61</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">3.45</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 400</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#8B8B8B</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">3.41</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">4.67</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 300</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#A4A4A4</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">2.49</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">6.38</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 200</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#BFBFBF</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.84</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">8.65</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 100</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#DADADA</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.4</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">11.38</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 50</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#EEEEEE</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.16</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">13.71</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
+                </tr>
+                <tr>
+                    <td className="border-gray-100 border-1 p-1 text-center">gray 25</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">#F7F7F7</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">1.07</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">14.85</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Fail</td>
+                    <td className="border-gray-100 border-1 p-1 text-center">Pass</td>
                 </tr>
               </tbody>
             </table>
