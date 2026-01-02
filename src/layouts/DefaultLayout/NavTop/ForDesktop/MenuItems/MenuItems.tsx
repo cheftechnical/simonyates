@@ -27,7 +27,7 @@ export function MenuItems(props: Props) {
 
   // Base classes for list items
   const getLiClasses = () => {
-    const baseClasses = 'ml-12'; // theme.spacing(3) = 24px = ml-12
+    const baseClasses = 'ml-8'; // theme.spacing(3) = 24px = ml-12
 
     switch (variant) {
       case Variant.Center:
