@@ -282,11 +282,11 @@ export function TheImaginationGapAltTextAiPage() {
             <ol className="font-normal text-base leading-normal mt-4 ml-6 list-decimal space-y-4 marker:font-bold">
               <li className="mb-4">
                 <strong>Write your alt-text normally.</strong>
-                <div className="mt-2">Describe the image as you intend it.</div>
+                <div className="mt-1">Describe the image as you intend it.</div>
               </li>
               <li className="mb-4">
                 <strong>Copy only the text.</strong>
-                <div className="mt-2">
+                <div className="mt-1">
                   No filenames, captions, or visual hints.
                 </div>
               </li>
@@ -298,7 +298,7 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
               <li className="mb-4">
                 <strong>Compare the generated image to the original.</strong>
-                <div className="mt-2">
+                <div className="mt-1">
                   Where does it match?
                   <br />
                   Where does it drift?
@@ -308,13 +308,13 @@ export function TheImaginationGapAltTextAiPage() {
               </li>
               <li className="mb-4">
                 <strong>Refine the alt-text.</strong>
-                <div className="mt-2">
+                <div className="mt-1">
                   Add clarity where ambiguity appeared.
                 </div>
               </li>
               <li className="mb-4">
                 <strong>Generate the second reconstruction.</strong>
-                <div className="mt-2">
+                <div className="mt-1">
                   Confirm whether the meaning is now more faithfully conveyed.
                 </div>
               </li>
@@ -345,7 +345,7 @@ export function TheImaginationGapAltTextAiPage() {
               But simplicity often hides&nbsp;ambiguity.
             </p>
 
-            <h4 className="font-semibold text-base leading-normal mt-6">
+            <h4 className="font-semibold text-base leading-normal mt-8">
               Original image:
             </h4>
 
@@ -378,7 +378,7 @@ export function TheImaginationGapAltTextAiPage() {
               Version 1: A Reasonable First&nbsp;Attempt
             </h3>
 
-            <h4 className="font-semibold text-base leading-normal mt-6">
+            <h4 className="font-semibold text-base leading-normal mt-8">
               Alt-text (Version 1):
             </h4>
 
@@ -393,7 +393,7 @@ export function TheImaginationGapAltTextAiPage() {
               and&nbsp;blogs.
             </p>
 
-            <h4 className="font-semibold text-base leading-normal mt-6">
+            <h4 className="font-semibold text-base leading-normal mt-8">
               AI reconstruction (Version 1):
             </h4>
 
@@ -449,7 +449,7 @@ export function TheImaginationGapAltTextAiPage() {
               more&nbsp;intentionally:
             </p>
 
-            <h4 className="font-semibold text-base leading-normal mt-6">
+            <h4 className="font-semibold text-base leading-normal mt-8">
               Alt-text (Version 2):
             </h4>
 
@@ -461,7 +461,7 @@ export function TheImaginationGapAltTextAiPage() {
               center of the notebook.&rdquo;
             </blockquote>
 
-            <h4 className="font-semibold text-base leading-normal mt-6">
+            <h4 className="font-semibold text-base leading-normal mt-8">
               AI reconstruction (Version 2):
             </h4>
 
