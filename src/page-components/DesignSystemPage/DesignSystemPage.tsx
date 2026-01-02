@@ -19,7 +19,7 @@ export function DesignSystem() {
             </p>
 
             <p className="font-normal text-[1.2599rem] text-gray-600 leading-relaxed mt-[1.2599rem]">
-              Everything I produce follows a design aesthetic. I have distilled that aesthetic into a set of&nbsp;rules.
+              Everything I produce follows a coherent system of design principles. I have distilled that system into a set of&nbsp;rules.
             </p>
 
             <p className="font-normal text-[1.2599rem] text-gray-600 leading-relaxed mt-[1.2599rem] mb-[calc(1.2599rem*3)]">
