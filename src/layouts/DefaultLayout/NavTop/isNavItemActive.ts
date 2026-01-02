@@ -11,6 +11,11 @@ export function isNavItemActive(params: {
     return true;
   }
 
+  // Example: Design System is part of "Featured" even though it lives at the root level.
+  if (href === '/featured' && (pathname === '/design-system' || pathname.startsWith('/design-system/'))) {
+    return true;
+  }
+
   return pathname === href || pathname.startsWith(href + '/');
 }
 
