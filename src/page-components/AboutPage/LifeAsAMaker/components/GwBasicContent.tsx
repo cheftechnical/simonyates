@@ -14,7 +14,7 @@ export default function GwBasicContent() {
       </div>
 
       {/* Show for mobile*/}
-      <div className="md:hidden w-full mb-[22px]">
+      <div className="md:hidden w-full mb-8">
         <Image
           alt="A screenshot of the GW Basic editor from DOS 4.01"
           src="/images/about/life-as-a-maker/gw-basic.png"

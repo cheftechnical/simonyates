@@ -35,7 +35,7 @@ export default function ModelRailroaderMagazineContent() {
         </div>
 
         {/* Show for mobile */}
-        <div className="md:hidden w-full mt-[22px]">
+        <div className="md:hidden w-full mt-8">
           <Image
             alt="A copy of Model Railroader Magazine from 1992, featuring a picture of two steam locomotives passing through a tunnel."
             src="/images/about/life-as-a-maker/model-railroader-magazine.png"

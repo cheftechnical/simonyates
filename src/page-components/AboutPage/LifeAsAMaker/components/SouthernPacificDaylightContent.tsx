@@ -2,7 +2,7 @@ import Image from "../../../../components/Image/Image";
 
 export default function SouthernPacificDaylightContent() {
   return (
-    <div className="mt-[22px] flex flex-wrap sm:mt-0 sm:pt-[5.0396rem]">
+    <div className="mt-8 flex flex-wrap sm:mt-0 sm:pt-[5.0396rem]">
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/4" />
       <div className="w-full md:w-3/4">

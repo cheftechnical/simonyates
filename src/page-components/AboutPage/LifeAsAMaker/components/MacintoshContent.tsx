@@ -52,7 +52,7 @@ export default function MacintoshContent() {
         </div>
 
         {/* Show for mobile */}
-        <div className="md:hidden w-full mt-[22px]">
+        <div className="md:hidden w-full mt-8">
           <Image
             alt="A collage of Apple nostalgia, including an original Apple Macintosh from 1984 and a screenshot of the running girl from their famous 1984 television commercial."
             src="/images/about/life-as-a-maker/apple-macintosh.png"

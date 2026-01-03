@@ -47,7 +47,7 @@ export default function HelloWorldContent() {
         </div>
 
         {/* Show for mobile */}
-        <div className="md:hidden w-full mt-[22px]">
+        <div className="md:hidden w-full mt-8">
           <Image
             alt="A box of Super Solvers: Out Numbered by The Learning Company, an educational game from the early 90s and some sheet music for &quot;When the Saints Go Marching In&quot;."
             src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
