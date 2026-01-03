@@ -1,7 +1,7 @@
 import Image from "../../../../components/Image/Image";
 import TlcImgWrapper from "./TlcImgWrapper";
 
-export default function TlcContent() {
+export default function HelloWorldContent() {
   return (
     <>
       {/* Hello, World! */}
@@ -14,19 +14,19 @@ export default function TlcContent() {
 
       <div className="flex flex-wrap">
         <div className="w-full md:w-1/2">
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             While TLC&rsquo;s Super Solvers:{" "}
             <em>Out Numbered! and Challenge of the Ancient Empires!</em> may
             have kept me busy during summer break, it was this synthesized
             musical keyboard game that came bundled with the SoundBlaster that I
             really wanted to play&nbsp;with.
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             Determined to play music with the computer, I started digging
             through different files and stacks of owners manuals that were the
             size of tax law books to try and find any mention of this&nbsp;game.
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             A few days later, I stumbled onto this program called GW BASIC. It
             didn&rsquo;t turn my computer keyboard into a MIDI keyboard, but
             with a few lines of code, I could have the computer produce a sound

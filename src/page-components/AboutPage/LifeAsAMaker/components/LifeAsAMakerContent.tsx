@@ -28,23 +28,23 @@ export default function LifeAsAMakerContent() {
         </div>
 
         <div className="w-full md:w-1/2">
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             I was 3 when I first used a computer. The year was 1984 and my dad
             was doing some interior design work for the Canadian headquarters of
             a computer company out of Silicon Valley. As a courtesy, they let
             him borrow their newly launched flagship product for a few weeks. It
             was an Apple&nbsp;Macintosh.
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             I vividly remember sitting on my dad&rsquo;s lap and playing with
             MacPaint, but can&rsquo;t recall what exactly I drew, it was
             probably a house&nbsp;&ndash;&nbsp;either way, I was&nbsp;hooked!
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             For the next few years of my childhood, I had dreams of my dad
             bringing one home, until one day, he&nbsp;did.
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             It was an 80386SX with a 40 MB HDD, and (I think) 4 MB of RAM.
             Pre-installed with DOS 4.01, it came equipped with a SoundBlaster
             sound card&nbsp;&ndash;&nbsp;which was state of the art at the time, and a bunch

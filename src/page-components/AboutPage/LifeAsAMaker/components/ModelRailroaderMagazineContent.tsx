@@ -15,10 +15,10 @@ export default function ModelRailroaderMagazineContent() {
 
       <div className="flex flex-wrap pb-0">
         <div className="w-full md:w-1/2">
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             It was around this time that I also started getting into model trains. <em>Model Railroader Magazine</em> would often include snippets of BASIC code that allowed you to control the COM port on your computer, or simulate waybills for imaginary companies that your trains had to make deliveries for. These snippets introduced me to new programming concepts through practical&nbsp;constraints.
           </p>
-          <p className="font-normal text-base leading-normal text-justify pt-6">
+          <p className="font-normal text-base leading-relaxed text-justify mt-6">
             As I grew older, making things and solving problems through code became the norm for me. In an unexpected twist, model trains also taught me a great deal about logistical efficiency. A model railroad&rsquo;s &ldquo;layout&rdquo; — the organization of track — is essentially a flowchart built in the physical&nbsp;world.
           </p>
         </div>
