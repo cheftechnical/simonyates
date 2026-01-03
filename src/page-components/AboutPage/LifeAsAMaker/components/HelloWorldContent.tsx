@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import TlcImgWrapper from "./TlcImgWrapper";
 
 export default function HelloWorldContent() {
   return (
@@ -38,12 +37,12 @@ export default function HelloWorldContent() {
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
           <div className="h-full flex items-center">
-            <TlcImgWrapper>
+            <div className="pl-[88px]">
               <Image
                 alt="A box of Super Solvers: Out Numbered by The Learning Company, an educational game from the early 90s and some sheet music for &quot;When the Saints Go Marching In&quot;."
                 src="/images/about/life-as-a-maker/the-learning-company-super-solvers.png"
               />
-            </TlcImgWrapper>
+            </div>
           </div>
         </div>
 

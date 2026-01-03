@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import ComputerCityImgWrapper from "./ComputerCityImgWrapper";
 
 export default function ComputerCityContent() {
   return (
@@ -7,12 +6,12 @@ export default function ComputerCityContent() {
       {/* Show for desktop */}
       <div className="hidden md:block md:w-1/2">
         <div className="h-full flex items-center">
-          <ComputerCityImgWrapper>
+          <div className="pr-[131px]">
             <Image
               alt="Computer City store"
               src="/images/about/life-as-a-maker/computer-city.png"
             />
-          </ComputerCityImgWrapper>
+          </div>
         </div>
       </div>
 

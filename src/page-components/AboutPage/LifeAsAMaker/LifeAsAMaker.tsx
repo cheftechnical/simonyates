@@ -1,15 +1,15 @@
 import ComputerCityContent from "./components/ComputerCityContent";
+import Container from "../../../components/Container/Container";
 import GwBasicContent from "./components/GwBasicContent";
-import LifeAsAMakerContainer from "./components/LifeAsAMakerContainer";
-import LifeAsAMakerContent from "./components/LifeAsAMakerContent";
+import MacintoshContent from "./components/MacintoshContent";
 import HelloWorldContent from "./components/HelloWorldContent";
 import ModelRailroaderMagazineContent from "./components/ModelRailroaderMagazineContent";
 import SouthernPacificDaylightContent from "./components/SouthernPacificDaylightContent";
 
 export default function LifeAsAMaker() {
   return (
-    <LifeAsAMakerContainer>
-      <LifeAsAMakerContent />
+    <Container>
+      <MacintoshContent />
 
       <HelloWorldContent />
 
@@ -20,6 +20,6 @@ export default function LifeAsAMaker() {
       <SouthernPacificDaylightContent />
 
       <ComputerCityContent />
-    </LifeAsAMakerContainer>
+    </Container>
   );
 }

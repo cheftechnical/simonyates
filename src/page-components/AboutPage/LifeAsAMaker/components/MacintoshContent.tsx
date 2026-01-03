@@ -1,7 +1,6 @@
 import Image from "../../../../components/Image/Image";
-import LifeAsAMakerImgWrapper from "./LifeAsAMakerImgWrapper";
 
-export default function LifeAsAMakerContent() {
+export default function MacintoshContent() {
   return (
     <>
       {/* Life as a maker*/}
@@ -18,12 +17,12 @@ export default function LifeAsAMakerContent() {
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
           <div className="h-full flex items-center">
-            <LifeAsAMakerImgWrapper>
+            <div className="pr-[88px]">
               <Image
                 alt="A collage of Apple nostalgia, including an original Apple Macintosh from 1984 and a screenshot of the running girl from their famous 1984 television commercial."
                 src="/images/about/life-as-a-maker/apple-macintosh.png"
               />
-            </LifeAsAMakerImgWrapper>
+            </div>
           </div>
         </div>
 

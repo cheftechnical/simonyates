@@ -1,17 +1,16 @@
 import Image from "../../../../components/Image/Image";
-import GwBasicImgWrapper from "./GwBasicImgWrapper";
 
 export default function GwBasicContent() {
   return (
     <div className="flex flex-wrap pt-[4.0rem]">
       {/* Show for desktop */}
       <div className="hidden md:flex md:w-1/2 items-center">
-        <GwBasicImgWrapper>
+        <div className="pr-[131px]">
           <Image
             alt="A screenshot of the GW Basic editor from DOS 4.01"
             src="/images/about/life-as-a-maker/gw-basic.png"
           />
-        </GwBasicImgWrapper>
+        </div>
       </div>
 
       {/* Show for mobile*/}

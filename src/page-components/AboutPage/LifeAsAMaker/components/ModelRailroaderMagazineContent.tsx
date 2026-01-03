@@ -1,5 +1,4 @@
 import Image from "../../../../components/Image/Image";
-import ModelRailroaderMagazineImgWrapper from "./ModelRailroaderMagazineImgWrapper";
 
 export default function ModelRailroaderMagazineContent() {
   return (
@@ -26,12 +25,12 @@ export default function ModelRailroaderMagazineContent() {
         {/* Show for desktop */}
         <div className="hidden md:block md:w-1/2">
           <div className="h-full flex items-center">
-            <ModelRailroaderMagazineImgWrapper>
+            <div className="pl-[135px] pr-[88px]">
               <Image
                 alt="A copy of Model Railroader Magazine from 1992, featuring a picture of two steam locomotives passing through a tunnel.Model Railroader Magazine"
                 src="/images/about/life-as-a-maker/model-railroader-magazine.png"
               />
-            </ModelRailroaderMagazineImgWrapper>
+            </div>
           </div>
         </div>
 
