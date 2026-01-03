@@ -40,7 +40,7 @@ export function DesignSystem() {
 
             <h2
               id={sections.typographicScale.id}
-              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+              className="text-[1.5874rem] font-normal leading-normal mt-[calc(1.2599rem*5)]"
             >
               Typographic Scale
             </h2>
@@ -265,10 +265,60 @@ export function DesignSystem() {
             </table>
 
 
+            <h3 className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*2)]">Orthogonal Hierarchy</h3>
+
+            <p className="text-[1.0rem] leading-normal mt-4">
+              In addition to vertical hierarchy through typographic scale, the system defines an orthogonal hierarchy that operates independently of size.
+            </p>
+
+            <p className="text-[1.0rem] leading-normal mt-4">
+              Changes in letterform case and weight allow elements at the same scale to express different levels of authority.
+            </p>
+
+            <table className="border-gray-700 border-2 mt-6 w-full">
+              <thead>
+                <tr>
+                <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Treatment</th>
+                  <th className="bg-gray-700 border-gray-700 border-1 p-2 text-center text-gray-50">Example</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  
+                  <td className="border-gray-100 border-1 p-2 text-center">
+                    Uppercase
+                  </td>
+                  <td className="border-gray-100 border-1 p-2 text-center uppercase">
+                    Mass Production State of Mind
+                  </td>
+                </tr>
+                <tr>
+                  
+                  <td className="border-gray-100 border-1 p-2 text-center">
+                    Title case
+                  </td>
+                  <td className="border-gray-100 border-1 p-2 text-center">
+                    Mass Production State of Mind
+                  </td>
+                </tr>
+                <tr>
+                  
+                  <td className="border-gray-100 border-1 p-2 text-center">
+                    Sentence case
+                  </td>
+                  <td className="border-gray-100 border-1 p-2 text-center">
+                    Mass production state of mind
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
             {/* color paragraphs here */}
             <h2
               id={sections.luminanceScale.id}
-              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+              className="text-[1.5874rem] font-normal leading-normal mt-[calc(1.5874rem*3)]"
             >
               Luminance Scale
             </h2>
@@ -294,18 +344,18 @@ export function DesignSystem() {
             </p>
 
             <div className="flex mt-6">
-                <div className="bg-gray-25 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-50 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-100 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-200 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-300 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-400 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-500 h-[32px] w-1/12 border-black border-1">&nbsp;</div>
-                <div className="bg-gray-600 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-700 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-800 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-gray-900 h-[32px] w-1/12">&nbsp;</div>
-                <div className="bg-black h-[32px] w-1/12">&nbsp;</div>
+                {/* <div className="bg-black h-[32px] w-1/12">&nbsp;</div> */}
+                <div className="bg-gray-900 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-800 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-700 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-600 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-500 h-[48px] w-1/11 border-black xborder-1">&nbsp;</div>
+                <div className="bg-gray-400 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-300 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-200 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-100 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-50 h-[48px] w-1/11">&nbsp;</div>
+                <div className="bg-gray-25 h-[48px] w-1/11">&nbsp;</div>
             </div>
 
             <p className="text-[1.0rem] leading-normal mt-6">
@@ -313,13 +363,13 @@ export function DesignSystem() {
             </p>
 
             <ul className="text-[1.0rem] leading-normal">
-              <li className="list-disc list-inside mt-4">The lightest shade of gray acts as a soft white</li>
               <li className="list-disc list-inside mt-4">The darkest shade of gray acts as a soft black</li>
-              <li className="list-disc list-inside mt-4">Text in grays below middle gray (&le; 400) works beautifully on soft black (#222222) backgrounds</li>
+              <li className="list-disc list-inside mt-4">The lightest shade of gray acts as a soft white</li>
               <li className="list-disc list-inside mt-4">500 is middle gray (#757575)</li>
               <li className="list-disc list-inside mt-4">Text in grays darker than middle gray (&ge; 500) works on white (#FFFFFF) backgrounds</li>
-              <li className="list-disc list-inside mt-4">Gray-25 on soft black (#222222) appears as bright white</li>
+              <li className="list-disc list-inside mt-4">Text in grays below middle gray (&le; 400) works beautifully on soft black (#222222) backgrounds</li>
               <li className="list-disc list-inside mt-4">Gray-50 on soft black (#222222) appears as white</li>
+              <li className="list-disc list-inside mt-4">Gray-25 on soft black (#222222) appears as bright white</li>
             </ul>            
 
             <table className="border-gray-700 border-2 mt-6 w-full">
@@ -435,7 +485,7 @@ export function DesignSystem() {
 
             <h2
               id={sections.proximityScale.id}
-              className="text-[1.2599rem] font-normal leading-normal mt-[calc(1.2599rem*3)]"
+              className="text-[1.5874rem] font-normal leading-normal mt-[calc(1.5874rem*3)]"
             >
               Proximity Scale
             </h2>
@@ -534,7 +584,6 @@ export function DesignSystem() {
                 Typically, I set a bottom margin or padding only when I&rsquo;m dealing with a container and want to ensure a consistent space around its&nbsp;perimeter.
               </p>
             </Callout>
-
           </div>
 
         {/* Navigation */}
